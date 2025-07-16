@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about tech startup complete brand identity system showcasing gradient color usage and geometric visual language.">The user is asking about tech startup complete brand identity system showcasing gradient color usage and geometric visual language.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 15:43:39</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="14.00">14.00秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="919">919</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. tech startup brand identity gradient geometric
+2. brand identity design geometric gradients tech
+3. gradient color branding tech startup
+4. geometric visual language branding tech">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. tech startup brand identity gradient geometric</li><li class="text-sm text-gray-600">2. brand identity design geometric gradients tech</li><li class="text-sm text-gray-600">3. gradient color branding tech startup</li><li class="text-sm text-gray-600">4. geometric visual language branding tech</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="A complete brand identity system for a tech startup often incorporates gradient color usage and a geometric visual language to convey innovation, dynamism, and a modern aesthetic. This design approach helps tech companies stand out in a competitive market and resonate with their target audience.
+
+Here's a breakdown of how these elements are typically integrated:
+
+**1. Gradient Color Usage:**
+*   **Conveying Innovation and Energy:** Gradients, with their smooth transitions between colors, introduce a sense of movement and dimensionality, making a logo and brand identity feel more alive and engaging. This is particularly effective for tech startups looking to signal forward-thinking and a dynamic approach.
+*   **Brand Distinctiveness:** Unique color blends created through gradients can make a brand more memorable and distinctive in crowded markets.
+*   **Emotional Response:** Gradients can evoke strong emotional responses and create a specific mood. For instance, shifting from cool blues to warm oranges can suggest optimism and vitality.
+*   **Digital-First Approach:** Gradient logos and branding are well-suited for digital platforms, maintaining their appearance on high-resolution displays and adapting well to motion design and layered interfaces.
+*   **Examples of Gradient Use in Tech:** Companies like Instagram, Firefox, and Asana have successfully embraced gradient logos to create recognizable and energetic brand identities. Tech startups might opt for vibrant, multi-color gradients or bold neon gradients to project energy and modernity.
+
+**2. Geometric Visual Language:**
+*   **Structure and Order:** Geometric design principles utilize mathematical concepts like shapes, lines, angles, and proportions to create order, consistency, and logical organization within a visual system. This helps guide the viewer's eye and mind.
+*   **Brand Recognition:** Geometric designs are often unique and memorable, serving as a robust tool for brand recognition.
+*   **Communicating Values:** The choice of geometric shapes can convey specific brand values. For example:
+    *   **Circles:** Suggest unity, harmony, and inclusivity, ideal for community-focused startups or tech companies emphasizing connectivity.
+    *   **Triangles:** Convey strength, direction, growth, and precision.
+    *   **Squares/Rectangles:** Symbolize stability, structure, order, reliability, and security.
+    *   **Soft Edges/Rounded Shapes:** Can humanize tech brands, making complex technology feel more accessible and signaling user-friendliness and trust.
+    *   **Abstract Shapes:** Used by innovative brands to represent flexibility and forward-thinking, inspiring curiosity and conveying sophistication.
+*   **Modular Systems:** Geometric components can be designed to be recombined in various ways while maintaining a consistent visual language across different marketing materials and platforms.
+*   **Integration with Identity:** Geometric elements can be seen in logos, icons, patterns, and overall layout, creating a cohesive and structured brand experience.
+
+**Combining Gradients and Geometric Shapes in a Tech Startup Brand Identity:**
+Many tech startups combine these two elements to create a dynamic and modern brand. This can involve:
+*   Geometric logos with gradient fills.
+*   Abstract geometric shapes that transition with gradient colors.
+*   Brand systems that use geometric components alongside gradient backgrounds or accents.
+
+When developing such a system, it's crucial to define the emotional response the brand should evoke, consider where the logo and brand elements will be used (digital vs. print), and ensure technical optimization for various platforms. Examples of brands and designs showcasing this combination include the Perion rebrand, which used geometric elements and vibrant gradients, and various "sleek gradient tech startup logo with abstract geometric shapes" designs found in creative libraries.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">A complete brand identity system for a tech startup often incorporates gradient color usage and a geometric visual language to convey innovation, dynamism, and a modern aesthetic. This design approach helps tech companies stand out in a competitive market and resonate with their target audience.
+
+Here's a breakdown of how these elements are typically integrated:
+
+**1. Gradient Color Usage:**
+*   **Conveying Innovation and Energy:** Gradients, with their smooth transitions between colors, introduce a sense of movement and dimensionality, making a logo and brand identity feel more alive and engaging. This is particularly effective for tech startups looking to signal forward-thinking and a dynamic approach.
+*   **Brand Distinctiveness:** Unique color blends created through gradients can make a brand more memorable and distinctive in crowded markets.
+*   **Emotional Response:** Gradients can evoke strong emotional responses and create a specific mood. For instance, shifting from cool blues to warm oranges can suggest optimism and vitality.
+*   **Digital-First Approach:** Gradient logos and branding are well-suited for digital platforms, maintaining their appearance on high-resolution displays and adapting well to motion design and layered interfaces.
+*   **Examples of Gradient Use in Tech:** Companies like Instagram, Firefox, and Asana have successfully embraced gradient logos to create recognizable and energetic brand identities. Tech startups might opt for vibrant, multi-color gradients or bold neon gradients to project energy and modernity.
+
+**2. Geometric Visual Language:**
+*   **Structure and Order:** Geometric design principles utilize mathematical concepts like shapes, lines, angles, and proportions to create order, consistency, and logical organization within a visual system. This helps guide the viewer's eye and mind.
+*   **Brand Recognition:** Geometric designs are often unique and memorable, serving as a robust tool for brand recognition.
+*   **Communicating Values:** The choice of geometric shapes can convey specific brand values. For example:
+    *   **Circles:** Suggest unity, harmony, and inclusivity, ideal for community-focused startups or tech companies emphasizing connectivity.
+    *   **Triangles:** Convey strength, direction, growth, and precision.
+    *   **Squares/Rectangles:** Symbolize stability, structure, order, reliability, and security.
+    *   **Soft Edges/Rounded Shapes:** Can humanize tech brands, making complex technology feel more accessible and signaling user-friendliness and trust.
+    *   **Abstract Shapes:** Used by innovative brands to represent flexibility and forward-thinking, inspiring curiosity and conveying sophistication.
+*   **Modular Systems:** Geometric components can be designed to be recombined in various ways while maintaining a consistent visual language across different marketing materials and platforms.
+*   **Integration with Identity:** Geometric elements can be seen in logos, icons, patterns, and overall layout, creating a cohesive and structured brand experience.
+
+**Combining Gradients and Geometric Shapes in a Tech Startup Brand Identity:**
+Many tech startups combine these two elements to create a dynamic and modern brand. This can involve:
+*   Geometric logos with gradient fills.
+*   Abstract geometric shapes that transition with gradient colors.
+*   Brand systems that use geometric components alongside gradient backgrounds or accents.
+
+When developing such a system, it's crucial to define the emotional response the brand should evoke, consider where the logo and brand elements will be used (digital vs. print), and ensure technical optimization for various platforms. Examples of brands and designs showcasing this combination include the Perion rebrand, which used geometric elements and vibrant gradients, and various "sleek gradient tech startup logo with abstract geometric shapes" designs found in creative libraries.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. logodesign.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMf-_5du2aP7FMHxXwIvg3axXLrKnJcLzP4Lk4tHGQZKNhmRD52vn3JxC7S6Wp7sCUZxMuA8XUDMTb_XIlkwy7ZbYowOJRPSRSkWi8yqIIbZxU9BqilUUQZViw8T0Ezaxj7LGveyw75pyYK_VM8NsRkOgPp7S8uW5V)
+2. singlegrain.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4tgpYRBHDFZSre-qmY68DAlEN0ytQM5c_H2CTZqaX72DWCDHYd3guHPAWkDu4E38--I2er6Wt83_3wgW6Eu7fCECJtd-TzOsIplVk6Tb8pV6HjNwlWXzuYmIhgSdm93Kg946Gr80viN_vHbYsS2Ihcv53-oyNrJcDgSQSi5Z11h9xNo6jg_EP4D__G_8KI7tw-OLsd7w5dMIrmHrocyL8EhSbwcs=)
+3. logome.ai (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGXUTrSqqrNyvmD1pxdmW2yObnifLJarUl6IWUiI6rzjr2euIRqE2APxwS0SCUjT_kH6iyIZOB4KySD5xgadX1yY86-LMx1neg5S9IMGHuQhQaTqP2-urE-m0A53zikAeD_LnvMY4sO1ho0w==)
+4. ironov.ai (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGDe4LrNcDxXFBVdhTyXrGKxThc-UU54YVMPxDQB0ZrneQxhZamJ1lqsHebveExBF5JkH6qAX4VpjTg7adKeuuQGW73aVlW-HxzoOxoYHLU5b1jxhLQhY7B4sceRxoHSDLvCzLgXB8Z83BjuVdLblA_KWI1Q==)
+5. founderli.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7kHejWY7WZ7pfKYvkq_e3BrPiQAoq82tNwGSantbCTRfbwU4AHdzNmdohkV39l6SnHQ_-cJHpSQD33dz8AECjosXzg3AdDQKi6zK6SadsJCcBmWnDwqyp-B-0_l447SrBU-_8XftMFcbR9-cKyA5-orkNEwr_VJASmq_0iiCKiW-eEmoaRF12vUgwIuXgUJoqeqyZPQ==)
+6. cieden.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIUAT-R_HWXCYypfmJtV2uqMNiBugjiy1m8tP3nm_MFUVeyt_UoqJtz3mv_TDSY6ypDk_MBMOa4q8h2a_ewjpY2miX0q8Xg5Tpk6eyb1GPQPWzcE8x3c0PApE7kwo_E2nP26yRfGMm3mLZ3mJ_m6jsxToWmflFv6wZHbI=)
+7. huddlecreative.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEksHMV_TOWZROxOyEQYJZys4z2vzE8_SOkVTPY3j7YpCFXSmHlGTZznBkQGAqJYiAb0XYmj_4UdQRq_v9liRRzSM2WhUdnDd_TtcocJjP-H8fqBGPPrr3yDQIm_5HJDCVwL1BXYLJB1iuO9B2KMlr5HiXk5mv1I3kEKI2aKLIsLVUszxwylg==)
+8. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhvR9sDS60QiWke4k1CxtnrhJK_etNNENJ7bNR1BkgslHjVhb92MxevR5V2r1JQLudgFxbBscGFleedwcohqCGTiFAzq6qaYdTV3QvI499uy4Gg0nt7cVc0qYbjbze2WI_bh5VVIaRCAwSTnu39leHLFN6p0MUadXMEP3o3CINdE2poOlG6EuuHjUPFJvJlO8RnyPbNCo-c7Qzzha8rm5pdjdVsJwjLhO9uRgE2fIGgj4=)
+9. recraft.ai (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwSkq7aLHsWckPFhVp27im5T4v9UiGG8ldIk9dKlM1jZzTYXYELl3jTeDNu52uLsaKwiACVvXkJ9RWPVlM3djQobqDHlJFxVTfwzCIZeSfXrStyZoeYM61aVYkhNp1aigIJgqHB4EsY6aR8FemUAxrPKoUq7EDhdQuu7JEoip-eEG062E7eKtY)
+10. medium.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1QoR07DRw6W2mO-jHO-fI2uvxoR8zKGSf1DpozUKQ7gCDC6FYAxVa5uYhFSRHQDa3pl5y4ZtakBC5KgjlkUqtGKaokE0t7xRX74AR3Wo0dXiQ_pmQR1n7G-JIw-Lq7hiVLvtlfO5OhTcWkkrwE3rzXLl8XSy-fnbHFJe5GoSwbMtpu-1LbBSya2xypEGo)
+11. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7AG6gI9OOoTcb4iqs_m-Nfw1yxa3vavkXv4NsAP2ldKrdv3SvwFsRRMAoMlBi0HNxOp4bCmNV8l9dlSlOA6X3rqNfj1lkOCzuLDLquMid0eyIKEN41XWiKHePulR48b9nBikIbUWyP43vbZ8chclP8bOAojzc2u8T3w==)
+12. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNRmap0zzDGqQ4L6nngQYqGrJ3ykY89uPVmKxe_shOz86xOelk9A3hfmj5dSaUR_3ePscT7NLnVYsVM_j8WeK52LlK0PHEJQG51lCRElvoBQfwOQdt92925p8Q3LinwPRgoLmwrbcraXjLcpfpbMHwpoBdojfnXozOx-Nc67QydEtwU6CHL2FFQfyZCYIzOtkP0K6cPeDvPt8W6fTz0pqA-0ORxRJLukL2FzhAyg==)
+13. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGe6iSYkeKBT1m7XneVYY5ap4f4eu8j2NSpM_6RQR23K1-TlQyeb3iH5szR2Eene7f5K-bs3YmbUQ5Z6546KFwATA_a473AzaP2UoP4XoruGmZ4_LPFlNx93yNmITMdk58=)
+14. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhnQZ-gWHMPXe3KQ3HVdoyKzcsp0Thlr0tYkKXVVo4zoSUzswQCvCFyx_Ocx3IC26TpaCsTplArCTr1pRuJenbVjPFu9PvRl-W6xsEGWpAVKvw19IIC1CvDTf_z_YM7DN1L7mGbqMd_Mvag8OVhx7SP5gkvsWXHt2adIybQFXwam9GTYEGaxveMwLelef0)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMf-_5du2aP7FMHxXwIvg3axXLrKnJcLzP4Lk4tHGQZKNhmRD52vn3JxC7S6Wp7sCUZxMuA8XUDMTb_XIlkwy7ZbYowOJRPSRSkWi8yqIIbZxU9BqilUUQZViw8T0Ezaxj7LGveyw75pyYK_VM8NsRkOgPp7S8uW5V" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. logodesign.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4tgpYRBHDFZSre-qmY68DAlEN0ytQM5c_H2CTZqaX72DWCDHYd3guHPAWkDu4E38--I2er6Wt83_3wgW6Eu7fCECJtd-TzOsIplVk6Tb8pV6HjNwlWXzuYmIhgSdm93Kg946Gr80viN_vHbYsS2Ihcv53-oyNrJcDgSQSi5Z11h9xNo6jg_EP4D__G_8KI7tw-OLsd7w5dMIrmHrocyL8EhSbwcs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. singlegrain.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGXUTrSqqrNyvmD1pxdmW2yObnifLJarUl6IWUiI6rzjr2euIRqE2APxwS0SCUjT_kH6iyIZOB4KySD5xgadX1yY86-LMx1neg5S9IMGHuQhQaTqP2-urE-m0A53zikAeD_LnvMY4sO1ho0w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. logome.ai</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGDe4LrNcDxXFBVdhTyXrGKxThc-UU54YVMPxDQB0ZrneQxhZamJ1lqsHebveExBF5JkH6qAX4VpjTg7adKeuuQGW73aVlW-HxzoOxoYHLU5b1jxhLQhY7B4sceRxoHSDLvCzLgXB8Z83BjuVdLblA_KWI1Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. ironov.ai</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7kHejWY7WZ7pfKYvkq_e3BrPiQAoq82tNwGSantbCTRfbwU4AHdzNmdohkV39l6SnHQ_-cJHpSQD33dz8AECjosXzg3AdDQKi6zK6SadsJCcBmWnDwqyp-B-0_l447SrBU-_8XftMFcbR9-cKyA5-orkNEwr_VJASmq_0iiCKiW-eEmoaRF12vUgwIuXgUJoqeqyZPQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. founderli.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIUAT-R_HWXCYypfmJtV2uqMNiBugjiy1m8tP3nm_MFUVeyt_UoqJtz3mv_TDSY6ypDk_MBMOa4q8h2a_ewjpY2miX0q8Xg5Tpk6eyb1GPQPWzcE8x3c0PApE7kwo_E2nP26yRfGMm3mLZ3mJ_m6jsxToWmflFv6wZHbI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. cieden.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEksHMV_TOWZROxOyEQYJZys4z2vzE8_SOkVTPY3j7YpCFXSmHlGTZznBkQGAqJYiAb0XYmj_4UdQRq_v9liRRzSM2WhUdnDd_TtcocJjP-H8fqBGPPrr3yDQIm_5HJDCVwL1BXYLJB1iuO9B2KMlr5HiXk5mv1I3kEKI2aKLIsLVUszxwylg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. huddlecreative.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhvR9sDS60QiWke4k1CxtnrhJK_etNNENJ7bNR1BkgslHjVhb92MxevR5V2r1JQLudgFxbBscGFleedwcohqCGTiFAzq6qaYdTV3QvI499uy4Gg0nt7cVc0qYbjbze2WI_bh5VVIaRCAwSTnu39leHLFN6p0MUadXMEP3o3CINdE2poOlG6EuuHjUPFJvJlO8RnyPbNCo-c7Qzzha8rm5pdjdVsJwjLhO9uRgE2fIGgj4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwSkq7aLHsWckPFhVp27im5T4v9UiGG8ldIk9dKlM1jZzTYXYELl3jTeDNu52uLsaKwiACVvXkJ9RWPVlM3djQobqDHlJFxVTfwzCIZeSfXrStyZoeYM61aVYkhNp1aigIJgqHB4EsY6aR8FemUAxrPKoUq7EDhdQuu7JEoip-eEG062E7eKtY" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. recraft.ai</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1QoR07DRw6W2mO-jHO-fI2uvxoR8zKGSf1DpozUKQ7gCDC6FYAxVa5uYhFSRHQDa3pl5y4ZtakBC5KgjlkUqtGKaokE0t7xRX74AR3Wo0dXiQ_pmQR1n7G-JIw-Lq7hiVLvtlfO5OhTcWkkrwE3rzXLl8XSy-fnbHFJe5GoSwbMtpu-1LbBSya2xypEGo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. medium.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7AG6gI9OOoTcb4iqs_m-Nfw1yxa3vavkXv4NsAP2ldKrdv3SvwFsRRMAoMlBi0HNxOp4bCmNV8l9dlSlOA6X3rqNfj1lkOCzuLDLquMid0eyIKEN41XWiKHePulR48b9nBikIbUWyP43vbZ8chclP8bOAojzc2u8T3w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNRmap0zzDGqQ4L6nngQYqGrJ3ykY89uPVmKxe_shOz86xOelk9A3hfmj5dSaUR_3ePscT7NLnVYsVM_j8WeK52LlK0PHEJQG51lCRElvoBQfwOQdt92925p8Q3LinwPRgoLmwrbcraXjLcpfpbMHwpoBdojfnXozOx-Nc67QydEtwU6CHL2FFQfyZCYIzOtkP0K6cPeDvPt8W6fTz0pqA-0ORxRJLukL2FzhAyg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGe6iSYkeKBT1m7XneVYY5ap4f4eu8j2NSpM_6RQR23K1-TlQyeb3iH5szR2Eene7f5K-bs3YmbUQ5Z6546KFwATA_a473AzaP2UoP4XoruGmZ4_LPFlNx93yNmITMdk58=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhnQZ-gWHMPXe3KQ3HVdoyKzcsp0Thlr0tYkKXVVo4zoSUzswQCvCFyx_Ocx3IC26TpaCsTplArCTr1pRuJenbVjPFu9PvRl-W6xsEGWpAVKvw19IIC1CvDTf_z_YM7DN1L7mGbqMd_Mvag8OVhx7SP5gkvsWXHt2adIybQFXwam9GTYEGaxveMwLelef0" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. shutterstock.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="36.05">36.05秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="54,434">54,434</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. tech startup brand identity gradient geometric site:behance.net
+2. startup brand identity geometric gradient site:dribbble.com
+3. "brand identity" "visual identity" tech gradient geometric portfolio
+4. complete brand identity system geometric gradient tech company behance.net/gallery">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. tech startup brand identity gradient geometric site:behance.net</li><li class="text-sm text-gray-600">2. startup brand identity geometric gradient site:dribbble.com</li><li class="text-sm text-gray-600">3. "brand identity" "visual identity" tech gradient geometric portfolio</li><li class="text-sm text-gray-600">4. complete brand identity system geometric gradient tech company behance.net/gallery</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for tech startup brand identity systems that specifically showcase gradient colors and geometric design elements.Let me search for more specific project galleries on Dribbble and other platforms:Let me search for specific complete brand identity projects with modern tech aesthetics:Let me search for specific brand identity projects with complete visual systems:Based on my searches, I've found several excellent visual galleries showcasing tech startup brand identity systems that feature gradient colors and geometric visual language. Here are the best resources for visual inspiration:
+
+## Direct Visual Galleries
+
+### Behance Projects
+Several specific Behance galleries showcase gradient icon logos for modern tech brands and tech startup brand identity systems, including:
+
+- **Gradient icon logos for modern tech brands** - Direct gallery showcasing gradient-based logo designs specifically for tech companies
+- **Tech startup logo collections** - Galleries featuring modern tech logos with gradient applications
+- **Tech Quarter Brand Identity** - Complete brand identity system for tech companies
+
+### Dribbble Collections
+Dribbble hosts thousands of geometric branding designs, gradient logos, and geometric gradient projects, with notable collections:
+
+- **Geometric Branding** - Features 13 geometric branding designs including layered abstract geometric squares and craftsy branding systems
+- **Gradient Logos** - Over 11,000 gradient logo designs showcasing various applications
+- **Geometric Gradient** - 14 designs featuring geometric patterns with gradient applications, including keycare logo concepts and triangle explorations
+
+### Specific Project Examples
+- **Gradient Brand Identity by Diogo Dantas** - A dedicated project exploring gradients for brand identity materials
+- **Modern gradient geometric logos** - Specific gallery by Amir Sayem focusing on geometric forms with gradient applications
+
+## Pinterest Visual Boards
+Pinterest offers curated collections for gradient brand identity design and tech brand identity with thousands of examples featuring gradient visual identities, tech branding systems, and geometric corporate brand identities.
+
+## Industry Applications
+Gradient logos are particularly effective for tech startups, creative agencies, and digital brands, with companies like Instagram and Firefox using gradients to convey innovation and contemporary appeal.
+
+Modern tech brand identities frequently use geometric shapes with three-dimensional styles and gradient color schemes to suggest complexity, technical expertise, and forward-thinking approaches.
+
+These galleries provide comprehensive visual references for tech startup brand identity systems that effectively combine gradient colors with geometric visual language to create modern, innovative brand expressions.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for tech startup brand identity systems that specifically showcase gradient colors and geometric design elements.Let me search for more specific project galleries on Dribbble and other platforms:Let me search for specific complete brand identity projects with modern tech aesthetics:Let me search for specific brand identity projects with complete visual systems:Based on my searches, I've found several excellent visual galleries showcasing tech startup brand identity systems that feature gradient colors and geometric visual language. Here are the best resources for visual inspiration:
+
+## Direct Visual Galleries
+
+### Behance Projects
+Several specific Behance galleries showcase gradient icon logos for modern tech brands and tech startup brand identity systems, including:
+
+- **Gradient icon logos for modern tech brands** - Direct gallery showcasing gradient-based logo designs specifically for tech companies
+- **Tech startup logo collections** - Galleries featuring modern tech logos with gradient applications
+- **Tech Quarter Brand Identity** - Complete brand identity system for tech companies
+
+### Dribbble Collections
+Dribbble hosts thousands of geometric branding designs, gradient logos, and geometric gradient projects, with notable collections:
+
+- **Geometric Branding** - Features 13 geometric branding designs including layered abstract geometric squares and craftsy branding systems
+- **Gradient Logos** - Over 11,000 gradient logo designs showcasing various applications
+- **Geometric Gradient** - 14 designs featuring geometric patterns with gradient applications, including keycare logo concepts and triangle explorations
+
+### Specific Project Examples
+- **Gradient Brand Identity by Diogo Dantas** - A dedicated project exploring gradients for brand identity materials
+- **Modern gradient geometric logos** - Specific gallery by Amir Sayem focusing on geometric forms with gradient applications
+
+## Pinterest Visual Boards
+Pinterest offers curated collections for gradient brand identity design and tech brand identity with thousands of examples featuring gradient visual identities, tech branding systems, and geometric corporate brand identities.
+
+## Industry Applications
+Gradient logos are particularly effective for tech startups, creative agencies, and digital brands, with companies like Instagram and Firefox using gradients to convey innovation and contemporary appeal.
+
+Modern tech brand identities frequently use geometric shapes with three-dimensional styles and gradient color schemes to suggest complexity, technical expertise, and forward-thinking approaches.
+
+These galleries provide comprehensive visual references for tech startup brand identity systems that effectively combine gradient colors with geometric visual language to create modern, innovative brand expressions.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Behance (https://www.behance.net/gallery/177004875/Gradient-icon-logos-for-modern-tech-brands)
+2. startup logo, tech logo, modern logo, gradient ... - Behance (https://www.behance.net/gallery/129377123/Tech-startup-logo-Modern-tech-logo/modules/733187961)
+3. Tech, Tech logo, Brand identity, N Logo (https://www.behance.net/gallery/223675253/Tech-Tech-logo-Brand-identity-N-Logo)
+4. Branding Identity Gradient designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/branding_identity_gradient)
+5. Browse thousands of Geometric Simple Brand images for design inspiration | Dribbble (https://dribbble.com/search/geometric-simple-brand)
+6. Gradient Branding Ideas - 109+ Best Gradient Brand Identity Designs 2025 | 99designs (https://99designs.com/inspiration/branding/gradient)
+7. Browse thousands of Gradient Logos images for design inspiration | Dribbble (https://dribbble.com/search/gradient-logos)
+8. Gradient Logo Design: Create Modern & Vibrant Brand Logos (https://www.logome.ai/blogs/gradient-logo-design)
+9. Branding Design Inspiration: Classic & High-tech — vol. 271 (https://medium.com/@theymakedesign/branding-design-inspiration-vol-271-3439eff0cb19)
+10. Geometric Design Brand Identity Projects (https://www.behance.net/search/projects/geometric design brand identity?locale=en_US)
+11. Expressive and Professional Brand Identity Designs | Medium (https://medium.com/@theymakedesign/branding-design-inspiration-vol-272-5533c2261ad8)
+12. How to Build Your Brand’s Visual Identity (+ 5 Examples) (https://vitaldesign.com/how-to-visual-identity/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/177004875/Gradient-icon-logos-for-modern-tech-brands" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/129377123/Tech-startup-logo-Modern-tech-logo/modules/733187961" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. startup logo, tech logo, modern logo, gradient ... - Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/223675253/Tech-Tech-logo-Brand-identity-N-Logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Tech, Tech logo, Brand identity, N Logo</a></li><li class="text-sm"><a href="https://dribbble.com/tags/branding_identity_gradient" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Branding Identity Gradient designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/search/geometric-simple-brand" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Browse thousands of Geometric Simple Brand images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://99designs.com/inspiration/branding/gradient" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Gradient Branding Ideas - 109+ Best Gradient Brand Identity Designs 2025 | 99designs</a></li><li class="text-sm"><a href="https://dribbble.com/search/gradient-logos" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Browse thousands of Gradient Logos images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://www.logome.ai/blogs/gradient-logo-design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Gradient Logo Design: Create Modern & Vibrant Brand Logos</a></li><li class="text-sm"><a href="https://medium.com/@theymakedesign/branding-design-inspiration-vol-271-3439eff0cb19" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Branding Design Inspiration: Classic & High-tech — vol. 271</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/geometric design brand identity?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Geometric Design Brand Identity Projects</a></li><li class="text-sm"><a href="https://medium.com/@theymakedesign/branding-design-inspiration-vol-272-5533c2261ad8" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Expressive and Professional Brand Identity Designs | Medium</a></li><li class="text-sm"><a href="https://vitaldesign.com/how-to-visual-identity/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. How to Build Your Brand’s Visual Identity (+ 5 Examples)</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="275.49">275.49秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="730,819">730,819</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net "tech startup" "brand identity" gradient geometric
+2. site:behance.net tech startup brand identity geometric gradient
+3. gradient geometric startup brand identity Dribbble
+4. site:dribbble.com/shots tech startup brand identity gradient geometric
+5. Graphtheory Gather brand identity Behance
+6. Caleido Brand Identity Arounda Behance
+7. Shift Brand Identity Anagram Behance
+8. Holidu Brand Identity Behance
+9. Perion Rebrand Focus Lab Behance
+10. Izifin Brand Identity Outcrowd Behance
+11. Highradius Brand Identity Behance
+12. KoreLock Brand Identity Behance
+13. HYKAVY Brand Design Behance
+14. Lerni Brand Identity Outcrowd Behance
+15. Cubit Logo Animation Dribbble">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net "tech startup" "brand identity" gradient geometric</li><li class="text-sm text-gray-600">2. site:behance.net tech startup brand identity geometric gradient</li><li class="text-sm text-gray-600">3. gradient geometric startup brand identity Dribbble</li><li class="text-sm text-gray-600">4. site:dribbble.com/shots tech startup brand identity gradient geometric</li><li class="text-sm text-gray-600">5. Graphtheory Gather brand identity Behance</li><li class="text-sm text-gray-600">6. Caleido Brand Identity Arounda Behance</li><li class="text-sm text-gray-600">7. Shift Brand Identity Anagram Behance</li><li class="text-sm text-gray-600">8. Holidu Brand Identity Behance</li><li class="text-sm text-gray-600">9. Perion Rebrand Focus Lab Behance</li><li class="text-sm text-gray-600">10. Izifin Brand Identity Outcrowd Behance</li><li class="text-sm text-gray-600">11. Highradius Brand Identity Behance</li><li class="text-sm text-gray-600">12. KoreLock Brand Identity Behance</li><li class="text-sm text-gray-600">13. HYKAVY Brand Design Behance</li><li class="text-sm text-gray-600">14. Lerni Brand Identity Outcrowd Behance</li><li class="text-sm text-gray-600">15. Cubit Logo Animation Dribbble</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are five direct brand-identity showcases for tech-or finance-focused startups (or platforms) that leverage gradient color schemes and geometric visual language:
+
+1. Caleido – Finance Brand Identity  
+   • A dynamic, modern identity for a sales-automation platform, blending vibrant gradients with clean, geometric forms to communicate innovation and trust.  
+   • Features a modular wordmark and icon system, applied across digital interfaces and marketing materials.  
+   • View on Dribbble: https://dribbble.com/shots/23295068-Caleido-Finance-Brand-Identity ([dribbble.com](https://dribbble.com/shots/23295068-Caleido-Finance-Brand-Identity?utm_source=chatgpt.com))
+
+2. Izifin – Brand Visual Identity for a Mobile Banking Startup  
+   • A full-system identity for a fintech app, using a deep-orange-to-blue color palette (with gradient accents) and an abstract star symbol to convey openness and endless possibilities.  
+   • Includes logo lock-ups, color-palette specs, typography guidelines, and application mocks.  
+   • View on Dribbble: https://dribbble.com/shots/23293146-Izifin-Brand-visual-identity-for-the-mobile-banking-startup ([dribbble.com](https://dribbble.com/shots/23293146-Izifin-Brand-visual-identity-for-the-mobile-banking-startup?utm_source=chatgpt.com))
+
+3. HighRadius Brand Visual Identity  
+   • Rebrand for an AI-powered finance SaaS company, employing a green-to-blue gradient palette and a geometric “H”-and-arrow icon to signal upward growth and autonomy in finance.  
+   • Showcases logo animation, brand patterns, and UI mockups reflecting a cohesive, modern system.  
+   • View on Dribbble: https://dribbble.com/shots/23294342-Highradius-Brand-Visual-Identity ([dribbble.com](https://dribbble.com/shots/23294342-Highradius-Brand-Visual-Identity?utm_source=chatgpt.com))
+
+4. Perion Rebrand  
+   • Unified identity for an adtech holding, featuring orb-like geometric elements with subtle gradient textures (“portal effect”) in electrified purple against black, evoking dynamism and cohesion across multiple sub-brands.  
+   • Includes logo treatment, color system, and key art direction guidelines.  
+   • View on Dribbble: https://dribbble.com/shots/24837486-Perion-Rebrand ([dribbble.com](https://dribbble.com/shots/24837486-Perion-Rebrand?utm_source=chatgpt.com))
+
+5. Shift Capital Brand Guidelines  
+   • Comprehensive brand system for an education-technology startup, using aquamarine-to-teal gradients alongside geometric iconography to symbolize growth and forward movement.  
+   • Delivers precise logo usage, color-and-gradient rules, and supporting graphic elements for digital and print.  
+   • View on Dribbble: https://dribbble.com/shots/15777349-Shift-Capital-Brand-Guidelines ([dribbble.com](https://dribbble.com/shots/15777349-Shift-Capital-Brand-Guidelines?utm_source=chatgpt.com))">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are five direct brand-identity showcases for tech-or finance-focused startups (or platforms) that leverage gradient color schemes and geometric visual language:
+
+1. Caleido – Finance Brand Identity  
+   • A dynamic, modern identity for a sales-automation platform, blending vibrant gradients with clean, geometric forms to communicate innovation and trust.  
+   • Features a modular wordmark and icon system, applied across digital interfaces and marketing materials.  
+   • View on Dribbble: https://dribbble.com/shots/23295068-Caleido-Finance-Brand-Identity ([dribbble.com](https://dribbble.com/shots/23295068-Caleido-Finance-Brand-Identity?utm_source=chatgpt.com))
+
+2. Izifin – Brand Visual Identity for a Mobile Banking Startup  
+   • A full-system identity for a fintech app, using a deep-orange-to-blue color palette (with gradient accents) and an abstract star symbol to convey openness and endless possibilities.  
+   • Includes logo lock-ups, color-palette specs, typography guidelines, and application mocks.  
+   • View on Dribbble: https://dribbble.com/shots/23293146-Izifin-Brand-visual-identity-for-the-mobile-banking-startup ([dribbble.com](https://dribbble.com/shots/23293146-Izifin-Brand-visual-identity-for-the-mobile-banking-startup?utm_source=chatgpt.com))
+
+3. HighRadius Brand Visual Identity  
+   • Rebrand for an AI-powered finance SaaS company, employing a green-to-blue gradient palette and a geometric “H”-and-arrow icon to signal upward growth and autonomy in finance.  
+   • Showcases logo animation, brand patterns, and UI mockups reflecting a cohesive, modern system.  
+   • View on Dribbble: https://dribbble.com/shots/23294342-Highradius-Brand-Visual-Identity ([dribbble.com](https://dribbble.com/shots/23294342-Highradius-Brand-Visual-Identity?utm_source=chatgpt.com))
+
+4. Perion Rebrand  
+   • Unified identity for an adtech holding, featuring orb-like geometric elements with subtle gradient textures (“portal effect”) in electrified purple against black, evoking dynamism and cohesion across multiple sub-brands.  
+   • Includes logo treatment, color system, and key art direction guidelines.  
+   • View on Dribbble: https://dribbble.com/shots/24837486-Perion-Rebrand ([dribbble.com](https://dribbble.com/shots/24837486-Perion-Rebrand?utm_source=chatgpt.com))
+
+5. Shift Capital Brand Guidelines  
+   • Comprehensive brand system for an education-technology startup, using aquamarine-to-teal gradients alongside geometric iconography to symbolize growth and forward movement.  
+   • Delivers precise logo usage, color-and-gradient rules, and supporting graphic elements for digital and print.  
+   • View on Dribbble: https://dribbble.com/shots/15777349-Shift-Capital-Brand-Guidelines ([dribbble.com](https://dribbble.com/shots/15777349-Shift-Capital-Brand-Guidelines?utm_source=chatgpt.com))</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Caleido - Finance Brand Identity by Arounda Branding for Arounda on Dribbble (https://dribbble.com/shots/23295068-Caleido-Finance-Brand-Identity?utm_source=chatgpt.com)
+2. Izifin - Brand visual identity for the mobile banking startup by Outcrowd on Dribbble (https://dribbble.com/shots/23293146-Izifin-Brand-visual-identity-for-the-mobile-banking-startup?utm_source=chatgpt.com)
+3. Highradius Brand Visual Identity by Ahmed on Dribbble (https://dribbble.com/shots/23294342-Highradius-Brand-Visual-Identity?utm_source=chatgpt.com)
+4. Perion Rebrand by Focus Lab + Odi on Dribbble (https://dribbble.com/shots/24837486-Perion-Rebrand?utm_source=chatgpt.com)
+5. Shift Capital Brand Guidelines by Valentin Salmon for anagram on Dribbble (https://dribbble.com/shots/15777349-Shift-Capital-Brand-Guidelines?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/23295068-Caleido-Finance-Brand-Identity?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Caleido - Finance Brand Identity by Arounda Branding for Arounda on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23293146-Izifin-Brand-visual-identity-for-the-mobile-banking-startup?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Izifin - Brand visual identity for the mobile banking startup by Outcrowd on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23294342-Highradius-Brand-Visual-Identity?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Highradius Brand Visual Identity by Ahmed on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/24837486-Perion-Rebrand?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Perion Rebrand by Focus Lab + Odi on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/15777349-Shift-Capital-Brand-Guidelines?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Shift Capital Brand Guidelines by Valentin Salmon for anagram on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
