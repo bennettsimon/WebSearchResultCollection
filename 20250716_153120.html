@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about retro concert poster design inspiration with 1970s psychedelic art style and vibrant colors visual examples">The user is asking about retro concert poster design inspiration with 1970s psychedelic art style and vibrant colors visual examples</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 15:32:04</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="15.10">15.10秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="993">993</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. 1970s psychedelic concert posters vibrant colors
+2. retro concert poster design inspiration psychedelic art 70s
+3. examples of 1970s psychedelic art in concert posters
+4. characteristics of 1970s psychedelic concert posters">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. 1970s psychedelic concert posters vibrant colors</li><li class="text-sm text-gray-600">2. retro concert poster design inspiration psychedelic art 70s</li><li class="text-sm text-gray-600">3. examples of 1970s psychedelic art in concert posters</li><li class="text-sm text-gray-600">4. characteristics of 1970s psychedelic concert posters</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="The 1970s psychedelic art style for concert posters is characterized by its vibrant colors, distorted typography, and often surreal or trippy imagery, aiming to visually represent the psychedelic experience. This style was a direct influence of the counter-culture movement and the rising use of psychedelic drugs like LSD during the 1960s and 1970s, which intensified colors and altered perception.
+
+Here are some visual examples and characteristics to inspire retro concert poster designs with a 1970s psychedelic art style and vibrant colors:
+
+**Key Characteristics and Visual Elements:**
+
+*   **Vibrant and Clashing Color Palettes:** Expect bold, saturated, and often contrasting color combinations. "Acid tones" and fluorescent colors were common, creating a visually intense effect. Examples include dark magenta purple ink on an orangish background, or the use of colors at opposite ends of the color wheel to create "color vibration".
+*   **Wavy, Distorted, and Illegible Typography:** Fonts are frequently bold, colorful, and feature wavy, fluid, or distorted lines. Sometimes the text was so challenging to read that only those familiar with the psychedelic subculture could easily decipher it.
+*   **Surreal and Trippy Imagery:** Designs often feature swirling, hypnotic patterns, kaleidoscopes, and mind-bending compositions. Common motifs include mushrooms, cosmic elements, fantastical creatures, and distorted figures. These elements aimed to evoke a narcotic and joyful mood, or an "out-of-this-world" experience.
+*   **Art Nouveau Influence:** The psychedelic movement in the 1960s and 70s experienced a revival influenced by the Art Nouveau movement, incorporating intricate, hand-drawn typography and organic, fluid lines.
+*   **Central Focus with Repetitive Patterns:** Swirls, kaleidoscopes, and patterns often had a core focus and were repeated around it.
+*   **Iconography from Eastern Art and Symbolism:** Influences from world music, particularly from India, led to the incorporation of iconography like mandalas and sacred geometry.
+*   **"Big Five" Artists:** A significant group of artists, often referred to as the "Big Five" (Alton Kelley, Victor Moscoso, Rick Griffin, Wes Wilson, and Stanley Mouse), were instrumental in creating some of the most well-known psychedelic poster designs of the era. Their work often featured vibrating colors to create the psychedelic effect.
+
+**Examples of Bands and Artists whose Posters Exemplify the Style:**
+
+*   **Led Zeppelin:** Posters for the band featured "bold, psychedelic rainbow patterns and vibrant retro colors," capturing the essence of the 1970s rock scene.
+*   **Jimi Hendrix:** A prominent figure whose concert and album art was heavily influenced by psychedelic art.
+*   **The Doors:** Numerous concert posters for The Doors showcase psychedelic imagery, vibrant colors, and unique designs, sometimes featuring solarized photos of band members or circular layouts.
+*   **Jefferson Airplane and Grateful Dead:** These bands, along with others like Quicksilver Messenger Service and Janis Joplin, were central to the San Francisco psychedelic scene, and their posters are prime examples of the style.
+*   **The Who:** Another iconic band whose concert posters and album covers were influenced by psychedelic art.
+*   **Captain Beefheart and His Magic Band:** An example showing posters with "interesting yet odd color schemes, such as purple and orange, and the use of a unique wavy font".
+*   **Pink Floyd:** The Museum's collection includes examples of poster art for Pink Floyd, some of which may have psychedelic elements.
+
+You can find visual examples of these posters on platforms like Redbubble, Etsy, Shutterstock, and through searches for "1970s psychedelic concert posters". Websites specializing in vintage posters, like Classic Posters, also offer extensive galleries.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">The 1970s psychedelic art style for concert posters is characterized by its vibrant colors, distorted typography, and often surreal or trippy imagery, aiming to visually represent the psychedelic experience. This style was a direct influence of the counter-culture movement and the rising use of psychedelic drugs like LSD during the 1960s and 1970s, which intensified colors and altered perception.
+
+Here are some visual examples and characteristics to inspire retro concert poster designs with a 1970s psychedelic art style and vibrant colors:
+
+**Key Characteristics and Visual Elements:**
+
+*   **Vibrant and Clashing Color Palettes:** Expect bold, saturated, and often contrasting color combinations. "Acid tones" and fluorescent colors were common, creating a visually intense effect. Examples include dark magenta purple ink on an orangish background, or the use of colors at opposite ends of the color wheel to create "color vibration".
+*   **Wavy, Distorted, and Illegible Typography:** Fonts are frequently bold, colorful, and feature wavy, fluid, or distorted lines. Sometimes the text was so challenging to read that only those familiar with the psychedelic subculture could easily decipher it.
+*   **Surreal and Trippy Imagery:** Designs often feature swirling, hypnotic patterns, kaleidoscopes, and mind-bending compositions. Common motifs include mushrooms, cosmic elements, fantastical creatures, and distorted figures. These elements aimed to evoke a narcotic and joyful mood, or an "out-of-this-world" experience.
+*   **Art Nouveau Influence:** The psychedelic movement in the 1960s and 70s experienced a revival influenced by the Art Nouveau movement, incorporating intricate, hand-drawn typography and organic, fluid lines.
+*   **Central Focus with Repetitive Patterns:** Swirls, kaleidoscopes, and patterns often had a core focus and were repeated around it.
+*   **Iconography from Eastern Art and Symbolism:** Influences from world music, particularly from India, led to the incorporation of iconography like mandalas and sacred geometry.
+*   **"Big Five" Artists:** A significant group of artists, often referred to as the "Big Five" (Alton Kelley, Victor Moscoso, Rick Griffin, Wes Wilson, and Stanley Mouse), were instrumental in creating some of the most well-known psychedelic poster designs of the era. Their work often featured vibrating colors to create the psychedelic effect.
+
+**Examples of Bands and Artists whose Posters Exemplify the Style:**
+
+*   **Led Zeppelin:** Posters for the band featured "bold, psychedelic rainbow patterns and vibrant retro colors," capturing the essence of the 1970s rock scene.
+*   **Jimi Hendrix:** A prominent figure whose concert and album art was heavily influenced by psychedelic art.
+*   **The Doors:** Numerous concert posters for The Doors showcase psychedelic imagery, vibrant colors, and unique designs, sometimes featuring solarized photos of band members or circular layouts.
+*   **Jefferson Airplane and Grateful Dead:** These bands, along with others like Quicksilver Messenger Service and Janis Joplin, were central to the San Francisco psychedelic scene, and their posters are prime examples of the style.
+*   **The Who:** Another iconic band whose concert posters and album covers were influenced by psychedelic art.
+*   **Captain Beefheart and His Magic Band:** An example showing posters with "interesting yet odd color schemes, such as purple and orange, and the use of a unique wavy font".
+*   **Pink Floyd:** The Museum's collection includes examples of poster art for Pink Floyd, some of which may have psychedelic elements.
+
+You can find visual examples of these posters on platforms like Redbubble, Etsy, Shutterstock, and through searches for "1970s psychedelic concert posters". Websites specializing in vintage posters, like Classic Posters, also offer extensive galleries.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. printroomcenter.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6yiO4fI35fq80ATFMiB96scjXVqFf7C5tf9eYXReH-lHgwmjyvUh0Mofi90e1Tdm2OAxvzXKgr0famDSWY2j-2OIsGfKxhHSdszBGpQ6HUvz6R7w0PaevbNuXU4Z5mm4uw4PtMnvOQM3mbVNmq19pBQNNreAEZhB_qAPRn1IOkoOI0AftYV1e_ycXqcY5jRFXsP6IXZb7CdblinzhC955Vx0CZfGMBad-9fOQuqPwrPYbPeOWD2zeq7Es_7w0pC_uXFXLU03Hs-rEH-BsQlY9XfJ1Lzz7K-7CAtOTF5mLukA5-79biss-)
+2. ragnarokpress.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF2uFBUogn0YWQr570iYxe8Oqx_GJfVdRtpJreyrG-RtTihjK2-osIvy8KWYcSQ2ETKIBJEq3t-1GAy34NCk05Z_5J5EYO9J2gGgOEW_HqPt5Q0CCFRImV7n7l3Hxrj907rp2U7SUp-o57RY4aC3NSIYYWEGhL50JoL6ErDNDpXvsrDU22fOEkYWkfDQ==)
+3. creativemarket.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjv6AgRUi1wRmU8IvRLK3X3onf9G_4RcIWMwYSJU2Rq_IEu3uRgjdvzHjMQZYqtXDsRzOL_cFzFvq3mWROXXQ9hrRr_zDLEjTej9QogQ-kFjITIwUQQSDln3hgYgzRMDZwCt1Gh4HEjBAiq_geeGUK6BoGGjw=)
+4. twu.edu (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIJh0elzayRY_i4WS0-7wZ9rqIMigTIEvzQ1ORj0J_Q7MB7PG8PDcytvYxv9TQAHouMA4oMzv03uE17iFRE_lBIwjHRwGVytuSei4IEHO_nuqCUS8OXD6NgX5YOCPwKaiwYX6YSY0InLPp_UWrofTbLYK5JjocOOQAY489hl4j3K6n70S5XxXZx5IWKAYgF_2SuT96-dWIoUcCKLuWYHcz6vrFRlQSzNzt8A==)
+5. tfaoi.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDNyeqyVQiI6nRkx7jZUJohIKZu2RlU1amVz-nIZQQuH_17Q0YcGL3YQMmBLRZuYr1-OljjxXKKbIlj2GKPYaXJ8-T32QzDc10lPiPVI35eZdNdW7MTwKtuUABdP8Kw6blQA==)
+6. classicposters.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXjh_3wn__GZ8x8VkfzFxQIWy8vcEgqIlxBmH1J0Z3WDgHd8X9I2t3oUy76pCyI8A-X5AgJsx9K6pLSwYVHxCzHXRA5yZKocWdbMlepz-j6ZmwWCRXJINTN2G4I8kK2Z6Cqi6GnPGB_wf37JEuhS0z)
+7. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZeAjaLxjDDGazdrE2ThPAU59az9KteuVd4Xfr7xbuzVVVEXWSKm4ce9yKvGvIvKt_K_a9oszQdgF24TIwRuknJMq_FuulJT9qUEtu-kTOtLpVY08yionUsI3TEA-XHMc3ljQA0GZK1D-vvzY-tNPQBvoV-zK1FiCH)
+8. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn1JOzuVnwT-8xJ1ehKzXj4YxxbiGwZ7sEUd9g98_GFV_hzf1RFXrPYEJg5Q29IGwbyEOSNMgDlRosvUKcruLeC2hINUYn7eCRAtLJTmk5PTkth-KW6AUPE3qp0sdW8_FF3rSxxWz_n6dbistEdBUSzkbQ8vamzKwwmwTYdGjud16PWi6pKKHNItFAdqMK)
+9. fiverr.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzdFcT8ZcvcGVYrWngbksEcJEfGURLOQpE9KeaAUpauTyWqdfHc-BdmmSentxzOZggCNxW1kV-v7hj0hQSJ32U3usFhqjoFsbpqA6LUYsMTZmqf7Qlx3Z_BN6Jm7Ggj3dZbhlpe9P_7YjdAODzg2e-tEZ6MOTzGjFmRu-orUbLUADuJv6WHFYPZGRvRaeyaitdfP8GVQ==)
+10. galerie123.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnkQ6-NcKeGMOYzM2SLVIEA3hv_bMRys1KqMDwLMlRN1Abr9-OjWiq29J95qPsSpo8ZlozvXEPK2DBqoNlJW5F6GN9pk2MeGoAeABZgSBVBirIJ8GBp2M0s5HrCI82_bfWPSYLJCqUcpMf8fvjplTFIxd_bmDj-63heEqYNR1CI-fOI6UK)
+11. creativeyouthcharity.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7YyAwPVSMLEt0XQ683qMNKwfL-hNaEDM4Kta4GV02jQUmwGbIJ9XXnXi4tt6NR15HS4bKrP4_zdqqxFGhRGPyJ9DdKxl5xsW-F8IgIYkN85GzQCNfUkTOWzifhKHVrcOONXsT6pn3G6yYGVq7FKj_-qdU1r9vC8AKtdw6CKH97Dnxzw==)
+12. omegaauctions.co.uk (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdyspSQ2BzvbCK9IbVcrWujUxl1z04rJ_gt5nCV5GbwLprwT1N_HKO12fofX_rSJEPmVcfeSnzWzD70nNPzUhwoFrr7AXkzKVP1k9WgVDX7a-HyJMR0N-SI_5LHUrdn8ZV_mvDdzCEoIsvuNM7dhmVXOXQ2ejdjcwq8D3fslkLrf86oQU07_EYa5THJygDbYrfPZ9hfONoIK7dH4NL72BGDjVEAjdAeLt1xCPDVwA5RyjrT_n44vljd3F-GhSbICM4Vv7butob7EkDOuYYMPdT)
+13. classicposters.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUemB8qmB2_c-PjyYPWvNKV_rYcznU_pZwOTuhX2lC6-5Kb0DqHsuELXqG3Ig9Jd_Ghc19v0Qc5m2YdZWzqRuu2eR1p7CQdeJKvzSv6sxoBzZSd9ZJpndkz8c=)
+14. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBmsZtP6_9rJlhE49Rdlo_Z-ktsEDpbQwWKQ8rTLd44uOD7y6lLOoGahJQ_GoJjIJ5-oqUy0HQyF7Xz-7PHDLbVNT7D-tlfdxQtvlT1EWsTJnFGRNssbzPjZmpNvDO94b40KUgpm5WWIoL5FTag9K0z5oM4qE0L4MxwCdeec33zVbH0Qm0pDv2hP3QT4aESJlE1_ZUJQmrLV434GM=)
+15. walmart.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9ePb3W5gYEPLiEbL_GHUCp-r75TmF-rqM1RT-7jzoO0NUDqqoyHl7zDeLYF2OAI56sri7ZS8rdCtJT6qYtElGy40k1m1hyttwzhJvwz6aDtzpryCw483_ONBzc4vJk8xMgPTa_DvklzCMLkrXFSf0WYs7)
+16. redbubble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_cn9SP46_pcCMA69I_naFvgT0tuDCwbmVARZN1zbpKu49_T_koVkW8uiHztLpHRr7xc61i7oLaCzxv8pTpXGggxw7jq-y5deD9Cpa26UqZrA6dOtADsyom6mhRxXjQEhC4-n2Szi0Dvp0xR2eRiMxZxhLckhw5w8R5BbfuVDyqs3NL7Q=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6yiO4fI35fq80ATFMiB96scjXVqFf7C5tf9eYXReH-lHgwmjyvUh0Mofi90e1Tdm2OAxvzXKgr0famDSWY2j-2OIsGfKxhHSdszBGpQ6HUvz6R7w0PaevbNuXU4Z5mm4uw4PtMnvOQM3mbVNmq19pBQNNreAEZhB_qAPRn1IOkoOI0AftYV1e_ycXqcY5jRFXsP6IXZb7CdblinzhC955Vx0CZfGMBad-9fOQuqPwrPYbPeOWD2zeq7Es_7w0pC_uXFXLU03Hs-rEH-BsQlY9XfJ1Lzz7K-7CAtOTF5mLukA5-79biss-" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. printroomcenter.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF2uFBUogn0YWQr570iYxe8Oqx_GJfVdRtpJreyrG-RtTihjK2-osIvy8KWYcSQ2ETKIBJEq3t-1GAy34NCk05Z_5J5EYO9J2gGgOEW_HqPt5Q0CCFRImV7n7l3Hxrj907rp2U7SUp-o57RY4aC3NSIYYWEGhL50JoL6ErDNDpXvsrDU22fOEkYWkfDQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. ragnarokpress.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjv6AgRUi1wRmU8IvRLK3X3onf9G_4RcIWMwYSJU2Rq_IEu3uRgjdvzHjMQZYqtXDsRzOL_cFzFvq3mWROXXQ9hrRr_zDLEjTej9QogQ-kFjITIwUQQSDln3hgYgzRMDZwCt1Gh4HEjBAiq_geeGUK6BoGGjw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. creativemarket.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIJh0elzayRY_i4WS0-7wZ9rqIMigTIEvzQ1ORj0J_Q7MB7PG8PDcytvYxv9TQAHouMA4oMzv03uE17iFRE_lBIwjHRwGVytuSei4IEHO_nuqCUS8OXD6NgX5YOCPwKaiwYX6YSY0InLPp_UWrofTbLYK5JjocOOQAY489hl4j3K6n70S5XxXZx5IWKAYgF_2SuT96-dWIoUcCKLuWYHcz6vrFRlQSzNzt8A==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. twu.edu</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDNyeqyVQiI6nRkx7jZUJohIKZu2RlU1amVz-nIZQQuH_17Q0YcGL3YQMmBLRZuYr1-OljjxXKKbIlj2GKPYaXJ8-T32QzDc10lPiPVI35eZdNdW7MTwKtuUABdP8Kw6blQA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. tfaoi.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXjh_3wn__GZ8x8VkfzFxQIWy8vcEgqIlxBmH1J0Z3WDgHd8X9I2t3oUy76pCyI8A-X5AgJsx9K6pLSwYVHxCzHXRA5yZKocWdbMlepz-j6ZmwWCRXJINTN2G4I8kK2Z6Cqi6GnPGB_wf37JEuhS0z" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. classicposters.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZeAjaLxjDDGazdrE2ThPAU59az9KteuVd4Xfr7xbuzVVVEXWSKm4ce9yKvGvIvKt_K_a9oszQdgF24TIwRuknJMq_FuulJT9qUEtu-kTOtLpVY08yionUsI3TEA-XHMc3ljQA0GZK1D-vvzY-tNPQBvoV-zK1FiCH" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn1JOzuVnwT-8xJ1ehKzXj4YxxbiGwZ7sEUd9g98_GFV_hzf1RFXrPYEJg5Q29IGwbyEOSNMgDlRosvUKcruLeC2hINUYn7eCRAtLJTmk5PTkth-KW6AUPE3qp0sdW8_FF3rSxxWz_n6dbistEdBUSzkbQ8vamzKwwmwTYdGjud16PWi6pKKHNItFAdqMK" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzdFcT8ZcvcGVYrWngbksEcJEfGURLOQpE9KeaAUpauTyWqdfHc-BdmmSentxzOZggCNxW1kV-v7hj0hQSJ32U3usFhqjoFsbpqA6LUYsMTZmqf7Qlx3Z_BN6Jm7Ggj3dZbhlpe9P_7YjdAODzg2e-tEZ6MOTzGjFmRu-orUbLUADuJv6WHFYPZGRvRaeyaitdfP8GVQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. fiverr.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnkQ6-NcKeGMOYzM2SLVIEA3hv_bMRys1KqMDwLMlRN1Abr9-OjWiq29J95qPsSpo8ZlozvXEPK2DBqoNlJW5F6GN9pk2MeGoAeABZgSBVBirIJ8GBp2M0s5HrCI82_bfWPSYLJCqUcpMf8fvjplTFIxd_bmDj-63heEqYNR1CI-fOI6UK" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. galerie123.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7YyAwPVSMLEt0XQ683qMNKwfL-hNaEDM4Kta4GV02jQUmwGbIJ9XXnXi4tt6NR15HS4bKrP4_zdqqxFGhRGPyJ9DdKxl5xsW-F8IgIYkN85GzQCNfUkTOWzifhKHVrcOONXsT6pn3G6yYGVq7FKj_-qdU1r9vC8AKtdw6CKH97Dnxzw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. creativeyouthcharity.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdyspSQ2BzvbCK9IbVcrWujUxl1z04rJ_gt5nCV5GbwLprwT1N_HKO12fofX_rSJEPmVcfeSnzWzD70nNPzUhwoFrr7AXkzKVP1k9WgVDX7a-HyJMR0N-SI_5LHUrdn8ZV_mvDdzCEoIsvuNM7dhmVXOXQ2ejdjcwq8D3fslkLrf86oQU07_EYa5THJygDbYrfPZ9hfONoIK7dH4NL72BGDjVEAjdAeLt1xCPDVwA5RyjrT_n44vljd3F-GhSbICM4Vv7butob7EkDOuYYMPdT" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. omegaauctions.co.uk</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUemB8qmB2_c-PjyYPWvNKV_rYcznU_pZwOTuhX2lC6-5Kb0DqHsuELXqG3Ig9Jd_Ghc19v0Qc5m2YdZWzqRuu2eR1p7CQdeJKvzSv6sxoBzZSd9ZJpndkz8c=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. classicposters.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBmsZtP6_9rJlhE49Rdlo_Z-ktsEDpbQwWKQ8rTLd44uOD7y6lLOoGahJQ_GoJjIJ5-oqUy0HQyF7Xz-7PHDLbVNT7D-tlfdxQtvlT1EWsTJnFGRNssbzPjZmpNvDO94b40KUgpm5WWIoL5FTag9K0z5oM4qE0L4MxwCdeec33zVbH0Qm0pDv2hP3QT4aESJlE1_ZUJQmrLV434GM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9ePb3W5gYEPLiEbL_GHUCp-r75TmF-rqM1RT-7jzoO0NUDqqoyHl7zDeLYF2OAI56sri7ZS8rdCtJT6qYtElGy40k1m1hyttwzhJvwz6aDtzpryCw483_ONBzc4vJk8xMgPTa_DvklzCMLkrXFSf0WYs7" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. walmart.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_cn9SP46_pcCMA69I_naFvgT0tuDCwbmVARZN1zbpKu49_T_koVkW8uiHztLpHRr7xc61i7oLaCzxv8pTpXGggxw7jq-y5deD9Cpa26UqZrA6dOtADsyom6mhRxXjQEhC4-n2Szi0Dvp0xR2eRiMxZxhLckhw5w8R5BbfuVDyqs3NL7Q=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. redbubble.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="36.34">36.34秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="47,397">47,397</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. 1970s psychedelic concert poster design site:behance.net
+2. retro concert poster 1970s vibrant colors site:dribbble.com
+3. psychedelic rock poster vintage 1970s portfolio
+4. "Rick Griffin" "Victor Moscoso" "Wes Wilson" poster portfolio site:behance.net OR site:dribbble.com">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. 1970s psychedelic concert poster design site:behance.net</li><li class="text-sm text-gray-600">2. retro concert poster 1970s vibrant colors site:dribbble.com</li><li class="text-sm text-gray-600">3. psychedelic rock poster vintage 1970s portfolio</li><li class="text-sm text-gray-600">4. "Rick Griffin" "Victor Moscoso" "Wes Wilson" poster portfolio site:behance.net OR site:dribbble.com</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual galleries and portfolios showcasing retro concert poster designs with 1970s psychedelic art style and vibrant colors.Based on my search, I found excellent visual galleries and portfolios showcasing retro concert poster designs with 1970s psychedelic art style and vibrant colors. Here are the key sources for visual inspiration:
+
+## Visual Galleries & Portfolios
+
+### Behance Collections
+Several specific Behance galleries feature psychedelic concert poster designs, including:
+- Contemporary Psychedelic Band Posters gallery
+- Psychedelic Lana Del Rey Concert Poster project
+- 60's Psychedelic poster collection
+
+### Dribbble Collections
+Dribbble features over 700 Concert Poster designs, with specific sections for:
+- 5 dedicated 70s Poster designs
+- Thousands of high-quality retro 70s images showcasing groovy, vintage designs
+- 12 Concert Posters designs including contemporary interpretations
+
+### Professional Gallery Portfolios
+
+#### Bahr Gallery
+Specializes in premium, rare, vintage rock concert posters emphasizing the late 1960s psychedelic era, featuring bands including Jimi Hendrix, The Beatles, Janis Joplin, The Doors, Pink Floyd, Led Zeppelin, and Jefferson Airplane.
+
+#### Lead Pipe Vintage Art
+Features vintage 1960's and 1970's art including original San Francisco Fillmore and Avalon Ballroom rock concert posters, blacklight and psychedelic art posters.
+
+#### Classic Posters
+The world's largest dealer in 1960s and 70s rock concert posters, offering rare and collectible psychedelic posters from venues like The Fillmore Auditorium and Avalon Ballroom.
+
+#### D.King Gallery
+Specializes in groundbreaking psychedelic poster series from Bill Graham's Fillmore and The Family Dog's Avalon Ballroom, featuring bright colors and pulsating, swirling shapes.
+
+## Key Visual Style Elements
+
+### Design Characteristics
+The 1970s psychedelic concert poster style featured:
+- Vibrating color, inventive lettering, and witty design combining Art Nouveau, Wild West posters, and Victorian engraving
+- Color clashing with reds, browns, oranges, and greens, plus psychedelic "wavy" shapes and disco scenes
+- Paisley patterns, mandalas, and floral motifs
+
+### Notable Artists
+The "big five" psychedelic poster designers were Rick Griffin, Alton Kelley, Victor Moscoso, Stanley Mouse, and Wes Wilson, along with talents like Bonnie MacLean and Bob "Raphael" Schnepf.
+
+These galleries provide authentic visual references for creating retro concert posters with the distinctive 1970s psychedelic aesthetic featuring vibrant colors, flowing typography, and mind-bending artistic elements that defined the era.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual galleries and portfolios showcasing retro concert poster designs with 1970s psychedelic art style and vibrant colors.Based on my search, I found excellent visual galleries and portfolios showcasing retro concert poster designs with 1970s psychedelic art style and vibrant colors. Here are the key sources for visual inspiration:
+
+## Visual Galleries & Portfolios
+
+### Behance Collections
+Several specific Behance galleries feature psychedelic concert poster designs, including:
+- Contemporary Psychedelic Band Posters gallery
+- Psychedelic Lana Del Rey Concert Poster project
+- 60's Psychedelic poster collection
+
+### Dribbble Collections
+Dribbble features over 700 Concert Poster designs, with specific sections for:
+- 5 dedicated 70s Poster designs
+- Thousands of high-quality retro 70s images showcasing groovy, vintage designs
+- 12 Concert Posters designs including contemporary interpretations
+
+### Professional Gallery Portfolios
+
+#### Bahr Gallery
+Specializes in premium, rare, vintage rock concert posters emphasizing the late 1960s psychedelic era, featuring bands including Jimi Hendrix, The Beatles, Janis Joplin, The Doors, Pink Floyd, Led Zeppelin, and Jefferson Airplane.
+
+#### Lead Pipe Vintage Art
+Features vintage 1960's and 1970's art including original San Francisco Fillmore and Avalon Ballroom rock concert posters, blacklight and psychedelic art posters.
+
+#### Classic Posters
+The world's largest dealer in 1960s and 70s rock concert posters, offering rare and collectible psychedelic posters from venues like The Fillmore Auditorium and Avalon Ballroom.
+
+#### D.King Gallery
+Specializes in groundbreaking psychedelic poster series from Bill Graham's Fillmore and The Family Dog's Avalon Ballroom, featuring bright colors and pulsating, swirling shapes.
+
+## Key Visual Style Elements
+
+### Design Characteristics
+The 1970s psychedelic concert poster style featured:
+- Vibrating color, inventive lettering, and witty design combining Art Nouveau, Wild West posters, and Victorian engraving
+- Color clashing with reds, browns, oranges, and greens, plus psychedelic "wavy" shapes and disco scenes
+- Paisley patterns, mandalas, and floral motifs
+
+### Notable Artists
+The "big five" psychedelic poster designers were Rick Griffin, Alton Kelley, Victor Moscoso, Stanley Mouse, and Wes Wilson, along with talents like Bonnie MacLean and Bob "Raphael" Schnepf.
+
+These galleries provide authentic visual references for creating retro concert posters with the distinctive 1970s psychedelic aesthetic featuring vibrant colors, flowing typography, and mind-bending artistic elements that defined the era.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Contemporary Psychedelic Band Posters (https://www.behance.net/gallery/63417649/Contemporary-Psychedelic-Band-Posters)
+2. Behance (https://www.behance.net/gallery/23796519/Psychedelic-Lana-Del-Rey-Concert-Poster)
+3. 60's Psychedelic poster on Behance (https://www.behance.net/gallery/64921841/60s-Psychedelic-poster?locale=en_US)
+4. Browse thousands of 1970s Disco images for design inspiration | Dribbble (https://dribbble.com/search/1970s-disco)
+5. Retro Event designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/retro-event)
+6. Concert Posters designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/concert_posters)
+7. Psychedelic Rock Posters and Fashion of the 1960s - Portland Art Museum (https://portlandartmuseum.org/event/psychedelic-rock-posters-and-fashion-of-the-1960s/)
+8. Psychedelic Rock Posters & Wall Art Prints | AllPosters.com (https://www.allposters.com/-st/Psychedelic-Rock-Posters_c107018_.htm)
+9. Classic Posters — The Essential Poster Catalog - Classic Posters (https://www.classicposters.com/)
+10. 60s Psychedelic Rock Posters for Sale | Redbubble (https://www.redbubble.com/shop/60s+psychedelic+rock+posters)
+11. Vintage Psychedelic 60s and 70s Posters - Browse Online at Bahr Gallery - News & Events - Bahr Gallery (https://www.bahrgallery.com/news-events/vintage-psychedelic-60s-and-70s-posters-browse-online-at-bahr-gallery)
+12. Music Concert Poster by Alisa Uzlova on Dribbble (https://dribbble.com/shots/25118345-Music-Concert-Poster)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/63417649/Contemporary-Psychedelic-Band-Posters" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Contemporary Psychedelic Band Posters</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/23796519/Psychedelic-Lana-Del-Rey-Concert-Poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/64921841/60s-Psychedelic-poster?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. 60's Psychedelic poster on Behance</a></li><li class="text-sm"><a href="https://dribbble.com/search/1970s-disco" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Browse thousands of 1970s Disco images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/retro-event" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Retro Event designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/concert_posters" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Concert Posters designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://portlandartmuseum.org/event/psychedelic-rock-posters-and-fashion-of-the-1960s/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Psychedelic Rock Posters and Fashion of the 1960s - Portland Art Museum</a></li><li class="text-sm"><a href="https://www.allposters.com/-st/Psychedelic-Rock-Posters_c107018_.htm" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Psychedelic Rock Posters & Wall Art Prints | AllPosters.com</a></li><li class="text-sm"><a href="https://www.classicposters.com/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Classic Posters — The Essential Poster Catalog - Classic Posters</a></li><li class="text-sm"><a href="https://www.redbubble.com/shop/60s+psychedelic+rock+posters" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. 60s Psychedelic Rock Posters for Sale | Redbubble</a></li><li class="text-sm"><a href="https://www.bahrgallery.com/news-events/vintage-psychedelic-60s-and-70s-posters-browse-online-at-bahr-gallery" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Vintage Psychedelic 60s and 70s Posters - Browse Online at Bahr Gallery - News & Events - Bahr Gallery</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25118345-Music-Concert-Poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Music Concert Poster by Alisa Uzlova on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="43.60">43.60秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="104,565">104,565</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net gallery 1970s psychedelic concert poster vibrant colors
+2. site:behance.net/gallery concert poster 1970s psychedelic vibrant colors
+3. site:pinterest.com 1970s psychedelic concert poster board
+4. site:dribbble.com/shots 1970s psychedelic concert poster">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net gallery 1970s psychedelic concert poster vibrant colors</li><li class="text-sm text-gray-600">2. site:behance.net/gallery concert poster 1970s psychedelic vibrant colors</li><li class="text-sm text-gray-600">3. site:pinterest.com 1970s psychedelic concert poster board</li><li class="text-sm text-gray-600">4. site:dribbble.com/shots 1970s psychedelic concert poster</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are several primary-source portfolios and shot galleries showcasing retro 1970s–style psychedelic concert poster designs with vibrant colors, swirling forms, and era-evocative typography—perfect for direct visual inspiration:
+
+• Psychedelic Concert Poster by Jazz Beecham  
+  A dedicated project page featuring the designer’s initial hand sketches, color-theory explorations (bright red/blue contrasts), and the final poster layout with exaggerated custom lettering inspired by Haight-Ashbury motifs and 1970s poster conventions ([jazzbeecham.com](https://jazzbeecham.com/psychedelic-poster?utm_source=chatgpt.com))  
+
+• Psychedelic Poster Design by Tan Design (Dribbble)  
+  A high-impact shot displaying bold, organic shapes and saturated gradients that channel 1960s–70s psychedelia, complete with distorted letterforms and layered color blends for that “trippy” concert-gig vibe ([dribbble.com](https://dribbble.com/shots/23112833-Psychedelic-Poster-Design?utm_source=chatgpt.com))  
+
+• Psychedelic Gig Poster by Carissa Christensen (Dribbble)  
+  A playful homage to late-’60s gig posters, employing negative-space tiger-stripe lettering and a limited, high-contrast palette to evoke hand-screen-printed 1970s rock-show bills ([dribbble.com](https://dribbble.com/shots/7529831-Psychedelic-Gig-Poster?utm_source=chatgpt.com))  
+
+• Concert / Event Poster project (Behance)  
+  A student-driven Behance gallery where the designer adopts “60s psychedelic” curves and distortions in both imagery and type—while consciously toning the palette for legibility—to illustrate modern reinterpretations of classic Fillmore-era posters ([behance.net](https://www.behance.net/gallery/29080533/Concert-Event-Poster?utm_source=chatgpt.com))  ">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are several primary-source portfolios and shot galleries showcasing retro 1970s–style psychedelic concert poster designs with vibrant colors, swirling forms, and era-evocative typography—perfect for direct visual inspiration:
+
+• Psychedelic Concert Poster by Jazz Beecham  
+  A dedicated project page featuring the designer’s initial hand sketches, color-theory explorations (bright red/blue contrasts), and the final poster layout with exaggerated custom lettering inspired by Haight-Ashbury motifs and 1970s poster conventions ([jazzbeecham.com](https://jazzbeecham.com/psychedelic-poster?utm_source=chatgpt.com))  
+
+• Psychedelic Poster Design by Tan Design (Dribbble)  
+  A high-impact shot displaying bold, organic shapes and saturated gradients that channel 1960s–70s psychedelia, complete with distorted letterforms and layered color blends for that “trippy” concert-gig vibe ([dribbble.com](https://dribbble.com/shots/23112833-Psychedelic-Poster-Design?utm_source=chatgpt.com))  
+
+• Psychedelic Gig Poster by Carissa Christensen (Dribbble)  
+  A playful homage to late-’60s gig posters, employing negative-space tiger-stripe lettering and a limited, high-contrast palette to evoke hand-screen-printed 1970s rock-show bills ([dribbble.com](https://dribbble.com/shots/7529831-Psychedelic-Gig-Poster?utm_source=chatgpt.com))  
+
+• Concert / Event Poster project (Behance)  
+  A student-driven Behance gallery where the designer adopts “60s psychedelic” curves and distortions in both imagery and type—while consciously toning the palette for legibility—to illustrate modern reinterpretations of classic Fillmore-era posters ([behance.net](https://www.behance.net/gallery/29080533/Concert-Event-Poster?utm_source=chatgpt.com))  </div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. By Jazz Beecham - Portfolio & Projects - Psychedelic Concert Poster (https://jazzbeecham.com/psychedelic-poster?utm_source=chatgpt.com)
+2. Psychedelic Poster Design by Tan Design on Dribbble (https://dribbble.com/shots/23112833-Psychedelic-Poster-Design?utm_source=chatgpt.com)
+3. Psychedelic Gig Poster by Carissa Christensen on Dribbble (https://dribbble.com/shots/7529831-Psychedelic-Gig-Poster?utm_source=chatgpt.com)
+4. Concert / Event Poster :: Behance (https://www.behance.net/gallery/29080533/Concert-Event-Poster?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://jazzbeecham.com/psychedelic-poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. By Jazz Beecham - Portfolio & Projects - Psychedelic Concert Poster</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23112833-Psychedelic-Poster-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Psychedelic Poster Design by Tan Design on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/7529831-Psychedelic-Gig-Poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Psychedelic Gig Poster by Carissa Christensen on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/29080533/Concert-Event-Poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Concert / Event Poster :: Behance</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
