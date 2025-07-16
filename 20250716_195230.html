@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about poster design inspiration for decentralized community meetups, looking for blockchain visual elements, pixel-vector hybrids, gradient meshes, and dynamic QR code designs. The search should showcase visual expressions of crypto culture.">The user is asking about poster design inspiration for decentralized community meetups, looking for blockchain visual elements, pixel-vector hybrids, gradient meshes, and dynamic QR code designs. The search should showcase visual expressions of crypto culture.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 19:53:26</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="14.05">14.05秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="993">993</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. decentralized community meetup poster design inspiration
+2. blockchain visual elements in graphic design
+3. pixel-vector hybrid art crypto
+4. gradient mesh crypto art
+5. dynamic QR code design crypto
+6. crypto culture visual expression graphic design
+7. poster design for blockchain events
+8. decentralized autonomous organization (DAO) event poster design">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. decentralized community meetup poster design inspiration</li><li class="text-sm text-gray-600">2. blockchain visual elements in graphic design</li><li class="text-sm text-gray-600">3. pixel-vector hybrid art crypto</li><li class="text-sm text-gray-600">4. gradient mesh crypto art</li><li class="text-sm text-gray-600">5. dynamic QR code design crypto</li><li class="text-sm text-gray-600">6. crypto culture visual expression graphic design</li><li class="text-sm text-gray-600">7. poster design for blockchain events</li><li class="text-sm text-gray-600">8. decentralized autonomous organization (DAO) event poster design</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="For decentralized community meetup poster designs, incorporating elements that visually represent blockchain technology, pixel-vector hybrids, gradient meshes, and dynamic QR codes can create a distinct crypto-cultural aesthetic.
+
+Here's an exploration of these elements for inspiration:
+
+**1. Blockchain Visual Elements:**
+Posters for decentralized meetups often feature graphics that symbolize the core concepts of blockchain. This includes interconnected blocks, chains, and nodes, often depicted with glowing effects to suggest energy and movement. Color schemes frequently lean towards blues, greens, and whites to convey a modern, high-tech, and futuristic feel. Abstract designs with connecting lines and grids can effectively represent the interconnected networks of blockchain technology. Additionally, cryptocurrency logos and icons like Bitcoin or Ethereum can be incorporated, especially if the meetup has a specific crypto focus. Data visualizations such as charts and graphs can also be used to represent blockchain data like transaction volume or network activity.
+
+**2. Pixel-Vector Hybrids:**
+Combining pixel art with vector graphics can give a poster a retro-futuristic and digital-first aesthetic, which resonates with crypto culture. Think of pixelated elements or characters integrated into a sleek, vector-based layout. This can involve 8-bit style graphics for icons, typography, or even character illustrations, mixed with smooth, scalable vector shapes and lines. This hybrid approach can offer a unique visual texture, blending the nostalgic feel of early digital art with the crispness of modern vector design.
+
+**3. Gradient Meshes:**
+Gradient meshes offer a fluid and vibrant way to add depth and visual interest to posters. They can symbolize concepts like liquidity and innovation within the crypto space. These flowing gradients are popular for backgrounds, overlays, and even within design elements to create a sense of movement and digital luminescence. The use of neon color palettes and vibrant gradients is a common theme in crypto art and design, giving a bold and eye-catching appearance.
+
+**4. Dynamic QR Code Designs:**
+Dynamic QR codes are highly functional for event posters, allowing information to be updated even after printing, and can also be designed to align with the overall aesthetic. These QR codes can be customized with various colors, logos, and shapes to integrate seamlessly into the poster design. Some tools allow for unique design generation with AI, adjusting layout for fast scans while incorporating branded shapes and color masks. Beyond mere functionality, a creatively designed dynamic QR code can become an interactive visual element, inviting engagement and reflecting the innovative nature of decentralized communities.
+
+**Visual Expressions of Crypto Culture:**
+Overall, designs for decentralized community meetups and crypto culture often embrace a bold, futuristic, and tech-savvy aesthetic. This includes:
+*   **Futuristic Typography:** Sans-serif fonts like Futura or Roboto are often used for a clean, modern, and forward-thinking look.
+*   **Neon and Cyberpunk Aesthetics:** Bright neon lights and cyberpunk themes are popular, especially for NFT and DeFi projects, appealing to a tech-savvy audience.
+*   **Minimalist Design:** Clean and modern layouts with geometric shapes and gradients can represent innovation and decentralization.
+*   **Abstract and Surreal Visuals:** Crypto art frequently uses abstract, surreal, or futuristic visuals, often incorporating glitch effects and layered images.
+*   **Dark Mode Friendly Designs:** High contrast designs with neon accents (green, purple, blue) are common, particularly in interfaces for crypto applications.
+*   **Community-Driven Symbolism:** Designs should reflect the values of decentralization and community, perhaps using elements that suggest connection, collaboration, and shared networks.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">For decentralized community meetup poster designs, incorporating elements that visually represent blockchain technology, pixel-vector hybrids, gradient meshes, and dynamic QR codes can create a distinct crypto-cultural aesthetic.
+
+Here's an exploration of these elements for inspiration:
+
+**1. Blockchain Visual Elements:**
+Posters for decentralized meetups often feature graphics that symbolize the core concepts of blockchain. This includes interconnected blocks, chains, and nodes, often depicted with glowing effects to suggest energy and movement. Color schemes frequently lean towards blues, greens, and whites to convey a modern, high-tech, and futuristic feel. Abstract designs with connecting lines and grids can effectively represent the interconnected networks of blockchain technology. Additionally, cryptocurrency logos and icons like Bitcoin or Ethereum can be incorporated, especially if the meetup has a specific crypto focus. Data visualizations such as charts and graphs can also be used to represent blockchain data like transaction volume or network activity.
+
+**2. Pixel-Vector Hybrids:**
+Combining pixel art with vector graphics can give a poster a retro-futuristic and digital-first aesthetic, which resonates with crypto culture. Think of pixelated elements or characters integrated into a sleek, vector-based layout. This can involve 8-bit style graphics for icons, typography, or even character illustrations, mixed with smooth, scalable vector shapes and lines. This hybrid approach can offer a unique visual texture, blending the nostalgic feel of early digital art with the crispness of modern vector design.
+
+**3. Gradient Meshes:**
+Gradient meshes offer a fluid and vibrant way to add depth and visual interest to posters. They can symbolize concepts like liquidity and innovation within the crypto space. These flowing gradients are popular for backgrounds, overlays, and even within design elements to create a sense of movement and digital luminescence. The use of neon color palettes and vibrant gradients is a common theme in crypto art and design, giving a bold and eye-catching appearance.
+
+**4. Dynamic QR Code Designs:**
+Dynamic QR codes are highly functional for event posters, allowing information to be updated even after printing, and can also be designed to align with the overall aesthetic. These QR codes can be customized with various colors, logos, and shapes to integrate seamlessly into the poster design. Some tools allow for unique design generation with AI, adjusting layout for fast scans while incorporating branded shapes and color masks. Beyond mere functionality, a creatively designed dynamic QR code can become an interactive visual element, inviting engagement and reflecting the innovative nature of decentralized communities.
+
+**Visual Expressions of Crypto Culture:**
+Overall, designs for decentralized community meetups and crypto culture often embrace a bold, futuristic, and tech-savvy aesthetic. This includes:
+*   **Futuristic Typography:** Sans-serif fonts like Futura or Roboto are often used for a clean, modern, and forward-thinking look.
+*   **Neon and Cyberpunk Aesthetics:** Bright neon lights and cyberpunk themes are popular, especially for NFT and DeFi projects, appealing to a tech-savvy audience.
+*   **Minimalist Design:** Clean and modern layouts with geometric shapes and gradients can represent innovation and decentralization.
+*   **Abstract and Surreal Visuals:** Crypto art frequently uses abstract, surreal, or futuristic visuals, often incorporating glitch effects and layered images.
+*   **Dark Mode Friendly Designs:** High contrast designs with neon accents (green, purple, blue) are common, particularly in interfaces for crypto applications.
+*   **Community-Driven Symbolism:** Designs should reflect the values of decentralization and community, perhaps using elements that suggest connection, collaboration, and shared networks.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. tribe-spark.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHCJQsfxBCOS1pJlCmmCr-Dl3L2X5d4inCzYJDscPK2-7hF2KGiQXqF8IsjGr9eEeu38x1TU81IQwFweysob0t-FOfaCrUWBMW5weaAgdb2WxjakiuY6-hg7cxnKYI6ifwYqCf8c1Wsx1Pp-sAQOVWvVKndq-Mfg9hOml3XGCMEA==)
+2. designshack.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl1iHObrctrki1VU9Pu2cnNGT1MeeIbUSaWEB6lVRyMstzrucfq4wVFuXzSrhMm2khHsJuXyx-C67LpvEQOY2yvNxOR6VJzB9opjUp4YZ-vIWNNhIvABVXiwilBkpEkYCMgptHiDCV7Iqz_zWgmj4x5Z_kRgl5wZU454s=)
+3. adobe.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBqsujpKUIBkfrmP4-HLrZsGcgSe3h_BXHkLP5yhK0H-DxcmwdGLakWfHt5LObCxxsyql9cKcHVITES1jEsYNeM1n017q08LnbHN9yA7LBNX6o7He5wSt4J38wWiKbJsmCh3XQuMblBOYUV6e-1eYrGc8gCUkB3p20)
+4. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN4JUdiRaouVY6tJVse9eBiOAzQvpAZ_UhvrrMR0UDNWZKvokuZP00sxuNc_KAGODdfiOP5DZ-tje7f2Q59fL4_86PsZWHmw0tjhp8EdxsAuNl6oS6huJmYLzncd0w7D_my6QR7LJQgouwcy1E)
+5. vexels.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUV1jErniWQpxI9UJihXAj85FezAQl8e26AL921M00eJJnhgMCqPujN0YP1X_MWptB19hUPocORCmxC17_2dukonFqm8kk2Exn7SfJOweAffEn6vtAQbym96IxkOhcMSwbSasqKuhbSNqqRAve28AxF6kne-UvwjW5TQQk3RxSvXm_m_4a8s1ecE9q)
+6. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxZDCII_jh6dS9vFxRf8TKy41ek7cRDS5r1W9vHsV7Cm-B1MdXOfADLRatrcfsdM-riRv1JcZECXBqSwxntiLcl_kYG_lxOxIrOK-SFebXE-QTARlvIw_AfChnbwoCX5wTaupRSW9z1nqTk-4Cwge-TaLW)
+7. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ_csXaG05OnENw-S2fh1b2ncypfhVZL3VjSeLOpUDWA8jkhy002UomoPV0PSRXA1a1BWcw7W49GNeowgFRnvCTjBNpG-vjA_6KMDOjLlvKMHuVwgBLYQS46m6kGlCCHnAwaI=)
+8. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx_ljzj7GVT-4rhQthHw6iix5zhTaVnNvfNX-t0fIBe3FgRvQxlAgysFGESPh1MfV6MfZH-hufC7v2_dyGdH0gShswIEb21m5Viws4mDZicA7ux8kqyvOfR-eHRNPd-cn0s7ynZ4gmbENO4Qv92H0hluVWZ1fSBmURscE=)
+9. jkcp.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFx0K9Q5V3rKJFQ7aaGpxK9710SoIe9QBTQq6yaw-CL4GM0LpWJWI15PGhxQZn0_nn3Qlphctq9_UP4HKb3OHNOzPEOnaIZvq2MztyW2q8E04FbJUqvBSFqvsA7US04yii3cUBnoaSIfA8YTfcFHtLo05gcJ_Z5kWlKX0Im8YFIgkCkW8rd9A3y_CgJ5SU=)
+10. me-qr.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOzXAdfSsDZYJ1BGDuGS2lsDtgLDx7JGN250n3HtKq8zEETBHokcMyLDZx_qsV72Bttct5pbDANLUgaAfB6xBWNCd7UL3TQoSCL_kisasD2WMjwDf1BS-4gge5nbgwxaqZL4z7IA==)
+11. medium.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQfdPz4iUSdYA_udKvmFL4cBcnQtx8qW45rDMSAkbImKRULWoI8dTbdvVlssf38UNG_kqRPwcgXNZIMBDGrQqBu_VfrHo2lu_nYqulCUBIvvwlQxvAU3xP_f2aFPkdInkc5RJUrqsyZNOSTA-EKtjaEttHXVXNDwLloDSOUTFsMQzYE5JMEcvVVwG4l_YzCD6esYrDYUIYHV-JGTR0o-zkiDtD2vn6S63_GgNvANCi8g==)
+12. qrplanet.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjcBF0fZxdIoImq47w4Q_TCOLoQpqJPEM_evsJ3IppeaqwkPwribvXtDgfkUdIqJWVCDGbcoLihOGcdHcX1KkIqw6k2iz6EqaQqT-fCESBkag7u0gU1Cug8qnAWn8eXF2aQGylNwNoCQjD2bRi_sSAYog=)
+13. genqrcode.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdgEIYJF-tBnIL-zYtnRd_16GsvLi0frcgsNrDCbrUNakvrf077rfYsKLicUdmhOelNdOkSmQ5eo_6N5Vlsc37R028xRN3LXy2xaJCQYOnC4k=)
+14. shamlatech.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8xlwnIHfMa5GKCyVPeqHN0xTD228CIjgHyaB8IcpUMkqbVh8-dVFVj94WxAL6E7Ctxo_ceVeL1-x1OO8hjenX5QMHQpY6F13_428l9cIp69jsKrcG3ga_hABnz52kDjvUXoRrXgLME15RhuWaSkOfbM92VyWU9DHFqpQ6Qg9BZkso)
+15. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaA1vqe6S2wjTcglgKZCT6CeA1aj36kd-O1Pnyxqpjs6VE84YIPqgzbXp4zR8lMrJkaSDDNUGfLyjvEvH21jMurOfRyTY7kRt_nl3RKGs0KR9rGIaSQt3RIvMnVsSksOER4OtsiYd2lOTalca12bO2PKZKfA_WgnGbcT9ro4rbkKVEN1o=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHCJQsfxBCOS1pJlCmmCr-Dl3L2X5d4inCzYJDscPK2-7hF2KGiQXqF8IsjGr9eEeu38x1TU81IQwFweysob0t-FOfaCrUWBMW5weaAgdb2WxjakiuY6-hg7cxnKYI6ifwYqCf8c1Wsx1Pp-sAQOVWvVKndq-Mfg9hOml3XGCMEA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. tribe-spark.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl1iHObrctrki1VU9Pu2cnNGT1MeeIbUSaWEB6lVRyMstzrucfq4wVFuXzSrhMm2khHsJuXyx-C67LpvEQOY2yvNxOR6VJzB9opjUp4YZ-vIWNNhIvABVXiwilBkpEkYCMgptHiDCV7Iqz_zWgmj4x5Z_kRgl5wZU454s=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. designshack.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBqsujpKUIBkfrmP4-HLrZsGcgSe3h_BXHkLP5yhK0H-DxcmwdGLakWfHt5LObCxxsyql9cKcHVITES1jEsYNeM1n017q08LnbHN9yA7LBNX6o7He5wSt4J38wWiKbJsmCh3XQuMblBOYUV6e-1eYrGc8gCUkB3p20" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. adobe.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN4JUdiRaouVY6tJVse9eBiOAzQvpAZ_UhvrrMR0UDNWZKvokuZP00sxuNc_KAGODdfiOP5DZ-tje7f2Q59fL4_86PsZWHmw0tjhp8EdxsAuNl6oS6huJmYLzncd0w7D_my6QR7LJQgouwcy1E" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUV1jErniWQpxI9UJihXAj85FezAQl8e26AL921M00eJJnhgMCqPujN0YP1X_MWptB19hUPocORCmxC17_2dukonFqm8kk2Exn7SfJOweAffEn6vtAQbym96IxkOhcMSwbSasqKuhbSNqqRAve28AxF6kne-UvwjW5TQQk3RxSvXm_m_4a8s1ecE9q" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. vexels.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxZDCII_jh6dS9vFxRf8TKy41ek7cRDS5r1W9vHsV7Cm-B1MdXOfADLRatrcfsdM-riRv1JcZECXBqSwxntiLcl_kYG_lxOxIrOK-SFebXE-QTARlvIw_AfChnbwoCX5wTaupRSW9z1nqTk-4Cwge-TaLW" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ_csXaG05OnENw-S2fh1b2ncypfhVZL3VjSeLOpUDWA8jkhy002UomoPV0PSRXA1a1BWcw7W49GNeowgFRnvCTjBNpG-vjA_6KMDOjLlvKMHuVwgBLYQS46m6kGlCCHnAwaI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx_ljzj7GVT-4rhQthHw6iix5zhTaVnNvfNX-t0fIBe3FgRvQxlAgysFGESPh1MfV6MfZH-hufC7v2_dyGdH0gShswIEb21m5Viws4mDZicA7ux8kqyvOfR-eHRNPd-cn0s7ynZ4gmbENO4Qv92H0hluVWZ1fSBmURscE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFx0K9Q5V3rKJFQ7aaGpxK9710SoIe9QBTQq6yaw-CL4GM0LpWJWI15PGhxQZn0_nn3Qlphctq9_UP4HKb3OHNOzPEOnaIZvq2MztyW2q8E04FbJUqvBSFqvsA7US04yii3cUBnoaSIfA8YTfcFHtLo05gcJ_Z5kWlKX0Im8YFIgkCkW8rd9A3y_CgJ5SU=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. jkcp.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOzXAdfSsDZYJ1BGDuGS2lsDtgLDx7JGN250n3HtKq8zEETBHokcMyLDZx_qsV72Bttct5pbDANLUgaAfB6xBWNCd7UL3TQoSCL_kisasD2WMjwDf1BS-4gge5nbgwxaqZL4z7IA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. me-qr.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQfdPz4iUSdYA_udKvmFL4cBcnQtx8qW45rDMSAkbImKRULWoI8dTbdvVlssf38UNG_kqRPwcgXNZIMBDGrQqBu_VfrHo2lu_nYqulCUBIvvwlQxvAU3xP_f2aFPkdInkc5RJUrqsyZNOSTA-EKtjaEttHXVXNDwLloDSOUTFsMQzYE5JMEcvVVwG4l_YzCD6esYrDYUIYHV-JGTR0o-zkiDtD2vn6S63_GgNvANCi8g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. medium.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjcBF0fZxdIoImq47w4Q_TCOLoQpqJPEM_evsJ3IppeaqwkPwribvXtDgfkUdIqJWVCDGbcoLihOGcdHcX1KkIqw6k2iz6EqaQqT-fCESBkag7u0gU1Cug8qnAWn8eXF2aQGylNwNoCQjD2bRi_sSAYog=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. qrplanet.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdgEIYJF-tBnIL-zYtnRd_16GsvLi0frcgsNrDCbrUNakvrf077rfYsKLicUdmhOelNdOkSmQ5eo_6N5Vlsc37R028xRN3LXy2xaJCQYOnC4k=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. genqrcode.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8xlwnIHfMa5GKCyVPeqHN0xTD228CIjgHyaB8IcpUMkqbVh8-dVFVj94WxAL6E7Ctxo_ceVeL1-x1OO8hjenX5QMHQpY6F13_428l9cIp69jsKrcG3ga_hABnz52kDjvUXoRrXgLME15RhuWaSkOfbM92VyWU9DHFqpQ6Qg9BZkso" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. shamlatech.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaA1vqe6S2wjTcglgKZCT6CeA1aj36kd-O1Pnyxqpjs6VE84YIPqgzbXp4zR8lMrJkaSDDNUGfLyjvEvH21jMurOfRyTY7kRt_nl3RKGs0KR9rGIaSQt3RIvMnVsSksOER4OtsiYd2lOTalca12bO2PKZKfA_WgnGbcT9ro4rbkKVEN1o=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. shutterstock.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="54.87">54.87秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="141,554">141,554</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. behance blockchain meetup poster design gradient mesh QR code
+2. blockchain meetup poster design gradient mesh QR code site:behance.net
+3. Dynamic QR code poster site:behance.net/gallery/
+4. gradient mesh crypto poster site:behance.net/gallery
+5. pixel vector poster Dribbble
+6. pixel vector hybrid poster Dribbble">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. behance blockchain meetup poster design gradient mesh QR code</li><li class="text-sm text-gray-600">2. blockchain meetup poster design gradient mesh QR code site:behance.net</li><li class="text-sm text-gray-600">3. Dynamic QR code poster site:behance.net/gallery/</li><li class="text-sm text-gray-600">4. gradient mesh crypto poster site:behance.net/gallery</li><li class="text-sm text-gray-600">5. pixel vector poster Dribbble</li><li class="text-sm text-gray-600">6. pixel vector hybrid poster Dribbble</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are direct galleries showcasing poster designs that tap into crypto culture and emerging visual techniques:
+
+• Blockchain Meetup poster – A digital-tech poster by Yuki Gu for a Shanghai meetup, blending abstract circuit-like forms with bold typography and subtle pixel-vector detailing to convey a cutting-edge blockchain vibe. ([behance.net](https://www.behance.net/gallery/84936159/Blockchain-Meetup-poster))  
+  Link: https://www.behance.net/gallery/84936159/Blockchain-Meetup-poster
+
+• Poster Design for Blockchain Workshop – Aymen Mehmood Abbasi’s Dribbble shot featuring clean vector geometry, node-style diagrams and a restrained palette that evoke decentralized networks in an event poster format. ([dribbble.com](https://dribbble.com/shots/24510381-Poster-Design-for-Blockchain-Workshop?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/24510381-Poster-Design-for-Blockchain-Workshop
+
+• Mesh Gradient + Typographic Show Poster – Ainsley Wagoner’s flyer uses Illustrator’s mesh-gradient tool to generate vibrant, flowing backgrounds paired with bold typographic layouts—an excellent example of gradient meshes in event posters. ([dribbble.com](https://dribbble.com/shots/5981904-Mesh-Gradient-Typographic-Show-Poster?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/5981904-Mesh-Gradient-Typographic-Show-Poster
+
+• Pixel art poster – Rob Daniels blends retro 8-bit pixel aesthetics with modern vector forms in a whimsical pixel-vector hybrid poster, ideal for nods to crypto’s “digital gold” heritage. ([dribbble.com](https://dribbble.com/shots/21089746-Pixel-art-poster?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/21089746-Pixel-art-poster
+
+• Dynamic qr code – Heycmhhhh’s Dribbble concept explores an animated, art-driven QR code, showing how a scan-ready code can become a kinetic focal point in a poster design. ([dribbble.com](https://dribbble.com/shots/5828613-Dynamic-qr-code?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/5828613-Dynamic-qr-code
+
+These galleries offer hands-on inspiration for posters that speak to decentralized communities—incorporating blockchain motifs, mesh gradients, pixel-vector textures, and interactive QR-code elements directly from primary design sources.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are direct galleries showcasing poster designs that tap into crypto culture and emerging visual techniques:
+
+• Blockchain Meetup poster – A digital-tech poster by Yuki Gu for a Shanghai meetup, blending abstract circuit-like forms with bold typography and subtle pixel-vector detailing to convey a cutting-edge blockchain vibe. ([behance.net](https://www.behance.net/gallery/84936159/Blockchain-Meetup-poster))  
+  Link: https://www.behance.net/gallery/84936159/Blockchain-Meetup-poster
+
+• Poster Design for Blockchain Workshop – Aymen Mehmood Abbasi’s Dribbble shot featuring clean vector geometry, node-style diagrams and a restrained palette that evoke decentralized networks in an event poster format. ([dribbble.com](https://dribbble.com/shots/24510381-Poster-Design-for-Blockchain-Workshop?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/24510381-Poster-Design-for-Blockchain-Workshop
+
+• Mesh Gradient + Typographic Show Poster – Ainsley Wagoner’s flyer uses Illustrator’s mesh-gradient tool to generate vibrant, flowing backgrounds paired with bold typographic layouts—an excellent example of gradient meshes in event posters. ([dribbble.com](https://dribbble.com/shots/5981904-Mesh-Gradient-Typographic-Show-Poster?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/5981904-Mesh-Gradient-Typographic-Show-Poster
+
+• Pixel art poster – Rob Daniels blends retro 8-bit pixel aesthetics with modern vector forms in a whimsical pixel-vector hybrid poster, ideal for nods to crypto’s “digital gold” heritage. ([dribbble.com](https://dribbble.com/shots/21089746-Pixel-art-poster?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/21089746-Pixel-art-poster
+
+• Dynamic qr code – Heycmhhhh’s Dribbble concept explores an animated, art-driven QR code, showing how a scan-ready code can become a kinetic focal point in a poster design. ([dribbble.com](https://dribbble.com/shots/5828613-Dynamic-qr-code?utm_source=chatgpt.com))  
+  Link: https://dribbble.com/shots/5828613-Dynamic-qr-code
+
+These galleries offer hands-on inspiration for posters that speak to decentralized communities—incorporating blockchain motifs, mesh gradients, pixel-vector textures, and interactive QR-code elements directly from primary design sources.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Blockchain Meetup poster :: Behance (https://www.behance.net/gallery/84936159/Blockchain-Meetup-poster)
+2. Poster Design for Blockchain Workshop by Aymen Mehmood Abbasi on Dribbble (https://dribbble.com/shots/24510381-Poster-Design-for-Blockchain-Workshop?utm_source=chatgpt.com)
+3. Mesh Gradient + Typographic Show Poster by Ainsley Wagoner on Dribbble (https://dribbble.com/shots/5981904-Mesh-Gradient-Typographic-Show-Poster?utm_source=chatgpt.com)
+4. Pixel art poster by Rob Daniels on Dribbble (https://dribbble.com/shots/21089746-Pixel-art-poster?utm_source=chatgpt.com)
+5. Dynamic qr code by Heycmhhhh on Dribbble (https://dribbble.com/shots/5828613-Dynamic-qr-code?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/84936159/Blockchain-Meetup-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Blockchain Meetup poster :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/24510381-Poster-Design-for-Blockchain-Workshop?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Poster Design for Blockchain Workshop by Aymen Mehmood Abbasi on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/5981904-Mesh-Gradient-Typographic-Show-Poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Mesh Gradient + Typographic Show Poster by Ainsley Wagoner on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/21089746-Pixel-art-poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Pixel art poster by Rob Daniels on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/5828613-Dynamic-qr-code?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Dynamic qr code by Heycmhhhh on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="55.72">55.72秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="48,470">48,470</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. blockchain poster design behance.net dribbble.com
+2. crypto event poster design site:dribbble.com
+3. gradient mesh crypto design QR code integration behance portfolio
+4. pixel vector hybrid poster design web3 community event">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. blockchain poster design behance.net dribbble.com</li><li class="text-sm text-gray-600">2. crypto event poster design site:dribbble.com</li><li class="text-sm text-gray-600">3. gradient mesh crypto design QR code integration behance portfolio</li><li class="text-sm text-gray-600">4. pixel vector hybrid poster design web3 community event</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual galleries and portfolios that showcase poster designs with blockchain and crypto visual elements, focusing on finding actual design work rather than articles about design.Let me search for more specific crypto event poster designs and pixel-vector hybrid work:Now let me search for gradient mesh designs and QR code integration in crypto/blockchain context:Let me search for pixel-vector hybrid designs and web3 community event visuals:Based on my search results, I've found several excellent visual galleries and portfolios that showcase poster designs with blockchain, crypto, and web3 visual elements. Here are the key resources for inspiration:
+
+## Visual Galleries for Crypto/Blockchain Poster Design
+
+### Primary Design Portfolios
+
+**Dribbble Collections:**
+- Dribbble's crypto posters section showcases thousands of high-quality crypto posters images with specific project examples including "Crypto World Posters" by Goicons Store Team and "3D social media poster, crypto banner" by Nariman
+- Dribbble's crypto poster tag features 11 dedicated crypto poster designs with portfolio pieces like "Poster design for Cryptocurrency Quant Fund Empros" by Qream Pro
+- Dribbble's blockchain tag contains 38,000+ blockchain designs showcasing visual work from designers worldwide
+
+**Specialized Crypto Event Design:**
+- Dribbble's crypto event section features 2 specific crypto event designs including "Crypto Event Poster" by Christina Varosyan
+- A specific "Crypto Camp Poster" by Mohamed Chahin on Dribbble created as "a render for Oddbee for the Crypto Camp event"
+
+**Web3 & Community Focus:**
+- Dribbble's web3 crypto airdrop graphic poster section showcases thousands of high-quality web3 designs with examples like "Promotional poster designs for Neoki web3 multi metaverse"
+- Redbubble's web3 posters section features unique designs "designed and sold by artists" with "web3graphics decentralizeddesign, blockchainart, interactivevisuals, futuristicgraphics"
+
+### QR Code & Dynamic Elements
+- Specialized QR code generators for Behance portfolios that "generate a QR code to connect others directly to your Behance projects"
+- Canva's QR code integration allows you to "impress with a custom QR code on business cards and direct clients to your portfolio"
+
+### Visual Style Resources
+**Pinterest Collections:**
+- Pinterest's blockchain design section offers "best ideas and inspiration for Blockchain design"
+- Pinterest's crypto banner design features "Futuristic Website Background Ideas," "Blue Neon Sci-fi Design," and "Crypto Aesthetic" elements
+
+**Stock Resources:**
+- Freepik's web3 poster vectors offer "AI-generated vectors and stock vectors" for high-quality projects
+- PosterMyWall provides "15 free templates for 'Web3'" with "eye-catching templates"
+
+### Key Visual Elements Found:
+The galleries showcase designs featuring:
+- **Gradient meshes** and neon aesthetics
+- **Pixel-vector hybrid** styles in crypto branding
+- **Dynamic QR code integrations** for portfolio access
+- **Blockchain iconography** and decentralized community themes
+- **Event-specific crypto posters** for meetups and conferences
+- **3D social media po">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual galleries and portfolios that showcase poster designs with blockchain and crypto visual elements, focusing on finding actual design work rather than articles about design.Let me search for more specific crypto event poster designs and pixel-vector hybrid work:Now let me search for gradient mesh designs and QR code integration in crypto/blockchain context:Let me search for pixel-vector hybrid designs and web3 community event visuals:Based on my search results, I've found several excellent visual galleries and portfolios that showcase poster designs with blockchain, crypto, and web3 visual elements. Here are the key resources for inspiration:
+
+## Visual Galleries for Crypto/Blockchain Poster Design
+
+### Primary Design Portfolios
+
+**Dribbble Collections:**
+- Dribbble's crypto posters section showcases thousands of high-quality crypto posters images with specific project examples including "Crypto World Posters" by Goicons Store Team and "3D social media poster, crypto banner" by Nariman
+- Dribbble's crypto poster tag features 11 dedicated crypto poster designs with portfolio pieces like "Poster design for Cryptocurrency Quant Fund Empros" by Qream Pro
+- Dribbble's blockchain tag contains 38,000+ blockchain designs showcasing visual work from designers worldwide
+
+**Specialized Crypto Event Design:**
+- Dribbble's crypto event section features 2 specific crypto event designs including "Crypto Event Poster" by Christina Varosyan
+- A specific "Crypto Camp Poster" by Mohamed Chahin on Dribbble created as "a render for Oddbee for the Crypto Camp event"
+
+**Web3 & Community Focus:**
+- Dribbble's web3 crypto airdrop graphic poster section showcases thousands of high-quality web3 designs with examples like "Promotional poster designs for Neoki web3 multi metaverse"
+- Redbubble's web3 posters section features unique designs "designed and sold by artists" with "web3graphics decentralizeddesign, blockchainart, interactivevisuals, futuristicgraphics"
+
+### QR Code & Dynamic Elements
+- Specialized QR code generators for Behance portfolios that "generate a QR code to connect others directly to your Behance projects"
+- Canva's QR code integration allows you to "impress with a custom QR code on business cards and direct clients to your portfolio"
+
+### Visual Style Resources
+**Pinterest Collections:**
+- Pinterest's blockchain design section offers "best ideas and inspiration for Blockchain design"
+- Pinterest's crypto banner design features "Futuristic Website Background Ideas," "Blue Neon Sci-fi Design," and "Crypto Aesthetic" elements
+
+**Stock Resources:**
+- Freepik's web3 poster vectors offer "AI-generated vectors and stock vectors" for high-quality projects
+- PosterMyWall provides "15 free templates for 'Web3'" with "eye-catching templates"
+
+### Key Visual Elements Found:
+The galleries showcase designs featuring:
+- **Gradient meshes** and neon aesthetics
+- **Pixel-vector hybrid** styles in crypto branding
+- **Dynamic QR code integrations** for portfolio access
+- **Blockchain iconography** and decentralized community themes
+- **Event-specific crypto posters** for meetups and conferences
+- **3D social media po</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Browse thousands of Crypto Poster images for design inspiration | Dribbble (https://dribbble.com/search/crypto-poster)
+2. Crypto Event designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/crypto-event)
+3. Blockchain designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/blockchain)
+4. Browse thousands of Web3 Crypto Airdrop Graphic Poster images for design inspiration | Dribbble (https://dribbble.com/search/web3-crypto-airdrop-graphic-poster)
+5. Mesh Gradient Projects (https://www.behance.net/search/projects/mesh%20gradient%20)
+6. Browse thousands of Bitcoin Poster images for design inspiration | Dribbble (https://dribbble.com/search/bitcoin-poster)
+7. Web3 Poster Maker (https://www.brandcrowd.com/poster-maker/tag/web3)
+8. Portfolio | Gradient Ventures (https://www.gradient.com/portfolio/)
+9. 15 Free Templates for 'Web3' | PosterMyWall (https://www.postermywall.com/index.php/posters/search?s=web3)
+10. Blockchain Design (https://www.pinterest.com/ideas/blockchain-design/960486511831/)
+11. Crypto Banner Design (https://www.pinterest.com/ideas/crypto-banner-design/934190706276/)
+12. Web3 Poster Images - Free Download on Freepik (https://www.freepik.com/free-photos-vectors/web3-poster)
+13. Web3 Posters for Sale | Redbubble (https://www.redbubble.com/shop/web3+posters)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/search/crypto-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Browse thousands of Crypto Poster images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/crypto-event" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Crypto Event designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/blockchain" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Blockchain designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/search/web3-crypto-airdrop-graphic-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Browse thousands of Web3 Crypto Airdrop Graphic Poster images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/mesh%20gradient%20" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Mesh Gradient Projects</a></li><li class="text-sm"><a href="https://dribbble.com/search/bitcoin-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Browse thousands of Bitcoin Poster images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://www.brandcrowd.com/poster-maker/tag/web3" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Web3 Poster Maker</a></li><li class="text-sm"><a href="https://www.gradient.com/portfolio/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Portfolio | Gradient Ventures</a></li><li class="text-sm"><a href="https://www.postermywall.com/index.php/posters/search?s=web3" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. 15 Free Templates for 'Web3' | PosterMyWall</a></li><li class="text-sm"><a href="https://www.pinterest.com/ideas/blockchain-design/960486511831/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Blockchain Design</a></li><li class="text-sm"><a href="https://www.pinterest.com/ideas/crypto-banner-design/934190706276/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Crypto Banner Design</a></li><li class="text-sm"><a href="https://www.freepik.com/free-photos-vectors/web3-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Web3 Poster Images - Free Download on Freepik</a></li><li class="text-sm"><a href="https://www.redbubble.com/shop/web3+posters" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. Web3 Posters for Sale | Redbubble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
