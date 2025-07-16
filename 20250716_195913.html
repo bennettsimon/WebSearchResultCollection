@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about Y2K millennium aesthetic design references, needing metallic textures, holographic effects, pixel graphics, transparent plastic feels, and early internet visual elements. The search should showcase the revival of this nostalgic futurism.">The user is asking about Y2K millennium aesthetic design references, needing metallic textures, holographic effects, pixel graphics, transparent plastic feels, and early internet visual elements. The search should showcase the revival of this nostalgic futurism.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 20:00:03</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="13.54">13.54秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="981">981</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Y2K aesthetic design examples metallic holographic pixel transparent plastic early internet
+2. Y2K millennium aesthetic revival design
+3. Y2K fashion metallic holographic
+4. early 2000s web design aesthetic
+5. transparent plastic electronics Y2K">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Y2K aesthetic design examples metallic holographic pixel transparent plastic early internet</li><li class="text-sm text-gray-600">2. Y2K millennium aesthetic revival design</li><li class="text-sm text-gray-600">3. Y2K fashion metallic holographic</li><li class="text-sm text-gray-600">4. early 2000s web design aesthetic</li><li class="text-sm text-gray-600">5. transparent plastic electronics Y2K</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="The Y2K (Year 2000) millennium aesthetic, prevalent from the late 1990s to the early 2000s, is experiencing a significant revival in design, reflecting a nostalgic futurism characterized by technological optimism and a playful, maximalist approach. This aesthetic is a mashup of retro-futurism, cyberpunk vibes, and early 2000s chic, contrasting sharply with the minimalism of the 90s and recent years.
+
+Key design elements of the Y2K aesthetic include:
+
+*   **Metallic Textures and Chrome Effects:** Shiny, futuristic finishes like polished silver, chrome, and gold are central to conveying a high-tech, space-age feel. These are often used for buttons, borders, icons, and even entire surfaces, reflecting the era's fascination with digital advancements and giving designs a sleek, modern touch. Examples include metallic and chrome stickers, and the general "silverness of metals" in design.
+*   **Holographic Effects:** Iridescent and shimmering holographic textures are a hallmark of Y2K design, adding a futuristic yet playful vibe. They create a dynamic look that changes depending on the viewing angle, embodying youthful energy, creativity, and evolution.
+*   **Pixel Graphics:** Pixel art and low-resolution graphics pay homage to the early days of digital technology and classic video games, lending a distinct retro aesthetic to contemporary designs. This includes pixelated fonts and abstract digital graphics like grids.
+*   **Transparent Plastic Feels:** The "clear craze" was a significant trend, with consumer electronics like the Apple iMac G3 and Nintendo Game Boy Color featuring translucent, candy-colored, or clear plastic casings. This allowed the "inner workings" of devices to be visible, symbolizing openness and technological advancement. This also extends to "blobject" forms and curvilinear "bubble" designs.
+*   **Early Internet Visual Elements:** The Y2K aesthetic is deeply rooted in the visual culture of the early internet. This includes:
+    *   **Bold, Vibrant Colors and Neon Gradients:** A palette of hot pinks, electric blues, lime greens, vivid yellows, and purples dominates, often used in striking gradients for backgrounds, buttons, and banners to create a sense of depth and energy.
+    *   **Flashy Animations and Animated GIFs:** While Flash technology is less common now, animated graphics, especially GIFs, remain a key part of the Y2K aesthetic in web design.
+    *   **Playful Typography and 3D Text Effects:** Bold fonts, often stretched sans-serifs, futuristic typefaces, and playful 3D text effects were common to grab attention and make websites feel interactive.
+    *   **Sticker Icons and Simple Graphics:** "Teen 'zine style" sticker icons, often thick-lined and 3D, were prevalent, along with clip art style icons and simple graphics.
+    *   **Interactive Elements and Chaotic Layouts:** Early web design was experimental, with a focus on making websites stand out, often resulting in packed designs with features like pop-up windows, scrolling text, and minimalist navigation mirroring Web 1.0 structures.
+
+The revival of the Y2K aesthetic is driven by nostalgia, particularly among Millennials and Gen Z who grew up during this era, and a cultural shift towards embracing bold, playful, and unpolished design in contrast to the sleek minimalism that has been dominant. Modern designers are reinterpreting these elements, often blending retro typography and metallic textures with cleaner, more functional layouts to create a sophisticated twist on the original vibe.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">The Y2K (Year 2000) millennium aesthetic, prevalent from the late 1990s to the early 2000s, is experiencing a significant revival in design, reflecting a nostalgic futurism characterized by technological optimism and a playful, maximalist approach. This aesthetic is a mashup of retro-futurism, cyberpunk vibes, and early 2000s chic, contrasting sharply with the minimalism of the 90s and recent years.
+
+Key design elements of the Y2K aesthetic include:
+
+*   **Metallic Textures and Chrome Effects:** Shiny, futuristic finishes like polished silver, chrome, and gold are central to conveying a high-tech, space-age feel. These are often used for buttons, borders, icons, and even entire surfaces, reflecting the era's fascination with digital advancements and giving designs a sleek, modern touch. Examples include metallic and chrome stickers, and the general "silverness of metals" in design.
+*   **Holographic Effects:** Iridescent and shimmering holographic textures are a hallmark of Y2K design, adding a futuristic yet playful vibe. They create a dynamic look that changes depending on the viewing angle, embodying youthful energy, creativity, and evolution.
+*   **Pixel Graphics:** Pixel art and low-resolution graphics pay homage to the early days of digital technology and classic video games, lending a distinct retro aesthetic to contemporary designs. This includes pixelated fonts and abstract digital graphics like grids.
+*   **Transparent Plastic Feels:** The "clear craze" was a significant trend, with consumer electronics like the Apple iMac G3 and Nintendo Game Boy Color featuring translucent, candy-colored, or clear plastic casings. This allowed the "inner workings" of devices to be visible, symbolizing openness and technological advancement. This also extends to "blobject" forms and curvilinear "bubble" designs.
+*   **Early Internet Visual Elements:** The Y2K aesthetic is deeply rooted in the visual culture of the early internet. This includes:
+    *   **Bold, Vibrant Colors and Neon Gradients:** A palette of hot pinks, electric blues, lime greens, vivid yellows, and purples dominates, often used in striking gradients for backgrounds, buttons, and banners to create a sense of depth and energy.
+    *   **Flashy Animations and Animated GIFs:** While Flash technology is less common now, animated graphics, especially GIFs, remain a key part of the Y2K aesthetic in web design.
+    *   **Playful Typography and 3D Text Effects:** Bold fonts, often stretched sans-serifs, futuristic typefaces, and playful 3D text effects were common to grab attention and make websites feel interactive.
+    *   **Sticker Icons and Simple Graphics:** "Teen 'zine style" sticker icons, often thick-lined and 3D, were prevalent, along with clip art style icons and simple graphics.
+    *   **Interactive Elements and Chaotic Layouts:** Early web design was experimental, with a focus on making websites stand out, often resulting in packed designs with features like pop-up windows, scrolling text, and minimalist navigation mirroring Web 1.0 structures.
+
+The revival of the Y2K aesthetic is driven by nostalgia, particularly among Millennials and Gen Z who grew up during this era, and a cultural shift towards embracing bold, playful, and unpolished design in contrast to the sleek minimalism that has been dominant. Modern designers are reinterpreting these elements, often blending retro typography and metallic textures with cleaner, more functional layouts to create a sophisticated twist on the original vibe.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. tatlerasia.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm1QMM-y2HcJ6vLziH_v2H5941K_zRe7Y8I6dzbFonuNfTF_awfPznjCK3-qKM4HXbMscNLu1pMnTqk5bvMDgT1QaVcJOmJ7lRPKCrHhB3wf7e2ZXeQbBkt3DGUfrC7eVN0YOdENo4yfo3iXsWezfvPWSmrW-21r1M2UJ0ZShwREoca33LgZ9kyQApPW05gqAYY0Ys5kRy7uav6NTEOoWF)
+2. studio2am.co (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxHWjWiwbWwjGRGm82nCnehIhFFepi-qj8e-Md3HWBAO3HHV7pCHZp8A4gFzEsGVbElQXYFj-rwJw4MSbNu3D0DWaXGMzIIDJc3uV3CRxsQ8lfd58_ocynDLQb8VFDpOKSDFnikCeZgL7fqFMEx7J_SeS_gDXc9stQp9f6Bg3VdR_TdJ33oQ==)
+3. design4uonline.uk (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEy1UbK7cvKz8v0bZkARF93go2gXCpE4IE78RNdWZGBG0IZcwo9srciJH8l8pqmFtPLUYIFr4caJzlIAEBdKnxWM6HlbX-GBlF5jrYlSz-q57kSe-RkBKPfyGFcpVvwW38JWjTaBP7lMnqCsRViCA4iKSNGtKyyPivpw1xduC6Ppl8K1uOjJ_KVmWhFSFxbafYR813BKNx32RjNEnV1eekD)
+4. wegic.ai (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo4RNx89iG1EGbBZmQf0bjaNvjMFX4IysPZrVw7JjCPEd3aKpMfcz3uvam5asWjEQwGpyzXtLnGNGekSRi7B-2iS2QaC0R-C9zZNZ-F1IxIJSCZTC_WuCKBV5c3Z2pQTrtX7bAFfMzZA==)
+5. lamomoneon.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6LTveKn2qSt6juDvU627OnP__y76pQOekwiK30AAxP8SlLLfV8H18axIQBMVhRl9kjB-cdVTlB_8dc7y8o2CpMCeX8ZAN0yBlALNXxezzgl0UwlScEBULFOpC6Nju1FOHhz7-VDRRAu3UbiomdQZCCCIqmgs-rb94hlRFU-ze6xJQre4wPSqFCy5Dta11vPQkalUgeA==)
+6. pageflows.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElzXiT2RCqNBmkj3qv7N4yZylhv00hvB21XJrUfnwwIRSVewZuRis2qznJuYVV6gCueevtptSeZLw5Qo8RMpY0XaNN8INmjd6xptHuphh1HcykWohTGGYIYiSMed1C0iKzFmmrEh-QY2bye-MnHA==)
+7. vermeulen-design.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0WkHQtg2Jc8mK6pi-ofQnD4sSi-s-Bwc4yOrYDbYwTti9yTG8n8kFR85rPKQ9dH-mxNhMnajfDPK7tUQHFyHtc2By54A8x7d1nJnOznQwNJquUTSfKwH8bEqkouuljdl_gLOhIoJOfwBDKRVKEa0PU7UPRcLsPwI_Sks=)
+8. evisu.com.tw (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAQ4Ulp-0wqB2NREMtpPHCVXbtn0ufILN4az1qPMRJCjonZorEYUErYA1qh-Lpd_YoGurp_c_nixtmn_mN7hZsI_1U4jejsTY_w4UvGoxDzBmaRJkAeIawkGJqfBb-vaAQAeDAaVnK54XbqTR-FkuuCiKnSh4ocudMQ71x9k7lSsFX4k9rlbw=)
+9. ebay.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdy444w9edvxSnQuflne1dVzwhqOUWufLFyTCDhG7FfQPJbw3j-lRAWFHqcBGvBrScfaR1wdF6if55fXB-rXUVOwXiMo0xZCrboM1FPPor_6hzHx4N_Uu76lrwWvvmzic=)
+10. dhgate.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHya9CpkqzGkFJQhfl9IpSVsxXLKWcU94_rvGZ72FcOdMnOjaRHnGei3PlDflQvLKNhhiF-vcpQ-sgDO9dH6g_fjlg2cQxUfhrMP2hj8HLdT3oxqg5CDvwxZPHgtfpFCtyJSCvCeXI=)
+11. ebay.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMPniBgXbXyiPdupbw3tdmxWa4Vu41zCTPkWiKI9OCrai1NxUOaRq_9n8oADSeCytZXcuF-9kOTVa5rk2RZJzQMqayHXjN1fS2qn0htbvtBIelcjRGSHg3CXPEohXGLzg=)
+12. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs1DFaqNW2-xjc7z9n7hWphoDZrQMss9u6tT7O8fn7BHR0k-sbPENgD5Ff0GEvcAiLiKCTnUP2-_kTgYr7IETEannQNHFIYsz0u2UbljVidfIGy3wxoWD_4dQEoLU5wNb5RXcylyg=)
+13. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoBNZuGFjecWIyD0A3y_TCxlQ4Ufb997iyn9GESfsB4dlFJP8KHaZSDDEwBTJ3BWJjWrwq6ZZOL_Z5AfgytpesctOV4RKzeki2Z0QxkKPBTdfVqtbylGPBZp0lVEpEI-7ZKuO7YmaxYNUM4DpWVhjdEeVZrwUrMZeL0Xi5pgsG2GDR_vuJNoE=)
+14. graphicdesigncod.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw8lmICGSTDeK4i7MyQGtQTyGUh_mJooBsS23A4Uu3PRVCpLL-WvEhUkxYuuQ9h20BGnytld52n6Up0ocPBa9cXIsDYhDm6fmCwQ0_d6lZy7DhSsCkhbnscGeRZVt5UxOt9dynb9DMNltpA-89zgOExFHmUC4e5Ut26bRGM8DAFhY6UiNt7k-YwrPic6miEI6JegiQiVs=)
+15. diversewebsitedesign.com.au (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5bxg3LTOzURZBvdK5wR0EY-4OCLymnvAxhRYHCcxKh41IX6esEcweIcMMcJwQCI4T_1gx7cAVOHk4djnYu7Q_s5l4E7HVobFbkn2hfnTwPum9OxqLtgBUBCdvr29bamdYGNCft4-RdYlwtXNUDYYb6DT3lk1p7hWy_E8AUdwPasY0zrfnljV0EgIK8Rx5)
+16. medium.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPqr7BHWY6pg1ijhYuMOVtDrgNGBmf3L-4APes7Ru7a2NHkAZe9m919Jjae2Xk0a9Dh94oubpxl_aDCLnI0lH9IDrZVssnJfujwdycejxivGVTM2jBYZTLHScvOFPQOgUycbbZagoKjh0s9HizTsWqobGoLkluuq6s1tEK4fvOR2uyf4IeqVVPM2rEtlIMBgRneKGlAfs=)
+17. fastcompany.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJlT4BC_vGQFzGPq8Rxt6BvW746bFVbxi64uf6UcRQXtjFNLK2Fvy7RpWeAievQ88Rp-7HsSqTcOuWBD2wBj9BMZQjPnnp58-7z5-7SO9V8np__Huf2K-S9vsxqbC9Ac5L0VnAvXvMH8LcErhjU0qQvt9DV2zAddKKncmM-N3JgYZR3ih-OJdTre6fc0g=)
+18. tiktok.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7ciJC1yQU1Ofn0S4Xw787vz53I3Q_IHMmB2GFxIHGGQIQjaUO8ZrUwwDZinOPfoB97m-wa76UKPsiGDBKmyM2pqMAxu36lBZOqUPvjcTw7r_Q8LWW177T_51QMBwUqX3bOnaj-lzPFZzQr2crKKW3)
+19. fanbyte.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpzWUzOAzthXAoJBvxdc9ROzbIYt8W-y4q3bAbMdZXJgZVJAQfz3A4SsvMGf9OYbiw07gN8oEmf30wKzNN7T0xW1KmMM-oizE36DJznXvjXEtl2LgOap98NCdusoO-o1T17FFt-s2dUvoaFbVP1bekg4Ijx7zqvm1JuD2onq2Fxu4b-P7fYMFIVK_V9ef2R6aRh7nUNA==)
+20. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHycGBCdymNwIH-ofBQQyboJrzevdTHgLbWMbyHZPIs9-WhSKok-ZHo54HdDZ5AGSYx5mSM37-VZFM1ZMA1qm7EsjZKpK1gRX28E6Pq7cYH9EYI5mZv9xiiJHA0XWVCBoZ5rQ0Z1xg=)
+21. debuggersstudio.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGB2tAdkAHsmTUHHhur1zGCc5wTjgf8VNTmCCag4tcd3wgPARAMK4_Wx1yV4zYkU4pzdO-w5rx1hsZtCDIgY-x1KE1yoZsF0pKfSugZLL1RuZIgd3qhJZijCrM1RZFWPDParKX8nrCsTfFHVl79S8GZTaFlBy4N-yNTfUP_lVQ=)
+22. wix.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErxE9daJK69swF3qRXBKX8RL3QaJYye82Oz_q0GCkeaIOWCZJQ6c5wxyqWbafLC9zWxwaZVDrVFWAvMaqk8El9xDGa4TMZx66NFs8aB8wEgIiHJcyY7YBSubU5y_a0sx_mJ2csb5I=)
+23. fashionuptoday.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGciqaOhKio0bkhSCS_jnrJNaeWgtj61JdFhhuh4hFUcKM0dsg1pRCSXydJy2w1QYTvdKmzwUECkJRSbY00x4z5IqWXgHSxVk_rligEPw9tYRbN6dIRIdYjbsLPFfwDMiFACWMBZU-7eldZMHDpDJNqJmayTSE=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm1QMM-y2HcJ6vLziH_v2H5941K_zRe7Y8I6dzbFonuNfTF_awfPznjCK3-qKM4HXbMscNLu1pMnTqk5bvMDgT1QaVcJOmJ7lRPKCrHhB3wf7e2ZXeQbBkt3DGUfrC7eVN0YOdENo4yfo3iXsWezfvPWSmrW-21r1M2UJ0ZShwREoca33LgZ9kyQApPW05gqAYY0Ys5kRy7uav6NTEOoWF" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. tatlerasia.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxHWjWiwbWwjGRGm82nCnehIhFFepi-qj8e-Md3HWBAO3HHV7pCHZp8A4gFzEsGVbElQXYFj-rwJw4MSbNu3D0DWaXGMzIIDJc3uV3CRxsQ8lfd58_ocynDLQb8VFDpOKSDFnikCeZgL7fqFMEx7J_SeS_gDXc9stQp9f6Bg3VdR_TdJ33oQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. studio2am.co</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEy1UbK7cvKz8v0bZkARF93go2gXCpE4IE78RNdWZGBG0IZcwo9srciJH8l8pqmFtPLUYIFr4caJzlIAEBdKnxWM6HlbX-GBlF5jrYlSz-q57kSe-RkBKPfyGFcpVvwW38JWjTaBP7lMnqCsRViCA4iKSNGtKyyPivpw1xduC6Ppl8K1uOjJ_KVmWhFSFxbafYR813BKNx32RjNEnV1eekD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. design4uonline.uk</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo4RNx89iG1EGbBZmQf0bjaNvjMFX4IysPZrVw7JjCPEd3aKpMfcz3uvam5asWjEQwGpyzXtLnGNGekSRi7B-2iS2QaC0R-C9zZNZ-F1IxIJSCZTC_WuCKBV5c3Z2pQTrtX7bAFfMzZA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. wegic.ai</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6LTveKn2qSt6juDvU627OnP__y76pQOekwiK30AAxP8SlLLfV8H18axIQBMVhRl9kjB-cdVTlB_8dc7y8o2CpMCeX8ZAN0yBlALNXxezzgl0UwlScEBULFOpC6Nju1FOHhz7-VDRRAu3UbiomdQZCCCIqmgs-rb94hlRFU-ze6xJQre4wPSqFCy5Dta11vPQkalUgeA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. lamomoneon.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElzXiT2RCqNBmkj3qv7N4yZylhv00hvB21XJrUfnwwIRSVewZuRis2qznJuYVV6gCueevtptSeZLw5Qo8RMpY0XaNN8INmjd6xptHuphh1HcykWohTGGYIYiSMed1C0iKzFmmrEh-QY2bye-MnHA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. pageflows.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0WkHQtg2Jc8mK6pi-ofQnD4sSi-s-Bwc4yOrYDbYwTti9yTG8n8kFR85rPKQ9dH-mxNhMnajfDPK7tUQHFyHtc2By54A8x7d1nJnOznQwNJquUTSfKwH8bEqkouuljdl_gLOhIoJOfwBDKRVKEa0PU7UPRcLsPwI_Sks=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. vermeulen-design.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAQ4Ulp-0wqB2NREMtpPHCVXbtn0ufILN4az1qPMRJCjonZorEYUErYA1qh-Lpd_YoGurp_c_nixtmn_mN7hZsI_1U4jejsTY_w4UvGoxDzBmaRJkAeIawkGJqfBb-vaAQAeDAaVnK54XbqTR-FkuuCiKnSh4ocudMQ71x9k7lSsFX4k9rlbw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. evisu.com.tw</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdy444w9edvxSnQuflne1dVzwhqOUWufLFyTCDhG7FfQPJbw3j-lRAWFHqcBGvBrScfaR1wdF6if55fXB-rXUVOwXiMo0xZCrboM1FPPor_6hzHx4N_Uu76lrwWvvmzic=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. ebay.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHya9CpkqzGkFJQhfl9IpSVsxXLKWcU94_rvGZ72FcOdMnOjaRHnGei3PlDflQvLKNhhiF-vcpQ-sgDO9dH6g_fjlg2cQxUfhrMP2hj8HLdT3oxqg5CDvwxZPHgtfpFCtyJSCvCeXI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. dhgate.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMPniBgXbXyiPdupbw3tdmxWa4Vu41zCTPkWiKI9OCrai1NxUOaRq_9n8oADSeCytZXcuF-9kOTVa5rk2RZJzQMqayHXjN1fS2qn0htbvtBIelcjRGSHg3CXPEohXGLzg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. ebay.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs1DFaqNW2-xjc7z9n7hWphoDZrQMss9u6tT7O8fn7BHR0k-sbPENgD5Ff0GEvcAiLiKCTnUP2-_kTgYr7IETEannQNHFIYsz0u2UbljVidfIGy3wxoWD_4dQEoLU5wNb5RXcylyg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoBNZuGFjecWIyD0A3y_TCxlQ4Ufb997iyn9GESfsB4dlFJP8KHaZSDDEwBTJ3BWJjWrwq6ZZOL_Z5AfgytpesctOV4RKzeki2Z0QxkKPBTdfVqtbylGPBZp0lVEpEI-7ZKuO7YmaxYNUM4DpWVhjdEeVZrwUrMZeL0Xi5pgsG2GDR_vuJNoE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw8lmICGSTDeK4i7MyQGtQTyGUh_mJooBsS23A4Uu3PRVCpLL-WvEhUkxYuuQ9h20BGnytld52n6Up0ocPBa9cXIsDYhDm6fmCwQ0_d6lZy7DhSsCkhbnscGeRZVt5UxOt9dynb9DMNltpA-89zgOExFHmUC4e5Ut26bRGM8DAFhY6UiNt7k-YwrPic6miEI6JegiQiVs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. graphicdesigncod.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5bxg3LTOzURZBvdK5wR0EY-4OCLymnvAxhRYHCcxKh41IX6esEcweIcMMcJwQCI4T_1gx7cAVOHk4djnYu7Q_s5l4E7HVobFbkn2hfnTwPum9OxqLtgBUBCdvr29bamdYGNCft4-RdYlwtXNUDYYb6DT3lk1p7hWy_E8AUdwPasY0zrfnljV0EgIK8Rx5" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. diversewebsitedesign.com.au</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPqr7BHWY6pg1ijhYuMOVtDrgNGBmf3L-4APes7Ru7a2NHkAZe9m919Jjae2Xk0a9Dh94oubpxl_aDCLnI0lH9IDrZVssnJfujwdycejxivGVTM2jBYZTLHScvOFPQOgUycbbZagoKjh0s9HizTsWqobGoLkluuq6s1tEK4fvOR2uyf4IeqVVPM2rEtlIMBgRneKGlAfs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. medium.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJlT4BC_vGQFzGPq8Rxt6BvW746bFVbxi64uf6UcRQXtjFNLK2Fvy7RpWeAievQ88Rp-7HsSqTcOuWBD2wBj9BMZQjPnnp58-7z5-7SO9V8np__Huf2K-S9vsxqbC9Ac5L0VnAvXvMH8LcErhjU0qQvt9DV2zAddKKncmM-N3JgYZR3ih-OJdTre6fc0g=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. fastcompany.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7ciJC1yQU1Ofn0S4Xw787vz53I3Q_IHMmB2GFxIHGGQIQjaUO8ZrUwwDZinOPfoB97m-wa76UKPsiGDBKmyM2pqMAxu36lBZOqUPvjcTw7r_Q8LWW177T_51QMBwUqX3bOnaj-lzPFZzQr2crKKW3" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. tiktok.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpzWUzOAzthXAoJBvxdc9ROzbIYt8W-y4q3bAbMdZXJgZVJAQfz3A4SsvMGf9OYbiw07gN8oEmf30wKzNN7T0xW1KmMM-oizE36DJznXvjXEtl2LgOap98NCdusoO-o1T17FFt-s2dUvoaFbVP1bekg4Ijx7zqvm1JuD2onq2Fxu4b-P7fYMFIVK_V9ef2R6aRh7nUNA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. fanbyte.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHycGBCdymNwIH-ofBQQyboJrzevdTHgLbWMbyHZPIs9-WhSKok-ZHo54HdDZ5AGSYx5mSM37-VZFM1ZMA1qm7EsjZKpK1gRX28E6Pq7cYH9EYI5mZv9xiiJHA0XWVCBoZ5rQ0Z1xg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGB2tAdkAHsmTUHHhur1zGCc5wTjgf8VNTmCCag4tcd3wgPARAMK4_Wx1yV4zYkU4pzdO-w5rx1hsZtCDIgY-x1KE1yoZsF0pKfSugZLL1RuZIgd3qhJZijCrM1RZFWPDParKX8nrCsTfFHVl79S8GZTaFlBy4N-yNTfUP_lVQ=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. debuggersstudio.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErxE9daJK69swF3qRXBKX8RL3QaJYye82Oz_q0GCkeaIOWCZJQ6c5wxyqWbafLC9zWxwaZVDrVFWAvMaqk8El9xDGa4TMZx66NFs8aB8wEgIiHJcyY7YBSubU5y_a0sx_mJ2csb5I=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. wix.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGciqaOhKio0bkhSCS_jnrJNaeWgtj61JdFhhuh4hFUcKM0dsg1pRCSXydJy2w1QYTvdKmzwUECkJRSbY00x4z5IqWXgHSxVk_rligEPw9tYRbN6dIRIdYjbsLPFfwDMiFACWMBZU-7eldZMHDpDJNqJmayTSE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. fashionuptoday.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="30.84">30.84秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="33,601">33,601</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Y2K aesthetic site:behance.net
+2. Y2K chrome logo site:dribbble.com
+3. Y2K aesthetic site:pinterest.com">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Y2K aesthetic site:behance.net</li><li class="text-sm text-gray-600">2. Y2K chrome logo site:dribbble.com</li><li class="text-sm text-gray-600">3. Y2K aesthetic site:pinterest.com</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here’s a curated selection of primary-source galleries and boards showcasing the key Y2K millennium aesthetic elements—metallic textures, holographic effects, pixel graphics, translucent plastics, and early-Internet UI motifs—to fuel your nostalgic-futurism designs:
+
+• Behance – “Y2K 3D Aesthetic Shapes Collection”  
+  A set of 86 high-res, PNG 3D shapes with transparent backgrounds, featuring iridescent blobjects, shiny metallics, and fluid forms perfect for posters, web, social, and branding work. ([behance.net](https://www.behance.net/gallery/196400997/Y2K-3D-Aesthetic-Shapes-Collection?utm_source=chatgpt.com))
+
+• Behance – “Aesthetic Shapes – Y2K Aesthetic Forms”  
+  Over 100 brutalist, post-modern Y2K-style elements plus four backgrounds; includes editable strokes, seamless patterns, and pixel-inflected shapes rooted in late-’90s futurism. ([behance.net](https://www.behance.net/gallery/146444539/Aesthetic-Shapes-Y2K-Aesthetic-Forms?utm_source=chatgpt.com))
+
+• Behance – “Y2K Aesthetic Institute”  
+  An interactive transmedia case study channeling early-2000s interfaces: 3D blobjects, glossy typefaces (“Blobby”), and a timeline of millennial icons, blending UI nostalgia with physical prototypes. ([behance.net](https://www.behance.net/gallery/54790901/Y2K-Aesthetic-Institute?utm_source=chatgpt.com))
+
+• Dribbble – “y2k chrome logo design” by MD ANWAR HUSSAIN  
+  A chrome-finish, retro-futuristic logo exploration featuring bold typography, reflective gradients, and geometric forms evoking late-’90s digital branding. ([dribbble.com](https://dribbble.com/shots/23964374-y2k-chrome-logo-design?utm_source=chatgpt.com))
+
+• Dribbble – “Y2K Chrome Text & Logo Effect” by Pixelbuddha  
+  A silver-gloss text effect inspired by ’80s/’90s MTV graphics, offering layered PSDs for quick application of holographic, chrome-style typographic treatments. ([dribbble.com](https://dribbble.com/shots/24811485-Y2K-Chrome-Text-Logo-Effect?utm_source=chatgpt.com))
+
+• Pinterest – “Y2K Aesthetics” by y2kbabyangel  
+  A 410-pin board of vivid Y2K visuals: holographic plastics, pixel art snippets, chrome panels, transparent tech gear, and early web UI snippets. ([pinterest.com](https://www.pinterest.com/y2kbabyangel/y2k-aesthetics/?utm_source=chatgpt.com))
+
+• Pinterest – “Design – Y2K Aesthetic” by codywalton  
+  Over 900 design-oriented Y2K references spanning metallic UI mockups, pixel interfaces, iridescent graphics, and translucent 3D renders. ([pinterest.com](https://www.pinterest.com/codywalton/design-y2k-aesthetic/?utm_source=chatgpt.com))">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here’s a curated selection of primary-source galleries and boards showcasing the key Y2K millennium aesthetic elements—metallic textures, holographic effects, pixel graphics, translucent plastics, and early-Internet UI motifs—to fuel your nostalgic-futurism designs:
+
+• Behance – “Y2K 3D Aesthetic Shapes Collection”  
+  A set of 86 high-res, PNG 3D shapes with transparent backgrounds, featuring iridescent blobjects, shiny metallics, and fluid forms perfect for posters, web, social, and branding work. ([behance.net](https://www.behance.net/gallery/196400997/Y2K-3D-Aesthetic-Shapes-Collection?utm_source=chatgpt.com))
+
+• Behance – “Aesthetic Shapes – Y2K Aesthetic Forms”  
+  Over 100 brutalist, post-modern Y2K-style elements plus four backgrounds; includes editable strokes, seamless patterns, and pixel-inflected shapes rooted in late-’90s futurism. ([behance.net](https://www.behance.net/gallery/146444539/Aesthetic-Shapes-Y2K-Aesthetic-Forms?utm_source=chatgpt.com))
+
+• Behance – “Y2K Aesthetic Institute”  
+  An interactive transmedia case study channeling early-2000s interfaces: 3D blobjects, glossy typefaces (“Blobby”), and a timeline of millennial icons, blending UI nostalgia with physical prototypes. ([behance.net](https://www.behance.net/gallery/54790901/Y2K-Aesthetic-Institute?utm_source=chatgpt.com))
+
+• Dribbble – “y2k chrome logo design” by MD ANWAR HUSSAIN  
+  A chrome-finish, retro-futuristic logo exploration featuring bold typography, reflective gradients, and geometric forms evoking late-’90s digital branding. ([dribbble.com](https://dribbble.com/shots/23964374-y2k-chrome-logo-design?utm_source=chatgpt.com))
+
+• Dribbble – “Y2K Chrome Text & Logo Effect” by Pixelbuddha  
+  A silver-gloss text effect inspired by ’80s/’90s MTV graphics, offering layered PSDs for quick application of holographic, chrome-style typographic treatments. ([dribbble.com](https://dribbble.com/shots/24811485-Y2K-Chrome-Text-Logo-Effect?utm_source=chatgpt.com))
+
+• Pinterest – “Y2K Aesthetics” by y2kbabyangel  
+  A 410-pin board of vivid Y2K visuals: holographic plastics, pixel art snippets, chrome panels, transparent tech gear, and early web UI snippets. ([pinterest.com](https://www.pinterest.com/y2kbabyangel/y2k-aesthetics/?utm_source=chatgpt.com))
+
+• Pinterest – “Design – Y2K Aesthetic” by codywalton  
+  Over 900 design-oriented Y2K references spanning metallic UI mockups, pixel interfaces, iridescent graphics, and translucent 3D renders. ([pinterest.com](https://www.pinterest.com/codywalton/design-y2k-aesthetic/?utm_source=chatgpt.com))</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Y2K 3D Aesthetic Shapes Collection :: Behance (https://www.behance.net/gallery/196400997/Y2K-3D-Aesthetic-Shapes-Collection?utm_source=chatgpt.com)
+2. Aesthetic Shapes - Y2K Aesthetic Forms :: Behance (https://www.behance.net/gallery/146444539/Aesthetic-Shapes-Y2K-Aesthetic-Forms?utm_source=chatgpt.com)
+3. Y2K Aesthetic Institute :: Behance (https://www.behance.net/gallery/54790901/Y2K-Aesthetic-Institute?utm_source=chatgpt.com)
+4. y2k chrome logo design by MD ANWAR HUSSAIN on Dribbble (https://dribbble.com/shots/23964374-y2k-chrome-logo-design?utm_source=chatgpt.com)
+5. Y2K Chrome Text & Logo Effect by Pixelbuddha on Dribbble (https://dribbble.com/shots/24811485-Y2K-Chrome-Text-Logo-Effect?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/196400997/Y2K-3D-Aesthetic-Shapes-Collection?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Y2K 3D Aesthetic Shapes Collection :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/146444539/Aesthetic-Shapes-Y2K-Aesthetic-Forms?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Aesthetic Shapes - Y2K Aesthetic Forms :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/54790901/Y2K-Aesthetic-Institute?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Y2K Aesthetic Institute :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23964374-y2k-chrome-logo-design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. y2k chrome logo design by MD ANWAR HUSSAIN on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/24811485-Y2K-Chrome-Text-Logo-Effect?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Y2K Chrome Text & Logo Effect by Pixelbuddha on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="50.61">50.61秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="48,344">48,344</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Y2K aesthetic design portfolio site:behance.net
+2. holographic metallic texture design site:dribbble.com
+3. "transparent plastic" "early internet" aesthetic portfolio
+4. pixel art early internet design portfolio millennium futurism">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Y2K aesthetic design portfolio site:behance.net</li><li class="text-sm text-gray-600">2. holographic metallic texture design site:dribbble.com</li><li class="text-sm text-gray-600">3. "transparent plastic" "early internet" aesthetic portfolio</li><li class="text-sm text-gray-600">4. pixel art early internet design portfolio millennium futurism</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual galleries showcasing Y2K millennium aesthetic design elements to find direct portfolio examples and project showcases.Let me search for more specific Y2K design galleries with metallic and holographic elements:Let me search for specific Y2K design portfolios and transparent plastic aesthetic galleries:Let me search for pixel art and early internet visual galleries:Based on my search results, I've found several excellent visual galleries and portfolios showcasing Y2K millennium aesthetic design elements. Here are the key resources for finding metallic textures, holographic effects, pixel graphics, transparent plastic feels, and early internet visual elements:
+
+## Direct Visual Galleries & Portfolios
+
+### Behance Y2K Design Collections
+Behance is the world's largest creative network for showcasing and discovering creative work, with several dedicated Y2K aesthetic project galleries:
+
+- **https://www.behance.net/search/projects/Y2K** - Main Y2K project search
+- **https://www.behance.net/search/projects/y2k%20aesthetic** - Y2K aesthetic focused projects
+- **https://www.behance.net/gallery/161517069/134-Y2K-Aesthetic-Elements-For-Logos** - Specific Y2K logo elements collection
+- **https://www.behance.net/gallery/54790901/Y2K-Aesthetic-Institute** - Y2K Aesthetic Institute gallery
+
+### Dribbble Texture & Effects Collections
+Discover 15 Metallic Texture designs on Dribbble... Explore thousands of high-quality holographic texture images on Dribbble:
+
+- **https://dribbble.com/tags/metallic_texture** - Metallic texture designs
+- **https://dribbble.com/search/holographic-texture** - Holographic texture gallery
+- **https://dribbble.com/shots/6451572-Free-Holographic-Textures** - Free holographic textures, a unique pack of 5 high-quality iridescent backgrounds. This free set delivers that high-shine, color-shifting glow, perfect for adding depth and energy to your artwork
+
+### Pinterest Y2K Visual Collections
+- **https://www.pinterest.com/pin/y2k-millennium-aesthetic-analysis-technoutopian-futurism-of-early-2000s--65302263340761460/** - A visual nostalgia trip back to late 90's / early 00's
+
+## Key Y2K Aesthetic Elements to Look For
+
+### Metallic & Holographic Effects
+The Y2K aesthetic can include synthetic or metallic materials... characterized by metallic materials, blobjects and reflective clothing. In the Y2K era, everything was shiny. Design was futuristic, chrome effects for fonts were suddenly easily available on everyone's computers, and 3D graphics were becoming advanced enough to make shiny objects that looked totally rad. This look could involve a bright chrome with clear reflections, a frosted metallic sheen, or a pearlescent holographic effect with lots of soft blues, whites, and pinks.
+
+### Transparent Plastic & Early Internet Elements
+Some of its aspects include tight leather pants, shiny clothing, silver eye shadow, spiky up-dos, Oakleys, gradients, translucence, and Blobitecture. In the late 90s and early aughts, web development was still emerging, and most users had low-bandwidth connection, leading to pixelated or low-fi images, and rudimentary sorts of animation (like spinning shapes).
+
+### Pixel Graphics & Digital Aesthetics
+Since technology influenced Y2K design, graphic designers used many metallic textures, chrome effects, and holographic illustrations... Speaking of glitch art, it was the perfect unifier between graphic design, Y2K, and visual intrigue... These glitches, pixelation, or general digital noise mirrored the unstable infancy of 2000's technology, making it perfect for Y2K's ethos.
+
+### Color Palette & Visual Style
+">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual galleries showcasing Y2K millennium aesthetic design elements to find direct portfolio examples and project showcases.Let me search for more specific Y2K design galleries with metallic and holographic elements:Let me search for specific Y2K design portfolios and transparent plastic aesthetic galleries:Let me search for pixel art and early internet visual galleries:Based on my search results, I've found several excellent visual galleries and portfolios showcasing Y2K millennium aesthetic design elements. Here are the key resources for finding metallic textures, holographic effects, pixel graphics, transparent plastic feels, and early internet visual elements:
+
+## Direct Visual Galleries & Portfolios
+
+### Behance Y2K Design Collections
+Behance is the world's largest creative network for showcasing and discovering creative work, with several dedicated Y2K aesthetic project galleries:
+
+- **https://www.behance.net/search/projects/Y2K** - Main Y2K project search
+- **https://www.behance.net/search/projects/y2k%20aesthetic** - Y2K aesthetic focused projects
+- **https://www.behance.net/gallery/161517069/134-Y2K-Aesthetic-Elements-For-Logos** - Specific Y2K logo elements collection
+- **https://www.behance.net/gallery/54790901/Y2K-Aesthetic-Institute** - Y2K Aesthetic Institute gallery
+
+### Dribbble Texture & Effects Collections
+Discover 15 Metallic Texture designs on Dribbble... Explore thousands of high-quality holographic texture images on Dribbble:
+
+- **https://dribbble.com/tags/metallic_texture** - Metallic texture designs
+- **https://dribbble.com/search/holographic-texture** - Holographic texture gallery
+- **https://dribbble.com/shots/6451572-Free-Holographic-Textures** - Free holographic textures, a unique pack of 5 high-quality iridescent backgrounds. This free set delivers that high-shine, color-shifting glow, perfect for adding depth and energy to your artwork
+
+### Pinterest Y2K Visual Collections
+- **https://www.pinterest.com/pin/y2k-millennium-aesthetic-analysis-technoutopian-futurism-of-early-2000s--65302263340761460/** - A visual nostalgia trip back to late 90's / early 00's
+
+## Key Y2K Aesthetic Elements to Look For
+
+### Metallic & Holographic Effects
+The Y2K aesthetic can include synthetic or metallic materials... characterized by metallic materials, blobjects and reflective clothing. In the Y2K era, everything was shiny. Design was futuristic, chrome effects for fonts were suddenly easily available on everyone's computers, and 3D graphics were becoming advanced enough to make shiny objects that looked totally rad. This look could involve a bright chrome with clear reflections, a frosted metallic sheen, or a pearlescent holographic effect with lots of soft blues, whites, and pinks.
+
+### Transparent Plastic & Early Internet Elements
+Some of its aspects include tight leather pants, shiny clothing, silver eye shadow, spiky up-dos, Oakleys, gradients, translucence, and Blobitecture. In the late 90s and early aughts, web development was still emerging, and most users had low-bandwidth connection, leading to pixelated or low-fi images, and rudimentary sorts of animation (like spinning shapes).
+
+### Pixel Graphics & Digital Aesthetics
+Since technology influenced Y2K design, graphic designers used many metallic textures, chrome effects, and holographic illustrations... Speaking of glitch art, it was the perfect unifier between graphic design, Y2K, and visual intrigue... These glitches, pixelation, or general digital noise mirrored the unstable infancy of 2000's technology, making it perfect for Y2K's ethos.
+
+### Color Palette & Visual Style
+</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Y2K Projects - Behance (https://www.behance.net/search/projects/Y2K)
+2. Y2k Aesthetic Projects :: Photos, videos, logos, illustrations ... (https://www.behance.net/search/projects/y2k%20aesthetic)
+3. Y2k Projects :: Photos, videos, logos, illustrations and ... (https://www.behance.net/search/projects/y2k)
+4. Browse thousands of Holographic Texture images for design inspiration | Dribbble (https://dribbble.com/search/holographic-texture)
+5. Free Holographic Textures by Roberto Perrino on Dribbble (https://dribbble.com/shots/6451572-Free-Holographic-Textures)
+6. Holographic Textures designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/holographic_textures)
+7. Art Trends: The Y2K Aesthetic Revisits the Fun, Trashy Futurism of the 2000s (https://creativeresources.threadless.com/art-trends-y2k-aesthetic/)
+8. Y2K | Aesthetics Wiki | Fandom (https://aesthetics.fandom.com/wiki/Y2K)
+9. Y2K aesthetic for web design projects: Everything you need to know | Webflow Blog (https://webflow.com/blog/y2k-aesthetic)
+10. What is Pixel Art and How Did It Come Back to Life ? (https://blog.artsper.com/en/a-closer-look/art-movements-en/pixel-art/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/search/projects/Y2K" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Y2K Projects - Behance</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/y2k%20aesthetic" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Y2k Aesthetic Projects :: Photos, videos, logos, illustrations ...</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/y2k" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Y2k Projects :: Photos, videos, logos, illustrations and ...</a></li><li class="text-sm"><a href="https://dribbble.com/search/holographic-texture" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Browse thousands of Holographic Texture images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/6451572-Free-Holographic-Textures" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Free Holographic Textures by Roberto Perrino on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/holographic_textures" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Holographic Textures designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://creativeresources.threadless.com/art-trends-y2k-aesthetic/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Art Trends: The Y2K Aesthetic Revisits the Fun, Trashy Futurism of the 2000s</a></li><li class="text-sm"><a href="https://aesthetics.fandom.com/wiki/Y2K" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Y2K | Aesthetics Wiki | Fandom</a></li><li class="text-sm"><a href="https://webflow.com/blog/y2k-aesthetic" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Y2K aesthetic for web design projects: Everything you need to know | Webflow Blog</a></li><li class="text-sm"><a href="https://blog.artsper.com/en/a-closer-look/art-movements-en/pixel-art/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. What is Pixel Art and How Did It Come Back to Life ?</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
