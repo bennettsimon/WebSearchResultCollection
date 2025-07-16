@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about post-apocalyptic wasteland scene inspiration, looking for abandoned buildings, rusted metal, dust storms, modified vehicles, and survivor camp visual elements. The search should include desolate yet story-rich doomsday landscapes.">The user is asking about post-apocalyptic wasteland scene inspiration, looking for abandoned buildings, rusted metal, dust storms, modified vehicles, and survivor camp visual elements. The search should include desolate yet story-rich doomsday landscapes.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 20:05:06</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="14.27">14.27秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="952">952</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. post-apocalyptic abandoned buildings inspiration
+2. rusted metal wasteland aesthetic
+3. dust storm doomsday landscape art
+4. modified vehicles post-apocalyptic concept art
+5. survivor camp visual elements post-apocalyptic
+6. story-rich desolate landscapes post-apocalyptic">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. post-apocalyptic abandoned buildings inspiration</li><li class="text-sm text-gray-600">2. rusted metal wasteland aesthetic</li><li class="text-sm text-gray-600">3. dust storm doomsday landscape art</li><li class="text-sm text-gray-600">4. modified vehicles post-apocalyptic concept art</li><li class="text-sm text-gray-600">5. survivor camp visual elements post-apocalyptic</li><li class="text-sm text-gray-600">6. story-rich desolate landscapes post-apocalyptic</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="For post-apocalyptic wasteland scene inspiration, consider the following visual elements and concepts:
+
+**Abandoned Buildings and Urban Decay:**
+*   Dilapidated structures with crumbling facades and shattered windows evoke a sense of a world left behind. Riverside Hospital in New York, built in 1885 and abandoned in 1963, and Wyndclyffe Castle from the 1850s, which inspired "Keeping up with the Joneses," offer real-world examples of intriguing abandoned places with rich histories.
+*   Overgrown nature reclaiming urban environments, with vines and trees engulfing buildings, is a powerful visual for a world where humanity's presence has faded.
+*   Look for imagery of ruined cities with destroyed buildings, debris, and scattered remnants, suggesting the destructive force of a past catastrophe. The "Post-Apocalyptic Art - Survivor's Camp" on Reddit also features abandoned buildings.
+*   The Library of Congress website offers a wealth of vintage photos of abandoned buildings and houses that can serve as artistic inspiration for post-apocalyptic dioramas and scenes.
+
+**Rusted Metal and Industrial Decay:**
+*   An abundance of rusted metal panels, scraps, and discarded industrial equipment creates a strong sense of neglect and decay.
+*   Close-up views of corroded mechanical parts, like old batteries, highlight the intricate textures of decay.
+*   Elements such as rusted barrels and cans being overtaken by nature symbolize the earth's reclamation.
+*   Post-apocalyptic props and costumes often incorporate rusted metal details, showcasing a battle-worn finish. Techniques for creating realistic rust on metallic surfaces involve using household chemicals and controlled washes.
+
+**Dust Storms and Desolate Landscapes:**
+*   Vast, desolate landscapes, often under cloudy or hazy skies, convey isolation and abandonment.
+*   Depicting swirling dust storms engulfing ancient ruins or deserted terrain emphasizes the harsh realities of a wasteland environment.
+*   Imagery of a "doomsday landscape" can feature barren expanses with little flora or fauna, like those seen in films such as "The Road" and "Mad Max".
+*   Look for concepts of an "apocalypse sand background" with dusty twisters and sand clouds.
+
+**Modified Vehicles:**
+*   Heavily modified and rugged vehicles are central to post-apocalyptic settings, designed to endure harsh conditions.
+*   These vehicles often feature oversized tires, rusted metal details, and a battle-worn finish, creating a "brutal, post-apocalyptic aesthetic".
+*   Examples include survival vans, monster trucks built from old war planes, and even articulated buses converted for the wasteland.
+*   Concept art for "post-apocalyptic car concepts" frequently shows vehicles with protective elements and a focus on survival gear.
+
+**Survivor Camps:**
+*   Makeshift survivor camps are characterized by salvaged materials, tents, barrels, and repurposed construction materials.
+*   These camps can include innovative defenses and suggest community living in a rugged, reclaimed landscape.
+*   Visuals of essential survival gear strewn around a makeshift base enhance the story of resourcefulness.
+*   Consider elements like solar panels, barbecues, and various containers to show how survivors adapt to their environment.
+
+When combining these elements, strive for a "story-rich desolate landscape" that evokes mystery, isolation, and the passage of time, hinting at the past lives of abandoned places and the enduring human spirit in the face of adversity.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">For post-apocalyptic wasteland scene inspiration, consider the following visual elements and concepts:
+
+**Abandoned Buildings and Urban Decay:**
+*   Dilapidated structures with crumbling facades and shattered windows evoke a sense of a world left behind. Riverside Hospital in New York, built in 1885 and abandoned in 1963, and Wyndclyffe Castle from the 1850s, which inspired "Keeping up with the Joneses," offer real-world examples of intriguing abandoned places with rich histories.
+*   Overgrown nature reclaiming urban environments, with vines and trees engulfing buildings, is a powerful visual for a world where humanity's presence has faded.
+*   Look for imagery of ruined cities with destroyed buildings, debris, and scattered remnants, suggesting the destructive force of a past catastrophe. The "Post-Apocalyptic Art - Survivor's Camp" on Reddit also features abandoned buildings.
+*   The Library of Congress website offers a wealth of vintage photos of abandoned buildings and houses that can serve as artistic inspiration for post-apocalyptic dioramas and scenes.
+
+**Rusted Metal and Industrial Decay:**
+*   An abundance of rusted metal panels, scraps, and discarded industrial equipment creates a strong sense of neglect and decay.
+*   Close-up views of corroded mechanical parts, like old batteries, highlight the intricate textures of decay.
+*   Elements such as rusted barrels and cans being overtaken by nature symbolize the earth's reclamation.
+*   Post-apocalyptic props and costumes often incorporate rusted metal details, showcasing a battle-worn finish. Techniques for creating realistic rust on metallic surfaces involve using household chemicals and controlled washes.
+
+**Dust Storms and Desolate Landscapes:**
+*   Vast, desolate landscapes, often under cloudy or hazy skies, convey isolation and abandonment.
+*   Depicting swirling dust storms engulfing ancient ruins or deserted terrain emphasizes the harsh realities of a wasteland environment.
+*   Imagery of a "doomsday landscape" can feature barren expanses with little flora or fauna, like those seen in films such as "The Road" and "Mad Max".
+*   Look for concepts of an "apocalypse sand background" with dusty twisters and sand clouds.
+
+**Modified Vehicles:**
+*   Heavily modified and rugged vehicles are central to post-apocalyptic settings, designed to endure harsh conditions.
+*   These vehicles often feature oversized tires, rusted metal details, and a battle-worn finish, creating a "brutal, post-apocalyptic aesthetic".
+*   Examples include survival vans, monster trucks built from old war planes, and even articulated buses converted for the wasteland.
+*   Concept art for "post-apocalyptic car concepts" frequently shows vehicles with protective elements and a focus on survival gear.
+
+**Survivor Camps:**
+*   Makeshift survivor camps are characterized by salvaged materials, tents, barrels, and repurposed construction materials.
+*   These camps can include innovative defenses and suggest community living in a rugged, reclaimed landscape.
+*   Visuals of essential survival gear strewn around a makeshift base enhance the story of resourcefulness.
+*   Consider elements like solar panels, barbecues, and various containers to show how survivors adapt to their environment.
+
+When combining these elements, strive for a "story-rich desolate landscape" that evokes mystery, isolation, and the passage of time, hinting at the past lives of abandoned places and the enduring human spirit in the face of adversity.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. thetravel.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGR5ot02XhjvhsvuQdPZLwe1uXj_a3DHjS59SitBX_YjBozOsu0Jmp_-aoR4ScrNWNV5OPnk7JfosJxIVRyo_a04g7OmSgwzriBNDkkZsWYqVigD3ADD3DxwBucEx2bWSCQOUxPTxqRKpMKU_hUxNMttfVlYPLucnV74EfCoEEpxDLVHSKT16tQ6a_9DoDko7kaBIveQmD)
+2. openart.ai (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHgMaSqBvTdD-ZEAhRN1wn_T1uJhmK4SNnZzuQqMQtjg_UIO6xER3ICmiOH9aDyKj-a8OKsrGEufdK8pd6WapQQ-pTTMUApGbwzkOKCF-YPYAgSVE0yizqVWjeipSvrhdBnlG0rMQkuw==)
+3. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_YnMeDzA_CZnbQ_CvzGLMhpOasYNBy1lXs5nXnNpxPY9gcElusXIwM-fh-as6jdVNEhmgKneCM1KIOfewMZ1XKblmHJSCU7sghAy5u3t-YjTucPK_4G5f1Mvvra8ZmA6_M8rYjEd7XF-TgAShurik2qM0flMoV3wVBLyGmOinwZhcn2g0BhQeaBE=)
+4. pngtree.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjpOM72oWfCLMwHKH-UP5MsfuuezdjZ8S3bkvMRJc3wzWzRGPSXKmdU7QpRQZ414ahXKXShNYxBbO5HM_z4TffNxK6wLsLDDDuyJ9AaSaVbAWbUNq_yIJOSTbtG8vorUACjIco5QwZc0SJl6rQDfhBhgKf2jfUoJFuJTerbrIpZ4P_CFfTOJDrE4bc_35fz-LS7MCP5u9VOkz-yb92H30kvPqwYHTf91A2tQ==)
+5. reddit.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHF-2ab31l5800t1dRy34hsEXGY1IpoSgGKE5700-aW_FRIjo4y22VEqRnj93GVswkjk_nHJZnkf1cr5xEEsEYTS2PGU_C03aJBlScbvv3Uq4pwvBNmgGD5U6IZgG8ButYJarYMC0UMNegC_8KapJnrtubsfDuehLkSfWKDR67AHSfU06h11jlnlkhxzfsUbOdyJbItniiW)
+6. reddit.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg4ehYfAwiLqHoqPo-h1PoeVuNMZzU_oht6-Ds3LdVdECx-sTxaOol0hQP1vN9RbK8VWmuilRO3_pmyirXSHc18lFoOYIYuGlYHXI44ETUoxwtKFUBgULVaHYzuY6MSW_4yjyoNvbwJhBUmjO3H4tRUAqdquNNvnqa_YXr1phay4TfqKfKzje02IVkDcH-IBC6bc_oiEVlkZU=)
+7. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETrOy8p84uoe2VS3FK-ebV4TvbT8wl5MpXUhEKgoj_af2i5fPlXNczyti6J_uvVNB2yeUxmkWGXlEswsTHPhLxlvfPedbQWUEEDlzesfdLHu9Hpga77qMdMxilWm81AiYQoBpf2V5PXBSkqpSMCTnSLt1cl6eM2ixsyg==)
+8. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEHBcy99rMyX1iN_w-F-AnCX51xUKC64FShEhygFkVdZCn-F96Dh5C3VVighhTHhth14imkQtYP5uEkIZuaS5Nr9a9Vf8sBQUdwHmFdxQLRjuNuzf5TvEaS0uo3SXLAzsCSopLb9DxPmBBLdE2rXYAtBw=)
+9. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH--j-LYN069NcViS0LbiUTHHXUWsqGfRkR0qG5UtqvUFTXdYyFCcbpuQLb1DaOI0AkJqPAOAgAbBZdgSCq4xj5jh36XLxNzGF_wsXEWJL5hUXl2uSW-9_-dr-NxMwR4qX6SwsERUt1LhYi1YAizzDm55oj2ebjUmG8yVMFjlwK)
+10. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtiOWggKbnG8l9qA66ImBs4dUpw_TBp8R5FI6ePBPGOBaXNGwZp5XmHnrrsBb78MeiDzpMQEs-A4xQ2Ocy7sofHw4YhaAxuf5CQZ9gHtE9qElzljabGLXrT-8tnsj5PNn7UAQLCPpoQAxT4QEdOPqLW16QZICOFoBeMAVbGeGRFdfZpazRQqodc0Nk5Q==)
+11. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaFgE7R-ABZSnzwiPaKRcA_2jg7-oM3pIHsEFhA9cEDyrVss4_ayfAWfmunuBHJlrgPRGAllu_uPzlfFBSOutyqNvSOsqp3GTF2TNSLp2MYYPZ2hzS8B_e9KrWNaRD8zSq2k5_2dg=)
+12. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-VxnDksPY5Nl-_itS-m2HzAhZUxAG36L6gvTpG-uR2PO0GOtUJSKh7Q8VDTuBdfPmffBdsLvzGn3YgUIayjw9Hh2yurMx3Cffb3KJ16cwVjHBlrc3Nucjl0yUXJufWn-zUHSyFTxwtIivYjvJJsEA_xrYSVJPWGeFJ4i5mvzAFtIZgbgA3vc8)
+13. watchmojo.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdCP6VS_c-JOy1LjCNePEQIxD89TpoBKBTYMhqnl6heLWtCCKwllSz2-HTk-kgDPnvk983MA0DTJmhWx6qstwOYHrHPi9IkCZXEPbAhDqZ5gJ5JOrqk9sw-_xX6EZCsxRNRXh5WeZi8rKhxGxbrc3rhivTp9rxgbLuQioMP4JjpZw_izDXAYdS5LA=)
+14. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyCY67YNHJ1io02_9WhVlF9QAjsiCVI7FbR3Wvy5GK8vtDkYOzyT1c4ZgtxlMQ43_2LrHYVqO2rLQmnQtNq3GrieY9RD6hjBcbohHHvuZJtlnvCgHyS0eoqdxII7FtBRj4YNkknw59WH1DzbYLV9MC6-Q8zhPwflrs)
+15. artstation.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaleX7UJpZ0f-6OeSveSlj-A_V0xF6vAqm-s8EYv7A77pEtGFcR8Rpr9qrII0WiTkFDtAEJHdaSz4iqPDdxz5Em_5x4EfFld2T7mRx7RhW8uMV48YAobx9Z0NuGeivV2rxLXQY)
+16. deviantart.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL7V7Qa0fslkC5icb_H-RiO-9wjpqc3YATvrE3BxPYAVUiFCjTuChTH_Til3v-G1a2J_Y-4ciIocj-RXeGnxg3Mb4zixhCcpL5eKueCaEK-WRC-3t41sedxuhztUGzEfyyZXtw6hBIYjzwlzFp2KLtlIsSx0atXnf4Une8lvk7PQFNLdV_GpiV7o4bVaXsj91F)
+17. istockphoto.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERufID3WS43_mJFp6sh07D7I-NYpel3UluMeqebzD4UXxP8THawFZuhA6KMvTvqp02PGAyBC9QRyJnEOSR6JDU66GRYUx9ls72Ld8OHTgd2K7hY1KVaOEF4daQYlnMR-zjDuot0RBRwSG7j1qwoamF3o0=)
+18. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj-ddAwK-aYj8To4aw38XJ6jJWvcJYsclEsavYiYCYKjrGcXOXiRcpDQFenSCbkhkKBaETXRoseHMeC7LiqWo5ak7xEMgjroJdwdaXteeHp5lJL7gQIOKsoIpYdfb9chGF90avRB9N3rUT6p9AgLDoYXNSUgkAb9sTXoy1p6jC6ds_lkq4tukbNg==)
+19. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQis3qIg4XYWQPRBFBySUPOmJy05bKSRzcXR4FRlnp47RuotQVN4onGNRiJijRV6IijrRNu_9RXED-C6T-z1s9Knv8UR-mlur0ztqpXNQbEZeJM-dPhXoy5WlLxh80OaH13zd-J--vN3dTrseB550SQSCgXcu4FhcD5JtD_0pVc17e8oE=)
+20. fab.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGf_U8hTag2zBYGZ21ob3ZwiHkYmYRE1FSfsk4iowWd2WDjWBFmmCtOxbcO7WFGUBdvgr1NTe4TzqzXRnz9BPfG-96nGfpmnj6g7CwMiYxJPvOKqEkgtIssD-sA3Am2Pbj_4JRxfoqwhhC914A2pHCxUw0cO-zu54nucqF)
+21. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWA8T_eQ9LaTaCjKkAY1_5Xz5s3qDgMLrwuv5XlKUYFBqe_raQTHNFFxi0M83x1-csuupqEzZb-55pKY8zorAC_KxfmFvqIUTmtA3jEe5oDx1ahoFzpWBD1wFRiBXeh5LTDGVPAnGdH8UrUxXZb_vVdDPIk4pPGKNi5BLTZQ==)
+22. darkartandcraft.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWmdI2LZTr0avXM5vSos5DJjGlb2rElgIgkgtPWVb6W7x9jrof1uT6c3460V1tWhPtU-sxs0FjfU1lLmn7rUqkzJxy0ssmEnlUEKn5a7R4Wh43nCsrJYoKGEOZnhnbjw6kAGTXC2qMOUwquj_Maq07c2M0ugT8hx_-wAIiZ0T9vmsgrraTXqttMg==)
+23. samjfires.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfo3Lvqqwov4WhuquAYKhXReFNCRsrrOsxn3Gknhg_sP5jtiWReUjBJAosDskUpWkUz1rFBLFJDcoLkOalEgf8-26X1qhnNj9c5EHGD3Gt0qcp_NxWNEP-mz92JVOpoJHZpyb8N74UFRvhNNvO_0qHgYi6J3c-4ZYu9Tz-AoY2afek9fM-xNui)
+24. steampowered.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuUM7xIZRWrHc2NHkPrtB3eAPnrXC-H-uhOjCgCcr44jWCP1cSgqvSHmvw7V3nsC53FKYJJno4E6ViARs3NYfOYUL0xSaaSLIIH1SMzzArtDLdc14MpvxUy0jFHdLyCqNeX1bpNJ7fAQYFtIAzDSKvTIsc0Rt9dJm3-w==)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGR5ot02XhjvhsvuQdPZLwe1uXj_a3DHjS59SitBX_YjBozOsu0Jmp_-aoR4ScrNWNV5OPnk7JfosJxIVRyo_a04g7OmSgwzriBNDkkZsWYqVigD3ADD3DxwBucEx2bWSCQOUxPTxqRKpMKU_hUxNMttfVlYPLucnV74EfCoEEpxDLVHSKT16tQ6a_9DoDko7kaBIveQmD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. thetravel.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHgMaSqBvTdD-ZEAhRN1wn_T1uJhmK4SNnZzuQqMQtjg_UIO6xER3ICmiOH9aDyKj-a8OKsrGEufdK8pd6WapQQ-pTTMUApGbwzkOKCF-YPYAgSVE0yizqVWjeipSvrhdBnlG0rMQkuw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. openart.ai</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_YnMeDzA_CZnbQ_CvzGLMhpOasYNBy1lXs5nXnNpxPY9gcElusXIwM-fh-as6jdVNEhmgKneCM1KIOfewMZ1XKblmHJSCU7sghAy5u3t-YjTucPK_4G5f1Mvvra8ZmA6_M8rYjEd7XF-TgAShurik2qM0flMoV3wVBLyGmOinwZhcn2g0BhQeaBE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjpOM72oWfCLMwHKH-UP5MsfuuezdjZ8S3bkvMRJc3wzWzRGPSXKmdU7QpRQZ414ahXKXShNYxBbO5HM_z4TffNxK6wLsLDDDuyJ9AaSaVbAWbUNq_yIJOSTbtG8vorUACjIco5QwZc0SJl6rQDfhBhgKf2jfUoJFuJTerbrIpZ4P_CFfTOJDrE4bc_35fz-LS7MCP5u9VOkz-yb92H30kvPqwYHTf91A2tQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. pngtree.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHF-2ab31l5800t1dRy34hsEXGY1IpoSgGKE5700-aW_FRIjo4y22VEqRnj93GVswkjk_nHJZnkf1cr5xEEsEYTS2PGU_C03aJBlScbvv3Uq4pwvBNmgGD5U6IZgG8ButYJarYMC0UMNegC_8KapJnrtubsfDuehLkSfWKDR67AHSfU06h11jlnlkhxzfsUbOdyJbItniiW" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. reddit.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg4ehYfAwiLqHoqPo-h1PoeVuNMZzU_oht6-Ds3LdVdECx-sTxaOol0hQP1vN9RbK8VWmuilRO3_pmyirXSHc18lFoOYIYuGlYHXI44ETUoxwtKFUBgULVaHYzuY6MSW_4yjyoNvbwJhBUmjO3H4tRUAqdquNNvnqa_YXr1phay4TfqKfKzje02IVkDcH-IBC6bc_oiEVlkZU=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. reddit.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETrOy8p84uoe2VS3FK-ebV4TvbT8wl5MpXUhEKgoj_af2i5fPlXNczyti6J_uvVNB2yeUxmkWGXlEswsTHPhLxlvfPedbQWUEEDlzesfdLHu9Hpga77qMdMxilWm81AiYQoBpf2V5PXBSkqpSMCTnSLt1cl6eM2ixsyg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEHBcy99rMyX1iN_w-F-AnCX51xUKC64FShEhygFkVdZCn-F96Dh5C3VVighhTHhth14imkQtYP5uEkIZuaS5Nr9a9Vf8sBQUdwHmFdxQLRjuNuzf5TvEaS0uo3SXLAzsCSopLb9DxPmBBLdE2rXYAtBw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH--j-LYN069NcViS0LbiUTHHXUWsqGfRkR0qG5UtqvUFTXdYyFCcbpuQLb1DaOI0AkJqPAOAgAbBZdgSCq4xj5jh36XLxNzGF_wsXEWJL5hUXl2uSW-9_-dr-NxMwR4qX6SwsERUt1LhYi1YAizzDm55oj2ebjUmG8yVMFjlwK" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtiOWggKbnG8l9qA66ImBs4dUpw_TBp8R5FI6ePBPGOBaXNGwZp5XmHnrrsBb78MeiDzpMQEs-A4xQ2Ocy7sofHw4YhaAxuf5CQZ9gHtE9qElzljabGLXrT-8tnsj5PNn7UAQLCPpoQAxT4QEdOPqLW16QZICOFoBeMAVbGeGRFdfZpazRQqodc0Nk5Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaFgE7R-ABZSnzwiPaKRcA_2jg7-oM3pIHsEFhA9cEDyrVss4_ayfAWfmunuBHJlrgPRGAllu_uPzlfFBSOutyqNvSOsqp3GTF2TNSLp2MYYPZ2hzS8B_e9KrWNaRD8zSq2k5_2dg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-VxnDksPY5Nl-_itS-m2HzAhZUxAG36L6gvTpG-uR2PO0GOtUJSKh7Q8VDTuBdfPmffBdsLvzGn3YgUIayjw9Hh2yurMx3Cffb3KJ16cwVjHBlrc3Nucjl0yUXJufWn-zUHSyFTxwtIivYjvJJsEA_xrYSVJPWGeFJ4i5mvzAFtIZgbgA3vc8" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdCP6VS_c-JOy1LjCNePEQIxD89TpoBKBTYMhqnl6heLWtCCKwllSz2-HTk-kgDPnvk983MA0DTJmhWx6qstwOYHrHPi9IkCZXEPbAhDqZ5gJ5JOrqk9sw-_xX6EZCsxRNRXh5WeZi8rKhxGxbrc3rhivTp9rxgbLuQioMP4JjpZw_izDXAYdS5LA=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. watchmojo.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyCY67YNHJ1io02_9WhVlF9QAjsiCVI7FbR3Wvy5GK8vtDkYOzyT1c4ZgtxlMQ43_2LrHYVqO2rLQmnQtNq3GrieY9RD6hjBcbohHHvuZJtlnvCgHyS0eoqdxII7FtBRj4YNkknw59WH1DzbYLV9MC6-Q8zhPwflrs" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaleX7UJpZ0f-6OeSveSlj-A_V0xF6vAqm-s8EYv7A77pEtGFcR8Rpr9qrII0WiTkFDtAEJHdaSz4iqPDdxz5Em_5x4EfFld2T7mRx7RhW8uMV48YAobx9Z0NuGeivV2rxLXQY" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. artstation.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL7V7Qa0fslkC5icb_H-RiO-9wjpqc3YATvrE3BxPYAVUiFCjTuChTH_Til3v-G1a2J_Y-4ciIocj-RXeGnxg3Mb4zixhCcpL5eKueCaEK-WRC-3t41sedxuhztUGzEfyyZXtw6hBIYjzwlzFp2KLtlIsSx0atXnf4Une8lvk7PQFNLdV_GpiV7o4bVaXsj91F" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. deviantart.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERufID3WS43_mJFp6sh07D7I-NYpel3UluMeqebzD4UXxP8THawFZuhA6KMvTvqp02PGAyBC9QRyJnEOSR6JDU66GRYUx9ls72Ld8OHTgd2K7hY1KVaOEF4daQYlnMR-zjDuot0RBRwSG7j1qwoamF3o0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. istockphoto.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj-ddAwK-aYj8To4aw38XJ6jJWvcJYsclEsavYiYCYKjrGcXOXiRcpDQFenSCbkhkKBaETXRoseHMeC7LiqWo5ak7xEMgjroJdwdaXteeHp5lJL7gQIOKsoIpYdfb9chGF90avRB9N3rUT6p9AgLDoYXNSUgkAb9sTXoy1p6jC6ds_lkq4tukbNg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQis3qIg4XYWQPRBFBySUPOmJy05bKSRzcXR4FRlnp47RuotQVN4onGNRiJijRV6IijrRNu_9RXED-C6T-z1s9Knv8UR-mlur0ztqpXNQbEZeJM-dPhXoy5WlLxh80OaH13zd-J--vN3dTrseB550SQSCgXcu4FhcD5JtD_0pVc17e8oE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGf_U8hTag2zBYGZ21ob3ZwiHkYmYRE1FSfsk4iowWd2WDjWBFmmCtOxbcO7WFGUBdvgr1NTe4TzqzXRnz9BPfG-96nGfpmnj6g7CwMiYxJPvOKqEkgtIssD-sA3Am2Pbj_4JRxfoqwhhC914A2pHCxUw0cO-zu54nucqF" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. fab.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWA8T_eQ9LaTaCjKkAY1_5Xz5s3qDgMLrwuv5XlKUYFBqe_raQTHNFFxi0M83x1-csuupqEzZb-55pKY8zorAC_KxfmFvqIUTmtA3jEe5oDx1ahoFzpWBD1wFRiBXeh5LTDGVPAnGdH8UrUxXZb_vVdDPIk4pPGKNi5BLTZQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWmdI2LZTr0avXM5vSos5DJjGlb2rElgIgkgtPWVb6W7x9jrof1uT6c3460V1tWhPtU-sxs0FjfU1lLmn7rUqkzJxy0ssmEnlUEKn5a7R4Wh43nCsrJYoKGEOZnhnbjw6kAGTXC2qMOUwquj_Maq07c2M0ugT8hx_-wAIiZ0T9vmsgrraTXqttMg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. darkartandcraft.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfo3Lvqqwov4WhuquAYKhXReFNCRsrrOsxn3Gknhg_sP5jtiWReUjBJAosDskUpWkUz1rFBLFJDcoLkOalEgf8-26X1qhnNj9c5EHGD3Gt0qcp_NxWNEP-mz92JVOpoJHZpyb8N74UFRvhNNvO_0qHgYi6J3c-4ZYu9Tz-AoY2afek9fM-xNui" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. samjfires.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuUM7xIZRWrHc2NHkPrtB3eAPnrXC-H-uhOjCgCcr44jWCP1cSgqvSHmvw7V3nsC53FKYJJno4E6ViARs3NYfOYUL0xSaaSLIIH1SMzzArtDLdc14MpvxUy0jFHdLyCqNeX1bpNJ7fAQYFtIAzDSKvTIsc0Rt9dJm3-w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">24. steampowered.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="42.06">42.06秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="52,692">52,692</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. post-apocalyptic wasteland art site:behance.net
+2. abandoned buildings post-apocalyptic concept art site:artstation.com
+3. "wasteland vehicles" "modified cars" post-apocalyptic site:deviantart.com
+4. post-apocalyptic survivor camp concept art portfolio
+5. "dust storm" "wasteland" concept art gallery portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. post-apocalyptic wasteland art site:behance.net</li><li class="text-sm text-gray-600">2. abandoned buildings post-apocalyptic concept art site:artstation.com</li><li class="text-sm text-gray-600">3. "wasteland vehicles" "modified cars" post-apocalyptic site:deviantart.com</li><li class="text-sm text-gray-600">4. post-apocalyptic survivor camp concept art portfolio</li><li class="text-sm text-gray-600">5. "dust storm" "wasteland" concept art gallery portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual galleries showcasing post-apocalyptic wasteland scenes with the specific elements you mentioned.Based on my search for post-apocalyptic wasteland visual inspiration, I've found several excellent galleries and portfolios that showcase exactly the elements you're looking for:
+
+## **Primary Visual Galleries:**
+
+**Behance Collections:**
+- Behance hosts extensive wasteland digital art projects with specific content like "Motel Wasteland" photo manipulations and Fallout-inspired artwork
+- Direct gallery: "Post-apocalyptic Concept Art-NEW VEGAS VALLEY" on Behance
+- Multiple specific post-apocalyptic RPG concept art galleries and fan art collections
+
+**ArtStation Portfolios:**
+- Featured project: "Eastern desert city" showing life after apocalypse with a new city built in red desert around abandoned mining equipment
+- Emmanuel Nguyen's "Post-Apocalyptic New York City" concept showing flooded environments 500 years after human extinction
+- Concept art depicting "a planet years after a great war that wiped out all civilization and turned it into a desert"
+- Nicolas Peña's "apocalyptic city" created in Unreal Engine 5 showing abandoned urban environments
+
+## **Specific Reference Resources:**
+
+**Abandoned Buildings & Industrial Ruins:**
+- Nikita Vitol's "Abandoned Factory, Post-Apocalyptic Pack" featuring 85 photos of factory ruins with post-apocalyptic landscapes, brick walls, and rusty vehicles
+- Collection of reference packs for "post-apocalyptic dystopian" environments including abandoned industrial buildings and creepy atmospheres
+
+**Dust Storms & Wasteland Atmospheres:**
+- Visual showing "post-apocalyptic wasteland" with abandoned buildings, lone scavenger character, and dust storm creating "eerie atmosphere of desolation"
+- Desert wasteland art featuring "sand dunes, windswept desert winds, scorched red sands, dust storm" elements
+
+**Survivor Camps & Community Concepts:**
+- Pinterest collection of "Apocalypse camp inspiration" with rebel base entrances and modular organization concepts
+- Extensive Pinterest boards covering "Post Apocalyptic Community," "Apocalypse Base Camp," and survivor settlement concepts
+- DeviantArt gallery featuring "Post apocalyptic survivor concept art"
+
+These galleries provide authentic visual content rather than articles about where to find inspiration, giving you direct access to the desolate yet story-rich post-apocalyptic imagery you're seeking for your design work.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual galleries showcasing post-apocalyptic wasteland scenes with the specific elements you mentioned.Based on my search for post-apocalyptic wasteland visual inspiration, I've found several excellent galleries and portfolios that showcase exactly the elements you're looking for:
+
+## **Primary Visual Galleries:**
+
+**Behance Collections:**
+- Behance hosts extensive wasteland digital art projects with specific content like "Motel Wasteland" photo manipulations and Fallout-inspired artwork
+- Direct gallery: "Post-apocalyptic Concept Art-NEW VEGAS VALLEY" on Behance
+- Multiple specific post-apocalyptic RPG concept art galleries and fan art collections
+
+**ArtStation Portfolios:**
+- Featured project: "Eastern desert city" showing life after apocalypse with a new city built in red desert around abandoned mining equipment
+- Emmanuel Nguyen's "Post-Apocalyptic New York City" concept showing flooded environments 500 years after human extinction
+- Concept art depicting "a planet years after a great war that wiped out all civilization and turned it into a desert"
+- Nicolas Peña's "apocalyptic city" created in Unreal Engine 5 showing abandoned urban environments
+
+## **Specific Reference Resources:**
+
+**Abandoned Buildings & Industrial Ruins:**
+- Nikita Vitol's "Abandoned Factory, Post-Apocalyptic Pack" featuring 85 photos of factory ruins with post-apocalyptic landscapes, brick walls, and rusty vehicles
+- Collection of reference packs for "post-apocalyptic dystopian" environments including abandoned industrial buildings and creepy atmospheres
+
+**Dust Storms & Wasteland Atmospheres:**
+- Visual showing "post-apocalyptic wasteland" with abandoned buildings, lone scavenger character, and dust storm creating "eerie atmosphere of desolation"
+- Desert wasteland art featuring "sand dunes, windswept desert winds, scorched red sands, dust storm" elements
+
+**Survivor Camps & Community Concepts:**
+- Pinterest collection of "Apocalypse camp inspiration" with rebel base entrances and modular organization concepts
+- Extensive Pinterest boards covering "Post Apocalyptic Community," "Apocalypse Base Camp," and survivor settlement concepts
+- DeviantArt gallery featuring "Post apocalyptic survivor concept art"
+
+These galleries provide authentic visual content rather than articles about where to find inspiration, giving you direct access to the desolate yet story-rich post-apocalyptic imagery you're seeking for your design work.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Wasteland Digital Art Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://behance.net/search/projects/wasteland digital art)
+2. Behance (https://www.behance.net/gallery/184674401/Post-apocalyptic-Concept-Art-NEW-VEGAS-VALLEY)
+3. Post apocalyptic RPG concept art (https://www.behance.net/gallery/54229059/Post-apocalyptic-RPG-concept-art?locale=en_US)
+4. Post-Apocalyptic Fan Art (1) | Images (https://www.behance.net/gallery/60501629/Post-Apocalyptic-Fan-Art/modules/355539037)
+5. 10 Abandoned Places Reference Packs - ArtStation Magazine (https://magazine.artstation.com/2020/09/10-abandoned-places-reference-packs/)
+6. ArtStation - Abandoned Factory, Post-Apocalyptic Pack | Resources (https://www.artstation.com/marketplace/p/obOa/abandoned-factory-post-apocalyptic-pack)
+7. ArtStation - Post Apocalyptic Desert (https://www.artstation.com/artwork/b5Vr4o)
+8. ArtStation - Post Apocalypse City (https://www.artstation.com/artwork/JKxWD)
+9. Apocalyptic Survivor - Etsy (https://www.etsy.com/market/apocalyptic_survivor)
+10. Eastern desert city. Environment concept art for post-apocalyptic world, TEAM FROM EARTH (https://www.artstation.com/artwork/XgGALa)
+11. Nikita Vitol - Abandoned Factory, Post-Apocalyptic Pack (https://nikita_vitol.artstation.com/store/obOa/abandoned-factory-post-apocalyptic-pack)
+12. Post apocalyptic survivor concept art. by weiboi on DeviantArt (https://www.deviantart.com/weiboi/art/Post-apocalyptic-survivor-concept-art-947382263)
+13. 270 Best zombie survivor ideas (https://www.pinterest.com/spencerchampney/zombie-survivor/)
+14. 170 Survivor Concept Art ideas | character design ... (https://www.pinterest.com/mertsuha/survivor-concept-art/)
+15. Post Apocalyptic Community (https://www.pinterest.com/ideas/post-apocalyptic-community/920653830271/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://behance.net/search/projects/wasteland digital art" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Wasteland Digital Art Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/184674401/Post-apocalyptic-Concept-Art-NEW-VEGAS-VALLEY" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/54229059/Post-apocalyptic-RPG-concept-art?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Post apocalyptic RPG concept art</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/60501629/Post-Apocalyptic-Fan-Art/modules/355539037" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Post-Apocalyptic Fan Art (1) | Images</a></li><li class="text-sm"><a href="https://magazine.artstation.com/2020/09/10-abandoned-places-reference-packs/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. 10 Abandoned Places Reference Packs - ArtStation Magazine</a></li><li class="text-sm"><a href="https://www.artstation.com/marketplace/p/obOa/abandoned-factory-post-apocalyptic-pack" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. ArtStation - Abandoned Factory, Post-Apocalyptic Pack | Resources</a></li><li class="text-sm"><a href="https://www.artstation.com/artwork/b5Vr4o" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. ArtStation - Post Apocalyptic Desert</a></li><li class="text-sm"><a href="https://www.artstation.com/artwork/JKxWD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. ArtStation - Post Apocalypse City</a></li><li class="text-sm"><a href="https://www.etsy.com/market/apocalyptic_survivor" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Apocalyptic Survivor - Etsy</a></li><li class="text-sm"><a href="https://www.artstation.com/artwork/XgGALa" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Eastern desert city. Environment concept art for post-apocalyptic world, TEAM FROM EARTH</a></li><li class="text-sm"><a href="https://nikita_vitol.artstation.com/store/obOa/abandoned-factory-post-apocalyptic-pack" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Nikita Vitol - Abandoned Factory, Post-Apocalyptic Pack</a></li><li class="text-sm"><a href="https://www.deviantart.com/weiboi/art/Post-apocalyptic-survivor-concept-art-947382263" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Post apocalyptic survivor concept art. by weiboi on DeviantArt</a></li><li class="text-sm"><a href="https://www.pinterest.com/spencerchampney/zombie-survivor/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. 270 Best zombie survivor ideas</a></li><li class="text-sm"><a href="https://www.pinterest.com/mertsuha/survivor-concept-art/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. 170 Survivor Concept Art ideas | character design ...</a></li><li class="text-sm"><a href="https://www.pinterest.com/ideas/post-apocalyptic-community/920653830271/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. Post Apocalyptic Community</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="50.91">50.91秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="84,581">84,581</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:artstation.com post-apocalyptic wasteland gallery
+2. site:artstation.com/artwork post-apocalyptic wasteland
+3. site:pinterest.com post-apocalyptic wasteland board gallery">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:artstation.com post-apocalyptic wasteland gallery</li><li class="text-sm text-gray-600">2. site:artstation.com/artwork post-apocalyptic wasteland</li><li class="text-sm text-gray-600">3. site:pinterest.com post-apocalyptic wasteland board gallery</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are several primary-source visual galleries showcasing rich, desolate post-apocalyptic wasteland scenes—abandoned structures, rusted machinery, dust-choked skies, improvised vehicles, and survivor encampments:
+
+• Pinterest “Wasteland” board by A2 (208 Pins)  
+  A curated collection of 208 pins featuring moody concept art and photography of crumbling cityscapes, sand-blasted ruins, overgrown highways, and weathered vehicles.  
+  https://www.pinterest.com/ultimate_a2/wasteland/ ([pinterest.com](https://www.pinterest.com/ultimate_a2/wasteland/))
+
+• Pinterest “wasteland project” board by James Jackson (174 Pins)  
+  A visual sketchbook of 174 pins: Mad Max–inspired process paintings, survivor portraits, scavenged armaments, and ramshackle campsites set against orange-hued dunes.  
+  https://uk.pinterest.com/jajbfc/wasteland-project/ ([uk.pinterest.com](https://uk.pinterest.com/jajbfc/wasteland-project/))
+
+• ArtStation project “Desert Wasteland City Exterior Concept” by Brandon Liu  
+  A detailed environment concept gallery showing a post-collapse city built from scavenged pipes, power lines, and corrugated metal—complete with mood boards, thumbnails, and full-scene renders.  
+  https://brands.artstation.com/projects/1n5PYZ ([brands.artstation.com](https://brands.artstation.com/projects/1n5PYZ?utm_source=chatgpt.com))
+
+• DeviantArt deviation “Post-apocalyptic wasteland” by AKSouLMakeR  
+  A standalone 3D Blender render depicting a lone soldier traversing a dust-ridden industrial ruin, with rust-pitted structures and swirling sandstorms.  
+  https://www.deviantart.com/aksoulmaker/art/Post-apocalyptic-wasteland-969929199 ([deviantart.com](https://www.deviantart.com/aksoulmaker/art/Post-apocalyptic-wasteland-969929199?utm_source=chatgpt.com))
+
+• Dribbble “post_apocalyptic” tag page (180+ shots)  
+  A live feed of over 180 designers’ shots: illustrations of fortified survivor camps, retro-futuristic vehicles, grimy interiors, and storm-tossed exteriors.  
+  https://dribbble.com/tags/post_apocalyptic ([dribbble.com](https://dribbble.com/tags/post_apocalyptic?utm_source=chatgpt.com))
+
+• Behance gallery “Wasteland” by gross masha  
+  A hand-drawn pencil and colored-pencil piece capturing a deserted field of electric towers, half-buried structures, and encroaching sands—ideal for atmosphere studies.  
+  https://www.behance.net/gallery/111625755/Wasteland ([behance.net](https://www.behance.net/gallery/111625755/Wasteland?utm_source=chatgpt.com))
+
+• ArtStation gallery “Post-apocalyptic wasteland fantasy concept art 8”  
+  A project page showcasing multiple high-detail fantasy-leaning wasteland scenes: ruined temples, mutated flora, and survivor strongholds under stormy skies.  
+  https://www.artstation.com/artwork/QXgdGd ([artstation.com](https://www.artstation.com/artwork/QXgdGd))
+
+These galleries provide direct visual inspiration—no intermediary articles—covering the full spectrum of abandoned architecture, rusted metal, sandstorms, jury-rigged vehicles, and makeshift camps. Enjoy exploring these primary sources!">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are several primary-source visual galleries showcasing rich, desolate post-apocalyptic wasteland scenes—abandoned structures, rusted machinery, dust-choked skies, improvised vehicles, and survivor encampments:
+
+• Pinterest “Wasteland” board by A2 (208 Pins)  
+  A curated collection of 208 pins featuring moody concept art and photography of crumbling cityscapes, sand-blasted ruins, overgrown highways, and weathered vehicles.  
+  https://www.pinterest.com/ultimate_a2/wasteland/ ([pinterest.com](https://www.pinterest.com/ultimate_a2/wasteland/))
+
+• Pinterest “wasteland project” board by James Jackson (174 Pins)  
+  A visual sketchbook of 174 pins: Mad Max–inspired process paintings, survivor portraits, scavenged armaments, and ramshackle campsites set against orange-hued dunes.  
+  https://uk.pinterest.com/jajbfc/wasteland-project/ ([uk.pinterest.com](https://uk.pinterest.com/jajbfc/wasteland-project/))
+
+• ArtStation project “Desert Wasteland City Exterior Concept” by Brandon Liu  
+  A detailed environment concept gallery showing a post-collapse city built from scavenged pipes, power lines, and corrugated metal—complete with mood boards, thumbnails, and full-scene renders.  
+  https://brands.artstation.com/projects/1n5PYZ ([brands.artstation.com](https://brands.artstation.com/projects/1n5PYZ?utm_source=chatgpt.com))
+
+• DeviantArt deviation “Post-apocalyptic wasteland” by AKSouLMakeR  
+  A standalone 3D Blender render depicting a lone soldier traversing a dust-ridden industrial ruin, with rust-pitted structures and swirling sandstorms.  
+  https://www.deviantart.com/aksoulmaker/art/Post-apocalyptic-wasteland-969929199 ([deviantart.com](https://www.deviantart.com/aksoulmaker/art/Post-apocalyptic-wasteland-969929199?utm_source=chatgpt.com))
+
+• Dribbble “post_apocalyptic” tag page (180+ shots)  
+  A live feed of over 180 designers’ shots: illustrations of fortified survivor camps, retro-futuristic vehicles, grimy interiors, and storm-tossed exteriors.  
+  https://dribbble.com/tags/post_apocalyptic ([dribbble.com](https://dribbble.com/tags/post_apocalyptic?utm_source=chatgpt.com))
+
+• Behance gallery “Wasteland” by gross masha  
+  A hand-drawn pencil and colored-pencil piece capturing a deserted field of electric towers, half-buried structures, and encroaching sands—ideal for atmosphere studies.  
+  https://www.behance.net/gallery/111625755/Wasteland ([behance.net](https://www.behance.net/gallery/111625755/Wasteland?utm_source=chatgpt.com))
+
+• ArtStation gallery “Post-apocalyptic wasteland fantasy concept art 8”  
+  A project page showcasing multiple high-detail fantasy-leaning wasteland scenes: ruined temples, mutated flora, and survivor strongholds under stormy skies.  
+  https://www.artstation.com/artwork/QXgdGd ([artstation.com](https://www.artstation.com/artwork/QXgdGd))
+
+These galleries provide direct visual inspiration—no intermediary articles—covering the full spectrum of abandoned architecture, rusted metal, sandstorms, jury-rigged vehicles, and makeshift camps. Enjoy exploring these primary sources!</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. 200 Wasteland ideas | concept art, post apocalyptic art, post apocalypse (https://www.pinterest.com/ultimate_a2/wasteland/)
+2. 170 Wasteland project ideas | concept art, post apocalyptic art, post apocalypse (https://uk.pinterest.com/jajbfc/wasteland-project/)
+3. Brandon Liu - Desert Wasteland City Exterior Concept (https://brands.artstation.com/projects/1n5PYZ?utm_source=chatgpt.com)
+4. Post-apocalyptic wasteland by AKSouLMakeR on DeviantArt (https://www.deviantart.com/aksoulmaker/art/Post-apocalyptic-wasteland-969929199?utm_source=chatgpt.com)
+5. Post Apocalyptic designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/post_apocalyptic?utm_source=chatgpt.com)
+6. Wasteland :: Behance (https://www.behance.net/gallery/111625755/Wasteland?utm_source=chatgpt.com)
+7. ArtStation - Post-apocalyptic wasteland fantasy concept art 8 (https://www.artstation.com/artwork/QXgdGd)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.pinterest.com/ultimate_a2/wasteland/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. 200 Wasteland ideas | concept art, post apocalyptic art, post apocalypse</a></li><li class="text-sm"><a href="https://uk.pinterest.com/jajbfc/wasteland-project/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. 170 Wasteland project ideas | concept art, post apocalyptic art, post apocalypse</a></li><li class="text-sm"><a href="https://brands.artstation.com/projects/1n5PYZ?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Brandon Liu - Desert Wasteland City Exterior Concept</a></li><li class="text-sm"><a href="https://www.deviantart.com/aksoulmaker/art/Post-apocalyptic-wasteland-969929199?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Post-apocalyptic wasteland by AKSouLMakeR on DeviantArt</a></li><li class="text-sm"><a href="https://dribbble.com/tags/post_apocalyptic?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Post Apocalyptic designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/111625755/Wasteland?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Wasteland :: Behance</a></li><li class="text-sm"><a href="https://www.artstation.com/artwork/QXgdGd" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. ArtStation - Post-apocalyptic wasteland fantasy concept art 8</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
