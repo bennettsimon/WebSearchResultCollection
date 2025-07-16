@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about cyberpunk-style sci-fi movie poster designs that feature neon color palettes, glitch art effects, and futuristic typography. The search should focus on professional movie poster portfolios, particularly conceptual posters created by independent designers for science fiction themes.">The user is asking about cyberpunk-style sci-fi movie poster designs that feature neon color palettes, glitch art effects, and futuristic typography. The search should focus on professional movie poster portfolios, particularly conceptual posters created by independent designers for science fiction themes.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 17:01:47</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="12.04">12.04秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="851">851</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. cyberpunk movie poster design portfolio
+2. sci-fi conceptual poster design neon glitch typography
+3. independent movie poster designers cyberpunk
+4. futuristic movie poster design styles">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. cyberpunk movie poster design portfolio</li><li class="text-sm text-gray-600">2. sci-fi conceptual poster design neon glitch typography</li><li class="text-sm text-gray-600">3. independent movie poster designers cyberpunk</li><li class="text-sm text-gray-600">4. futuristic movie poster design styles</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Cyberpunk and sci-fi movie poster designs frequently showcase distinct visual characteristics, including vibrant neon color palettes, dynamic glitch art effects, and futuristic typography. These elements work together to evoke the dystopian, high-tech, and often gritty aesthetic central to the genre.
+
+Professional and independent designers often utilize these techniques in their conceptual movie poster portfolios. For instance, "Neon Action Movie Posters" are described as drawing heavily from cyberpunk and sci-fi, incorporating "glowing blues and electric pinks, high contrast, and movement-focused compositions" with "slanted lines, motion blur effects, and bold, extended typefaces" to amplify energy. Similarly, "Retro Sci-Fi Movie Posters" employ grainy textures, faded color blocks, vintage typefaces, and geometric shapes to evoke classic space adventure designs.
+
+Many resources for designers highlight these features. Collections of sci-fi movie poster effects often include "futuristic graphics and templates" with "dramatic visuals" and "futuristic typography design" that are reminiscent of films like *Blade Runner* and *2001: A Space Odyssey*. Design platforms also offer numerous templates and inspirations for cyberpunk posters, featuring "neon" and "futuristic" styles, often with abstract or geometric elements. The "Tetsuo" portfolio theme, for example, is described as having a "bold contemporary" and "overtly dark, futuristic aesthetic" with a reliance on imagery inspired by dystopian works and a color palette of neon and black. The typography in such designs is often kept simple in color (white or black for readability) while allowing the visuals to provide the vibrant, cyberpunk character.
+
+Glitch art effects are a significant component, with royalty-free images and stock photos featuring "sci fi glitch" often showing "distorted neon grid patterns and glowing shapes," "pixelated text," and "digital glitch overlay". These effects contribute to the sense of a technologically advanced yet potentially unstable or fragmented future. Futuristic typography is also prevalent, with examples including "glitch 3d text for tittle" and "neon glitch style" fonts, often bold and with double exposure effects. Platforms like Dribbble showcase "futuristic poster" designs that integrate "cyberpunk," "neon," and "sci-fi" elements, emphasizing bold and innovative typography.
+
+Independent designers specializing in movie posters, particularly for the indie market, often have portfolios that reflect these design trends, focusing on creating custom graphics that convey the film's mood and genre through compelling visuals. Some designers even share their processes for creating cyberpunk effects in design software, demonstrating the practical application of neon colors, glitch effects, and futuristic fonts.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Cyberpunk and sci-fi movie poster designs frequently showcase distinct visual characteristics, including vibrant neon color palettes, dynamic glitch art effects, and futuristic typography. These elements work together to evoke the dystopian, high-tech, and often gritty aesthetic central to the genre.
+
+Professional and independent designers often utilize these techniques in their conceptual movie poster portfolios. For instance, "Neon Action Movie Posters" are described as drawing heavily from cyberpunk and sci-fi, incorporating "glowing blues and electric pinks, high contrast, and movement-focused compositions" with "slanted lines, motion blur effects, and bold, extended typefaces" to amplify energy. Similarly, "Retro Sci-Fi Movie Posters" employ grainy textures, faded color blocks, vintage typefaces, and geometric shapes to evoke classic space adventure designs.
+
+Many resources for designers highlight these features. Collections of sci-fi movie poster effects often include "futuristic graphics and templates" with "dramatic visuals" and "futuristic typography design" that are reminiscent of films like *Blade Runner* and *2001: A Space Odyssey*. Design platforms also offer numerous templates and inspirations for cyberpunk posters, featuring "neon" and "futuristic" styles, often with abstract or geometric elements. The "Tetsuo" portfolio theme, for example, is described as having a "bold contemporary" and "overtly dark, futuristic aesthetic" with a reliance on imagery inspired by dystopian works and a color palette of neon and black. The typography in such designs is often kept simple in color (white or black for readability) while allowing the visuals to provide the vibrant, cyberpunk character.
+
+Glitch art effects are a significant component, with royalty-free images and stock photos featuring "sci fi glitch" often showing "distorted neon grid patterns and glowing shapes," "pixelated text," and "digital glitch overlay". These effects contribute to the sense of a technologically advanced yet potentially unstable or fragmented future. Futuristic typography is also prevalent, with examples including "glitch 3d text for tittle" and "neon glitch style" fonts, often bold and with double exposure effects. Platforms like Dribbble showcase "futuristic poster" designs that integrate "cyberpunk," "neon," and "sci-fi" elements, emphasizing bold and innovative typography.
+
+Independent designers specializing in movie posters, particularly for the indie market, often have portfolios that reflect these design trends, focusing on creating custom graphics that convey the film's mood and genre through compelling visuals. Some designers even share their processes for creating cyberpunk effects in design software, demonstrating the practical application of neon colors, glitch effects, and futuristic fonts.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. designshack.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbuOkRa5Sqj18Q83t3kbMEMM8j9KIVMxmkK_kqsdbk-X0fEp4zpzNPYo2HW26U482uB65_9iusLd89DTH2bxo-KhcamCSc2MytHCQfxim83w8c5iKHSkk0dYAW-oSX3daj89lp9V2b3lhSMEmJxJHrBP7iaNME9Do=)
+2. supply.family (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2aagnLF6GTUXV4DSo1btQRE_s6e9t6AcfaWvfzWCJGGKSZy-pOOmGXpTHM6eAkyuSVytBzrjKfWnNhQTsrnKvzuQHkcUVsaf_sWuRLGRLSKR4QzbGw833JyLaRoWtqfObRX4S6O40AhhW1b2bSJXjCihl)
+3. postermywall.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGO4cPjOM1iBnJHbpo8X6ny5tW4NsPyYkPaF6drNwyNmZlUPhTCISLHvVOcf19VeNtCW7alWwk6H-ILaKSSdY0gwdZies3SlHolV49dm604PwQz7cEmXeuygXeuFHciGUFvSikc6eNTgIrZcPf8bRD0Xmx13Y6Zwvlw718us17t76Cwoonw5Wf6XmKrYw==)
+4. playground.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwPNlT1V3iod8mMcDh8Avgota3M1OoCiFupdf0n8W3Vf29g46KQE_sl1tqFu7Z3YJDEoDduAEYxkFdgB3DE13awSHmSeBfWEHFYEzFLyPm_V6TVx1jXRFwpVmRJNKPlG_QHhmvYtcJK1A2nVfSbUZUcmBv)
+5. qodeinteractive.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgIObc2nJigmkcOTBfMqyHSXyFklRL7Q7hAoYCSqs4Z-pXM0blVDWnYfmYp3ma7H3PgVPhs_LQSiN6N-0fvNPa2fqR1e7arPztBWWR8PxZ9YrhOzYih5FCNXfq0puc1_Sq4t6ilEleAvTE29yqXAQW04k=)
+6. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdCaUiqlqs1BItHQfQ8DwVPCLx2bjVqCwuhxAiwVBwpuHBMtZPuXVtmkRlkS-1Ii_bjOFphZdnMb0MGA98sCrStmCI-RDAi3bDQdR4hBW5Lj_hRVb_Uj8NJWXbHyMoHpmww1WA4LuzIxaQcLs=)
+7. redbubble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwwv3Z8-kDgmvZbt_9K51-oCos3zMi8z5bSpL5XErnR34UJ8LPW0bnF81k2QEOcw9fYXEReBUKWD8ybJC7QNnBs9-TOM2Kkd9XdXB-BjHkQlawVK-VMMfSaZQYRwyUCi4xL6PYtoYuUSr4OTSxr0EVcQM90g==)
+8. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6Y86khmNPNgTBoWMNIM1baGOLROFaqYZBvnvQ2OFY5eN8Ng2jz5NHAyJOZf58t_AD_9zP6j5L5UJbkdY-I-VWBRT50oBD3KInYizW6V6ycMJCh3nSNT6M7-fBNmnG8FkckDTNAQO4FJkzXuzZlIMwMT-h6wHOIZuQXdaSFSqpaghn)
+9. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeZ3f0MpKevcaZu3E2Jg4nPB8Q-m1s-vcG0cqUyy6oGCIRD8wp2TuxGNDBDbre8NO-X7PmJirWW2zzdAkfdofLFOCUFiST8J7cptrIj4xkdoxw1vKuNBl_CxqV_tvjTrUlBIwh0dZH5BjNJxeI1tSqox3z17kjpZD7dTg0E8GD1XG_NdC1lz104k0dq5A9qcQ-9hl6oLkf6QeQSihPHS-fSEQBZW0SnNaSon06)
+10. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj9dMhx1HoPqnIZwSZwc-BD21kgidImcYntUnCPsDRR4oC_XRvJO5yMSf4cWly7KEClo8mWe54LSebaHrUsLs23wElU5PvjhXiQfwHOsMoz54sxgnaNk8YEWxqNtc10CUfYUcMW9G-hg==)
+11. getcovers.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKMT5004e-ahIMu13V5ee2Svh2CmPesURdIctDFXTaa6SNP_16TbiTgMq0IN5CgZAvCkjZJwKRRCen1HgrPXzNTbBk2W8mrBjDvXKxubbUtJWa1QN_FVRmhAhDjRBrIHdWStS34Bg4rstm3g==)
+12. referfolk.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd9N9S2NvOLRXRiggFjVepkZl7nDfBJPPtB184-5Lb9tni-AIhx-pz3ckHyopBO51S4aA8WYLwW4WR86U0yXO6lUiJuny0mtRYTkUDuV4ZPhZJZepRu3DBR2ZFBM_LmnuzsXUWH9uYTCOAnatE2huyYfkv)
+13. strelka.co.uk (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEeskB5Pj1sVcM7eIOUUVNHpNPOOuCmnaVB3NUToBtg4Av8A5wopl-ORio9S3OttDbU-23eD62-f1E8G1ssMRHjdIL4CFvj2d2aZxLuyyNn_CvDgytQV6PYmXCXjLvsGDcNalXirm_DEydvYCWBpSkeJeMxVLGwK4N5INdgT1KYn82yPmsICMG)
+14. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6l9QKK1JQMMbvKEBmGg93pSuWq0-O5xXXAFWf3aOqNw0V6mhYnu2BwNlr61HqB_9orFZR8i0Bkyy4v_IRhMXpiaQs0sNt7otten9ILF-t2LE4iidzid9qgf5eBqc8w1rOhjZ_q3g=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbuOkRa5Sqj18Q83t3kbMEMM8j9KIVMxmkK_kqsdbk-X0fEp4zpzNPYo2HW26U482uB65_9iusLd89DTH2bxo-KhcamCSc2MytHCQfxim83w8c5iKHSkk0dYAW-oSX3daj89lp9V2b3lhSMEmJxJHrBP7iaNME9Do=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. designshack.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2aagnLF6GTUXV4DSo1btQRE_s6e9t6AcfaWvfzWCJGGKSZy-pOOmGXpTHM6eAkyuSVytBzrjKfWnNhQTsrnKvzuQHkcUVsaf_sWuRLGRLSKR4QzbGw833JyLaRoWtqfObRX4S6O40AhhW1b2bSJXjCihl" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. supply.family</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGO4cPjOM1iBnJHbpo8X6ny5tW4NsPyYkPaF6drNwyNmZlUPhTCISLHvVOcf19VeNtCW7alWwk6H-ILaKSSdY0gwdZies3SlHolV49dm604PwQz7cEmXeuygXeuFHciGUFvSikc6eNTgIrZcPf8bRD0Xmx13Y6Zwvlw718us17t76Cwoonw5Wf6XmKrYw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. postermywall.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwPNlT1V3iod8mMcDh8Avgota3M1OoCiFupdf0n8W3Vf29g46KQE_sl1tqFu7Z3YJDEoDduAEYxkFdgB3DE13awSHmSeBfWEHFYEzFLyPm_V6TVx1jXRFwpVmRJNKPlG_QHhmvYtcJK1A2nVfSbUZUcmBv" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. playground.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgIObc2nJigmkcOTBfMqyHSXyFklRL7Q7hAoYCSqs4Z-pXM0blVDWnYfmYp3ma7H3PgVPhs_LQSiN6N-0fvNPa2fqR1e7arPztBWWR8PxZ9YrhOzYih5FCNXfq0puc1_Sq4t6ilEleAvTE29yqXAQW04k=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. qodeinteractive.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdCaUiqlqs1BItHQfQ8DwVPCLx2bjVqCwuhxAiwVBwpuHBMtZPuXVtmkRlkS-1Ii_bjOFphZdnMb0MGA98sCrStmCI-RDAi3bDQdR4hBW5Lj_hRVb_Uj8NJWXbHyMoHpmww1WA4LuzIxaQcLs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwwv3Z8-kDgmvZbt_9K51-oCos3zMi8z5bSpL5XErnR34UJ8LPW0bnF81k2QEOcw9fYXEReBUKWD8ybJC7QNnBs9-TOM2Kkd9XdXB-BjHkQlawVK-VMMfSaZQYRwyUCi4xL6PYtoYuUSr4OTSxr0EVcQM90g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. redbubble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6Y86khmNPNgTBoWMNIM1baGOLROFaqYZBvnvQ2OFY5eN8Ng2jz5NHAyJOZf58t_AD_9zP6j5L5UJbkdY-I-VWBRT50oBD3KInYizW6V6ycMJCh3nSNT6M7-fBNmnG8FkckDTNAQO4FJkzXuzZlIMwMT-h6wHOIZuQXdaSFSqpaghn" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeZ3f0MpKevcaZu3E2Jg4nPB8Q-m1s-vcG0cqUyy6oGCIRD8wp2TuxGNDBDbre8NO-X7PmJirWW2zzdAkfdofLFOCUFiST8J7cptrIj4xkdoxw1vKuNBl_CxqV_tvjTrUlBIwh0dZH5BjNJxeI1tSqox3z17kjpZD7dTg0E8GD1XG_NdC1lz104k0dq5A9qcQ-9hl6oLkf6QeQSihPHS-fSEQBZW0SnNaSon06" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj9dMhx1HoPqnIZwSZwc-BD21kgidImcYntUnCPsDRR4oC_XRvJO5yMSf4cWly7KEClo8mWe54LSebaHrUsLs23wElU5PvjhXiQfwHOsMoz54sxgnaNk8YEWxqNtc10CUfYUcMW9G-hg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKMT5004e-ahIMu13V5ee2Svh2CmPesURdIctDFXTaa6SNP_16TbiTgMq0IN5CgZAvCkjZJwKRRCen1HgrPXzNTbBk2W8mrBjDvXKxubbUtJWa1QN_FVRmhAhDjRBrIHdWStS34Bg4rstm3g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. getcovers.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd9N9S2NvOLRXRiggFjVepkZl7nDfBJPPtB184-5Lb9tni-AIhx-pz3ckHyopBO51S4aA8WYLwW4WR86U0yXO6lUiJuny0mtRYTkUDuV4ZPhZJZepRu3DBR2ZFBM_LmnuzsXUWH9uYTCOAnatE2huyYfkv" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. referfolk.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEeskB5Pj1sVcM7eIOUUVNHpNPOOuCmnaVB3NUToBtg4Av8A5wopl-ORio9S3OttDbU-23eD62-f1E8G1ssMRHjdIL4CFvj2d2aZxLuyyNn_CvDgytQV6PYmXCXjLvsGDcNalXirm_DEydvYCWBpSkeJeMxVLGwK4N5INdgT1KYn82yPmsICMG" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. strelka.co.uk</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6l9QKK1JQMMbvKEBmGg93pSuWq0-O5xXXAFWf3aOqNw0V6mhYnu2BwNlr61HqB_9orFZR8i0Bkyy4v_IRhMXpiaQs0sNt7otten9ILF-t2LE4iidzid9qgf5eBqc8w1rOhjZ_q3g=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. youtube.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="41.54">41.54秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="50,636">50,636</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. cyberpunk movie poster design site:behance.net
+2. sci-fi movie poster design neon glitch site:dribbble.com
+3. cyberpunk movie poster glitch typography portfolio
+4. "Alternative Movie Posters" cyberpunk sci-fi">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. cyberpunk movie poster design site:behance.net</li><li class="text-sm text-gray-600">2. sci-fi movie poster design neon glitch site:dribbble.com</li><li class="text-sm text-gray-600">3. cyberpunk movie poster glitch typography portfolio</li><li class="text-sm text-gray-600">4. "Alternative Movie Posters" cyberpunk sci-fi</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for actual cyberpunk movie poster design portfolios and galleries that showcase this specific style.Based on my search results, here are the best visual galleries and portfolios showcasing cyberpunk-style sci-fi movie poster designs with neon colors, glitch effects, and futuristic typography:
+
+## **Professional Portfolio Galleries**
+
+### **Behance - Cyberpunk Movie Posters**
+Multiple specific Behance gallery projects featuring cyberpunk movie poster designs, including:
+- **Cyberpunk 2077 Poster** gallery
+- **Cyberpunk 2077 Poster Posse Passion Project** 
+- **Cyberpunk Edgerunners Poster Design**
+- **Cyberpunk 2077 Gangs Posters**
+- **Cyberpunk: Edgerunners Poster Series**
+
+### **Dribbble - Sci-Fi & Neon Poster Collections**
+Dribbble hosts collections of sci-fi movie poster designs, sci-fi poster designs, and neon poster designs, with specific projects like "Science Fiction Movie Posters" and futuristic typography designs.
+
+### **Alternative Movie Posters (AMP)**
+The world's largest repository of alternative film art featuring thousands of alternative movie posters by artists from around the world. Their Cyberpunk 2077 section includes works by artists like Grandmaster Hanzo, Mauro Mason, and Lucas Tetrault.
+
+## **Visual Content Showcasing Key Elements**
+
+### **Glitch Art & Cyberpunk Effects**
+RedBubble features extensive collections of cyberpunk glitch art, futuristic abstract designs, and colorful cyberpunk artwork, with specific glitch art posters incorporating cyberpunk themes, VR virtual reality elements, and synthwave aesthetics.
+
+### **Neon Color Palettes & Typography**
+Visual galleries showcase neon glow aesthetics, cyberpunk vaporwave designs, neon street photography, and Tokyo-inspired cyberpunk imagery. Futuristic typography designs specifically for movie posters, with bronze fonts perfect for technology and sci-fi themed designs.
+
+### **Independent Designer Portfolios**
+Poster Posse showcases alternative movie posters for sci-fi films, including tributes to classic sci-fi and neo-noir cyberpunk universes. We Have Your Prints offers signed, limited edition alternative movie posters with striking sci-fi artwork.
+
+## **Specialized Collections**
+
+### **Cyberpunk 2077 & Edgerunners Artwork**
+Official licensed Cyberpunk 2077 posters featuring V, Night City, and the futuristic cyberpunk world, along with fan art collections featuring characters like Lucy from Edgerunners and Goro Takemura.
+
+### **Classic Sci-Fi Reimagined**
+Alternative poster designs that strip back complex sci-fi films like Blade Runner to simpler, more playful designs while maintaining the sinister cyberpunk elements.
+
+These galleries provide direct access to professional portfolios and visual showcases rather than articles about design resources, giving you immediate inspiration for cyberpunk movie poster aesthetics with the specific neon, glitch, and futuristic typography elements you">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for actual cyberpunk movie poster design portfolios and galleries that showcase this specific style.Based on my search results, here are the best visual galleries and portfolios showcasing cyberpunk-style sci-fi movie poster designs with neon colors, glitch effects, and futuristic typography:
+
+## **Professional Portfolio Galleries**
+
+### **Behance - Cyberpunk Movie Posters**
+Multiple specific Behance gallery projects featuring cyberpunk movie poster designs, including:
+- **Cyberpunk 2077 Poster** gallery
+- **Cyberpunk 2077 Poster Posse Passion Project** 
+- **Cyberpunk Edgerunners Poster Design**
+- **Cyberpunk 2077 Gangs Posters**
+- **Cyberpunk: Edgerunners Poster Series**
+
+### **Dribbble - Sci-Fi & Neon Poster Collections**
+Dribbble hosts collections of sci-fi movie poster designs, sci-fi poster designs, and neon poster designs, with specific projects like "Science Fiction Movie Posters" and futuristic typography designs.
+
+### **Alternative Movie Posters (AMP)**
+The world's largest repository of alternative film art featuring thousands of alternative movie posters by artists from around the world. Their Cyberpunk 2077 section includes works by artists like Grandmaster Hanzo, Mauro Mason, and Lucas Tetrault.
+
+## **Visual Content Showcasing Key Elements**
+
+### **Glitch Art & Cyberpunk Effects**
+RedBubble features extensive collections of cyberpunk glitch art, futuristic abstract designs, and colorful cyberpunk artwork, with specific glitch art posters incorporating cyberpunk themes, VR virtual reality elements, and synthwave aesthetics.
+
+### **Neon Color Palettes & Typography**
+Visual galleries showcase neon glow aesthetics, cyberpunk vaporwave designs, neon street photography, and Tokyo-inspired cyberpunk imagery. Futuristic typography designs specifically for movie posters, with bronze fonts perfect for technology and sci-fi themed designs.
+
+### **Independent Designer Portfolios**
+Poster Posse showcases alternative movie posters for sci-fi films, including tributes to classic sci-fi and neo-noir cyberpunk universes. We Have Your Prints offers signed, limited edition alternative movie posters with striking sci-fi artwork.
+
+## **Specialized Collections**
+
+### **Cyberpunk 2077 & Edgerunners Artwork**
+Official licensed Cyberpunk 2077 posters featuring V, Night City, and the futuristic cyberpunk world, along with fan art collections featuring characters like Lucy from Edgerunners and Goro Takemura.
+
+### **Classic Sci-Fi Reimagined**
+Alternative poster designs that strip back complex sci-fi films like Blade Runner to simpler, more playful designs while maintaining the sinister cyberpunk elements.
+
+These galleries provide direct access to professional portfolios and visual showcases rather than articles about design resources, giving you immediate inspiration for cyberpunk movie poster aesthetics with the specific neon, glitch, and futuristic typography elements you</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Cyberpunk 2077 poster (https://www.behance.net/gallery/109185507/Cyberpunk-2077-poster)
+2. Cyberpunk 2077 Poster Posse Passion Project (https://www.behance.net/gallery/109483969/Cyberpunk-2077-Poster-Posse-Passion-Project?locale=en_US)
+3. Cyberpunk edgerunners poster design (https://www.behance.net/gallery/170012739/Cyberpunk-edgerunners-poster-design)
+4. Cyberpunk 2077 gangs posters (https://www.behance.net/gallery/116479907/Cyberpunk-2077-gangs-posters)
+5. Cyberpunk: Edgerunners Poster Series (https://www.behance.net/gallery/200085607/Cyberpunk-Edgerunners-Poster-Series?locale=en_US)
+6. Science Fiction Movie Posters by parisa on Dribbble (https://dribbble.com/shots/24063595-Science-Fiction-Movie-Posters)
+7. Neon Poster designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/neon-poster)
+8. Sci Fi Movie Illustration designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/sci-fi_movie_illustration)
+9. Sci Fi Bronze – Futuristic And Display Typeface by FypeCo on Dribbble (https://dribbble.com/shots/9518695-Sci-Fi-Bronze-Futuristic-And-Display-Typeface)
+10. Sci Fi Poster designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/sci-fi_poster)
+11. alternative movie posters | MEOKCA x Poster Posse (https://www.posterposse.com/tag/alternative-movie-posters/)
+12. Cyberpunk Poster Vector Art, Icons, and Graphics for Free Download (https://www.vecteezy.com/free-vector/cyberpunk-poster)
+13. Cyberpunk 2077 - Alternative Movie Posters (https://alternativemovieposters.com/portfolio_tags/cyberpunk-2077/)
+14. Alternative Movie Posters (https://it.pinterest.com/giampaolo_m/alternative-movie-posters/)
+15. Cyberpunk Poster (https://www.pinterest.com/ideas/cyberpunk-poster/910055558001/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/109185507/Cyberpunk-2077-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Cyberpunk 2077 poster</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/109483969/Cyberpunk-2077-Poster-Posse-Passion-Project?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Cyberpunk 2077 Poster Posse Passion Project</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/170012739/Cyberpunk-edgerunners-poster-design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Cyberpunk edgerunners poster design</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/116479907/Cyberpunk-2077-gangs-posters" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Cyberpunk 2077 gangs posters</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/200085607/Cyberpunk-Edgerunners-Poster-Series?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Cyberpunk: Edgerunners Poster Series</a></li><li class="text-sm"><a href="https://dribbble.com/shots/24063595-Science-Fiction-Movie-Posters" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Science Fiction Movie Posters by parisa on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/neon-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Neon Poster designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/sci-fi_movie_illustration" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Sci Fi Movie Illustration designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/9518695-Sci-Fi-Bronze-Futuristic-And-Display-Typeface" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Sci Fi Bronze – Futuristic And Display Typeface by FypeCo on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/sci-fi_poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Sci Fi Poster designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.posterposse.com/tag/alternative-movie-posters/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. alternative movie posters | MEOKCA x Poster Posse</a></li><li class="text-sm"><a href="https://www.vecteezy.com/free-vector/cyberpunk-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Cyberpunk Poster Vector Art, Icons, and Graphics for Free Download</a></li><li class="text-sm"><a href="https://alternativemovieposters.com/portfolio_tags/cyberpunk-2077/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. Cyberpunk 2077 - Alternative Movie Posters</a></li><li class="text-sm"><a href="https://it.pinterest.com/giampaolo_m/alternative-movie-posters/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. Alternative Movie Posters</a></li><li class="text-sm"><a href="https://www.pinterest.com/ideas/cyberpunk-poster/910055558001/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. Cyberpunk Poster</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="49.27">49.27秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="99,821">99,821</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. cyberpunk sci-fi movie poster neon glitch site:behance.net
+2. site:dribbble.com/shots cyberpunk movie poster neon glitch
+3. site:behance.net cyberpunk poster project neon glitch sci-fi
+4. independent designer cyberpunk movie poster behance portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. cyberpunk sci-fi movie poster neon glitch site:behance.net</li><li class="text-sm text-gray-600">2. site:dribbble.com/shots cyberpunk movie poster neon glitch</li><li class="text-sm text-gray-600">3. site:behance.net cyberpunk poster project neon glitch sci-fi</li><li class="text-sm text-gray-600">4. independent designer cyberpunk movie poster behance portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are several primary-source portfolios and project galleries featuring independent designers’ cyberpunk-style sci-fi poster work—each showcases neon palettes, glitch art treatments, and futuristic typographic elements:
+
+• Thomas Halse – “Cyberpunk 2077 movie poster” on Behance: A conceptual movie-poster treatment inspired by the upcoming Cyberpunk 2077 game, this project employs vivid neon color blocks, layered glitch textures, and bold, angular type to evoke a dystopian future cityscape.  
+  behance.net/gallery/99298185/Cyberpunk-2077-movie-poster ([behance.net](https://www.behance.net/gallery/99298185/Cyberpunk-2077-movie-poster?utm_source=chatgpt.com))
+
+• Anja Nedeljkovic Jocovic – “Cyberpunk Poster” on Dribbble: A standalone poster shot featuring intense pink and blue neon glows, digital distortion overlays, and sleek, sci-fi typography—perfect as a conceptual film key art piece.  
+  dribbble.com/shots/10843535-Cyberpunk-Poster ([dribbble.com](https://dribbble.com/shots/10843535-Cyberpunk-Poster?utm_source=chatgpt.com))
+
+• Gennady Inkedx – “Cyberpunk Poster Design” on Dribbble: This shot highlights glitch-style screen artifacts, neon gradient backgrounds, and futuristic sans-serif lettering arranged in a dynamic, asymmetrical layout.  
+  dribbble.com/shots/25578767-Cyberpunk-Poster-Design ([dribbble.com](https://dribbble.com/shots/25578767-Cyberpunk-Poster-Design?utm_source=chatgpt.com))
+
+• Maria Semelevich – “Source Code” on ArtStation: A full project gallery demonstrating a high-tech cyberpunk artwork, combining Cinema 4D–generated textures, After Effects glitch sequences, neon accent lighting, and custom sci-fi typographic treatments—ideal for a conceptual movie poster.  
+  mariasemelevich.artstation.com/projects/gJ4AZP ([mariasemelevich.artstation.com](https://mariasemelevich.artstation.com/projects/gJ4AZP?utm_source=chatgpt.com))
+
+• Ibrahim Hamdi – “2021 Cyberpunk Edition Poster” on Dribbble: A self-initiated poster concept using hot-pink and electric-blue neon gradients, pixel-sorting glitch effects, and bold, monospaced futuristic type, capturing a retro-futuristic sci-fi mood.  
+  dribbble.com/shots/14950964-2021-Cyberpunk-Edition-Poster ([dribbble.com](https://dribbble.com/shots/14950964-2021-Cyberpunk-Edition-Poster?utm_source=chatgpt.com))
+
+These links lead directly to the designers’ own project galleries—showcasing professional, conceptual sci-fi poster designs with neon palettes, glitch art aesthetics, and forward-looking typography.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are several primary-source portfolios and project galleries featuring independent designers’ cyberpunk-style sci-fi poster work—each showcases neon palettes, glitch art treatments, and futuristic typographic elements:
+
+• Thomas Halse – “Cyberpunk 2077 movie poster” on Behance: A conceptual movie-poster treatment inspired by the upcoming Cyberpunk 2077 game, this project employs vivid neon color blocks, layered glitch textures, and bold, angular type to evoke a dystopian future cityscape.  
+  behance.net/gallery/99298185/Cyberpunk-2077-movie-poster ([behance.net](https://www.behance.net/gallery/99298185/Cyberpunk-2077-movie-poster?utm_source=chatgpt.com))
+
+• Anja Nedeljkovic Jocovic – “Cyberpunk Poster” on Dribbble: A standalone poster shot featuring intense pink and blue neon glows, digital distortion overlays, and sleek, sci-fi typography—perfect as a conceptual film key art piece.  
+  dribbble.com/shots/10843535-Cyberpunk-Poster ([dribbble.com](https://dribbble.com/shots/10843535-Cyberpunk-Poster?utm_source=chatgpt.com))
+
+• Gennady Inkedx – “Cyberpunk Poster Design” on Dribbble: This shot highlights glitch-style screen artifacts, neon gradient backgrounds, and futuristic sans-serif lettering arranged in a dynamic, asymmetrical layout.  
+  dribbble.com/shots/25578767-Cyberpunk-Poster-Design ([dribbble.com](https://dribbble.com/shots/25578767-Cyberpunk-Poster-Design?utm_source=chatgpt.com))
+
+• Maria Semelevich – “Source Code” on ArtStation: A full project gallery demonstrating a high-tech cyberpunk artwork, combining Cinema 4D–generated textures, After Effects glitch sequences, neon accent lighting, and custom sci-fi typographic treatments—ideal for a conceptual movie poster.  
+  mariasemelevich.artstation.com/projects/gJ4AZP ([mariasemelevich.artstation.com](https://mariasemelevich.artstation.com/projects/gJ4AZP?utm_source=chatgpt.com))
+
+• Ibrahim Hamdi – “2021 Cyberpunk Edition Poster” on Dribbble: A self-initiated poster concept using hot-pink and electric-blue neon gradients, pixel-sorting glitch effects, and bold, monospaced futuristic type, capturing a retro-futuristic sci-fi mood.  
+  dribbble.com/shots/14950964-2021-Cyberpunk-Edition-Poster ([dribbble.com](https://dribbble.com/shots/14950964-2021-Cyberpunk-Edition-Poster?utm_source=chatgpt.com))
+
+These links lead directly to the designers’ own project galleries—showcasing professional, conceptual sci-fi poster designs with neon palettes, glitch art aesthetics, and forward-looking typography.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Cyberpunk 2077 movie poster :: Behance (https://www.behance.net/gallery/99298185/Cyberpunk-2077-movie-poster?utm_source=chatgpt.com)
+2. Cyberpunk Poster by Anja Nedeljkovic Jocovic on Dribbble (https://dribbble.com/shots/10843535-Cyberpunk-Poster?utm_source=chatgpt.com)
+3. Cyberpunk Poster Design by Gennady Inkedx on Dribbble (https://dribbble.com/shots/25578767-Cyberpunk-Poster-Design?utm_source=chatgpt.com)
+4. Maria Semelevich - Source Code (https://mariasemelevich.artstation.com/projects/gJ4AZP?utm_source=chatgpt.com)
+5. 2021 Cyberpunk Edition Poster by Ibrahim Hamdi on Dribbble (https://dribbble.com/shots/14950964-2021-Cyberpunk-Edition-Poster?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/99298185/Cyberpunk-2077-movie-poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Cyberpunk 2077 movie poster :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/10843535-Cyberpunk-Poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Cyberpunk Poster by Anja Nedeljkovic Jocovic on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25578767-Cyberpunk-Poster-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Cyberpunk Poster Design by Gennady Inkedx on Dribbble</a></li><li class="text-sm"><a href="https://mariasemelevich.artstation.com/projects/gJ4AZP?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Maria Semelevich - Source Code</a></li><li class="text-sm"><a href="https://dribbble.com/shots/14950964-2021-Cyberpunk-Edition-Poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. 2021 Cyberpunk Edition Poster by Ibrahim Hamdi on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
