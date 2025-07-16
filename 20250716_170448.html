@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about tea brand visual designs that blend traditional Chinese elements with modern design language, including packaging, logos, and overall brand identity. The search should focus on tea brand cases that successfully balance Eastern aesthetics with contemporary design trends.">The user is asking about tea brand visual designs that blend traditional Chinese elements with modern design language, including packaging, logos, and overall brand identity. The search should focus on tea brand cases that successfully balance Eastern aesthetics with contemporary design trends.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 17:05:26</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="13.68">13.68秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,066">1,066</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Chinese tea brand modern design
+2. traditional Chinese elements contemporary tea packaging
+3. Eastern aesthetics modern tea branding
+4. fusion design Chinese tea brand">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Chinese tea brand modern design</li><li class="text-sm text-gray-600">2. traditional Chinese elements contemporary tea packaging</li><li class="text-sm text-gray-600">3. Eastern aesthetics modern tea branding</li><li class="text-sm text-gray-600">4. fusion design Chinese tea brand</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Several Chinese tea brands and design projects successfully blend traditional Chinese elements with modern design language in their visual identities, including packaging, logos, and overall brand aesthetics:
+
+**Brands and Projects Emphasizing Fusion:**
+
+*   **Shijian Chuxin Tea Packaging:** This design, a Golden A' Design Award winner, harmoniously blends traditional Chinese elements with contemporary aesthetics. It features meticulously crafted illustrations inspired by Guizhou's ecological tea gardens, including local wildlife and cultural motifs. The packaging utilizes premium white specialty paper with laser printing and gold hot-stamping for a luxurious finish, appealing to younger, design-conscious consumers.
+*   **Tea'stone:** Founded in 2018, Tea'stone is a "new-style tea" brand that blends traditional Eastern culture with modern and even Western elements. Their retail stores combine architectural features of the Tang Dynasty with modern minimalist design, featuring clean lights and wooden furniture, creating "instagrammable" spaces. They also innovate products, such as "mini champagne," serving jasmine tea in wine-vessel-like bottles, merging Western alcohol culture with Eastern tea culture.
+*   **tea-ed TEA (茶作):** This brand underwent a refresh to blend traditional Chinese tea culture with modern aesthetics. Their new brand identity features clean visuals, a versatile logo referencing tea leaves with simple lines, and a minimalist, monochrome color scheme for adaptability. The branding strategy focuses on a "fusion" concept to appeal to a contemporary audience.
+*   **Pek Sin Choon:** An older Singaporean tea merchant established in 1925, Pek Sin Choon has revamped its brand identity by combining nostalgic elements with modern design. They developed brand mascots that reflect their rich legacy and roots, translating traditional graphic elements and symbolic components into a cohesive visual style. This allows the brand to spread the legacy of Chinese tea making while appealing to modern consumers seeking authenticity. Their Heritage Portable Tea Brewing Set has received design awards.
+*   **Wang De Chuan:** Dating back to 1862, Wang De Chuan integrates traditional Chinese literati philosophy with modern design in their tea houses and branding. Their stores feature elegant and contemporary interiors that preserve the essence of a traditional tea shop, often incorporating black-ink vibrant-style calligraphy on a red background. They offer a modern concept of a tea house while providing a serene space for tea tasting.
+*   **The Soloist Tea Packaging by Li Dingding:** This award-winning packaging design embodies the fusion of traditional Chinese art and modern aesthetics. It creates a unique visual style through the combination of form and meaning, inspired by the simple and peaceful Zen in tea culture. The packaging uses classic jar forms with excellent texture art paper, precise spot color printing, and silver press processes for an elegant and introverted feel.
+*   **CHALI Chinese National Drink in Tang Dynasty Gift Box:** This teabag gift box draws inspiration from the Tang Dynasty mural "Golden Land and Green Landscape." The gift box structure references Chinese ancient books and incorporates a "blind box" element to enhance user experience. The teabag designs feature Tang Dynasty horse-riding ladies, creating a puzzle-like illustration on the front.
+*   **KṣaṇaCha - Deep Dive into Tea:** The packaging for this brand is inspired by traditional Chinese "Lu Ban Lock" and the "inch of brocade game." Each small package features a picture, and when viewed together, they create a "different scenery appears with each step" effect, reminiscent of walking through a traditional Chinese garden. The packaging also uses traditional Chinese colors with modern image processing methods and incorporates classical Chinese cultural graphics like seals and ruyi patterns.
+*   **PUYU Instant Tea Package Design:** This freeze-dried tea powder packaging combines modern aesthetics with an oriental aesthetic, presenting the shape of the tea as a landscape. The varying "vegetation" shapes of the tea capsules evoke a natural landscape, connecting the product to its origin.
+
+These examples showcase how Chinese tea brands are successfully navigating the balance between honoring their rich heritage and appealing to contemporary tastes through thoughtful visual design.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Several Chinese tea brands and design projects successfully blend traditional Chinese elements with modern design language in their visual identities, including packaging, logos, and overall brand aesthetics:
+
+**Brands and Projects Emphasizing Fusion:**
+
+*   **Shijian Chuxin Tea Packaging:** This design, a Golden A' Design Award winner, harmoniously blends traditional Chinese elements with contemporary aesthetics. It features meticulously crafted illustrations inspired by Guizhou's ecological tea gardens, including local wildlife and cultural motifs. The packaging utilizes premium white specialty paper with laser printing and gold hot-stamping for a luxurious finish, appealing to younger, design-conscious consumers.
+*   **Tea'stone:** Founded in 2018, Tea'stone is a "new-style tea" brand that blends traditional Eastern culture with modern and even Western elements. Their retail stores combine architectural features of the Tang Dynasty with modern minimalist design, featuring clean lights and wooden furniture, creating "instagrammable" spaces. They also innovate products, such as "mini champagne," serving jasmine tea in wine-vessel-like bottles, merging Western alcohol culture with Eastern tea culture.
+*   **tea-ed TEA (茶作):** This brand underwent a refresh to blend traditional Chinese tea culture with modern aesthetics. Their new brand identity features clean visuals, a versatile logo referencing tea leaves with simple lines, and a minimalist, monochrome color scheme for adaptability. The branding strategy focuses on a "fusion" concept to appeal to a contemporary audience.
+*   **Pek Sin Choon:** An older Singaporean tea merchant established in 1925, Pek Sin Choon has revamped its brand identity by combining nostalgic elements with modern design. They developed brand mascots that reflect their rich legacy and roots, translating traditional graphic elements and symbolic components into a cohesive visual style. This allows the brand to spread the legacy of Chinese tea making while appealing to modern consumers seeking authenticity. Their Heritage Portable Tea Brewing Set has received design awards.
+*   **Wang De Chuan:** Dating back to 1862, Wang De Chuan integrates traditional Chinese literati philosophy with modern design in their tea houses and branding. Their stores feature elegant and contemporary interiors that preserve the essence of a traditional tea shop, often incorporating black-ink vibrant-style calligraphy on a red background. They offer a modern concept of a tea house while providing a serene space for tea tasting.
+*   **The Soloist Tea Packaging by Li Dingding:** This award-winning packaging design embodies the fusion of traditional Chinese art and modern aesthetics. It creates a unique visual style through the combination of form and meaning, inspired by the simple and peaceful Zen in tea culture. The packaging uses classic jar forms with excellent texture art paper, precise spot color printing, and silver press processes for an elegant and introverted feel.
+*   **CHALI Chinese National Drink in Tang Dynasty Gift Box:** This teabag gift box draws inspiration from the Tang Dynasty mural "Golden Land and Green Landscape." The gift box structure references Chinese ancient books and incorporates a "blind box" element to enhance user experience. The teabag designs feature Tang Dynasty horse-riding ladies, creating a puzzle-like illustration on the front.
+*   **KṣaṇaCha - Deep Dive into Tea:** The packaging for this brand is inspired by traditional Chinese "Lu Ban Lock" and the "inch of brocade game." Each small package features a picture, and when viewed together, they create a "different scenery appears with each step" effect, reminiscent of walking through a traditional Chinese garden. The packaging also uses traditional Chinese colors with modern image processing methods and incorporates classical Chinese cultural graphics like seals and ruyi patterns.
+*   **PUYU Instant Tea Package Design:** This freeze-dried tea powder packaging combines modern aesthetics with an oriental aesthetic, presenting the shape of the tea as a landscape. The varying "vegetation" shapes of the tea capsules evoke a natural landscape, connecting the product to its origin.
+
+These examples showcase how Chinese tea brands are successfully navigating the balance between honoring their rich heritage and appealing to contemporary tastes through thoughtful visual design.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. design-encyclopedia.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFc9ghqLQ6OSazs87j-tZoU0oL8n3bcYjOmQUT759tJ7KHjfbm-IgL8nIcNE75UzMOGHBR0rkOy-XnWvjcL8gUFSufdnz_OSbS4Nor6dX_kj8VE4Q0yuaZsV5U-uWn2tsOcUKTZRcLcDQ==)
+2. daoinsights.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiextPAjg6xsMcHDaNom1-A3fEReEt_walmrXdAoMXzEu8e-eWTLCGgviSJ0eBTIvhMtyOZ8dCOldU7a4UXHavgasspQvjcqo95_YSPuHqfUZ7uCO7dqoEhWJbH3lmpr-w-aCo2UFgpp8oFJ_djWd_T3ebyXDlw-gaEs5uTiZbyrn5ugHIZOHhnAxJiV1eaydgz-CRxTlD46d3VofLDyENuHn6iNNpACh-nk4mIb-2wSSqJYrN)
+3. mwh.studio (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU8Yv7o8iI5pF42Pntffw57r1LbEwp6NeirSxPg3tBzlOPV_hPNynu7tVUdaeNIsCag751IvljbsouUyDl76_dCp0UX4IBPLUbWE1DLnE4rWsszsMavcnvKgJMNCd3QK4=)
+4. creativeans.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-F4EKaNuxIsdGvtFfUdgLVMqFBLVe4H-b4z_qoyNc_nc7EjCUNdt4Sxo2N35Jxo86HiUEBormitFDFbkJExWYWB_nIb0S-_Cg-r8ch2LizgfiRwq8z8Cf6_iZ1qsUOJ6NbZvciJPCzZmV56ix4c6nDiKw3iJymoEN07qiV4u30mPPp-yxT44=)
+5. dechuantea.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEk_xAZbfsQOIl4NvEl2To5NAbaKQOuGZohT7GVCdgO3uFPA9vKsWimh7KC1fZUr1IbExbuj27K2HPaogk-gyeCW_8QgQiKyBHVklmO9e4pNq0b94T98UdB1w==)
+6. adesignaward.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeuy-WQPuE42qUYtI41TfV6mUb-XleeVRbjs9Sw_1KCy_MuMk1afSMgG4osUjZ_eHqPBStTHlLHEtVZepY6XqmRT-owVI2mnmUbPI2ZUQO9FoY-ftq42Z3uEL5OEW9HHuDRDUqQHoYvUbI8Ufj7jBlUtOUXw==)
+7. foodtalks.cn (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPr3jMhLnBx2FFmNCvQs6GnevQMsJELy-kYBd2iDol6bWsH9z2hRy4fjGDIZKlEsyeizR6eqCN4LUHEcixCoxR-rDK1j3CHBtueeAo61sD5HtTVe8X5IhgLl9TOL9cFmcZ)
+8. bbwpublisher.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5qL8xatP-kIcHWsQL_gb9spbpyWrfYvenxGvmpJJ2RANlPaOzFFAJN4Mh82R3ELvQzUA0Bc98tKfsEDPm2mfjD0NYIAgogYH4el0n0u-SOa_6sFaMveJr9dtBRdCLuukaJ8aVT-3Cr92lVHza1Hi_NDktgLP97g==)
+9. davidpublisher.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs6iMb_sIh0KoH_PkBxt2o0SOioCZm9Mnn2fDP2_C1nnjMmNSP4Kl_YK2Wrm4KBaY1TEoWuVBTLKxF4I0r-hBpbBuokq951DaUCUq9UFg34tpltcsBineGEM89vm_ntlhTEpmqODe-JV5tirgGOYalsNJnoK5zMtrKUuzBfrTluXJ_zOI=)
+10. dp.tech (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENJ8TUOX9V-fgKyvQYu4gm-XAjhW8sgm34PuHsgCQYiVsr_Yx4cIvELk6Pz1NL_Za76CNUdLhFJAlps_dGJN5pIDPnkQGuAGhb0xg5Bs_gbxBUe5eNpKKvr44zdZt-aXiyd1fJ2LooS3EqzJ2VI2LN6coiK92ofR6h5CRJUsNLRx2a4wZeHR0=)
+11. isccac.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHBNlwqT5CLiC-2IIBJFCEfXcOUl6p1FYSFdEIuTZSu4IQhN4tFf8hF3R7jRVJ-KIjN0ScvTh8Rm-iy5Jst7bpPuOfH6TivHfk1bDMKk09cxLM-q0y0leKgLEsFK5dew==)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFc9ghqLQ6OSazs87j-tZoU0oL8n3bcYjOmQUT759tJ7KHjfbm-IgL8nIcNE75UzMOGHBR0rkOy-XnWvjcL8gUFSufdnz_OSbS4Nor6dX_kj8VE4Q0yuaZsV5U-uWn2tsOcUKTZRcLcDQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. design-encyclopedia.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiextPAjg6xsMcHDaNom1-A3fEReEt_walmrXdAoMXzEu8e-eWTLCGgviSJ0eBTIvhMtyOZ8dCOldU7a4UXHavgasspQvjcqo95_YSPuHqfUZ7uCO7dqoEhWJbH3lmpr-w-aCo2UFgpp8oFJ_djWd_T3ebyXDlw-gaEs5uTiZbyrn5ugHIZOHhnAxJiV1eaydgz-CRxTlD46d3VofLDyENuHn6iNNpACh-nk4mIb-2wSSqJYrN" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. daoinsights.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU8Yv7o8iI5pF42Pntffw57r1LbEwp6NeirSxPg3tBzlOPV_hPNynu7tVUdaeNIsCag751IvljbsouUyDl76_dCp0UX4IBPLUbWE1DLnE4rWsszsMavcnvKgJMNCd3QK4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. mwh.studio</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-F4EKaNuxIsdGvtFfUdgLVMqFBLVe4H-b4z_qoyNc_nc7EjCUNdt4Sxo2N35Jxo86HiUEBormitFDFbkJExWYWB_nIb0S-_Cg-r8ch2LizgfiRwq8z8Cf6_iZ1qsUOJ6NbZvciJPCzZmV56ix4c6nDiKw3iJymoEN07qiV4u30mPPp-yxT44=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. creativeans.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEk_xAZbfsQOIl4NvEl2To5NAbaKQOuGZohT7GVCdgO3uFPA9vKsWimh7KC1fZUr1IbExbuj27K2HPaogk-gyeCW_8QgQiKyBHVklmO9e4pNq0b94T98UdB1w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. dechuantea.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeuy-WQPuE42qUYtI41TfV6mUb-XleeVRbjs9Sw_1KCy_MuMk1afSMgG4osUjZ_eHqPBStTHlLHEtVZepY6XqmRT-owVI2mnmUbPI2ZUQO9FoY-ftq42Z3uEL5OEW9HHuDRDUqQHoYvUbI8Ufj7jBlUtOUXw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. adesignaward.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPr3jMhLnBx2FFmNCvQs6GnevQMsJELy-kYBd2iDol6bWsH9z2hRy4fjGDIZKlEsyeizR6eqCN4LUHEcixCoxR-rDK1j3CHBtueeAo61sD5HtTVe8X5IhgLl9TOL9cFmcZ" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. foodtalks.cn</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5qL8xatP-kIcHWsQL_gb9spbpyWrfYvenxGvmpJJ2RANlPaOzFFAJN4Mh82R3ELvQzUA0Bc98tKfsEDPm2mfjD0NYIAgogYH4el0n0u-SOa_6sFaMveJr9dtBRdCLuukaJ8aVT-3Cr92lVHza1Hi_NDktgLP97g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. bbwpublisher.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs6iMb_sIh0KoH_PkBxt2o0SOioCZm9Mnn2fDP2_C1nnjMmNSP4Kl_YK2Wrm4KBaY1TEoWuVBTLKxF4I0r-hBpbBuokq951DaUCUq9UFg34tpltcsBineGEM89vm_ntlhTEpmqODe-JV5tirgGOYalsNJnoK5zMtrKUuzBfrTluXJ_zOI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. davidpublisher.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENJ8TUOX9V-fgKyvQYu4gm-XAjhW8sgm34PuHsgCQYiVsr_Yx4cIvELk6Pz1NL_Za76CNUdLhFJAlps_dGJN5pIDPnkQGuAGhb0xg5Bs_gbxBUe5eNpKKvr44zdZt-aXiyd1fJ2LooS3EqzJ2VI2LN6coiK92ofR6h5CRJUsNLRx2a4wZeHR0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. dp.tech</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHBNlwqT5CLiC-2IIBJFCEfXcOUl6p1FYSFdEIuTZSu4IQhN4tFf8hF3R7jRVJ-KIjN0ScvTh8Rm-iy5Jst7bpPuOfH6TivHfk1bDMKk09cxLM-q0y0leKgLEsFK5dew==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. isccac.org</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="19.97">19.97秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="9,088">9,088</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net tea brand identity traditional Chinese modern design packaging">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net tea brand identity traditional Chinese modern design packaging</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are four concrete visual galleries showcasing tea brands that successfully marry traditional Chinese aesthetics with a modern design language—each is a direct project showcase, not an article.
+
+## Tushi Design’s “Chinese Heroism” Oolong Tea Packaging  
+• Platform: World Brand Design Society (gallery of final deliverables)  
+• URL pattern: worldbranddesign.com/…/dynamic-oolong-tea-packaging  
+• Highlights:  
+  - Inspiration drawn from Yingge Dance and the Water Margin heroes, reinterpreted through dynamic, multi-flash photographic trajectories turned into modern illustrations.  
+  - Four limited-edition tea boxes, each featuring one hero whose movement and symbolism echo the tea’s flavor profile.  
+  - A narrative-driven visual identity that blends folk tradition with contemporary graphic techniques. ([worldbranddesign.com](https://worldbranddesign.com/tushi-design-revives-chinese-heroism-with-dynamic-oolong-tea-packaging/?utm_source=chatgpt.com))
+
+## Shoukang Herbal Tea Box Design by Claire Ong  
+• Platform: Personal portfolio (claire.ong)  
+• URL pattern: claire.ong/shoukang  
+• Highlights:  
+  - Rooted in Traditional Chinese Medicine, each tea sachet box spotlights one of the Eight Immortals as a talisman for health.  
+  - Pairing of each immortal with a phrase from The Yellow Emperor’s Classic of Medicine, bridging ancient wisdom and modern packaging.  
+  - Clean layouts and illustrative motifs that resonate equally with Eastern and Western markets. ([claire.ong](https://claire.ong/shoukang?utm_source=chatgpt.com))
+
+## Dragon-Tea Visual Identity by Aimane Ettouri  
+• Platform: Behance (direct project gallery)  
+• URL pattern: behance.net/gallery/208074139/Dragon-Tea  
+• Highlights:  
+  - Logo fuses Chinese calligraphy with stylized dragon motifs to evoke strength, wisdom, and heritage.  
+  - A restrained color palette of natural tea tones punctuated by red and gold—symbols of luck and prosperity—applied across packaging, posters, and retail bags.  
+  - Minimalist typography with subtle oriental inflections, creating a balance of authenticity and modern elegance. ([behance.net](https://www.behance.net/gallery/208074139/Dragon-Tea?utm_source=chatgpt.com))
+
+## Suan Thau Tshen Craft Tea Visual Identity  
+• Platform: World Brand Design Society (gallery of final applications)  
+• URL pattern: worldbranddesign.com/…/craft-tea-visual-identity-design  
+• Highlights:  
+  - Packaging concept inspired by Chinese landscape paintings, using abstracted mountain-and-valley forms to reflect terroir.  
+  - A modular box system that, when arranged together, re-creates a continuous painted landscape—merging artisanal tradition with a contemporary display.  
+  - A fresh green accent (“green on the mountaintop”) that visually ties brand name, product origin, and Chinese aesthetics into a modern brand identity. ([worldbranddesign.com](https://worldbranddesign.com/suan-thau-tshen-craft-tea-visual-identity-design/?utm_source=chatgpt.com))">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are four concrete visual galleries showcasing tea brands that successfully marry traditional Chinese aesthetics with a modern design language—each is a direct project showcase, not an article.
+
+## Tushi Design’s “Chinese Heroism” Oolong Tea Packaging  
+• Platform: World Brand Design Society (gallery of final deliverables)  
+• URL pattern: worldbranddesign.com/…/dynamic-oolong-tea-packaging  
+• Highlights:  
+  - Inspiration drawn from Yingge Dance and the Water Margin heroes, reinterpreted through dynamic, multi-flash photographic trajectories turned into modern illustrations.  
+  - Four limited-edition tea boxes, each featuring one hero whose movement and symbolism echo the tea’s flavor profile.  
+  - A narrative-driven visual identity that blends folk tradition with contemporary graphic techniques. ([worldbranddesign.com](https://worldbranddesign.com/tushi-design-revives-chinese-heroism-with-dynamic-oolong-tea-packaging/?utm_source=chatgpt.com))
+
+## Shoukang Herbal Tea Box Design by Claire Ong  
+• Platform: Personal portfolio (claire.ong)  
+• URL pattern: claire.ong/shoukang  
+• Highlights:  
+  - Rooted in Traditional Chinese Medicine, each tea sachet box spotlights one of the Eight Immortals as a talisman for health.  
+  - Pairing of each immortal with a phrase from The Yellow Emperor’s Classic of Medicine, bridging ancient wisdom and modern packaging.  
+  - Clean layouts and illustrative motifs that resonate equally with Eastern and Western markets. ([claire.ong](https://claire.ong/shoukang?utm_source=chatgpt.com))
+
+## Dragon-Tea Visual Identity by Aimane Ettouri  
+• Platform: Behance (direct project gallery)  
+• URL pattern: behance.net/gallery/208074139/Dragon-Tea  
+• Highlights:  
+  - Logo fuses Chinese calligraphy with stylized dragon motifs to evoke strength, wisdom, and heritage.  
+  - A restrained color palette of natural tea tones punctuated by red and gold—symbols of luck and prosperity—applied across packaging, posters, and retail bags.  
+  - Minimalist typography with subtle oriental inflections, creating a balance of authenticity and modern elegance. ([behance.net](https://www.behance.net/gallery/208074139/Dragon-Tea?utm_source=chatgpt.com))
+
+## Suan Thau Tshen Craft Tea Visual Identity  
+• Platform: World Brand Design Society (gallery of final applications)  
+• URL pattern: worldbranddesign.com/…/craft-tea-visual-identity-design  
+• Highlights:  
+  - Packaging concept inspired by Chinese landscape paintings, using abstracted mountain-and-valley forms to reflect terroir.  
+  - A modular box system that, when arranged together, re-creates a continuous painted landscape—merging artisanal tradition with a contemporary display.  
+  - A fresh green accent (“green on the mountaintop”) that visually ties brand name, product origin, and Chinese aesthetics into a modern brand identity. ([worldbranddesign.com](https://worldbranddesign.com/suan-thau-tshen-craft-tea-visual-identity-design/?utm_source=chatgpt.com))</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Tushi Design Revives Chinese Heroism with Dynamic Oolong Tea Packaging - World Brand Design Society (https://worldbranddesign.com/tushi-design-revives-chinese-heroism-with-dynamic-oolong-tea-packaging/?utm_source=chatgpt.com)
+2. Claire Ong (https://claire.ong/shoukang?utm_source=chatgpt.com)
+3. Dragon-Tea :: Behance (https://www.behance.net/gallery/208074139/Dragon-Tea?utm_source=chatgpt.com)
+4. Suan Thau Tshen Craft Tea Visual Identity Design - World Brand Design Society (https://worldbranddesign.com/suan-thau-tshen-craft-tea-visual-identity-design/?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://worldbranddesign.com/tushi-design-revives-chinese-heroism-with-dynamic-oolong-tea-packaging/?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Tushi Design Revives Chinese Heroism with Dynamic Oolong Tea Packaging - World Brand Design Society</a></li><li class="text-sm"><a href="https://claire.ong/shoukang?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Claire Ong</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/208074139/Dragon-Tea?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Dragon-Tea :: Behance</a></li><li class="text-sm"><a href="https://worldbranddesign.com/suan-thau-tshen-craft-tea-visual-identity-design/?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Suan Thau Tshen Craft Tea Visual Identity Design - World Brand Design Society</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="37.92">37.92秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="43,126">43,126</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Chinese tea brand packaging design portfolio behance
+2. traditional Chinese tea brand modern design site:behance.net
+3. Chinese tea brand identity design site:dribbble.com
+4. "tea brand" "Chinese elements" portfolio design agency">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Chinese tea brand packaging design portfolio behance</li><li class="text-sm text-gray-600">2. traditional Chinese tea brand modern design site:behance.net</li><li class="text-sm text-gray-600">3. Chinese tea brand identity design site:dribbble.com</li><li class="text-sm text-gray-600">4. "tea brand" "Chinese elements" portfolio design agency</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual galleries showcasing tea brand designs that blend traditional Chinese elements with modern aesthetics.Let me search for more specific examples of tea brand portfolios that showcase traditional Chinese elements with modern design.Let me try searching on Dribbble for specific tea brand design projects.Now let me search for specific designer portfolios or agencies that specialize in tea branding with traditional Asian elements.Based on my search results, I've found several excellent visual galleries showcasing tea brand designs that blend traditional Chinese elements with modern design language. Here are the key resources:
+
+## Visual Galleries for Tea Brand Design with Chinese Elements
+
+### 1. **Behance - Primary Design Platform**
+Behance is the world's largest creative network for showcasing and discovering creative work, making it an excellent resource for finding tea branding projects:
+
+- **Chinese Tea Packaging Design Projects**: Multiple search results show active galleries on Behance
+- **Yuheng Tea Brand Identity**: A specific project featuring brand identity and packaging design for Yuheng Tea, a small-scale family-owned tea producer in Taiwan. The logo design is based on the Chinese character "恆" taken from their brand name "有恆焙茶" and serves as a graphical representation of tea leaves inside a cup as well as tea leaves lying on a bamboo tray during the withering process.
+
+### 2. **Dribbble - Design Showcase Platform**
+Dribbble features 500+ Tea Logo designs and 18 Chinese Tea designs:
+
+- **Chinese Tea Brand Illustration**: Featured work by Lucia Pan showcasing Chinese tea brand illustrations
+- **Tea Brand Identity**: Dribbble hosts tea brand identity designs
+- **Chinese Ginger Tea Label**: Specific examples include Chinese Ginger Tea Label by Mary Meccage
+
+### 3. **Mandarin Brand Identity Case Study**
+A comprehensive brand identity design by Ofspace that uses dark red color to portray luxury and incorporates the letter M in Chinese for a simple yet luxurious logo
+
+### 4. **Thai's Tea Cultural Integration Example**
+Thai's Tea brand showcases how traditional cultural elements (elephant icons symbolizing religion, ethnicity, and royalty) can be integrated with modern design. The logo uses bright, natural blue and orange tones representing traditional milk tea flavors, combined with typical Thai-style fonts for easy brand recognition and cultural significance.
+
+### 5. **Tea Packaging Design Blog Resource**
+Design resources discussing how tea packaging connects to cultural traditions, noting that "for Chinese, the art of making tea is very important" and how packaging design is executed based on traditional values
+
+## Key Search Terms for More Specific Results:
+- "Chinese tea packaging design" on Behance
+- "Tea brand identity" on Dribbble 
+- "Traditional Chinese elements modern design" portfolios
+- "Asian tea branding" case studies
+
+These platforms contain actual design portfolios and project showcases rather than articles about design, giving you direct access to visual inspiration for tea brands that successfully balance Eastern aesthetics with contemporary design trends.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual galleries showcasing tea brand designs that blend traditional Chinese elements with modern aesthetics.Let me search for more specific examples of tea brand portfolios that showcase traditional Chinese elements with modern design.Let me try searching on Dribbble for specific tea brand design projects.Now let me search for specific designer portfolios or agencies that specialize in tea branding with traditional Asian elements.Based on my search results, I've found several excellent visual galleries showcasing tea brand designs that blend traditional Chinese elements with modern design language. Here are the key resources:
+
+## Visual Galleries for Tea Brand Design with Chinese Elements
+
+### 1. **Behance - Primary Design Platform**
+Behance is the world's largest creative network for showcasing and discovering creative work, making it an excellent resource for finding tea branding projects:
+
+- **Chinese Tea Packaging Design Projects**: Multiple search results show active galleries on Behance
+- **Yuheng Tea Brand Identity**: A specific project featuring brand identity and packaging design for Yuheng Tea, a small-scale family-owned tea producer in Taiwan. The logo design is based on the Chinese character "恆" taken from their brand name "有恆焙茶" and serves as a graphical representation of tea leaves inside a cup as well as tea leaves lying on a bamboo tray during the withering process.
+
+### 2. **Dribbble - Design Showcase Platform**
+Dribbble features 500+ Tea Logo designs and 18 Chinese Tea designs:
+
+- **Chinese Tea Brand Illustration**: Featured work by Lucia Pan showcasing Chinese tea brand illustrations
+- **Tea Brand Identity**: Dribbble hosts tea brand identity designs
+- **Chinese Ginger Tea Label**: Specific examples include Chinese Ginger Tea Label by Mary Meccage
+
+### 3. **Mandarin Brand Identity Case Study**
+A comprehensive brand identity design by Ofspace that uses dark red color to portray luxury and incorporates the letter M in Chinese for a simple yet luxurious logo
+
+### 4. **Thai's Tea Cultural Integration Example**
+Thai's Tea brand showcases how traditional cultural elements (elephant icons symbolizing religion, ethnicity, and royalty) can be integrated with modern design. The logo uses bright, natural blue and orange tones representing traditional milk tea flavors, combined with typical Thai-style fonts for easy brand recognition and cultural significance.
+
+### 5. **Tea Packaging Design Blog Resource**
+Design resources discussing how tea packaging connects to cultural traditions, noting that "for Chinese, the art of making tea is very important" and how packaging design is executed based on traditional values
+
+## Key Search Terms for More Specific Results:
+- "Chinese tea packaging design" on Behance
+- "Tea brand identity" on Dribbble 
+- "Traditional Chinese elements modern design" portfolios
+- "Asian tea branding" case studies
+
+These platforms contain actual design portfolios and project showcases rather than articles about design, giving you direct access to visual inspiration for tea brands that successfully balance Eastern aesthetics with contemporary design trends.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Chinese Tea Packaging Design Projects (https://www.behance.net/search/projects/chinese tea packaging design)
+2. Tea Packaging Design Projects (https://www.behance.net/search/projects/tea%20packaging%20design)
+3. Tea Projects | Photos, videos, logos, illustrations ... - Behance (https://www.behance.net/search/projects/?search=tea)
+4. Yuheng Tea - Brand identity & Packaging on Behance (https://www.behance.net/gallery/41046235/Yuheng-Tea-Brand-identity-Packaging)
+5. Tea Label designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/tea-label)
+6. Mandarin Brand Identity Design by Ofspace SaaS for Ofspace on Dribbble (https://dribbble.com/shots/20129721-Mandarin-Brand-Identity-Design)
+7. China Logo designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/china-logo)
+8. Tea Brand designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/tea-brand)
+9. Chinese Tea designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/chinese_tea)
+10. THAI'S TEA | LOGO DESIGN & BRAND IDENTITY by Kaiza Design Agency on Dribbble (https://dribbble.com/shots/23681795-THAI-S-TEA-LOGO-DESIGN-BRAND-IDENTITY)
+11. Behance (https://www.behance.net/gallery/199841825/TEA-CEREMONY-MAGAZINE-DESIGN-CHINESE-TEA)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/search/projects/chinese tea packaging design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Chinese Tea Packaging Design Projects</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/tea%20packaging%20design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Tea Packaging Design Projects</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/?search=tea" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Tea Projects | Photos, videos, logos, illustrations ... - Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/41046235/Yuheng-Tea-Brand-identity-Packaging" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Yuheng Tea - Brand identity & Packaging on Behance</a></li><li class="text-sm"><a href="https://dribbble.com/tags/tea-label" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Tea Label designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/20129721-Mandarin-Brand-Identity-Design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Mandarin Brand Identity Design by Ofspace SaaS for Ofspace on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/china-logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. China Logo designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/tea-brand" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Tea Brand designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/chinese_tea" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Chinese Tea designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23681795-THAI-S-TEA-LOGO-DESIGN-BRAND-IDENTITY" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. THAI'S TEA | LOGO DESIGN & BRAND IDENTITY by Kaiza Design Agency on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/199841825/TEA-CEREMONY-MAGAZINE-DESIGN-CHINESE-TEA" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Behance</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
