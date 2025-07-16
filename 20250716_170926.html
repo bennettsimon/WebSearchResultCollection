@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about 3D liquid and fluid effects, interested in metallic liquids and glass-like textures. The search should showcase various 3D fluid effects applied in branding and poster designs.">The user is asking about 3D liquid and fluid effects, interested in metallic liquids and glass-like textures. The search should showcase various 3D fluid effects applied in branding and poster designs.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 17:10:12</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="13.81">13.81秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,154">1,154</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. 3D metallic liquid effects branding
+2. 3D metallic fluid posters
+3. 3D glass liquid effects branding
+4. 3D glass fluid posters
+5. 3D liquid effects branding
+6. 3D fluid effects poster design">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. 3D metallic liquid effects branding</li><li class="text-sm text-gray-600">2. 3D metallic fluid posters</li><li class="text-sm text-gray-600">3. 3D glass liquid effects branding</li><li class="text-sm text-gray-600">4. 3D glass fluid posters</li><li class="text-sm text-gray-600">5. 3D liquid effects branding</li><li class="text-sm text-gray-600">6. 3D fluid effects poster design</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="3D liquid and fluid effects are increasingly prevalent in branding and poster design, offering dynamic and visually captivating elements. These effects often manifest as abstract shapes, typography, or flowing textures that can evoke a sense of motion, luxury, or futurism.
+
+**Metallic Liquid Effects:**
+Metallic liquid effects in 3D design typically feature highly reflective surfaces that mimic molten metal, such as chrome, silver, or gold. These effects create a sleek, futuristic, and often luxurious aesthetic.
+
+*   **Branding:** In branding, metallic liquid effects are used to create impactful logos and brand identities. Examples include 3D liquid "M" morphing logos with reflective metallic finishes and "G" logos where mercury appears to be drawn to the shape, giving a mysterious, movie-like quality. Another branding application involves liquid 3D "A" logos that combine solid lines with a touch of liquid metal, often incorporating orange gradients to symbolize heat or power. Brands can also utilize animated liquid metal effects for their logos, allowing for customizable parameters such as texture and reflections to achieve a high-gloss, futuristic finish. These effects are often seen in the artwork for music artists like Lady Gaga's "Chromatica" and Rosalía's "Aute Cuture," or in web design for branding agencies.
+*   **Poster Design:** For posters, 3D metallic fluid shapes with waves and ripples create abstract, eye-catching designs, often with holographic or iridescent colors. These can include fluid chrome and golden shapes, metallic fluid spirals, or abstract iridescent neon backgrounds with curved waves. Collections of "3D Liquid Metal Shapes" are available as design assets, suitable for posters, covers, web design, and social media, aiming for bold and trendy aesthetics.
+
+**Glass-like Textures:**
+3D glass-like textures in fluid effects provide a sense of transparency, refraction, and often a vibrant, colorful appearance due to light dispersion.
+
+*   **Branding:** "Fluid Glass 3D Objects" are popular for creating dynamic visuals in branding, including packaging and web design. These objects often have transparent backgrounds and can be easily recolored. The "liquid glass effect," notably used by Apple in its design system, creates a look where content appears to sit on translucent glass, utilizing light reflection and refraction. This effect can be applied to wordmarks and logos, creating a modern and clean aesthetic.
+*   **Poster Design:** In posters, 3D fluid glass shapes are used to achieve dynamic and trendy designs. They can feature holographic gradients, dispersion effects, and abstract, colorful forms. Tutorials demonstrate how to create 3D liquid text effects with glass textures for posters, showing how to model shapes and apply glass materials. Collections of "Fluid Glass 3D Shapes" are specifically designed for posters, covers, and other creative projects requiring bold and trendy designs. Abstract liquid glass transparent ribbons with holographic effects and rainbow gradients are also common elements in poster design.
+
+Overall, both metallic liquid and glass-like fluid effects offer diverse possibilities for adding depth, movement, and a modern edge to branding and poster designs. They range from solid, reflective chrome to ethereal, translucent glass, each bringing a unique visual appeal.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">3D liquid and fluid effects are increasingly prevalent in branding and poster design, offering dynamic and visually captivating elements. These effects often manifest as abstract shapes, typography, or flowing textures that can evoke a sense of motion, luxury, or futurism.
+
+**Metallic Liquid Effects:**
+Metallic liquid effects in 3D design typically feature highly reflective surfaces that mimic molten metal, such as chrome, silver, or gold. These effects create a sleek, futuristic, and often luxurious aesthetic.
+
+*   **Branding:** In branding, metallic liquid effects are used to create impactful logos and brand identities. Examples include 3D liquid "M" morphing logos with reflective metallic finishes and "G" logos where mercury appears to be drawn to the shape, giving a mysterious, movie-like quality. Another branding application involves liquid 3D "A" logos that combine solid lines with a touch of liquid metal, often incorporating orange gradients to symbolize heat or power. Brands can also utilize animated liquid metal effects for their logos, allowing for customizable parameters such as texture and reflections to achieve a high-gloss, futuristic finish. These effects are often seen in the artwork for music artists like Lady Gaga's "Chromatica" and Rosalía's "Aute Cuture," or in web design for branding agencies.
+*   **Poster Design:** For posters, 3D metallic fluid shapes with waves and ripples create abstract, eye-catching designs, often with holographic or iridescent colors. These can include fluid chrome and golden shapes, metallic fluid spirals, or abstract iridescent neon backgrounds with curved waves. Collections of "3D Liquid Metal Shapes" are available as design assets, suitable for posters, covers, web design, and social media, aiming for bold and trendy aesthetics.
+
+**Glass-like Textures:**
+3D glass-like textures in fluid effects provide a sense of transparency, refraction, and often a vibrant, colorful appearance due to light dispersion.
+
+*   **Branding:** "Fluid Glass 3D Objects" are popular for creating dynamic visuals in branding, including packaging and web design. These objects often have transparent backgrounds and can be easily recolored. The "liquid glass effect," notably used by Apple in its design system, creates a look where content appears to sit on translucent glass, utilizing light reflection and refraction. This effect can be applied to wordmarks and logos, creating a modern and clean aesthetic.
+*   **Poster Design:** In posters, 3D fluid glass shapes are used to achieve dynamic and trendy designs. They can feature holographic gradients, dispersion effects, and abstract, colorful forms. Tutorials demonstrate how to create 3D liquid text effects with glass textures for posters, showing how to model shapes and apply glass materials. Collections of "Fluid Glass 3D Shapes" are specifically designed for posters, covers, and other creative projects requiring bold and trendy designs. Abstract liquid glass transparent ribbons with holographic effects and rainbow gradients are also common elements in poster design.
+
+Overall, both metallic liquid and glass-like fluid effects offer diverse possibilities for adding depth, movement, and a modern edge to branding and poster designs. They range from solid, reflective chrome to ethereal, translucent glass, each bringing a unique visual appeal.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. pixellogo.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0kF33-8pt0suwBZskKP_6M7iLauomsFBT0TBk_SPZh7Ns31LX5BpqPu7VR3ApTJV7XbRHOtIlyR6oUYiFPu4tZgSSXbMEWWa4aR2C6xF0PxRa-3rAuUYCI_hkyLmxP9S6b0kAwYoPSxHBnP09XRdEpbtEv1Q96gM5dl0CqN7uP72gjQ==)
+2. tiktok.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8b3nUPup6Dn5EyKPHsrxID8NhTH_Tkt4pQgC1BsFdKBpq7oYK74fpGX0nwGoVkxK6rhVgYi_bbu3vx98NoL7fGen3K0Rcno8UON43sbhf9ATLSJhJMi_b-5_HmAsIFZemK3dvTbkdhnNe02CZZ7af5cxNRbOZxp99hHaGrFIiL34=)
+3. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGICApm4JbUsK3cSknKnJGPka89QhmQXzNgQ9WBv_BNFV_diiHOWjh-C76eFQ7l3223d8I_CHLMARD3kMa_GuoMmthOm0_ZewQTXNwg8umbw5871JOI0wItsGDuz6iyYCWeOa19ZwxLOSM=)
+4. muz.li (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM1cVPGQjEreK-8I9YUU8wcRJgTq5dvPpt0Ub81sEDBTAO3roQssFyw6EJq0XFqPivbJpX-Oj6QSctbOXnmdIbrrYnUckLLdv-1rU9XXZIWZPApiPjctmPScWU87mRlPqx6dK3oqLmaqMla2vHzDKe3IMfUOEjNf1ml8iRpVDJgSCGcWEwoApK8qzBpcisxHZ8-2Tb5ZKRbxULEGyr)
+5. alamy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOmV_WykfnlmsZX7hVcowe-ZuQC6R2Rcsjh2zIcPzJDMGLuQr8cxGWwAnPKHCE7-N1VSkwZ5w2E6BS66gSSqQbdQPGelTmIUIl1EEl4-jxHR4hhvOkoRJDnFTtCJwtEj6tLvJ7CmN-sX2WEFiRLAuVRGeYx5GTfIZcgKaatLCVlFsrRO2kd3vHL-pyUr-MUF6_-xaXzOknKYXjhaXy-CCE_ZURW60gg7WG_pxPtTQQKAOwtsSgaj6BiZwZfiYALVfoyeT1Mk9kaZ5Nd1g9JkMh8foiDFEcOsrlj4RP74_-iV00r7g=)
+6. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwgn8MGfMDjCoxjtrZO0zwCEWAJSplMWq-ZPqY7quswLG7VQUsgYXWJ-yCNUpVjvqw_tJRu26JVXUHyFkL4i1oOMqvBC6Lubao4K6ZbBUiqpc14FbFO7RwM3c3JH6JtCrQm9V7akzPwBLxT5o=)
+7. studio2am.co (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH11EGrJK0i0ZM3EC1Vfj8fgWEWtR4UpozgDxm5aJlR1wm5q8jwoa35NccMUGde9WjaFO83dU_PxoI2q12QTsPrPaAWb8udjlPbLuffwSLCFl9E0DzqRLuw-68btRSj6sh6YDgynG6_B9eZ9gZijRtXzt28GOFQru7VaGautIOM)
+8. yellowimages.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFF2F5v5dJ9qnYXXKqW8jBZ7e9MeDBTlJ_ZZOcqM6B12tmp8Z9i8h6g8MJQXmM5fBFtK_CLg0-qjbPSHEePL4saQUS2ZSG_gm37tRPslSzdpBQHzHZG3t53RXEr3MaDebnBEa68TYp7znK-OErH6XlOZOYeBD8irHBWB52J-8Dg-ws=)
+9. studio2am.co (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOQK2C3d03batW0HbiP943p6y-Uu81kNPugXEBVAHCAJ_5RhV1r-HTxyYByEtyeah-XGB65dJajMdLr9BnGvcJYFCNePvxkQ_7pl2FMN4kiMFRBxh8uby7jmgLqdoLAwN4IADH_yDF686ixBLIzGbYPX6C)
+10. yellowimages.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5OTKfjOcFQBIk6WgArjGSPYPWEIjrLRYGU59Ir0W26xJK_jni4nVSzS9p0KCwkiHP2EgLynGKg2Z3rM0Iyhz6sFocMuftr2mOAc4qECAt330FFi0WstER3voWsZ6cwLFZFCWCcvWEiysd360uhOJsu0Jl_Fw=)
+11. youworkforthem.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU8ifuapApRbvw4ajqUKVmBRJESntEPEH6Sr3Wn3-V8PBApQQJJqQBh6m3vh4FKvz82oIdLWjlCotjvn19LBRZ-YkHnyZ-H5M941MQWp9tYwlSUNiD3Zf1C5hnOsOuxEsflAyHj6VFBeBBRSQaiS8tPkvu2sxA8KADVnfB)
+12. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoW4ZJDGG_V6OOhy9hEGEKVP7eby31edP12Id3ya7NCxy2ndzQAKVh8QYGf0ELtAqZYhAScL_dlLKvrPwqLNEmu4FpO2sdtE-CLM450cNziUsBNPG7oaCdeuPrwUSDFPFmNDvFpp6rr0R-UO7DGyKmDNnSlxqa-stugIJ0-OqnxGg=)
+13. specy.app (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH73DIu5ZcxKLgMHMRlbUgJ9FG79UuPjquxnug7vLT_Oi7t5mdSnMZ-qDOD267-nyEyK8lQMWm1SPYJYTY0-KMwJuUM6fvaWYK2x5fB9ZooQvgIIK6D555yfTb3qdCizMBW2yxndPIxH1-06WeUcQ==)
+14. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqsymzJPF5OmTmOpsTHcuaES75mFS_YxcspYndlGKcF3lEgjHZxxExRZTabhfiMu_b_sVGIBAU-iZMdVjwNUSzxqHD3bJvm2y_bj3Q5fWq8gNQwTpKs_a2awiA50uHFrlRGlg7)
+15. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBqe1H-9mAdsSHH0QgwNa0shTC-PquzAjoUo2obCcrrsb3lPJuqvskffscUL1GApctv2kviCjDVQOdInZZCPxkSeuSGVpOJ_Az9hhznXjZLRxGYRwUpSucABD4prBxOpYZ0a3iWeVoNevtHZgjvhZHmxtFaj0r1BXvry9VvYzse2cwbvdVvZZeWNBOqZ1_QQfS4Dom1k77Y4B8d2ONox1bos_l9FeJYceHT6swWli11I_SrMz3T5BRWGnN0P59P4SsCBVbvEuUnkkW843Ckb27osQkO7CEIM-da5XQwn0nTDQ=)
+16. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDPlATlbGyuj-W9hYgCZWasv2XRilKqoOAgNsECLoNT32TP91f6-Fjj0BgZAnqzGW3X7_OxfT_GvTJD4rdbfllKufbk_BjaPdp_hfHqcyfl5sr119CZFam0eqRYVHeHxpWTHVNvZNkUBL3-Nb4wXxXXMEsugkQxoxziqhup-s=)
+17. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT8fHf_rTrsa-xldLSwP3HjZi3ZgktXIlHWdyzicJalkG9ejaoa7W4GFFLVx_OIFndUk_4gm7besDkXXT0Kq57hMDCaL1G0enrCqkbwhFqz7pUnIG7bsFkSUEjLNckdH9zweXhVA==)
+18. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEa79wBsIyolruSM7GSSJFdjshJWxnjBsOvlNIX61HBL9hxmg11novg5p_iOkMz8i0v-ZmtJ3MoqPQt4ioc9tbDfUBZXzetld8VFMXkylezQ1CmBWgDbcqAImfYLl2l-wQokH6Gnw==)
+19. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIy7F6OSSeXqy7O4f58KlxC4PdktRx2ZBXzcU7CejzPMueMLO-brJ4EyCh83aL6wocinh7L5oY83WeD6KCQzjy70eh1rWCwBltcB93hqvI8I3f3y6zEBMiujr0u0FsoW0ygx7cYeruRQoFtkgXQ3958RWZx3OfgMuj6ekX1A_btafD)
+20. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdtdOoYc68k4Vt6yaeqbDVBVWWAMFXEageYMiUiKdFgzHf9HbJa296ajBPw9aZzLf1TI4kOSyR_p4oCHmTBfUWTpcZuPANi5-6StWtdYyyf6twpYT3IX7xlU59uTwrYLFKkoA7EpEd99HT)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0kF33-8pt0suwBZskKP_6M7iLauomsFBT0TBk_SPZh7Ns31LX5BpqPu7VR3ApTJV7XbRHOtIlyR6oUYiFPu4tZgSSXbMEWWa4aR2C6xF0PxRa-3rAuUYCI_hkyLmxP9S6b0kAwYoPSxHBnP09XRdEpbtEv1Q96gM5dl0CqN7uP72gjQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. pixellogo.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8b3nUPup6Dn5EyKPHsrxID8NhTH_Tkt4pQgC1BsFdKBpq7oYK74fpGX0nwGoVkxK6rhVgYi_bbu3vx98NoL7fGen3K0Rcno8UON43sbhf9ATLSJhJMi_b-5_HmAsIFZemK3dvTbkdhnNe02CZZ7af5cxNRbOZxp99hHaGrFIiL34=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. tiktok.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGICApm4JbUsK3cSknKnJGPka89QhmQXzNgQ9WBv_BNFV_diiHOWjh-C76eFQ7l3223d8I_CHLMARD3kMa_GuoMmthOm0_ZewQTXNwg8umbw5871JOI0wItsGDuz6iyYCWeOa19ZwxLOSM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM1cVPGQjEreK-8I9YUU8wcRJgTq5dvPpt0Ub81sEDBTAO3roQssFyw6EJq0XFqPivbJpX-Oj6QSctbOXnmdIbrrYnUckLLdv-1rU9XXZIWZPApiPjctmPScWU87mRlPqx6dK3oqLmaqMla2vHzDKe3IMfUOEjNf1ml8iRpVDJgSCGcWEwoApK8qzBpcisxHZ8-2Tb5ZKRbxULEGyr" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. muz.li</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOmV_WykfnlmsZX7hVcowe-ZuQC6R2Rcsjh2zIcPzJDMGLuQr8cxGWwAnPKHCE7-N1VSkwZ5w2E6BS66gSSqQbdQPGelTmIUIl1EEl4-jxHR4hhvOkoRJDnFTtCJwtEj6tLvJ7CmN-sX2WEFiRLAuVRGeYx5GTfIZcgKaatLCVlFsrRO2kd3vHL-pyUr-MUF6_-xaXzOknKYXjhaXy-CCE_ZURW60gg7WG_pxPtTQQKAOwtsSgaj6BiZwZfiYALVfoyeT1Mk9kaZ5Nd1g9JkMh8foiDFEcOsrlj4RP74_-iV00r7g=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. alamy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwgn8MGfMDjCoxjtrZO0zwCEWAJSplMWq-ZPqY7quswLG7VQUsgYXWJ-yCNUpVjvqw_tJRu26JVXUHyFkL4i1oOMqvBC6Lubao4K6ZbBUiqpc14FbFO7RwM3c3JH6JtCrQm9V7akzPwBLxT5o=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH11EGrJK0i0ZM3EC1Vfj8fgWEWtR4UpozgDxm5aJlR1wm5q8jwoa35NccMUGde9WjaFO83dU_PxoI2q12QTsPrPaAWb8udjlPbLuffwSLCFl9E0DzqRLuw-68btRSj6sh6YDgynG6_B9eZ9gZijRtXzt28GOFQru7VaGautIOM" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. studio2am.co</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFF2F5v5dJ9qnYXXKqW8jBZ7e9MeDBTlJ_ZZOcqM6B12tmp8Z9i8h6g8MJQXmM5fBFtK_CLg0-qjbPSHEePL4saQUS2ZSG_gm37tRPslSzdpBQHzHZG3t53RXEr3MaDebnBEa68TYp7znK-OErH6XlOZOYeBD8irHBWB52J-8Dg-ws=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. yellowimages.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOQK2C3d03batW0HbiP943p6y-Uu81kNPugXEBVAHCAJ_5RhV1r-HTxyYByEtyeah-XGB65dJajMdLr9BnGvcJYFCNePvxkQ_7pl2FMN4kiMFRBxh8uby7jmgLqdoLAwN4IADH_yDF686ixBLIzGbYPX6C" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. studio2am.co</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5OTKfjOcFQBIk6WgArjGSPYPWEIjrLRYGU59Ir0W26xJK_jni4nVSzS9p0KCwkiHP2EgLynGKg2Z3rM0Iyhz6sFocMuftr2mOAc4qECAt330FFi0WstER3voWsZ6cwLFZFCWCcvWEiysd360uhOJsu0Jl_Fw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. yellowimages.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU8ifuapApRbvw4ajqUKVmBRJESntEPEH6Sr3Wn3-V8PBApQQJJqQBh6m3vh4FKvz82oIdLWjlCotjvn19LBRZ-YkHnyZ-H5M941MQWp9tYwlSUNiD3Zf1C5hnOsOuxEsflAyHj6VFBeBBRSQaiS8tPkvu2sxA8KADVnfB" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. youworkforthem.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoW4ZJDGG_V6OOhy9hEGEKVP7eby31edP12Id3ya7NCxy2ndzQAKVh8QYGf0ELtAqZYhAScL_dlLKvrPwqLNEmu4FpO2sdtE-CLM450cNziUsBNPG7oaCdeuPrwUSDFPFmNDvFpp6rr0R-UO7DGyKmDNnSlxqa-stugIJ0-OqnxGg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH73DIu5ZcxKLgMHMRlbUgJ9FG79UuPjquxnug7vLT_Oi7t5mdSnMZ-qDOD267-nyEyK8lQMWm1SPYJYTY0-KMwJuUM6fvaWYK2x5fB9ZooQvgIIK6D555yfTb3qdCizMBW2yxndPIxH1-06WeUcQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. specy.app</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqsymzJPF5OmTmOpsTHcuaES75mFS_YxcspYndlGKcF3lEgjHZxxExRZTabhfiMu_b_sVGIBAU-iZMdVjwNUSzxqHD3bJvm2y_bj3Q5fWq8gNQwTpKs_a2awiA50uHFrlRGlg7" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBqe1H-9mAdsSHH0QgwNa0shTC-PquzAjoUo2obCcrrsb3lPJuqvskffscUL1GApctv2kviCjDVQOdInZZCPxkSeuSGVpOJ_Az9hhznXjZLRxGYRwUpSucABD4prBxOpYZ0a3iWeVoNevtHZgjvhZHmxtFaj0r1BXvry9VvYzse2cwbvdVvZZeWNBOqZ1_QQfS4Dom1k77Y4B8d2ONox1bos_l9FeJYceHT6swWli11I_SrMz3T5BRWGnN0P59P4SsCBVbvEuUnkkW843Ckb27osQkO7CEIM-da5XQwn0nTDQ=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDPlATlbGyuj-W9hYgCZWasv2XRilKqoOAgNsECLoNT32TP91f6-Fjj0BgZAnqzGW3X7_OxfT_GvTJD4rdbfllKufbk_BjaPdp_hfHqcyfl5sr119CZFam0eqRYVHeHxpWTHVNvZNkUBL3-Nb4wXxXXMEsugkQxoxziqhup-s=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT8fHf_rTrsa-xldLSwP3HjZi3ZgktXIlHWdyzicJalkG9ejaoa7W4GFFLVx_OIFndUk_4gm7besDkXXT0Kq57hMDCaL1G0enrCqkbwhFqz7pUnIG7bsFkSUEjLNckdH9zweXhVA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEa79wBsIyolruSM7GSSJFdjshJWxnjBsOvlNIX61HBL9hxmg11novg5p_iOkMz8i0v-ZmtJ3MoqPQt4ioc9tbDfUBZXzetld8VFMXkylezQ1CmBWgDbcqAImfYLl2l-wQokH6Gnw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIy7F6OSSeXqy7O4f58KlxC4PdktRx2ZBXzcU7CejzPMueMLO-brJ4EyCh83aL6wocinh7L5oY83WeD6KCQzjy70eh1rWCwBltcB93hqvI8I3f3y6zEBMiujr0u0FsoW0ygx7cYeruRQoFtkgXQ3958RWZx3OfgMuj6ekX1A_btafD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdtdOoYc68k4Vt6yaeqbDVBVWWAMFXEageYMiUiKdFgzHf9HbJa296ajBPw9aZzLf1TI4kOSyR_p4oCHmTBfUWTpcZuPANi5-6StWtdYyyf6twpYT3IX7xlU59uTwrYLFKkoA7EpEd99HT" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. freepik.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="39.51">39.51秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="52,656">52,656</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. 3D liquid fluid metallic branding site:behance.net
+2. site:behance.net "3D liquid" branding
+3. site:behance.net "3D fluid" branding
+4. site:behance.net "3D fluid" textures">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. 3D liquid fluid metallic branding site:behance.net</li><li class="text-sm text-gray-600">2. site:behance.net "3D liquid" branding</li><li class="text-sm text-gray-600">3. site:behance.net "3D fluid" branding</li><li class="text-sm text-gray-600">4. site:behance.net "3D fluid" textures</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here’s a curated selection of real 3D galleries and project showcases featuring liquid-metal and glass-fluid effects in branding and poster work. All links point directly to primary portfolios/projects—no aggregator or “best of” list sites.
+
+1. Fluid Metallic 3D Animation (Dribbble)  
+   A dynamic 3D render of flowing, polished-metallic forms—perfect for abstract poster backgrounds or animated brand hero visuals.  
+   Link: https://dribbble.com/shots/25485410-Fluid-Metallic-3D-Animation ([dribbble.com](https://dribbble.com/shots/25485410-Fluid-Metallic-3D-Animation?utm_source=chatgpt.com))
+
+2. Metal Flow – Liquid Metal Textures (Dribbble)  
+   A pack of 12 handcrafted gold, bronze, and silver liquid-metal textures. Ideal for adding luxurious fluid details to logos, packaging, or poster compositions.  
+   Link: https://dribbble.com/shots/25522987-Metal-Flow-Liquid-Metal-Textures ([dribbble.com](https://dribbble.com/shots/25522987-Metal-Flow-Liquid-Metal-Textures?utm_source=chatgpt.com))
+
+3. Liquid Metal Personal Branding (Dribbble)  
+   A personal-branding identity built around molten, liquid-metal forms—incorporating fluid shapes into typography and color palettes for a futuristic look.  
+   Link: https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding ([dribbble.com](https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding?utm_source=chatgpt.com))
+
+4. 3D Liquid Metallic Backgrounds (Dribbble)  
+   A set of high-res 3D renders mimicking the ebb and flow of liquid metals—ready for print posters, digital banners, or brand moodboards.  
+   Link: https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds ([dribbble.com](https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds?utm_source=chatgpt.com))
+
+5. Design Assets: Fluid Glass 3D Shapes (Dribbble)  
+   A collection of 90 transparent, glass-like 3D objects—perfect for composing ethereal poster elements, UI overlays, or premium packaging mockups.  
+   Link: https://dribbble.com/shots/23123476-Design-Assets-Fluid-Glass-3D-Shapes ([dribbble.com](https://dribbble.com/shots/23123476-Design-Assets-Fluid-Glass-3D-Shapes?utm_source=chatgpt.com))
+
+6. Poster Featuring Moving Looped 3D Abstract Glass Elements (Dribbble)  
+   A poster-scale looped animation of glass-morph shapes—showcasing how fluid glass forms can become the centerpiece of print or motion-graphics work.  
+   Link: https://dribbble.com/shots/25118422-Poster-Featuring-Moving-Looped-3D-Abstract-Glass-Elements ([dribbble.com](https://dribbble.com/shots/25118422-Poster-Featuring-Moving-Looped-3D-Abstract-Glass-Elements?utm_source=chatgpt.com))
+
+7. Poster Featuring Glass Dispersion with 3D Elements (Dribbble)  
+   A compelling poster design that integrates fragmented, dispersed glass shapes with smooth 3D extrusion—great for event posters or marketing collateral.  
+   Link: https://dribbble.com/shots/25118251-Poster-Featuring-Glass-Dispersion-with-3D-Elements ([dribbble.com](https://dribbble.com/shots/25118251-Poster-Featuring-Glass-Dispersion-with-3D-Elements?utm_source=chatgpt.com))
+
+8. Liquid Elegance 3D Design (Dribbble)  
+   A refined, bubbly-textured fluid form in a calming color palette—demonstrates how fluid 3D shapes can be used in luxury branding and editorial spread concepts.  
+   Link: https://dribbble.com/shots/25343556-Liquid-Elegance-3D-Design ([dribbble.com](https://dribbble.com/shots/25343556-Liquid-Elegance-3D-Design?utm_source=chatgpt.com))
+
+9. Iridescent Fluid 3D Shapes Collection (Behance)  
+   A Behance project offering 72 iridescent, refractive liquid shapes—downloadable for use in posters, branding visuals, social media graphics, and more.  
+   Link: https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection ([behance.net](https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection?utm_source=chatgpt.com))
+
+10. Flow – 25 Liquid 3D Background Textures (Behance)  
+    A set of 25 high-contrast, reflective-liquid 3D wave textures—suited for album art, poster designs, packaging, and desktop wallpapers.  
+    Link: https://www.behance.net/gallery/78331377/Flow-25-Liquid-3D-Background-Textures ([behance.net](https://www.behance.net/gallery/78331377/Flow-25-Liquid-3D-Background-Textures?utm_source=chatgpt.com))
+
+Each of these links leads straight to the artist’s project page or portfolio where you can explore high-resolution visuals and often download assets or palettes directly. Enjoy diving into these metallic-liquid and glass-fluid explorations!">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here’s a curated selection of real 3D galleries and project showcases featuring liquid-metal and glass-fluid effects in branding and poster work. All links point directly to primary portfolios/projects—no aggregator or “best of” list sites.
+
+1. Fluid Metallic 3D Animation (Dribbble)  
+   A dynamic 3D render of flowing, polished-metallic forms—perfect for abstract poster backgrounds or animated brand hero visuals.  
+   Link: https://dribbble.com/shots/25485410-Fluid-Metallic-3D-Animation ([dribbble.com](https://dribbble.com/shots/25485410-Fluid-Metallic-3D-Animation?utm_source=chatgpt.com))
+
+2. Metal Flow – Liquid Metal Textures (Dribbble)  
+   A pack of 12 handcrafted gold, bronze, and silver liquid-metal textures. Ideal for adding luxurious fluid details to logos, packaging, or poster compositions.  
+   Link: https://dribbble.com/shots/25522987-Metal-Flow-Liquid-Metal-Textures ([dribbble.com](https://dribbble.com/shots/25522987-Metal-Flow-Liquid-Metal-Textures?utm_source=chatgpt.com))
+
+3. Liquid Metal Personal Branding (Dribbble)  
+   A personal-branding identity built around molten, liquid-metal forms—incorporating fluid shapes into typography and color palettes for a futuristic look.  
+   Link: https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding ([dribbble.com](https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding?utm_source=chatgpt.com))
+
+4. 3D Liquid Metallic Backgrounds (Dribbble)  
+   A set of high-res 3D renders mimicking the ebb and flow of liquid metals—ready for print posters, digital banners, or brand moodboards.  
+   Link: https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds ([dribbble.com](https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds?utm_source=chatgpt.com))
+
+5. Design Assets: Fluid Glass 3D Shapes (Dribbble)  
+   A collection of 90 transparent, glass-like 3D objects—perfect for composing ethereal poster elements, UI overlays, or premium packaging mockups.  
+   Link: https://dribbble.com/shots/23123476-Design-Assets-Fluid-Glass-3D-Shapes ([dribbble.com](https://dribbble.com/shots/23123476-Design-Assets-Fluid-Glass-3D-Shapes?utm_source=chatgpt.com))
+
+6. Poster Featuring Moving Looped 3D Abstract Glass Elements (Dribbble)  
+   A poster-scale looped animation of glass-morph shapes—showcasing how fluid glass forms can become the centerpiece of print or motion-graphics work.  
+   Link: https://dribbble.com/shots/25118422-Poster-Featuring-Moving-Looped-3D-Abstract-Glass-Elements ([dribbble.com](https://dribbble.com/shots/25118422-Poster-Featuring-Moving-Looped-3D-Abstract-Glass-Elements?utm_source=chatgpt.com))
+
+7. Poster Featuring Glass Dispersion with 3D Elements (Dribbble)  
+   A compelling poster design that integrates fragmented, dispersed glass shapes with smooth 3D extrusion—great for event posters or marketing collateral.  
+   Link: https://dribbble.com/shots/25118251-Poster-Featuring-Glass-Dispersion-with-3D-Elements ([dribbble.com](https://dribbble.com/shots/25118251-Poster-Featuring-Glass-Dispersion-with-3D-Elements?utm_source=chatgpt.com))
+
+8. Liquid Elegance 3D Design (Dribbble)  
+   A refined, bubbly-textured fluid form in a calming color palette—demonstrates how fluid 3D shapes can be used in luxury branding and editorial spread concepts.  
+   Link: https://dribbble.com/shots/25343556-Liquid-Elegance-3D-Design ([dribbble.com](https://dribbble.com/shots/25343556-Liquid-Elegance-3D-Design?utm_source=chatgpt.com))
+
+9. Iridescent Fluid 3D Shapes Collection (Behance)  
+   A Behance project offering 72 iridescent, refractive liquid shapes—downloadable for use in posters, branding visuals, social media graphics, and more.  
+   Link: https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection ([behance.net](https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection?utm_source=chatgpt.com))
+
+10. Flow – 25 Liquid 3D Background Textures (Behance)  
+    A set of 25 high-contrast, reflective-liquid 3D wave textures—suited for album art, poster designs, packaging, and desktop wallpapers.  
+    Link: https://www.behance.net/gallery/78331377/Flow-25-Liquid-3D-Background-Textures ([behance.net](https://www.behance.net/gallery/78331377/Flow-25-Liquid-3D-Background-Textures?utm_source=chatgpt.com))
+
+Each of these links leads straight to the artist’s project page or portfolio where you can explore high-resolution visuals and often download assets or palettes directly. Enjoy diving into these metallic-liquid and glass-fluid explorations!</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Fluid Metallic 3D Animation by pland on Dribbble (https://dribbble.com/shots/25485410-Fluid-Metallic-3D-Animation?utm_source=chatgpt.com)
+2. Metal Flow - Liquid Metal Textures by CreativeVeila on Dribbble (https://dribbble.com/shots/25522987-Metal-Flow-Liquid-Metal-Textures?utm_source=chatgpt.com)
+3. Liquid Metal Personal Branding by Oleg Vishnevsky on Dribbble (https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding?utm_source=chatgpt.com)
+4. 3D Liquid Metallic Backgrounds by themefire on Dribbble (https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds?utm_source=chatgpt.com)
+5. Design Assets: Fluid Glass 3D Shapes by assetpro.design on Dribbble (https://dribbble.com/shots/23123476-Design-Assets-Fluid-Glass-3D-Shapes?utm_source=chatgpt.com)
+6. Poster Featuring Moving Looped 3D Abstract Glass Elements by Daniel Čepanko on Dribbble (https://dribbble.com/shots/25118422-Poster-Featuring-Moving-Looped-3D-Abstract-Glass-Elements?utm_source=chatgpt.com)
+7. Poster Featuring Glass Dispersion with 3D Elements by Daniel Čepanko on Dribbble (https://dribbble.com/shots/25118251-Poster-Featuring-Glass-Dispersion-with-3D-Elements?utm_source=chatgpt.com)
+8. Liquid Elegance 3D Design by Martin Handl on Dribbble (https://dribbble.com/shots/25343556-Liquid-Elegance-3D-Design?utm_source=chatgpt.com)
+9. Iridescent Fluid 3D Shapes Collection :: Behance (https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection?utm_source=chatgpt.com)
+10. Flow - 25 Liquid 3D Background Textures :: Behance (https://www.behance.net/gallery/78331377/Flow-25-Liquid-3D-Background-Textures?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/25485410-Fluid-Metallic-3D-Animation?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Fluid Metallic 3D Animation by pland on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25522987-Metal-Flow-Liquid-Metal-Textures?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Metal Flow - Liquid Metal Textures by CreativeVeila on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25664607-Liquid-Metal-Personal-Branding?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Liquid Metal Personal Branding by Oleg Vishnevsky on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/22083689-3D-Liquid-Metallic-Backgrounds?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. 3D Liquid Metallic Backgrounds by themefire on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23123476-Design-Assets-Fluid-Glass-3D-Shapes?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Design Assets: Fluid Glass 3D Shapes by assetpro.design on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25118422-Poster-Featuring-Moving-Looped-3D-Abstract-Glass-Elements?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Poster Featuring Moving Looped 3D Abstract Glass Elements by Daniel Čepanko on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25118251-Poster-Featuring-Glass-Dispersion-with-3D-Elements?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Poster Featuring Glass Dispersion with 3D Elements by Daniel Čepanko on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25343556-Liquid-Elegance-3D-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Liquid Elegance 3D Design by Martin Handl on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Iridescent Fluid 3D Shapes Collection :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/78331377/Flow-25-Liquid-3D-Background-Textures?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Flow - 25 Liquid 3D Background Textures :: Behance</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="45.78">45.78秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="65,444">65,444</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. 3D liquid fluid effects branding site:behance.net
+2. metallic liquid 3D design poster site:dribbble.com
+3. "glass liquid 3D" portfolio branding visual
+4. glass liquid 3D portfolio branding visual
+5. metallic chrome liquid 3D shapes textures site:artstation.com">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. 3D liquid fluid effects branding site:behance.net</li><li class="text-sm text-gray-600">2. metallic liquid 3D design poster site:dribbble.com</li><li class="text-sm text-gray-600">3. "glass liquid 3D" portfolio branding visual</li><li class="text-sm text-gray-600">4. glass liquid 3D portfolio branding visual</li><li class="text-sm text-gray-600">5. metallic chrome liquid 3D shapes textures site:artstation.com</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for actual visual galleries and portfolios showcasing 3D liquid and fluid effects in design work, focusing on finding direct sources rather than articles about them.Based on my search, I've found several excellent visual galleries showcasing 3D liquid and fluid effects, metallic liquids, and glass-like textures specifically for branding and design work. Here are the key sources:
+
+## Visual Galleries for 3D Liquid & Fluid Effects
+
+### Behance Collections
+Behance is the world's largest creative network for showcasing and discovering creative liquid font work, with specialized galleries for:
+
+- **Behance Iridescent Fluid 3D Shapes Collection** - Features glass-like iridescent fluid shapes perfect for branding applications
+- **Behance Fluidify 3D Gradients Collection** - Showcases liquid blob shapes with gradient effects
+- **Liquid Animation Projects** - 289 appreciations for Lancôme Genefique / CGI Visual Effects and 32 appreciations for FLUID SCREEN | CONCEPT ANIMATION
+
+### Dribbble Showcases
+Explore thousands of high-quality 3d metallic images on Dribbble. Your resource to get inspired, discover and connect with designers worldwide.
+
+Key collections include:
+- **Liquid Metal Designs** - Explore thousands of high-quality liquid metal images on Dribbble. Your resource to get inspired, discover and connect with designers worldwide.
+- **3D Metallic Chrome** - Liquid metal puddles and Chrome blob shapes. Liquid metal drop forms
+- **Terminator Liquid Metal Poster** - Terminator 'Liquid Metal' Poster designed by Matthew Rudhall. Connect with them on Dribbble; the global community for designers and creative professionals.
+
+### ArtStation Professional Collections
+Chrome & vector abstract shapes bundle – 200 geometric design elements, USD $35.00. Both metallic 3D and flat 2D versions are included.
+
+Professional-grade resources:
+- **Chrome 3D Effect for Photoshop** - Chrome 3D Effect for Photoshop template, allowing you to achieve a super-realistic metallic 3D effect in seconds. This versatile and super easy-to-use template perfectly adds an instant high-resolution chrome look to flat text, icons, vectors, images, sketches, and other monochrome graphics
+- **Liquid Shapes Bundle** - 50%OFF TIME LIMITED DISCOUNT Beautiful collection of 60 unique high-quality abstract 3D illustrations & elements in trendy holographic ultraviolet colors.
+- **Acid & Chrome Abstract Shapes** - Introducing the massive bundle of acid & chrome abstract shapes that comprises over 200 trendy design elements ready to be dropped into your creative project. This ultimate collection of sleek chrome 3D shapes and 2D vector counterparts will have you on your way to creating trendy posters, streetwear designs, eye-catching logos, and album cover artworks in no time!
+
+### Specialized Tools & Resources
+- **Liquid Glass Visual Generator** - Create stunning liquid glass effects for your UI designs. Real-time preview, customizable parameters, and instant code export.
+- **Liquid Glass Texture Pack** - Liquid Glass Texture pack comes with 100 PNG's of transparent 4K liquid glass blobs. This texture pack works for Instagram, posters, websites, and branding.
+
+These sources provide direct access to actual visual portfolios and design resources rather than articles about design inspiration, giving you immediate access to professional-quality 3D liquid and fluid effects for your branding and poster design projects.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for actual visual galleries and portfolios showcasing 3D liquid and fluid effects in design work, focusing on finding direct sources rather than articles about them.Based on my search, I've found several excellent visual galleries showcasing 3D liquid and fluid effects, metallic liquids, and glass-like textures specifically for branding and design work. Here are the key sources:
+
+## Visual Galleries for 3D Liquid & Fluid Effects
+
+### Behance Collections
+Behance is the world's largest creative network for showcasing and discovering creative liquid font work, with specialized galleries for:
+
+- **Behance Iridescent Fluid 3D Shapes Collection** - Features glass-like iridescent fluid shapes perfect for branding applications
+- **Behance Fluidify 3D Gradients Collection** - Showcases liquid blob shapes with gradient effects
+- **Liquid Animation Projects** - 289 appreciations for Lancôme Genefique / CGI Visual Effects and 32 appreciations for FLUID SCREEN | CONCEPT ANIMATION
+
+### Dribbble Showcases
+Explore thousands of high-quality 3d metallic images on Dribbble. Your resource to get inspired, discover and connect with designers worldwide.
+
+Key collections include:
+- **Liquid Metal Designs** - Explore thousands of high-quality liquid metal images on Dribbble. Your resource to get inspired, discover and connect with designers worldwide.
+- **3D Metallic Chrome** - Liquid metal puddles and Chrome blob shapes. Liquid metal drop forms
+- **Terminator Liquid Metal Poster** - Terminator 'Liquid Metal' Poster designed by Matthew Rudhall. Connect with them on Dribbble; the global community for designers and creative professionals.
+
+### ArtStation Professional Collections
+Chrome & vector abstract shapes bundle – 200 geometric design elements, USD $35.00. Both metallic 3D and flat 2D versions are included.
+
+Professional-grade resources:
+- **Chrome 3D Effect for Photoshop** - Chrome 3D Effect for Photoshop template, allowing you to achieve a super-realistic metallic 3D effect in seconds. This versatile and super easy-to-use template perfectly adds an instant high-resolution chrome look to flat text, icons, vectors, images, sketches, and other monochrome graphics
+- **Liquid Shapes Bundle** - 50%OFF TIME LIMITED DISCOUNT Beautiful collection of 60 unique high-quality abstract 3D illustrations & elements in trendy holographic ultraviolet colors.
+- **Acid & Chrome Abstract Shapes** - Introducing the massive bundle of acid & chrome abstract shapes that comprises over 200 trendy design elements ready to be dropped into your creative project. This ultimate collection of sleek chrome 3D shapes and 2D vector counterparts will have you on your way to creating trendy posters, streetwear designs, eye-catching logos, and album cover artworks in no time!
+
+### Specialized Tools & Resources
+- **Liquid Glass Visual Generator** - Create stunning liquid glass effects for your UI designs. Real-time preview, customizable parameters, and instant code export.
+- **Liquid Glass Texture Pack** - Liquid Glass Texture pack comes with 100 PNG's of transparent 4K liquid glass blobs. This texture pack works for Instagram, posters, websites, and branding.
+
+These sources provide direct access to actual visual portfolios and design resources rather than articles about design inspiration, giving you immediate access to professional-quality 3D liquid and fluid effects for your branding and poster design projects.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Liquid Font Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/liquid%20font)
+2. Behance (https://www.behance.net/gallery/195158655/Fluidify-3D-Gradients-Liquid-Blob-Shapes-Collection)
+3. Iridescent fluid 3D shapes collection (https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection)
+4. Fluid Animation Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/?search=Fluid+Animation)
+5. Liquid Poster designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/liquid_poster)
+6. Liquid Metal designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/liquid-metal)
+7. Liquid, Brush Poster Set Vector by Pikepicture on Dribbble (https://dribbble.com/goods/731247-Liquid-Brush-Poster-Set-Vector)
+8. ArtStation - Acid & chrome abstract shapes bundle | Artworks (https://www.artstation.com/marketplace/p/ojvb2/acid-chrome-abstract-shapes-bundle)
+9. Liquid Materials for Game Development | ArtStation (https://www.artstation.com/marketplace/game-dev/assets/3d/materials/liquid)
+10. ArtStation - Vape Liquid Bottle And Closed Box | Resources (https://www.artstation.com/marketplace/p/7o7aY/vape-liquid-bottle-and-closed-box)
+11. 3D Liquid Materials | ArtStation (https://www.artstation.com/marketplace/game-dev/resources/3d-models/materials/liquid?section=latest&softwares=substance-designer&page=1)
+12. 3D x Branding: Shaping a Brand Identity through Dynamic 3D Visuals | Codrops (https://tympanus.net/codrops/2024/11/07/3d-x-branding-shaping-a-brand-identity-through-dynamic-3d-visuals/)
+13. ArtStation - Chrome 3D Effect for Photoshop + 120 Shapes | Artworks (https://www.artstation.com/marketplace/p/YDvGm/chrome-3d-effect-for-photoshop-120-shapes)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/search/projects/liquid%20font" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Liquid Font Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/195158655/Fluidify-3D-Gradients-Liquid-Blob-Shapes-Collection" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/130051913/Iridescent-fluid-3D-shapes-collection" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Iridescent fluid 3D shapes collection</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/?search=Fluid+Animation" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Fluid Animation Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/tags/liquid_poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Liquid Poster designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/liquid-metal" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Liquid Metal designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/goods/731247-Liquid-Brush-Poster-Set-Vector" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Liquid, Brush Poster Set Vector by Pikepicture on Dribbble</a></li><li class="text-sm"><a href="https://www.artstation.com/marketplace/p/ojvb2/acid-chrome-abstract-shapes-bundle" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. ArtStation - Acid & chrome abstract shapes bundle | Artworks</a></li><li class="text-sm"><a href="https://www.artstation.com/marketplace/game-dev/assets/3d/materials/liquid" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Liquid Materials for Game Development | ArtStation</a></li><li class="text-sm"><a href="https://www.artstation.com/marketplace/p/7o7aY/vape-liquid-bottle-and-closed-box" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. ArtStation - Vape Liquid Bottle And Closed Box | Resources</a></li><li class="text-sm"><a href="https://www.artstation.com/marketplace/game-dev/resources/3d-models/materials/liquid?section=latest&softwares=substance-designer&page=1" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. 3D Liquid Materials | ArtStation</a></li><li class="text-sm"><a href="https://tympanus.net/codrops/2024/11/07/3d-x-branding-shaping-a-brand-identity-through-dynamic-3d-visuals/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. 3D x Branding: Shaping a Brand Identity through Dynamic 3D Visuals | Codrops</a></li><li class="text-sm"><a href="https://www.artstation.com/marketplace/p/YDvGm/chrome-3d-effect-for-photoshop-120-shapes" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. ArtStation - Chrome 3D Effect for Photoshop + 120 Shapes | Artworks</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
