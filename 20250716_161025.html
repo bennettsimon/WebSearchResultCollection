@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about coffee brand 2D mascot design examples featuring warm friendly anthropomorphic coffee bean character">The user is asking about coffee brand 2D mascot design examples featuring warm friendly anthropomorphic coffee bean character</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 16:11:03</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="10.78">10.78秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="615">615</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. coffee brand 2D mascot anthropomorphic coffee bean character warm friendly
+2. coffee bean character design examples
+3. friendly coffee mascot logo
+4. anthropomorphic coffee bean character inspiration">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. coffee brand 2D mascot anthropomorphic coffee bean character warm friendly</li><li class="text-sm text-gray-600">2. coffee bean character design examples</li><li class="text-sm text-gray-600">3. friendly coffee mascot logo</li><li class="text-sm text-gray-600">4. anthropomorphic coffee bean character inspiration</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="For coffee brand mascot designs featuring warm, friendly, anthropomorphic coffee bean characters, several creative examples and concepts are available:
+
+**Examples of Anthropomorphic Coffee Bean Characters:**
+*   **Expressive and Playful:** Many designs depict coffee beans with large, expressive eyes, wide smiles, and rosy cheeks, often showcasing a joyful and lively mood. Some are shown jumping enthusiastically, while others might be waving or giving a thumbs-up, exuding a friendly and welcoming energy.
+*   **With Accessories and Poses:** These characters can be designed with small white gloves and brown shoes, or even sporting sneakers and sunglasses, adding to their personality. They are often shown holding steaming mugs or cups of coffee, emphasizing their connection to the product.
+*   **Retro and Cartoon Styles:** There are examples in retro cartoon styles from the '70s and '80s, featuring groovy monochrome designs with arms and legs. Other styles include modern illustrations with smooth curves and a playful yet warm feel.
+*   **Varied Emotions and Activities:** Beyond just smiling, these mascots can convey a range of emotions or engage in activities like walking, doing yoga, or even serving coffee, making them versatile for different brand messaging.
+
+**Design Elements Contributing to a Warm and Friendly Vibe:**
+*   **Colors:** Rich and cream colors are often used to evoke a cozy café atmosphere.
+*   **Font Integration:** Brand names are frequently integrated with the mascot using friendly, bold, soft, or rounded fonts that complement the character's warmth.
+*   **Overall Impression:** The goal is to capture the essence of community and comfort, making the mascot perfect for coffee shops or café brands.
+
+These examples demonstrate how 2D anthropomorphic coffee bean characters can be designed to be warm, friendly, and engaging mascots for coffee brands, often aiming for a playful and inviting aesthetic.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">For coffee brand mascot designs featuring warm, friendly, anthropomorphic coffee bean characters, several creative examples and concepts are available:
+
+**Examples of Anthropomorphic Coffee Bean Characters:**
+*   **Expressive and Playful:** Many designs depict coffee beans with large, expressive eyes, wide smiles, and rosy cheeks, often showcasing a joyful and lively mood. Some are shown jumping enthusiastically, while others might be waving or giving a thumbs-up, exuding a friendly and welcoming energy.
+*   **With Accessories and Poses:** These characters can be designed with small white gloves and brown shoes, or even sporting sneakers and sunglasses, adding to their personality. They are often shown holding steaming mugs or cups of coffee, emphasizing their connection to the product.
+*   **Retro and Cartoon Styles:** There are examples in retro cartoon styles from the '70s and '80s, featuring groovy monochrome designs with arms and legs. Other styles include modern illustrations with smooth curves and a playful yet warm feel.
+*   **Varied Emotions and Activities:** Beyond just smiling, these mascots can convey a range of emotions or engage in activities like walking, doing yoga, or even serving coffee, making them versatile for different brand messaging.
+
+**Design Elements Contributing to a Warm and Friendly Vibe:**
+*   **Colors:** Rich and cream colors are often used to evoke a cozy café atmosphere.
+*   **Font Integration:** Brand names are frequently integrated with the mascot using friendly, bold, soft, or rounded fonts that complement the character's warmth.
+*   **Overall Impression:** The goal is to capture the essence of community and comfort, making the mascot perfect for coffee shops or café brands.
+
+These examples demonstrate how 2D anthropomorphic coffee bean characters can be designed to be warm, friendly, and engaging mascots for coffee brands, often aiming for a playful and inviting aesthetic.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGITh0MsLWSrZtgFOw19TqhtUEYOp5HGABBXXvYzvW6_1D3b_-24kDLB60EYKYCS--02l_FKeLxjziC4bJscY3O6chU3zfeVzhYdh3BfMquFtExYC4qVZgOWb5AsgWEBgmuqybpoglUYOf1khPeXQnP0ylX0hvZZ1itWGOJpZCguYHkaREpJcuMz_sHyiw8E4v99sPiRs04jHJPJQK6nQJJJ5Oc7ur1HcNzul23ORdLzB5kcTmUi4PztZXF6iRQs9ySxiVT7qMuyzS4sKrf9rG-7spGroac9Q==)
+2. vectorstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvihEZBAi5flo0JBEJRWNRI_7IhqGNgW3jZHYdCdxH9XhLZJR6d11-CxViPYsHfCuVCpQwBkoqCTSJqHJVN40qIamXch4awHBAm7L1DNjW5b4luOQvjLk4rsdXDLFbtLmWu7tL4uh48RgfBgMCqnB_yGSIbWAXL3E5mSPQXcOotK8yGcOW2xvy4QPg8btKGa9lR60St8vL)
+3. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcv3Q1O-p3drf2e2LMp8JwdYSMT2AFg1DLPosnRejPWkUZ7CyCaUr0XwAuerhUAJMcGyc3-KYmBYuQPe3acJm8AYvw0wZdKcURrag9sVqqSiqBPec6Tls0jmP4AMvm1VW_lVUAVIIZ5egpxqqXX4Ydmr1RzFQSrrLFSvSoAwxLh31Aq2s=)
+4. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnGby7ABwfz6tiIFoGSK78xmRiMT77BKVC68JZzPiF2spRYY65Ea9JzR0FvU1RVmi5IUlA-jDqsYZKW-qQhRgw3FhGhJSYwsIOuOoF4xthNYIuuCMJCna7T7zvx6PxljGxCagxvhmcoQbvYAzAADWEuTJxNJ3fc6Ptl7LTe0ZFoka4XTewLDBA)
+5. appypiedesign.ai (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg8FsdH5DO_oZINvWh_W7i985W7BZQH9bUpJZv35_0xKt1V8_1qOlhRwYv9Q0KSrouVtEGtTWxs4mIBvyFP0vaXbreLnMIbQHLxUOALTDSrFXmVMrQotN_bSuigyIve3mt98Iw4ZlqNk0=)
+6. craiyon.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYPiDrpm_SRq3dM6W98bnHpUDrctVj-u7CeaLjCdR0pluk4MczE2nX9zRR1OQjlbbC1EgBNZRF9Etqv9TQe_lZeCnC-rJbpyLfBItmgq5WsW_L1njnz_o4oN-rpFwFiYIpZXHRihNVKacZuU0ZHd6Gr4dCj0e76OyyJ8_JYwQ7AlCu703BWn-mYI2RP4q30hKK0QqowkBPDAM485M=)
+7. craiyon.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFru6zWnLDMy8lShEe3uC-bdQtjEakVw07E5Zh80_fyMOrqCQSOwBcSvNrk0_RYk1UlUUx5GzUWVfoG3dpwGP9JpmU8Ug5NuGtA-lcaQYsf9aj66dPWuPEPGD-vtarc6QVZH-6ROlR8hh9SPsE=)
+8. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2gYNNEjEgXakgiNYtv8IkAIqLUUNVmyO1ODo4zWtef1jM4BTXPvewSlB-TjBgv6NBiypRPoEcAJe45UMhyz1UQpkA5rnd4p2eWKdkvZwv2XrEKtddtDYQ1LIBx4QQETa171LFHHPwzZPRx-uZkl_st2YFWw==)
+9. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgqZQoV9OZkd99nWL7KLC-qt_qtv7JFZ_LixEqRweRw05EHZ1ENk2KjwrCb37yZl1L3x3N-rT9Mm8RTyCv0zoSqHm3D2uW5XEiWFU5XMKQ5QfnHrDmCNk_LxftuhtMjMOKY8z0fQrYKrkirDduJqfWYoEovIZcmUrZHlNVZLpZMCAf_vc=)
+10. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGI1ePb9_iZNq7B-9Iaq6eV70G8ztf5tPrX0Yhl-ko7LnSC34M1dbQVjsP9xBd0aQM2Zo4xiaELMcLmhdi7M8QQ17SqxXXMkJVNPYaNhAZ4gz3-xRKMaRq5pXjTvO5-o67bhrty4YhSWmtqzPN3SlSM0WMz145eoWeVbL-mRXI6aHhhI2UmLgISPipR)
+11. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwea5WcxBhuei3eYVUMcNKs_iExS5oa7Qtfe5TgzY0Xy-XykBH5G60l4M76WoA5fWTAODiY31MS-bkFs_s3isai_YTX3fT7bPM2VZAHx_MIkk9xSF2bZXMVMdZDEuVdG8GLylyeF1mGQcVyZ1yH11h-UXsBiCKsSnhi0eA3jc=)
+12. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWVUjruFdK2djfSaU_W2su7j4NkeSzfsceS-DYix9gTmzs5wwl5wWYyl9YvmXLjrbqBu9tKFIPiLXtojMD7KIKXxhPIcrpxEXt1-Ko7tenC1oUB8Bh_Pdvk9n5pbDnt0RR8r6AfmIovlrWGxPV)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGITh0MsLWSrZtgFOw19TqhtUEYOp5HGABBXXvYzvW6_1D3b_-24kDLB60EYKYCS--02l_FKeLxjziC4bJscY3O6chU3zfeVzhYdh3BfMquFtExYC4qVZgOWb5AsgWEBgmuqybpoglUYOf1khPeXQnP0ylX0hvZZ1itWGOJpZCguYHkaREpJcuMz_sHyiw8E4v99sPiRs04jHJPJQK6nQJJJ5Oc7ur1HcNzul23ORdLzB5kcTmUi4PztZXF6iRQs9ySxiVT7qMuyzS4sKrf9rG-7spGroac9Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvihEZBAi5flo0JBEJRWNRI_7IhqGNgW3jZHYdCdxH9XhLZJR6d11-CxViPYsHfCuVCpQwBkoqCTSJqHJVN40qIamXch4awHBAm7L1DNjW5b4luOQvjLk4rsdXDLFbtLmWu7tL4uh48RgfBgMCqnB_yGSIbWAXL3E5mSPQXcOotK8yGcOW2xvy4QPg8btKGa9lR60St8vL" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. vectorstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcv3Q1O-p3drf2e2LMp8JwdYSMT2AFg1DLPosnRejPWkUZ7CyCaUr0XwAuerhUAJMcGyc3-KYmBYuQPe3acJm8AYvw0wZdKcURrag9sVqqSiqBPec6Tls0jmP4AMvm1VW_lVUAVIIZ5egpxqqXX4Ydmr1RzFQSrrLFSvSoAwxLh31Aq2s=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnGby7ABwfz6tiIFoGSK78xmRiMT77BKVC68JZzPiF2spRYY65Ea9JzR0FvU1RVmi5IUlA-jDqsYZKW-qQhRgw3FhGhJSYwsIOuOoF4xthNYIuuCMJCna7T7zvx6PxljGxCagxvhmcoQbvYAzAADWEuTJxNJ3fc6Ptl7LTe0ZFoka4XTewLDBA" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg8FsdH5DO_oZINvWh_W7i985W7BZQH9bUpJZv35_0xKt1V8_1qOlhRwYv9Q0KSrouVtEGtTWxs4mIBvyFP0vaXbreLnMIbQHLxUOALTDSrFXmVMrQotN_bSuigyIve3mt98Iw4ZlqNk0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. appypiedesign.ai</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYPiDrpm_SRq3dM6W98bnHpUDrctVj-u7CeaLjCdR0pluk4MczE2nX9zRR1OQjlbbC1EgBNZRF9Etqv9TQe_lZeCnC-rJbpyLfBItmgq5WsW_L1njnz_o4oN-rpFwFiYIpZXHRihNVKacZuU0ZHd6Gr4dCj0e76OyyJ8_JYwQ7AlCu703BWn-mYI2RP4q30hKK0QqowkBPDAM485M=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. craiyon.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFru6zWnLDMy8lShEe3uC-bdQtjEakVw07E5Zh80_fyMOrqCQSOwBcSvNrk0_RYk1UlUUx5GzUWVfoG3dpwGP9JpmU8Ug5NuGtA-lcaQYsf9aj66dPWuPEPGD-vtarc6QVZH-6ROlR8hh9SPsE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. craiyon.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2gYNNEjEgXakgiNYtv8IkAIqLUUNVmyO1ODo4zWtef1jM4BTXPvewSlB-TjBgv6NBiypRPoEcAJe45UMhyz1UQpkA5rnd4p2eWKdkvZwv2XrEKtddtDYQ1LIBx4QQETa171LFHHPwzZPRx-uZkl_st2YFWw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgqZQoV9OZkd99nWL7KLC-qt_qtv7JFZ_LixEqRweRw05EHZ1ENk2KjwrCb37yZl1L3x3N-rT9Mm8RTyCv0zoSqHm3D2uW5XEiWFU5XMKQ5QfnHrDmCNk_LxftuhtMjMOKY8z0fQrYKrkirDduJqfWYoEovIZcmUrZHlNVZLpZMCAf_vc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGI1ePb9_iZNq7B-9Iaq6eV70G8ztf5tPrX0Yhl-ko7LnSC34M1dbQVjsP9xBd0aQM2Zo4xiaELMcLmhdi7M8QQ17SqxXXMkJVNPYaNhAZ4gz3-xRKMaRq5pXjTvO5-o67bhrty4YhSWmtqzPN3SlSM0WMz145eoWeVbL-mRXI6aHhhI2UmLgISPipR" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwea5WcxBhuei3eYVUMcNKs_iExS5oa7Qtfe5TgzY0Xy-XykBH5G60l4M76WoA5fWTAODiY31MS-bkFs_s3isai_YTX3fT7bPM2VZAHx_MIkk9xSF2bZXMVMdZDEuVdG8GLylyeF1mGQcVyZ1yH11h-UXsBiCKsSnhi0eA3jc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWVUjruFdK2djfSaU_W2su7j4NkeSzfsceS-DYix9gTmzs5wwl5wWYyl9YvmXLjrbqBu9tKFIPiLXtojMD7KIKXxhPIcrpxEXt1-Ko7tenC1oUB8Bh_Pdvk9n5pbDnt0RR8r6AfmIovlrWGxPV" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. pinterest.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="31.01">31.01秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="56,543">56,543</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:dribbble.com coffee bean mascot
+2. anthropomorphic coffee bean mascot friendly branding site:behance.net">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:dribbble.com coffee bean mascot</li><li class="text-sm text-gray-600">2. anthropomorphic coffee bean mascot friendly branding site:behance.net</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are several direct portfolio/gallery pages featuring warm, friendly, anthropomorphic coffee-bean mascots:
+
+• Coffee Bean Superhero Mascot  
+  A playful, retro-style bean character wearing a cape and striking a heroic pose. Purely vector-driven illustration, perfect for a fun, energetic brand identity.  
+  Link: dribbble.com/shots/9744028-Coffee-Bean-Superhero-Mascot ([dribbble.com](https://dribbble.com/shots/9744028-Coffee-Bean-Superhero-Mascot))
+
+• Retro Illustration of Cartoon Golden Coffee Bean Mascot  
+  A vintage-inspired, anthropomorphic coffee bean with subtle shading and a friendly grin. Available as a downloadable vector for quick adaptation.  
+  Link: dribbble.com/shots/19393441-Retro-illustration-of-cartoon-golden-coffee-bean-mascot ([dribbble.com](https://dribbble.com/shots/19393441-Retro-illustration-of-cartoon-golden-coffee-bean-mascot))
+
+• Coffee Bean Mascot by MB-Studio  
+  A clean, simplified bean character with arms and legs—ideal for packaging, signage, or digital use in a warm, approachable style.  
+  Link: dribbble.com/shots/25262894-Coffee-Bean-Mascot ([dribbble.com](https://dribbble.com/shots/25262894-Coffee-Bean-Mascot))
+
+• Wild Bean Café Mascot (Behance)  
+  A fully fleshed-out mascot concept for a café chain, showcasing different expressions, poses, and usage mockups across collateral.  
+  Link: behance.net/gallery/227768745/Wild-Bean-Caf-Mascot ([behance.net](https://www.behance.net/gallery/227768745/Wild-Bean-Caf-Mascot))
+
+• Blend – Brand Design (Behance)  
+  Jennifer Lim’s concept for “Blend” coffee shop includes a charming bean mascot integrated into the logo and packaging, emphasizing friendliness and trust.  
+  Link: behance.net/gallery/153552719/Blend-Brand-Design ([behance.net](https://www.behance.net/gallery/153552719/Blend-Brand-Design?utm_source=chatgpt.com))">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are several direct portfolio/gallery pages featuring warm, friendly, anthropomorphic coffee-bean mascots:
+
+• Coffee Bean Superhero Mascot  
+  A playful, retro-style bean character wearing a cape and striking a heroic pose. Purely vector-driven illustration, perfect for a fun, energetic brand identity.  
+  Link: dribbble.com/shots/9744028-Coffee-Bean-Superhero-Mascot ([dribbble.com](https://dribbble.com/shots/9744028-Coffee-Bean-Superhero-Mascot))
+
+• Retro Illustration of Cartoon Golden Coffee Bean Mascot  
+  A vintage-inspired, anthropomorphic coffee bean with subtle shading and a friendly grin. Available as a downloadable vector for quick adaptation.  
+  Link: dribbble.com/shots/19393441-Retro-illustration-of-cartoon-golden-coffee-bean-mascot ([dribbble.com](https://dribbble.com/shots/19393441-Retro-illustration-of-cartoon-golden-coffee-bean-mascot))
+
+• Coffee Bean Mascot by MB-Studio  
+  A clean, simplified bean character with arms and legs—ideal for packaging, signage, or digital use in a warm, approachable style.  
+  Link: dribbble.com/shots/25262894-Coffee-Bean-Mascot ([dribbble.com](https://dribbble.com/shots/25262894-Coffee-Bean-Mascot))
+
+• Wild Bean Café Mascot (Behance)  
+  A fully fleshed-out mascot concept for a café chain, showcasing different expressions, poses, and usage mockups across collateral.  
+  Link: behance.net/gallery/227768745/Wild-Bean-Caf-Mascot ([behance.net](https://www.behance.net/gallery/227768745/Wild-Bean-Caf-Mascot))
+
+• Blend – Brand Design (Behance)  
+  Jennifer Lim’s concept for “Blend” coffee shop includes a charming bean mascot integrated into the logo and packaging, emphasizing friendliness and trust.  
+  Link: behance.net/gallery/153552719/Blend-Brand-Design ([behance.net](https://www.behance.net/gallery/153552719/Blend-Brand-Design?utm_source=chatgpt.com))</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Coffee Bean Superhero Mascot by Aloysius Patrimonio on Dribbble (https://dribbble.com/shots/9744028-Coffee-Bean-Superhero-Mascot)
+2. Retro illustration of cartoon golden coffee bean mascot by andhika judy on Dribbble (https://dribbble.com/shots/19393441-Retro-illustration-of-cartoon-golden-coffee-bean-mascot)
+3. Coffee Bean Mascot by MB-Studio on Dribbble (https://dribbble.com/shots/25262894-Coffee-Bean-Mascot)
+4. Wild Bean Café Mascot :: Behance (https://www.behance.net/gallery/227768745/Wild-Bean-Caf-Mascot)
+5. Blend - Brand Design :: Behance (https://www.behance.net/gallery/153552719/Blend-Brand-Design?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/9744028-Coffee-Bean-Superhero-Mascot" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Coffee Bean Superhero Mascot by Aloysius Patrimonio on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/19393441-Retro-illustration-of-cartoon-golden-coffee-bean-mascot" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Retro illustration of cartoon golden coffee bean mascot by andhika judy on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25262894-Coffee-Bean-Mascot" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Coffee Bean Mascot by MB-Studio on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/227768745/Wild-Bean-Caf-Mascot" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Wild Bean Café Mascot :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/153552719/Blend-Brand-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Blend - Brand Design :: Behance</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="38.60">38.60秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="39,775">39,775</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. coffee bean mascot character design site:behance.net
+2. anthropomorphic coffee bean mascot design site:dribbble.com
+3. "coffee bean character" portfolio design 2024
+4. coffee mascot logo design brand identity portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. coffee bean mascot character design site:behance.net</li><li class="text-sm text-gray-600">2. anthropomorphic coffee bean mascot design site:dribbble.com</li><li class="text-sm text-gray-600">3. "coffee bean character" portfolio design 2024</li><li class="text-sm text-gray-600">4. coffee mascot logo design brand identity portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for actual visual galleries and portfolios showcasing coffee brand mascot designs with anthropomorphic coffee bean characters.Let me search for more specific coffee character design portfolios on Dribbble:Let me search for designer portfolios with coffee character work:Let me try a search for specific coffee mascot design projects:Based on my search results, I found several excellent visual gallery sources for coffee brand 2D mascot designs featuring warm, friendly anthropomorphic coffee bean characters. Here are the best direct visual portfolios and galleries:
+
+## Primary Visual Galleries:
+
+**Behance Projects:**
+- Mascot Design - Atomic Coffee - A specific coffee mascot design project
+- BEAN PARK MASCOT CONCEPT DESIGN - Direct coffee bean mascot concepts
+- Food Characters Design Mascot - Includes food/beverage character designs
+
+**Dribbble Showcases:**
+- Coffee Retro Mascot Design designed by Afnan Assagav. Fueling Creativity with a Retro Twist: Unveiling the charm of my Coffee Retro Mascot Design. Sip into a blend of vintage vibes and modern artistry.
+- Coffee Shop Mascot Logo designed by dipo graphic.
+- Retro illustration of cartoon golden coffee bean mascot designed by andhika judy.
+- Discover 7 Coffee Mascot designs on Dribbble.
+
+**99designs Portfolio Collections:**
+- Weve collected some amazing examples of coffee logos from our global community of designers. Get inspired and start planning the perfect coffee logo design today.
+- We've collected some amazing examples of coffee shop brand identities from our global community of designers. Get inspired and start planning the perfect coffee shop brand design today.
+
+**Pinterest Visual Collections:**
+- Discover Pinterest's best ideas and inspiration for Coffee mascot design.
+- Discover Pinterest's best ideas and inspiration for Coffee bean character.
+
+## Specific Design Examples Found:
+
+The search revealed several direct examples of anthropomorphic coffee characters:
+- Cartoon mascot | Green Beans Cartoon mascots designed by ICARTOONALL 🖌. If you want to · Get a unique cartoon mascot logo and cartoon characters · you are in the right place!
+- Approved mascot logo for Phoenix Rising Coffee.
+
+These galleries showcase exactly what you're looking for - actual visual portfolios of 2D mascot designs featuring warm, friendly anthropomorphic coffee bean characters for coffee brands, rather than articles about where to find such designs.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for actual visual galleries and portfolios showcasing coffee brand mascot designs with anthropomorphic coffee bean characters.Let me search for more specific coffee character design portfolios on Dribbble:Let me search for designer portfolios with coffee character work:Let me try a search for specific coffee mascot design projects:Based on my search results, I found several excellent visual gallery sources for coffee brand 2D mascot designs featuring warm, friendly anthropomorphic coffee bean characters. Here are the best direct visual portfolios and galleries:
+
+## Primary Visual Galleries:
+
+**Behance Projects:**
+- Mascot Design - Atomic Coffee - A specific coffee mascot design project
+- BEAN PARK MASCOT CONCEPT DESIGN - Direct coffee bean mascot concepts
+- Food Characters Design Mascot - Includes food/beverage character designs
+
+**Dribbble Showcases:**
+- Coffee Retro Mascot Design designed by Afnan Assagav. Fueling Creativity with a Retro Twist: Unveiling the charm of my Coffee Retro Mascot Design. Sip into a blend of vintage vibes and modern artistry.
+- Coffee Shop Mascot Logo designed by dipo graphic.
+- Retro illustration of cartoon golden coffee bean mascot designed by andhika judy.
+- Discover 7 Coffee Mascot designs on Dribbble.
+
+**99designs Portfolio Collections:**
+- Weve collected some amazing examples of coffee logos from our global community of designers. Get inspired and start planning the perfect coffee logo design today.
+- We've collected some amazing examples of coffee shop brand identities from our global community of designers. Get inspired and start planning the perfect coffee shop brand design today.
+
+**Pinterest Visual Collections:**
+- Discover Pinterest's best ideas and inspiration for Coffee mascot design.
+- Discover Pinterest's best ideas and inspiration for Coffee bean character.
+
+## Specific Design Examples Found:
+
+The search revealed several direct examples of anthropomorphic coffee characters:
+- Cartoon mascot | Green Beans Cartoon mascots designed by ICARTOONALL 🖌. If you want to · Get a unique cartoon mascot logo and cartoon characters · you are in the right place!
+- Approved mascot logo for Phoenix Rising Coffee.
+
+These galleries showcase exactly what you're looking for - actual visual portfolios of 2D mascot designs featuring warm, friendly anthropomorphic coffee bean characters for coffee brands, rather than articles about where to find such designs.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Mascot Design - Atomic Coffee (https://www.behance.net/gallery/57598957/Mascot-Design-Atomic-Coffee)
+2. Behance (https://www.behance.net/gallery/83739655/BEAN-PARK-MASCOT-CONCEPT-DESIGN)
+3. Food Characters Design Mascot (https://www.behance.net/gallery/183906801/Food-Characters-Design-Mascot)
+4. Coffee Shop Mascot Logo by dipo graphic on Dribbble (https://dribbble.com/shots/22328284-Coffee-Shop-Mascot-Logo)
+5. Best Coffee Shop Mascot Logo designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/best-coffee-shop-mascot-logo)
+6. Cartoon mascot | Green Beans Cartoon mascots by ICARTOONALL 🖌 on Dribbble (https://dribbble.com/shots/24419476-Cartoon-mascot-Green-Beans-Cartoon-mascots)
+7. Cafe Mascot designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/cafe_mascot)
+8. Coffee Shop Branding Design | Coffee Shop Logo Design | Brand Identity (https://liquidesign.co.uk/tips-for-coffee-shop-branding-design/)
+9. The Best Cafe Logos and brand identities – BP&O (https://bpando.org/cafe/)
+10. Coffee Logos - 2525+ Best Coffee Logo Ideas. Free Coffee Logo Maker. | 99designs (https://99designs.com/inspiration/logos/coffee)
+11. Top 10 Coffee Shop Logos: Brewing Brand Identity - 2025 (https://inkbotdesign.com/coffee-shop-logos/)
+12. Phoenix & Coffee by Alfrey Davilla | vaneltia on Dribbble (https://dribbble.com/shots/17459147-Phoenix-Coffee)
+13. 15 Coffee Logos for Your Design Inspiration (https://www.manypixels.co/blog/brand-design/coffee-shop-logos)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/57598957/Mascot-Design-Atomic-Coffee" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Mascot Design - Atomic Coffee</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/83739655/BEAN-PARK-MASCOT-CONCEPT-DESIGN" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/183906801/Food-Characters-Design-Mascot" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Food Characters Design Mascot</a></li><li class="text-sm"><a href="https://dribbble.com/shots/22328284-Coffee-Shop-Mascot-Logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Coffee Shop Mascot Logo by dipo graphic on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/best-coffee-shop-mascot-logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Best Coffee Shop Mascot Logo designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/24419476-Cartoon-mascot-Green-Beans-Cartoon-mascots" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Cartoon mascot | Green Beans Cartoon mascots by ICARTOONALL 🖌 on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/cafe_mascot" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Cafe Mascot designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://liquidesign.co.uk/tips-for-coffee-shop-branding-design/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Coffee Shop Branding Design | Coffee Shop Logo Design | Brand Identity</a></li><li class="text-sm"><a href="https://bpando.org/cafe/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. The Best Cafe Logos and brand identities – BP&O</a></li><li class="text-sm"><a href="https://99designs.com/inspiration/logos/coffee" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Coffee Logos - 2525+ Best Coffee Logo Ideas. Free Coffee Logo Maker. | 99designs</a></li><li class="text-sm"><a href="https://inkbotdesign.com/coffee-shop-logos/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Top 10 Coffee Shop Logos: Brewing Brand Identity - 2025</a></li><li class="text-sm"><a href="https://dribbble.com/shots/17459147-Phoenix-Coffee" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Phoenix & Coffee by Alfrey Davilla | vaneltia on Dribbble</a></li><li class="text-sm"><a href="https://www.manypixels.co/blog/brand-design/coffee-shop-logos" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. 15 Coffee Logos for Your Design Inspiration</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
