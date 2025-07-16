@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about dynamic visual systems for sports and fitness brands, needing to see logo animations, event visuals, equipment designs, venue applications, and complete systems. The search should focus on brand visual languages expressing energy and vitality.">The user is asking about dynamic visual systems for sports and fitness brands, needing to see logo animations, event visuals, equipment designs, venue applications, and complete systems. The search should focus on brand visual languages expressing energy and vitality.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 19:46:07</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="16.98">16.98秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="838">838</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. dynamic visual systems sports fitness brands
+2. sports brand logo animation energy vitality
+3. fitness brand event visuals dynamic
+4. sports equipment design visual language energy
+5. fitness venue branding dynamic visuals
+6. complete brand visual systems sports fitness
+7. expressive visual identity sports vitality">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. dynamic visual systems sports fitness brands</li><li class="text-sm text-gray-600">2. sports brand logo animation energy vitality</li><li class="text-sm text-gray-600">3. fitness brand event visuals dynamic</li><li class="text-sm text-gray-600">4. sports equipment design visual language energy</li><li class="text-sm text-gray-600">5. fitness venue branding dynamic visuals</li><li class="text-sm text-gray-600">6. complete brand visual systems sports fitness</li><li class="text-sm text-gray-600">7. expressive visual identity sports vitality</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Dynamic visual systems for sports and fitness brands aim to express energy and vitality through various elements, including logo animations, event visuals, equipment designs, venue applications, and complete brand systems.
+
+**Key Elements of Dynamic Visual Systems:**
+
+*   **Logo Animations:** Logos for sports and fitness brands often feature dynamic elements and typography that convey movement and energy. Examples include logos with kinetic type elements that suggest motion, reflecting the activities within a gym or the dynamism of a sport. Animated logos can also embody concepts like growth, presence, and self-assurance for fitness brands.
+*   **Event Visuals:** For sports and fitness events, dynamic visuals are crucial for engaging audiences and building community. This can involve creating compelling graphic identities, using bold color palettes, and incorporating motion to bring energy. Digital signage at fitness centers can feature high-resolution images and rotating visuals for special offers or fitness tips, creating an immersive experience.
+*   **Equipment Designs:** The visual language of sports equipment emphasizes energy, precision, and performance. This includes using high-contrast and large proportions, as well as digital-inspired visual languages with patterns like dots or grids. Color and pattern in sportswear design are powerful tools; for instance, vibrant reds evoke passion and energy, while dynamic patterns can convey motion and vitality.
+*   **Venue Applications:** Fitness venues utilize dynamic visual systems in their interior and exterior branding. This includes compelling signage, intuitive wayfinding, striking environmental graphics, and immersive experiential spaces. Audiovisual systems with synchronized lighting effects and dynamic digital signage can transform a studio into an energizing, immersive environment. These applications help establish a unique brand identity and enhance the atmosphere, ensuring a memorable experience.
+*   **Complete Systems:** A comprehensive dynamic visual system encompasses a consistent use of colors, fonts, imagery, and messaging across all touchpoints. This includes brand strategy, identity design, merchandise and apparel, packaging, and digital marketing. The visual identity should capture the essence and energy of the business, telling its story and fostering emotional connection. Decathlon's refreshed brand identity, for example, emphasizes vitality and inclusivity through a new vibrant blue, a modular design, and expressive imagery. Such systems leverage bold color palettes and sleek logos to engage and motivate the audience.
+
+Overall, successful dynamic visual systems in sports and fitness effectively communicate energy, vitality, and a strong brand ethos through integrated and cohesive design elements.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Dynamic visual systems for sports and fitness brands aim to express energy and vitality through various elements, including logo animations, event visuals, equipment designs, venue applications, and complete brand systems.
+
+**Key Elements of Dynamic Visual Systems:**
+
+*   **Logo Animations:** Logos for sports and fitness brands often feature dynamic elements and typography that convey movement and energy. Examples include logos with kinetic type elements that suggest motion, reflecting the activities within a gym or the dynamism of a sport. Animated logos can also embody concepts like growth, presence, and self-assurance for fitness brands.
+*   **Event Visuals:** For sports and fitness events, dynamic visuals are crucial for engaging audiences and building community. This can involve creating compelling graphic identities, using bold color palettes, and incorporating motion to bring energy. Digital signage at fitness centers can feature high-resolution images and rotating visuals for special offers or fitness tips, creating an immersive experience.
+*   **Equipment Designs:** The visual language of sports equipment emphasizes energy, precision, and performance. This includes using high-contrast and large proportions, as well as digital-inspired visual languages with patterns like dots or grids. Color and pattern in sportswear design are powerful tools; for instance, vibrant reds evoke passion and energy, while dynamic patterns can convey motion and vitality.
+*   **Venue Applications:** Fitness venues utilize dynamic visual systems in their interior and exterior branding. This includes compelling signage, intuitive wayfinding, striking environmental graphics, and immersive experiential spaces. Audiovisual systems with synchronized lighting effects and dynamic digital signage can transform a studio into an energizing, immersive environment. These applications help establish a unique brand identity and enhance the atmosphere, ensuring a memorable experience.
+*   **Complete Systems:** A comprehensive dynamic visual system encompasses a consistent use of colors, fonts, imagery, and messaging across all touchpoints. This includes brand strategy, identity design, merchandise and apparel, packaging, and digital marketing. The visual identity should capture the essence and energy of the business, telling its story and fostering emotional connection. Decathlon's refreshed brand identity, for example, emphasizes vitality and inclusivity through a new vibrant blue, a modular design, and expressive imagery. Such systems leverage bold color palettes and sleek logos to engage and motivate the audience.
+
+Overall, successful dynamic visual systems in sports and fitness effectively communicate energy, vitality, and a strong brand ethos through integrated and cohesive design elements.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. designpool.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0OWjETW73Z_TfUmFpZmGjjCdEXPC4NxjRTwiNYjR3MNbVB8RBcHlmAgpjnI0bfXJqltxyejKfM3dKnrdLq0zbMJCPGvz3RJAmHSJruqqXbFN5ke_AtO6izxh0AR6iAfRF1kA=)
+2. designrush.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0SujebB5HUQWly2Mx04rLIIMMspdNLL0p2mEdSSedZbEBgHmxJRYZuLjp8wckfR_QBycGaQiABWzn2wIoqiC4UAnQ5uQeEw5XaRhKRQ_wGNCY7wYH5hIzyREW_83VqBOPXLlFZ4NS0A9QXL-fqnYj6-KESWH_)
+3. tiktok.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2xPvVtOeDfGUXg8iGo2xrNP-4ElRDi5BFdI67NHAA8EEdZ9-rH7TPMVt7k6aujOiLGjoMG7M_UHjIMuCoOJQtr5m5BVXgNiFMuMHAe8vAZcN-Cuh7PUd05TtzahNYUo-9usYr5ixyoPyBCHoyppdQ)
+4. itsnicethat.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGywmAyKMyliXOTn-ThBXPhExYbFoUacyB8HPXPPgoSJbBgEVDZXyIQYJya8pVpfWAmGDJWxIB-4CSuqCzLlNWgJiz_OFK-9RICACBoSbm7_7GKg-WcYLAGVILFgXr0cprVXh0D9cudhsnceJqEL0CYMPtw6euHg_dxpMGtVKz6djLX7li6STLlI5OjQFM=)
+5. marianatek.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE12KQweTJ4694a3q4hk9cW4R9TPjy7V0bU3e_jvvH0p41e3LrsLlkldqPL-r-lne4qs7_NhV4kzbH3VCJptQqv2bn8P6Ymy-Q5Euj1N72QK60bWvVZkaQVtdCERnXvSMFLO6mJmjdm7SaU7g8GfR594R8SgtUZ4E5DWcLaegAWlC3blTEjWNR3jQ==)
+6. lookdigitalsignage.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFX7VVlfSSrOXNheqgBSgBo8BISgoMLokxwa8c079EJgU74bGk8gf80DdnH5HoCN14utKC8oEf92df5P3pMKH9v3rOOnMaSNMOgNSIp9hSnf3FBl3s7CqMpWzDxwyezBVY3V8cDrrD6o7RVvdeei6PRd-r3AnXqplia3g==)
+7. zigpoll.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSP3LdgxwnOMk5raFZ0VplnTXa-MyVof13tCX8YBON-6i6Fpoo3oNM5yKG3QqKbUBip26sRg-RALvg9Gstu-1cFM0PG2zGAER2jfbTsAjXr0ZPwsEQl7IAjf9HH5eXGUSziAa_M2X50Xka4YnSh1y7lVAKhZFxCoxxghroxsgWJy0YKBhVQjyWYRiHiM2dcs5IlZrunfwVo-er7DN-_jZQIQR-4pv2gP7ajhTAQOOSiZGD92iGjBb6nIbFJi8PJemXSo_1loFIHsdjh_D_3y2nzoU3UZVHFJh0ibEhWTRaCo5lRFJIwaijxhgVrPtoOlq9vUHPJ0EY4HlxtWu8wMRBoP815sGnOSSDWzMBdqaBE0eHl6feUxT7TzYXdy29UN78kN54jRSP-iLdsqX0VPCp)
+8. fittdesign.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtUJ--weURf95SD7Tp2Oxdt32oVnmwnI7cUo0_F-ur-wzhU2fht2niWthwwgyiQMohjN-wAp_atufuZejaafNgLc3Q1k58GFbaMWbUoPt1IeI1VlfhvvWUbOfVUOvwyiqMJ-M-oDPJhlHZZ9ifdEsms3wrXpCdxCi8ncPWkFSWDvkQg86EF2H8_Z0RgA==)
+9. greatergood-brands.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY9aBQR5q_SO6pa_Xuyw3Re0CR0YIuuzxuLasfDm7WnDE2sHZGVw12t8TrNsOsWOfZH-6-9apTHjp2DitItTSnpiyKLJBPPkldOIFhvyYb8Rw05uSEDzDfs9LsBh-hHgo5H7TDcOBzNb0dVTxHC9erZcRn4AF2)
+10. crossover-av.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnWWyZ-cOD_TKSOanhT0etWxqLC4VaN7htygk7q23cnLzZxkbDnwDqpoeA1giMpBQ1Us8NKkiOro0Vl1448alrXf8xYflaEJ4A8vWijf9WLFLuoLSST540vq4udGqG-glGfuiqi2cQcFlywrMKDioKXR5UbDr2-PL01i6PzVz3FNDncU39ReJWKnwYZz7OB0nAGjm0e6v0gwcCcGBt)
+11. soundinvestmentav.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfX_9XNm16g4bTadEX9lSjDAOBwZ_jYkqyj-VOerbPDRVClbVldHID7BCi7wo99tYnPVzZJO7KjN1mtY22VLe_h1sb8WLdqkA1_g7h8_ywiEYLW_Hmz6kyfkLZYO18RoOCoTv6N6eCatuG80mEhFXf1vt2Bqmc)
+12. kreafolk.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEULM3KKpo7KLCxw7KHFrmhT0R-dfS5-IOVs6BqZLgRrcxzxhcUEtrnxErmmK2AVB_Y0ovqaePS_gnZJSpgsz0zNUJu1U8Y6zAJzM2jZqie7SFRCFZfF1J3rK7JWzz5Jwb9uTLUGQBLNiKveSsxoaNJewl_eYvAc5Q8)
+13. winsavvy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyf6Z-sLbe3YZl7AHoEdZZoSW6Aab0Ms4pvV4UhIdh_2kZBojIUHnPADznA9A1j01DHNrpRUU7xRpQyWxTuBhlhT7B9AQfMnsrKIDdPZ0u0xZIr_3JzynlJDMgZ1PkgVELo7Q49jCCpVBDgh2us8s-hvn1o-dPMccztNV2ye5xTK0vNeByuAyFx7TrGE8=)
+14. wod.guru (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM9RQqSuCCrqoBSZtmBSnbiVgnvzDRKFUydvgDkUBp5ZUFurSjnWCNu4p2xsHXfSpX_VATUKaA-TTFO_ZPxsX2jYJFKNobDj94DxVf79At_67Uucmn4PthzxVAwwlDEJuuYw==)
+15. decathlon-united.media (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWxxVw1_GFkDXd9OBOXGw_mh9Kt3f7_Ao01WILOa7C0XHldzBHCZyDUCj4hYJu_ti2c3WXL0YCWHtAaVi7fK4MwXnu2ckGTCcyJHnbN3TKZHiF7kol2FZvwCMVPsQpLs2ew-DNnykp8_E2nRxWSy_2oGKQRw==)
+16. ramotion.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9TGEWRYBkmp58vqKH10od1xWhHlXdOuzcAwTtM0FWM6YMkV62lgPdw9o7y192-iMwgRxTX3dXFFGv4nEeU0GhncSooYruNWPX5VRpUW3xyGmjh9wmkjIA1pdANIgfTzqa69bR0YCjnwM=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0OWjETW73Z_TfUmFpZmGjjCdEXPC4NxjRTwiNYjR3MNbVB8RBcHlmAgpjnI0bfXJqltxyejKfM3dKnrdLq0zbMJCPGvz3RJAmHSJruqqXbFN5ke_AtO6izxh0AR6iAfRF1kA=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. designpool.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0SujebB5HUQWly2Mx04rLIIMMspdNLL0p2mEdSSedZbEBgHmxJRYZuLjp8wckfR_QBycGaQiABWzn2wIoqiC4UAnQ5uQeEw5XaRhKRQ_wGNCY7wYH5hIzyREW_83VqBOPXLlFZ4NS0A9QXL-fqnYj6-KESWH_" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. designrush.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2xPvVtOeDfGUXg8iGo2xrNP-4ElRDi5BFdI67NHAA8EEdZ9-rH7TPMVt7k6aujOiLGjoMG7M_UHjIMuCoOJQtr5m5BVXgNiFMuMHAe8vAZcN-Cuh7PUd05TtzahNYUo-9usYr5ixyoPyBCHoyppdQ" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. tiktok.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGywmAyKMyliXOTn-ThBXPhExYbFoUacyB8HPXPPgoSJbBgEVDZXyIQYJya8pVpfWAmGDJWxIB-4CSuqCzLlNWgJiz_OFK-9RICACBoSbm7_7GKg-WcYLAGVILFgXr0cprVXh0D9cudhsnceJqEL0CYMPtw6euHg_dxpMGtVKz6djLX7li6STLlI5OjQFM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. itsnicethat.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE12KQweTJ4694a3q4hk9cW4R9TPjy7V0bU3e_jvvH0p41e3LrsLlkldqPL-r-lne4qs7_NhV4kzbH3VCJptQqv2bn8P6Ymy-Q5Euj1N72QK60bWvVZkaQVtdCERnXvSMFLO6mJmjdm7SaU7g8GfR594R8SgtUZ4E5DWcLaegAWlC3blTEjWNR3jQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. marianatek.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFX7VVlfSSrOXNheqgBSgBo8BISgoMLokxwa8c079EJgU74bGk8gf80DdnH5HoCN14utKC8oEf92df5P3pMKH9v3rOOnMaSNMOgNSIp9hSnf3FBl3s7CqMpWzDxwyezBVY3V8cDrrD6o7RVvdeei6PRd-r3AnXqplia3g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. lookdigitalsignage.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSP3LdgxwnOMk5raFZ0VplnTXa-MyVof13tCX8YBON-6i6Fpoo3oNM5yKG3QqKbUBip26sRg-RALvg9Gstu-1cFM0PG2zGAER2jfbTsAjXr0ZPwsEQl7IAjf9HH5eXGUSziAa_M2X50Xka4YnSh1y7lVAKhZFxCoxxghroxsgWJy0YKBhVQjyWYRiHiM2dcs5IlZrunfwVo-er7DN-_jZQIQR-4pv2gP7ajhTAQOOSiZGD92iGjBb6nIbFJi8PJemXSo_1loFIHsdjh_D_3y2nzoU3UZVHFJh0ibEhWTRaCo5lRFJIwaijxhgVrPtoOlq9vUHPJ0EY4HlxtWu8wMRBoP815sGnOSSDWzMBdqaBE0eHl6feUxT7TzYXdy29UN78kN54jRSP-iLdsqX0VPCp" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. zigpoll.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtUJ--weURf95SD7Tp2Oxdt32oVnmwnI7cUo0_F-ur-wzhU2fht2niWthwwgyiQMohjN-wAp_atufuZejaafNgLc3Q1k58GFbaMWbUoPt1IeI1VlfhvvWUbOfVUOvwyiqMJ-M-oDPJhlHZZ9ifdEsms3wrXpCdxCi8ncPWkFSWDvkQg86EF2H8_Z0RgA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. fittdesign.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY9aBQR5q_SO6pa_Xuyw3Re0CR0YIuuzxuLasfDm7WnDE2sHZGVw12t8TrNsOsWOfZH-6-9apTHjp2DitItTSnpiyKLJBPPkldOIFhvyYb8Rw05uSEDzDfs9LsBh-hHgo5H7TDcOBzNb0dVTxHC9erZcRn4AF2" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. greatergood-brands.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnWWyZ-cOD_TKSOanhT0etWxqLC4VaN7htygk7q23cnLzZxkbDnwDqpoeA1giMpBQ1Us8NKkiOro0Vl1448alrXf8xYflaEJ4A8vWijf9WLFLuoLSST540vq4udGqG-glGfuiqi2cQcFlywrMKDioKXR5UbDr2-PL01i6PzVz3FNDncU39ReJWKnwYZz7OB0nAGjm0e6v0gwcCcGBt" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. crossover-av.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfX_9XNm16g4bTadEX9lSjDAOBwZ_jYkqyj-VOerbPDRVClbVldHID7BCi7wo99tYnPVzZJO7KjN1mtY22VLe_h1sb8WLdqkA1_g7h8_ywiEYLW_Hmz6kyfkLZYO18RoOCoTv6N6eCatuG80mEhFXf1vt2Bqmc" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. soundinvestmentav.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEULM3KKpo7KLCxw7KHFrmhT0R-dfS5-IOVs6BqZLgRrcxzxhcUEtrnxErmmK2AVB_Y0ovqaePS_gnZJSpgsz0zNUJu1U8Y6zAJzM2jZqie7SFRCFZfF1J3rK7JWzz5Jwb9uTLUGQBLNiKveSsxoaNJewl_eYvAc5Q8" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. kreafolk.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyf6Z-sLbe3YZl7AHoEdZZoSW6Aab0Ms4pvV4UhIdh_2kZBojIUHnPADznA9A1j01DHNrpRUU7xRpQyWxTuBhlhT7B9AQfMnsrKIDdPZ0u0xZIr_3JzynlJDMgZ1PkgVELo7Q49jCCpVBDgh2us8s-hvn1o-dPMccztNV2ye5xTK0vNeByuAyFx7TrGE8=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. winsavvy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM9RQqSuCCrqoBSZtmBSnbiVgnvzDRKFUydvgDkUBp5ZUFurSjnWCNu4p2xsHXfSpX_VATUKaA-TTFO_ZPxsX2jYJFKNobDj94DxVf79At_67Uucmn4PthzxVAwwlDEJuuYw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. wod.guru</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWxxVw1_GFkDXd9OBOXGw_mh9Kt3f7_Ao01WILOa7C0XHldzBHCZyDUCj4hYJu_ti2c3WXL0YCWHtAaVi7fK4MwXnu2ckGTCcyJHnbN3TKZHiF7kol2FZvwCMVPsQpLs2ew-DNnykp8_E2nRxWSy_2oGKQRw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. decathlon-united.media</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9TGEWRYBkmp58vqKH10od1xWhHlXdOuzcAwTtM0FWM6YMkV62lgPdw9o7y192-iMwgRxTX3dXFFGv4nEeU0GhncSooYruNWPX5VRpUW3xyGmjh9wmkjIA1pdANIgfTzqa69bR0YCjnwM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. ramotion.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="53.40">53.40秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="66,427">66,427</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. sports fitness brand identity design site:behance.net
+2. sports logo animation motion graphics site:dribbble.com
+3. sports venue branding environment design portfolio
+4. fitness equipment design brand identity portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. sports fitness brand identity design site:behance.net</li><li class="text-sm text-gray-600">2. sports logo animation motion graphics site:dribbble.com</li><li class="text-sm text-gray-600">3. sports venue branding environment design portfolio</li><li class="text-sm text-gray-600">4. fitness equipment design brand identity portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for dynamic visual systems and brand design projects specifically for sports and fitness brands to find actual portfolios and project showcases.Based on my search results, I've found several excellent visual galleries showcasing dynamic sports and fitness brand systems. Here are the key resources that demonstrate energy, vitality, and comprehensive brand applications:
+
+## **Direct Portfolio Galleries**
+
+### **Behance Sports & Fitness Projects**
+Several specific project galleries were found, including the "Dynamic gym fitness sports logo brand identity design" gallery and the "GOTO Brand Identity Design" which showcases a comprehensive fitness brand transformation with vibrant lifestyle elements.
+
+### **Dribbble Animation Galleries**
+Dribbble hosts thousands of sports animation designs and sport logo animation projects, including specific galleries for "COREFIT - SPORT LOGO ANIMATION" and "RED BULL - LOGO ANIMATION". The "Sports Motion Graphics Pack" showcases professional templates with animated scenes, media placeholders, and dynamic elements designed for sports reporting and branding.
+
+### **Design Inspiration Collections**
+99designs features comprehensive fitness branding projects like "Flexfever, a Canadian gym and fitness apparel brand" with complete brand guides, pattern design, and modern impactful typography. Pinterest offers curated boards for fitness brand identity with examples of logo design, gym branding, and workout logos.
+
+## **Professional Sports Venue Branding**
+
+### **Venue Design Portfolios**
+Jones Sports showcases comprehensive sports venue signage and branding projects, including work on Chase Center for the Golden State Warriors with integrated brand applications. Gensler demonstrates sophisticated venue brand integration that goes beyond logos to create immersive experiences, making graphics "less literal and expressing ideas like grit, strength, and speed in highly abstracted, artistic ways."
+
+### **Equipment Design Systems**
+Studio F. A. Porsche's work with Milon Fitness Equipment shows comprehensive design development including coordinated product portfolios, brand identity development, and complete corporate design systems. Benchmark Fitness Solutions demonstrates how equipment branding can reflect solid support systems while maintaining visual cohesion throughout the brand identity.
+
+## **Brand System Examples**
+
+### **Complete Visual Systems**
+Successful fitness branding combines strategy, identity, and marketing with consistency across multiple touchpoints including websites, social media, and both online and in-person experiences. Examples include Nike's "Just do it" campaign, Peloton's engaging class experiences, and Gymshark's trendy, community-driven social media approach.
+
+### **Dynamic Design Elements**
+Fitness logos must stand out and create emotional connections through effective use of color, typography, symbols, and imagery that motivate consumers to embark on fitness journeys with confidence and determination. Sports stadiums require "powerful, bold design elements" with impactful branding, placemaking, and wayfinding systems that work in concert to create unforgettable experiences.
+
+These galleries provide comprehensive examples of how sports and fitness brands express energy and vitality through logo animations, event visuals, equipment designs, venue applications, and complete brand systems that create dynamic, engaging experiences for their audiences.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for dynamic visual systems and brand design projects specifically for sports and fitness brands to find actual portfolios and project showcases.Based on my search results, I've found several excellent visual galleries showcasing dynamic sports and fitness brand systems. Here are the key resources that demonstrate energy, vitality, and comprehensive brand applications:
+
+## **Direct Portfolio Galleries**
+
+### **Behance Sports & Fitness Projects**
+Several specific project galleries were found, including the "Dynamic gym fitness sports logo brand identity design" gallery and the "GOTO Brand Identity Design" which showcases a comprehensive fitness brand transformation with vibrant lifestyle elements.
+
+### **Dribbble Animation Galleries**
+Dribbble hosts thousands of sports animation designs and sport logo animation projects, including specific galleries for "COREFIT - SPORT LOGO ANIMATION" and "RED BULL - LOGO ANIMATION". The "Sports Motion Graphics Pack" showcases professional templates with animated scenes, media placeholders, and dynamic elements designed for sports reporting and branding.
+
+### **Design Inspiration Collections**
+99designs features comprehensive fitness branding projects like "Flexfever, a Canadian gym and fitness apparel brand" with complete brand guides, pattern design, and modern impactful typography. Pinterest offers curated boards for fitness brand identity with examples of logo design, gym branding, and workout logos.
+
+## **Professional Sports Venue Branding**
+
+### **Venue Design Portfolios**
+Jones Sports showcases comprehensive sports venue signage and branding projects, including work on Chase Center for the Golden State Warriors with integrated brand applications. Gensler demonstrates sophisticated venue brand integration that goes beyond logos to create immersive experiences, making graphics "less literal and expressing ideas like grit, strength, and speed in highly abstracted, artistic ways."
+
+### **Equipment Design Systems**
+Studio F. A. Porsche's work with Milon Fitness Equipment shows comprehensive design development including coordinated product portfolios, brand identity development, and complete corporate design systems. Benchmark Fitness Solutions demonstrates how equipment branding can reflect solid support systems while maintaining visual cohesion throughout the brand identity.
+
+## **Brand System Examples**
+
+### **Complete Visual Systems**
+Successful fitness branding combines strategy, identity, and marketing with consistency across multiple touchpoints including websites, social media, and both online and in-person experiences. Examples include Nike's "Just do it" campaign, Peloton's engaging class experiences, and Gymshark's trendy, community-driven social media approach.
+
+### **Dynamic Design Elements**
+Fitness logos must stand out and create emotional connections through effective use of color, typography, symbols, and imagery that motivate consumers to embark on fitness journeys with confidence and determination. Sports stadiums require "powerful, bold design elements" with impactful branding, placemaking, and wayfinding systems that work in concert to create unforgettable experiences.
+
+These galleries provide comprehensive examples of how sports and fitness brands express energy and vitality through logo animations, event visuals, equipment designs, venue applications, and complete brand systems that create dynamic, engaging experiences for their audiences.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Behance (https://www.behance.net/gallery/206106413/Dynamic-gym-fitness-sports-logo-brand-identity-design)
+2. GOTO Brand Identity Design :: Behance (https://www.behance.net/gallery/97145213/GOTO-FITNESS?tracking_source=project_owner_other_projects)
+3. Sport Logo Animation designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/sport-logo-animation)
+4. Sports Animation designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/sports_animation)
+5. The Evolution of Sports Venue Brand Integration: From Simple to Sophisticated (https://www.gensler.com/blog/sports-venue-brand-integration-from-simple-to-sophisticated)
+6. Milon Fitness Equipment - Studio F. A. Porsche | Premium Design Services (https://www.studiofaporsche.com/en/case/milon-fitness-equipment/)
+7. The 5 Step Fitness Branding Framework for Success - Boutique Fitness and Gym Management Software - Glofox (https://www.glofox.com/blog/how-to-create-your-fitness-business-brand/)
+8. Sports & Entertainment | HKS Architects (https://www.hksinc.com/what-we-do/practices/sports-and-entertainment/)
+9. Sports Venue Signage and Architectural Creations | Jones Sports (https://www.jonessportsvenues.com/)
+10. Benchmark Fitness Solutions - Logo design and brand identity. (https://thelogomark.co.uk/logo-design-portfolio/benchmark-fitness-solutions/)
+11. Exploring The Evolution Of Top 10 Fitness Logos - 2025 (https://inkbotdesign.com/fitness-logos/)
+12. Gym Branding Ideas - 73+ Best Gym Brand Identity Designs 2025 | 99designs (https://99designs.com/inspiration/branding/gym)
+13. Fitness Brand Identity (https://www.pinterest.com/ideas/fitness-brand-identity/935322966105/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/206106413/Dynamic-gym-fitness-sports-logo-brand-identity-design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/97145213/GOTO-FITNESS?tracking_source=project_owner_other_projects" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. GOTO Brand Identity Design :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/tags/sport-logo-animation" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Sport Logo Animation designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/sports_animation" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Sports Animation designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.gensler.com/blog/sports-venue-brand-integration-from-simple-to-sophisticated" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. The Evolution of Sports Venue Brand Integration: From Simple to Sophisticated</a></li><li class="text-sm"><a href="https://www.studiofaporsche.com/en/case/milon-fitness-equipment/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Milon Fitness Equipment - Studio F. A. Porsche | Premium Design Services</a></li><li class="text-sm"><a href="https://www.glofox.com/blog/how-to-create-your-fitness-business-brand/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. The 5 Step Fitness Branding Framework for Success - Boutique Fitness and Gym Management Software - Glofox</a></li><li class="text-sm"><a href="https://www.hksinc.com/what-we-do/practices/sports-and-entertainment/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Sports & Entertainment | HKS Architects</a></li><li class="text-sm"><a href="https://www.jonessportsvenues.com/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Sports Venue Signage and Architectural Creations | Jones Sports</a></li><li class="text-sm"><a href="https://thelogomark.co.uk/logo-design-portfolio/benchmark-fitness-solutions/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Benchmark Fitness Solutions - Logo design and brand identity.</a></li><li class="text-sm"><a href="https://inkbotdesign.com/fitness-logos/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Exploring The Evolution Of Top 10 Fitness Logos - 2025</a></li><li class="text-sm"><a href="https://99designs.com/inspiration/branding/gym" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Gym Branding Ideas - 73+ Best Gym Brand Identity Designs 2025 | 99designs</a></li><li class="text-sm"><a href="https://www.pinterest.com/ideas/fitness-brand-identity/935322966105/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. Fitness Brand Identity</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="76.19">76.19秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="181,138">181,138</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. dynamic visual system sports branding "site:behance.net" "case study"
+2. site:behance.net dynamic sports branding visual identity animation
+3. Behance gallery sports branding dynamic identity
+4. site:behance.net sports event branding case study motion graphics
+5. Behance Red Bull visual identity case study
+6. The-Beast-Fitness 139799287 Ali Aljilani Behance">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. dynamic visual system sports branding "site:behance.net" "case study"</li><li class="text-sm text-gray-600">2. site:behance.net dynamic sports branding visual identity animation</li><li class="text-sm text-gray-600">3. Behance gallery sports branding dynamic identity</li><li class="text-sm text-gray-600">4. site:behance.net sports event branding case study motion graphics</li><li class="text-sm text-gray-600">5. Behance Red Bull visual identity case study</li><li class="text-sm text-gray-600">6. The-Beast-Fitness 139799287 Ali Aljilani Behance</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are a range of primary‐source portfolios and case studies showcasing dynamic visual systems for sports and fitness brands—complete with logo animations, event visuals, equipment/merchandise mockups, venue applications, and full brand systems:
+
+Fitness Studio & Apparel Identities  
+- COMFIT (Fitness Studio Visual Identity) – Behance gallery with full logo system, color palette, typography, signage and merchandise mockups ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/144832847/COMFIT  
+- The Beast Fitness (Gym & CrossFit Brand) – Men’s gym identity with strong logotype, apparel and product applications ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/139799287/The-Beast-Fitness  
+- Dynamic Gym (Fitness Brand & Equipment Mockups) – Bold logo system with dynamic forms applied across apparel and digital assets ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/94804537/Dynamic-gym  
+- Rino Maromba (EMS Fitness Studio) – Contemporary identity inspired by movement and energy, including projection/video applications ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/126753235/Rino-Maromba  
+- LoV Sports Gym (Visual Identity & Brand Book) – Complete system: logo, motion frames, signage, merchandise and environmental graphics ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/139206333/LoV-Sports-Gym-Visual-Identity  
+- TEAMSPORT (Athlete & Club Brand Identity) – Emblem and graphic system deployed across digital/social and print assets ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/138136729/TEAMSPORT  
+
+Sports Club & Event Rebrands  
+- World Anti-Doping Agency (Global Rebrand) – End-to-end identity revamp with brand guidelines, event banners, digital ads and motion treatments ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/140426491/World-Anti-Doping-Agency-Rebranding  
+- Avai Futebol Clube (Football Club Rebranding) – Badge redesign, kit mockups, stadium signage and promotional graphics ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/131013555/Avai-Futebol-Clube-Rebranding  
+- Arena Ibiza (Venue Brand Identity) – Club/event identity with wayfinding, print collateral and animated logo explorations ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/131154655/Arena-Ibiza-Brand-Identity  
+- Apollo Sport Space (Brand & Environmental Graphics) – Futuristic visual identity applied to uniforms, equipment and venue graphics ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/139198951/Apollo-Sport-Space-Brand-Identity  
+
+Sports Tech & App Branding  
+- InGame (Mobile App for Sport Events) – Merixstudio’s Dribbble preview linking to full Behance case study: UI/UX, iconography and motion prototypes ([dribbble.com](https://dribbble.com/shots/11126979-InGame-Sport-events-Behance-case-study?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/11126979-InGame-Sport-events-Behance-case-study  
+
+Running & Event Branding  
+- Running Event Branding (Grey Ribbon Crusade) – Posters, web updates, social posts, t-shirts and instructional animations for annual race series ([wittmanpro.com](https://www.wittmanpro.com/graphic-design-portfolio/running-event-branding?utm_source=chatgpt.com))  
+  URL: https://www.wittmanpro.com/graphic-design-portfolio/running-event-branding  
+- Sportive Events Posters (tubik.arts) – Illustrated poster series and marketing graphics for fitness and sports events ([dribbble.com](https://dribbble.com/shots/22507247-Case-Study-Sportive-Events-Posters?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/22507247-Case-Study-Sportive-Events-Posters  
+
+Venue & In-Stadium Applications  
+- New York Red Bulls (Matchday Campaigns) – Heartlent Group’s embedded season-long motion graphics, in-stadium visuals, social campaign templates and environmental branding ([heartlent.com](https://www.heartlent.com/case-studies/new-york-red-bulls?utm_source=chatgpt.com))  
+  URL: https://www.heartlent.com/case-studies/new-york-red-bulls  
+- Red Bull Motion Graphics (Dance Events & Apparel) – Perspectiva Studio’s motion and still graphics for BC One World Finals, print collateral and digital ads ([perspectiva.studio](https://perspectiva.studio/portfolio-item/red-bull-motion-graphics/?utm_source=chatgpt.com))  
+  URL: https://perspectiva.studio/portfolio-item/red-bull-motion-graphics  
+- Red Bull Global Branding System – Manifesto Studios’ holistic system: photography curation, logo simplification, color/type standards, merchandise and campaign templates ([manifesto-studios.com](https://www.manifesto-studios.com/project/red-bull/?utm_source=chatgpt.com))  
+  URL: https://www.manifesto-studios.com/project/red-bull/  
+
+Logo Animation & Visual Identity Motion  
+- Futuristic Sports Branding Animation – Dribbble concept with glitch effects, neon typography and animated logo treatments for football culture ([dribbble.com](https://dribbble.com/shots/25600770-Futuristic-Sports-Branding-Animation?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/25600770-Futuristic-Sports-Branding-Animation  
+- Branding, Logo Animation & Visual Identity Design – intorque’s Dribbble shot showcasing animated logos, color palette transitions and real-life mockups ([dribbble.com](https://dribbble.com/shots/21337771-Branding-Logo-Animation-Visual-Identity-Design?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/21337771-Branding-Logo-Animation-Visual-Identity-Design  
+
+Each of these galleries and case studies presents a complete, primary-source look at dynamic brand systems—covering logo animations, event visuals, equipment and apparel mockups, venue/environment applications, and cohesive motion and static assets to convey energy and vitality in the sports and fitness space.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are a range of primary‐source portfolios and case studies showcasing dynamic visual systems for sports and fitness brands—complete with logo animations, event visuals, equipment/merchandise mockups, venue applications, and full brand systems:
+
+Fitness Studio & Apparel Identities  
+- COMFIT (Fitness Studio Visual Identity) – Behance gallery with full logo system, color palette, typography, signage and merchandise mockups ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/144832847/COMFIT  
+- The Beast Fitness (Gym & CrossFit Brand) – Men’s gym identity with strong logotype, apparel and product applications ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/139799287/The-Beast-Fitness  
+- Dynamic Gym (Fitness Brand & Equipment Mockups) – Bold logo system with dynamic forms applied across apparel and digital assets ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/94804537/Dynamic-gym  
+- Rino Maromba (EMS Fitness Studio) – Contemporary identity inspired by movement and energy, including projection/video applications ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/126753235/Rino-Maromba  
+- LoV Sports Gym (Visual Identity & Brand Book) – Complete system: logo, motion frames, signage, merchandise and environmental graphics ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/139206333/LoV-Sports-Gym-Visual-Identity  
+- TEAMSPORT (Athlete & Club Brand Identity) – Emblem and graphic system deployed across digital/social and print assets ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/138136729/TEAMSPORT  
+
+Sports Club & Event Rebrands  
+- World Anti-Doping Agency (Global Rebrand) – End-to-end identity revamp with brand guidelines, event banners, digital ads and motion treatments ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/140426491/World-Anti-Doping-Agency-Rebranding  
+- Avai Futebol Clube (Football Club Rebranding) – Badge redesign, kit mockups, stadium signage and promotional graphics ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/131013555/Avai-Futebol-Clube-Rebranding  
+- Arena Ibiza (Venue Brand Identity) – Club/event identity with wayfinding, print collateral and animated logo explorations ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/131154655/Arena-Ibiza-Brand-Identity  
+- Apollo Sport Space (Brand & Environmental Graphics) – Futuristic visual identity applied to uniforms, equipment and venue graphics ([kreafolk.com](https://kreafolk.com/blogs/inspirations/sports-logo-design))  
+  URL: https://www.behance.net/gallery/139198951/Apollo-Sport-Space-Brand-Identity  
+
+Sports Tech & App Branding  
+- InGame (Mobile App for Sport Events) – Merixstudio’s Dribbble preview linking to full Behance case study: UI/UX, iconography and motion prototypes ([dribbble.com](https://dribbble.com/shots/11126979-InGame-Sport-events-Behance-case-study?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/11126979-InGame-Sport-events-Behance-case-study  
+
+Running & Event Branding  
+- Running Event Branding (Grey Ribbon Crusade) – Posters, web updates, social posts, t-shirts and instructional animations for annual race series ([wittmanpro.com](https://www.wittmanpro.com/graphic-design-portfolio/running-event-branding?utm_source=chatgpt.com))  
+  URL: https://www.wittmanpro.com/graphic-design-portfolio/running-event-branding  
+- Sportive Events Posters (tubik.arts) – Illustrated poster series and marketing graphics for fitness and sports events ([dribbble.com](https://dribbble.com/shots/22507247-Case-Study-Sportive-Events-Posters?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/22507247-Case-Study-Sportive-Events-Posters  
+
+Venue & In-Stadium Applications  
+- New York Red Bulls (Matchday Campaigns) – Heartlent Group’s embedded season-long motion graphics, in-stadium visuals, social campaign templates and environmental branding ([heartlent.com](https://www.heartlent.com/case-studies/new-york-red-bulls?utm_source=chatgpt.com))  
+  URL: https://www.heartlent.com/case-studies/new-york-red-bulls  
+- Red Bull Motion Graphics (Dance Events & Apparel) – Perspectiva Studio’s motion and still graphics for BC One World Finals, print collateral and digital ads ([perspectiva.studio](https://perspectiva.studio/portfolio-item/red-bull-motion-graphics/?utm_source=chatgpt.com))  
+  URL: https://perspectiva.studio/portfolio-item/red-bull-motion-graphics  
+- Red Bull Global Branding System – Manifesto Studios’ holistic system: photography curation, logo simplification, color/type standards, merchandise and campaign templates ([manifesto-studios.com](https://www.manifesto-studios.com/project/red-bull/?utm_source=chatgpt.com))  
+  URL: https://www.manifesto-studios.com/project/red-bull/  
+
+Logo Animation & Visual Identity Motion  
+- Futuristic Sports Branding Animation – Dribbble concept with glitch effects, neon typography and animated logo treatments for football culture ([dribbble.com](https://dribbble.com/shots/25600770-Futuristic-Sports-Branding-Animation?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/25600770-Futuristic-Sports-Branding-Animation  
+- Branding, Logo Animation & Visual Identity Design – intorque’s Dribbble shot showcasing animated logos, color palette transitions and real-life mockups ([dribbble.com](https://dribbble.com/shots/21337771-Branding-Logo-Animation-Visual-Identity-Design?utm_source=chatgpt.com))  
+  URL: https://dribbble.com/shots/21337771-Branding-Logo-Animation-Visual-Identity-Design  
+
+Each of these galleries and case studies presents a complete, primary-source look at dynamic brand systems—covering logo animations, event visuals, equipment and apparel mockups, venue/environment applications, and cohesive motion and static assets to convey energy and vitality in the sports and fitness space.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. 30 Best Sports Logo Design Ideas You Should Check (https://kreafolk.com/blogs/inspirations/sports-logo-design)
+2. InGame, Sport events - Behance case study by Jakub Kośla for Merixstudio on Dribbble (https://dribbble.com/shots/11126979-InGame-Sport-events-Behance-case-study?utm_source=chatgpt.com)
+3. Running Event Branding — Ted Wittman (https://www.wittmanpro.com/graphic-design-portfolio/running-event-branding?utm_source=chatgpt.com)
+4. Case Study: Sportive Events Posters by tubik.arts on Dribbble (https://dribbble.com/shots/22507247-Case-Study-Sportive-Events-Posters?utm_source=chatgpt.com)
+5. Heartlent Group Case Study - New York Red Bulls (https://www.heartlent.com/case-studies/new-york-red-bulls?utm_source=chatgpt.com)
+6. Motion & Print Design - Red Bull Dance Events (https://perspectiva.studio/portfolio-item/red-bull-motion-graphics/?utm_source=chatgpt.com)
+7. Manifesto Studios • Red Bull Case Study (https://www.manifesto-studios.com/project/red-bull/?utm_source=chatgpt.com)
+8. Futuristic Sports Branding Animation by Leahrami Rezdes on Dribbble (https://dribbble.com/shots/25600770-Futuristic-Sports-Branding-Animation?utm_source=chatgpt.com)
+9. Branding, Logo Animation & Visual Identity Design by intorque on Dribbble (https://dribbble.com/shots/21337771-Branding-Logo-Animation-Visual-Identity-Design?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://kreafolk.com/blogs/inspirations/sports-logo-design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. 30 Best Sports Logo Design Ideas You Should Check</a></li><li class="text-sm"><a href="https://dribbble.com/shots/11126979-InGame-Sport-events-Behance-case-study?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. InGame, Sport events - Behance case study by Jakub Kośla for Merixstudio on Dribbble</a></li><li class="text-sm"><a href="https://www.wittmanpro.com/graphic-design-portfolio/running-event-branding?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Running Event Branding — Ted Wittman</a></li><li class="text-sm"><a href="https://dribbble.com/shots/22507247-Case-Study-Sportive-Events-Posters?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Case Study: Sportive Events Posters by tubik.arts on Dribbble</a></li><li class="text-sm"><a href="https://www.heartlent.com/case-studies/new-york-red-bulls?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Heartlent Group Case Study - New York Red Bulls</a></li><li class="text-sm"><a href="https://perspectiva.studio/portfolio-item/red-bull-motion-graphics/?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Motion & Print Design - Red Bull Dance Events</a></li><li class="text-sm"><a href="https://www.manifesto-studios.com/project/red-bull/?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Manifesto Studios • Red Bull Case Study</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25600770-Futuristic-Sports-Branding-Animation?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Futuristic Sports Branding Animation by Leahrami Rezdes on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/21337771-Branding-Logo-Animation-Visual-Identity-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Branding, Logo Animation & Visual Identity Design by intorque on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
