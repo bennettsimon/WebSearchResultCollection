@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about complete visual identity systems for high-end jewelry brands, including logos, color systems, pattern designs, and brand applications. The search should target case studies showcasing full brand guidelines, especially those demonstrating refined craftsmanship and timeless elegance.">The user is asking about complete visual identity systems for high-end jewelry brands, including logos, color systems, pattern designs, and brand applications. The search should target case studies showcasing full brand guidelines, especially those demonstrating refined craftsmanship and timeless elegance.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 17:47:38</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="20.17">20.17秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,827">1,827</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. high-end jewelry brand visual identity case study
+2. luxury jewelry brand guidelines examples
+3. jewelry brand logo color pattern design showcase
+4. timeless elegant jewelry brand identity examples
+5. luxury jewelry branding complete system">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. high-end jewelry brand visual identity case study</li><li class="text-sm text-gray-600">2. luxury jewelry brand guidelines examples</li><li class="text-sm text-gray-600">3. jewelry brand logo color pattern design showcase</li><li class="text-sm text-gray-600">4. timeless elegant jewelry brand identity examples</li><li class="text-sm text-gray-600">5. luxury jewelry branding complete system</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="High-end jewelry brands distinguish themselves through meticulously crafted visual identity systems that convey timeless elegance, refined craftsmanship, and exclusivity. These comprehensive systems typically encompass distinctive logos, thoughtful color palettes, sophisticated pattern designs, and consistent brand applications across all touchpoints.
+
+Several case studies exemplify complete visual identity systems for luxury jewelry brands:
+
+*   **Étoile Fine Jewelry** showcases a complete visual identity that includes a multi-layered emblem integrating an abstract 'E', a star, and a gemstone cut, which is versatile enough to be adapted into repeat patterns for scarves, packaging, and visual merchandising. The brand's color palette strategically combines jade green for a contemporary edge, with burgundy and gold to evoke timeless luxury. Every detail, from jewelry boxes to website visuals, is designed to reflect a storytelling approach, enhancing the customer experience.
+*   **RION**, a luxury jewelry line, developed a full brand system with comprehensive brand guidelines. These guidelines cover the logo, typography, logo variations, brand personality and tone, and photography, ensuring consistency across all store locations and branding materials.
+*   **Cartier** maintains an aura of timeless elegance and exclusivity through its simple yet refined wordmark, featuring a sleek, elegant serif font, and an instantly recognizable double "C" monogram.
+*   **Van Cleef & Arpels** employs a refined and emotional visual identity, incorporating rich, royal colors such as deep blues and golds to create a timeless and irreplaceable emotional connection with its audience.
+*   **Tiffany & Co.** is renowned for its iconic "Tiffany Blue," a pivotal branding element consistently integrated across packaging, store interiors, and marketing materials. This signature color, along with a classic serif typography, conveys luxury and exclusivity, making the brand instantly identifiable.
+*   **VALCCI** utilizes a rich color palette of burgundy and dark green, evoking romance and sophistication, and incorporates a carefully crafted logo pattern on its packaging to elevate the unboxing experience.
+*   **Sonia Sartre** presents a sophisticated aesthetic with a sleek, elegant typeface for its logo, an outlined brandmark, and a monochromatic color palette, resulting in a clean and refined appearance.
+*   **Adorna Luxury Jewelry** combines simplicity with sophistication through a minimalist logo featuring an intertwined "A," a refined color palette, and a focus on core values like exclusivity, sustainability, and craftsmanship.
+*   **Larema Joias** has a bold and contemporary visual identity, characterized by a sharp, modern logo with clean typography and a vibrant color palette of red, white, and gold, which makes a memorable statement.
+
+Common elements that define effective visual identity systems for high-end jewelry brands include:
+
+*   **Logos:** Often simple, timeless, and versatile, frequently utilizing elegant serif fonts or sleek sans-serifs, and sometimes incorporating monograms or symbolic elements.
+*   **Color Systems:** Palettes typically feature deep jewel tones, rich golds, sophisticated blacks, rose gold, or calming pastels and earthy tones, all chosen to evoke luxury, elegance, and specific emotions.
+*   **Pattern Designs:** While not always explicitly detailed, some brands, like Étoile Fine Jewelry and VALCCI, integrate their logo or other brand motifs into repeat patterns for packaging and other applications, adding depth and texture.
+*   **Brand Applications:** Consistency is crucial across all touchpoints, including packaging, retail environments, websites, and marketing materials, to ensure a cohesive brand experience that reflects refined craftsmanship and elevates the perception of the jewelry.
+
+These comprehensive visual identity systems are essential for high-end jewelry brands to communicate their unique character, heritage, and value to discerning consumers.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">High-end jewelry brands distinguish themselves through meticulously crafted visual identity systems that convey timeless elegance, refined craftsmanship, and exclusivity. These comprehensive systems typically encompass distinctive logos, thoughtful color palettes, sophisticated pattern designs, and consistent brand applications across all touchpoints.
+
+Several case studies exemplify complete visual identity systems for luxury jewelry brands:
+
+*   **Étoile Fine Jewelry** showcases a complete visual identity that includes a multi-layered emblem integrating an abstract 'E', a star, and a gemstone cut, which is versatile enough to be adapted into repeat patterns for scarves, packaging, and visual merchandising. The brand's color palette strategically combines jade green for a contemporary edge, with burgundy and gold to evoke timeless luxury. Every detail, from jewelry boxes to website visuals, is designed to reflect a storytelling approach, enhancing the customer experience.
+*   **RION**, a luxury jewelry line, developed a full brand system with comprehensive brand guidelines. These guidelines cover the logo, typography, logo variations, brand personality and tone, and photography, ensuring consistency across all store locations and branding materials.
+*   **Cartier** maintains an aura of timeless elegance and exclusivity through its simple yet refined wordmark, featuring a sleek, elegant serif font, and an instantly recognizable double "C" monogram.
+*   **Van Cleef & Arpels** employs a refined and emotional visual identity, incorporating rich, royal colors such as deep blues and golds to create a timeless and irreplaceable emotional connection with its audience.
+*   **Tiffany & Co.** is renowned for its iconic "Tiffany Blue," a pivotal branding element consistently integrated across packaging, store interiors, and marketing materials. This signature color, along with a classic serif typography, conveys luxury and exclusivity, making the brand instantly identifiable.
+*   **VALCCI** utilizes a rich color palette of burgundy and dark green, evoking romance and sophistication, and incorporates a carefully crafted logo pattern on its packaging to elevate the unboxing experience.
+*   **Sonia Sartre** presents a sophisticated aesthetic with a sleek, elegant typeface for its logo, an outlined brandmark, and a monochromatic color palette, resulting in a clean and refined appearance.
+*   **Adorna Luxury Jewelry** combines simplicity with sophistication through a minimalist logo featuring an intertwined "A," a refined color palette, and a focus on core values like exclusivity, sustainability, and craftsmanship.
+*   **Larema Joias** has a bold and contemporary visual identity, characterized by a sharp, modern logo with clean typography and a vibrant color palette of red, white, and gold, which makes a memorable statement.
+
+Common elements that define effective visual identity systems for high-end jewelry brands include:
+
+*   **Logos:** Often simple, timeless, and versatile, frequently utilizing elegant serif fonts or sleek sans-serifs, and sometimes incorporating monograms or symbolic elements.
+*   **Color Systems:** Palettes typically feature deep jewel tones, rich golds, sophisticated blacks, rose gold, or calming pastels and earthy tones, all chosen to evoke luxury, elegance, and specific emotions.
+*   **Pattern Designs:** While not always explicitly detailed, some brands, like Étoile Fine Jewelry and VALCCI, integrate their logo or other brand motifs into repeat patterns for packaging and other applications, adding depth and texture.
+*   **Brand Applications:** Consistency is crucial across all touchpoints, including packaging, retail environments, websites, and marketing materials, to ensure a cohesive brand experience that reflects refined craftsmanship and elevates the perception of the jewelry.
+
+These comprehensive visual identity systems are essential for high-end jewelry brands to communicate their unique character, heritage, and value to discerning consumers.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. conquestcreatives.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFi3CZ_TE9Nwwnq2B1L867iTRqpPSmxDjPoxsiAAH-ZwPaYaeqZ3_cXieO5EIVIxwgx6d8zVCe1Rbp9f6QkMlZ8UGvhQwQ8Rwzq5GSEie_AkxTbNj-mnzONqxkZnCI3tcJTJgAsWBRwY4on-oPfYtZRWJu2otHLaT9mwz7BMIYmkWzXkEg=)
+2. outsourcemarketing.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG43galhPCHn6XSVfvbz9lVCkE3eMOwr-wzv8UI5msUvPN3YwDt926pPGZHAokpxHINCo-hAHJFfkLfnGavhI-r6ILDuFsdcjv5Jih6HSj6poxdK7VnHQadBfiK_yMidvq_jNtay9fqMJR0aA==)
+3. designrush.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9vpLDUZX3chxyvAJ1GFNxMd8m819-1YrirF8LvFf940nfn433Zp3PNP_AESQJvEvIaxD-XQs-Sx2-1GRRxqE9mxHRCeSJlDtIQOGR6Fqeu_hOIN5hW7LdrEqSoyutgHKdo0QFywaOc04cfha05I5fWrwdOQi1GXN7IG-bwQuEv58dF7uRZU-eKVzFGNtG)
+4. ebaqdesign.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1eUTrY0o44VgnKorDn0jXXRE4w5mmzJehSZHjhVOAb9mhgdA1a9EeWlc3nfVAn1BPbXm014X_oW7pV7f-L2hjvpa28Fvzev9lRT9pWHpY8KeIu4IHaf4cgsGmLK2NiPo1TKGcceI=)
+5. sunenterprises.eu (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLxufRIF3iwQbVZGV45KDdK-ZCiMTVJH1s56THUt7Ycqa-lXDcLu0Hhcve-mnhGcJ9ktJHj-u7xCyYnU-y83FJgKxnRa7rD90q154AQWnop2xPRIW67RcN8V-Wts8pro4gcTUC90WaKd9cTIbMd8gnAEIUXPVEYCXOCHyoaCfB9nUv3hluRB_hAmR0A5LpGmjBEMYKBZ5Dlh57hYgtuYCTM6KLGA==)
+6. designerpeople.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEZXe2uadRaxaYPvv-hmUHgdTVqTtySEXw9nnX2ayVyhPMfYviDF-uxxUl7jPYxaJ6l_afuvbjyDDIeY_HWY6l4kt8s5DJubnPY1BHmKTfouRp732vtMAe5sBLXEbjYyerUzVdknQLsH7ITHrSEw==)
+7. zilliondesigns.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8q7se1KJPGfhVhakCjOBQDtYA4bg4hVFsz7SSBP_g__S5MEcSif8QHvrFyGTWfYyqUh1j10oResuboJDdxXQ7wRnh4xDJQ9FOyA8Dvvch-oV7yz-jXkL_It3uUcfU2CNk30pNO2SM6tsLkjYghfaxymxM)
+8. mojomox.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6_nPUoZArg-h7k1mslSM5E-ZHyzvHwopEm3Ua2eKpOow8lKYUXy_nJsSyBBien1IS7kgNy2FyZMCpjdEFEkT19MqEH7OfsCNahLnlMxZgQ43jW9mmp4fkvD0=)
+9. looka.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsPCRMjLJVbuUbvx2_hbSPBvUT7WhA80fkTq-lO-qjtGK9sGKLhgy7nGHa5honvQWaDmVtDaleYsfBDzxAwiZY7_aAzgmLHrfFrPnrtlBdiuidErApjehVXdVKIdF70YALw_EXJ3ofvQH8)
+10. logomakerr.ai (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq4ThOHwlz3zYXUpxCMj458Ps-eSKAx5zXw1ddpfKdAzSYd3CFZe21b_dZzfp9Hy8ffSDe068Y5mj8YxGnCMdx7IWZrWYIa-473LqjvxkgfQOZYR-KuXBYR5zSXlfBOTJwlrNtMYmhxJY-hzt2GPm_Ya-zyJqBhLBe)
+11. richpkg.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZKoinrKXc5DQ9rXiztkOx1NK05N10CD-Q4VXi171YEbyW1geeN5FujkewDBrZxzfBq0zfcFjMOYMu7BEDP4E9iAiOWBT-VCQXZLmWa4FA1yGTqIcU859lLbznY5ppJ_aI-AAby1TviV0KRAk6RnHVbf4w7IM=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFi3CZ_TE9Nwwnq2B1L867iTRqpPSmxDjPoxsiAAH-ZwPaYaeqZ3_cXieO5EIVIxwgx6d8zVCe1Rbp9f6QkMlZ8UGvhQwQ8Rwzq5GSEie_AkxTbNj-mnzONqxkZnCI3tcJTJgAsWBRwY4on-oPfYtZRWJu2otHLaT9mwz7BMIYmkWzXkEg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. conquestcreatives.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG43galhPCHn6XSVfvbz9lVCkE3eMOwr-wzv8UI5msUvPN3YwDt926pPGZHAokpxHINCo-hAHJFfkLfnGavhI-r6ILDuFsdcjv5Jih6HSj6poxdK7VnHQadBfiK_yMidvq_jNtay9fqMJR0aA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. outsourcemarketing.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9vpLDUZX3chxyvAJ1GFNxMd8m819-1YrirF8LvFf940nfn433Zp3PNP_AESQJvEvIaxD-XQs-Sx2-1GRRxqE9mxHRCeSJlDtIQOGR6Fqeu_hOIN5hW7LdrEqSoyutgHKdo0QFywaOc04cfha05I5fWrwdOQi1GXN7IG-bwQuEv58dF7uRZU-eKVzFGNtG" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. designrush.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1eUTrY0o44VgnKorDn0jXXRE4w5mmzJehSZHjhVOAb9mhgdA1a9EeWlc3nfVAn1BPbXm014X_oW7pV7f-L2hjvpa28Fvzev9lRT9pWHpY8KeIu4IHaf4cgsGmLK2NiPo1TKGcceI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. ebaqdesign.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLxufRIF3iwQbVZGV45KDdK-ZCiMTVJH1s56THUt7Ycqa-lXDcLu0Hhcve-mnhGcJ9ktJHj-u7xCyYnU-y83FJgKxnRa7rD90q154AQWnop2xPRIW67RcN8V-Wts8pro4gcTUC90WaKd9cTIbMd8gnAEIUXPVEYCXOCHyoaCfB9nUv3hluRB_hAmR0A5LpGmjBEMYKBZ5Dlh57hYgtuYCTM6KLGA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. sunenterprises.eu</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEZXe2uadRaxaYPvv-hmUHgdTVqTtySEXw9nnX2ayVyhPMfYviDF-uxxUl7jPYxaJ6l_afuvbjyDDIeY_HWY6l4kt8s5DJubnPY1BHmKTfouRp732vtMAe5sBLXEbjYyerUzVdknQLsH7ITHrSEw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. designerpeople.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8q7se1KJPGfhVhakCjOBQDtYA4bg4hVFsz7SSBP_g__S5MEcSif8QHvrFyGTWfYyqUh1j10oResuboJDdxXQ7wRnh4xDJQ9FOyA8Dvvch-oV7yz-jXkL_It3uUcfU2CNk30pNO2SM6tsLkjYghfaxymxM" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. zilliondesigns.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6_nPUoZArg-h7k1mslSM5E-ZHyzvHwopEm3Ua2eKpOow8lKYUXy_nJsSyBBien1IS7kgNy2FyZMCpjdEFEkT19MqEH7OfsCNahLnlMxZgQ43jW9mmp4fkvD0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. mojomox.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsPCRMjLJVbuUbvx2_hbSPBvUT7WhA80fkTq-lO-qjtGK9sGKLhgy7nGHa5honvQWaDmVtDaleYsfBDzxAwiZY7_aAzgmLHrfFrPnrtlBdiuidErApjehVXdVKIdF70YALw_EXJ3ofvQH8" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. looka.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq4ThOHwlz3zYXUpxCMj458Ps-eSKAx5zXw1ddpfKdAzSYd3CFZe21b_dZzfp9Hy8ffSDe068Y5mj8YxGnCMdx7IWZrWYIa-473LqjvxkgfQOZYR-KuXBYR5zSXlfBOTJwlrNtMYmhxJY-hzt2GPm_Ya-zyJqBhLBe" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. logomakerr.ai</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZKoinrKXc5DQ9rXiztkOx1NK05N10CD-Q4VXi171YEbyW1geeN5FujkewDBrZxzfBq0zfcFjMOYMu7BEDP4E9iAiOWBT-VCQXZLmWa4FA1yGTqIcU859lLbznY5ppJ_aI-AAby1TviV0KRAk6RnHVbf4w7IM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. richpkg.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="48.36">48.36秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="161,782">161,782</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. high-end jewelry brand identity case study Behance
+2. jewelry brand identity Behance project
+3. site:behance.net jewelry brand identity luxury
+4. Landor Bulgari brand identity Landor case study
+5. site:behance.net Bulgari brand identity
+6. site:landor.com Bulgari brand identity
+7. The Perfect Stack jewelry brand identity Behance">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. high-end jewelry brand identity case study Behance</li><li class="text-sm text-gray-600">2. jewelry brand identity Behance project</li><li class="text-sm text-gray-600">3. site:behance.net jewelry brand identity luxury</li><li class="text-sm text-gray-600">4. Landor Bulgari brand identity Landor case study</li><li class="text-sm text-gray-600">5. site:behance.net Bulgari brand identity</li><li class="text-sm text-gray-600">6. site:landor.com Bulgari brand identity</li><li class="text-sm text-gray-600">7. The Perfect Stack jewelry brand identity Behance</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are three exemplary case studies showcasing complete visual identity systems for high-end jewelry brands—each featuring logos, color palettes, pattern systems, typography, and brand applications that convey refined craftsmanship and timeless elegance:
+
+1. Asprey (Luxury Heritage Brand)  
+   URL: https://www.pentagram.com/work/asprey-2  
+   – Pentagram’s 2022 refresh for Asprey preserves the brand’s storied craftsmanship while modernizing its toolkit for both physical and digital applications.  
+   – Introduced a vibrant, digitally-optimised color palette alongside a small-use logo to complement the core Asprey wordmark.  
+   – Developed an expanded suite of patterns and a frame-shaped graphic device for collateral, packaging and store graphics.  
+   – Created “Asprey Alphabet,” a bespoke typeface inspired by the original logo, for use in personalized customer products.  
+   – Delivered a comprehensive brand guidelines document to ensure consistent implementation across all touchpoints ([pentagram.com](https://www.pentagram.com/work/asprey-2?utm_source=chatgpt.com)).
+
+2. Liten Fine Jewelry (Boutique Fine Jewelry)  
+   URL: https://valescaa-studio.com/fine-jewelry-luxury-brand-design  
+   – Valescaa Studio crafted a full visual identity for Liten Fine Jewelry, positioning it as “Responsibly Sourced, Thoughtfully Crafted.”  
+   – Assembled a moodboard embodying “Artistic | Unexpected | Elegant | Quirky | Sophisticated | Inclusive.”  
+   – Defined a refined color palette and produced primary and secondary logos plus a distinctive brandmark.  
+   – Extended identity into tangible applications: business cards, embossed envelopes, thank-you cards, jewelry cleaning-cloth pouches and branded tote bags.  
+   – Guided by a comprehensive style guide to maintain coherence across all brand materials ([valescaa-studio.com](https://valescaa-studio.com/fine-jewelry-luxury-brand-design?utm_source=chatgpt.com)).
+
+3. The Perfect Stack (High-End E-Commerce Jewelry)  
+   URL: https://www.behance.net/gallery/80896919/The-Perfect-Stack  
+   – Studio Stacie Co. developed a minimalist yet sophisticated identity for this diamond-focus e-commerce brand.  
+   – Primary logotype paired with a submark that abstracts a “C” into ring, earring and bracelet motifs—creating a flexible graphic element.  
+   – Introduced a pale-blue color palette to evoke a sense of warmth and elegance.  
+   – Designed a geometric, jewelry-oriented pattern system that reinforces the concept of infinite stack combinations.  
+   – Branded packaging includes unique, customer-specific phrases inside each box, elevating the unboxing experience and deepening emotional connection ([behance.net](https://www.behance.net/gallery/80896919/The-Perfect-Stack?utm_source=chatgpt.com)).
+
+Each of these projects offers downloadable images, mock-ups and detailed guideline documents—allowing you to explore how logos, color systems, patterns, typography, and applications come together to create cohesive, luxurious brand experiences.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are three exemplary case studies showcasing complete visual identity systems for high-end jewelry brands—each featuring logos, color palettes, pattern systems, typography, and brand applications that convey refined craftsmanship and timeless elegance:
+
+1. Asprey (Luxury Heritage Brand)  
+   URL: https://www.pentagram.com/work/asprey-2  
+   – Pentagram’s 2022 refresh for Asprey preserves the brand’s storied craftsmanship while modernizing its toolkit for both physical and digital applications.  
+   – Introduced a vibrant, digitally-optimised color palette alongside a small-use logo to complement the core Asprey wordmark.  
+   – Developed an expanded suite of patterns and a frame-shaped graphic device for collateral, packaging and store graphics.  
+   – Created “Asprey Alphabet,” a bespoke typeface inspired by the original logo, for use in personalized customer products.  
+   – Delivered a comprehensive brand guidelines document to ensure consistent implementation across all touchpoints ([pentagram.com](https://www.pentagram.com/work/asprey-2?utm_source=chatgpt.com)).
+
+2. Liten Fine Jewelry (Boutique Fine Jewelry)  
+   URL: https://valescaa-studio.com/fine-jewelry-luxury-brand-design  
+   – Valescaa Studio crafted a full visual identity for Liten Fine Jewelry, positioning it as “Responsibly Sourced, Thoughtfully Crafted.”  
+   – Assembled a moodboard embodying “Artistic | Unexpected | Elegant | Quirky | Sophisticated | Inclusive.”  
+   – Defined a refined color palette and produced primary and secondary logos plus a distinctive brandmark.  
+   – Extended identity into tangible applications: business cards, embossed envelopes, thank-you cards, jewelry cleaning-cloth pouches and branded tote bags.  
+   – Guided by a comprehensive style guide to maintain coherence across all brand materials ([valescaa-studio.com](https://valescaa-studio.com/fine-jewelry-luxury-brand-design?utm_source=chatgpt.com)).
+
+3. The Perfect Stack (High-End E-Commerce Jewelry)  
+   URL: https://www.behance.net/gallery/80896919/The-Perfect-Stack  
+   – Studio Stacie Co. developed a minimalist yet sophisticated identity for this diamond-focus e-commerce brand.  
+   – Primary logotype paired with a submark that abstracts a “C” into ring, earring and bracelet motifs—creating a flexible graphic element.  
+   – Introduced a pale-blue color palette to evoke a sense of warmth and elegance.  
+   – Designed a geometric, jewelry-oriented pattern system that reinforces the concept of infinite stack combinations.  
+   – Branded packaging includes unique, customer-specific phrases inside each box, elevating the unboxing experience and deepening emotional connection ([behance.net](https://www.behance.net/gallery/80896919/The-Perfect-Stack?utm_source=chatgpt.com)).
+
+Each of these projects offers downloadable images, mock-ups and detailed guideline documents—allowing you to explore how logos, color systems, patterns, typography, and applications come together to create cohesive, luxurious brand experiences.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Asprey (https://www.pentagram.com/work/asprey-2?utm_source=chatgpt.com)
+2. Fine Jewelry Luxury Brand Design (https://valescaa-studio.com/fine-jewelry-luxury-brand-design?utm_source=chatgpt.com)
+3. The Perfect Stack :: Behance (https://www.behance.net/gallery/80896919/The-Perfect-Stack?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.pentagram.com/work/asprey-2?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Asprey</a></li><li class="text-sm"><a href="https://valescaa-studio.com/fine-jewelry-luxury-brand-design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Fine Jewelry Luxury Brand Design</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/80896919/The-Perfect-Stack?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. The Perfect Stack :: Behance</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="82.25">82.25秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="41,007">41,007</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. luxury jewelry brand identity case study site:behance.net
+2. high-end jewelry brand identity site:dribbble.com
+3. "brand guidelines" "jewelry brand" visual identity system
+4. "luxury jewelry" "visual identity" portfolio case study branding">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. luxury jewelry brand identity case study site:behance.net</li><li class="text-sm text-gray-600">2. high-end jewelry brand identity site:dribbble.com</li><li class="text-sm text-gray-600">3. "brand guidelines" "jewelry brand" visual identity system</li><li class="text-sm text-gray-600">4. "luxury jewelry" "visual identity" portfolio case study branding</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual identity case studies for luxury jewelry brands that showcase complete brand systems including logos, color palettes, patterns, and applications.Let me search for more specific luxury jewelry brand identity projects on Dribbble and other design platforms.Now let me search for complete brand identity systems and brand guidelines for jewelry brands.Let me search for specific high-end jewelry brand portfolio projects that showcase complete visual systems.Based on my searches, I've found several excellent resources for complete visual identity systems for high-end jewelry brands. Here are the key platforms and specific projects that showcase comprehensive brand guidelines with logos, color systems, patterns, and applications:
+
+## Primary Visual Resources
+
+### Dribbble Projects
+**Luxe Jewelry Brand Identity** - A project that "emphasizes timeless elegance and individuality" with a "distinctive and luxurious visual identity" that combines "sophistication with a modern aesthetic" and ensures "branding conveys exclusivity while versatile across various applications, including jewelry engravings and high-end packaging."
+
+**Dribbble Collections** - The platform features over 100 jewelry branding designs and 19 specific jewelry brand identity projects that you can explore through:
+- dribbble.com/tags/jewelry-branding
+- dribbble.com/tags/jewelry-brand-identity
+- dribbble.com/tags/luxury-jewelry-logo
+
+### Behance Galleries
+**Minimal Luxury Jewelry Branding** - A specific project showcasing complete brand systems available at:
+- behance.net/gallery/194863833/minimal-luxury-logo-branding-for-a-jewelry-brand
+
+### Complete Brand Identity Elements
+
+The most comprehensive projects typically include:
+
+**Logo Systems:** Timeless and adaptable designs "that works on jewellery tags, packaging, and digital platforms" with examples like "Tanishq's elegant typography or Amrapali's cultural motifs"
+
+**Color Palettes:** Three distinct approaches - classic luxury with "Gold, deep reds, emerald greens, and black" for luxury feel, modern minimalism with "Soft pastels, rose gold, or monochrome" for clean sophistication, and traditional heritage with "Warm reds, mustard yellows, and vintage gold"
+
+**Typography Systems:** Clear guidelines where "Classic serif fonts convey supreme sophistication, while sleek sans-serif fonts add a contemporary edge"
+
+**Brand Guidelines:** Professional documentation that includes "a set of rules that help you build your brand voice" with "messaging and style that makes your jewelry brand distinctive and memorable" for consistent brand identity
+
+## Exemplary Case Studies
+
+**Tiffany & Co.** stands as the gold standard, with their "Tiffany Blue Box" being "instantly recognizable" along with the "trademarked Tiffany Blue" (Pantone "1837 Blue"), creating associations with "elegance and sophistication" and "beautiful jewelry that are a part of beautiful celebrations"
+
+These resources provide comprehensive examples of refined craftsmanship and timeless elegance in jewelry brand identity systems, perfect for understanding how to create cohesive visual languages that work across all brand touchpoints.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual identity case studies for luxury jewelry brands that showcase complete brand systems including logos, color palettes, patterns, and applications.Let me search for more specific luxury jewelry brand identity projects on Dribbble and other design platforms.Now let me search for complete brand identity systems and brand guidelines for jewelry brands.Let me search for specific high-end jewelry brand portfolio projects that showcase complete visual systems.Based on my searches, I've found several excellent resources for complete visual identity systems for high-end jewelry brands. Here are the key platforms and specific projects that showcase comprehensive brand guidelines with logos, color systems, patterns, and applications:
+
+## Primary Visual Resources
+
+### Dribbble Projects
+**Luxe Jewelry Brand Identity** - A project that "emphasizes timeless elegance and individuality" with a "distinctive and luxurious visual identity" that combines "sophistication with a modern aesthetic" and ensures "branding conveys exclusivity while versatile across various applications, including jewelry engravings and high-end packaging."
+
+**Dribbble Collections** - The platform features over 100 jewelry branding designs and 19 specific jewelry brand identity projects that you can explore through:
+- dribbble.com/tags/jewelry-branding
+- dribbble.com/tags/jewelry-brand-identity
+- dribbble.com/tags/luxury-jewelry-logo
+
+### Behance Galleries
+**Minimal Luxury Jewelry Branding** - A specific project showcasing complete brand systems available at:
+- behance.net/gallery/194863833/minimal-luxury-logo-branding-for-a-jewelry-brand
+
+### Complete Brand Identity Elements
+
+The most comprehensive projects typically include:
+
+**Logo Systems:** Timeless and adaptable designs "that works on jewellery tags, packaging, and digital platforms" with examples like "Tanishq's elegant typography or Amrapali's cultural motifs"
+
+**Color Palettes:** Three distinct approaches - classic luxury with "Gold, deep reds, emerald greens, and black" for luxury feel, modern minimalism with "Soft pastels, rose gold, or monochrome" for clean sophistication, and traditional heritage with "Warm reds, mustard yellows, and vintage gold"
+
+**Typography Systems:** Clear guidelines where "Classic serif fonts convey supreme sophistication, while sleek sans-serif fonts add a contemporary edge"
+
+**Brand Guidelines:** Professional documentation that includes "a set of rules that help you build your brand voice" with "messaging and style that makes your jewelry brand distinctive and memorable" for consistent brand identity
+
+## Exemplary Case Studies
+
+**Tiffany & Co.** stands as the gold standard, with their "Tiffany Blue Box" being "instantly recognizable" along with the "trademarked Tiffany Blue" (Pantone "1837 Blue"), creating associations with "elegance and sophistication" and "beautiful jewelry that are a part of beautiful celebrations"
+
+These resources provide comprehensive examples of refined craftsmanship and timeless elegance in jewelry brand identity systems, perfect for understanding how to create cohesive visual languages that work across all brand touchpoints.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Jewelry Brand designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/jewelry_brand)
+2. Jewelry Brand Identity designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/jewelry-brand-identity)
+3. Jewelry Brand Identity by Todesign19 on Dribbble (https://dribbble.com/shots/23253462-Jewelry-Brand-Identity)
+4. Behance (https://www.behance.net/gallery/194863833/minimal-luxury-logo-branding-for-a-jewelry-brand)
+5. Jewelry branding: go for gold with our ultimate guide - 99designs (https://99designs.com/blog/logo-branding/jewelry-branding-ideas-for-designing-the-perfect-jewelery-brand/)
+6. Jewelry brand identity brand guidelines document (https://www.pinterest.com/pin/744431013436420222/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/tags/jewelry_brand" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Jewelry Brand designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/jewelry-brand-identity" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Jewelry Brand Identity designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23253462-Jewelry-Brand-Identity" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Jewelry Brand Identity by Todesign19 on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/194863833/minimal-luxury-logo-branding-for-a-jewelry-brand" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Behance</a></li><li class="text-sm"><a href="https://99designs.com/blog/logo-branding/jewelry-branding-ideas-for-designing-the-perfect-jewelery-brand/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Jewelry branding: go for gold with our ultimate guide - 99designs</a></li><li class="text-sm"><a href="https://www.pinterest.com/pin/744431013436420222/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Jewelry brand identity brand guidelines document</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
