@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is asking about neon-style typography design inspiration, particularly focusing on glowing text effects, color bleeding, and retro neon sign aesthetics. The search should showcase various neon typography designs including script fonts, decorative lettering, and display typefaces with neon treatments.">The user is asking about neon-style typography design inspiration, particularly focusing on glowing text effects, color bleeding, and retro neon sign aesthetics. The search should showcase various neon typography designs including script fonts, decorative lettering, and display typefaces with neon treatments.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-16 17:27:35</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="14.91">14.91秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="979">979</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. neon typography design inspiration
+2. glowing text effects typography
+3. color bleeding neon signs typography
+4. retro neon sign aesthetics fonts
+5. neon script fonts design
+6. decorative neon lettering examples
+7. display typefaces neon effect
+8. neon sign generator online
+9. how to create neon text effect photoshop">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. neon typography design inspiration</li><li class="text-sm text-gray-600">2. glowing text effects typography</li><li class="text-sm text-gray-600">3. color bleeding neon signs typography</li><li class="text-sm text-gray-600">4. retro neon sign aesthetics fonts</li><li class="text-sm text-gray-600">5. neon script fonts design</li><li class="text-sm text-gray-600">6. decorative neon lettering examples</li><li class="text-sm text-gray-600">7. display typefaces neon effect</li><li class="text-sm text-gray-600">8. neon sign generator online</li><li class="text-sm text-gray-600">9. how to create neon text effect photoshop</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Neon-style typography design is characterized by its vibrant glowing text effects, often mimicking the look of real neon signs with their distinct tube-like forms and radiant halos. This aesthetic frequently incorporates a retro feel, drawing inspiration from the 1980s and classic diner or city nightlife signage.
+
+Here's an overview of key aspects and inspirations:
+
+**1. Glowing Text Effects:**
+The hallmark of neon typography is the luminous glow. This effect is achieved by simulating light emanating from the letters, often with a brighter inner core and a softer, diffused outer glow. Software like Adobe Illustrator and Photoshop are commonly used to create these effects by layering multiple strokes and fills, applying blur, and adjusting blending modes.
+
+**2. Color Bleeding:**
+"Color bleeding" in neon typography refers to the subtle or pronounced diffusion of light and color beyond the boundaries of the letterforms, creating a hazy or radiating aura. This can be particularly prominent when neon signs are viewed against dark backgrounds or in atmospheric settings, adding to their realistic and captivating appearance. While actual glass neon tubes are often painted black in connecting sections to maintain legibility and prevent light bleed between letters, digital designs can intentionally leverage this effect for artistic purposes.
+
+**3. Retro Neon Sign Aesthetics:**
+The retro aesthetic is central to neon typography, evoking nostalgia for the 1980s, vintage diners, and vibrant city nightlife. This often involves specific font choices and color palettes that harken back to these eras.
+
+**4. Font Styles for Neon Treatments:**
+
+*   **Script Fonts:** These fonts mimic hand-bent glass tubing, offering a smooth, flowing, and often elegant look. Examples include "Retro Signature," "Bayshore," and "Retro Neon Font – Script Style." While script fonts can be beautiful, care must be taken to ensure legibility, as excessive bleeding can make them hard to read.
+*   **Decorative Lettering:** Many neon fonts fall into the decorative category, featuring unique shapes and stylized elements that are inspired by neon signage. Examples include "Walneo" and "Gods Own Junkyard Neon Type." These fonts are designed to be eye-catching and can be used for logos, posters, and other bold statements.
+*   **Display Typefaces:** Display fonts with neon treatments are designed to stand out and are often used for headlines, titles, and branding. They can be bold, chunky, or futuristic. Examples include "Stacko Neon Font," "Gleamy Neon," "Neon LED V2," "Neon Hypes," "Neon Vibes," "Newon," "Neon Shine," "Neon Backlight," and "Starlux."
+
+**Creating Neon Effects:**
+Design software like Adobe Photoshop and Illustrator offer tools and techniques to achieve realistic neon effects. This involves using layer styles such as inner and outer glows, color overlays, and blurs. There are also many free and paid neon fonts available that come with pre-designed neon effects or are specifically created to mimic the look of neon signs. Online neon sign makers also allow users to visualize their text in various neon fonts and colors.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Neon-style typography design is characterized by its vibrant glowing text effects, often mimicking the look of real neon signs with their distinct tube-like forms and radiant halos. This aesthetic frequently incorporates a retro feel, drawing inspiration from the 1980s and classic diner or city nightlife signage.
+
+Here's an overview of key aspects and inspirations:
+
+**1. Glowing Text Effects:**
+The hallmark of neon typography is the luminous glow. This effect is achieved by simulating light emanating from the letters, often with a brighter inner core and a softer, diffused outer glow. Software like Adobe Illustrator and Photoshop are commonly used to create these effects by layering multiple strokes and fills, applying blur, and adjusting blending modes.
+
+**2. Color Bleeding:**
+"Color bleeding" in neon typography refers to the subtle or pronounced diffusion of light and color beyond the boundaries of the letterforms, creating a hazy or radiating aura. This can be particularly prominent when neon signs are viewed against dark backgrounds or in atmospheric settings, adding to their realistic and captivating appearance. While actual glass neon tubes are often painted black in connecting sections to maintain legibility and prevent light bleed between letters, digital designs can intentionally leverage this effect for artistic purposes.
+
+**3. Retro Neon Sign Aesthetics:**
+The retro aesthetic is central to neon typography, evoking nostalgia for the 1980s, vintage diners, and vibrant city nightlife. This often involves specific font choices and color palettes that harken back to these eras.
+
+**4. Font Styles for Neon Treatments:**
+
+*   **Script Fonts:** These fonts mimic hand-bent glass tubing, offering a smooth, flowing, and often elegant look. Examples include "Retro Signature," "Bayshore," and "Retro Neon Font – Script Style." While script fonts can be beautiful, care must be taken to ensure legibility, as excessive bleeding can make them hard to read.
+*   **Decorative Lettering:** Many neon fonts fall into the decorative category, featuring unique shapes and stylized elements that are inspired by neon signage. Examples include "Walneo" and "Gods Own Junkyard Neon Type." These fonts are designed to be eye-catching and can be used for logos, posters, and other bold statements.
+*   **Display Typefaces:** Display fonts with neon treatments are designed to stand out and are often used for headlines, titles, and branding. They can be bold, chunky, or futuristic. Examples include "Stacko Neon Font," "Gleamy Neon," "Neon LED V2," "Neon Hypes," "Neon Vibes," "Newon," "Neon Shine," "Neon Backlight," and "Starlux."
+
+**Creating Neon Effects:**
+Design software like Adobe Photoshop and Illustrator offer tools and techniques to achieve realistic neon effects. This involves using layer styles such as inner and outer glows, color overlays, and blurs. There are also many free and paid neon fonts available that come with pre-designed neon effects or are specifically created to mimic the look of neon signs. Online neon sign makers also allow users to visualize their text in various neon fonts and colors.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. adobe.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGS3gSaKiiyOHjWiyN-40yRSrcJ3zLKZ1gTNCQoCm3MmFNYVAL00AeGSFzYCLVSFJn7MXCxP_Kvx-s00p_ymAKxsAMSh4lw0p1J-EQXgyKb_SULo5d5QSRv1Hw9vVYRAAQW5DmakY0c1gN2GX0udY7bqACXOsOcZ6oN2Q==)
+2. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1ADDIAUlqMz24TN0gmrXNuTZJwlUZ2FZzT8DPyyY-p5zDWoK86eDhFx1ITXJgV-x__2lSxdQ6oMhG_7d3SqnW5oEWvWhf21iYP4fThY-O7rh4wx2dMsCu5eA_m8Xo1uLuIjpoGy8=)
+3. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKbU4m9KdHhckto9wgZAOA_jvFXf8iM_2Qgg4EuUBzydnNhPpFKDxxGhDO4zXb0BvMM7mAoRxX0wlDV7aYURigBKGGgoDXPclGThYfHw6o1_WNWCsODcDg1Rq3NouCZS3-IkXDKw=)
+4. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeLU8pPxNM2qlVptTbrRMMIxQA5cJZ3WThp2WhZ6rXA4Dz_xxl7uPtNy8UsXuk4OgcFSvQ94giMypcXGLcRGsCYpGuZ8lQNoy7rgA7hSlX2Dsz_1p1fr5YVvM5PGNT5F3a7vc9OP3wxkC0nP3kgK5G43YtXzs1b0VPUBUrxPR9nQ==)
+5. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA0O_1nMc0sQqRsPjlmk2TtCtvjd-3vZSq3y3Tdehe2vxXJ4srDXlAx0-n9djXQpZHfHd8tz1xIkHUWuGl-Ka3cm2MGZaLUybfKiW9RRTRYDPbOCtQrxXS-6QS4QCsPxN1LA==)
+6. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAGxRyyN-CjGscpiyArDOGf8vbgMWq06a3rujcnQdHs4G_p-g3ohBL0PjRd4-tdy7WCHJ3nlkLEleu7eDTvGQ9XERb4KthCKlNU0-NGnW_TKwquqnjxbltPgIMkTChJAdNxQ==)
+7. tiktok.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErzwo1PPPa4GX6X1aM7LQG0n3iXVJvsEOlcmnA7LenLof99HutfJY4rjzLxXqAl9mCAs7Vi0b95bCrinchg6xlZDl9Nw237dzx5D63NRD-77L851AQfjc_FMMHokpySA8MrnCUmkaXz42GasHOsJMOeEDgXdnRXUoKF64=)
+8. designinquiry.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVajmrubZAJGP2IdeyQdp-B-araEolBjn1hG3rcJNp60748D_IVHYHSLZztvkCFGhuVY_U9OrgJDQF_QY6uV8QOjyjQwmj8pCt5FkgFwq3f8BtL680tSSPT-4wX4ECNHQR0E1Byklaj9lVXDYl7EzhFclpf91VdwWa7DU=)
+9. designworklife.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHub7iXUnD0ECa2-xTgoIXFYHsfnDzbqn00_ihCX-TfDAwtp4uJVGivR8scoknzPjltQS9IIN-TzC5MmjVjdYrczMiWOcJWXkWNjI1gMmT0yNWzpy6G740bRQqCO9ZOF7znrepeBXso_HAud7eCyPwG6b2Ty6qbJyK5RMW-7zxQY8gLkQjanPlJ4A==)
+10. designshack.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1tbVbgAmxoEs2ilCdBHaVgc0QFDCOb4neJU72EXdldfwKD4QgdpmMXNZVytgTltM4oISzrBGcG4PJOEeZvMr1H_toSFBZOeix0rQnJJdF63Y9nRqJGEcyNNYfkvfkFKDuCgyDExxpLF1A8uMFTphqBJY2UukbOtA=)
+11. vidasigns.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWxxBolstp43WkNh3A2gEJzPJHNgiChCJspvRmN-fnqTpbeQT6pzs7sJ78aMDks6tqlURY2mFpbwfixn2qitx4wKIyss3irGJrbNKGRhnXOeWEoBXXHnrAG2fFymdeBtOIevT-uns=)
+12. myfonts.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt1ub3mb8gjnqffbwPYd-h8mK0rItd42hecphJmq55FyZNIhDfK-HeWNf6JQXszJ-o4X9WbyOe6h8VhCu9bzbmv-Shk9gX8rYSEvzAf7G-eD7fvTJaXnD-YOARe30dRfFY7_CkAnYfvadEcIdfmAaoLA==)
+13. neoncreations.co.uk (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZw3FnBj0Qg6wj1Ec3VAIhT5r1M7ayLa9DUatQay52R-9SxqJQm7deTS96fXvdntCdKPV3IUbic4VlNftFs-NT1lzWyx-yCI0JX2X0gdBfKB-Ifc3mWPsf6gJiOtB_uQlA3bTOYySdU7AP6CGNkNV_n3I=)
+14. neonbydesign.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5916NXKPXPNmA9y-Vt7fJ4AWC7D18AicwC7LTvH2HCNeqQ0nsQXht2S1Xa22jhx23W7ArSF6YrupmRW6d_tPB2KGvDpPB9jWSRdOX0UACUCEfIef7FP5D_ECUj-mac8-ovEDkeijeTFreggs=)
+15. thedesignest.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhLTRR-kvIGf-j9_KYvEQo9AefPeSmAB17e46bgwOexjL7ohzGHHNvrEkgh7pcrKeMSrXDAEji3DFmYTqvjGVnGmvrT3reHddJE3gQuCN6JAV5pSGvdm1QBOaPmKCgcg==)
+16. qaratype.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJPTgo-WfkMLwU8VnAAZMUpA4rJRLaCpZqzY3myE2XS-HeFR2oA7gQQ0WAycfOQKWjiOyB0YhlRHnWCzC46Q4XfH-ist5am1QfObj1Nt6IeB7EjP14s1o0uRpgP8NcS7E7rXRY)
+17. freedesignresources.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDfCKsHDkC_SYDeXxdyxPU-Rg0RprmrvB9D_0F3n8a1SqF1SOK2XGVCoVAelcq-UwrmO_YWYmyDs79Y7lcWFqjp8A1Mu1Cn2pebt5z54lzv7q6bQ0ctK235iWSuRRSkg6BZHyASlVuI1TJq11QgrEcps2ol9eckjQA)
+18. ditatype.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtb63KCr--XpCF2YRfmPreTVtKPpVkNX7GgFWKdqjhFXgaNyfK0cUtjKyazm0ECZM-l5bV-6MeLl1TXpk7AS88ICSXvDkqF5_48M9a37F3b3vMXjNKYN3y18ASlAN1jqqoxYaLZMexEC_WhoExga4FLe5CPQ==)
+19. borisfx.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIOCdUlQYjsSzRH9Vh_AnU6u8vnpUYe2V06hRszT8e-22qaVyE7Z7ucNaPl6FoilZJwiBfHO0P0eKxMmKNDUHOhi7Om_pjEcNU_GnjXlHbdr0_Rzv_GPZbVfcV2gOfGgA54vbEOhUXqlirSsU1wywlR-ItmVsKibZG9R_92uL91CUfhg==)
+20. creativemarket.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdN25GWlQVxlqF_OYWXSfGhMfTs-d2K4-r1MFMK_LErlcnFJDollT4s0qEo8gfG4wlTRJlmC6TipBcih96Up5oe42J8ALGKxZqirU5NM6DmTFLxHr1ktb8QIb6CdyOu_kOehq0wGk=)
+21. 1001fonts.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgMNC6nefXZD2Zw9GzkOhdzwqIRjiRMO72kCHgLACmQnDg2AMqx4rc1cdr54qtSBEZiB5jqyfsowAON3gkrYoQRvnFeWD5Z9vi7iq0OL7E1ScC0c_uYlvOYd0IaAMW2dclHVzq)
+22. customneon.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlQz0ceX-iYb3Jvz-WumTnOGSBE1IA4xhmS7Lj8mIa5ghPv_EgrK2umFtBZZFWBsEHAs8Y5V4_HkCaj-pUyzMUfB6cmACipc6rnMY7nUs4ITtuEsiaUhZ-Oek7DNkvrOG2YE4=)
+23. signcustomiser.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzrOX8y5zymfKZR4jzPSy42HThoS0CeWBMSAGBUe8y5fXO7JtZRc1hsilteW-rnX7kXCj9I8iSZJbyL8ElLGQ8_WrEqnSTSw5-tkjfgDCnPcWBwAMyIUObIby_p8fvDljWBi4QIs_Lm8HU1aUtygCKES4tgU_w)
+24. createneon.com.au (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPGN2Urxg4HGBD4K5ivtb01YUSAJVO5dNvGnIDlAmAhLIewoim3H2sPqiM7M2I3vEXTr5TLwGVzRlCANyGWiJqbOgVeeiSATPYyYnPgpE9tnLmLs2mBUaPqXySDhCn74mdF9raYK4Tt-rT2qv4pVc=)
+25. customneon.com.au (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECAdPFuSC6D8fhv8kq9lYlPBSD0aD7dz1WntIjrDVC9W0YMg9C2y4w7dM7sm7Bxu4pnKKQT88sJhGkNKhiVaebjTqYEZ2ogYjwAEYKiEHY3xu8C-PX-joTd_tDFYI4wOrt4Slf3zo=)
+26. myneonstore.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH98v_ervnkbMrnyX0GpqiS1x2us6XZ2FshS4bB25cEYtjmvtw0Pm4kaoWF6M8ImXWCKMRfaFsngNma6Lf_BXoIDq0QPJCj67Qp4ghxWQ0WfrhPphHGFDgRovDNMQP8r1YbrNvUOwKJu90qqRl1D8XPnXBo4A==)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGS3gSaKiiyOHjWiyN-40yRSrcJ3zLKZ1gTNCQoCm3MmFNYVAL00AeGSFzYCLVSFJn7MXCxP_Kvx-s00p_ymAKxsAMSh4lw0p1J-EQXgyKb_SULo5d5QSRv1Hw9vVYRAAQW5DmakY0c1gN2GX0udY7bqACXOsOcZ6oN2Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. adobe.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1ADDIAUlqMz24TN0gmrXNuTZJwlUZ2FZzT8DPyyY-p5zDWoK86eDhFx1ITXJgV-x__2lSxdQ6oMhG_7d3SqnW5oEWvWhf21iYP4fThY-O7rh4wx2dMsCu5eA_m8Xo1uLuIjpoGy8=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHKbU4m9KdHhckto9wgZAOA_jvFXf8iM_2Qgg4EuUBzydnNhPpFKDxxGhDO4zXb0BvMM7mAoRxX0wlDV7aYURigBKGGgoDXPclGThYfHw6o1_WNWCsODcDg1Rq3NouCZS3-IkXDKw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeLU8pPxNM2qlVptTbrRMMIxQA5cJZ3WThp2WhZ6rXA4Dz_xxl7uPtNy8UsXuk4OgcFSvQ94giMypcXGLcRGsCYpGuZ8lQNoy7rgA7hSlX2Dsz_1p1fr5YVvM5PGNT5F3a7vc9OP3wxkC0nP3kgK5G43YtXzs1b0VPUBUrxPR9nQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA0O_1nMc0sQqRsPjlmk2TtCtvjd-3vZSq3y3Tdehe2vxXJ4srDXlAx0-n9djXQpZHfHd8tz1xIkHUWuGl-Ka3cm2MGZaLUybfKiW9RRTRYDPbOCtQrxXS-6QS4QCsPxN1LA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAGxRyyN-CjGscpiyArDOGf8vbgMWq06a3rujcnQdHs4G_p-g3ohBL0PjRd4-tdy7WCHJ3nlkLEleu7eDTvGQ9XERb4KthCKlNU0-NGnW_TKwquqnjxbltPgIMkTChJAdNxQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErzwo1PPPa4GX6X1aM7LQG0n3iXVJvsEOlcmnA7LenLof99HutfJY4rjzLxXqAl9mCAs7Vi0b95bCrinchg6xlZDl9Nw237dzx5D63NRD-77L851AQfjc_FMMHokpySA8MrnCUmkaXz42GasHOsJMOeEDgXdnRXUoKF64=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. tiktok.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVajmrubZAJGP2IdeyQdp-B-araEolBjn1hG3rcJNp60748D_IVHYHSLZztvkCFGhuVY_U9OrgJDQF_QY6uV8QOjyjQwmj8pCt5FkgFwq3f8BtL680tSSPT-4wX4ECNHQR0E1Byklaj9lVXDYl7EzhFclpf91VdwWa7DU=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. designinquiry.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHub7iXUnD0ECa2-xTgoIXFYHsfnDzbqn00_ihCX-TfDAwtp4uJVGivR8scoknzPjltQS9IIN-TzC5MmjVjdYrczMiWOcJWXkWNjI1gMmT0yNWzpy6G740bRQqCO9ZOF7znrepeBXso_HAud7eCyPwG6b2Ty6qbJyK5RMW-7zxQY8gLkQjanPlJ4A==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. designworklife.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1tbVbgAmxoEs2ilCdBHaVgc0QFDCOb4neJU72EXdldfwKD4QgdpmMXNZVytgTltM4oISzrBGcG4PJOEeZvMr1H_toSFBZOeix0rQnJJdF63Y9nRqJGEcyNNYfkvfkFKDuCgyDExxpLF1A8uMFTphqBJY2UukbOtA=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. designshack.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWxxBolstp43WkNh3A2gEJzPJHNgiChCJspvRmN-fnqTpbeQT6pzs7sJ78aMDks6tqlURY2mFpbwfixn2qitx4wKIyss3irGJrbNKGRhnXOeWEoBXXHnrAG2fFymdeBtOIevT-uns=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. vidasigns.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt1ub3mb8gjnqffbwPYd-h8mK0rItd42hecphJmq55FyZNIhDfK-HeWNf6JQXszJ-o4X9WbyOe6h8VhCu9bzbmv-Shk9gX8rYSEvzAf7G-eD7fvTJaXnD-YOARe30dRfFY7_CkAnYfvadEcIdfmAaoLA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. myfonts.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZw3FnBj0Qg6wj1Ec3VAIhT5r1M7ayLa9DUatQay52R-9SxqJQm7deTS96fXvdntCdKPV3IUbic4VlNftFs-NT1lzWyx-yCI0JX2X0gdBfKB-Ifc3mWPsf6gJiOtB_uQlA3bTOYySdU7AP6CGNkNV_n3I=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. neoncreations.co.uk</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5916NXKPXPNmA9y-Vt7fJ4AWC7D18AicwC7LTvH2HCNeqQ0nsQXht2S1Xa22jhx23W7ArSF6YrupmRW6d_tPB2KGvDpPB9jWSRdOX0UACUCEfIef7FP5D_ECUj-mac8-ovEDkeijeTFreggs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. neonbydesign.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhLTRR-kvIGf-j9_KYvEQo9AefPeSmAB17e46bgwOexjL7ohzGHHNvrEkgh7pcrKeMSrXDAEji3DFmYTqvjGVnGmvrT3reHddJE3gQuCN6JAV5pSGvdm1QBOaPmKCgcg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. thedesignest.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJPTgo-WfkMLwU8VnAAZMUpA4rJRLaCpZqzY3myE2XS-HeFR2oA7gQQ0WAycfOQKWjiOyB0YhlRHnWCzC46Q4XfH-ist5am1QfObj1Nt6IeB7EjP14s1o0uRpgP8NcS7E7rXRY" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. qaratype.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDfCKsHDkC_SYDeXxdyxPU-Rg0RprmrvB9D_0F3n8a1SqF1SOK2XGVCoVAelcq-UwrmO_YWYmyDs79Y7lcWFqjp8A1Mu1Cn2pebt5z54lzv7q6bQ0ctK235iWSuRRSkg6BZHyASlVuI1TJq11QgrEcps2ol9eckjQA" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. freedesignresources.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtb63KCr--XpCF2YRfmPreTVtKPpVkNX7GgFWKdqjhFXgaNyfK0cUtjKyazm0ECZM-l5bV-6MeLl1TXpk7AS88ICSXvDkqF5_48M9a37F3b3vMXjNKYN3y18ASlAN1jqqoxYaLZMexEC_WhoExga4FLe5CPQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. ditatype.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIOCdUlQYjsSzRH9Vh_AnU6u8vnpUYe2V06hRszT8e-22qaVyE7Z7ucNaPl6FoilZJwiBfHO0P0eKxMmKNDUHOhi7Om_pjEcNU_GnjXlHbdr0_Rzv_GPZbVfcV2gOfGgA54vbEOhUXqlirSsU1wywlR-ItmVsKibZG9R_92uL91CUfhg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. borisfx.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdN25GWlQVxlqF_OYWXSfGhMfTs-d2K4-r1MFMK_LErlcnFJDollT4s0qEo8gfG4wlTRJlmC6TipBcih96Up5oe42J8ALGKxZqirU5NM6DmTFLxHr1ktb8QIb6CdyOu_kOehq0wGk=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. creativemarket.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgMNC6nefXZD2Zw9GzkOhdzwqIRjiRMO72kCHgLACmQnDg2AMqx4rc1cdr54qtSBEZiB5jqyfsowAON3gkrYoQRvnFeWD5Z9vi7iq0OL7E1ScC0c_uYlvOYd0IaAMW2dclHVzq" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. 1001fonts.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlQz0ceX-iYb3Jvz-WumTnOGSBE1IA4xhmS7Lj8mIa5ghPv_EgrK2umFtBZZFWBsEHAs8Y5V4_HkCaj-pUyzMUfB6cmACipc6rnMY7nUs4ITtuEsiaUhZ-Oek7DNkvrOG2YE4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. customneon.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzrOX8y5zymfKZR4jzPSy42HThoS0CeWBMSAGBUe8y5fXO7JtZRc1hsilteW-rnX7kXCj9I8iSZJbyL8ElLGQ8_WrEqnSTSw5-tkjfgDCnPcWBwAMyIUObIby_p8fvDljWBi4QIs_Lm8HU1aUtygCKES4tgU_w" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. signcustomiser.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPGN2Urxg4HGBD4K5ivtb01YUSAJVO5dNvGnIDlAmAhLIewoim3H2sPqiM7M2I3vEXTr5TLwGVzRlCANyGWiJqbOgVeeiSATPYyYnPgpE9tnLmLs2mBUaPqXySDhCn74mdF9raYK4Tt-rT2qv4pVc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">24. createneon.com.au</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECAdPFuSC6D8fhv8kq9lYlPBSD0aD7dz1WntIjrDVC9W0YMg9C2y4w7dM7sm7Bxu4pnKKQT88sJhGkNKhiVaebjTqYEZ2ogYjwAEYKiEHY3xu8C-PX-joTd_tDFYI4wOrt4Slf3zo=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">25. customneon.com.au</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH98v_ervnkbMrnyX0GpqiS1x2us6XZ2FshS4bB25cEYtjmvtw0Pm4kaoWF6M8ImXWCKMRfaFsngNma6Lf_BXoIDq0QPJCj67Qp4ghxWQ0WfrhPphHGFDgRovDNMQP8r1YbrNvUOwKJu90qqRl1D8XPnXBo4A==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">26. myneonstore.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="33.14">33.14秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="33,988">33,988</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net neon typography
+2. site:dribbble.com neon typography
+3. site:pinterest.com neon typography board">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net neon typography</li><li class="text-sm text-gray-600">2. site:dribbble.com neon typography</li><li class="text-sm text-gray-600">3. site:pinterest.com neon typography board</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are direct, image-focused galleries showcasing neon-style typography—glowing tube effects, color bleeding, retro sign aesthetics, script and decorative lettering, and bold display treatments:
+
+• [Neon Type 3D Lettering Collection – Behance](https://www.behance.net/gallery/29089777/Neon-Type-3D-Lettering-Collection)  
+  A vibrant showcase of 3D neon lettering experiments, featuring glowing tube simulations, multi-hued color glows, and retro-inspired forms ([behance.net](https://www.behance.net/gallery/29089777/Neon-Type-3D-Lettering-Collection?utm_source=chatgpt.com))
+
+• [Typography Topic: Neon Signs – Behance](https://www.behance.net/gallery/70875987/Typography-Topic-Neon-Signs)  
+  Curated neon-sign explorations on dark backdrops, with color diffusion, handcrafted script treatments, and decorative neon lettering ([behance.net](https://www.behance.net/gallery/70875987/Typography-Topic-Neon-Signs?utm_source=chatgpt.com))
+
+• [Neon typography installation – Behance](https://www.behance.net/gallery/108474777/Neon-typography-installation)  
+  Large-scale neon letterforms in public settings—custom glowing typography that bleeds light onto surrounding architecture ([behance.net](https://www.behance.net/gallery/108474777/Neon-typography-installation?utm_source=chatgpt.com))
+
+• [Neon Typography – Behance (Beka Beridze)](https://www.behance.net/gallery/44376775/Neon-Typography)  
+  A compact portfolio of neon-effect display type: bold strokes, color halos, and vintage sign-style letter shapes ([behance.net](https://www.behance.net/gallery/44376775/Neon-Typography?utm_source=chatgpt.com))
+
+• [Neon Typography – Dribbble (Cadu Oliveira)](https://dribbble.com/shots/4594006-Neon-Typography)  
+  Close-up shot revealing intense glow gradients, subtle color bleed, and fluid script-style neon letters ([dribbble.com](https://dribbble.com/shots/4594006-Neon-Typography?utm_source=chatgpt.com))
+
+• [NeON (Creative Typography) – Dribbble (Muhammad Hasbii)](https://dribbble.com/shots/14998897-NeON-Creative-Typography)  
+  Experimental neon text with saturated hues, blurred glow shadows, and decorative ligature details ([dribbble.com](https://dribbble.com/search/neon-light-typography?utm_source=chatgpt.com))
+
+• [58 3D Neon Signs – Pinterest board (gedrocks)](https://ph.pinterest.com/gedrocks/3d-neon-signs/)  
+  A broad collection of 3D neon sign photography and lettering, covering script, block, and retro styles ([ph.pinterest.com](https://ph.pinterest.com/gedrocks/3d-neon-signs/?utm_source=chatgpt.com))">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are direct, image-focused galleries showcasing neon-style typography—glowing tube effects, color bleeding, retro sign aesthetics, script and decorative lettering, and bold display treatments:
+
+• [Neon Type 3D Lettering Collection – Behance](https://www.behance.net/gallery/29089777/Neon-Type-3D-Lettering-Collection)  
+  A vibrant showcase of 3D neon lettering experiments, featuring glowing tube simulations, multi-hued color glows, and retro-inspired forms ([behance.net](https://www.behance.net/gallery/29089777/Neon-Type-3D-Lettering-Collection?utm_source=chatgpt.com))
+
+• [Typography Topic: Neon Signs – Behance](https://www.behance.net/gallery/70875987/Typography-Topic-Neon-Signs)  
+  Curated neon-sign explorations on dark backdrops, with color diffusion, handcrafted script treatments, and decorative neon lettering ([behance.net](https://www.behance.net/gallery/70875987/Typography-Topic-Neon-Signs?utm_source=chatgpt.com))
+
+• [Neon typography installation – Behance](https://www.behance.net/gallery/108474777/Neon-typography-installation)  
+  Large-scale neon letterforms in public settings—custom glowing typography that bleeds light onto surrounding architecture ([behance.net](https://www.behance.net/gallery/108474777/Neon-typography-installation?utm_source=chatgpt.com))
+
+• [Neon Typography – Behance (Beka Beridze)](https://www.behance.net/gallery/44376775/Neon-Typography)  
+  A compact portfolio of neon-effect display type: bold strokes, color halos, and vintage sign-style letter shapes ([behance.net](https://www.behance.net/gallery/44376775/Neon-Typography?utm_source=chatgpt.com))
+
+• [Neon Typography – Dribbble (Cadu Oliveira)](https://dribbble.com/shots/4594006-Neon-Typography)  
+  Close-up shot revealing intense glow gradients, subtle color bleed, and fluid script-style neon letters ([dribbble.com](https://dribbble.com/shots/4594006-Neon-Typography?utm_source=chatgpt.com))
+
+• [NeON (Creative Typography) – Dribbble (Muhammad Hasbii)](https://dribbble.com/shots/14998897-NeON-Creative-Typography)  
+  Experimental neon text with saturated hues, blurred glow shadows, and decorative ligature details ([dribbble.com](https://dribbble.com/search/neon-light-typography?utm_source=chatgpt.com))
+
+• [58 3D Neon Signs – Pinterest board (gedrocks)](https://ph.pinterest.com/gedrocks/3d-neon-signs/)  
+  A broad collection of 3D neon sign photography and lettering, covering script, block, and retro styles ([ph.pinterest.com](https://ph.pinterest.com/gedrocks/3d-neon-signs/?utm_source=chatgpt.com))</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. 3D TYPOGRAPHY :: Behance (https://www.behance.net/gallery/29089777/Neon-Type-3D-Lettering-Collection?utm_source=chatgpt.com)
+2. Typography Topic: Neon Signs :: Behance (https://www.behance.net/gallery/70875987/Typography-Topic-Neon-Signs?utm_source=chatgpt.com)
+3. Neon typography installation :: Behance (https://www.behance.net/gallery/108474777/Neon-typography-installation?utm_source=chatgpt.com)
+4. Neon Typography :: Behance (https://www.behance.net/gallery/44376775/Neon-Typography?utm_source=chatgpt.com)
+5. Neon Typography by Cadu Oliveira on Dribbble (https://dribbble.com/shots/4594006-Neon-Typography?utm_source=chatgpt.com)
+6. Browse thousands of Neon Light Typography images for design inspiration | Dribbble (https://dribbble.com/search/neon-light-typography?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/29089777/Neon-Type-3D-Lettering-Collection?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. 3D TYPOGRAPHY :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/70875987/Typography-Topic-Neon-Signs?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Typography Topic: Neon Signs :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/108474777/Neon-typography-installation?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Neon typography installation :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/44376775/Neon-Typography?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Neon Typography :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/4594006-Neon-Typography?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Neon Typography by Cadu Oliveira on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/search/neon-light-typography?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Browse thousands of Neon Light Typography images for design inspiration | Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="51.02">51.02秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="62,250">62,250</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. neon typography design site:behance.net
+2. glowing text effects neon sign site:dribbble.com
+3. "retro neon sign" typography portfolio
+4. neon typography script fonts color bleeding effects">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. neon typography design site:behance.net</li><li class="text-sm text-gray-600">2. glowing text effects neon sign site:dribbble.com</li><li class="text-sm text-gray-600">3. "retro neon sign" typography portfolio</li><li class="text-sm text-gray-600">4. neon typography script fonts color bleeding effects</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for direct visual galleries showcasing neon-style typography designs with glowing effects and retro aesthetics.Here are some excellent visual galleries showcasing neon-style typography design inspiration with glowing text effects, color bleeding, and retro aesthetics:
+
+## Behance Gallery Collections
+
+Behance hosts numerous neon typography galleries, including the "NEONEON-FREE-FONT" project, "Neon Free Font" collection, and "Neon - Typeface by Superfried". The "TYPOGRAPHY | FONT – Neon Club Music" gallery features geometric and rounded character designs with a futuristic sci-fi atmosphere, showcasing sans-serif monoline letter-forms that look modern, clean, fresh and fancy.
+
+The "Neon Type 2" project offers a Photoshop template file to help create realistic neon signage effects, while featuring layered shadows, reflections and shape layers for customization of each character.
+
+## Dribbble Visual Showcases
+
+Dribbble features extensive neon typography galleries with "8 Neon Glow Effect designs," "35 Neon Text designs," and "18 Neon Text Effect designs". The "Wall Neon Glow Text Effect PSD" showcases super realistic neon glow text effects on brick wall backgrounds, using smart-object layers to create neon text within seconds.
+
+The platform displays "100+ Neon Effect designs" including projects like "7EVEN SVG - Urban Neon Font Pack," "Neon Pizza," and "Alien with Neon Glow".
+
+## Professional Typography Resources
+
+Wings Art Studio offers a "Neon Sign Collection Vol 01" featuring illustrations and design templates inspired by vintage neon signs and lettering, editable in Photoshop, Illustrator and After Effects. The collection uses native effects carefully tweaked for authentic neon looks, including Graphic Style presets for easy neon effects application.
+
+## Script Font Galleries
+
+Professional neon script fonts like "NeonScript" offer sophisticated designs that radiate energy, with elegant and stylish appearances perfect for standout messaging. The InDesign Skills tutorial demonstrates authentic neon sign effects using script fonts like "Burtons Script" with dark pink coloring.
+
+The "Night Light Neon Script Font" provides cursive neon styling suitable for headers or body text, including upper and lowercase characters, numbers, punctuation, and multilingual support.
+
+## Color Bleeding & Retro Effects
+
+Professional tutorials show how to layer dark and light tones for authentic neon effects, with techniques for creating blue variations using dark blue and pale blue swatches. Advanced neon projects allow color customization from pre-installed pink, cyan, and green to personalized colors, with options to add braces for realism or create airy neon signs.
+
+The "Neon Tubes Cursive" font exemplifies retro styling with "fantastically retro, beautifully styled sign font that has an enormous amount of personality" while maintaining excellent readability.
+
+These galleries provide direct access to visual inspiration showcasing various neon typography treatments, from geometric display fonts to flowing script styles, all featuring the characteristic glowing effects and vibrant color bleeding that define neon aesthetics.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for direct visual galleries showcasing neon-style typography designs with glowing effects and retro aesthetics.Here are some excellent visual galleries showcasing neon-style typography design inspiration with glowing text effects, color bleeding, and retro aesthetics:
+
+## Behance Gallery Collections
+
+Behance hosts numerous neon typography galleries, including the "NEONEON-FREE-FONT" project, "Neon Free Font" collection, and "Neon - Typeface by Superfried". The "TYPOGRAPHY | FONT – Neon Club Music" gallery features geometric and rounded character designs with a futuristic sci-fi atmosphere, showcasing sans-serif monoline letter-forms that look modern, clean, fresh and fancy.
+
+The "Neon Type 2" project offers a Photoshop template file to help create realistic neon signage effects, while featuring layered shadows, reflections and shape layers for customization of each character.
+
+## Dribbble Visual Showcases
+
+Dribbble features extensive neon typography galleries with "8 Neon Glow Effect designs," "35 Neon Text designs," and "18 Neon Text Effect designs". The "Wall Neon Glow Text Effect PSD" showcases super realistic neon glow text effects on brick wall backgrounds, using smart-object layers to create neon text within seconds.
+
+The platform displays "100+ Neon Effect designs" including projects like "7EVEN SVG - Urban Neon Font Pack," "Neon Pizza," and "Alien with Neon Glow".
+
+## Professional Typography Resources
+
+Wings Art Studio offers a "Neon Sign Collection Vol 01" featuring illustrations and design templates inspired by vintage neon signs and lettering, editable in Photoshop, Illustrator and After Effects. The collection uses native effects carefully tweaked for authentic neon looks, including Graphic Style presets for easy neon effects application.
+
+## Script Font Galleries
+
+Professional neon script fonts like "NeonScript" offer sophisticated designs that radiate energy, with elegant and stylish appearances perfect for standout messaging. The InDesign Skills tutorial demonstrates authentic neon sign effects using script fonts like "Burtons Script" with dark pink coloring.
+
+The "Night Light Neon Script Font" provides cursive neon styling suitable for headers or body text, including upper and lowercase characters, numbers, punctuation, and multilingual support.
+
+## Color Bleeding & Retro Effects
+
+Professional tutorials show how to layer dark and light tones for authentic neon effects, with techniques for creating blue variations using dark blue and pale blue swatches. Advanced neon projects allow color customization from pre-installed pink, cyan, and green to personalized colors, with options to add braces for realism or create airy neon signs.
+
+The "Neon Tubes Cursive" font exemplifies retro styling with "fantastically retro, beautifully styled sign font that has an enormous amount of personality" while maintaining excellent readability.
+
+These galleries provide direct access to visual inspiration showcasing various neon typography treatments, from geometric display fonts to flowing script styles, all featuring the characteristic glowing effects and vibrant color bleeding that define neon aesthetics.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Behance (https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT)
+2. Neon Free Font (https://www.behance.net/gallery/66636139/Neon-Free-Font)
+3. TYPOGRAPHY | FONT – Neon Club Music on Behance (https://www.behance.net/gallery/15233241/TYPOGRAPHY-FONT-Neon-Club-Music)
+4. Neon - Typeface by Superfried (https://www.behance.net/gallery/19622571/Neon-Typeface-by-Superfried)
+5. Neon Glow Effect designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/neon-glow-effect)
+6. Free Neon Text Effect designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/free_neon_text_effect)
+7. Neon Text Effect designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/neon-text-effect)
+8. Neon Glowing Effect designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/neon_glowing_effect)
+9. 10+Best Neon Sign Fonts For Your Custom Design - NeonGrand (https://neongrand.com/blogs/helpful-tips/10best-neon-sign-fonts-for-your-custom-design)
+10. Neon Light Glow Effects designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/neon_light_glow_effects)
+11. Retro Neon Sign Images – Browse 296,231 Stock Photos, Vectors, and Video | Adobe Stock (https://stock.adobe.com/search?k=retro+neon+sign)
+12. 15 Cool Neon Light Fonts (Neon Sign Text Effects) | Envato Tuts+ (https://design.tutsplus.com/articles/15-cool-neon-light-fonts-neon-sign-text-effects--cms-93690)
+13. 10+ Beautiful Neon Sign Fonts and Effects — Medialoot (https://medialoot.com/blog/neon-fonts-signs-and-effects/)
+14. Neon Fonts - Free Download (2025) | Resource Boy (https://resourceboy.com/fonts/neon/)
+15. 60+ Best Neon Fonts (FREE / Premium) 2024| Hyperpix (https://hyperpix.net/fonts/neon-fonts/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/55332529/NEONEON-FREE-FONT" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/66636139/Neon-Free-Font" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Neon Free Font</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/15233241/TYPOGRAPHY-FONT-Neon-Club-Music" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. TYPOGRAPHY | FONT – Neon Club Music on Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/19622571/Neon-Typeface-by-Superfried" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Neon - Typeface by Superfried</a></li><li class="text-sm"><a href="https://dribbble.com/tags/neon-glow-effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Neon Glow Effect designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/free_neon_text_effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Free Neon Text Effect designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/neon-text-effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Neon Text Effect designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/neon_glowing_effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Neon Glowing Effect designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://neongrand.com/blogs/helpful-tips/10best-neon-sign-fonts-for-your-custom-design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. 10+Best Neon Sign Fonts For Your Custom Design - NeonGrand</a></li><li class="text-sm"><a href="https://dribbble.com/tags/neon_light_glow_effects" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Neon Light Glow Effects designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://stock.adobe.com/search?k=retro+neon+sign" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Retro Neon Sign Images – Browse 296,231 Stock Photos, Vectors, and Video | Adobe Stock</a></li><li class="text-sm"><a href="https://design.tutsplus.com/articles/15-cool-neon-light-fonts-neon-sign-text-effects--cms-93690" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. 15 Cool Neon Light Fonts (Neon Sign Text Effects) | Envato Tuts+</a></li><li class="text-sm"><a href="https://medialoot.com/blog/neon-fonts-signs-and-effects/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. 10+ Beautiful Neon Sign Fonts and Effects — Medialoot</a></li><li class="text-sm"><a href="https://resourceboy.com/fonts/neon/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. Neon Fonts - Free Download (2025) | Resource Boy</a></li><li class="text-sm"><a href="https://hyperpix.net/fonts/neon-fonts/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. 60+ Best Neon Fonts (FREE / Premium) 2024| Hyperpix</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
