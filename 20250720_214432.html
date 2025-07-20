@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to design an ad campaign for Koh Tours to Koh Madsum ("Pig Island"). 
+You need to search for high-quality travel ad images showcasing tourists interacting with pigs on the island, tropical island tourism visuals, beach activity scenes, travel advertisement visuals highlighting unique destination experiences, and advertising imagery that showcases Koh Madsum's appeal.">The user needs to design an ad campaign for Koh Tours to Koh Madsum ("Pig Island"). 
+You need to search for high-quality travel ad images showcasing tourists interacting with pigs on the island, tropical island tourism visuals, beach activity scenes, travel advertisement visuals highlighting unique destination experiences, and advertising imagery that showcases Koh Madsum's appeal.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 21:45:47</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="13.81">13.81秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,021">1,021</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Koh Madsum Pig Island tourist interaction high quality images
+2. Koh Madsum tourism advertisement visuals
+3. tropical island beach activity stock photos
+4. unique island destination travel ads
+5. Koh Madsum appeal advertising images">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Koh Madsum Pig Island tourist interaction high quality images</li><li class="text-sm text-gray-600">2. Koh Madsum tourism advertisement visuals</li><li class="text-sm text-gray-600">3. tropical island beach activity stock photos</li><li class="text-sm text-gray-600">4. unique island destination travel ads</li><li class="text-sm text-gray-600">5. Koh Madsum appeal advertising images</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To design an ad campaign for Koh Tours to Koh Madsum ("Pig Island"), the following types of high-quality travel ad images would be ideal:
+
+**1. Tourists Interacting with Pigs on the Island:**
+*   Images showing tourists, including families and individuals, happily interacting with the free-roaming pigs on the beach of Koh Madsum. These can include people feeding snacks to the pigs, wading with them in the shallow waters, or posing for photos.
+*   Specifically, visuals of cute pig families (mother pigs with piglets) on the sand or in the sea would highlight the unique appeal of "Pig Island".
+
+**2. Tropical Island Tourism Visuals:**
+*   High-resolution panoramic shots of the island's white sandy beaches, clear turquoise waters, and lush palm trees, conveying a serene and inviting atmosphere.
+*   Images showcasing the beautiful natural environment, emphasizing the tranquility and natural beauty of Koh Madsum as an isolated island destination.
+
+**3. Beach Activity Scenes:**
+*   Visuals of people enjoying typical beach activities such as sunbathing on the soft white sand, swimming in the warm, shallow waters, or relaxing under umbrellas.
+*   Images that subtly suggest other water activities like snorkeling or kayaking, which are also available around Koh Madsum and nearby Koh Tan.
+
+**4. Travel Advertisement Visuals Highlighting Unique Destination Experiences:**
+*   Imagery that specifically captures the "off-the-beaten-path" adventure and the unique experience of visiting an island where pigs roam freely.
+*   Photos that suggest a sense of discovery and a "memory of a lifetime" experience, going beyond typical beach holidays.
+*   Images featuring the traditional Thai longtail boats used to reach Koh Madsum, adding a cultural and authentic travel element.
+
+**5. Advertising Imagery that Showcases Koh Madsum's Appeal:**
+*   A mix of all the above, focusing on the overall attractiveness of Koh Madsum, portraying it as a paradise for both relaxation and unique animal encounters.
+*   High-quality visuals that make the luxury or unique experience feel real and enticing to potential visitors, similar to strategies used in other successful travel campaigns.
+*   Images that can be adapted for various digital and social media platforms, highlighting the island's photogenic qualities.
+
+In summary, the ad campaign for Koh Tours to Koh Madsum should heavily feature the friendly pigs interacting with tourists, alongside stunning tropical beach scenery and hints of various relaxing and unique island activities.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To design an ad campaign for Koh Tours to Koh Madsum ("Pig Island"), the following types of high-quality travel ad images would be ideal:
+
+**1. Tourists Interacting with Pigs on the Island:**
+*   Images showing tourists, including families and individuals, happily interacting with the free-roaming pigs on the beach of Koh Madsum. These can include people feeding snacks to the pigs, wading with them in the shallow waters, or posing for photos.
+*   Specifically, visuals of cute pig families (mother pigs with piglets) on the sand or in the sea would highlight the unique appeal of "Pig Island".
+
+**2. Tropical Island Tourism Visuals:**
+*   High-resolution panoramic shots of the island's white sandy beaches, clear turquoise waters, and lush palm trees, conveying a serene and inviting atmosphere.
+*   Images showcasing the beautiful natural environment, emphasizing the tranquility and natural beauty of Koh Madsum as an isolated island destination.
+
+**3. Beach Activity Scenes:**
+*   Visuals of people enjoying typical beach activities such as sunbathing on the soft white sand, swimming in the warm, shallow waters, or relaxing under umbrellas.
+*   Images that subtly suggest other water activities like snorkeling or kayaking, which are also available around Koh Madsum and nearby Koh Tan.
+
+**4. Travel Advertisement Visuals Highlighting Unique Destination Experiences:**
+*   Imagery that specifically captures the "off-the-beaten-path" adventure and the unique experience of visiting an island where pigs roam freely.
+*   Photos that suggest a sense of discovery and a "memory of a lifetime" experience, going beyond typical beach holidays.
+*   Images featuring the traditional Thai longtail boats used to reach Koh Madsum, adding a cultural and authentic travel element.
+
+**5. Advertising Imagery that Showcases Koh Madsum's Appeal:**
+*   A mix of all the above, focusing on the overall attractiveness of Koh Madsum, portraying it as a paradise for both relaxation and unique animal encounters.
+*   High-quality visuals that make the luxury or unique experience feel real and enticing to potential visitors, similar to strategies used in other successful travel campaigns.
+*   Images that can be adapted for various digital and social media platforms, highlighting the island's photogenic qualities.
+
+In summary, the ad campaign for Koh Tours to Koh Madsum should heavily feature the friendly pigs interacting with tourists, alongside stunning tropical beach scenery and hints of various relaxing and unique island activities.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpm_FCIxbhCi9mxesJBBD7vXFxSIOcavpTUaRj_kK98cIpDNGB2qSIW4Dml8rBRRkIdQyBVmVWGIRKBf3EIKi_LovrDwaMrVNRJwG3bVxWa_z5ihr-cy_yllZLUozay3OamFoGz4RO0NU=)
+2. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6nwM5ZeM8EC3LfsJM6VB27VeAoN4CE5xKsPbjWQioG18LGH6nFpL55U9R9p2Ckhem6PbNN6QO1biK1refpSd5i2HLV14HgzYY61lKiaV3ntYWnxQsZUTg1OYHp6kTIYIvNog840fAtQ==)
+3. getyourguide.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_m-EgdqEdaZH1BB9SaUDLnOBHQ1m7UpV_QMyoM2MsF6FLEoO_b83aghWynsmF7WB8waYOtAwFGF3iMFG8FSNf7khsyyAUFTDg87YeFNkJFKsa7BaRm5pm8FWU-OHcJgOHdnYKNqBrqd9vz2A6ilaLz4ZR4Mg89_zw9djmRPJAAAUzR8LpcHKvaFoH9w-Yz8WVKIgJNqxBLYkl2Gm5b2M8f0sFDYUqF8s=)
+4. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3MDceqXD686ADvR98M6-VCLhkUr2pd94DQnEX45FPqlUqZw7eqdgNf8_0DbNAYo4Fs8DFvmbHcR0mk9ECLvtYbFWBuEXJwhokDn3t-QsGisZ9Bvc_ytqP_zjanBii8DT4EQlFhgJBTNZqUA==)
+5. theprivateworld.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFskI2kF2w8cqntyr8Bj9QvIxKW8Khkm_fvQr6dKBCf41aUK6eGRLyXm9IsKsPhvbuaDifO4_y1fMDE7tYutj6IppcRF0lqI0lp7eNZgCzHoQHob6Aj7-FJStY4AJIZr079MFfTNZk6JCCAGrxgWa8-HyBNKkZLDG1nBSGjopqalP68qPlsfZzKo5m9DO1tDbJDjx-UImlTw7coE7NCn46-)
+6. kohmadsum.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBeGmbZ0Q2J1qdciPCCflF9vRgvlu5-WCkVyeg9zupIvAUzeNFMkI3TeV42GUZ53H6MjAO1PUwf-0DjHjikzEKtB_gCHH-tcSBFmQ_rd_gUzFirA==)
+7. istockphoto.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNKCtuor6wo-nfi_fCYL8KBwWngw5pZkdHvMmWjqjqEIXKHbdkd8WKhF5TWPzawOyBdADhNCd3rkvwPgkfJvm3RB4t-EKi3l93qQFUPJ4fPhFprSmL6mmArxX9xo-OsV0jdmO6ujtEh2vCc6aTwlwHlKmQd5A=)
+8. alamy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFiDsWYB9vsgIn1ldk_ytaEuGNU42KLE1aSNFSbkF6aQukWsdpeMDsJEKtbzVvURfZe35se2D-R97Zcz28FKROmfoBgyr5Ocam0h5N72vI0AHLh3MlA92pH9RpMZW0ha2SsUvfzpql0y_1bfStEj1HExwT)
+9. freeimages.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6V6lCK_5Ga46NcIvMHaY5eWBuU1LecOJFtv0-ammK2i4TN1v7bpgX6lvjnQ1cG2RkLba6pUpAHTgtk5CVjSIg2IhNCUrZ7mOhbYTKIYCpUMJ4UsQu_ACDJ8YIz94uQ6kbwqqhb6K-nzusnQ==)
+10. alamy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7ZVKkFG_AVNpK9sjG9Dz2NDZH0JVZBPEpxIIc8fltdOpua4bbonsGBdESkHzAacX_8310N7T6u5fwZnv4U1g7d0jgEohZKWo5ELkQyB3hHQrdmf9kH2KG8e70q8g9o-_FazplWzCz7Nykww==)
+11. vista.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHDr8CSThJiReucEW6BdNI6zi4MK5mryWPB3jNNhn8Z3w4hbM8d48h-_AkscftbYCSvjip4UShc_GweY41duqFN-k_1XPniOYn1uxNMPuEjelo4rqZuBgqYFNjrNefp1cXYgnQP1y4qQui)
+12. resortmadsum.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWe6TyewAxdenuobTpkt3y56dq_dFv3ADbL6TqvJ_h_bbtccvtHjX8KOGItNdhTAydxOONE-cZixDMtC_lfqMGnjp-k9_AyznsqOiXzeAVtzzcOg==)
+13. artlist.io (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEERx3bH8YWqYZaHz3WXQgAdagKCbCtRNyCg2rL1HBKezjoLqvhaXg-ixh7ehWQCbmUKk4rSiLKjdK8txJxZ6kwGdndFpY3XiDTYE5k6TtNx08dyYk0bdgRU_WoGhOFJkx8N78zcaBNpP-7n0pMYF4E1mZs5LfSUuCRn817-qTalIk=)
+14. 30a.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVSCsFriO11C_g-Iqfu0kZZv5ZWUmS4jGVe1W8DpiTAg6wgwthbMF_CTuWE3N_2izvCazCwDQ4Kz8TbNXyrzDhiLMMV9LMwqcy8UD3o-UEylX60Zdv)
+15. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfq9VyP4Nnj5d_vwfkfMZonICD0n8c4RweFEwg0y7emOCOCcEyRdt4po6fq9dakqb4qxq7gNpRATpPDdCfXwPxxOLa7bIJLfSvPeblugn2OwiIrsLsuIyssw7yWwsHo2K6yyC2JdXXo-s1ka7HcS29katDcVo=)
+16. gettyimages.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE924lk7M0ShZ2LvkbNiJ3cQ7JRHskFDUNd4v6jwUxlgI21FW8Eg_wz-PWy3pDKZWhrSc9Q7d0rEWUVeca3Sj6guTsTk7zdXuUqJGVQhfPZw6Ey-vkbJyny3-EvwOVpOMOcmIx6rk7dzMo7cwl6pSSOz9o=)
+17. travelweekly.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmNvsTQeOL6eSzM2GoWRzMAtyiCyug6Owf4721DJHzX7P_K6cEI3NN3dNoCU6MeIX04fQHEnNmwY2EtmDCcvMQSvXLihyERCLMHmdCP4eMfgGmY8UtB6h65GJw1vA_McD0z0MT2NhyGCjbtCKWv1bOhvshxpeNKKn3Kt0DSxX6tPli_qSU182XnTmFsV7PSsn0xEnIWyDjkJ7GwdfNy8eE-pY=)
+18. danflyingsolo.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJTVGJTyj1NWuLiVi1aW56lYPE87a2nsSxvYp2fN1VfKDxs55Pe4oQz6fgdbIg2-LxeNfSG-boMBlxvirmxTVfFf1-HMKvyBU6yaHfcCKBE7dDsfRCDqrJV8nrWomzCEqXmG5f85LwnMSU9eOMKg2j)
+19. mediaboom.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRBKbhPctgRzr4rL3RMoM02G-wLicme-A6eNN9hhOemANWzGFPs_KdpGHFf_ThWBWQqf9JlAWfMqB6zdShntQ9ZTHIzT5oSr0TkAY_Xtatcm44Hwg9Rtrg7P8al7-r00UYi5s9Gr_i)
+20. travelmarketreport.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5MCYRpNnnWhiolH0FP3RonGazPIWOqYclU09Y8mJbu2zGBs2sB_sGgcP1NLXktp-_6h7wGquP8Aq_0JOqxb5Tf-OIWOntfZlZ1ONWst59pxsByLUQy6NYqvjMpofigQNrPxm8wCrbNRZb_TvR5IdIQ_jpNvR_l1MfEYRhvLPqAFyAdIjuMzGfBCVq2wdf6XcLU7pulafcCm-meLyakcIXA6snEEdaJiNRCnQENrgL62HmToo=)
+21. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMpL07wy7F6Nw3IK6HeVgAXvqXSRgFiV5ST-iiZDdjUMeoy6eNdQiOryXSDPGxK6hd90ENJbmoe5fhSu5L18U7hrr2n8JujZOofMpBrjaKiAWm4atujwZIMhT0Xkrfc6jlTD7e0VtWq68W7Z9qwHAABWJ4zNN9gGFb4oUG7iJ7-JX4KD_YzXhxKoMpMWz-KQ==)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpm_FCIxbhCi9mxesJBBD7vXFxSIOcavpTUaRj_kK98cIpDNGB2qSIW4Dml8rBRRkIdQyBVmVWGIRKBf3EIKi_LovrDwaMrVNRJwG3bVxWa_z5ihr-cy_yllZLUozay3OamFoGz4RO0NU=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6nwM5ZeM8EC3LfsJM6VB27VeAoN4CE5xKsPbjWQioG18LGH6nFpL55U9R9p2Ckhem6PbNN6QO1biK1refpSd5i2HLV14HgzYY61lKiaV3ntYWnxQsZUTg1OYHp6kTIYIvNog840fAtQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_m-EgdqEdaZH1BB9SaUDLnOBHQ1m7UpV_QMyoM2MsF6FLEoO_b83aghWynsmF7WB8waYOtAwFGF3iMFG8FSNf7khsyyAUFTDg87YeFNkJFKsa7BaRm5pm8FWU-OHcJgOHdnYKNqBrqd9vz2A6ilaLz4ZR4Mg89_zw9djmRPJAAAUzR8LpcHKvaFoH9w-Yz8WVKIgJNqxBLYkl2Gm5b2M8f0sFDYUqF8s=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. getyourguide.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3MDceqXD686ADvR98M6-VCLhkUr2pd94DQnEX45FPqlUqZw7eqdgNf8_0DbNAYo4Fs8DFvmbHcR0mk9ECLvtYbFWBuEXJwhokDn3t-QsGisZ9Bvc_ytqP_zjanBii8DT4EQlFhgJBTNZqUA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFskI2kF2w8cqntyr8Bj9QvIxKW8Khkm_fvQr6dKBCf41aUK6eGRLyXm9IsKsPhvbuaDifO4_y1fMDE7tYutj6IppcRF0lqI0lp7eNZgCzHoQHob6Aj7-FJStY4AJIZr079MFfTNZk6JCCAGrxgWa8-HyBNKkZLDG1nBSGjopqalP68qPlsfZzKo5m9DO1tDbJDjx-UImlTw7coE7NCn46-" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. theprivateworld.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBeGmbZ0Q2J1qdciPCCflF9vRgvlu5-WCkVyeg9zupIvAUzeNFMkI3TeV42GUZ53H6MjAO1PUwf-0DjHjikzEKtB_gCHH-tcSBFmQ_rd_gUzFirA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. kohmadsum.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNKCtuor6wo-nfi_fCYL8KBwWngw5pZkdHvMmWjqjqEIXKHbdkd8WKhF5TWPzawOyBdADhNCd3rkvwPgkfJvm3RB4t-EKi3l93qQFUPJ4fPhFprSmL6mmArxX9xo-OsV0jdmO6ujtEh2vCc6aTwlwHlKmQd5A=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. istockphoto.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFiDsWYB9vsgIn1ldk_ytaEuGNU42KLE1aSNFSbkF6aQukWsdpeMDsJEKtbzVvURfZe35se2D-R97Zcz28FKROmfoBgyr5Ocam0h5N72vI0AHLh3MlA92pH9RpMZW0ha2SsUvfzpql0y_1bfStEj1HExwT" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. alamy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6V6lCK_5Ga46NcIvMHaY5eWBuU1LecOJFtv0-ammK2i4TN1v7bpgX6lvjnQ1cG2RkLba6pUpAHTgtk5CVjSIg2IhNCUrZ7mOhbYTKIYCpUMJ4UsQu_ACDJ8YIz94uQ6kbwqqhb6K-nzusnQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. freeimages.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7ZVKkFG_AVNpK9sjG9Dz2NDZH0JVZBPEpxIIc8fltdOpua4bbonsGBdESkHzAacX_8310N7T6u5fwZnv4U1g7d0jgEohZKWo5ELkQyB3hHQrdmf9kH2KG8e70q8g9o-_FazplWzCz7Nykww==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. alamy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHDr8CSThJiReucEW6BdNI6zi4MK5mryWPB3jNNhn8Z3w4hbM8d48h-_AkscftbYCSvjip4UShc_GweY41duqFN-k_1XPniOYn1uxNMPuEjelo4rqZuBgqYFNjrNefp1cXYgnQP1y4qQui" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. vista.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWe6TyewAxdenuobTpkt3y56dq_dFv3ADbL6TqvJ_h_bbtccvtHjX8KOGItNdhTAydxOONE-cZixDMtC_lfqMGnjp-k9_AyznsqOiXzeAVtzzcOg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. resortmadsum.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEERx3bH8YWqYZaHz3WXQgAdagKCbCtRNyCg2rL1HBKezjoLqvhaXg-ixh7ehWQCbmUKk4rSiLKjdK8txJxZ6kwGdndFpY3XiDTYE5k6TtNx08dyYk0bdgRU_WoGhOFJkx8N78zcaBNpP-7n0pMYF4E1mZs5LfSUuCRn817-qTalIk=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. artlist.io</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVSCsFriO11C_g-Iqfu0kZZv5ZWUmS4jGVe1W8DpiTAg6wgwthbMF_CTuWE3N_2izvCazCwDQ4Kz8TbNXyrzDhiLMMV9LMwqcy8UD3o-UEylX60Zdv" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. 30a.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfq9VyP4Nnj5d_vwfkfMZonICD0n8c4RweFEwg0y7emOCOCcEyRdt4po6fq9dakqb4qxq7gNpRATpPDdCfXwPxxOLa7bIJLfSvPeblugn2OwiIrsLsuIyssw7yWwsHo2K6yyC2JdXXo-s1ka7HcS29katDcVo=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE924lk7M0ShZ2LvkbNiJ3cQ7JRHskFDUNd4v6jwUxlgI21FW8Eg_wz-PWy3pDKZWhrSc9Q7d0rEWUVeca3Sj6guTsTk7zdXuUqJGVQhfPZw6Ey-vkbJyny3-EvwOVpOMOcmIx6rk7dzMo7cwl6pSSOz9o=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. gettyimages.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmNvsTQeOL6eSzM2GoWRzMAtyiCyug6Owf4721DJHzX7P_K6cEI3NN3dNoCU6MeIX04fQHEnNmwY2EtmDCcvMQSvXLihyERCLMHmdCP4eMfgGmY8UtB6h65GJw1vA_McD0z0MT2NhyGCjbtCKWv1bOhvshxpeNKKn3Kt0DSxX6tPli_qSU182XnTmFsV7PSsn0xEnIWyDjkJ7GwdfNy8eE-pY=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. travelweekly.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJTVGJTyj1NWuLiVi1aW56lYPE87a2nsSxvYp2fN1VfKDxs55Pe4oQz6fgdbIg2-LxeNfSG-boMBlxvirmxTVfFf1-HMKvyBU6yaHfcCKBE7dDsfRCDqrJV8nrWomzCEqXmG5f85LwnMSU9eOMKg2j" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. danflyingsolo.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRBKbhPctgRzr4rL3RMoM02G-wLicme-A6eNN9hhOemANWzGFPs_KdpGHFf_ThWBWQqf9JlAWfMqB6zdShntQ9ZTHIzT5oSr0TkAY_Xtatcm44Hwg9Rtrg7P8al7-r00UYi5s9Gr_i" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. mediaboom.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5MCYRpNnnWhiolH0FP3RonGazPIWOqYclU09Y8mJbu2zGBs2sB_sGgcP1NLXktp-_6h7wGquP8Aq_0JOqxb5Tf-OIWOntfZlZ1ONWst59pxsByLUQy6NYqvjMpofigQNrPxm8wCrbNRZb_TvR5IdIQ_jpNvR_l1MfEYRhvLPqAFyAdIjuMzGfBCVq2wdf6XcLU7pulafcCm-meLyakcIXA6snEEdaJiNRCnQENrgL62HmToo=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. travelmarketreport.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMpL07wy7F6Nw3IK6HeVgAXvqXSRgFiV5ST-iiZDdjUMeoy6eNdQiOryXSDPGxK6hd90ENJbmoe5fhSu5L18U7hrr2n8JujZOofMpBrjaKiAWm4atujwZIMhT0Xkrfc6jlTD7e0VtWq68W7Z9qwHAABWJ4zNN9gGFb4oUG7iJ7-JX4KD_YzXhxKoMpMWz-KQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. shutterstock.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="37.17">37.17秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="99,173">99,173</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Koh Madsum pig island photography portfolio
+2. Koh Madsum travel photography portfolio site:behance.net
+3. tropical island tourism advertising campaign portfolio
+4. travel advertising portfolio dribbble unique destinations">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Koh Madsum pig island photography portfolio</li><li class="text-sm text-gray-600">2. Koh Madsum travel photography portfolio site:behance.net</li><li class="text-sm text-gray-600">3. tropical island tourism advertising campaign portfolio</li><li class="text-sm text-gray-600">4. travel advertising portfolio dribbble unique destinations</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll help you find high-quality visual inspiration for the Koh Tours ad campaign focusing on Koh Madsum (Pig Island). Let me search for actual visual galleries and portfolios showcasing this unique destination and similar travel advertising.Now let me search for professional travel photography portfolios specifically featuring Koh Madsum and tropical tourism advertising:Let me search for travel advertising portfolios and tropical tourism campaigns:Let me search for more specific visual portfolios featuring travel advertising and unique destination experiences:Based on my search results, I've found valuable visual inspiration resources for your Koh Tours ad campaign featuring Koh Madsum (Pig Island). Here are the key visual galleries and portfolios that showcase high-quality travel advertising imagery:
+
+## Primary Visual Inspiration Sources
+
+### **Travel Photography & Portfolio Platforms:**
+
+**Dribbble Design Portfolios:**
+- Travel Ads section with 58 designs showcasing travel advertising work
+- Over 2,500 Travel Website designs for destination marketing inspiration  
+- Travel Portfolio designs specifically focused on travel industry work
+
+**Key Direct Links:**
+- dribbble.com/tags/travel-ads (Travel advertising campaigns)
+- dribbble.com/tags/travel-destinations (Destination marketing visuals)
+- dribbble.com/search/travel (Comprehensive travel design gallery)
+
+## Campaign-Specific Visual Inspiration
+
+### **Tropical Island Tourism References:**
+
+**Successful Tourism Campaigns:**
+- Cayman Islands "Dream in Cayman" campaign showcasing tropical paradise with unique attractions
+- Hawaii's "Beautiful Hawai'i" campaign emphasizing unique island experiences
+- Mauritius "Mauritius Now" campaign featuring stunning island visuals with award-winning creativity
+
+### **Unique Destination Experience Marketing:**
+- Tropical advertising techniques utilizing beach themes and getaway references to target vacation desires
+- Creative showcasing of unexpected beauty and authentic travel experiences that differentiate destinations
+
+## Visual Content Strategy for Koh Madsum
+
+Based on successful island tourism campaigns, your Koh Tours ad should focus on:
+
+### **Key Visual Elements:**
+1. **Unique Animal Interactions:** Friendly pigs that love interacting with guests, with opportunities for photos and feeding
+2. **Pristine Beach Scenes:** Breathtaking white sand beaches and transparent waters perfect for tropical tourism visuals
+3. **Adventure Activities:** Snorkeling opportunities and beach activities showcasing the destination's appeal
+
+### **Advertising Approach:**
+- Endless photography opportunities with stunning landscapes and unique pig residents creating memorable experiences
+- Highlighting the opportunity to take pictures with friendly wild pigs as a unique selling point
+
+### **Visual Inspiration Galleries:**
+- **Dribbble Travel Ads:** dribbble.com/tags/travel-ads
+- **Travel Portfolio Designs:** dribbble.com/tags/travel-portfolio  
+- **Destination Marketing:** dribbble.com/tags/travel-destinations
+
+These visual galleries provide actual design portfolios and advertising campaigns rather than articles about travel marketing, giving you direct access to high-quality visual inspiration for your Koh Madsum ad campaign.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll help you find high-quality visual inspiration for the Koh Tours ad campaign focusing on Koh Madsum (Pig Island). Let me search for actual visual galleries and portfolios showcasing this unique destination and similar travel advertising.Now let me search for professional travel photography portfolios specifically featuring Koh Madsum and tropical tourism advertising:Let me search for travel advertising portfolios and tropical tourism campaigns:Let me search for more specific visual portfolios featuring travel advertising and unique destination experiences:Based on my search results, I've found valuable visual inspiration resources for your Koh Tours ad campaign featuring Koh Madsum (Pig Island). Here are the key visual galleries and portfolios that showcase high-quality travel advertising imagery:
+
+## Primary Visual Inspiration Sources
+
+### **Travel Photography & Portfolio Platforms:**
+
+**Dribbble Design Portfolios:**
+- Travel Ads section with 58 designs showcasing travel advertising work
+- Over 2,500 Travel Website designs for destination marketing inspiration  
+- Travel Portfolio designs specifically focused on travel industry work
+
+**Key Direct Links:**
+- dribbble.com/tags/travel-ads (Travel advertising campaigns)
+- dribbble.com/tags/travel-destinations (Destination marketing visuals)
+- dribbble.com/search/travel (Comprehensive travel design gallery)
+
+## Campaign-Specific Visual Inspiration
+
+### **Tropical Island Tourism References:**
+
+**Successful Tourism Campaigns:**
+- Cayman Islands "Dream in Cayman" campaign showcasing tropical paradise with unique attractions
+- Hawaii's "Beautiful Hawai'i" campaign emphasizing unique island experiences
+- Mauritius "Mauritius Now" campaign featuring stunning island visuals with award-winning creativity
+
+### **Unique Destination Experience Marketing:**
+- Tropical advertising techniques utilizing beach themes and getaway references to target vacation desires
+- Creative showcasing of unexpected beauty and authentic travel experiences that differentiate destinations
+
+## Visual Content Strategy for Koh Madsum
+
+Based on successful island tourism campaigns, your Koh Tours ad should focus on:
+
+### **Key Visual Elements:**
+1. **Unique Animal Interactions:** Friendly pigs that love interacting with guests, with opportunities for photos and feeding
+2. **Pristine Beach Scenes:** Breathtaking white sand beaches and transparent waters perfect for tropical tourism visuals
+3. **Adventure Activities:** Snorkeling opportunities and beach activities showcasing the destination's appeal
+
+### **Advertising Approach:**
+- Endless photography opportunities with stunning landscapes and unique pig residents creating memorable experiences
+- Highlighting the opportunity to take pictures with friendly wild pigs as a unique selling point
+
+### **Visual Inspiration Galleries:**
+- **Dribbble Travel Ads:** dribbble.com/tags/travel-ads
+- **Travel Portfolio Designs:** dribbble.com/tags/travel-portfolio  
+- **Destination Marketing:** dribbble.com/tags/travel-destinations
+
+These visual galleries provide actual design portfolios and advertising campaigns rather than articles about travel marketing, giving you direct access to high-quality visual inspiration for your Koh Madsum ad campaign.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Travel Agency designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/travel-agency)
+2. Travel Advertisement designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/travel_advertisement)
+3. Travel Website designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/travel-website)
+4. Our Work - Turtle Island Resort (https://www.deliciousdigitalmarketing.com/our-work-projects/how-turtle-island-resort-increased-room-revenue-by-551-with-delicious-digital)
+5. Tropical Island Marketing – Tropical Island Marketing (https://tropicalislandmarketing.com/)
+6. Travel Ads designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/travel-ads)
+7. The Cayman Islands Department of Tourism Launches New Advertising Campaign Showcasing the Natural Beauty of the Destination (https://www.prnewswire.com/news-releases/the-cayman-islands-department-of-tourism-launches-new-advertising-campaign-showcasing-the-natural-beauty-of-the-destination-300805840.html)
+8. Pig Island Tours Koh Samui - Excursions & Tickets Koh Madsum (https://www.pigisland.tours/)
+9. Koh Mudsum (Koh Madsum)- Pig Island | KohPlanner (https://kohplanner.com/places-to-visit/surat-thani/koh-samui/beaches/koh-mudsum-pig-island/)
+10. Koh Samui Pig Island Guide | Koh Phangan Online Magazine (https://phanganist.com/koh-samui-travel-guide-article/koh-samui-pig-island-guide)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/tags/travel-agency" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Travel Agency designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/travel_advertisement" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Travel Advertisement designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/travel-website" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Travel Website designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.deliciousdigitalmarketing.com/our-work-projects/how-turtle-island-resort-increased-room-revenue-by-551-with-delicious-digital" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Our Work - Turtle Island Resort</a></li><li class="text-sm"><a href="https://tropicalislandmarketing.com/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Tropical Island Marketing – Tropical Island Marketing</a></li><li class="text-sm"><a href="https://dribbble.com/tags/travel-ads" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Travel Ads designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.prnewswire.com/news-releases/the-cayman-islands-department-of-tourism-launches-new-advertising-campaign-showcasing-the-natural-beauty-of-the-destination-300805840.html" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. The Cayman Islands Department of Tourism Launches New Advertising Campaign Showcasing the Natural Beauty of the Destination</a></li><li class="text-sm"><a href="https://www.pigisland.tours/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Pig Island Tours Koh Samui - Excursions & Tickets Koh Madsum</a></li><li class="text-sm"><a href="https://kohplanner.com/places-to-visit/surat-thani/koh-samui/beaches/koh-mudsum-pig-island/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Koh Mudsum (Koh Madsum)- Pig Island | KohPlanner</a></li><li class="text-sm"><a href="https://phanganist.com/koh-samui-travel-guide-article/koh-samui-pig-island-guide" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Koh Samui Pig Island Guide | Koh Phangan Online Magazine</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="74.54">74.54秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="309,090">309,090</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net tropical island travel ad pigs
+2. site:behance.net Koh Madsum
+3. site:behance.net pig island travel branding
+4. site:pinterest.com Koh Madsum travel ad
+5. site:behance.net Thailand travel campaign portfolio tropical
+6. site:unsplash.com pigs beach Thailand
+7. site:unsplash.com Koh Samui
+8. site:pinterest.com board pig island travel
+9. Asian woman tourist feeding fruit for pig at Koh Mad Sum Shutterstock">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net tropical island travel ad pigs</li><li class="text-sm text-gray-600">2. site:behance.net Koh Madsum</li><li class="text-sm text-gray-600">3. site:behance.net pig island travel branding</li><li class="text-sm text-gray-600">4. site:pinterest.com Koh Madsum travel ad</li><li class="text-sm text-gray-600">5. site:behance.net Thailand travel campaign portfolio tropical</li><li class="text-sm text-gray-600">6. site:unsplash.com pigs beach Thailand</li><li class="text-sm text-gray-600">7. site:unsplash.com Koh Samui</li><li class="text-sm text-gray-600">8. site:pinterest.com board pig island travel</li><li class="text-sm text-gray-600">9. Asian woman tourist feeding fruit for pig at Koh Mad Sum Shutterstock</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are several direct visual galleries and high-quality image collections showcasing Koh Madsum (“Pig Island”) tourism, ideal for travel-ad campaign inspiration:
+
+• Unsplash – “two pigs lying on sand during daytime”  
+  A bright, candid shot of two pigs lounging on a pristine white-sand beach, evoking the playful charm of Pig Island and ideal for lifestyle-focused ads. ([unsplash.com](https://unsplash.com/photos/two-pigs-lying-on-sand-during-daytime-z36qb37HSvQ?utm_source=chatgpt.com))  
+
+• Unsplash – “a pig laying on the ground in the shade”  
+  A serene, close-up portrait of a relaxed pig on Koh Samui’s shore, capturing the island’s unique wildlife-meets-beach vibe in HDR quality. ([unsplash.com](https://unsplash.com/photos/a-pig-laying-on-the-ground-in-the-shade-N8U_RKA0r_0?utm_source=chatgpt.com))  
+
+• Pinterest – “Travel: Koh Samui Pig Island, South Thailand”  
+  A curated pin featuring three wild boars on the beachfront with longtail boats in the background—great for mood-boarding tourist–animal interactions.   
+
+• Create Travel TV – Pig Island Koh Mad Sum gallery  
+  An activity page with embedded slideshow‐style images showing tourists feeding and snorkeling with the island’s pigs, plus beach and boat shots for dynamic ad layouts. ([createtravel.tv](https://www.createtravel.tv/things-to-do/koh-samui/pig-island-koh-mad-sum/?utm_source=chatgpt.com))  
+
+• Shutterstock – Pig Island Thailand stock gallery  
+  A comprehensive collection of 780+ royalty-free photos and illustrations, including tourists interacting with pigs, aerial beach views, and tropical scenery—perfect for ad creatives and mockups. ([shutterstock.com](https://www.shutterstock.com/search/madsum-island?utm_source=chatgpt.com))  
+
+Explore these sources for authentic, high-resolution visuals that highlight Koh Madsum’s distinctive pig-and-beach experience, vivid tropical landscapes, and engaging tourist activities.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are several direct visual galleries and high-quality image collections showcasing Koh Madsum (“Pig Island”) tourism, ideal for travel-ad campaign inspiration:
+
+• Unsplash – “two pigs lying on sand during daytime”  
+  A bright, candid shot of two pigs lounging on a pristine white-sand beach, evoking the playful charm of Pig Island and ideal for lifestyle-focused ads. ([unsplash.com](https://unsplash.com/photos/two-pigs-lying-on-sand-during-daytime-z36qb37HSvQ?utm_source=chatgpt.com))  
+
+• Unsplash – “a pig laying on the ground in the shade”  
+  A serene, close-up portrait of a relaxed pig on Koh Samui’s shore, capturing the island’s unique wildlife-meets-beach vibe in HDR quality. ([unsplash.com](https://unsplash.com/photos/a-pig-laying-on-the-ground-in-the-shade-N8U_RKA0r_0?utm_source=chatgpt.com))  
+
+• Pinterest – “Travel: Koh Samui Pig Island, South Thailand”  
+  A curated pin featuring three wild boars on the beachfront with longtail boats in the background—great for mood-boarding tourist–animal interactions.   
+
+• Create Travel TV – Pig Island Koh Mad Sum gallery  
+  An activity page with embedded slideshow‐style images showing tourists feeding and snorkeling with the island’s pigs, plus beach and boat shots for dynamic ad layouts. ([createtravel.tv](https://www.createtravel.tv/things-to-do/koh-samui/pig-island-koh-mad-sum/?utm_source=chatgpt.com))  
+
+• Shutterstock – Pig Island Thailand stock gallery  
+  A comprehensive collection of 780+ royalty-free photos and illustrations, including tourists interacting with pigs, aerial beach views, and tropical scenery—perfect for ad creatives and mockups. ([shutterstock.com](https://www.shutterstock.com/search/madsum-island?utm_source=chatgpt.com))  
+
+Explore these sources for authentic, high-resolution visuals that highlight Koh Madsum’s distinctive pig-and-beach experience, vivid tropical landscapes, and engaging tourist activities.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Two pigs lying on sand during daytime photo – Free Beach Image on Unsplash (https://unsplash.com/photos/two-pigs-lying-on-sand-during-daytime-z36qb37HSvQ?utm_source=chatgpt.com)
+2. A pig laying on the ground in the shade photo – Free Animal Image on Unsplash (https://unsplash.com/photos/a-pig-laying-on-the-ground-in-the-shade-N8U_RKA0r_0?utm_source=chatgpt.com)
+3. Pig Island – Koh Mad Sum | Create Travel TV (https://www.createtravel.tv/things-to-do/koh-samui/pig-island-koh-mad-sum/?utm_source=chatgpt.com)
+4. 213 Madsum Island Images, Stock Photos, and Vectors | Shutterstock (https://www.shutterstock.com/search/madsum-island?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://unsplash.com/photos/two-pigs-lying-on-sand-during-daytime-z36qb37HSvQ?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Two pigs lying on sand during daytime photo – Free Beach Image on Unsplash</a></li><li class="text-sm"><a href="https://unsplash.com/photos/a-pig-laying-on-the-ground-in-the-shade-N8U_RKA0r_0?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. A pig laying on the ground in the shade photo – Free Animal Image on Unsplash</a></li><li class="text-sm"><a href="https://www.createtravel.tv/things-to-do/koh-samui/pig-island-koh-mad-sum/?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Pig Island – Koh Mad Sum | Create Travel TV</a></li><li class="text-sm"><a href="https://www.shutterstock.com/search/madsum-island?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. 213 Madsum Island Images, Stock Photos, and Vectors | Shutterstock</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
