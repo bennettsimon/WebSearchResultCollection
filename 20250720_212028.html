@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is planning to design a set of emojis featuring a purple-haired little girl as the main character, covering various emotions and scenarios related to learning, life, and work. You shoud do web search for some image reference.
+You need to search for purple-haired little girl emoji designs, including cute and positive styles, consistent character imagery, facial expressions and body language for various emotions, emojis for learning/life/work scenarios, and details and color schemes that enhance character recognizability.">The user is planning to design a set of emojis featuring a purple-haired little girl as the main character, covering various emotions and scenarios related to learning, life, and work. You shoud do web search for some image reference.
+You need to search for purple-haired little girl emoji designs, including cute and positive styles, consistent character imagery, facial expressions and body language for various emotions, emojis for learning/life/work scenarios, and details and color schemes that enhance character recognizability.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 21:21:12</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="15.07">15.07秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,382">1,382</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. purple haired little girl emoji design
+2. cute purple hair girl emoji style
+3. consistent character emoji design tips
+4. emoji facial expressions and body language for kids
+5. learning life work emojis for girl character
+6. unique emoji character color scheme purple hair
+7. purple hair girl cartoon character reference sheet">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. purple haired little girl emoji design</li><li class="text-sm text-gray-600">2. cute purple hair girl emoji style</li><li class="text-sm text-gray-600">3. consistent character emoji design tips</li><li class="text-sm text-gray-600">4. emoji facial expressions and body language for kids</li><li class="text-sm text-gray-600">5. learning life work emojis for girl character</li><li class="text-sm text-gray-600">6. unique emoji character color scheme purple hair</li><li class="text-sm text-gray-600">7. purple hair girl cartoon character reference sheet</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="The user is looking for image references to design emojis of a purple-haired little girl, covering various aspects like style, consistency, emotions, scenarios, and recognizability.
+
+Here's a breakdown of relevant findings to guide the emoji design:
+
+**1. Purple-Haired Little Girl Emoji Designs & Styles:**
+*   There are existing "Purple Hair Girl Emoji Set" designs available, which can serve as direct inspiration for the character's core look.
+*   Other search results show "cute purple-haired girl character design in pigtails", "adorable purple-haired chibi character", and "anime-style illustration of a young woman with dark purple hair", suggesting a range of cute, chibi, or anime-inspired styles could be suitable.
+*   One emoji set specifically features "Olivia, a cute girl with purple hair," which could be a good reference for overall character concept.
+*   The term "kawaii styling" is mentioned in relation to purple-haired chibi characters, which implies a very cute and charming aesthetic.
+
+**2. Cute and Positive Styles:**
+*   Many of the search results emphasize "cute" and "adorable", "cheerful", and "playful" in descriptions of purple-haired characters and emojis. This reinforces the need for a generally positive and appealing aesthetic.
+*   Emphasizing "sparkling eyes and rosy cheeks" can contribute to a happy and joyful expression.
+
+**3. Consistent Character Imagery:**
+*   To ensure consistency, it's crucial to define the character's attributes and use a consistent style and color palette throughout the emoji set.
+*   An "Image Set" approach is recommended where character design and background are kept consistent while only expressions vary.
+*   Using a single grid system can help unify scale, size, and shape consistency across different emoji illustrations.
+*   A strong design system formalizing shape, grid, representation, and color will enable consistency even if multiple illustrators are involved. Reference sheets for cartoon characters with purple hair can provide ideas for maintaining consistency across different poses and expressions.
+
+**4. Facial Expressions and Body Language for Various Emotions:**
+*   Emojis primarily convey emotions through facial expressions. Key emotions include happy, sad, angry, worried, tired, calm, embarrassed, nervous, excited, surprised, frustrated, and silly.
+*   Designers should analyze real-life facial expressions and existing emoji designs to capture subtle nuances.
+*   Body language is also important for expressing emotions; for example, crossing arms or looking away can convey specific feelings.
+*   For a positive style, happiness can be expressed through a bright smile, widened eyes, and warm colors, while sadness might use lowered eyes and a muted palette.
+
+**5. Emojis for Learning, Life, and Work Scenarios:**
+*   For "learning," emojis can include a student with a book, a schoolboy with a backpack, or a nerd with glasses. Concepts like "fun learning," "study for exam," "online class," and "preschool preparation" are relevant.
+*   For "work," relevant emojis could include professional settings, laptops, business tasks, and symbols of success or productivity.
+*   General "life" scenarios can be broadly interpreted as everyday emotions and activities, which are covered by the emotional expressions.
+
+**6. Details and Color Schemes Enhancing Recognizability:**
+*   The purple hair is a primary distinguishing feature, and maintaining a consistent shade of purple across all emojis is vital for recognizability.
+*   Adding "rosy dimples" can enhance cuteness without interfering with expressions.
+*   A "tonal stroke" or outline can enhance legibility across various backgrounds.
+*   A fresh and consistent palette of bright colors can be introduced, with specific colors associated with different emotions (e.g., reds, blues, yellows, and greens for expressions). Gradients can also make emojis more legible.
+*   Focus on clear expression at small sizes, ensuring details don't add visual noise or obscure readability when scaled down. Simple shapes are recommended.
+
+By incorporating these elements, the user can create a cohesive and expressive set of purple-haired little girl emojis.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">The user is looking for image references to design emojis of a purple-haired little girl, covering various aspects like style, consistency, emotions, scenarios, and recognizability.
+
+Here's a breakdown of relevant findings to guide the emoji design:
+
+**1. Purple-Haired Little Girl Emoji Designs & Styles:**
+*   There are existing "Purple Hair Girl Emoji Set" designs available, which can serve as direct inspiration for the character's core look.
+*   Other search results show "cute purple-haired girl character design in pigtails", "adorable purple-haired chibi character", and "anime-style illustration of a young woman with dark purple hair", suggesting a range of cute, chibi, or anime-inspired styles could be suitable.
+*   One emoji set specifically features "Olivia, a cute girl with purple hair," which could be a good reference for overall character concept.
+*   The term "kawaii styling" is mentioned in relation to purple-haired chibi characters, which implies a very cute and charming aesthetic.
+
+**2. Cute and Positive Styles:**
+*   Many of the search results emphasize "cute" and "adorable", "cheerful", and "playful" in descriptions of purple-haired characters and emojis. This reinforces the need for a generally positive and appealing aesthetic.
+*   Emphasizing "sparkling eyes and rosy cheeks" can contribute to a happy and joyful expression.
+
+**3. Consistent Character Imagery:**
+*   To ensure consistency, it's crucial to define the character's attributes and use a consistent style and color palette throughout the emoji set.
+*   An "Image Set" approach is recommended where character design and background are kept consistent while only expressions vary.
+*   Using a single grid system can help unify scale, size, and shape consistency across different emoji illustrations.
+*   A strong design system formalizing shape, grid, representation, and color will enable consistency even if multiple illustrators are involved. Reference sheets for cartoon characters with purple hair can provide ideas for maintaining consistency across different poses and expressions.
+
+**4. Facial Expressions and Body Language for Various Emotions:**
+*   Emojis primarily convey emotions through facial expressions. Key emotions include happy, sad, angry, worried, tired, calm, embarrassed, nervous, excited, surprised, frustrated, and silly.
+*   Designers should analyze real-life facial expressions and existing emoji designs to capture subtle nuances.
+*   Body language is also important for expressing emotions; for example, crossing arms or looking away can convey specific feelings.
+*   For a positive style, happiness can be expressed through a bright smile, widened eyes, and warm colors, while sadness might use lowered eyes and a muted palette.
+
+**5. Emojis for Learning, Life, and Work Scenarios:**
+*   For "learning," emojis can include a student with a book, a schoolboy with a backpack, or a nerd with glasses. Concepts like "fun learning," "study for exam," "online class," and "preschool preparation" are relevant.
+*   For "work," relevant emojis could include professional settings, laptops, business tasks, and symbols of success or productivity.
+*   General "life" scenarios can be broadly interpreted as everyday emotions and activities, which are covered by the emotional expressions.
+
+**6. Details and Color Schemes Enhancing Recognizability:**
+*   The purple hair is a primary distinguishing feature, and maintaining a consistent shade of purple across all emojis is vital for recognizability.
+*   Adding "rosy dimples" can enhance cuteness without interfering with expressions.
+*   A "tonal stroke" or outline can enhance legibility across various backgrounds.
+*   A fresh and consistent palette of bright colors can be introduced, with specific colors associated with different emotions (e.g., reds, blues, yellows, and greens for expressions). Gradients can also make emojis more legible.
+*   Focus on clear expression at small sizes, ensuring details don't add visual noise or obscure readability when scaled down. Simple shapes are recommended.
+
+By incorporating these elements, the user can create a cohesive and expressive set of purple-haired little girl emojis.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3l0_zKG1cwK6WVyu9GwyQjP9_PuUqjZ3-qmahLZIzwaY5b2tc9jLHre6utgRKGiAeGwo4Yi0xLhhKGsCmg7wnEOuctroaM88KZaGw3NfDvtNMDU-wg_Y9blWcnqz0JXpAFGOQHSqlpo6m4KM6vYpOKqDDUJF5V_YA)
+2. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXBiEBdp9BUmf4OvTenyqrVGztzZuBwnfPZphFDiRoG5dCaAZeXr-jgp4HWPhs9JWtzbyJbuzR0NBTeert8qwvekUDzvZ4rK0QyTcXi9doI3cMyQCq8OeRMEaVMjESrenIt2NDCPmgjnyfYAZsghBJdPg=)
+3. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjsRIu50iB0kF5_K7NuSvk8Xv8Ugk4hcsN7w7wptwM1ZQl-TSNXJl-kGqtyCuyQ9rZmMgvpYXw6dkEcXrAVkb94JFGSMr2XLyzSpAlIrJWHjAHtEPNcTn0Z4AqCI-elITQYrFF-vU9wfOKXxWx8CCRIHIEb7c=)
+4. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4leRnhe_941eFwxd0oRsiehr5ZlMgx692pDgWNvHjHZ5nJNdO-HfUMpfDMLgEg_jzRwqmbH5me2SGHpVQuHES9UHKUSRqiiMWapvmE0ggR0M3Vzg5CQtTlfNppnqMcWKHKhlhqN7A7wMBBCUDVkPdv7JBud0=)
+5. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFLpt20q3g_g_vtIiDbuplpE9xDp3Am8-KsCDUqWZywojyJs1ym2WJqyNXLryVn0jAKY-3BH4ySr31MZwFVejC7uIXbottJiDAZuQmI3Ev3BmE5tl5-v_xeIeLoauQV4lDzGOAVu3jw6M=)
+6. line.me (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAGmJjnGKYH5rU5zvDJOJt7-V36nvMzfmuSMpTAjCOYKjad-TUxp21Fd46V3dkpkdeDgPnKnC87ZkNYyKUB9NDlOHJsulz7MqPtxuYHAOQN4RE2zTFIduUVl8eiTNzkJAHbR8g5b5JPlMZg3UCsSmQdEDv50e10ACotDbLDtJcypQ=)
+7. glasp.co (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr0a-Ot1KaFUPxPKlPF33cmrU3B1vfZtrTVEVnJVfxAYRFWokzD5OTlG_mbzWriQl79n2WrT4bEPJJdnlwgqcUddhp-GRnDAM9ebmhwAMOmJkEEMvz9SUO7Xd-awf98GfrVo_Ak7jWdJ7z26O7S8HkZ1JOONf0EgBebLRg0umlqhVLp0vW)
+8. medium.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAJP65Whm93L-aWVEsPGNb-3hG8LmZrsXkLVlMTo_8N7OdlBU6381-a1SGeyDtPNGZ4GjKOeQWAxup0Zp3YgSGB-Q6DI3ZD1lpvwSSr4j7aKdeF27jYfL89bSrGjEkEMPdG10eDCEJKrPCtzaFxyx1gFV8oEcXj7WPgurgsECQOwJZ)
+9. craiyon.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU8kahTGz_GlGuHQcKH0YFXkDvxRaXIPtnnguX_OnRqU7_KxjLUd7qdz7LB5Es6jCHCC1sJ7Y6tnPITE3pbx1ARqpAK_Hxav8fb-rSgkOidvY2On4rLITFerTGOAHBai_fNmqcc_WgXYAF2PMV2xc=)
+10. craiyon.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBOXeHXFOLSpUGmYIqRWUYHhsrGCCkWmuSz0lJvx2VADU3qw2lyddLnvsRXtW3zI5fDycn3FnmytqH8i9WXVDLQIV-A_jW-qRTV90zUghYZuzV0G-VOlV89NcO6G1_7NY8uaJc9QDOPZ4BE6qoCEc=)
+11. reddit.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMImQptZWGCHbPAPSKks56kEiNpWBA0PKIK56--sVrnlLPWvYYwz67RC3w4z5ZXrxw0GHUucpVKvHc_XX7Q49bHGqkvjXRUJl8Ii0fva5712KOPRePnsWYRe7prr0bBaagRKixi_R01dgA0Idz_dkJgB9eONlSm4Fhf1vRaMKyv3XAwBjiKF1W78lIYXP1ax8W6Q1lYdNIihDy)
+12. earlyeducationzone.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4sf_WErQ4jnj1Y2-ZUNvb_Gl5rVXa0yIA67RB3aWaFrIy7xIksPqQVvbVx8D4IJaADX1vhfivHahjyUWSF35vG02yo1jjp550p_1N9ILlaWeg4hjPs4Xp5kpYnWYdcj83JMj7rdFXES-VOHQW8_1j5R_UF5lmahdHsytq9Z2J3WllbnV6Ks5CsL9agrUVt3nIgu7Ylrh9CR6wU8eD4EYe7Zo=)
+13. americantesol.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyjs_jowqqvaFAOEMLPp5mg61y70jw41OvmvezbgIyTwBQb_zxJQ-4Onl9fkDKppR6KQ7R7qgCQrLlP4n2-ykr-XaypdF-HiLZCQEmUbQCbKjOZ_ag3h0qSZ08P3-DLH-FHH3G8OJZWaHevr3np6t2RpMjrVdofkGvEZSHbepYsLngY85a5ie89MXegEesr0nRIz2MsngW31XDAQmI)
+14. britannica.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs00E_I6k4ukZjSvm11mVbJEjKcbK1lhh209gV5JIp1DYu_0qzOwMxfohRuw6CW3taVgMWCdyYG4goyFfm2QQLapBwXWvlhYfiiY1tWAmwBTNZEqyaisXUIQnoHZFlwyo5uRxqo7mvbYya5IkTMPuv)
+15. pj109.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEq3D1N71JbJn-m8Iqft3Jalkf7-uP7FdGOS9vQpqNGWXRlVsWxy1wkow6HH3N28NEiR3OPHPqNwBFEVhlRhPFc3DYHelZByLLD3dqGQH_t0_Kp-2bib3TG8CEK_3Ne4-aqHjmB695e8g=)
+16. sanfordhealth.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKw0ki8F34zHdGMJ1RqcciCa_Ix6h73pMak4j-E326OQN5DerGxgWnMaP8d1Z65ZeGNoheEgboZoVf5Sn7g1oumqLpHl3YpKDqYzFStST8XcwOZwfK9DXTrA3Ubwyy3L6yAWScFBXT8klT-p-HjfSUEv33llmr_txGpbQma-Flh_E5FULmhbn-WUpT)
+17. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXDrTKg2S1igkTx38e83LPrcv4T6wcQC2jMh1nWFGgzAS7darxny-jOpi4jIQ0drDGUszkPuaaw7UZWf1KtDRwe0_MJS3uHryGpr8uM7qKfFjVzOKaNpBJ5oR13e7B4SY46zG6L5nGcehDnnN3)
+18. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPsHO2-3UO7JB-Br-YGwxN0CPwZ6yHCyCJGUFkatIpBVE8QeN08ruLiNCsCPj_HUyhlOJXwetUQmmWdJuZVt56uuTm9z153U_LzqgDNeiBDOk0wVQZGsq2yALjTlp8Dxvu-SrVFL0BaiVcG61iYK29m4rtqCZ-)
+19. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfXX6K7vZZZ3MlKMRTqMr2H5m8qX2YPVMNa0RpgKocwbXdmoOJ8tpSl5egxl4UwuIbLb3JXD0YZskCLNO1JIDjKSd-X02GfYJTLE5B2aixCcnErmiaw0BLVGoYREOYKmtm78NoH5nlwfWmIQ==)
+20. emojicombos.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKWB7y3NiPy-tF7rpCyPff2HHTAA1gM1808OXyQiuCppZHSrcJnDx7JAJGL7ivBCW1fh3UFJWDjAOL7U0OoDuF0Ky_HvuSp9RK9M3XKkoC1FXYSPCsD6Q=)
+21. designbundles.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLlN-eJVAlK9HaLbh9SdpPcg4T6GYIG1tr_6bwUs93qz1ljOdiRfmnZkYFESdDgFIC4PeRskC05BD1aOOPAALb39-H7aMcc9RC7_krnaKr2BF3riRhyaT7fTtjV2tCLAQJE4_0l2CcCOCM6JlvQWpbkwv4UvZKI73_40FxpV9QiExC32iwFkV0KotWxVdTWWc=)
+22. eggradients.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFkP1dQZy0h8oEhwzNKtVVIpYbsL8Tnnwem-bHAVu0O55SHSriqkJIBMC3WVCjHFQvngkKfzPyEUK48iRJFBxD7eFGSyk2NV9kCe0thXIbTcBOUSJVNt045zOqPk7b3ZKC8NMzfruF6L4=)
+23. adobe.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6ZEvpsqI45LJT8XYVLuX-kosf6uMRZIHYk5DFpjN0Lck6UZC6wPCQTJQbruX9IT7aXGkEFxgZbANADI8axeiIFDe668-Ugcnn99Vhahtax9eXadLvi80tGdgbox6lN-elBcMCj0NkRGPVWelHCgrOzpPcewwxClBwB94=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3l0_zKG1cwK6WVyu9GwyQjP9_PuUqjZ3-qmahLZIzwaY5b2tc9jLHre6utgRKGiAeGwo4Yi0xLhhKGsCmg7wnEOuctroaM88KZaGw3NfDvtNMDU-wg_Y9blWcnqz0JXpAFGOQHSqlpo6m4KM6vYpOKqDDUJF5V_YA" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXBiEBdp9BUmf4OvTenyqrVGztzZuBwnfPZphFDiRoG5dCaAZeXr-jgp4HWPhs9JWtzbyJbuzR0NBTeert8qwvekUDzvZ4rK0QyTcXi9doI3cMyQCq8OeRMEaVMjESrenIt2NDCPmgjnyfYAZsghBJdPg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjsRIu50iB0kF5_K7NuSvk8Xv8Ugk4hcsN7w7wptwM1ZQl-TSNXJl-kGqtyCuyQ9rZmMgvpYXw6dkEcXrAVkb94JFGSMr2XLyzSpAlIrJWHjAHtEPNcTn0Z4AqCI-elITQYrFF-vU9wfOKXxWx8CCRIHIEb7c=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4leRnhe_941eFwxd0oRsiehr5ZlMgx692pDgWNvHjHZ5nJNdO-HfUMpfDMLgEg_jzRwqmbH5me2SGHpVQuHES9UHKUSRqiiMWapvmE0ggR0M3Vzg5CQtTlfNppnqMcWKHKhlhqN7A7wMBBCUDVkPdv7JBud0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFLpt20q3g_g_vtIiDbuplpE9xDp3Am8-KsCDUqWZywojyJs1ym2WJqyNXLryVn0jAKY-3BH4ySr31MZwFVejC7uIXbottJiDAZuQmI3Ev3BmE5tl5-v_xeIeLoauQV4lDzGOAVu3jw6M=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. stockcake.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAGmJjnGKYH5rU5zvDJOJt7-V36nvMzfmuSMpTAjCOYKjad-TUxp21Fd46V3dkpkdeDgPnKnC87ZkNYyKUB9NDlOHJsulz7MqPtxuYHAOQN4RE2zTFIduUVl8eiTNzkJAHbR8g5b5JPlMZg3UCsSmQdEDv50e10ACotDbLDtJcypQ=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. line.me</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr0a-Ot1KaFUPxPKlPF33cmrU3B1vfZtrTVEVnJVfxAYRFWokzD5OTlG_mbzWriQl79n2WrT4bEPJJdnlwgqcUddhp-GRnDAM9ebmhwAMOmJkEEMvz9SUO7Xd-awf98GfrVo_Ak7jWdJ7z26O7S8HkZ1JOONf0EgBebLRg0umlqhVLp0vW" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. glasp.co</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAJP65Whm93L-aWVEsPGNb-3hG8LmZrsXkLVlMTo_8N7OdlBU6381-a1SGeyDtPNGZ4GjKOeQWAxup0Zp3YgSGB-Q6DI3ZD1lpvwSSr4j7aKdeF27jYfL89bSrGjEkEMPdG10eDCEJKrPCtzaFxyx1gFV8oEcXj7WPgurgsECQOwJZ" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. medium.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU8kahTGz_GlGuHQcKH0YFXkDvxRaXIPtnnguX_OnRqU7_KxjLUd7qdz7LB5Es6jCHCC1sJ7Y6tnPITE3pbx1ARqpAK_Hxav8fb-rSgkOidvY2On4rLITFerTGOAHBai_fNmqcc_WgXYAF2PMV2xc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. craiyon.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBOXeHXFOLSpUGmYIqRWUYHhsrGCCkWmuSz0lJvx2VADU3qw2lyddLnvsRXtW3zI5fDycn3FnmytqH8i9WXVDLQIV-A_jW-qRTV90zUghYZuzV0G-VOlV89NcO6G1_7NY8uaJc9QDOPZ4BE6qoCEc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. craiyon.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMImQptZWGCHbPAPSKks56kEiNpWBA0PKIK56--sVrnlLPWvYYwz67RC3w4z5ZXrxw0GHUucpVKvHc_XX7Q49bHGqkvjXRUJl8Ii0fva5712KOPRePnsWYRe7prr0bBaagRKixi_R01dgA0Idz_dkJgB9eONlSm4Fhf1vRaMKyv3XAwBjiKF1W78lIYXP1ax8W6Q1lYdNIihDy" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. reddit.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4sf_WErQ4jnj1Y2-ZUNvb_Gl5rVXa0yIA67RB3aWaFrIy7xIksPqQVvbVx8D4IJaADX1vhfivHahjyUWSF35vG02yo1jjp550p_1N9ILlaWeg4hjPs4Xp5kpYnWYdcj83JMj7rdFXES-VOHQW8_1j5R_UF5lmahdHsytq9Z2J3WllbnV6Ks5CsL9agrUVt3nIgu7Ylrh9CR6wU8eD4EYe7Zo=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. earlyeducationzone.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyjs_jowqqvaFAOEMLPp5mg61y70jw41OvmvezbgIyTwBQb_zxJQ-4Onl9fkDKppR6KQ7R7qgCQrLlP4n2-ykr-XaypdF-HiLZCQEmUbQCbKjOZ_ag3h0qSZ08P3-DLH-FHH3G8OJZWaHevr3np6t2RpMjrVdofkGvEZSHbepYsLngY85a5ie89MXegEesr0nRIz2MsngW31XDAQmI" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. americantesol.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs00E_I6k4ukZjSvm11mVbJEjKcbK1lhh209gV5JIp1DYu_0qzOwMxfohRuw6CW3taVgMWCdyYG4goyFfm2QQLapBwXWvlhYfiiY1tWAmwBTNZEqyaisXUIQnoHZFlwyo5uRxqo7mvbYya5IkTMPuv" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. britannica.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEq3D1N71JbJn-m8Iqft3Jalkf7-uP7FdGOS9vQpqNGWXRlVsWxy1wkow6HH3N28NEiR3OPHPqNwBFEVhlRhPFc3DYHelZByLLD3dqGQH_t0_Kp-2bib3TG8CEK_3Ne4-aqHjmB695e8g=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. pj109.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKw0ki8F34zHdGMJ1RqcciCa_Ix6h73pMak4j-E326OQN5DerGxgWnMaP8d1Z65ZeGNoheEgboZoVf5Sn7g1oumqLpHl3YpKDqYzFStST8XcwOZwfK9DXTrA3Ubwyy3L6yAWScFBXT8klT-p-HjfSUEv33llmr_txGpbQma-Flh_E5FULmhbn-WUpT" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. sanfordhealth.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXDrTKg2S1igkTx38e83LPrcv4T6wcQC2jMh1nWFGgzAS7darxny-jOpi4jIQ0drDGUszkPuaaw7UZWf1KtDRwe0_MJS3uHryGpr8uM7qKfFjVzOKaNpBJ5oR13e7B4SY46zG6L5nGcehDnnN3" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPsHO2-3UO7JB-Br-YGwxN0CPwZ6yHCyCJGUFkatIpBVE8QeN08ruLiNCsCPj_HUyhlOJXwetUQmmWdJuZVt56uuTm9z153U_LzqgDNeiBDOk0wVQZGsq2yALjTlp8Dxvu-SrVFL0BaiVcG61iYK29m4rtqCZ-" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfXX6K7vZZZ3MlKMRTqMr2H5m8qX2YPVMNa0RpgKocwbXdmoOJ8tpSl5egxl4UwuIbLb3JXD0YZskCLNO1JIDjKSd-X02GfYJTLE5B2aixCcnErmiaw0BLVGoYREOYKmtm78NoH5nlwfWmIQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKWB7y3NiPy-tF7rpCyPff2HHTAA1gM1808OXyQiuCppZHSrcJnDx7JAJGL7ivBCW1fh3UFJWDjAOL7U0OoDuF0Ky_HvuSp9RK9M3XKkoC1FXYSPCsD6Q=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. emojicombos.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLlN-eJVAlK9HaLbh9SdpPcg4T6GYIG1tr_6bwUs93qz1ljOdiRfmnZkYFESdDgFIC4PeRskC05BD1aOOPAALb39-H7aMcc9RC7_krnaKr2BF3riRhyaT7fTtjV2tCLAQJE4_0l2CcCOCM6JlvQWpbkwv4UvZKI73_40FxpV9QiExC32iwFkV0KotWxVdTWWc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. designbundles.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFkP1dQZy0h8oEhwzNKtVVIpYbsL8Tnnwem-bHAVu0O55SHSriqkJIBMC3WVCjHFQvngkKfzPyEUK48iRJFBxD7eFGSyk2NV9kCe0thXIbTcBOUSJVNt045zOqPk7b3ZKC8NMzfruF6L4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. eggradients.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6ZEvpsqI45LJT8XYVLuX-kosf6uMRZIHYk5DFpjN0Lck6UZC6wPCQTJQbruX9IT7aXGkEFxgZbANADI8axeiIFDe668-Ugcnn99Vhahtax9eXadLvi80tGdgbox6lN-elBcMCj0NkRGPVWelHCgrOzpPcewwxClBwB94=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. adobe.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="42.78">42.78秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="71,529">71,529</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. purple hair girl emoji dribbble
+2. purple hair girl emoji site:behance.net/gallery
+3. purple hair girl emoji site:pinterest.com
+4. purple hair little girl illustration site:pinterest.com">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. purple hair girl emoji dribbble</li><li class="text-sm text-gray-600">2. purple hair girl emoji site:behance.net/gallery</li><li class="text-sm text-gray-600">3. purple hair girl emoji site:pinterest.com</li><li class="text-sm text-gray-600">4. purple hair little girl illustration site:pinterest.com</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are several direct-source galleries and asset collections featuring a purple-haired girl character across emotions and scenarios—perfect for building a cohesive emoji set with consistent styling, varied expressions, and scenario-specific poses:
+
+• Dribbble – Purple Hair Girl Emoji Set  
+  https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set  
+  A cohesive emoji series by “Emoji Expert” showing a purple-haired girl in multiple moods (happy, surprised, winking), plus body-language icons (thumbs-up, heart) and an accompanying color palette for consistency ([dribbble.com](https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set?utm_source=chatgpt.com)).  
+
+• Dribbble – Girl with purple hair (Kirill_Drozhzhin)  
+  https://dribbble.com/shots/12240846-Girl-with-purple-hair  
+  Full-body illustration with motivational copy, showcasing expressive poses (pointing, thinking, celebrating) ideal for “learning” or “work” scenarios—downloadable palette included ([dribbble.com](https://dribbble.com/shots/12240846-Girl-with-purple-hair?utm_source=chatgpt.com)).  
+
+• Dribbble – Purple hair girl 💜 (Jehan Toukan)  
+  https://dribbble.com/shots/19695625-Purple-hair-girl  
+  A clean headshot with neutral greeting, useful as a base for head-only emoji expressions and to study hair-shape/gradient techniques ([dribbble.com](https://dribbble.com/shots/19695625-Purple-hair-girl?utm_source=chatgpt.com)).  
+
+• Behance – Girl with purple Hair (Desislava Nikolova)  
+  https://www.behance.net/gallery/94843095/Girl-with-purple-Hair  
+  Portfolio gallery featuring multiple angles and lighting studies of the same character—great for reference on hair shading, eye-shape consistency, and pose variety ([behance.net](https://www.behance.net/gallery/94843095/Girl-with-purple-Hair?utm_source=chatgpt.com)).  
+
+• IconScout – 22 Purple Hair Girl Illustration Kits  
+  https://iconscout.com/kit-illustrations/purple-hair-girl  
+  Vector asset pack (SVG/PNG/AI/EPS) covering diverse contexts—school & education, healthcare, business, and casual life—allowing you to mix & match outfits, tools (books, laptops), and props ([iconscout.com](https://iconscout.com/kit-illustrations/purple-hair-girl?utm_source=chatgpt.com)).  
+
+• IconScout – Purple Hair Girl Animations  
+  https://iconscout.com/lottie-animations/purple-hair-girl  
+  A massive Lottie/GIF library (over 120k items) showing the purple-haired character in dynamic actions—typing, reading, celebrating, and everyday gestures—perfect for animated emoji concepts ([iconscout.com](https://iconscout.com/lottie-animations/purple-hair-girl?utm_source=chatgpt.com)).  
+
+• Design Bundles – Woman Emoji Collection with Purple Hair  
+  https://designbundles.net/alit-design/2680907-woman-emoji-collection-with-purple-hair  
+  Eleven vector emoji faces (happy, sad, confused, angry) of a purple-haired girl, providing clear examples of mouth-shapes and eyebrow positions for distinct emotions ([designbundles.net](https://designbundles.net/alit-design/2680907-woman-emoji-collection-with-purple-hair?utm_source=chatgpt.com)).  
+
+These galleries and kits will give you visual guidance on hair color gradients, consistent line-weights, character proportions, facial language, and scenario-specific body language—ideal foundations for your custom emoji set.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are several direct-source galleries and asset collections featuring a purple-haired girl character across emotions and scenarios—perfect for building a cohesive emoji set with consistent styling, varied expressions, and scenario-specific poses:
+
+• Dribbble – Purple Hair Girl Emoji Set  
+  https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set  
+  A cohesive emoji series by “Emoji Expert” showing a purple-haired girl in multiple moods (happy, surprised, winking), plus body-language icons (thumbs-up, heart) and an accompanying color palette for consistency ([dribbble.com](https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set?utm_source=chatgpt.com)).  
+
+• Dribbble – Girl with purple hair (Kirill_Drozhzhin)  
+  https://dribbble.com/shots/12240846-Girl-with-purple-hair  
+  Full-body illustration with motivational copy, showcasing expressive poses (pointing, thinking, celebrating) ideal for “learning” or “work” scenarios—downloadable palette included ([dribbble.com](https://dribbble.com/shots/12240846-Girl-with-purple-hair?utm_source=chatgpt.com)).  
+
+• Dribbble – Purple hair girl 💜 (Jehan Toukan)  
+  https://dribbble.com/shots/19695625-Purple-hair-girl  
+  A clean headshot with neutral greeting, useful as a base for head-only emoji expressions and to study hair-shape/gradient techniques ([dribbble.com](https://dribbble.com/shots/19695625-Purple-hair-girl?utm_source=chatgpt.com)).  
+
+• Behance – Girl with purple Hair (Desislava Nikolova)  
+  https://www.behance.net/gallery/94843095/Girl-with-purple-Hair  
+  Portfolio gallery featuring multiple angles and lighting studies of the same character—great for reference on hair shading, eye-shape consistency, and pose variety ([behance.net](https://www.behance.net/gallery/94843095/Girl-with-purple-Hair?utm_source=chatgpt.com)).  
+
+• IconScout – 22 Purple Hair Girl Illustration Kits  
+  https://iconscout.com/kit-illustrations/purple-hair-girl  
+  Vector asset pack (SVG/PNG/AI/EPS) covering diverse contexts—school & education, healthcare, business, and casual life—allowing you to mix & match outfits, tools (books, laptops), and props ([iconscout.com](https://iconscout.com/kit-illustrations/purple-hair-girl?utm_source=chatgpt.com)).  
+
+• IconScout – Purple Hair Girl Animations  
+  https://iconscout.com/lottie-animations/purple-hair-girl  
+  A massive Lottie/GIF library (over 120k items) showing the purple-haired character in dynamic actions—typing, reading, celebrating, and everyday gestures—perfect for animated emoji concepts ([iconscout.com](https://iconscout.com/lottie-animations/purple-hair-girl?utm_source=chatgpt.com)).  
+
+• Design Bundles – Woman Emoji Collection with Purple Hair  
+  https://designbundles.net/alit-design/2680907-woman-emoji-collection-with-purple-hair  
+  Eleven vector emoji faces (happy, sad, confused, angry) of a purple-haired girl, providing clear examples of mouth-shapes and eyebrow positions for distinct emotions ([designbundles.net](https://designbundles.net/alit-design/2680907-woman-emoji-collection-with-purple-hair?utm_source=chatgpt.com)).  
+
+These galleries and kits will give you visual guidance on hair color gradients, consistent line-weights, character proportions, facial language, and scenario-specific body language—ideal foundations for your custom emoji set.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Purple Hair Girl Emoji Set by Emoji Expert on Dribbble (https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set?utm_source=chatgpt.com)
+2. Girl with purple hair by Kirill_Drozhzhin on Dribbble (https://dribbble.com/shots/12240846-Girl-with-purple-hair?utm_source=chatgpt.com)
+3. Purple hair girl 💜 by Jehan Toukan on Dribbble (https://dribbble.com/shots/19695625-Purple-hair-girl?utm_source=chatgpt.com)
+4. Girl with purple Hair :: Behance (https://www.behance.net/gallery/94843095/Girl-with-purple-Hair?utm_source=chatgpt.com)
+5. Purple Hair Girl Illustration Kits - Free Download in SVG, PNG (https://iconscout.com/kit-illustrations/purple-hair-girl?utm_source=chatgpt.com)
+6. Purple Hair Girl Animations - Free Download in GIF, Lottie JSON (https://iconscout.com/lottie-animations/purple-hair-girl?utm_source=chatgpt.com)
+7. Woman Emoji Collection with Purple Hair (https://designbundles.net/alit-design/2680907-woman-emoji-collection-with-purple-hair?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Purple Hair Girl Emoji Set by Emoji Expert on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/12240846-Girl-with-purple-hair?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Girl with purple hair by Kirill_Drozhzhin on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/19695625-Purple-hair-girl?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Purple hair girl 💜 by Jehan Toukan on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/94843095/Girl-with-purple-Hair?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Girl with purple Hair :: Behance</a></li><li class="text-sm"><a href="https://iconscout.com/kit-illustrations/purple-hair-girl?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Purple Hair Girl Illustration Kits - Free Download in SVG, PNG</a></li><li class="text-sm"><a href="https://iconscout.com/lottie-animations/purple-hair-girl?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Purple Hair Girl Animations - Free Download in GIF, Lottie JSON</a></li><li class="text-sm"><a href="https://designbundles.net/alit-design/2680907-woman-emoji-collection-with-purple-hair?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Woman Emoji Collection with Purple Hair</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="43.43">43.43秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="66,405">66,405</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. purple hair girl character emoji design site:behance.net
+2. purple hair girl character illustration site:dribbble.com
+3. cute girl emoji expressions learning work life portfolio
+4. character design portfolio purple girl mascot consistent style">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. purple hair girl character emoji design site:behance.net</li><li class="text-sm text-gray-600">2. purple hair girl character illustration site:dribbble.com</li><li class="text-sm text-gray-600">3. cute girl emoji expressions learning work life portfolio</li><li class="text-sm text-gray-600">4. character design portfolio purple girl mascot consistent style</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual references of purple-haired little girl emoji designs and character illustrations that could inspire your emoji set. Let me find some actual design galleries and portfolios showcasing this type of character work.Let me search for more specific character design portfolios with purple-haired girl illustrations:Great! I found a perfect match. Let me search for more emoji expression references and character consistency examples:Let me search for more specific character design portfolios focusing on consistency and purple-themed illustrations:Based on my search results, I've found some excellent visual reference sources for your purple-haired little girl emoji design project. Here are the key resources I discovered:
+
+## Primary Visual References
+
+### **Direct Design Portfolios:**
+
+1. **Dribbble - Purple Hair Girl Emoji Set**: Purple Hair Girl Emoji Set designed by Emoji Expert. Connect with them on Dribbble; the global community for designers and creative professionals. This is exactly what you're looking for - a complete emoji set featuring a purple-haired girl character.
+
+2. **Dribbble Purple Hair Character Gallery**: Discover 100+ Purple Hair designs on Dribbble. Hairstyles · Like · Sue Ai · Like 192 · 34.3k · View Strawberry girl · Strawberry girl · Like · Emily Boughton · Like 30 · 4.4k · View Illustrator girl · Illustrator girl · Like · rojin rokhosh · Like 52 · 3.8k Multiple artists showcasing purple-haired girl illustrations.
+
+3. **Pinterest Character Design Collection**: Characters and mascots give businesses a human face—ok, a cartoon one. Character designs by Uxie representing different emotions, similar to the Pixar movie Inside Out.
+
+## Character Consistency & Style References
+
+### **Professional Mascot Design Portfolios:**
+
+1. **SOS Factory Mascot Design**: Beyond the character itself, I offer a cohesive visual language for your brand, including mascot design, mascot logo, mascot icon, illustrative logos with mascots, and more. Each element works together to build a unique and consistent identity in all media and usage cases.
+
+2. **Freelance Fridge Character Development**: Once I have a full understanding of a brand, then I create a few character style sketches. I like to offer a range of choices, as this helps the client to really pinpoint the look that appeals to them.
+
+## Emoji Expression & Emotion References
+
+### **Comprehensive Emotion Guides:**
+
+1. **Science of People Emoji Guide**: Emojis have become a communication tool to express emotional nuance. In this article, we review 115 crucial emojis to help you understand what they all mean.
+
+2. **Parade Emoji Meanings**: In this emoji list, we will give you a rundown on some of the most popular emojis—both faces and symbols—along with a rundown of what they are called and their meanings
+
+## Learning/Work/Life Scenario References
+
+### **Contextual Emoji Applications:**
+
+1. **Career Development Emoji Combos**: new career development professional growth education for career job skills upskilling for work lifelong learning... new skills for growth unlocking potential career development essential skills for success performance improvement
+
+2. **Work Portfolio Emoji Collections**: new work portfolio professional portfolio project showcase document collection best work resume supplement job application examples
+
+## Color Scheme & Purple Design Inspiration
+
+The search revealed that her wing color runs a gradient from bright purple to dark purple. Curiously, while her default design in later games is simply a more refined 3D model than this one, her wing color changes back to black, like in her original sketch. This shows how purple can be effectively used in character design with gradient variations.
+
+These references will give you excellent inspiration for creating a cohesive emoji set featuring your purple-haired little girl character, covering the full range of emotions and scenarios you mentioned for learning, life, and work contexts.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual references of purple-haired little girl emoji designs and character illustrations that could inspire your emoji set. Let me find some actual design galleries and portfolios showcasing this type of character work.Let me search for more specific character design portfolios with purple-haired girl illustrations:Great! I found a perfect match. Let me search for more emoji expression references and character consistency examples:Let me search for more specific character design portfolios focusing on consistency and purple-themed illustrations:Based on my search results, I've found some excellent visual reference sources for your purple-haired little girl emoji design project. Here are the key resources I discovered:
+
+## Primary Visual References
+
+### **Direct Design Portfolios:**
+
+1. **Dribbble - Purple Hair Girl Emoji Set**: Purple Hair Girl Emoji Set designed by Emoji Expert. Connect with them on Dribbble; the global community for designers and creative professionals. This is exactly what you're looking for - a complete emoji set featuring a purple-haired girl character.
+
+2. **Dribbble Purple Hair Character Gallery**: Discover 100+ Purple Hair designs on Dribbble. Hairstyles · Like · Sue Ai · Like 192 · 34.3k · View Strawberry girl · Strawberry girl · Like · Emily Boughton · Like 30 · 4.4k · View Illustrator girl · Illustrator girl · Like · rojin rokhosh · Like 52 · 3.8k Multiple artists showcasing purple-haired girl illustrations.
+
+3. **Pinterest Character Design Collection**: Characters and mascots give businesses a human face—ok, a cartoon one. Character designs by Uxie representing different emotions, similar to the Pixar movie Inside Out.
+
+## Character Consistency & Style References
+
+### **Professional Mascot Design Portfolios:**
+
+1. **SOS Factory Mascot Design**: Beyond the character itself, I offer a cohesive visual language for your brand, including mascot design, mascot logo, mascot icon, illustrative logos with mascots, and more. Each element works together to build a unique and consistent identity in all media and usage cases.
+
+2. **Freelance Fridge Character Development**: Once I have a full understanding of a brand, then I create a few character style sketches. I like to offer a range of choices, as this helps the client to really pinpoint the look that appeals to them.
+
+## Emoji Expression & Emotion References
+
+### **Comprehensive Emotion Guides:**
+
+1. **Science of People Emoji Guide**: Emojis have become a communication tool to express emotional nuance. In this article, we review 115 crucial emojis to help you understand what they all mean.
+
+2. **Parade Emoji Meanings**: In this emoji list, we will give you a rundown on some of the most popular emojis—both faces and symbols—along with a rundown of what they are called and their meanings
+
+## Learning/Work/Life Scenario References
+
+### **Contextual Emoji Applications:**
+
+1. **Career Development Emoji Combos**: new career development professional growth education for career job skills upskilling for work lifelong learning... new skills for growth unlocking potential career development essential skills for success performance improvement
+
+2. **Work Portfolio Emoji Collections**: new work portfolio professional portfolio project showcase document collection best work resume supplement job application examples
+
+## Color Scheme & Purple Design Inspiration
+
+The search revealed that her wing color runs a gradient from bright purple to dark purple. Curiously, while her default design in later games is simply a more refined 3D model than this one, her wing color changes back to black, like in her original sketch. This shows how purple can be effectively used in character design with gradient variations.
+
+These references will give you excellent inspiration for creating a cohesive emoji set featuring your purple-haired little girl character, covering the full range of emotions and scenarios you mentioned for learning, life, and work contexts.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Female Character Design by Biliana Velikova | Dribbble | Dribbble (https://dribbble.com/shots/2110691-Female-Character-Design)
+2. Purple Hair Girl Emoji Set by Emoji Expert on Dribbble (https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set)
+3. Purple | Character design girl, Character design ... - Pinterest (https://www.pinterest.com/pin/purple--564638872010117418/)
+4. Exploring the Spectrum of Character Art Styles - Pixune (https://pixune.com/blog/character-art-styles/)
+5. Character Design Studio | Character Design Services (https://pixune.com/character-design-studio/)
+6. Emoji Cheat Sheet (https://www.webfx.com/tools/emoji-cheat-sheet/)
+7. All Emojis – Emoji List for Copy and Paste (https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/)
+8. All the Emojis With Meaning, Examples, and Usage Tips (https://www.engagebay.com/blog/emojis-with-meaning/)
+9. 55+ Popular Emojis and Their Meanings - Parade (https://parade.com/living/emoji-meanings)
+10. Mascot Design for Companies with Character (https://www.sosfactory.com/mascot-design/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/2110691-Female-Character-Design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Female Character Design by Biliana Velikova | Dribbble | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/14724337-Purple-Hair-Girl-Emoji-Set" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Purple Hair Girl Emoji Set by Emoji Expert on Dribbble</a></li><li class="text-sm"><a href="https://www.pinterest.com/pin/purple--564638872010117418/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Purple | Character design girl, Character design ... - Pinterest</a></li><li class="text-sm"><a href="https://pixune.com/blog/character-art-styles/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Exploring the Spectrum of Character Art Styles - Pixune</a></li><li class="text-sm"><a href="https://pixune.com/character-design-studio/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Character Design Studio | Character Design Services</a></li><li class="text-sm"><a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Emoji Cheat Sheet</a></li><li class="text-sm"><a href="https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. All Emojis – Emoji List for Copy and Paste</a></li><li class="text-sm"><a href="https://www.engagebay.com/blog/emojis-with-meaning/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. All the Emojis With Meaning, Examples, and Usage Tips</a></li><li class="text-sm"><a href="https://parade.com/living/emoji-meanings" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. 55+ Popular Emojis and Their Meanings - Parade</a></li><li class="text-sm"><a href="https://www.sosfactory.com/mascot-design/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Mascot Design for Companies with Character</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
