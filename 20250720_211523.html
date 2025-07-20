@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user is designing a brand logo for a map-related tech company. 
+You shoud do web search for some image reference, you need to gather inspiration on how elements like globes, location pins, sharing, and maps are represented in modern logo design, and how to use simple, international graphic language to reflect the industry's characteristics while appealing to an international audience.">The user is designing a brand logo for a map-related tech company. 
+You shoud do web search for some image reference, you need to gather inspiration on how elements like globes, location pins, sharing, and maps are represented in modern logo design, and how to use simple, international graphic language to reflect the industry's characteristics while appealing to an international audience.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 21:15:59</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="20.20">20.20秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="2,104">2,104</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. modern map tech logo design
+2. globe logo design inspiration
+3. location pin logo design
+4. sharing icon logo design
+5. simple international logo design maps
+6. tech company logo design global
+7. minimalist map logo
+8. abstract globe logo
+9. navigation app logo design
+10. geospatial tech logo">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. modern map tech logo design</li><li class="text-sm text-gray-600">2. globe logo design inspiration</li><li class="text-sm text-gray-600">3. location pin logo design</li><li class="text-sm text-gray-600">4. sharing icon logo design</li><li class="text-sm text-gray-600">5. simple international logo design maps</li><li class="text-sm text-gray-600">6. tech company logo design global</li><li class="text-sm text-gray-600">7. minimalist map logo</li><li class="text-sm text-gray-600">8. abstract globe logo</li><li class="text-sm text-gray-600">9. navigation app logo design</li><li class="text-sm text-gray-600">10. geospatial tech logo</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="For a map-related tech company, successful logo design draws inspiration from elements like globes, location pins, sharing symbols, and maps themselves, often rendered with a simple, international graphic language. Modern logos in this sector prioritize clarity, scalability, and universal appeal.
+
+Here's an overview of how these elements are typically represented and how they can be used:
+
+**1. Globes:**
+Globes are frequently used to symbolize global reach, connectivity, and comprehensive coverage. Modern approaches to globe design often involve:
+*   **Abstract Forms:** Globes can be depicted using interconnected dots, lines, or geometric shapes to convey networks and digital data, or as a fluid, abstract sphere. Some designs even incorporate a "droplet" shape encompassing the Earth to suggest a core offering.
+*   **Minimalist Renditions:** Simplified outlines or partial globes are common to maintain a clean aesthetic.
+*   **Integration:** Globes are sometimes combined with other elements, such as a security shield, or abstract representations of letters. They can also subtly integrate world map patterns.
+*   **Coloration:** Often, blue and green hues are used to evoke themes of Earth, technology, and trust.
+
+**2. Location Pins:**
+The iconic location pin is a direct and widely recognized symbol for "place" and "navigation." Modern interpretations include:
+*   **Simplified Shapes:** The traditional pin is often streamlined to its most basic form, sometimes with a subtle curve or angle for dynamism.
+*   **Creative Integrations:** Designers frequently combine the pin with other relevant symbols, such as a lemur's tail for uniqueness, a pencil for educational travel, or integrated into letterforms. Some innovative designs blend the pin with a gear to represent geospatial integrations and automation, or with circuit patterns for tech companies.
+*   **Negative Space:** The shape of a location pin can be subtly suggested through negative space within a larger design.
+*   **Arrows/Directions:** Sometimes, the pin is combined with arrow motifs to emphasize navigation and direction.
+
+**3. Sharing:**
+To convey the aspect of sharing data, locations, or experiences, logos often utilize:
+*   **Universal Share Icon:** The most recognizable symbol is the "less than" sign with three dots, representing connections and distribution.
+*   **Abstract Connections:** Intersecting lines, overlapping shapes, or radiating elements can abstractly represent sharing, connectivity, and networks.
+*   **Integration with Other Elements:** The share concept can be subtly woven into map or globe designs, for example, by showing data flow across a map or emanating from a central point. Some designs directly combine a map pin with the blockchain or share symbol.
+
+**4. Maps:**
+Maps themselves, from world maps to city layouts, are fundamental to the industry:
+*   **Abstract Line Work:** Maps can be represented by minimalist lines that suggest roads, networks, or topographical contours, providing a modern and clean look.
+*   **Geometric Patterns:** Geometric interpretations of maps or landmasses offer a sophisticated and tech-oriented feel.
+*   **World Map Silhouettes:** Simplified world map outlines are effective for conveying global reach or international services.
+*   **Integration with Technology Elements:** Maps are often combined with elements like circuit boards, network lines, or digital patterns to highlight the tech aspect.
+
+**Modern and International Graphic Language:**
+To appeal to an international audience, logos in this sector tend to adopt:
+*   **Simplicity and Minimalism:** Overly complex designs are avoided in favor of clean lines and clear forms that are easily recognizable across cultures and at various sizes.
+*   **Geometric Shapes:** Circles, triangles, and lines are frequently used for their universal understanding and modern aesthetic.
+*   **Abstract Representations:** Moving beyond literal depictions allows for broader interpretation and timelessness.
+*   **Strategic Color Palettes:** Blues, greens, and grays are popular for their association with technology, reliability, and the environment. Gradients can add a contemporary touch.
+*   **Legible Typography:** Sans-serif fonts are commonly chosen for their modern appearance and readability.
+
+By combining these elements thoughtfully – perhaps an abstract globe intertwined with a subtle location pin, or a minimalist map design radiating "sharing" lines – a brand logo for a map-related tech company can effectively communicate its industry characteristics while resonating with a global audience.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">For a map-related tech company, successful logo design draws inspiration from elements like globes, location pins, sharing symbols, and maps themselves, often rendered with a simple, international graphic language. Modern logos in this sector prioritize clarity, scalability, and universal appeal.
+
+Here's an overview of how these elements are typically represented and how they can be used:
+
+**1. Globes:**
+Globes are frequently used to symbolize global reach, connectivity, and comprehensive coverage. Modern approaches to globe design often involve:
+*   **Abstract Forms:** Globes can be depicted using interconnected dots, lines, or geometric shapes to convey networks and digital data, or as a fluid, abstract sphere. Some designs even incorporate a "droplet" shape encompassing the Earth to suggest a core offering.
+*   **Minimalist Renditions:** Simplified outlines or partial globes are common to maintain a clean aesthetic.
+*   **Integration:** Globes are sometimes combined with other elements, such as a security shield, or abstract representations of letters. They can also subtly integrate world map patterns.
+*   **Coloration:** Often, blue and green hues are used to evoke themes of Earth, technology, and trust.
+
+**2. Location Pins:**
+The iconic location pin is a direct and widely recognized symbol for "place" and "navigation." Modern interpretations include:
+*   **Simplified Shapes:** The traditional pin is often streamlined to its most basic form, sometimes with a subtle curve or angle for dynamism.
+*   **Creative Integrations:** Designers frequently combine the pin with other relevant symbols, such as a lemur's tail for uniqueness, a pencil for educational travel, or integrated into letterforms. Some innovative designs blend the pin with a gear to represent geospatial integrations and automation, or with circuit patterns for tech companies.
+*   **Negative Space:** The shape of a location pin can be subtly suggested through negative space within a larger design.
+*   **Arrows/Directions:** Sometimes, the pin is combined with arrow motifs to emphasize navigation and direction.
+
+**3. Sharing:**
+To convey the aspect of sharing data, locations, or experiences, logos often utilize:
+*   **Universal Share Icon:** The most recognizable symbol is the "less than" sign with three dots, representing connections and distribution.
+*   **Abstract Connections:** Intersecting lines, overlapping shapes, or radiating elements can abstractly represent sharing, connectivity, and networks.
+*   **Integration with Other Elements:** The share concept can be subtly woven into map or globe designs, for example, by showing data flow across a map or emanating from a central point. Some designs directly combine a map pin with the blockchain or share symbol.
+
+**4. Maps:**
+Maps themselves, from world maps to city layouts, are fundamental to the industry:
+*   **Abstract Line Work:** Maps can be represented by minimalist lines that suggest roads, networks, or topographical contours, providing a modern and clean look.
+*   **Geometric Patterns:** Geometric interpretations of maps or landmasses offer a sophisticated and tech-oriented feel.
+*   **World Map Silhouettes:** Simplified world map outlines are effective for conveying global reach or international services.
+*   **Integration with Technology Elements:** Maps are often combined with elements like circuit boards, network lines, or digital patterns to highlight the tech aspect.
+
+**Modern and International Graphic Language:**
+To appeal to an international audience, logos in this sector tend to adopt:
+*   **Simplicity and Minimalism:** Overly complex designs are avoided in favor of clean lines and clear forms that are easily recognizable across cultures and at various sizes.
+*   **Geometric Shapes:** Circles, triangles, and lines are frequently used for their universal understanding and modern aesthetic.
+*   **Abstract Representations:** Moving beyond literal depictions allows for broader interpretation and timelessness.
+*   **Strategic Color Palettes:** Blues, greens, and grays are popular for their association with technology, reliability, and the environment. Gradients can add a contemporary touch.
+*   **Legible Typography:** Sans-serif fonts are commonly chosen for their modern appearance and readability.
+
+By combining these elements thoughtfully – perhaps an abstract globe intertwined with a subtle location pin, or a minimalist map design radiating "sharing" lines – a brand logo for a map-related tech company can effectively communicate its industry characteristics while resonating with a global audience.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. pngtree.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaFyiap0gHlWJvb8h-UbCoBkdcvaIPUYWXTwI9BH8sWslohz6pq5PaPq0CZwk9nELLp3ZG7qFajlam0M5eRN9Ltp_P7jAFLBvB66SmdVxGUs9ysJOBJrOneB6r-P0hRg==)
+2. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRRCTrANOP_LkWrEZ7SiQwFpbfdns7FfIPpbx_3uworZebJPCgplh35bxzKoEik774V6u-ibWJOrwfjiq-ETDcJldokM-EdX2nBAyRKpli37Ttq2cEy9AhUdTbY6ibedGDaOPAJxNWEOY7VF76)
+3. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfjE7IcxPV8iWoyl59sTNoUSj4a6XVj5OHAJeWq4oqN-uV8dVvzLKPtDyXmCaZWHnaKHkwpT7tWDcfC7o3sInXBNoIR7IDGY12fV1WCdYpYmtUoVz8oEcXoqF9VkkEfFBYZ7-ffOwrNFppZ8DwOLrqwB0=)
+4. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUjXxVq3Nms9D1vUhPWtY-jRty536Xldou6HoOV8imPsqKTo9sH9kkecfMOke6dsSpf8kOfIdJTmd5ryP7PW7RMC6jSGrTYRn36_0fkT60D1rRPRfFMhIoFoLv2dVGCjEFSCwOY-9rMCrwMJuxMKTpGA==)
+5. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrqSFgrTQPuxDZptqkAbne6f49IiVOTSXdCJmUDde288IFhbHG48wFgL6lq0cRHw14JP2GOjNJexiI14EG3oWR-pUmLvtQjUBVGDQdFG2hkAcK_XUT4Q0ZmIKkotK-mChFWWlc5bGX)
+6. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkl-jbhIG42iefKr5Ulv12TLYSA5TlEAQtwEBuvnc6Fi4M6WAFKcyCB4tDBS113QsHeKRHYibowVwG3o7jg6MfpWvhJBJIBMlK1o60lweBl_w-a-8Pd3BiNcntVlY9Ml1fSCvFOTMKvcRqFk_L8g==)
+7. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyaFcgQtk3bsZWFKwzyJAzZWo8JsA_Ttq8CIJcQoYiN1j7765UYhtAI3b2JGMjy1OUXEOwooi0inRTn_gRnAg_XCubYz7tgF_L3xkRFtTst2OOE25m7Y35ANmaiREdySbX0U7r5gYX-z7R9w==)
+8. looka.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHJnrdpHOC1elTJI5i7VLlA1C33ALomwEylZbkVowTc3xHuwah7JlHU_c1rOExiGHBW5VSCnQB3Uawi4l8e4ebIVIA4DfQw2fIZZS7bUnghi1sajFQ3rONuwOqY-P-EVFV3fufKvw19m-TOZCaiA==)
+9. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHynQ-Qy3xfmHkDvJ33MXgipVsDTtTv5YgYY2r59cvisngx9gPaZNRgtJWfK8zXY2JXba69F2W6m_qlIR-5yUXXSxT7xEbXKRfGwYTyzhC7jVBmyhsQFLlstRQ0A19KuNx2631HjIfDPh426iDUqA==)
+10. vistaprint.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnwgIlbDRplG3Yf5zH4Z09aJ3z3a88sBlNrzrM6DSW_H69vacfR_9q1kE42Op-3Z4ZWG6v8_uE8SFXftgxGf7Hku2-spNmF06vwYt36nbHv37xlaJJGxnBX6xrV3K-fhBCGXXX2NFUun-3dftwN-1b9TuYH_0vFQ==)
+11. logodesign.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYFg9xVO0nDJ2yomY1mh6SDqwG8c-6AL1oqly_qi2FCXrfb9rEDd8FZvheL-FjuMb-TbkEOkEsRLpTpXSpZBCe9Y3iRPeisZIPsLm0pk98YyNBsUDITRwHGp62RhFu)
+12. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMjfhljzrtAvIbxxBk6d1gGi_zsrJ6Rp7Fx72tfUoKnkZjgH1muez2eBEgLnzrOnHEN6EBvV_psGSH3MrlYyW9tKAEbWpVM8xB3ifCWOh-lq0qOdO7LugKB4tJ2-HCw1iBKjH2iA==)
+13. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt0I8OA3fG9TADYv20TCkMU7Nd4DFyVXzjkrpOb9Z-mN11Uw0qdVvJfz3pOxrWLk4wer5TGMENdZxtWh47lRhbh-hcn4atI2yITPr15C7ibOvp7fvOOd6OHHTUqLXU16zD3IRo0lDZpYXrJc1uHUZZAis=)
+14. designcrowd.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEey-qxhnPZkHekTd-GUJAH8OtlB_FwBzIHHhBLGp5rsdi6FBDIwaqzLP1wIgxclCWAU2WP_OUi718HMjLnixX_lq23_JO-ejScPPmJai2oCXLSwokBFtr13M4UN8iPZuFCMz0gc8Gzq4UhbEygN33WhzK0wy0RLcQTh1rvk-dQePk=)
+15. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMy9NYOjnQ3orX3bslGpeNsXCgio9o0aULT3AY1BsFxMBw5sWPNg_hx9RmzFqyPEGEQPj2--J5_y11P-sOYMjtS23Ty6I-58Ro5VNJfmts9R-YiJjQMcCVPHdLDmmrEffP1N8hQdYl2l9jCXM0uRUOcr5XN_ELdUDx3-sz-0I=)
+16. icons8.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMJx1USvMpSIjDeG5pZISLCMMXVDsMdmFzNW1GEcFjAEQakxEu6zJw3OaO5t9mLvLT4f2zvUgIDM5rQncoBp4DWLWorzKbwR92JYuYDGtMbItGSByyDuYyLw9XKA==)
+17. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHU4kqpnKtUec3K-CtLaIQPjKQgOupzdIT1N4wQofhLeJCzb0iv0fnC3cqHRC8xGZWeoukUwYa8VOHwSI-ITQSPkKTvOQd2zaqQtyqu4gJzhA88-U2GEGwX1ubILdGP9YEUmx30Wroo3w=)
+18. istockphoto.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFldTbf9b_E_Y95Tebny8KCePUyXNXO4WhNRdEsZJpXx8eHV9BTA4gadheVW4AlcoZ7rbTb2yGLCK8rcRov1GzeDkz9L5YlIfrH2sMPdvTBH4coVidE2dLcZZNeI-_u8ZtA2VZkJ3Nbx1wiviGag==)
+19. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuPbtK71KRkYYoE8bdt9qt2DQnlkBygPZam99_fzhbKkm8J7CoP7t4BwHvqChUv0hh_ZDkIJxhjlPdAcnTB2AFpvUKeC46FUmGSW5ci-1TvwTh98LFucjZynyxZby7epK-X7zuqxmTKMolfcnYerkOpKk=)
+20. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_xo6Qe7qFJ75PIWUqxgrswJKXdXMI-IRklgXGX0Em3RXURL810oCiS_gdPOEsqFdWMRm-YZtRfm-73q8aybsY6OZ6YjMz61Ks09L2is-r6FSikrJP1189fPs2lnrI0flLOzDibxlHV7ThVAKBJx0FgTrYVueu)
+21. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvPhaynbOCq_EUjHqKpRaQ2GbhDK-6FS8qegE5HJ5oxGecMxPstfDql21Y5HP_-BTmy_mxnlq0mFzM600jBNmf9lyiyRaQnBJ0G5RgiZG5bk37_3pvKdwXSj1Wdj9_4qALCqI0PpOuJCBiJqBp)
+22. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHk4EEGfl-mMS5nxKkGsejodwfZUmKB9Vpuxb54NRCkVsCqv5JKYxzJyIXii7UwLyEUHPrLfjeFoAEA95vuuCTSNvgrQqEYEwsaJnPTI6M58LmrDPmVz-UtkuibsDRIIlk7H748nB4=)
+23. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmScpM_djcSa1T1Tn3nG1gED-ESNDnZ9jydlmlPQzS8PofHCzuqTofaQhx4r6C0GF9LxIHW35JH5ZeHYOqjXRvkP0ANx1EYJy0O1OIoF-GWMwZtwWWPnvHZfTEdtRwRAdelgAEvLq3978IkmPntPqE)
+24. vistaprint.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEumiRoH2KxcEISsk4FWjTz6mVJ3WUzAtP3qY7zN6xTT6otSSUKIOzVjwJ6K0hLbA0s7LPHbR-Qdy_5qJz50dhcSmWX6VMRvSxOhM1H9ZoNdjdxMQvdW3ybyOCZqVJe6_h2pBkjW7plmwU1VrF6ixidjUPnzw==)
+25. logocreator.io (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnInMxUs085NSy6bacX-U12Z0NZBqtel-_sNfG5kTJOdlSaIx3LZMlzDKz0oCHbPgVyEMsYU0-b5Zsu2JMriwr4jPLv9_ZmjhOgYTY01Y1WFJDqdgwV5dXiF5tJblugOHAnYhMP_xtCrbZBthf)
+26. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXueid3WxeQBiWdaIcJJs4G_usyvXdu4zncDqH6q6iswKR-ZBJsKVya6cw1lM2QUS6j4h2zo0nVKn1IeCbN1GGQVK77i2UrJma8ZxEmqGLiB8J8vaKgN1SXK9tkNzMHQWwkvQbEfGbgvJMlEJMa02WTRBO9cWQ2T8eZIXtp-Y0YyB13LkVEIJr1JA=)
+27. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNf0x-2-V_0AK1h17N680QuS7vrAV935wEWIO8LBUR7_sZKkCjQLjnzMaEjraxNueWM6M8qG9XzEmsTs5CP60Gt7K3KS5LSjQL1fRfPv_3vBi3p6xw9CO-vvhHyCvCqlY4aw9vxDuACZbHNNZcZzkOAYIdpONW-jq0H48=)
+28. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFen-sw4P-P7t2vSZ3-9yY9X-bS6wq22zR6Bm3FidK52bzJhfloGjamkBP1XW16wY3bJfm0MWihphhhWpL3AoZbCmt-Mgmj3WG0PI6hc88EKqj8MCdXJ4ZnPOYl7ThwuMXe498ItpS5wmn4ALOx)
+29. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-s1LKFhpmEbm1_rcocdm6OlJsunit2SiNTDAlv_DnoYfwqA3mrSMUTxezQWQXHJKKL1Z1dAPKxO8-fizuNEBh-kLpFbtg43vC5bJ0xeKnaUDzoMfMeRoj1DGZp36xdDAw1H5oyInuCVaufQ4gqnas9k0VeK6QBDrnfrs=)
+30. designrush.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmxzCKaOBCZwYLBTB8pQszOzLmBm8_5YOZBJdYxVKamowjpdbJehxLfxnyKtg2oN2UZrUU5jQ0A5cNvo6geEk7Yhx0YSyL42yT4iy0ODlUeWFf1gjFOSgvk_XMH1DSPmn5TfZf4Tp6wUQ1r5h50sIH5A==)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaFyiap0gHlWJvb8h-UbCoBkdcvaIPUYWXTwI9BH8sWslohz6pq5PaPq0CZwk9nELLp3ZG7qFajlam0M5eRN9Ltp_P7jAFLBvB66SmdVxGUs9ysJOBJrOneB6r-P0hRg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. pngtree.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRRCTrANOP_LkWrEZ7SiQwFpbfdns7FfIPpbx_3uworZebJPCgplh35bxzKoEik774V6u-ibWJOrwfjiq-ETDcJldokM-EdX2nBAyRKpli37Ttq2cEy9AhUdTbY6ibedGDaOPAJxNWEOY7VF76" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfjE7IcxPV8iWoyl59sTNoUSj4a6XVj5OHAJeWq4oqN-uV8dVvzLKPtDyXmCaZWHnaKHkwpT7tWDcfC7o3sInXBNoIR7IDGY12fV1WCdYpYmtUoVz8oEcXoqF9VkkEfFBYZ7-ffOwrNFppZ8DwOLrqwB0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUjXxVq3Nms9D1vUhPWtY-jRty536Xldou6HoOV8imPsqKTo9sH9kkecfMOke6dsSpf8kOfIdJTmd5ryP7PW7RMC6jSGrTYRn36_0fkT60D1rRPRfFMhIoFoLv2dVGCjEFSCwOY-9rMCrwMJuxMKTpGA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrqSFgrTQPuxDZptqkAbne6f49IiVOTSXdCJmUDde288IFhbHG48wFgL6lq0cRHw14JP2GOjNJexiI14EG3oWR-pUmLvtQjUBVGDQdFG2hkAcK_XUT4Q0ZmIKkotK-mChFWWlc5bGX" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkl-jbhIG42iefKr5Ulv12TLYSA5TlEAQtwEBuvnc6Fi4M6WAFKcyCB4tDBS113QsHeKRHYibowVwG3o7jg6MfpWvhJBJIBMlK1o60lweBl_w-a-8Pd3BiNcntVlY9Ml1fSCvFOTMKvcRqFk_L8g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyaFcgQtk3bsZWFKwzyJAzZWo8JsA_Ttq8CIJcQoYiN1j7765UYhtAI3b2JGMjy1OUXEOwooi0inRTn_gRnAg_XCubYz7tgF_L3xkRFtTst2OOE25m7Y35ANmaiREdySbX0U7r5gYX-z7R9w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHJnrdpHOC1elTJI5i7VLlA1C33ALomwEylZbkVowTc3xHuwah7JlHU_c1rOExiGHBW5VSCnQB3Uawi4l8e4ebIVIA4DfQw2fIZZS7bUnghi1sajFQ3rONuwOqY-P-EVFV3fufKvw19m-TOZCaiA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. looka.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHynQ-Qy3xfmHkDvJ33MXgipVsDTtTv5YgYY2r59cvisngx9gPaZNRgtJWfK8zXY2JXba69F2W6m_qlIR-5yUXXSxT7xEbXKRfGwYTyzhC7jVBmyhsQFLlstRQ0A19KuNx2631HjIfDPh426iDUqA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnwgIlbDRplG3Yf5zH4Z09aJ3z3a88sBlNrzrM6DSW_H69vacfR_9q1kE42Op-3Z4ZWG6v8_uE8SFXftgxGf7Hku2-spNmF06vwYt36nbHv37xlaJJGxnBX6xrV3K-fhBCGXXX2NFUun-3dftwN-1b9TuYH_0vFQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. vistaprint.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYFg9xVO0nDJ2yomY1mh6SDqwG8c-6AL1oqly_qi2FCXrfb9rEDd8FZvheL-FjuMb-TbkEOkEsRLpTpXSpZBCe9Y3iRPeisZIPsLm0pk98YyNBsUDITRwHGp62RhFu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. logodesign.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMjfhljzrtAvIbxxBk6d1gGi_zsrJ6Rp7Fx72tfUoKnkZjgH1muez2eBEgLnzrOnHEN6EBvV_psGSH3MrlYyW9tKAEbWpVM8xB3ifCWOh-lq0qOdO7LugKB4tJ2-HCw1iBKjH2iA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt0I8OA3fG9TADYv20TCkMU7Nd4DFyVXzjkrpOb9Z-mN11Uw0qdVvJfz3pOxrWLk4wer5TGMENdZxtWh47lRhbh-hcn4atI2yITPr15C7ibOvp7fvOOd6OHHTUqLXU16zD3IRo0lDZpYXrJc1uHUZZAis=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEey-qxhnPZkHekTd-GUJAH8OtlB_FwBzIHHhBLGp5rsdi6FBDIwaqzLP1wIgxclCWAU2WP_OUi718HMjLnixX_lq23_JO-ejScPPmJai2oCXLSwokBFtr13M4UN8iPZuFCMz0gc8Gzq4UhbEygN33WhzK0wy0RLcQTh1rvk-dQePk=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. designcrowd.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMy9NYOjnQ3orX3bslGpeNsXCgio9o0aULT3AY1BsFxMBw5sWPNg_hx9RmzFqyPEGEQPj2--J5_y11P-sOYMjtS23Ty6I-58Ro5VNJfmts9R-YiJjQMcCVPHdLDmmrEffP1N8hQdYl2l9jCXM0uRUOcr5XN_ELdUDx3-sz-0I=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMJx1USvMpSIjDeG5pZISLCMMXVDsMdmFzNW1GEcFjAEQakxEu6zJw3OaO5t9mLvLT4f2zvUgIDM5rQncoBp4DWLWorzKbwR92JYuYDGtMbItGSByyDuYyLw9XKA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. icons8.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHU4kqpnKtUec3K-CtLaIQPjKQgOupzdIT1N4wQofhLeJCzb0iv0fnC3cqHRC8xGZWeoukUwYa8VOHwSI-ITQSPkKTvOQd2zaqQtyqu4gJzhA88-U2GEGwX1ubILdGP9YEUmx30Wroo3w=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFldTbf9b_E_Y95Tebny8KCePUyXNXO4WhNRdEsZJpXx8eHV9BTA4gadheVW4AlcoZ7rbTb2yGLCK8rcRov1GzeDkz9L5YlIfrH2sMPdvTBH4coVidE2dLcZZNeI-_u8ZtA2VZkJ3Nbx1wiviGag==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. istockphoto.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuPbtK71KRkYYoE8bdt9qt2DQnlkBygPZam99_fzhbKkm8J7CoP7t4BwHvqChUv0hh_ZDkIJxhjlPdAcnTB2AFpvUKeC46FUmGSW5ci-1TvwTh98LFucjZynyxZby7epK-X7zuqxmTKMolfcnYerkOpKk=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_xo6Qe7qFJ75PIWUqxgrswJKXdXMI-IRklgXGX0Em3RXURL810oCiS_gdPOEsqFdWMRm-YZtRfm-73q8aybsY6OZ6YjMz61Ks09L2is-r6FSikrJP1189fPs2lnrI0flLOzDibxlHV7ThVAKBJx0FgTrYVueu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvPhaynbOCq_EUjHqKpRaQ2GbhDK-6FS8qegE5HJ5oxGecMxPstfDql21Y5HP_-BTmy_mxnlq0mFzM600jBNmf9lyiyRaQnBJ0G5RgiZG5bk37_3pvKdwXSj1Wdj9_4qALCqI0PpOuJCBiJqBp" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHk4EEGfl-mMS5nxKkGsejodwfZUmKB9Vpuxb54NRCkVsCqv5JKYxzJyIXii7UwLyEUHPrLfjeFoAEA95vuuCTSNvgrQqEYEwsaJnPTI6M58LmrDPmVz-UtkuibsDRIIlk7H748nB4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmScpM_djcSa1T1Tn3nG1gED-ESNDnZ9jydlmlPQzS8PofHCzuqTofaQhx4r6C0GF9LxIHW35JH5ZeHYOqjXRvkP0ANx1EYJy0O1OIoF-GWMwZtwWWPnvHZfTEdtRwRAdelgAEvLq3978IkmPntPqE" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEumiRoH2KxcEISsk4FWjTz6mVJ3WUzAtP3qY7zN6xTT6otSSUKIOzVjwJ6K0hLbA0s7LPHbR-Qdy_5qJz50dhcSmWX6VMRvSxOhM1H9ZoNdjdxMQvdW3ybyOCZqVJe6_h2pBkjW7plmwU1VrF6ixidjUPnzw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">24. vistaprint.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnInMxUs085NSy6bacX-U12Z0NZBqtel-_sNfG5kTJOdlSaIx3LZMlzDKz0oCHbPgVyEMsYU0-b5Zsu2JMriwr4jPLv9_ZmjhOgYTY01Y1WFJDqdgwV5dXiF5tJblugOHAnYhMP_xtCrbZBthf" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">25. logocreator.io</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXueid3WxeQBiWdaIcJJs4G_usyvXdu4zncDqH6q6iswKR-ZBJsKVya6cw1lM2QUS6j4h2zo0nVKn1IeCbN1GGQVK77i2UrJma8ZxEmqGLiB8J8vaKgN1SXK9tkNzMHQWwkvQbEfGbgvJMlEJMa02WTRBO9cWQ2T8eZIXtp-Y0YyB13LkVEIJr1JA=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">26. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNf0x-2-V_0AK1h17N680QuS7vrAV935wEWIO8LBUR7_sZKkCjQLjnzMaEjraxNueWM6M8qG9XzEmsTs5CP60Gt7K3KS5LSjQL1fRfPv_3vBi3p6xw9CO-vvhHyCvCqlY4aw9vxDuACZbHNNZcZzkOAYIdpONW-jq0H48=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">27. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFen-sw4P-P7t2vSZ3-9yY9X-bS6wq22zR6Bm3FidK52bzJhfloGjamkBP1XW16wY3bJfm0MWihphhhWpL3AoZbCmt-Mgmj3WG0PI6hc88EKqj8MCdXJ4ZnPOYl7ThwuMXe498ItpS5wmn4ALOx" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">28. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-s1LKFhpmEbm1_rcocdm6OlJsunit2SiNTDAlv_DnoYfwqA3mrSMUTxezQWQXHJKKL1Z1dAPKxO8-fizuNEBh-kLpFbtg43vC5bJ0xeKnaUDzoMfMeRoj1DGZp36xdDAw1H5oyInuCVaufQ4gqnas9k0VeK6QBDrnfrs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">29. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmxzCKaOBCZwYLBTB8pQszOzLmBm8_5YOZBJdYxVKamowjpdbJehxLfxnyKtg2oN2UZrUU5jQ0A5cNvo6geEk7Yhx0YSyL42yT4iy0ODlUeWFf1gjFOSgvk_XMH1DSPmn5TfZf4Tp6wUQ1r5h50sIH5A==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">30. designrush.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="30.67">30.67秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="51,923">51,923</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. map pin logo site:dribbble.com/shots
+2. site:behance.net map logo
+3. site:behance.net/gallery location pin logo
+4. site:behance.net g-map logo">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. map pin logo site:dribbble.com/shots</li><li class="text-sm text-gray-600">2. site:behance.net map logo</li><li class="text-sm text-gray-600">3. site:behance.net/gallery location pin logo</li><li class="text-sm text-gray-600">4. site:behance.net g-map logo</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Below are a handful of live portfolio references—direct project galleries—showing how modern designers represent globes, pins, maps and sharing in highly simplified, internationally-readable logo forms. Each link is a primary source (designer’s Dribbble or similar) so you can dive straight into the artwork.
+
+1. Shashank’s “Map logo” (Dribbble)  
+   A pared-back circle + pointer motif that reads instantly as “map” while doubling as a letterform; great for global-tech brands seeking universality.  
+   https://dribbble.com/shots/6835597-Map-logo ([dribbble.com](https://dribbble.com/shots/6835597-Map-logo?utm_source=chatgpt.com))
+
+2. Usarek™ Studio’s “Google Maps / logo redesign concept” (Dribbble)  
+   Combines the letter “G” with a location marker, using Google’s color palette—illustrates how to fuse brand initials with mapping iconography.  
+   https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept ([dribbble.com](https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept?utm_source=chatgpt.com))
+
+3. Ty’s “Concept Location Pin Logo” (Dribbble)  
+   Embeds a simplified street-map pattern inside the pin silhouette—shows how internal map lines can add depth while staying minimal.  
+   https://dribbble.com/shots/798748-Concept-Location-Pin-Logo ([dribbble.com](https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com))
+
+4. Mykolas Petrusevicius’s Location Pin graphic (Dribbble)  
+   Part of a broader PropTech identity—this motif is repeated across collateral to signal “community” and “sharing” via pin icons.  
+   https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand ([dribbble.com](https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand?utm_source=chatgpt.com))
+
+5. SecondEight’s “Anchor Point / Pin / Map” (Logopond)  
+   Uses negative space between an anchor shape and a map-pin—demonstrates clever multi-meaning via a single glyph.  
+   https://logopond.com/SecondEight/showcase/detail/250204 ([logopond.com](https://logopond.com/SecondEight/showcase/detail/250204?utm_source=chatgpt.com))
+
+6. Parleen’s “Location/Pin Logo Design” (Dribbble)  
+   Evokes a transit-map aesthetic, integrating pin shape with line art—ideal for tech companies emphasizing connectivity and wayfinding.  
+   https://dribbble.com/shots/11094047-Location-Pin-Logo-Design ([dribbble.com](https://dribbble.com/shots/11094047-Location-Pin-Logo-Design?utm_source=chatgpt.com))
+
+7. Atai Graphics’ “Location Pin Logo” (Dribbble)  
+   Bright, flat-color pin form—shows how a two-tone palette can feel fresh and globally friendly.  
+   https://dribbble.com/shots/14230550-Location-Pin-Logo ([dribbble.com](https://dribbble.com/shots/14230550-Location-Pin-Logo?utm_source=chatgpt.com))
+
+Key takeaways for your map-tech brand logo:
+- Simplify to core shapes (circles, teardrops) for instant global recognition ([dribbble.com](https://dribbble.com/shots/6835597-Map-logo?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com))  
+- Merge letterforms or arrows into pins to tie in brand initials or sharing concepts ([dribbble.com](https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand?utm_source=chatgpt.com))  
+- Use negative space or internal line-maps sparingly to add meaning without clutter ([logopond.com](https://logopond.com/SecondEight/showcase/detail/250204?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com))  
+- Choose a restrained color palette (1–2 hues) for universal appeal and easy reproduction ([dribbble.com](https://dribbble.com/shots/14230550-Location-Pin-Logo?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/11094047-Location-Pin-Logo-Design?utm_source=chatgpt.com))  
+
+Feel free to explore these galleries closely—they’re rich with downloadable palettes, mock-ups and full-brand presentations to jumpstart your own logo concepts.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Below are a handful of live portfolio references—direct project galleries—showing how modern designers represent globes, pins, maps and sharing in highly simplified, internationally-readable logo forms. Each link is a primary source (designer’s Dribbble or similar) so you can dive straight into the artwork.
+
+1. Shashank’s “Map logo” (Dribbble)  
+   A pared-back circle + pointer motif that reads instantly as “map” while doubling as a letterform; great for global-tech brands seeking universality.  
+   https://dribbble.com/shots/6835597-Map-logo ([dribbble.com](https://dribbble.com/shots/6835597-Map-logo?utm_source=chatgpt.com))
+
+2. Usarek™ Studio’s “Google Maps / logo redesign concept” (Dribbble)  
+   Combines the letter “G” with a location marker, using Google’s color palette—illustrates how to fuse brand initials with mapping iconography.  
+   https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept ([dribbble.com](https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept?utm_source=chatgpt.com))
+
+3. Ty’s “Concept Location Pin Logo” (Dribbble)  
+   Embeds a simplified street-map pattern inside the pin silhouette—shows how internal map lines can add depth while staying minimal.  
+   https://dribbble.com/shots/798748-Concept-Location-Pin-Logo ([dribbble.com](https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com))
+
+4. Mykolas Petrusevicius’s Location Pin graphic (Dribbble)  
+   Part of a broader PropTech identity—this motif is repeated across collateral to signal “community” and “sharing” via pin icons.  
+   https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand ([dribbble.com](https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand?utm_source=chatgpt.com))
+
+5. SecondEight’s “Anchor Point / Pin / Map” (Logopond)  
+   Uses negative space between an anchor shape and a map-pin—demonstrates clever multi-meaning via a single glyph.  
+   https://logopond.com/SecondEight/showcase/detail/250204 ([logopond.com](https://logopond.com/SecondEight/showcase/detail/250204?utm_source=chatgpt.com))
+
+6. Parleen’s “Location/Pin Logo Design” (Dribbble)  
+   Evokes a transit-map aesthetic, integrating pin shape with line art—ideal for tech companies emphasizing connectivity and wayfinding.  
+   https://dribbble.com/shots/11094047-Location-Pin-Logo-Design ([dribbble.com](https://dribbble.com/shots/11094047-Location-Pin-Logo-Design?utm_source=chatgpt.com))
+
+7. Atai Graphics’ “Location Pin Logo” (Dribbble)  
+   Bright, flat-color pin form—shows how a two-tone palette can feel fresh and globally friendly.  
+   https://dribbble.com/shots/14230550-Location-Pin-Logo ([dribbble.com](https://dribbble.com/shots/14230550-Location-Pin-Logo?utm_source=chatgpt.com))
+
+Key takeaways for your map-tech brand logo:
+- Simplify to core shapes (circles, teardrops) for instant global recognition ([dribbble.com](https://dribbble.com/shots/6835597-Map-logo?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com))  
+- Merge letterforms or arrows into pins to tie in brand initials or sharing concepts ([dribbble.com](https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand?utm_source=chatgpt.com))  
+- Use negative space or internal line-maps sparingly to add meaning without clutter ([logopond.com](https://logopond.com/SecondEight/showcase/detail/250204?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com))  
+- Choose a restrained color palette (1–2 hues) for universal appeal and easy reproduction ([dribbble.com](https://dribbble.com/shots/14230550-Location-Pin-Logo?utm_source=chatgpt.com), [dribbble.com](https://dribbble.com/shots/11094047-Location-Pin-Logo-Design?utm_source=chatgpt.com))  
+
+Feel free to explore these galleries closely—they’re rich with downloadable palettes, mock-ups and full-brand presentations to jumpstart your own logo concepts.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Map logo by Shashank on Dribbble (https://dribbble.com/shots/6835597-Map-logo?utm_source=chatgpt.com)
+2. Google Maps / logo redesign concept by Usarek™ Studio on Dribbble (https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept?utm_source=chatgpt.com)
+3. Concept Location Pin Logo by Ty on Dribbble (https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com)
+4. Location Pin graphic from a Visual identity for PropTech brand by Mykolas Petrusevicius Identity designer Vilnius on Dribbble (https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand?utm_source=chatgpt.com)
+5. Logopond - Logo, Brand & Identity Inspiration (Anchor Point / Pin / Map) (https://logopond.com/SecondEight/showcase/detail/250204?utm_source=chatgpt.com)
+6. Location/Pin Logo Design by Parleen on Dribbble (https://dribbble.com/shots/11094047-Location-Pin-Logo-Design?utm_source=chatgpt.com)
+7. Location Pin Logo by Atai Graphics on Dribbble (https://dribbble.com/shots/14230550-Location-Pin-Logo?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/6835597-Map-logo?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Map logo by Shashank on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/9981651-Google-Maps-logo-redesign-concept?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Google Maps / logo redesign concept by Usarek™ Studio on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/798748-Concept-Location-Pin-Logo?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Concept Location Pin Logo by Ty on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/19681076-Location-Pin-graphic-from-a-Visual-identity-for-PropTech-brand?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Location Pin graphic from a Visual identity for PropTech brand by Mykolas Petrusevicius Identity designer Vilnius on Dribbble</a></li><li class="text-sm"><a href="https://logopond.com/SecondEight/showcase/detail/250204?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Logopond - Logo, Brand & Identity Inspiration (Anchor Point / Pin / Map)</a></li><li class="text-sm"><a href="https://dribbble.com/shots/11094047-Location-Pin-Logo-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Location/Pin Logo Design by Parleen on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/14230550-Location-Pin-Logo?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Location Pin Logo by Atai Graphics on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="35.56">35.56秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="63,831">63,831</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. map tech company logo design site:behance.net
+2. location pin map globe logo design site:dribbble.com
+3. tech mapping navigation startup logo portfolio
+4. international globe logo design minimalist tech branding portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. map tech company logo design site:behance.net</li><li class="text-sm text-gray-600">2. location pin map globe logo design site:dribbble.com</li><li class="text-sm text-gray-600">3. tech mapping navigation startup logo portfolio</li><li class="text-sm text-gray-600">4. international globe logo design minimalist tech branding portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Based on my search findings, I've gathered extensive visual inspiration for your map-related tech company logo from leading design platforms. Here are the key visual galleries and inspiration sources I've found:
+
+## Primary Visual Design Galleries
+
+### Behance Portfolio Galleries
+Behance hosts thousands of tech logo projects and technology logo designs, with specific collections showing:
+- Modern tech company logos with over 400+ appreciations and thousands of views
+- Technology logo designs ranging from minimalist to complex branding projects
+
+### Dribbble Design Collections  
+Dribbble features over 600+ map pin, location pin, and map pin logo designs with specific galleries for:
+- Map logo designs showing combinations of letters with location pins, navigation elements, and modern colorful approaches
+- Location pin designs featuring minimalist and modern letter combinations
+
+### Globe and International Design Inspiration
+99designs showcases globe logos from their global designer community featuring:
+- Globe designs that give instant recognition of global company reach
+- Minimalist globe designs with upward arrows, latitudinal lines suggesting worldwide connectivity
+
+## Key Visual Design Elements to Consider
+
+### Modern Tech Aesthetics
+Contemporary tech logos demonstrate minimalist to illustrative approaches, all connected to brand mission and values. Modern tech logos should be simple yet futuristic, with elements like map pointers enhanced by gradients for contemporary appeal.
+
+### International Graphic Language
+Color gradients from blue to purple indicate dynamism and innovation associated with technology and global communications. Globe elements work well for international companies, though they're common in logos, making uniqueness important.
+
+### Location and Navigation Symbols
+Pin pointer and map concepts are effectively combined with travel and navigation themes. Letter combinations with location logos, pin logos, and map logos create strong navigation branding.
+
+## Specific Portfolio Examples Worth Studying
+
+### Tech Startup Approaches
+Dribbble showcases 98+ tech startup logos with modern branding for software and AI companies, including minimalist and abstract approaches perfect for international appeal.
+
+### Globe Logo Applications  
+Minimalist modern globe logos are perfect for tech companies and international organizations with simple, modern styling.
+
+These galleries provide direct access to actual design portfolios rather than articles about design, giving you immediate visual reference for elements like globes, location pins, sharing symbols, and maps in modern tech branding contexts.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Based on my search findings, I've gathered extensive visual inspiration for your map-related tech company logo from leading design platforms. Here are the key visual galleries and inspiration sources I've found:
+
+## Primary Visual Design Galleries
+
+### Behance Portfolio Galleries
+Behance hosts thousands of tech logo projects and technology logo designs, with specific collections showing:
+- Modern tech company logos with over 400+ appreciations and thousands of views
+- Technology logo designs ranging from minimalist to complex branding projects
+
+### Dribbble Design Collections  
+Dribbble features over 600+ map pin, location pin, and map pin logo designs with specific galleries for:
+- Map logo designs showing combinations of letters with location pins, navigation elements, and modern colorful approaches
+- Location pin designs featuring minimalist and modern letter combinations
+
+### Globe and International Design Inspiration
+99designs showcases globe logos from their global designer community featuring:
+- Globe designs that give instant recognition of global company reach
+- Minimalist globe designs with upward arrows, latitudinal lines suggesting worldwide connectivity
+
+## Key Visual Design Elements to Consider
+
+### Modern Tech Aesthetics
+Contemporary tech logos demonstrate minimalist to illustrative approaches, all connected to brand mission and values. Modern tech logos should be simple yet futuristic, with elements like map pointers enhanced by gradients for contemporary appeal.
+
+### International Graphic Language
+Color gradients from blue to purple indicate dynamism and innovation associated with technology and global communications. Globe elements work well for international companies, though they're common in logos, making uniqueness important.
+
+### Location and Navigation Symbols
+Pin pointer and map concepts are effectively combined with travel and navigation themes. Letter combinations with location logos, pin logos, and map logos create strong navigation branding.
+
+## Specific Portfolio Examples Worth Studying
+
+### Tech Startup Approaches
+Dribbble showcases 98+ tech startup logos with modern branding for software and AI companies, including minimalist and abstract approaches perfect for international appeal.
+
+### Globe Logo Applications  
+Minimalist modern globe logos are perfect for tech companies and international organizations with simple, modern styling.
+
+These galleries provide direct access to actual design portfolios rather than articles about design, giving you immediate visual reference for elements like globes, location pins, sharing symbols, and maps in modern tech branding contexts.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Tech Logo Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/Tech%20logo)
+2. Technology Logo Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/technology%20logo)
+3. Map Pin Logo designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/map_pin_logo)
+4. Location Pin designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/location_pin)
+5. Pin Logo designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/pin-logo)
+6. Map Marker designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/map_marker)
+7. Explore 69 Best Navigation And Mapping Startups to watch in 2025. Discover innovative companies, funding insights, and industry trends. (https://www.seedtable.com/best-navigation-and-mapping-startups)
+8. Minimalist Modern Globe Logo (https://www.pinterest.com/pin/minimalist-modern-globe-logo-in-2024--798826052684312787/)
+9. Globe Logo (https://www.pinterest.com/ideas/globe-logo/955926115771/)
+10. Best Logo Design Ideas for a Modern Tech Startup (https://www.manypixels.co/blog/brand-design/tech-logos)
+11. From Physical to Digital: Tech-Led Innovation in Mapping and Navigation (https://intellias.com/digital-tech-led-innovation-in-mapping-and-navigation/)
+12. G Location Logo designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/g_location_logo)
+13. HERE Technologies | The world's #1 location platform (https://www.here.com/)
+14. StartupBlink | Uncover the Global Innovation Economy Winners (https://www.startupblink.com/)
+15. minimalist GLOBAL SMART globe earth Logo design Stock Vector Image & Art - Alamy (https://www.alamy.com/minimalist-global-smart-globe-earth-logo-design-image453048480.html)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/search/projects/Tech%20logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Tech Logo Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/technology%20logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Technology Logo Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/tags/map_pin_logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Map Pin Logo designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/location_pin" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Location Pin designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/pin-logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Pin Logo designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/map_marker" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Map Marker designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.seedtable.com/best-navigation-and-mapping-startups" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Explore 69 Best Navigation And Mapping Startups to watch in 2025. Discover innovative companies, funding insights, and industry trends.</a></li><li class="text-sm"><a href="https://www.pinterest.com/pin/minimalist-modern-globe-logo-in-2024--798826052684312787/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Minimalist Modern Globe Logo</a></li><li class="text-sm"><a href="https://www.pinterest.com/ideas/globe-logo/955926115771/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Globe Logo</a></li><li class="text-sm"><a href="https://www.manypixels.co/blog/brand-design/tech-logos" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Best Logo Design Ideas for a Modern Tech Startup</a></li><li class="text-sm"><a href="https://intellias.com/digital-tech-led-innovation-in-mapping-and-navigation/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. From Physical to Digital: Tech-Led Innovation in Mapping and Navigation</a></li><li class="text-sm"><a href="https://dribbble.com/tags/g_location_logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. G Location Logo designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.here.com/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. HERE Technologies | The world's #1 location platform</a></li><li class="text-sm"><a href="https://www.startupblink.com/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. StartupBlink | Uncover the Global Innovation Economy Winners</a></li><li class="text-sm"><a href="https://www.alamy.com/minimalist-global-smart-globe-earth-logo-design-image453048480.html" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. minimalist GLOBAL SMART globe earth Logo design Stock Vector Image & Art - Alamy</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
