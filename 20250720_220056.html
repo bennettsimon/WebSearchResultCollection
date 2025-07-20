@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to design a full set of menus (cover, back, and content pages) for a lure fishing pond restaurant in Nanjing, themed around rural fish ponds and farmhouse style. The search should focus on menu design references with rural, fish pond, and countryside aesthetics, especially those featuring water, farmland, and fishing elements in layout, illustration, and color scheme.">The user needs to design a full set of menus (cover, back, and content pages) for a lure fishing pond restaurant in Nanjing, themed around rural fish ponds and farmhouse style. The search should focus on menu design references with rural, fish pond, and countryside aesthetics, especially those featuring water, farmland, and fishing elements in layout, illustration, and color scheme.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 22:02:07</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="20.75">20.75秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="2,260">2,260</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. menu design rural restaurant
+2. menu design farmhouse style
+3. menu design fish pond theme
+4. menu design countryside water elements
+5. menu design fishing theme illustration
+6. menu design rustic restaurant menu examples">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. menu design rural restaurant</li><li class="text-sm text-gray-600">2. menu design farmhouse style</li><li class="text-sm text-gray-600">3. menu design fish pond theme</li><li class="text-sm text-gray-600">4. menu design countryside water elements</li><li class="text-sm text-gray-600">5. menu design fishing theme illustration</li><li class="text-sm text-gray-600">6. menu design rustic restaurant menu examples</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To design a full set of menus (cover, back, and content pages) for a lure fishing pond restaurant in Nanjing, themed around rural fish ponds and farmhouse style, consider incorporating the following elements inspired by countryside aesthetics, water, farmland, and fishing:
+
+**Overall Aesthetic and Material Suggestions:**
+The menus should evoke a "country feeling" and a "rustic" ambiance. Opt for materials and textures that align with a farmhouse and rural theme, such as:
+*   **Paper Stock:** Brown kraft paper, parchment-style paper, or paper with a subtle wood grain texture will immediately convey a rustic and natural feel.
+*   **Physicality:** If possible, consider a wooden menu board for a "vintage farmhouse inspired design" or custom wooden menu covers for durability and a strong thematic statement. Alternatively, waterproof synthetic paper can offer durability while maintaining a desired aesthetic if printed with appropriate textures.
+
+**Design Elements by Page:**
+
+**1. Menu Cover:**
+The cover is crucial for setting the theme and should be visually impactful.
+*   **Illustrations:** Feature prominent hand-drawn or line illustrations of elements central to the theme. This could include:
+    *   A serene fish pond scene with koi fish or other local fish species, possibly with lotus flowers or water lilies.
+    *   A simple, inviting farmhouse illustration.
+    *   Stylized fishing elements like a fishing rod, a float, or a net subtly incorporated into a landscape.
+    *   A combination of water (ripples, pond outline), a distant farmhouse, and subtle fishing motifs.
+*   **Typography:** Use bold, playful fonts or a rustic, handwritten-style typeface that is easy to read. A chalkboard-style design with handwritten text can also be effective.
+*   **Color Scheme:** Earthy tones such as various shades of brown, muted greens (for farmland and foliage), and soft blues (for water) will create a natural and harmonious palette. Consider accents of red or black text against a parchment or wood background for contrast.
+*   **Branding:** The restaurant's name and logo should be clearly visible, perhaps subtly integrated within the illustration or in a complementary font.
+
+**2. Content Pages:**
+The inside pages need to be clear, navigable, and continue the thematic experience.
+*   **Layout:** Employ a clear section division for different categories of food and drinks (e.g., appetizers, main courses, beverages). Use ample white space to prevent the menu from looking cluttered and to draw the eye to the dishes.
+*   **Background:** Maintain a consistent background texture (e.g., subtle wood grain, parchment, or kraft paper) across all content pages.
+*   **Illustrations & Accents:**
+    *   Small, thematic illustrations or icons can be used next to dish categories or specific items. This could include small fish, farming tools, or water droplets.
+    *   Consider subtle watermarks or background patterns featuring ripples or abstract fish scales.
+    *   If using photos of dishes, ensure they are high-quality and appetizing.
+*   **Typography & Color:** Use legible fonts for dish names and descriptions. Headings for sections can use a slightly bolder or more decorative font in a complementary color like dark green or a muted red. Black text typically stands out well on lighter, rustic backgrounds.
+*   **Narrative:** Create a "strong narrative" or theme that links everything together, such as sourcing ingredients from the local countryside or focusing on freshly caught fish.
+
+**3. Back Page:**
+The back page can serve multiple purposes while reinforcing the theme.
+*   **Contact Information:** Clearly display the restaurant's address, phone number, website, and social media handles.
+*   **Story/About Us:** A short paragraph about the restaurant's concept, its connection to local fishing ponds, or its farmhouse philosophy can add a personal touch and deepen the customer's connection to the theme.
+*   **Simplified Graphics:** A less detailed, perhaps monochromatic, version of the cover illustration or a simple thematic emblem could be used. This could be a single fish illustration, a fishing net pattern, or a stylized water ripple.
+*   **Subtle Details:** Repeat a border design or a small, recurring motif from the content pages.
+
+By combining these elements, the menu will not only serve its practical purpose but also significantly contribute to the immersive experience of a rural fish pond restaurant in Nanjing.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To design a full set of menus (cover, back, and content pages) for a lure fishing pond restaurant in Nanjing, themed around rural fish ponds and farmhouse style, consider incorporating the following elements inspired by countryside aesthetics, water, farmland, and fishing:
+
+**Overall Aesthetic and Material Suggestions:**
+The menus should evoke a "country feeling" and a "rustic" ambiance. Opt for materials and textures that align with a farmhouse and rural theme, such as:
+*   **Paper Stock:** Brown kraft paper, parchment-style paper, or paper with a subtle wood grain texture will immediately convey a rustic and natural feel.
+*   **Physicality:** If possible, consider a wooden menu board for a "vintage farmhouse inspired design" or custom wooden menu covers for durability and a strong thematic statement. Alternatively, waterproof synthetic paper can offer durability while maintaining a desired aesthetic if printed with appropriate textures.
+
+**Design Elements by Page:**
+
+**1. Menu Cover:**
+The cover is crucial for setting the theme and should be visually impactful.
+*   **Illustrations:** Feature prominent hand-drawn or line illustrations of elements central to the theme. This could include:
+    *   A serene fish pond scene with koi fish or other local fish species, possibly with lotus flowers or water lilies.
+    *   A simple, inviting farmhouse illustration.
+    *   Stylized fishing elements like a fishing rod, a float, or a net subtly incorporated into a landscape.
+    *   A combination of water (ripples, pond outline), a distant farmhouse, and subtle fishing motifs.
+*   **Typography:** Use bold, playful fonts or a rustic, handwritten-style typeface that is easy to read. A chalkboard-style design with handwritten text can also be effective.
+*   **Color Scheme:** Earthy tones such as various shades of brown, muted greens (for farmland and foliage), and soft blues (for water) will create a natural and harmonious palette. Consider accents of red or black text against a parchment or wood background for contrast.
+*   **Branding:** The restaurant's name and logo should be clearly visible, perhaps subtly integrated within the illustration or in a complementary font.
+
+**2. Content Pages:**
+The inside pages need to be clear, navigable, and continue the thematic experience.
+*   **Layout:** Employ a clear section division for different categories of food and drinks (e.g., appetizers, main courses, beverages). Use ample white space to prevent the menu from looking cluttered and to draw the eye to the dishes.
+*   **Background:** Maintain a consistent background texture (e.g., subtle wood grain, parchment, or kraft paper) across all content pages.
+*   **Illustrations & Accents:**
+    *   Small, thematic illustrations or icons can be used next to dish categories or specific items. This could include small fish, farming tools, or water droplets.
+    *   Consider subtle watermarks or background patterns featuring ripples or abstract fish scales.
+    *   If using photos of dishes, ensure they are high-quality and appetizing.
+*   **Typography & Color:** Use legible fonts for dish names and descriptions. Headings for sections can use a slightly bolder or more decorative font in a complementary color like dark green or a muted red. Black text typically stands out well on lighter, rustic backgrounds.
+*   **Narrative:** Create a "strong narrative" or theme that links everything together, such as sourcing ingredients from the local countryside or focusing on freshly caught fish.
+
+**3. Back Page:**
+The back page can serve multiple purposes while reinforcing the theme.
+*   **Contact Information:** Clearly display the restaurant's address, phone number, website, and social media handles.
+*   **Story/About Us:** A short paragraph about the restaurant's concept, its connection to local fishing ponds, or its farmhouse philosophy can add a personal touch and deepen the customer's connection to the theme.
+*   **Simplified Graphics:** A less detailed, perhaps monochromatic, version of the cover illustration or a simple thematic emblem could be used. This could be a single fish illustration, a fishing net pattern, or a stylized water ripple.
+*   **Subtle Details:** Repeat a border design or a small, recurring motif from the content pages.
+
+By combining these elements, the menu will not only serve its practical purpose but also significantly contribute to the immersive experience of a rural fish pond restaurant in Nanjing.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. cuboh.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7ppcPr90EaXd7AOmmFouDU7VOhp22vChLpffNwuvzFgSayRP8k-R3NJBkeGaO60vhtJao_Dg5agycJ0mUlpKNzPC-pwyVCl3HbDA-XPcoNp5_EVTbBVecGzOGGlukQm8q0Q==)
+2. musthavemenus.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuoEyzYk1iFw5RHfSKvbI8xD0OwHuMHjqyimYNOVUdq94JR-V9aTVcsc7j0I_HxnmuSLcie97WHkGrqEUIt1eSAJI3wBESgPA66NUP81Hw0_zGDmMFkNYArwBvHKpX4D17O-XZLD-03sEEBbyDZob5nXQsKPBJi-pJPmOosdwYR50Kzvtc)
+3. medialoot.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOc4pbBO5KZ0icV3EwN5wgIvB_jTQX4ed6lQZ0gnzElAx8oMbzYdaODuiZWwXyrazV0ykLGUud8HpDHtk_vKkVsvJR1rjVIyzkxjxuZjGxw32tyMU5myauV0ch5ZNRinl2ChqYQxpLUKhtx-fes46TMMMsk7w=)
+4. musthavemenus.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOh9-9PlR5DAynDijtZ6dBPUElDVCHPQ-zuQxPdPB3uw0zhHyjz9AATllM5ohHH-pFhtxDGIXNKWiCnC-EOl28mD1HR4_hJ2fB2dnUFpLEZ8dPZsb_HpnB80WTF2M2dd7C3PyCaAwkCcvUbpAlGqawNA8UH9gJ7Uqo3Wtt1VmtNtGv)
+5. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_yP5hG-pd3hijL-D7DVm90aoAvTY4p-E463Ap9HxZ6JbhHC01auPVJGdykMNGjWPhI1Y4_QI2yDlkpXgxM1tP-Sw7VTbiy8ZDoe6Pn6-0217Nx7QvS0-RG5_Fw6H_OKwJRpvPYSG98Xzh)
+6. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHW5fEHEr8X5UWms3HJh0Mz_N8GeOadRbUubCjgU0eUYmr1jKAVZsHhB44cfrMJdgWk5QfUAj13da6X0tD-WL-jaxy304UyllEX2Q0l3jxkWOBskT32QyvzRIVOxeQtjkubOtQczIQwmws=)
+7. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYAfTY7rT3wo8L9LSvoj0SgCLxruucXFICnJOQWwkTjbg9uzDEWNpET8NCxyHDDr1IEwYxDmF1ngaW_u0VxtI6Dc38P3uZU-8E0CCvu6H1MeifMFAp-f6PbiAgVsmsclNJBom-WftoOdDO0HiZT_18-EvS6hvnDAWhxcDb8ah7Npze9u_bAx1XfStA)
+8. terraslate.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEqDyIpu1A91Y3LPf-_8nYTvEPiLDXMXOmxRW2HmcHuWAj9UTDJ1zF--5CTcCgVwty2f2Cd91Gzp_tJG9-otvUyduBcEF0cGoUQY9OHF08PEk8R1w-RccXill_t4wLQ7PHc0bdaZSgLVDMizOraiDOyBRgCrr7Ad1nSpG0sML2J4vqOKbif0e2PEcNMWwXvMc=)
+9. colorcopiesusa.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbdr_HBC8feNA5TyDhzqAGOA1ndXmKUW2s8X01ty1quFc0Hl9HVz2jayaHOjqmqc5mJVE7J-Ewb_9JhY8SYYXRZdM9W5BBmnrebavzAgdZh6aPJkJBJ1HrJ0Y0zreoPu4Y39i5kX18jFgqEPp9VGTqjjMat5ALefYLED_P3xOdl7kl3h9Y2tmy9Fhx)
+10. manypixels.co (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGD5ylAmvRWyTXzGG4H-4LqX5fLGIrXp_8uzaUKKZsDaXLKPrYoGrS5Tdd19OQ_Rg6zLnfzXSoNBIT5C-gTH7C6lsmBt_2NxO7t0R9Qk8WhYU5zeCuRPKVo2WDUcXVxVD2ZAvVgz9AnB0Vi7NhT7IZBZ_ty978Jxv-NPw0=)
+11. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1mrXjrwoECw-Pc9jLzl47jjJs3M7dznfv-ig-f8oDNvzBBCWzs9shxj4dGLtlmu4JS2sxGA5NEQUnmLN936z70KrKkRAAVTcWps3TcddAWq1TlY_AgxwJLSB74DPpC_uBUNr_waUE5k25f7TRTQ==)
+12. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPyUIDZMO3Q3XlaZvL9waaJyTkmGHh3DZzAQKuT-7CojN8mvFWZNd23jdTQdpyP5bpUHst5_w8KYn8OwFSlpMJwYIdTeV0utYVpn2fwD-2YKXRXB0UhQpV2mDZ4HI=)
+13. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXSH7U8JIxpwVrGZiX5-jn-6THFuMDci-T12IbCbRhNmWoZ1mJa5krVpz5BiiDdxNbLuiS2rCNPnDw64GY2Cf0zcvKXiSewzTXzgJqOT6DXVetzweVaJDmPEl87sC5fIT-3bFIhSqt_1vmtODBSSgaRwOPBAiPAzBGicPf94GVYioZKCLwlUlCDbIS)
+14. photoadking.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcw8v6F9kykvkhoi-rHEQWs8yGCu0KJBEiyouxDR5T0mb_gk1DhWaHL4gCqNBswgjFL9fgn1jU4yf7jN6xK25YQzzaSc-GjA5VwD6L9x-LnBEKdRejWkGqFxKMoSF6RBuVqqftlygXWUkHW7Y-xlgQiZF3CgY_tg==)
+15. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWRAmjF5SDaOVmtoHqQxKG1qsB4dPe7sqEHkNTVMnT6nQGe-FvODqVS63yBbUw-Wh-1aJhzp81nV0P_DP9RPvc2S65fpj6EU1m-GrHfBywWhpTLmVDVoDmc2FVXW-GWPKUhTR83eZmRVtcac5V3xJo4l2E_8kPyA==)
+16. musthavemenus.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWi2JFu1QwbTfAr_Muhz1a2pPi4n9YNsM-NB7k35PpECWZr4JTfowH6IXdvtJM7aZtXszxMIQBRWYH1MEINidIiX1I_Y_LFXs01bzezO7ChPGqro3P9okORPWQpS1ts3R43wPsEiPoL5FThWr7xOJvBN3R1vNRhxyMgByZNVwF)
+17. popmenu.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwyD9vDdp4w9dvfL4waLoI5FNg8Bud-KB8ot6YEoCjTP5N6BI4fmqr4x8TNeHg70G8p_QcNxqKT3RojExdIj3AvNGZ8Jp66hq9EEHut0U8tgRP7Kdnc9VIUQ3HKf9iwgU0Fdg7VfU3mB8jcVkfZvS27qAH)
+18. lumoplay.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8DMcOrxMtDgAyDcxoj7AXfOqf_5ENLPDvMZfWynxBnga7sDGKFejwVBqnLxDSswpKw1HU5IKueAIbNFrGy9Wv17cyxnmdjnYYDg-pMkySM2aR4bBYlnLYvUmcvJrluAphzNQRs7N__3b8axDTFdSmd7BjmeWZhFlcybOikA==)
+19. lightspeedhq.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBtZXM1vBs3OeUyMNYagfBG88mIf3IkFyZC_qxO9wHSSS5xsgESWJUGvqSfwd6Btgd3zIE-X-NXgGdOVyxiAd0yYlukbp29fM6yJfuIJxqu0lhilZZt5TbsmTjQgrKX1iHa2MwGNWts899Ne5E03LmKi0yvcPve1bgf-Ae5d4=)
+20. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfVZa8pIZa9deDH46XAfYWD_SVNDN4niE7PcBnYFdZg7hTJQPCnGgVFi6k7IUcaISgvZRNRS0HMKzEnEqd5316v_BB6C76Pk-d57yTYz9V_aE97xHW7mvfiWupCYzebGrwTpwA5KI7tAjY7wpgMGp5)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7ppcPr90EaXd7AOmmFouDU7VOhp22vChLpffNwuvzFgSayRP8k-R3NJBkeGaO60vhtJao_Dg5agycJ0mUlpKNzPC-pwyVCl3HbDA-XPcoNp5_EVTbBVecGzOGGlukQm8q0Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. cuboh.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuoEyzYk1iFw5RHfSKvbI8xD0OwHuMHjqyimYNOVUdq94JR-V9aTVcsc7j0I_HxnmuSLcie97WHkGrqEUIt1eSAJI3wBESgPA66NUP81Hw0_zGDmMFkNYArwBvHKpX4D17O-XZLD-03sEEBbyDZob5nXQsKPBJi-pJPmOosdwYR50Kzvtc" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. musthavemenus.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOc4pbBO5KZ0icV3EwN5wgIvB_jTQX4ed6lQZ0gnzElAx8oMbzYdaODuiZWwXyrazV0ykLGUud8HpDHtk_vKkVsvJR1rjVIyzkxjxuZjGxw32tyMU5myauV0ch5ZNRinl2ChqYQxpLUKhtx-fes46TMMMsk7w=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. medialoot.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOh9-9PlR5DAynDijtZ6dBPUElDVCHPQ-zuQxPdPB3uw0zhHyjz9AATllM5ohHH-pFhtxDGIXNKWiCnC-EOl28mD1HR4_hJ2fB2dnUFpLEZ8dPZsb_HpnB80WTF2M2dd7C3PyCaAwkCcvUbpAlGqawNA8UH9gJ7Uqo3Wtt1VmtNtGv" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. musthavemenus.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_yP5hG-pd3hijL-D7DVm90aoAvTY4p-E463Ap9HxZ6JbhHC01auPVJGdykMNGjWPhI1Y4_QI2yDlkpXgxM1tP-Sw7VTbiy8ZDoe6Pn6-0217Nx7QvS0-RG5_Fw6H_OKwJRpvPYSG98Xzh" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHW5fEHEr8X5UWms3HJh0Mz_N8GeOadRbUubCjgU0eUYmr1jKAVZsHhB44cfrMJdgWk5QfUAj13da6X0tD-WL-jaxy304UyllEX2Q0l3jxkWOBskT32QyvzRIVOxeQtjkubOtQczIQwmws=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYAfTY7rT3wo8L9LSvoj0SgCLxruucXFICnJOQWwkTjbg9uzDEWNpET8NCxyHDDr1IEwYxDmF1ngaW_u0VxtI6Dc38P3uZU-8E0CCvu6H1MeifMFAp-f6PbiAgVsmsclNJBom-WftoOdDO0HiZT_18-EvS6hvnDAWhxcDb8ah7Npze9u_bAx1XfStA" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEqDyIpu1A91Y3LPf-_8nYTvEPiLDXMXOmxRW2HmcHuWAj9UTDJ1zF--5CTcCgVwty2f2Cd91Gzp_tJG9-otvUyduBcEF0cGoUQY9OHF08PEk8R1w-RccXill_t4wLQ7PHc0bdaZSgLVDMizOraiDOyBRgCrr7Ad1nSpG0sML2J4vqOKbif0e2PEcNMWwXvMc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. terraslate.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbdr_HBC8feNA5TyDhzqAGOA1ndXmKUW2s8X01ty1quFc0Hl9HVz2jayaHOjqmqc5mJVE7J-Ewb_9JhY8SYYXRZdM9W5BBmnrebavzAgdZh6aPJkJBJ1HrJ0Y0zreoPu4Y39i5kX18jFgqEPp9VGTqjjMat5ALefYLED_P3xOdl7kl3h9Y2tmy9Fhx" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. colorcopiesusa.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGD5ylAmvRWyTXzGG4H-4LqX5fLGIrXp_8uzaUKKZsDaXLKPrYoGrS5Tdd19OQ_Rg6zLnfzXSoNBIT5C-gTH7C6lsmBt_2NxO7t0R9Qk8WhYU5zeCuRPKVo2WDUcXVxVD2ZAvVgz9AnB0Vi7NhT7IZBZ_ty978Jxv-NPw0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. manypixels.co</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1mrXjrwoECw-Pc9jLzl47jjJs3M7dznfv-ig-f8oDNvzBBCWzs9shxj4dGLtlmu4JS2sxGA5NEQUnmLN936z70KrKkRAAVTcWps3TcddAWq1TlY_AgxwJLSB74DPpC_uBUNr_waUE5k25f7TRTQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPyUIDZMO3Q3XlaZvL9waaJyTkmGHh3DZzAQKuT-7CojN8mvFWZNd23jdTQdpyP5bpUHst5_w8KYn8OwFSlpMJwYIdTeV0utYVpn2fwD-2YKXRXB0UhQpV2mDZ4HI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXSH7U8JIxpwVrGZiX5-jn-6THFuMDci-T12IbCbRhNmWoZ1mJa5krVpz5BiiDdxNbLuiS2rCNPnDw64GY2Cf0zcvKXiSewzTXzgJqOT6DXVetzweVaJDmPEl87sC5fIT-3bFIhSqt_1vmtODBSSgaRwOPBAiPAzBGicPf94GVYioZKCLwlUlCDbIS" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcw8v6F9kykvkhoi-rHEQWs8yGCu0KJBEiyouxDR5T0mb_gk1DhWaHL4gCqNBswgjFL9fgn1jU4yf7jN6xK25YQzzaSc-GjA5VwD6L9x-LnBEKdRejWkGqFxKMoSF6RBuVqqftlygXWUkHW7Y-xlgQiZF3CgY_tg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. photoadking.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWRAmjF5SDaOVmtoHqQxKG1qsB4dPe7sqEHkNTVMnT6nQGe-FvODqVS63yBbUw-Wh-1aJhzp81nV0P_DP9RPvc2S65fpj6EU1m-GrHfBywWhpTLmVDVoDmc2FVXW-GWPKUhTR83eZmRVtcac5V3xJo4l2E_8kPyA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWi2JFu1QwbTfAr_Muhz1a2pPi4n9YNsM-NB7k35PpECWZr4JTfowH6IXdvtJM7aZtXszxMIQBRWYH1MEINidIiX1I_Y_LFXs01bzezO7ChPGqro3P9okORPWQpS1ts3R43wPsEiPoL5FThWr7xOJvBN3R1vNRhxyMgByZNVwF" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. musthavemenus.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwyD9vDdp4w9dvfL4waLoI5FNg8Bud-KB8ot6YEoCjTP5N6BI4fmqr4x8TNeHg70G8p_QcNxqKT3RojExdIj3AvNGZ8Jp66hq9EEHut0U8tgRP7Kdnc9VIUQ3HKf9iwgU0Fdg7VfU3mB8jcVkfZvS27qAH" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. popmenu.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8DMcOrxMtDgAyDcxoj7AXfOqf_5ENLPDvMZfWynxBnga7sDGKFejwVBqnLxDSswpKw1HU5IKueAIbNFrGy9Wv17cyxnmdjnYYDg-pMkySM2aR4bBYlnLYvUmcvJrluAphzNQRs7N__3b8axDTFdSmd7BjmeWZhFlcybOikA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. lumoplay.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBtZXM1vBs3OeUyMNYagfBG88mIf3IkFyZC_qxO9wHSSS5xsgESWJUGvqSfwd6Btgd3zIE-X-NXgGdOVyxiAd0yYlukbp29fM6yJfuIJxqu0lhilZZt5TbsmTjQgrKX1iHa2MwGNWts899Ne5E03LmKi0yvcPve1bgf-Ae5d4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. lightspeedhq.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfVZa8pIZa9deDH46XAfYWD_SVNDN4niE7PcBnYFdZg7hTJQPCnGgVFi6k7IUcaISgvZRNRS0HMKzEnEqd5316v_BB6C76Pk-d57yTYz9V_aE97xHW7mvfiWupCYzebGrwTpwA5KI7tAjY7wpgMGp5" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. shutterstock.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="46.85">46.85秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="54,352">54,352</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. rural farmhouse restaurant menu design portfolio
+2. fishing restaurant menu design behance
+3. countryside water pond menu design dribbble
+4. "chinese restaurant menu design" nature water behance portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. rural farmhouse restaurant menu design portfolio</li><li class="text-sm text-gray-600">2. fishing restaurant menu design behance</li><li class="text-sm text-gray-600">3. countryside water pond menu design dribbble</li><li class="text-sm text-gray-600">4. "chinese restaurant menu design" nature water behance portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for actual menu design galleries and portfolios that showcase rural, farmhouse, and fishing-themed restaurant menus to give you direct visual inspiration.Let me search more specifically for fishing-themed restaurant menu designs and portfolios:Let me search for specific design portfolios featuring countryside and water-themed restaurant menus:Now let me search for specific Asian restaurant menu design portfolios that might have rural or nature themes:Based on my searches, I've found several valuable visual inspiration sources for your rural fish pond restaurant menu design project in Nanjing. Here are the key galleries and portfolios that showcase relevant design aesthetics:
+
+## Visual Design Inspiration Sources
+
+### **Behance Portfolios (Primary Sources)**
+
+1. **Chinese Restaurant Menu Design for Lotus Mandarin located in Dallas, TX** 
+   - Direct Behance gallery: https://www.behance.net/gallery/10726095/Chinese-Restaurant-Menu-Design
+   - Shows actual menu design execution for Asian restaurants
+
+2. **Seafood & Fish Restaurant Menu Designs**
+   - Behance search results showing seafood menu design fish restaurant work with specific projects like "Menu for a seafood restaurant" and "Fish Bar and Restaurant - Brand Identity"
+   - Search URL: https://www.behance.net/search/projects/seafood%20menu%20design%20fish%20restaurant
+
+3. **Restaurant Menu Design Gallery**
+   - Behance's creative network showcasing restaurant menu design work including "Modern Food Menu Design for Restaurants & Cafés" and "Chinese Restaurant Branding Design"
+   - Direct access: https://www.behance.net/search/projects/restaurant%20menu%20design
+
+### **Dribbble Design Collections**
+
+4. **Pond & Water-Themed Designs**
+   - Discover 800+ Pond designs on Dribbble as your resource to discover and connect with designers worldwide
+   - Gallery: https://dribbble.com/tags/pond
+
+5. **Countryside Aesthetics**
+   - Discover 700+ Countryside designs on Dribbble as your resource to discover and connect with designers worldwide
+   - Portfolio collection: https://dribbble.com/tags/countryside
+
+6. **Menu Design Inspiration**
+   - Discover 5,000+ Menu Design designs on Dribbble as your resource to discover and connect with designers worldwide
+   - Browse at: https://dribbble.com/tags/menu-design
+
+### **Specialized Pinterest Collections**
+
+7. **Farmhouse Restaurant Inspiration**
+   - Pinterest collection featuring "old school room = blackboards and wooden tables" restaurant designs
+   - Board: https://www.pinterest.com/jenlewpins/farmhouse-restaurant/
+
+8. **Seafood & Fishing Branding**
+   - Pinterest board featuring "gamberi & guanciale restaurant [menu + logo]", "Blackfish Seafood House Branding", and "Poplavok / fishing float" designs
+   - Collection: https://www.pinterest.com/barb0092/seafood-logos/
+
+### **Design Studios & Professional Work**
+
+9. **1stDibs Farmhouse Restaurant Projects**
+   - Farmhouse Restaurant photos from top interior designers and architects around the world, featuring projects like "St. Jardim Restaurant by Ward and Gray" and "Punk & Poet Restaurant by Assembly Design Studio"
+   - Gallery: https://www.1stdibs.com/photos/style/farmhouse/project/restaurant/
+
+## Key Design Elements to Focus On
+
+From these sources, look for:
+- **Water & Pond Motifs**: Ripple patterns, lily pads, fishing elements
+- **Rural Typography**: Hand-drawn, rustic fonts with farmhouse character  
+- **Color Palettes**: Earth tones, water blues, countryside greens
+- **Illustration Styles**: Watercolor textures, hand-sketched elements, natural materials
+- **Layout Approaches**: Organic shapes, asymmetrical designs inspired by natural pond formations
+
+These portfolios will give you direct access to actual menu designs rather than articles about design">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for actual menu design galleries and portfolios that showcase rural, farmhouse, and fishing-themed restaurant menus to give you direct visual inspiration.Let me search more specifically for fishing-themed restaurant menu designs and portfolios:Let me search for specific design portfolios featuring countryside and water-themed restaurant menus:Now let me search for specific Asian restaurant menu design portfolios that might have rural or nature themes:Based on my searches, I've found several valuable visual inspiration sources for your rural fish pond restaurant menu design project in Nanjing. Here are the key galleries and portfolios that showcase relevant design aesthetics:
+
+## Visual Design Inspiration Sources
+
+### **Behance Portfolios (Primary Sources)**
+
+1. **Chinese Restaurant Menu Design for Lotus Mandarin located in Dallas, TX** 
+   - Direct Behance gallery: https://www.behance.net/gallery/10726095/Chinese-Restaurant-Menu-Design
+   - Shows actual menu design execution for Asian restaurants
+
+2. **Seafood & Fish Restaurant Menu Designs**
+   - Behance search results showing seafood menu design fish restaurant work with specific projects like "Menu for a seafood restaurant" and "Fish Bar and Restaurant - Brand Identity"
+   - Search URL: https://www.behance.net/search/projects/seafood%20menu%20design%20fish%20restaurant
+
+3. **Restaurant Menu Design Gallery**
+   - Behance's creative network showcasing restaurant menu design work including "Modern Food Menu Design for Restaurants & Cafés" and "Chinese Restaurant Branding Design"
+   - Direct access: https://www.behance.net/search/projects/restaurant%20menu%20design
+
+### **Dribbble Design Collections**
+
+4. **Pond & Water-Themed Designs**
+   - Discover 800+ Pond designs on Dribbble as your resource to discover and connect with designers worldwide
+   - Gallery: https://dribbble.com/tags/pond
+
+5. **Countryside Aesthetics**
+   - Discover 700+ Countryside designs on Dribbble as your resource to discover and connect with designers worldwide
+   - Portfolio collection: https://dribbble.com/tags/countryside
+
+6. **Menu Design Inspiration**
+   - Discover 5,000+ Menu Design designs on Dribbble as your resource to discover and connect with designers worldwide
+   - Browse at: https://dribbble.com/tags/menu-design
+
+### **Specialized Pinterest Collections**
+
+7. **Farmhouse Restaurant Inspiration**
+   - Pinterest collection featuring "old school room = blackboards and wooden tables" restaurant designs
+   - Board: https://www.pinterest.com/jenlewpins/farmhouse-restaurant/
+
+8. **Seafood & Fishing Branding**
+   - Pinterest board featuring "gamberi & guanciale restaurant [menu + logo]", "Blackfish Seafood House Branding", and "Poplavok / fishing float" designs
+   - Collection: https://www.pinterest.com/barb0092/seafood-logos/
+
+### **Design Studios & Professional Work**
+
+9. **1stDibs Farmhouse Restaurant Projects**
+   - Farmhouse Restaurant photos from top interior designers and architects around the world, featuring projects like "St. Jardim Restaurant by Ward and Gray" and "Punk & Poet Restaurant by Assembly Design Studio"
+   - Gallery: https://www.1stdibs.com/photos/style/farmhouse/project/restaurant/
+
+## Key Design Elements to Focus On
+
+From these sources, look for:
+- **Water & Pond Motifs**: Ripple patterns, lily pads, fishing elements
+- **Rural Typography**: Hand-drawn, rustic fonts with farmhouse character  
+- **Color Palettes**: Earth tones, water blues, countryside greens
+- **Illustration Styles**: Watercolor textures, hand-sketched elements, natural materials
+- **Layout Approaches**: Organic shapes, asymmetrical designs inspired by natural pond formations
+
+These portfolios will give you direct access to actual menu designs rather than articles about design</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Restaurant Menu Design Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/restaurant%20menu%20design)
+2. Fish Restaurant Projects - Behance (https://www.behance.net/search/projects/?search=fish+restaurant&sort=recommended&time=month)
+3. Pond Design Checklist | World of Water (https://worldofwater.com/how-to-ponds/planning-your-water-garden/design-ideas/)
+4. Food Menu designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/food-menu)
+5. Your Guide to Farm Pond Design - Countryside - Pinterest (https://www.pinterest.com/pin/378302437438348069/)
+6. 750 Best Farmhouse Restaurant ideas in 2024 (https://www.pinterest.com/jenlewpins/farmhouse-restaurant/)
+7. Pond designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/pond)
+8. Farmhouse Restaurant Design Ideas - 9 Pictures | 1stDibs (https://www.1stdibs.com/photos/style/farmhouse/project/restaurant/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/search/projects/restaurant%20menu%20design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Restaurant Menu Design Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/?search=fish+restaurant&sort=recommended&time=month" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Fish Restaurant Projects - Behance</a></li><li class="text-sm"><a href="https://worldofwater.com/how-to-ponds/planning-your-water-garden/design-ideas/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Pond Design Checklist | World of Water</a></li><li class="text-sm"><a href="https://dribbble.com/tags/food-menu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Food Menu designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.pinterest.com/pin/378302437438348069/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Your Guide to Farm Pond Design - Countryside - Pinterest</a></li><li class="text-sm"><a href="https://www.pinterest.com/jenlewpins/farmhouse-restaurant/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. 750 Best Farmhouse Restaurant ideas in 2024</a></li><li class="text-sm"><a href="https://dribbble.com/tags/pond" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Pond designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.1stdibs.com/photos/style/farmhouse/project/restaurant/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Farmhouse Restaurant Design Ideas - 9 Pictures | 1stDibs</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="71.11">71.11秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="348,272">348,272</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. fish pond restaurant menu design behance
+2. fish farm restaurant menu design portfolio behance
+3. menu brochure "fish" "pond" behance
+4. farmhouse style fish pond menu design pinterest
+5. fish restaurant menu dribbble
+6. restaurant menu fish dribbble
+7. dribbble farmhouse menu design
+8. trifold menu dribbble rustic
+9. fish restaurant menu design site:behance.net/gallery">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. fish pond restaurant menu design behance</li><li class="text-sm text-gray-600">2. fish farm restaurant menu design portfolio behance</li><li class="text-sm text-gray-600">3. menu brochure "fish" "pond" behance</li><li class="text-sm text-gray-600">4. farmhouse style fish pond menu design pinterest</li><li class="text-sm text-gray-600">5. fish restaurant menu dribbble</li><li class="text-sm text-gray-600">6. restaurant menu fish dribbble</li><li class="text-sm text-gray-600">7. dribbble farmhouse menu design</li><li class="text-sm text-gray-600">8. trifold menu dribbble rustic</li><li class="text-sm text-gray-600">9. fish restaurant menu design site:behance.net/gallery</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are five primary-source gallery pages showcasing menu designs with rural, farmhouse, fish-pond, and fishing-themed aesthetics—each featuring full-cover, interior spreads, and back-page layouts for inspiration:
+
+• Menu layout Design for Valley Farm Café  
+  dribbble.com/shots/15949906  
+  A hand-drawn, multi-page menu for a country-style farm café, featuring earthy tones, rustic typography, and illustrated farm elements across cover and inner pages ([dribbble.com](https://dribbble.com/shots/15949906-Menu-Design)).
+
+• The Fish Market (Restaurant Menu)  
+  dribbble.com/shots/1622728  
+  A seafood-centric menu project with vibrant blue and coral accents, fish illustrations, and a clear, multi-spread layout covering front, contents, and back ([dribbble.com](https://dribbble.com/shots/1622728-The-Fish-Market-Restaurant-Menu)).
+
+• The Harbour Fish & Grill Menu  
+  dribbble.com/shots/3866129  
+  Clean, water-inspired palette and nautical illustrations for a fish-and-grill restaurant, showing cover, detailed inside pages, and back cover mockups ([dribbble.com](https://dribbble.com/shots/3866129-The-Harbour-Fish-Grill-Menu)).
+
+• Rustic Menu Design Template  
+  dribbble.com/shots/6488916  
+  Warm wood-grain textures and hand-lettered headings evoke a farmhouse pond atmosphere; includes bifold spread previews for cover, menu panels, and back ([dribbble.com](https://dribbble.com/shots/6488916-Rustic-Menu-Design?utm_source=chatgpt.com)).
+
+• Modern Rustic Food Menu Template PSD  
+  dribbble.com/shots/14860721  
+  A contemporary take on rustic style: layered, editable PSD spreads featuring wood textures, muted earth tones, and full cover-to-back layout visuals ([dribbble.com](https://dribbble.com/shots/14860721-Modern-Rustic-Food-Menu-Template-PSD?utm_source=chatgpt.com)).">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are five primary-source gallery pages showcasing menu designs with rural, farmhouse, fish-pond, and fishing-themed aesthetics—each featuring full-cover, interior spreads, and back-page layouts for inspiration:
+
+• Menu layout Design for Valley Farm Café  
+  dribbble.com/shots/15949906  
+  A hand-drawn, multi-page menu for a country-style farm café, featuring earthy tones, rustic typography, and illustrated farm elements across cover and inner pages ([dribbble.com](https://dribbble.com/shots/15949906-Menu-Design)).
+
+• The Fish Market (Restaurant Menu)  
+  dribbble.com/shots/1622728  
+  A seafood-centric menu project with vibrant blue and coral accents, fish illustrations, and a clear, multi-spread layout covering front, contents, and back ([dribbble.com](https://dribbble.com/shots/1622728-The-Fish-Market-Restaurant-Menu)).
+
+• The Harbour Fish & Grill Menu  
+  dribbble.com/shots/3866129  
+  Clean, water-inspired palette and nautical illustrations for a fish-and-grill restaurant, showing cover, detailed inside pages, and back cover mockups ([dribbble.com](https://dribbble.com/shots/3866129-The-Harbour-Fish-Grill-Menu)).
+
+• Rustic Menu Design Template  
+  dribbble.com/shots/6488916  
+  Warm wood-grain textures and hand-lettered headings evoke a farmhouse pond atmosphere; includes bifold spread previews for cover, menu panels, and back ([dribbble.com](https://dribbble.com/shots/6488916-Rustic-Menu-Design?utm_source=chatgpt.com)).
+
+• Modern Rustic Food Menu Template PSD  
+  dribbble.com/shots/14860721  
+  A contemporary take on rustic style: layered, editable PSD spreads featuring wood textures, muted earth tones, and full cover-to-back layout visuals ([dribbble.com](https://dribbble.com/shots/14860721-Modern-Rustic-Food-Menu-Template-PSD?utm_source=chatgpt.com)).</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Menu Design by Bianca on Dribbble (https://dribbble.com/shots/15949906-Menu-Design)
+2. The Fish Market (Restaurant Menu) by Micael Butial on Dribbble (https://dribbble.com/shots/1622728-The-Fish-Market-Restaurant-Menu)
+3. The Harbour Fish & Grill Menu by Today Design on Dribbble (https://dribbble.com/shots/3866129-The-Harbour-Fish-Grill-Menu)
+4. Rustic Menu Design by BigWeek on Dribbble (https://dribbble.com/shots/6488916-Rustic-Menu-Design?utm_source=chatgpt.com)
+5. Modern Rustic Food Menu Template PSD by Nishu Kumari on Dribbble (https://dribbble.com/shots/14860721-Modern-Rustic-Food-Menu-Template-PSD?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/15949906-Menu-Design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Menu Design by Bianca on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/1622728-The-Fish-Market-Restaurant-Menu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. The Fish Market (Restaurant Menu) by Micael Butial on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/3866129-The-Harbour-Fish-Grill-Menu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. The Harbour Fish & Grill Menu by Today Design on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/6488916-Rustic-Menu-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Rustic Menu Design by BigWeek on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/14860721-Modern-Rustic-Food-Menu-Template-PSD?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Modern Rustic Food Menu Template PSD by Nishu Kumari on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
