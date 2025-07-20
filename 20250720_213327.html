@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to create a short video advertisement for a fashion brand, featuring a young woman in a bright fuchsia outfit at a modern outdoor café. 
+You need to search for fashion advertisement storyboard frames, young women styling in bright fuchsia outfits, modern outdoor café scenes, cinematic lighting effects, character emotion expression shots, and visual typography design for multilingual subtitles.">The user needs to create a short video advertisement for a fashion brand, featuring a young woman in a bright fuchsia outfit at a modern outdoor café. 
+You need to search for fashion advertisement storyboard frames, young women styling in bright fuchsia outfits, modern outdoor café scenes, cinematic lighting effects, character emotion expression shots, and visual typography design for multilingual subtitles.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 21:35:27</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="13.73">13.73秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,175">1,175</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. fashion advertisement storyboard frames
+2. young woman bright fuchsia outfit style
+3. modern outdoor cafe aesthetic
+4. cinematic lighting for outdoor scenes
+5. character emotion expression shots for video
+6. visual typography design for multilingual subtitles video ads">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. fashion advertisement storyboard frames</li><li class="text-sm text-gray-600">2. young woman bright fuchsia outfit style</li><li class="text-sm text-gray-600">3. modern outdoor cafe aesthetic</li><li class="text-sm text-gray-600">4. cinematic lighting for outdoor scenes</li><li class="text-sm text-gray-600">5. character emotion expression shots for video</li><li class="text-sm text-gray-600">6. visual typography design for multilingual subtitles video ads</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To create a compelling short video advertisement for a fashion brand, featuring a young woman in a bright fuchsia outfit at a modern outdoor café, consider the following elements:
+
+**1. Fashion Advertisement Storyboard Frames:**
+Storyboards are crucial for visualizing the ad's narrative and themes, helping to plan scene-by-scene details like characters, props, dialogue, and camera angles. You can find free storyboard templates specifically for fashion or advertising to help organize your visual concepts.
+
+**2. Young Women Styling in Bright Fuchsia Outfits:**
+Fuchsia is a vibrant, bold, and confident color that blends pink and purple, making it a statement choice for fashion.
+*   **Outfit Ideas:** Consider options like a fuchsia dress with a high neckline and defined shoulders for a chic and sophisticated look, or a hot pink ruffle tunic dress for a playful and feminine vibe. Fuchsia can also be incorporated with denim for a fun twist.
+*   **Styling Tips:** Pair fuchsia with neutral tones like black, white, or grey for a balanced look, or with complementary bright accessories for a bold statement. For footwear, strappy heels or chic sandals in nude or white complement the dress. Simple gold or silver jewelry can add glamour without overwhelming the outfit.
+*   **Visual Inspiration:** Search for images of young women in fuchsia dresses, suits, jackets, and accessories to see various styling interpretations in urban street fashion or studio settings.
+
+**3. Modern Outdoor Café Scenes:**
+Modern outdoor cafés often feature sleek lines, minimalist decor, and an emphasis on natural light, connecting indoor and outdoor spaces seamlessly.
+*   **Design Elements:** Look for cafes with comfortable furniture, strategically placed plants (potted, hanging, or climbing vines), and unique decorative elements like statues, murals, or art installations. Large umbrellas or canopies provide shelter and can add decorative flair.
+*   **Atmosphere:** Consider elements that create a serene and elegant atmosphere, such as a neutral color palette, elegant lighting, and water features. Some modern cafes incorporate raw materials like exposed brick, metal, and concrete for an industrial chic vibe.
+*   **Visual Inspiration:** Explore stock photos and images of "modern outdoor cafe aesthetic" or "garden cafe design" to visualize the desired setting.
+
+**4. Cinematic Lighting Effects:**
+Harnessing and controlling natural sunlight is key for outdoor cinematic lighting.
+*   **Techniques:** Backlighting is a popular choice in film to create depth, graphic shapes, and silhouettes. Tools like diffusion filters, bounce boards, reflectors, and negative fill cards help soften harsh sunlight, redirect light, or subtract light to create a more even and controlled illumination.
+*   **Mood:** Dark foregrounds can be used to compositionally frame the action and create depth. Consider using LED lights for evening scenes, which offer various color options to enhance the aesthetics.
+*   **Equipment:** Common outdoor film lighting equipment includes reflectors (to direct and fill shadows), diffusion panels (to soften light), and fill/rim lights (to balance exposure and create a halo effect).
+
+**5. Character Emotion Expression Shots:**
+Camera angles and framing significantly impact how emotions are conveyed to the audience.
+*   **Close-up Shots:** Close-up and extreme close-up shots are ideal for capturing raw, unfiltered facial expressions and details, allowing viewers to connect intimately with the character's emotions and reactions.
+*   **Eye-Level Shots:** These create a sense of equality and familiarity, bringing viewers into the character's world.
+*   **Medium Shots:** Useful for dialogue scenes, as they highlight facial expressions and gestures while also showing body language details and surroundings.
+*   **Body Language:** Remember that body language, alongside facial expressions, transmits a significant portion of a message and emotion. Music can also emphasize a character's feelings.
+
+**6. Visual Typography Design for Multilingual Subtitles:**
+Kinetic typography and animated text are increasingly popular in commercials and videos.
+*   **Clarity and Impact:** Effective typography reinforces key messages, guiding viewer attention and comprehension. Look for clear, layered text presentations.
+*   **Multilingual Support:** Tools are available that offer multilingual support and human-like voiceovers for global content creation.
+*   **Design Inspiration:** Explore "typography video ads" or "2D typography video examples" for dynamic and compelling visual text ideas. Tutorials are available for animating text strokes and creating clean typography title motion graphics in software like After Effects.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To create a compelling short video advertisement for a fashion brand, featuring a young woman in a bright fuchsia outfit at a modern outdoor café, consider the following elements:
+
+**1. Fashion Advertisement Storyboard Frames:**
+Storyboards are crucial for visualizing the ad's narrative and themes, helping to plan scene-by-scene details like characters, props, dialogue, and camera angles. You can find free storyboard templates specifically for fashion or advertising to help organize your visual concepts.
+
+**2. Young Women Styling in Bright Fuchsia Outfits:**
+Fuchsia is a vibrant, bold, and confident color that blends pink and purple, making it a statement choice for fashion.
+*   **Outfit Ideas:** Consider options like a fuchsia dress with a high neckline and defined shoulders for a chic and sophisticated look, or a hot pink ruffle tunic dress for a playful and feminine vibe. Fuchsia can also be incorporated with denim for a fun twist.
+*   **Styling Tips:** Pair fuchsia with neutral tones like black, white, or grey for a balanced look, or with complementary bright accessories for a bold statement. For footwear, strappy heels or chic sandals in nude or white complement the dress. Simple gold or silver jewelry can add glamour without overwhelming the outfit.
+*   **Visual Inspiration:** Search for images of young women in fuchsia dresses, suits, jackets, and accessories to see various styling interpretations in urban street fashion or studio settings.
+
+**3. Modern Outdoor Café Scenes:**
+Modern outdoor cafés often feature sleek lines, minimalist decor, and an emphasis on natural light, connecting indoor and outdoor spaces seamlessly.
+*   **Design Elements:** Look for cafes with comfortable furniture, strategically placed plants (potted, hanging, or climbing vines), and unique decorative elements like statues, murals, or art installations. Large umbrellas or canopies provide shelter and can add decorative flair.
+*   **Atmosphere:** Consider elements that create a serene and elegant atmosphere, such as a neutral color palette, elegant lighting, and water features. Some modern cafes incorporate raw materials like exposed brick, metal, and concrete for an industrial chic vibe.
+*   **Visual Inspiration:** Explore stock photos and images of "modern outdoor cafe aesthetic" or "garden cafe design" to visualize the desired setting.
+
+**4. Cinematic Lighting Effects:**
+Harnessing and controlling natural sunlight is key for outdoor cinematic lighting.
+*   **Techniques:** Backlighting is a popular choice in film to create depth, graphic shapes, and silhouettes. Tools like diffusion filters, bounce boards, reflectors, and negative fill cards help soften harsh sunlight, redirect light, or subtract light to create a more even and controlled illumination.
+*   **Mood:** Dark foregrounds can be used to compositionally frame the action and create depth. Consider using LED lights for evening scenes, which offer various color options to enhance the aesthetics.
+*   **Equipment:** Common outdoor film lighting equipment includes reflectors (to direct and fill shadows), diffusion panels (to soften light), and fill/rim lights (to balance exposure and create a halo effect).
+
+**5. Character Emotion Expression Shots:**
+Camera angles and framing significantly impact how emotions are conveyed to the audience.
+*   **Close-up Shots:** Close-up and extreme close-up shots are ideal for capturing raw, unfiltered facial expressions and details, allowing viewers to connect intimately with the character's emotions and reactions.
+*   **Eye-Level Shots:** These create a sense of equality and familiarity, bringing viewers into the character's world.
+*   **Medium Shots:** Useful for dialogue scenes, as they highlight facial expressions and gestures while also showing body language details and surroundings.
+*   **Body Language:** Remember that body language, alongside facial expressions, transmits a significant portion of a message and emotion. Music can also emphasize a character's feelings.
+
+**6. Visual Typography Design for Multilingual Subtitles:**
+Kinetic typography and animated text are increasingly popular in commercials and videos.
+*   **Clarity and Impact:** Effective typography reinforces key messages, guiding viewer attention and comprehension. Look for clear, layered text presentations.
+*   **Multilingual Support:** Tools are available that offer multilingual support and human-like voiceovers for global content creation.
+*   **Design Inspiration:** Explore "typography video ads" or "2D typography video examples" for dynamic and compelling visual text ideas. Tutorials are available for animating text strokes and creating clean typography title motion graphics in software like After Effects.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. famousframes.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDmF8-NQOwO_tBDvRXBL-CBSrH6BHszYBIWLQZGVbNQMTb2Rzlw1gWO9HpIXFvVNBGrtbl9UteCI0C0pcOcVkbYlV7gABw31mwDAVGzdFR2LP0S-a5G0MPd8yPqv7aPvgit4T2GKyVFvObxVwkBXx7rccCQ1f0OngBJy1N9OZEXDB_5g==)
+2. vista.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGq1gAizdSU-he42_pIDhhLh9zEmig_HgLlwx2QbJSsL35sx1bvmTEL31aVES69yEMyhFilvimRNYyZaHaZthx9GbltlBolAEyqzNCmh-xOQECbQZDO-AGiFebqix0rJF3CThpo1303hdoteb7SuyjErQ==)
+3. milanote.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaQ8M7H__Os5oD2Bx3NBgjeNaY3Qp6XGPBn5xY__eojpOTwpKGh4wfcfaJsbMh6uhj-ZRfYqq7HFhvTNKIxJw4ocZw3JSUmggZU9xAG8QuHyjKhekCSuMBPZrF9aXLhRh_oUJJYg==)
+4. milanote.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEz-sVRvrSaulMVpM0IWfADFSp2F-jVU8gJnadelVVm90DDNNEtQhESw_34cius2M-Ei9ZH8OU6KQYrfJykKlS5zU7x7J77Qap7xwoSxsuN2Kzx9zRzDSe-wTo5vVDaqBalPNMSA_V16IVqNoSDDL-qObfFrZ5sts=)
+5. storyboards.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExf2wq7GIAPI0vwyv4PLFyXILO0MPeOBCuA1c4-FjpcpXy-9mJwxW2OxJx4LffEwMFxAjTQPwjPtH1xB_Ej2lGKMWa9qrjPwP5oOlE5qh9ruRNDghkhM-v4CMK703GBiOcYuVERZl7Abu2)
+6. lemon8-app.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZ30hFxnrE0b4BOvxYMw0-DtQXF6b1z0F4wgDu60f5y6WlyGbCM3W9rq84Lstib3b7ETP1uWeTSQMj7Q1nIJ9iIYqw1WulDITxSCitGL_-mhbaMLeNM1deXuk8a1d1V8jnB5HQhJYZcBVtLaJOZq8yBze8RKLAL5X_ypQs_TJOMGAIo1ou0d7imkI5JaU=)
+7. lemon8-app.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETeDeI_Ov_JtukxM9AHT8JCTSUGlPDWLKvze8090dtaMOnNF8tlzO42popUJVCNmjzBxsDedkrmY0RKwqF68wjUheA9XlQ0Q0ZGwRcDnPA_qdo1859QkqxfNahByfcdjqERccOZ6lKxxRtW1v0UW8KqhnuiISAPAKlUZxEFAA=)
+8. istockphoto.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrAMsRZfRW6ksB-saUi1deo_LeJBf-NlZmA6tdf95O1xkms-WbBX3rHrfe3r3zp0JZJbZTYqq6OoDC60sO17UgETC6HLFR_C0PFZcsyIX9d7FABfflbZCp4EVt9Fl61H3v9w1Dz-9A2NTKKh4=)
+9. istockphoto.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJqhIypbWj2HMOQUO3TU1hQQX0wiFeDN_ILhMADja8HT8HADFuStHJ5Cu-8IxlY4Ofc9jwcJOcwJ4HaRTxqCLU_whoKT-IrfDF_9WpcSUxjXwgGjOPreL2XKJe9rWQUyI_ad7IPKBr1XY3l_foHWrmGxeD)
+10. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAZ96LrVO3s2FmMvSjTFjuKyioEv4ZWW5nWQmR6x2JXu_ISUyZ4nd83-qW0-LZtIJajAbaPQj9xbT75Gct2uruTLX_y5z14toEY5IxnJemPqFS3GA10cUjodCmkxpkHf5OpcC26k_QBUiaUYEOkmRtnkif5gqLLQw=)
+11. greenwashingindex.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW6Pc29ZZyzT0HPVqjFZD5poTtkg9__LAMarx2yD5kAtRl88bi2MoEmFO7_gCpnShGejmsa3BGdZx8ntTTaN1BGOlMB5wgAXwn9Ra5YRVmkxWrQ0my81OzR-fCiE9lyKivaGgPyXYRvR6v6o1GeGjt)
+12. ikea.co.id (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFteNwktlsjsQiyiVNLJ8CFy1m_LQ2wjJPL1ySCGU7okzRf5f5L8tT2JyMpjMwEJMZrJJajrc3fyKUMY8sZk2pY3cbwb3esDWk7Wvx_1ft6P7CWC9Al6dyRbhcSNzcI6dY7Um4KMljii6-UVmyl0AWOgOWzjDHg5sESc5GcvIQ1wbfCmS7rXQVF88-xKQ==)
+13. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWL67wgvTgiFksZXVDlbVmCKcD6CZaWO3ivxPJ4wUaegTlKbjwqdkansN3MtB1-RSCeOso-GRlmn6vPUtYhm24bj30ma1AyM-BHEDsmOJhlzmt86O8zmx0-6QPZJHqLcW17f3zVgM=)
+14. gettyimages.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDeRfTF-BkPtBTuTcBuALSgP5YN3o4q2ZrwbutS73FTad8tCiYCIlZehR5eME94OSnWrR94e9InFG73P8v-OVmkeA3rpx3b2UI_IgoZE1Aa0Xws8tcZE4WAUeR0IjHL6lynMaCfKd9KwoCuss8gA_3ng==)
+15. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbeAMEtjnyveakfEaNqrDgmFEmPv8JoUh3WWNSrVVuMpINleCpCUM8h7F5qk4IU7WuSvzZE_NXCZG8ZFJDnEFR0LdkUk4ms-jpAQlLDxhf2m3KAuSAJR0QLGqsngLPs0ZMkldsUK-gSzEi5GcsIO4-E3mr7iUbkW6sLNGTnf6Fm3tsMQje6AwHY32ZdjZb3oEPp5WQBmsRjXpthJx5ng==)
+16. soundstripe.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER5oH7sVlMD0d7MQu6ocvfB5X_NHUBFy7dqKHE7sJ2RU_kxc_1H7fG68HK-O8Wu53JyiJm2QEOvAvFF0AWfvQUOpCkKMdFhLaRCdDOVXPqbiU1Zfh1QjA_25hhlWn_MUYSULPhhOelCixq_MlV7WFD28D8YGFdpjukms-00Ow6JJ7_38G6byO1m98=)
+17. muddycolors.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4C4TRRDxdZGhXp-5W27mgDy8h6fjoh6GV2T8pXwsHXSmL802g7MG6spqwGwF8755mjefrRDMbf9YtjaWsa1DrK0KXUn-_XFG3pZ5ETRo4WYJnOzLGC8vN9--t1_e5qEbVJkTk59dmiN0Z0c72J71zKbwH__tiN3R3vg178IpUTpbdo4EtPT4=)
+18. colborlight.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsSV0ITCkiw4MkDmlYMVoE47dT5JtWXTxXstkjU0VvhFSlIvFFLNNi6IDPq8tNkg-SSMGayuaWp41D8CGsY4M1LJhuZgt3ixJH5zIH7FlMkkWcBeLZfvhFoAm2HblCWD44kq8HsbDkj1AYjKuoCPIyTaj8D2--4XFquXyv4FbqXndgMnFmk28oCkA1cqpm)
+19. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDpAQZP8arEp8FN_GbvNJi9HrK5Qd3a0sGDbo91yU9JbN7UCZD5fsl24CQXd9q07hPMpAJDr7ZyM3_xHpItKBW7k8QIDenTyF4IjTJjuz3-_lbmAwyKatauO4RxDb_dCA-2Z_0yVw=)
+20. skillmanvideogroup.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPFAmA3rsPDCugfBgIjyrSkwrOWdP5feb4cfCmAfvgy3urJl9UAkKaIggZbnu85vml08rwx-UjJur1Ahm9KfxvyZVqRzu3ozSiJXucedgK_YgmpkmV9Gmo6kFGRhx5CVZaM9BOJqRkqlroW9l6yb4R1hHPN-sKcuB1gYmWJZ4=)
+21. futuretheory.co (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeVDcRmhmx3Q_ClSxbphzPvHm2ldy4Ek-OvKtIlDWzpmcgUCygaGuTyKMVpKTOrvD5RWjhSHluHcYIoAvpMyDvmrcd4AsKGr0Nq6i2J-yDElm4wFb5NrLuxmie9pr29TjxwvDzoxMiiw==)
+22. taiarts.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIr1HRKQrhF5q3CvlmOvgCjt1YvyQvv9KBENcqDMrfoQoBt_7BcEoAPNxc8cWCMzJiA0KUKEU--QsgUEPmuQkWagu-H4VoE7FYneqYqhr-BUp2gVupznEyCAJTK9Ajc6Ljh4KpPVHQWPH4EC1FLHvB)
+23. veed.io (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2twrPl4_x4kmkEcNwDfdXBYypJS3zlH1gHW1jgG2QZypVxMkHxZIDKlJ0COxYmBHuT-crYUyP49fDMifP8hSxut_9sK5sTSvHjR8amMDtqNb9b6SUrSXfujMdYLpZhI_NtTv9sck0jw==)
+24. vyond.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4pW24VDVH4mZhHHOwlBIYiNxqvP2JnR5kZ3Mm1tkQ3yijJaL4liM0Eq3BRrrHBArvpCgRlYYHlvhA-CZMECjbehucmPALgvQi3hE9s_j77C1oD0UA7uS8zCy3mHdfy_X-P3uvAJ9YnUvUnnyBfQ82gxmuXMbgRHybSfsCjOMlKA==)
+25. advids.co (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQdeHXJ6KjH4bTQyFB9zsAwoL_nf6oHJ2uL6cAj_KbU9jhygujNdPIY8K_BZDP6pxIPS7BZzUV7RQ42ewTDEqDtF9DlHEME9rpj_-ej3bM6bs-xZuZmWavyxQOL4QSy6VehJdUb8f3OhL1SrdHOwnPUHlFPyDK7V1-r0SVVQ_JJrAhskTG55C5r7PH9XmWLrPb3ef7TUw=)
+26. premiumbeat.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGn6GELoemCH7TeDT2MOzFOZjkCdRddQohGyGb4fkKI_Cw2CGvYo9sXuj-enBMwjNS-Qo3q0bdDlqXDzfgy42GXdH4S4ki7RD3TU7RAhGBbGXvuxn2Cd_xDkrXLxWK79XL-DDIdPR78u2VMFbmXhtFYYFKTfEs=)
+27. renderforest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIz8b8-uNpXwIrKRZD_owCneCKQXpa5v1aK2aPHJM7cj9E9q8MOohTjmcf8iWHzx_aXP6k-BJPgmRTHEEz_7gWBJeR27Hcig1q5tTCFaeOQ8oJHunvbf_hgrhiXUFRt9IkKHvgHhbyiQ==)
+28. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqZnRjU_DVE5kn36A-fz_waK8lizFv8AypuvT4VM5dSy0A9epc9pPeYuMNzzEUjPbbIRn2HHdXpOZUU8TdFceI9tLcAce5yWyrmRduzDTUWjvxTrTDnBvalb-QDLM6FIZCGHwfNuyrRJHUUgc2V4XVXqiBOSqXg6SwcFkYbw==)
+29. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHxBYT0dWMViLF0_IdBfParuCVhRRGGT8nw4ndun7_EGvkwzBf78e3CkapV_7ueJygf90yrNJ1QYEEbIqTICBr9o60ZV_Vj0xj7v71ycvnBXxZrzS1Qcb5pi68E1dDYLUGAHBLIyQ=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDmF8-NQOwO_tBDvRXBL-CBSrH6BHszYBIWLQZGVbNQMTb2Rzlw1gWO9HpIXFvVNBGrtbl9UteCI0C0pcOcVkbYlV7gABw31mwDAVGzdFR2LP0S-a5G0MPd8yPqv7aPvgit4T2GKyVFvObxVwkBXx7rccCQ1f0OngBJy1N9OZEXDB_5g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. famousframes.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGq1gAizdSU-he42_pIDhhLh9zEmig_HgLlwx2QbJSsL35sx1bvmTEL31aVES69yEMyhFilvimRNYyZaHaZthx9GbltlBolAEyqzNCmh-xOQECbQZDO-AGiFebqix0rJF3CThpo1303hdoteb7SuyjErQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. vista.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaQ8M7H__Os5oD2Bx3NBgjeNaY3Qp6XGPBn5xY__eojpOTwpKGh4wfcfaJsbMh6uhj-ZRfYqq7HFhvTNKIxJw4ocZw3JSUmggZU9xAG8QuHyjKhekCSuMBPZrF9aXLhRh_oUJJYg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. milanote.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEz-sVRvrSaulMVpM0IWfADFSp2F-jVU8gJnadelVVm90DDNNEtQhESw_34cius2M-Ei9ZH8OU6KQYrfJykKlS5zU7x7J77Qap7xwoSxsuN2Kzx9zRzDSe-wTo5vVDaqBalPNMSA_V16IVqNoSDDL-qObfFrZ5sts=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. milanote.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExf2wq7GIAPI0vwyv4PLFyXILO0MPeOBCuA1c4-FjpcpXy-9mJwxW2OxJx4LffEwMFxAjTQPwjPtH1xB_Ej2lGKMWa9qrjPwP5oOlE5qh9ruRNDghkhM-v4CMK703GBiOcYuVERZl7Abu2" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. storyboards.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZ30hFxnrE0b4BOvxYMw0-DtQXF6b1z0F4wgDu60f5y6WlyGbCM3W9rq84Lstib3b7ETP1uWeTSQMj7Q1nIJ9iIYqw1WulDITxSCitGL_-mhbaMLeNM1deXuk8a1d1V8jnB5HQhJYZcBVtLaJOZq8yBze8RKLAL5X_ypQs_TJOMGAIo1ou0d7imkI5JaU=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. lemon8-app.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETeDeI_Ov_JtukxM9AHT8JCTSUGlPDWLKvze8090dtaMOnNF8tlzO42popUJVCNmjzBxsDedkrmY0RKwqF68wjUheA9XlQ0Q0ZGwRcDnPA_qdo1859QkqxfNahByfcdjqERccOZ6lKxxRtW1v0UW8KqhnuiISAPAKlUZxEFAA=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. lemon8-app.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrAMsRZfRW6ksB-saUi1deo_LeJBf-NlZmA6tdf95O1xkms-WbBX3rHrfe3r3zp0JZJbZTYqq6OoDC60sO17UgETC6HLFR_C0PFZcsyIX9d7FABfflbZCp4EVt9Fl61H3v9w1Dz-9A2NTKKh4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. istockphoto.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJqhIypbWj2HMOQUO3TU1hQQX0wiFeDN_ILhMADja8HT8HADFuStHJ5Cu-8IxlY4Ofc9jwcJOcwJ4HaRTxqCLU_whoKT-IrfDF_9WpcSUxjXwgGjOPreL2XKJe9rWQUyI_ad7IPKBr1XY3l_foHWrmGxeD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. istockphoto.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAZ96LrVO3s2FmMvSjTFjuKyioEv4ZWW5nWQmR6x2JXu_ISUyZ4nd83-qW0-LZtIJajAbaPQj9xbT75Gct2uruTLX_y5z14toEY5IxnJemPqFS3GA10cUjodCmkxpkHf5OpcC26k_QBUiaUYEOkmRtnkif5gqLLQw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW6Pc29ZZyzT0HPVqjFZD5poTtkg9__LAMarx2yD5kAtRl88bi2MoEmFO7_gCpnShGejmsa3BGdZx8ntTTaN1BGOlMB5wgAXwn9Ra5YRVmkxWrQ0my81OzR-fCiE9lyKivaGgPyXYRvR6v6o1GeGjt" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. greenwashingindex.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFteNwktlsjsQiyiVNLJ8CFy1m_LQ2wjJPL1ySCGU7okzRf5f5L8tT2JyMpjMwEJMZrJJajrc3fyKUMY8sZk2pY3cbwb3esDWk7Wvx_1ft6P7CWC9Al6dyRbhcSNzcI6dY7Um4KMljii6-UVmyl0AWOgOWzjDHg5sESc5GcvIQ1wbfCmS7rXQVF88-xKQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. ikea.co.id</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWL67wgvTgiFksZXVDlbVmCKcD6CZaWO3ivxPJ4wUaegTlKbjwqdkansN3MtB1-RSCeOso-GRlmn6vPUtYhm24bj30ma1AyM-BHEDsmOJhlzmt86O8zmx0-6QPZJHqLcW17f3zVgM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDeRfTF-BkPtBTuTcBuALSgP5YN3o4q2ZrwbutS73FTad8tCiYCIlZehR5eME94OSnWrR94e9InFG73P8v-OVmkeA3rpx3b2UI_IgoZE1Aa0Xws8tcZE4WAUeR0IjHL6lynMaCfKd9KwoCuss8gA_3ng==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. gettyimages.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbeAMEtjnyveakfEaNqrDgmFEmPv8JoUh3WWNSrVVuMpINleCpCUM8h7F5qk4IU7WuSvzZE_NXCZG8ZFJDnEFR0LdkUk4ms-jpAQlLDxhf2m3KAuSAJR0QLGqsngLPs0ZMkldsUK-gSzEi5GcsIO4-E3mr7iUbkW6sLNGTnf6Fm3tsMQje6AwHY32ZdjZb3oEPp5WQBmsRjXpthJx5ng==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER5oH7sVlMD0d7MQu6ocvfB5X_NHUBFy7dqKHE7sJ2RU_kxc_1H7fG68HK-O8Wu53JyiJm2QEOvAvFF0AWfvQUOpCkKMdFhLaRCdDOVXPqbiU1Zfh1QjA_25hhlWn_MUYSULPhhOelCixq_MlV7WFD28D8YGFdpjukms-00Ow6JJ7_38G6byO1m98=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. soundstripe.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4C4TRRDxdZGhXp-5W27mgDy8h6fjoh6GV2T8pXwsHXSmL802g7MG6spqwGwF8755mjefrRDMbf9YtjaWsa1DrK0KXUn-_XFG3pZ5ETRo4WYJnOzLGC8vN9--t1_e5qEbVJkTk59dmiN0Z0c72J71zKbwH__tiN3R3vg178IpUTpbdo4EtPT4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. muddycolors.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsSV0ITCkiw4MkDmlYMVoE47dT5JtWXTxXstkjU0VvhFSlIvFFLNNi6IDPq8tNkg-SSMGayuaWp41D8CGsY4M1LJhuZgt3ixJH5zIH7FlMkkWcBeLZfvhFoAm2HblCWD44kq8HsbDkj1AYjKuoCPIyTaj8D2--4XFquXyv4FbqXndgMnFmk28oCkA1cqpm" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. colborlight.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDpAQZP8arEp8FN_GbvNJi9HrK5Qd3a0sGDbo91yU9JbN7UCZD5fsl24CQXd9q07hPMpAJDr7ZyM3_xHpItKBW7k8QIDenTyF4IjTJjuz3-_lbmAwyKatauO4RxDb_dCA-2Z_0yVw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPFAmA3rsPDCugfBgIjyrSkwrOWdP5feb4cfCmAfvgy3urJl9UAkKaIggZbnu85vml08rwx-UjJur1Ahm9KfxvyZVqRzu3ozSiJXucedgK_YgmpkmV9Gmo6kFGRhx5CVZaM9BOJqRkqlroW9l6yb4R1hHPN-sKcuB1gYmWJZ4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. skillmanvideogroup.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeVDcRmhmx3Q_ClSxbphzPvHm2ldy4Ek-OvKtIlDWzpmcgUCygaGuTyKMVpKTOrvD5RWjhSHluHcYIoAvpMyDvmrcd4AsKGr0Nq6i2J-yDElm4wFb5NrLuxmie9pr29TjxwvDzoxMiiw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. futuretheory.co</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIr1HRKQrhF5q3CvlmOvgCjt1YvyQvv9KBENcqDMrfoQoBt_7BcEoAPNxc8cWCMzJiA0KUKEU--QsgUEPmuQkWagu-H4VoE7FYneqYqhr-BUp2gVupznEyCAJTK9Ajc6Ljh4KpPVHQWPH4EC1FLHvB" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. taiarts.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2twrPl4_x4kmkEcNwDfdXBYypJS3zlH1gHW1jgG2QZypVxMkHxZIDKlJ0COxYmBHuT-crYUyP49fDMifP8hSxut_9sK5sTSvHjR8amMDtqNb9b6SUrSXfujMdYLpZhI_NtTv9sck0jw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. veed.io</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4pW24VDVH4mZhHHOwlBIYiNxqvP2JnR5kZ3Mm1tkQ3yijJaL4liM0Eq3BRrrHBArvpCgRlYYHlvhA-CZMECjbehucmPALgvQi3hE9s_j77C1oD0UA7uS8zCy3mHdfy_X-P3uvAJ9YnUvUnnyBfQ82gxmuXMbgRHybSfsCjOMlKA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">24. vyond.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQdeHXJ6KjH4bTQyFB9zsAwoL_nf6oHJ2uL6cAj_KbU9jhygujNdPIY8K_BZDP6pxIPS7BZzUV7RQ42ewTDEqDtF9DlHEME9rpj_-ej3bM6bs-xZuZmWavyxQOL4QSy6VehJdUb8f3OhL1SrdHOwnPUHlFPyDK7V1-r0SVVQ_JJrAhskTG55C5r7PH9XmWLrPb3ef7TUw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">25. advids.co</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGn6GELoemCH7TeDT2MOzFOZjkCdRddQohGyGb4fkKI_Cw2CGvYo9sXuj-enBMwjNS-Qo3q0bdDlqXDzfgy42GXdH4S4ki7RD3TU7RAhGBbGXvuxn2Cd_xDkrXLxWK79XL-DDIdPR78u2VMFbmXhtFYYFKTfEs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">26. premiumbeat.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIz8b8-uNpXwIrKRZD_owCneCKQXpa5v1aK2aPHJM7cj9E9q8MOohTjmcf8iWHzx_aXP6k-BJPgmRTHEEz_7gWBJeR27Hcig1q5tTCFaeOQ8oJHunvbf_hgrhiXUFRt9IkKHvgHhbyiQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">27. renderforest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqZnRjU_DVE5kn36A-fz_waK8lizFv8AypuvT4VM5dSy0A9epc9pPeYuMNzzEUjPbbIRn2HHdXpOZUU8TdFceI9tLcAce5yWyrmRduzDTUWjvxTrTDnBvalb-QDLM6FIZCGHwfNuyrRJHUUgc2V4XVXqiBOSqXg6SwcFkYbw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">28. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHxBYT0dWMViLF0_IdBfParuCVhRRGGT8nw4ndun7_EGvkwzBf78e3CkapV_7ueJygf90yrNJ1QYEEbIqTICBr9o60ZV_Vj0xj7v71ycvnBXxZrzS1Qcb5pi68E1dDYLUGAHBLIyQ=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">29. youtube.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="45.04">45.04秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="54,986">54,986</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. fashion advertisement storyboard site:behance.net
+2. fuchsia pink fashion photography portfolio site:dribbble.com
+3. outdoor café cinematography portfolio modern lighting
+4. fashion film emotion expression character portrait site:vimeo.com">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. fashion advertisement storyboard site:behance.net</li><li class="text-sm text-gray-600">2. fuchsia pink fashion photography portfolio site:dribbble.com</li><li class="text-sm text-gray-600">3. outdoor café cinematography portfolio modern lighting</li><li class="text-sm text-gray-600">4. fashion film emotion expression character portrait site:vimeo.com</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll help you find visual inspiration for your fashion advertisement by searching for actual galleries and portfolios containing the specific visual elements you need. Let me search for direct visual content across multiple relevant categories.Based on my search for visual inspiration galleries, I've found several excellent portfolios and platforms that contain the specific visual elements you need for your fashion advertisement. Here are the key visual galleries I discovered:
+
+## Fashion Advertisement Storyboards & Portfolios
+
+Several direct Behance gallery projects showcase fashion advertisement storyboards, including:
+- Fashion Film Storyboard gallery
+- Kids Fashion Storyboard project
+- Pinterest Advertisement Story Board project
+
+The Azalea Fashion Photography Theme gallery showcases "twelve absolutely beautiful & completely customizable homepages" specifically designed for fashion photographers to "create a fashion portfolio for your fashion photography work".
+
+## Fashion Photography & Styling Portfolios
+
+Dribbble features extensive collections with "3 Fashion Photography Portfolio designs," "21 Fashion Photographer designs," and "28 Fashion Portfolio designs".
+
+For fuchsia/bright pink color inspiration, Dribbble has "100+ Fuchsia designs" that include various fashion and design elements.
+
+## Outdoor Café Cinematography References
+
+A detailed cinematography breakdown shows "how camera department tackled lighting an indoor cafe setting" with a café that "was covered in floor to ceiling windows on two sides" - perfect reference for modern outdoor café lighting techniques.
+
+Café lighting design galleries showcase "small outdoor dining area" setups with "festoon light" creating "zig-zag across that area with a bit of sag between points for a wavelike pattern" that's "simple yet strikingly beautiful".
+
+## Character Emotion & Expression Films
+
+Vimeo features fashion films specifically "focused on emotions, look and pure sensuality" showing "intimate introspection of a woman".
+
+Vimeo's Fashion Films channel is "a totally independent channel for fashion films" with content that goes "further, that stay memorable".
+
+## Key Gallery URLs for Direct Visual Inspiration:
+
+**Behance Storyboard Galleries:**
+- behance.net/gallery/63825525/Fashion-Film-Storyboard
+- behance.net/gallery/182207271/Pinterest-Advertisement-Story-Board
+
+**Dribbble Fashion Portfolios:**
+- dribbble.com/shots/7101753-Azalea-Fashion-Photography-Theme
+- dribbble.com/tags/fuchsia
+- dribbble.com/tags/fashion-portfolio
+
+**Vimeo Fashion Films:**
+- vimeo.com/channels/fashionfilms
+- vimeo.com/channels/715035 (Fashion Filmmaking)
+- vimeo.com/26741529 (Emotion-focused fashion video)
+
+These galleries provide direct visual access to the specific elements you need: fashion advertisement storyboards, bright fuchsia styling examples, modern café cinematography, emotional character expressions, and professional fashion film references for your multilingual subtitle typography design inspiration.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll help you find visual inspiration for your fashion advertisement by searching for actual galleries and portfolios containing the specific visual elements you need. Let me search for direct visual content across multiple relevant categories.Based on my search for visual inspiration galleries, I've found several excellent portfolios and platforms that contain the specific visual elements you need for your fashion advertisement. Here are the key visual galleries I discovered:
+
+## Fashion Advertisement Storyboards & Portfolios
+
+Several direct Behance gallery projects showcase fashion advertisement storyboards, including:
+- Fashion Film Storyboard gallery
+- Kids Fashion Storyboard project
+- Pinterest Advertisement Story Board project
+
+The Azalea Fashion Photography Theme gallery showcases "twelve absolutely beautiful & completely customizable homepages" specifically designed for fashion photographers to "create a fashion portfolio for your fashion photography work".
+
+## Fashion Photography & Styling Portfolios
+
+Dribbble features extensive collections with "3 Fashion Photography Portfolio designs," "21 Fashion Photographer designs," and "28 Fashion Portfolio designs".
+
+For fuchsia/bright pink color inspiration, Dribbble has "100+ Fuchsia designs" that include various fashion and design elements.
+
+## Outdoor Café Cinematography References
+
+A detailed cinematography breakdown shows "how camera department tackled lighting an indoor cafe setting" with a café that "was covered in floor to ceiling windows on two sides" - perfect reference for modern outdoor café lighting techniques.
+
+Café lighting design galleries showcase "small outdoor dining area" setups with "festoon light" creating "zig-zag across that area with a bit of sag between points for a wavelike pattern" that's "simple yet strikingly beautiful".
+
+## Character Emotion & Expression Films
+
+Vimeo features fashion films specifically "focused on emotions, look and pure sensuality" showing "intimate introspection of a woman".
+
+Vimeo's Fashion Films channel is "a totally independent channel for fashion films" with content that goes "further, that stay memorable".
+
+## Key Gallery URLs for Direct Visual Inspiration:
+
+**Behance Storyboard Galleries:**
+- behance.net/gallery/63825525/Fashion-Film-Storyboard
+- behance.net/gallery/182207271/Pinterest-Advertisement-Story-Board
+
+**Dribbble Fashion Portfolios:**
+- dribbble.com/shots/7101753-Azalea-Fashion-Photography-Theme
+- dribbble.com/tags/fuchsia
+- dribbble.com/tags/fashion-portfolio
+
+**Vimeo Fashion Films:**
+- vimeo.com/channels/fashionfilms
+- vimeo.com/channels/715035 (Fashion Filmmaking)
+- vimeo.com/26741529 (Emotion-focused fashion video)
+
+These galleries provide direct visual access to the specific elements you need: fashion advertisement storyboards, bright fuchsia styling examples, modern café cinematography, emotional character expressions, and professional fashion film references for your multilingual subtitle typography design inspiration.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Behance (https://www.behance.net/gallery/63825525/Fashion-Film-Storyboard)
+2. KIDS FASHION STORYBOARD (https://www.behance.net/gallery/187933359/KIDS-FASHION-STORYBOARD?locale=en_US)
+3. Pinterest- Advertisement Story Board (https://www.behance.net/gallery/182207271/Pinterest-Advertisement-Story-Board)
+4. Fashion Photography Portfolio designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/fashion%20photography%20portfolio)
+5. Browse thousands of Photography Portfolio images for design inspiration | Dribbble (https://dribbble.com/search/photography-portfolio)
+6. Fashion Photographer designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/fashion-photographer)
+7. Fashion Portfolio designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/fashion-portfolio)
+8. photographer portfolio by joe colly on Dribbble (https://dribbble.com/shots/8033479-photographer-portfolio)
+9. Azalea - Fashion Photography Theme by Marijana Obradovic for Qode Interactive on Dribbble (https://dribbble.com/shots/7101753-Azalea-Fashion-Photography-Theme)
+10. Portfolio Post Lighting - Post Lights By Portfolio For Modern and Traditional Styles (https://www.portfoliolighting.net/portfolio-post-lighting.html)
+11. Guide to outdoor film lighting equipment – COLBOR (https://www.colborlight.com/blogs/articles/guide-to-outdoor-film-lighting-equipment)
+12. Fashion Filmmaking on Vimeo (https://vimeo.com/channels/715035)
+13. Gucci Gurls - Fashion Film (Gucci and GucciGhost Fashion Inspired Film) on Vimeo (https://vimeo.com/208367369)
+14. FASHION FILM: H MAG: 'SELF-PORTRAIT' on Vimeo (https://vimeo.com/327364524)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/63825525/Fashion-Film-Storyboard" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/187933359/KIDS-FASHION-STORYBOARD?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. KIDS FASHION STORYBOARD</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/182207271/Pinterest-Advertisement-Story-Board" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Pinterest- Advertisement Story Board</a></li><li class="text-sm"><a href="https://dribbble.com/tags/fashion%20photography%20portfolio" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Fashion Photography Portfolio designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/search/photography-portfolio" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Browse thousands of Photography Portfolio images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/fashion-photographer" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Fashion Photographer designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/fashion-portfolio" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Fashion Portfolio designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/8033479-photographer-portfolio" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. photographer portfolio by joe colly on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/7101753-Azalea-Fashion-Photography-Theme" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Azalea - Fashion Photography Theme by Marijana Obradovic for Qode Interactive on Dribbble</a></li><li class="text-sm"><a href="https://www.portfoliolighting.net/portfolio-post-lighting.html" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Portfolio Post Lighting - Post Lights By Portfolio For Modern and Traditional Styles</a></li><li class="text-sm"><a href="https://www.colborlight.com/blogs/articles/guide-to-outdoor-film-lighting-equipment" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Guide to outdoor film lighting equipment – COLBOR</a></li><li class="text-sm"><a href="https://vimeo.com/channels/715035" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Fashion Filmmaking on Vimeo</a></li><li class="text-sm"><a href="https://vimeo.com/208367369" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. Gucci Gurls - Fashion Film (Gucci and GucciGhost Fashion Inspired Film) on Vimeo</a></li><li class="text-sm"><a href="https://vimeo.com/327364524" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. FASHION FILM: H MAG: 'SELF-PORTRAIT' on Vimeo</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="120.27">120.27秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="735,128">735,128</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. fashion advertisement storyboard frames site:behance.net
+2. Kirill Romanovskii Storyboard concept for reels Behance
+3. Kirill Romanovskii storyboard commercial fuchsia fashion
+4. site:pinterest.com board fuchsia outfit
+5. modern outdoor cafe site:behance.net
+6. cinematic lighting effects site:behance.net
+7. cinematic lighting photography gallery site:behance.net cinematic lighting
+8. cinematic lighting dribbble.com/shots
+9. character emotion expression reference sheet site:behance.net
+10. multilingual subtitles typography design site:behance.net
+11. multilingual subtitles design site:behance.net
+12. subtitle typography design site:behance.net
+13. lower third typography subtitles site:behance.net
+14. subtitles design site:behance.net interview subtitles typography
+15. site:dribbble.com/shots subtitles">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. fashion advertisement storyboard frames site:behance.net</li><li class="text-sm text-gray-600">2. Kirill Romanovskii Storyboard concept for reels Behance</li><li class="text-sm text-gray-600">3. Kirill Romanovskii storyboard commercial fuchsia fashion</li><li class="text-sm text-gray-600">4. site:pinterest.com board fuchsia outfit</li><li class="text-sm text-gray-600">5. modern outdoor cafe site:behance.net</li><li class="text-sm text-gray-600">6. cinematic lighting effects site:behance.net</li><li class="text-sm text-gray-600">7. cinematic lighting photography gallery site:behance.net cinematic lighting</li><li class="text-sm text-gray-600">8. cinematic lighting dribbble.com/shots</li><li class="text-sm text-gray-600">9. character emotion expression reference sheet site:behance.net</li><li class="text-sm text-gray-600">10. multilingual subtitles typography design site:behance.net</li><li class="text-sm text-gray-600">11. multilingual subtitles design site:behance.net</li><li class="text-sm text-gray-600">12. subtitle typography design site:behance.net</li><li class="text-sm text-gray-600">13. lower third typography subtitles site:behance.net</li><li class="text-sm text-gray-600">14. subtitles design site:behance.net interview subtitles typography</li><li class="text-sm text-gray-600">15. site:dribbble.com/shots subtitles</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are curated visual galleries you can reference for each aspect of your video ad:
+
+1. Fashion Advertisement Storyboard Frames  
+- “Fashion Show Storyboard” by Multiple Owners on Behance: a 6-frame storyboard visualizing a runway narrative, usable as a template for pacing and shot composition ([behance.net](https://www.behance.net/gallery/225687837/Fashion-Show-Storyboard?utm_source=chatgpt.com))  
+- “Statement in Style: Storyboarding & Creative Direction” by Victoria Young on Behance: a detailed 10-frame storyboard for a branded campaign, showcasing framing, camera movements, and transitions ([behance.net](https://www.behance.net/search/projects/fashion%20storyboard?utm_source=chatgpt.com))  
+
+2. Young Women Styling in Bright Fuchsia Outfits  
+- “Fuchsia Outfits” board by Louise d’Orleans on Pinterest: 205 pins of street-style and editorial fuchsia ensembles, from dresses to separates, shot in varied light and locations ([pinterest.com](https://www.pinterest.com/louisedorleans/fuchsia-outfits/))  
+- “Fuchsia Wide Leg Pants Outfit” pin on Pinterest by Pink April Diary: a high-contrast fuchsia trousers look paired with dark tops, perfect for café or urban settings   
+
+3. Modern Outdoor Café Scenes  
+- “outdoor cafeteria design” by Merehan Elsayed on Behance: a photoreal 3D-rendered café terrace, showing furniture layout, materials, and daylighting ([behance.net](https://www.behance.net/gallery/147675811/outdoor-cafeteria-design?utm_source=chatgpt.com))  
+- “Modern cafe” shot by Justin Howlett on Dribbble: 10+ design variations inspired by a real Sydney café, illustrating mood, color palettes, and plant integration ([dribbble.com](https://dribbble.com/shots/15807500-Modern-cafe?utm_source=chatgpt.com))  
+- “Modern cool outdoor cafe space” vector illustration by CatMadePattern on Creative Market: hand-drawn engraving-style scene of a minimalistic patio, useful for mood-board sketches ([creativemarket.com](https://creativemarket.com/CatMadePattern/5433635-Modern-cool-outdoor-cafe-space.?utm_source=chatgpt.com))  
+
+4. Cinematic Lighting Effects  
+- “Knight of Arrows” portfolio by Polina Washington on Behance: a series of stylized portraits using dramatic key and rim lighting for strong chiaroscuro ([behance.net](https://www.behance.net/search/projects/cinematic%20lighting?utm_source=chatgpt.com))  
+- “In the Mood of Shadows; Cinematic Portraits” by Moj Mortazavi on Behance: 8+ frames of character studies with colored gobo lights and volumetric haze ([behance.net](https://www.behance.net/search/projects/cinematic%20lighting?utm_source=chatgpt.com))  
+
+5. Character Emotion Expression Shots  
+- “Face Expression Sheet | Character Design” by DoctorCocoBean on DeviantArt: a 16-expression reference sheet covering basic emotions, drawn on-model for consistent character animation ([deviantart.com](https://www.deviantart.com/doctorcocobean/art/Face-Expression-Sheet-Character-Design-850547036?utm_source=chatgpt.com))  
+- “Free Reference Sheet for Learning to Draw Eyes and Expressions” by Rocío on Domestika: downloadable PDF showing 6 eye-focused moods and corresponding full-face expressions ([domestika.org](https://www.domestika.org/en/blog/8634-free-reference-sheet-for-learning-to-draw-eyes-and-expressions?utm_source=chatgpt.com))  
+
+6. Visual Typography Design for Multilingual Subtitles  
+- “Typography Scenes Lower Thirds” template pack by pixegotv on Motion Array: 12 animated lower-third designs with universal expressions, auto-resize for any language length ([motionarray.com](https://motionarray.com/after-effects-templates/typography-scenes-lower-thirds-433129/?utm_source=chatgpt.com))  
+- “Subtitles Dribbble” by Adriana Duque on Dribbble: a creative shot experimenting with position, weight, and background contrast for on-screen text ([dribbble.com](https://dribbble.com/shots/5138528-Subtitles-Dribbble?utm_source=chatgpt.com))  
+
+Use these galleries directly as visual inspiration for your storyboard layouts, styling references, location aesthetics, lighting setups, character performance guides, and subtitle treatments.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are curated visual galleries you can reference for each aspect of your video ad:
+
+1. Fashion Advertisement Storyboard Frames  
+- “Fashion Show Storyboard” by Multiple Owners on Behance: a 6-frame storyboard visualizing a runway narrative, usable as a template for pacing and shot composition ([behance.net](https://www.behance.net/gallery/225687837/Fashion-Show-Storyboard?utm_source=chatgpt.com))  
+- “Statement in Style: Storyboarding & Creative Direction” by Victoria Young on Behance: a detailed 10-frame storyboard for a branded campaign, showcasing framing, camera movements, and transitions ([behance.net](https://www.behance.net/search/projects/fashion%20storyboard?utm_source=chatgpt.com))  
+
+2. Young Women Styling in Bright Fuchsia Outfits  
+- “Fuchsia Outfits” board by Louise d’Orleans on Pinterest: 205 pins of street-style and editorial fuchsia ensembles, from dresses to separates, shot in varied light and locations ([pinterest.com](https://www.pinterest.com/louisedorleans/fuchsia-outfits/))  
+- “Fuchsia Wide Leg Pants Outfit” pin on Pinterest by Pink April Diary: a high-contrast fuchsia trousers look paired with dark tops, perfect for café or urban settings   
+
+3. Modern Outdoor Café Scenes  
+- “outdoor cafeteria design” by Merehan Elsayed on Behance: a photoreal 3D-rendered café terrace, showing furniture layout, materials, and daylighting ([behance.net](https://www.behance.net/gallery/147675811/outdoor-cafeteria-design?utm_source=chatgpt.com))  
+- “Modern cafe” shot by Justin Howlett on Dribbble: 10+ design variations inspired by a real Sydney café, illustrating mood, color palettes, and plant integration ([dribbble.com](https://dribbble.com/shots/15807500-Modern-cafe?utm_source=chatgpt.com))  
+- “Modern cool outdoor cafe space” vector illustration by CatMadePattern on Creative Market: hand-drawn engraving-style scene of a minimalistic patio, useful for mood-board sketches ([creativemarket.com](https://creativemarket.com/CatMadePattern/5433635-Modern-cool-outdoor-cafe-space.?utm_source=chatgpt.com))  
+
+4. Cinematic Lighting Effects  
+- “Knight of Arrows” portfolio by Polina Washington on Behance: a series of stylized portraits using dramatic key and rim lighting for strong chiaroscuro ([behance.net](https://www.behance.net/search/projects/cinematic%20lighting?utm_source=chatgpt.com))  
+- “In the Mood of Shadows; Cinematic Portraits” by Moj Mortazavi on Behance: 8+ frames of character studies with colored gobo lights and volumetric haze ([behance.net](https://www.behance.net/search/projects/cinematic%20lighting?utm_source=chatgpt.com))  
+
+5. Character Emotion Expression Shots  
+- “Face Expression Sheet | Character Design” by DoctorCocoBean on DeviantArt: a 16-expression reference sheet covering basic emotions, drawn on-model for consistent character animation ([deviantart.com](https://www.deviantart.com/doctorcocobean/art/Face-Expression-Sheet-Character-Design-850547036?utm_source=chatgpt.com))  
+- “Free Reference Sheet for Learning to Draw Eyes and Expressions” by Rocío on Domestika: downloadable PDF showing 6 eye-focused moods and corresponding full-face expressions ([domestika.org](https://www.domestika.org/en/blog/8634-free-reference-sheet-for-learning-to-draw-eyes-and-expressions?utm_source=chatgpt.com))  
+
+6. Visual Typography Design for Multilingual Subtitles  
+- “Typography Scenes Lower Thirds” template pack by pixegotv on Motion Array: 12 animated lower-third designs with universal expressions, auto-resize for any language length ([motionarray.com](https://motionarray.com/after-effects-templates/typography-scenes-lower-thirds-433129/?utm_source=chatgpt.com))  
+- “Subtitles Dribbble” by Adriana Duque on Dribbble: a creative shot experimenting with position, weight, and background contrast for on-screen text ([dribbble.com](https://dribbble.com/shots/5138528-Subtitles-Dribbble?utm_source=chatgpt.com))  
+
+Use these galleries directly as visual inspiration for your storyboard layouts, styling references, location aesthetics, lighting setups, character performance guides, and subtitle treatments.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Fashion Show Storyboard :: Behance (https://www.behance.net/gallery/225687837/Fashion-Show-Storyboard?utm_source=chatgpt.com)
+2. Fashion Storyboard Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/fashion%20storyboard?utm_source=chatgpt.com)
+3. 200 Fuchsia Outfits ideas in 2025 | outfits, fuchsia outfit, fashion (https://www.pinterest.com/louisedorleans/fuchsia-outfits/)
+4. outdoor cafeteria design :: Behance (https://www.behance.net/gallery/147675811/outdoor-cafeteria-design?utm_source=chatgpt.com)
+5. Modern cafe by Justin Howlett on Dribbble (https://dribbble.com/shots/15807500-Modern-cafe?utm_source=chatgpt.com)
+6. Modern cool outdoor cafe space., a Food Illustration by CatMadePattern (https://creativemarket.com/CatMadePattern/5433635-Modern-cool-outdoor-cafe-space.?utm_source=chatgpt.com)
+7. Cinematic Lighting Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/cinematic%20lighting?utm_source=chatgpt.com)
+8. Face Expression Sheet | Character Design by DoctorCocoBean on DeviantArt (https://www.deviantart.com/doctorcocobean/art/Face-Expression-Sheet-Character-Design-850547036?utm_source=chatgpt.com)
+9. Free Reference Sheet for Learning to Draw Eyes and Expressions | Domestika (https://www.domestika.org/en/blog/8634-free-reference-sheet-for-learning-to-draw-eyes-and-expressions?utm_source=chatgpt.com)
+10. Typography Scenes Lower Thirds - After Effects Templates | Motion Array (https://motionarray.com/after-effects-templates/typography-scenes-lower-thirds-433129/?utm_source=chatgpt.com)
+11. Subtitles Dribbble by Adriana Duque on Dribbble (https://dribbble.com/shots/5138528-Subtitles-Dribbble?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/225687837/Fashion-Show-Storyboard?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Fashion Show Storyboard :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/fashion%20storyboard?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Fashion Storyboard Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.pinterest.com/louisedorleans/fuchsia-outfits/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. 200 Fuchsia Outfits ideas in 2025 | outfits, fuchsia outfit, fashion</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/147675811/outdoor-cafeteria-design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. outdoor cafeteria design :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/15807500-Modern-cafe?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Modern cafe by Justin Howlett on Dribbble</a></li><li class="text-sm"><a href="https://creativemarket.com/CatMadePattern/5433635-Modern-cool-outdoor-cafe-space.?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Modern cool outdoor cafe space., a Food Illustration by CatMadePattern</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/cinematic%20lighting?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Cinematic Lighting Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.deviantart.com/doctorcocobean/art/Face-Expression-Sheet-Character-Design-850547036?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Face Expression Sheet | Character Design by DoctorCocoBean on DeviantArt</a></li><li class="text-sm"><a href="https://www.domestika.org/en/blog/8634-free-reference-sheet-for-learning-to-draw-eyes-and-expressions?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Free Reference Sheet for Learning to Draw Eyes and Expressions | Domestika</a></li><li class="text-sm"><a href="https://motionarray.com/after-effects-templates/typography-scenes-lower-thirds-433129/?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Typography Scenes Lower Thirds - After Effects Templates | Motion Array</a></li><li class="text-sm"><a href="https://dribbble.com/shots/5138528-Subtitles-Dribbble?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Subtitles Dribbble by Adriana Duque on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
