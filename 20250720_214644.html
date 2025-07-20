@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to design a new drink menu poster for a bar themed around "Painful Drinking," with a bizarre, abstract, and colorful style.  You need to search for Neo-Expressionism and Weird Illustration style drink menu posters, bold-colored beverage menu designs, unusually composed art posters, and visually striking designs with strong emotional tension.">The user needs to design a new drink menu poster for a bar themed around "Painful Drinking," with a bizarre, abstract, and colorful style.  You need to search for Neo-Expressionism and Weird Illustration style drink menu posters, bold-colored beverage menu designs, unusually composed art posters, and visually striking designs with strong emotional tension.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 21:47:33</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="15.45">15.45秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,173">1,173</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Neo-Expressionism art examples
+2. Weird illustration style drink menu posters
+3. Bold colored beverage menu designs abstract
+4. Unusually composed abstract art posters
+5. Visually striking designs strong emotional tension art">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Neo-Expressionism art examples</li><li class="text-sm text-gray-600">2. Weird illustration style drink menu posters</li><li class="text-sm text-gray-600">3. Bold colored beverage menu designs abstract</li><li class="text-sm text-gray-600">4. Unusually composed abstract art posters</li><li class="text-sm text-gray-600">5. Visually striking designs strong emotional tension art</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To design a "Painful Drinking" themed menu poster with a bizarre, abstract, and colorful style, drawing inspiration from various art and design movements will be key.
+
+**Neo-Expressionism**
+Neo-Expressionism, a movement from the late 1970s and 1980s, is characterized by its raw, expressive brushstrokes, intense colors, and rejection of traditional composition. It often features large-scale works and figurative subject matter, incorporating historical and mythological imagery. Artists like Georg Baselitz, Jean-Michel Basquiat, and Anselm Kiefer are prominent figures in this style. For instance, Baselitz's "Adieu" (1982) features upside-down figures and a bright yellow checkered background, showcasing a jarring use of color and unusual composition. Basquiat's work often includes graffiti-inspired imagery and symbolic text, conveying emotionally charged subjects. This style's emphasis on strong emotional response, distortion, and bold colors makes it highly relevant for a "Painful Drinking" theme.
+
+**Weird and Unusually Composed Illustration/Art Posters**
+"Weird" and "unusual" compositions often involve abstract shapes, forms, and sometimes a playful or surreal approach. These designs can incorporate unexpected elements, contrasting textures, and a lack of conventional balance to create visual intrigue. For a drink menu, this could translate into abstract or distorted representations of drinks or figures, utilizing mixed media or collages as seen in some unusual wall art. Some menu designs already lean into quirky or abstract elements, using unusual placement of graphics and text, or incorporating unique hand-drawn illustrations.
+
+**Bold-Colored Beverage Menu Designs**
+Bold colors are essential for a striking and emotionally resonant design. Designers often use vivid hues and contrasting color palettes to create energy and excitement in beverage menus. For example, pairing warm colors like red and orange with cool colors like blue and green, or using complementary colors, can create high visual tension and make elements pop. Abstract art itself frequently employs bold colors and simple shapes to add vibrancy and evoke emotional responses. Some modern drink menu templates already utilize bright colors and abstract geometric designs.
+
+**Visually Striking Designs with Strong Emotional Tension**
+Tension in art can be visual, emotional, or psychological, and it serves to engage the viewer and prompt interpretation. This can be achieved through contrasting colors, shapes, and forms (visual tension), compelling subject matter (emotional tension evoking anxiety, sadness, or unease), or symbolism (psychological tension). Historical examples like Edvard Munch's "The Scream" or Frida Kahlo's "The Broken Column" demonstrate how distorted forms, vibrant colors, or poignant imagery can convey intense emotional and physical pain. For a "Painful Drinking" theme, designs can evoke introspection and emotional depth through distorted figures, merging elements, and a powerful visual language. This could involve the use of raw, brutish depictions and intense colors to convey the theme effectively.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To design a "Painful Drinking" themed menu poster with a bizarre, abstract, and colorful style, drawing inspiration from various art and design movements will be key.
+
+**Neo-Expressionism**
+Neo-Expressionism, a movement from the late 1970s and 1980s, is characterized by its raw, expressive brushstrokes, intense colors, and rejection of traditional composition. It often features large-scale works and figurative subject matter, incorporating historical and mythological imagery. Artists like Georg Baselitz, Jean-Michel Basquiat, and Anselm Kiefer are prominent figures in this style. For instance, Baselitz's "Adieu" (1982) features upside-down figures and a bright yellow checkered background, showcasing a jarring use of color and unusual composition. Basquiat's work often includes graffiti-inspired imagery and symbolic text, conveying emotionally charged subjects. This style's emphasis on strong emotional response, distortion, and bold colors makes it highly relevant for a "Painful Drinking" theme.
+
+**Weird and Unusually Composed Illustration/Art Posters**
+"Weird" and "unusual" compositions often involve abstract shapes, forms, and sometimes a playful or surreal approach. These designs can incorporate unexpected elements, contrasting textures, and a lack of conventional balance to create visual intrigue. For a drink menu, this could translate into abstract or distorted representations of drinks or figures, utilizing mixed media or collages as seen in some unusual wall art. Some menu designs already lean into quirky or abstract elements, using unusual placement of graphics and text, or incorporating unique hand-drawn illustrations.
+
+**Bold-Colored Beverage Menu Designs**
+Bold colors are essential for a striking and emotionally resonant design. Designers often use vivid hues and contrasting color palettes to create energy and excitement in beverage menus. For example, pairing warm colors like red and orange with cool colors like blue and green, or using complementary colors, can create high visual tension and make elements pop. Abstract art itself frequently employs bold colors and simple shapes to add vibrancy and evoke emotional responses. Some modern drink menu templates already utilize bright colors and abstract geometric designs.
+
+**Visually Striking Designs with Strong Emotional Tension**
+Tension in art can be visual, emotional, or psychological, and it serves to engage the viewer and prompt interpretation. This can be achieved through contrasting colors, shapes, and forms (visual tension), compelling subject matter (emotional tension evoking anxiety, sadness, or unease), or symbolism (psychological tension). Historical examples like Edvard Munch's "The Scream" or Frida Kahlo's "The Broken Column" demonstrate how distorted forms, vibrant colors, or poignant imagery can convey intense emotional and physical pain. For a "Painful Drinking" theme, designs can evoke introspection and emotional depth through distorted figures, merging elements, and a powerful visual language. This could involve the use of raw, brutish depictions and intense colors to convey the theme effectively.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. theartstory.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmJuwxddoLrfJJ8iZOEVSZnRDjqrsgLti21zlnDMEbTnoAWd-pkNtHUQx1coOZGRlS5qU4_2r7FTC-CE9wnFnkmCdOJHiBAcoefO-_4IGnOKdo2YxyPDi6QDmVnrMr6s1two2fZTX1PbUbHS567PTAuA==)
+2. masterclass.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfncirVMGXdGTlZSnJFvtMh0iYaHtF0rq4oxldUPpUGJEOTHD9jfSrLfnVVkJYX9ZhkumGgU9YcOqcFQWK22P4DCeZgNgoZ5ILNinRFRDX5pm0c8VzfOKgMPJdfm72NxWa3XYuWSw_pt_o4Jp7jAPJmhvic0du)
+3. ilustromania.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ2PhvF5qBggR2hAPDznTzqbMFo3HiDLKeGhq8VzKaA3zIb4BleJLx5_uov9xRAf4JxeMSWNW2absKLIxgGuedbesDBX8wQPdJpgqnWGFxMIPVwwaLyH0cLkeWFgscOXiDUlZmON70IO0Myo8PJo9rqlPfoNPaukOltns=)
+4. guggenheim.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9jxkFNmQTycBmytEL7OwG6sMqJWFn8K8583qbFeQ_oa1WP9suk6db5r3kCNIHAtBwuPy4ZNWWRMeV7nEudij8U7dQ3bp7GoN5TDfwRarCke4qqQhpwn74-dDPhTtgejorhsx23zgNTh2PP0TyR1ZRM9rfxDBVGQ==)
+5. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp6d3sbPx71ZT1kPlO9EZdygdy5xFM-7N5aPQJYAI_OZvobF6Wf1D7XmCSSMUNSBQxxkfZwFG30ux_QKU7GXnlrvg3e3V7ul9jzmG6ULCdw8ubBom_xnNvx5X9D6kEEBOGEjmh_wR5txw_)
+6. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG71LxXNEc2i39l4Vu-B2IgK8_UxmxG9iKVKjnfWMv7Ra5vB9HgBaCvPAgXCPysMdaX4XA8AQEl63HfE4wqdWjf_SVc8XNNaqAIrHtr_lffLNG4AE77Gn_372LzNVcAVKuBFN6hP_VA7L247544dNHIwtA1NDYSoKuneHJLgGbjaPA48OAlfSibNXOV9qGm3Wk6Ot5yfUVw3Y-1u06VYcVS3LctPf4qio_63z7mJqAaXyeGHlh2p4ZILCKVe0JMYmnO8mrt0IknOBhto_qFeO977RWABr9bM0gMXXN5UGASspkRbqXjKaKdZRlhf363iHDmQDbi8BW8fEVx20a_ZJlhzS4hJ8w2Xwg_zTo_Du5cElGtV_zbisnURg==)
+7. artfinder.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUR4hOOf511KFsKebT0zfToEF06ew6uZA9Ax1fcz-4jhCPOX2x38fDg-OAGAz658pWiOCmBComoLoWwHewQeD6eRuI8XAwRzQWPCjBlQR1C-rbPSbNFakP0RF7TgtiJ4n3FpM4A23znu1V)
+8. numberanalytics.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0qnqzqKZS_JnMZj-rN9gVXQpaxFxkSnCly_Ad9BVQP4ZjhmZgXCfrRPLMebq5IJck-9AZFkDAK-yEeLU7tMXvNwyLCO5whCpAs13huUdhSXNP4KjWHMoNqGVQYJxKlLintBvy5YoOEac2q_iYRrfCfQ==)
+9. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHey-tG4atJSvQiIkMtODfXpstr8TSDJ6snFCUmnXB3OhAFzMe8EVprbYgVLKJVZt017lEruMtDO99UyHeHZBQG8zZojKmgUFHmueA6ldZQzwNWlCp6riQ2rQaSJOC1tbARBcOp_QI=)
+10. reallygooddesigns.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU9mwmmDJHGmAjiqdWuAn8zjgvnqxHQV2v4phhklHpckpQGK2i9OaHOl2Be9h9NSH62kzxyOIjba2uwV6I3D0vjLLIqHIF6U_cEvwYRZgAoAYfMHahvArYvNhW1NwHmjQvyrtaUA2gsF3ayvDN1w==)
+11. lemon8-app.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzpg8x6EFdQ57fo4bxPKvtRo9j2bQ3VmyNfZMXu2tW3Xr1ZHAAh1UK_RL8ojRZxtnhsjX-ErGazibtxwhgV-ZuA8EbE1SEDi2B1UqCYhAAREUO3sY2l61Ypb4f_oaz3nBXrsap6h40ctslRmaeDpTTH2hKqRAN8VOFbTt5NZawzxR5JAu9)
+12. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmsOrfeiArfMIthKsivDgH9ECQCsKJga3Mh9QeLqG-AikZYKSW0e4SNW8LagxZzrMmUkC2Ncf-lB-PJvod22Q20mF3BfcSiUC00y-XtlDJ_4pwqFhyKef37xsXB4Bxqxbfe38583xv4xq89tqOMU8muDd_tvTE5Q==)
+13. photoadking.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVKj8hSxTbvcw7cST3EAiGo0NCsOwtcoYGx6OptUMogIL-I5R7InrGobsBfSXkNzgBQaV8y1FHWAhXPLCXB6RNCgwo4ul1pS34GxRoD0oEedvf1_OxdbIOoj5fIydFBVCRebJ7PTqY9iZRdkX4jCSswW8=)
+14. numberanalytics.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoyegRxj-L_g4AD4cEt4oyuMyYvin5haAKV90u7uTUdODB9MySjyGv2LtIUcXn534y8ZeV4PShiFIhhUOo9zUcLgR8DjJwtpfpTtVn7eFGGFcjHOVzVSAuDFBOFyG6fZS9K3gZ7cbSsXD0Uw30d8bSt35APLa7vCNCy9zMbVeMzoq4v4RRMpq2AXw=)
+15. eastendprints.co.uk (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoGKwgmlC9N2L6Pi91lqi98BVZbZBfvjxgcQuT1POXF4VH8eo5Vb09qzUwbNxu6l66FIU4ih9Cwwid96ANOiEOxZZD27-vvhv1KJm8Uyomvy73NnRKyOoHUlR4gI4G5LoOqsSHJGf56GhNEgNRsRDbrQ==)
+16. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQBas-0FRYhqxv6oKyZLeN4ySB6rBBnV0bF4-QRX2Ah3PNYjZIU7UKlyiO6vdrRocc6PQTPVdIKkxt-ZbslQfpnJQrLu3xilIF5wqWHOsxtXDgexiZntwHgC10RredVTmGePUbiaVBK95MDoO4VMVJOE2m)
+17. venngage.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkt2wgEOljhh3J0Abu3hvfB9XL5atZtMhxwhmnIM3Y8WaKgwZIiQMxbBQiFmtulXt9V4jKowz32q2v5NhB-mhHJPeQgHJManAoHchotL5FJA0TiX2MgrprPDZjkbJ3fcEzfZSM)
+18. stockcake.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhN77Ihr_6VJnHvcEzO2uA2kYC8rFHvKaAoGaH6Ia8ZLPBwQblUksjebLbhS5-TY-ZTAE74EUDPqelq7_EN5KxhQqKjYUO_-t03D9eAyzgRgtrRvBH-jDmOumglyNh1jO1_vEElDLPzDoq8zSknFQ2afnAyzk=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmJuwxddoLrfJJ8iZOEVSZnRDjqrsgLti21zlnDMEbTnoAWd-pkNtHUQx1coOZGRlS5qU4_2r7FTC-CE9wnFnkmCdOJHiBAcoefO-_4IGnOKdo2YxyPDi6QDmVnrMr6s1two2fZTX1PbUbHS567PTAuA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. theartstory.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfncirVMGXdGTlZSnJFvtMh0iYaHtF0rq4oxldUPpUGJEOTHD9jfSrLfnVVkJYX9ZhkumGgU9YcOqcFQWK22P4DCeZgNgoZ5ILNinRFRDX5pm0c8VzfOKgMPJdfm72NxWa3XYuWSw_pt_o4Jp7jAPJmhvic0du" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. masterclass.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ2PhvF5qBggR2hAPDznTzqbMFo3HiDLKeGhq8VzKaA3zIb4BleJLx5_uov9xRAf4JxeMSWNW2absKLIxgGuedbesDBX8wQPdJpgqnWGFxMIPVwwaLyH0cLkeWFgscOXiDUlZmON70IO0Myo8PJo9rqlPfoNPaukOltns=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. ilustromania.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9jxkFNmQTycBmytEL7OwG6sMqJWFn8K8583qbFeQ_oa1WP9suk6db5r3kCNIHAtBwuPy4ZNWWRMeV7nEudij8U7dQ3bp7GoN5TDfwRarCke4qqQhpwn74-dDPhTtgejorhsx23zgNTh2PP0TyR1ZRM9rfxDBVGQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. guggenheim.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp6d3sbPx71ZT1kPlO9EZdygdy5xFM-7N5aPQJYAI_OZvobF6Wf1D7XmCSSMUNSBQxxkfZwFG30ux_QKU7GXnlrvg3e3V7ul9jzmG6ULCdw8ubBom_xnNvx5X9D6kEEBOGEjmh_wR5txw_" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG71LxXNEc2i39l4Vu-B2IgK8_UxmxG9iKVKjnfWMv7Ra5vB9HgBaCvPAgXCPysMdaX4XA8AQEl63HfE4wqdWjf_SVc8XNNaqAIrHtr_lffLNG4AE77Gn_372LzNVcAVKuBFN6hP_VA7L247544dNHIwtA1NDYSoKuneHJLgGbjaPA48OAlfSibNXOV9qGm3Wk6Ot5yfUVw3Y-1u06VYcVS3LctPf4qio_63z7mJqAaXyeGHlh2p4ZILCKVe0JMYmnO8mrt0IknOBhto_qFeO977RWABr9bM0gMXXN5UGASspkRbqXjKaKdZRlhf363iHDmQDbi8BW8fEVx20a_ZJlhzS4hJ8w2Xwg_zTo_Du5cElGtV_zbisnURg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUR4hOOf511KFsKebT0zfToEF06ew6uZA9Ax1fcz-4jhCPOX2x38fDg-OAGAz658pWiOCmBComoLoWwHewQeD6eRuI8XAwRzQWPCjBlQR1C-rbPSbNFakP0RF7TgtiJ4n3FpM4A23znu1V" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. artfinder.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0qnqzqKZS_JnMZj-rN9gVXQpaxFxkSnCly_Ad9BVQP4ZjhmZgXCfrRPLMebq5IJck-9AZFkDAK-yEeLU7tMXvNwyLCO5whCpAs13huUdhSXNP4KjWHMoNqGVQYJxKlLintBvy5YoOEac2q_iYRrfCfQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. numberanalytics.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHey-tG4atJSvQiIkMtODfXpstr8TSDJ6snFCUmnXB3OhAFzMe8EVprbYgVLKJVZt017lEruMtDO99UyHeHZBQG8zZojKmgUFHmueA6ldZQzwNWlCp6riQ2rQaSJOC1tbARBcOp_QI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU9mwmmDJHGmAjiqdWuAn8zjgvnqxHQV2v4phhklHpckpQGK2i9OaHOl2Be9h9NSH62kzxyOIjba2uwV6I3D0vjLLIqHIF6U_cEvwYRZgAoAYfMHahvArYvNhW1NwHmjQvyrtaUA2gsF3ayvDN1w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. reallygooddesigns.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzpg8x6EFdQ57fo4bxPKvtRo9j2bQ3VmyNfZMXu2tW3Xr1ZHAAh1UK_RL8ojRZxtnhsjX-ErGazibtxwhgV-ZuA8EbE1SEDi2B1UqCYhAAREUO3sY2l61Ypb4f_oaz3nBXrsap6h40ctslRmaeDpTTH2hKqRAN8VOFbTt5NZawzxR5JAu9" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. lemon8-app.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmsOrfeiArfMIthKsivDgH9ECQCsKJga3Mh9QeLqG-AikZYKSW0e4SNW8LagxZzrMmUkC2Ncf-lB-PJvod22Q20mF3BfcSiUC00y-XtlDJ_4pwqFhyKef37xsXB4Bxqxbfe38583xv4xq89tqOMU8muDd_tvTE5Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVKj8hSxTbvcw7cST3EAiGo0NCsOwtcoYGx6OptUMogIL-I5R7InrGobsBfSXkNzgBQaV8y1FHWAhXPLCXB6RNCgwo4ul1pS34GxRoD0oEedvf1_OxdbIOoj5fIydFBVCRebJ7PTqY9iZRdkX4jCSswW8=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. photoadking.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoyegRxj-L_g4AD4cEt4oyuMyYvin5haAKV90u7uTUdODB9MySjyGv2LtIUcXn534y8ZeV4PShiFIhhUOo9zUcLgR8DjJwtpfpTtVn7eFGGFcjHOVzVSAuDFBOFyG6fZS9K3gZ7cbSsXD0Uw30d8bSt35APLa7vCNCy9zMbVeMzoq4v4RRMpq2AXw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. numberanalytics.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoGKwgmlC9N2L6Pi91lqi98BVZbZBfvjxgcQuT1POXF4VH8eo5Vb09qzUwbNxu6l66FIU4ih9Cwwid96ANOiEOxZZD27-vvhv1KJm8Uyomvy73NnRKyOoHUlR4gI4G5LoOqsSHJGf56GhNEgNRsRDbrQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. eastendprints.co.uk</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQBas-0FRYhqxv6oKyZLeN4ySB6rBBnV0bF4-QRX2Ah3PNYjZIU7UKlyiO6vdrRocc6PQTPVdIKkxt-ZbslQfpnJQrLu3xilIF5wqWHOsxtXDgexiZntwHgC10RredVTmGePUbiaVBK95MDoO4VMVJOE2m" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkt2wgEOljhh3J0Abu3hvfB9XL5atZtMhxwhmnIM3Y8WaKgwZIiQMxbBQiFmtulXt9V4jKowz32q2v5NhB-mhHJPeQgHJManAoHchotL5FJA0TiX2MgrprPDZjkbJ3fcEzfZSM" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. venngage.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhN77Ihr_6VJnHvcEzO2uA2kYC8rFHvKaAoGaH6Ia8ZLPBwQblUksjebLbhS5-TY-ZTAE74EUDPqelq7_EN5KxhQqKjYUO_-t03D9eAyzgRgtrRvBH-jDmOumglyNh1jO1_vEElDLPzDoq8zSknFQ2afnAyzk=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. stockcake.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="34.63">34.63秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="45,579">45,579</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. neo-expressionism drink menu poster site:behance.net
+2. weird illustration drink menu design site:dribbble.com
+3. abstract colorful bar poster design portfolio
+4. bizarre expressionist bar art portfolio site:artstation.com">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. neo-expressionism drink menu poster site:behance.net</li><li class="text-sm text-gray-600">2. weird illustration drink menu design site:dribbble.com</li><li class="text-sm text-gray-600">3. abstract colorful bar poster design portfolio</li><li class="text-sm text-gray-600">4. bizarre expressionist bar art portfolio site:artstation.com</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual galleries and portfolios showcasing drink menu designs with Neo-Expressionism, weird illustration styles, and bold abstract aesthetics that would fit the "Painful Drinking" theme.Based on my search, I've found several visual galleries and portfolios that showcase drink menu designs and abstract/expressionist artwork that would be perfect inspiration for your "Painful Drinking" bar poster. Here are the best visual resources I discovered:
+
+## **Visual Galleries for Neo-Expressionist & Abstract Drink Menu Design:**
+
+### **Behance Portfolio Galleries:**
+**Reinventing the Cocktail Menu** - A creative project by Ksenia Fedorova featuring an innovative iPad app demonstration with infographic poster elements exploring cocktail research findings (https://www.behance.net/gallery/3976573/Reinventing-the-Cocktail-Menu)
+
+### **Dribbble Design Collections:**
+**Drink Menu Designs** - Discover 200+ drink menu designs on Dribbble with various creative approaches (https://dribbble.com/tags/drink-menu)
+
+**Cocktail Menu Gallery** - Over 100 cocktail menu designs including "THE KAZAN ROOM - Menu Illustrations" by Nelson Nokela and "PB Drink Menus" by 48 Savvy Sailors Team (https://dribbble.com/tags/cocktail-menu)
+
+**Drink Illustration Designs** - 65 drink illustration designs showcasing various artistic styles (https://dribbble.com/tags/drink-illustration)
+
+### **ArtStation Creative Portfolios:**
+**Kim Lévesque's Visual Development Portfolio** - Features expressionist-inspired artwork including "La Barbe Bleue" project inspired by expressionist painter Alphonse Mucha (https://kim-levesque.artstation.com/projects/EkARv)
+
+**Bar Hopping Series by Daniel Dana** - A personal series depicting scenes of different bars across many genres and time periods (https://www.artstation.com/artwork/VJQebb)
+
+**Dead Synchronicity Visual Art** - Features "distinctive, expressionist 2D art style" that could inspire the bizarre and emotional tension aesthetic you're seeking (https://barbudo.artstation.com/projects/QzPkol)
+
+**ArtStation Abstract Channel** - Explores artwork that focuses on shapes, colors, and forms rather than visual reality (https://www.artstation.com/channels/abstract)
+
+### **Poster Design Resources:**
+**PosterMyWall Bar Posters** - 12,880+ eye-catching bar poster templates with various abstract and colorful styles (https://www.postermywall.com/index.php/s/bar-posters)
+
+These galleries provide direct access to actual design portfolios and creative projects rather than articles about design resources. They showcase the bold, colorful, abstract, and emotionally charged aesthetic styles that would perfectly complement your "Painful Drinking" theme with Neo-Expressionist and weird illustration influences.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual galleries and portfolios showcasing drink menu designs with Neo-Expressionism, weird illustration styles, and bold abstract aesthetics that would fit the "Painful Drinking" theme.Based on my search, I've found several visual galleries and portfolios that showcase drink menu designs and abstract/expressionist artwork that would be perfect inspiration for your "Painful Drinking" bar poster. Here are the best visual resources I discovered:
+
+## **Visual Galleries for Neo-Expressionist & Abstract Drink Menu Design:**
+
+### **Behance Portfolio Galleries:**
+**Reinventing the Cocktail Menu** - A creative project by Ksenia Fedorova featuring an innovative iPad app demonstration with infographic poster elements exploring cocktail research findings (https://www.behance.net/gallery/3976573/Reinventing-the-Cocktail-Menu)
+
+### **Dribbble Design Collections:**
+**Drink Menu Designs** - Discover 200+ drink menu designs on Dribbble with various creative approaches (https://dribbble.com/tags/drink-menu)
+
+**Cocktail Menu Gallery** - Over 100 cocktail menu designs including "THE KAZAN ROOM - Menu Illustrations" by Nelson Nokela and "PB Drink Menus" by 48 Savvy Sailors Team (https://dribbble.com/tags/cocktail-menu)
+
+**Drink Illustration Designs** - 65 drink illustration designs showcasing various artistic styles (https://dribbble.com/tags/drink-illustration)
+
+### **ArtStation Creative Portfolios:**
+**Kim Lévesque's Visual Development Portfolio** - Features expressionist-inspired artwork including "La Barbe Bleue" project inspired by expressionist painter Alphonse Mucha (https://kim-levesque.artstation.com/projects/EkARv)
+
+**Bar Hopping Series by Daniel Dana** - A personal series depicting scenes of different bars across many genres and time periods (https://www.artstation.com/artwork/VJQebb)
+
+**Dead Synchronicity Visual Art** - Features "distinctive, expressionist 2D art style" that could inspire the bizarre and emotional tension aesthetic you're seeking (https://barbudo.artstation.com/projects/QzPkol)
+
+**ArtStation Abstract Channel** - Explores artwork that focuses on shapes, colors, and forms rather than visual reality (https://www.artstation.com/channels/abstract)
+
+### **Poster Design Resources:**
+**PosterMyWall Bar Posters** - 12,880+ eye-catching bar poster templates with various abstract and colorful styles (https://www.postermywall.com/index.php/s/bar-posters)
+
+These galleries provide direct access to actual design portfolios and creative projects rather than articles about design resources. They showcase the bold, colorful, abstract, and emotionally charged aesthetic styles that would perfectly complement your "Painful Drinking" theme with Neo-Expressionist and weird illustration influences.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Reinventing the Cocktail Menu on Behance (https://www.behance.net/gallery/3976573/Reinventing-the-Cocktail-Menu)
+2. Drinks Menu designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/drinks-menu)
+3. Weird Illustrations designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/weird_illustrations)
+4. Beverage Menu designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/beverage_menu)
+5. ArtStation - Explore (https://www.artstation.com/artwork/barlog-42d075f3-cee4-4945-a8ce-f254947ec6ae)
+6. ArtStation - Art portfolio (https://www.artstation.com/artwork/044K6G)
+7. ArtStation - Traditional Art Portfolio #1 (https://www.artstation.com/artwork/g2y6RQ)
+8. Bar Poster Images - Free Download on Freepik (https://www.freepik.com/free-photos-vectors/bar-poster)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/3976573/Reinventing-the-Cocktail-Menu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Reinventing the Cocktail Menu on Behance</a></li><li class="text-sm"><a href="https://dribbble.com/tags/drinks-menu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Drinks Menu designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/weird_illustrations" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Weird Illustrations designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/beverage_menu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Beverage Menu designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.artstation.com/artwork/barlog-42d075f3-cee4-4945-a8ce-f254947ec6ae" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. ArtStation - Explore</a></li><li class="text-sm"><a href="https://www.artstation.com/artwork/044K6G" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. ArtStation - Art portfolio</a></li><li class="text-sm"><a href="https://www.artstation.com/artwork/g2y6RQ" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. ArtStation - Traditional Art Portfolio #1</a></li><li class="text-sm"><a href="https://www.freepik.com/free-photos-vectors/bar-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Bar Poster Images - Free Download on Freepik</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="48.83">48.83秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="126,491">126,491</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Neo-Expressionism drink menu poster site:behance.net
+2. Neo-Expressionism poster site:behance.net
+3. Weird Illustration poster site:dribbble.com
+4. drink menu poster abstract dribbble
+5. menu poster abstract site:dribbble.com
+6. drink menu poster site:behance.net/gallery">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Neo-Expressionism drink menu poster site:behance.net</li><li class="text-sm text-gray-600">2. Neo-Expressionism poster site:behance.net</li><li class="text-sm text-gray-600">3. Weird Illustration poster site:dribbble.com</li><li class="text-sm text-gray-600">4. drink menu poster abstract dribbble</li><li class="text-sm text-gray-600">5. menu poster abstract site:dribbble.com</li><li class="text-sm text-gray-600">6. drink menu poster site:behance.net/gallery</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Below are curated galleries and project showcases you can dive into for neo-expressionist, bizarre/abstract, and color-forward drink-menu and poster inspirations. Each link points directly to primary visual work—no listicles, just the art itself.
+
+Neo-Expressionist & High-Emotion Posters  
+• Daniel Hurst’s “Typography Poster / Abstract Expressionist Poster”—a bold, smoky mix of type and painterly abstraction that channels the raw intensity of mid-century expressionism. Perfect for exploring vivid color fields and gestural mark-making. ([behance.net](https://www.behance.net/gallery/75784763/Typography-Poster-Abstract-Expressionist-Poster?utm_source=chatgpt.com))  
+• Ahmed Badr’s “Expressive Posters” series—a suite of typographic layouts paired with fractured, emotive illustrations (e.g. “PSYCHO,” “MOLTEN”) for a sense of psychological tension. ([behance.net](https://www.behance.net/gallery/51861169/Expressive-Posters?utm_source=chatgpt.com))  
+
+Visceral, Figurative Illustration Sets  
+• Mel Tan’s “MENTAL Illustration Set” on Behance—raw, abstracted figures and chaotic compositions that visualize anxiety, stress, and emotional limits through a neo-expressionist lens. ([behance.net](https://www.behance.net/gallery/62992113/MENTAL-Illustration-Set?utm_source=chatgpt.com))  
+
+Beverage Branding & Menu Layouts  
+• Estrella Gutierrez’s “Beverage Brand Design” project—a vibrant, retro-inspired can/package identity that uses saturated color & playful graphics, illustrating how bold palettes can drive immediate shelf impact (adapt concepts to poster form). ([behance.net](https://www.behance.net/gallery/225882673/Beverage-Brand-Design?utm_source=chatgpt.com))  
+• Odd Monk’s “Bar Menu” shot on Dribbble—a compact, illustrative layout combining hand-drawn icons, strong color blocking, and custom type placements ideal for legibility-driven yet expressive menus. ([dribbble.com](https://dribbble.com/shots/6973715-Bar-Menu?utm_source=chatgpt.com))  
+
+Typographic & Hand-Lettered Drink Menus  
+• Albert Barroso’s “Drink Menu” on Dribbble—elegant hand-lettering paired with custom serif titling; see how type hierarchy and stroke contrast can add character underpinned by emotional nuance. ([dribbble.com](https://dribbble.com/shots/2433851-Drink-Menu?utm_source=chatgpt.com))  
+• Browse Dribbble’s “drink poster design” tag for countless one-off shots of psychedelic abstractions, experimental layouts, and trippy color experiments—ideal for loose, “weird” illustration ideas. ([dribbble.com](https://dribbble.com/search/drink-poster-design?timeframe=ever&utm_source=chatgpt.com))  
+
+Next Steps  
+1. Explore each gallery’s full project to note how artists balance composition, color intensity, and emotional tone.  
+2. Capture textural details—brush-stroke simulations, ink splatters, abrupt color shifts—for your “Painful Drinking” theme.  
+3. Sketch thumbnails combining neo-expressionist backgrounds with bold menu type, then iterate digitally using vibrant, high-contrast palettes.  
+
+This selection should feed both the “painful,” tension-driven emotion and the bizarre, colorful weirdness you’re aiming for in your drink menu poster.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Below are curated galleries and project showcases you can dive into for neo-expressionist, bizarre/abstract, and color-forward drink-menu and poster inspirations. Each link points directly to primary visual work—no listicles, just the art itself.
+
+Neo-Expressionist & High-Emotion Posters  
+• Daniel Hurst’s “Typography Poster / Abstract Expressionist Poster”—a bold, smoky mix of type and painterly abstraction that channels the raw intensity of mid-century expressionism. Perfect for exploring vivid color fields and gestural mark-making. ([behance.net](https://www.behance.net/gallery/75784763/Typography-Poster-Abstract-Expressionist-Poster?utm_source=chatgpt.com))  
+• Ahmed Badr’s “Expressive Posters” series—a suite of typographic layouts paired with fractured, emotive illustrations (e.g. “PSYCHO,” “MOLTEN”) for a sense of psychological tension. ([behance.net](https://www.behance.net/gallery/51861169/Expressive-Posters?utm_source=chatgpt.com))  
+
+Visceral, Figurative Illustration Sets  
+• Mel Tan’s “MENTAL Illustration Set” on Behance—raw, abstracted figures and chaotic compositions that visualize anxiety, stress, and emotional limits through a neo-expressionist lens. ([behance.net](https://www.behance.net/gallery/62992113/MENTAL-Illustration-Set?utm_source=chatgpt.com))  
+
+Beverage Branding & Menu Layouts  
+• Estrella Gutierrez’s “Beverage Brand Design” project—a vibrant, retro-inspired can/package identity that uses saturated color & playful graphics, illustrating how bold palettes can drive immediate shelf impact (adapt concepts to poster form). ([behance.net](https://www.behance.net/gallery/225882673/Beverage-Brand-Design?utm_source=chatgpt.com))  
+• Odd Monk’s “Bar Menu” shot on Dribbble—a compact, illustrative layout combining hand-drawn icons, strong color blocking, and custom type placements ideal for legibility-driven yet expressive menus. ([dribbble.com](https://dribbble.com/shots/6973715-Bar-Menu?utm_source=chatgpt.com))  
+
+Typographic & Hand-Lettered Drink Menus  
+• Albert Barroso’s “Drink Menu” on Dribbble—elegant hand-lettering paired with custom serif titling; see how type hierarchy and stroke contrast can add character underpinned by emotional nuance. ([dribbble.com](https://dribbble.com/shots/2433851-Drink-Menu?utm_source=chatgpt.com))  
+• Browse Dribbble’s “drink poster design” tag for countless one-off shots of psychedelic abstractions, experimental layouts, and trippy color experiments—ideal for loose, “weird” illustration ideas. ([dribbble.com](https://dribbble.com/search/drink-poster-design?timeframe=ever&utm_source=chatgpt.com))  
+
+Next Steps  
+1. Explore each gallery’s full project to note how artists balance composition, color intensity, and emotional tone.  
+2. Capture textural details—brush-stroke simulations, ink splatters, abrupt color shifts—for your “Painful Drinking” theme.  
+3. Sketch thumbnails combining neo-expressionist backgrounds with bold menu type, then iterate digitally using vibrant, high-contrast palettes.  
+
+This selection should feed both the “painful,” tension-driven emotion and the bizarre, colorful weirdness you’re aiming for in your drink menu poster.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Typography Poster / Abstract Expressionist Poster :: Behance (https://www.behance.net/gallery/75784763/Typography-Poster-Abstract-Expressionist-Poster?utm_source=chatgpt.com)
+2. Expressive Posters :: Behance (https://www.behance.net/gallery/51861169/Expressive-Posters?utm_source=chatgpt.com)
+3. MENTAL Illustration Set :: Behance (https://www.behance.net/gallery/62992113/MENTAL-Illustration-Set?utm_source=chatgpt.com)
+4. Beverage Brand Design :: Behance (https://www.behance.net/gallery/225882673/Beverage-Brand-Design?utm_source=chatgpt.com)
+5. Bar Menu by Odd Monk on Dribbble (https://dribbble.com/shots/6973715-Bar-Menu?utm_source=chatgpt.com)
+6. Drink Menu by albert barroso on Dribbble (https://dribbble.com/shots/2433851-Drink-Menu?utm_source=chatgpt.com)
+7. Browse thousands of Drink Poster Design images for design inspiration | Dribbble (https://dribbble.com/search/drink-poster-design?timeframe=ever&utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/75784763/Typography-Poster-Abstract-Expressionist-Poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Typography Poster / Abstract Expressionist Poster :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/51861169/Expressive-Posters?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Expressive Posters :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/62992113/MENTAL-Illustration-Set?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. MENTAL Illustration Set :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/225882673/Beverage-Brand-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Beverage Brand Design :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/6973715-Bar-Menu?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Bar Menu by Odd Monk on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/2433851-Drink-Menu?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Drink Menu by albert barroso on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/search/drink-poster-design?timeframe=ever&utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Browse thousands of Drink Poster Design images for design inspiration | Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
