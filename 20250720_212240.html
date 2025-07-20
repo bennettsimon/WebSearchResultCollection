@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to create a corporate promotional animation featuring a smoky alchemy furnace without a lid, from which the company's logo "三丰妙方" emerges in the smoke. 
+You need to search for Chinese-style alchemy furnace designs, swirling smoke effects, combinations of traditional Chinese elements with modern corporate visuals, text emerging from smoke effects, and Chinese-style animation scenes with cultural atmosphere and visual impact.">The user needs to create a corporate promotional animation featuring a smoky alchemy furnace without a lid, from which the company's logo "三丰妙方" emerges in the smoke. 
+You need to search for Chinese-style alchemy furnace designs, swirling smoke effects, combinations of traditional Chinese elements with modern corporate visuals, text emerging from smoke effects, and Chinese-style animation scenes with cultural atmosphere and visual impact.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 21:23:42</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="22.37">22.37秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="2,607">2,607</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. 中式炼丹炉设计 无盖
+2. 炼丹炉 烟雾效果
+3. 中国风元素 现代企业视觉结合
+4. 文字从烟雾中浮现效果
+5. 中式动画场景 意境 视觉冲击力
+6. 传统炼丹炉动画效果">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. 中式炼丹炉设计 无盖</li><li class="text-sm text-gray-600">2. 炼丹炉 烟雾效果</li><li class="text-sm text-gray-600">3. 中国风元素 现代企业视觉结合</li><li class="text-sm text-gray-600">4. 文字从烟雾中浮现效果</li><li class="text-sm text-gray-600">5. 中式动画场景 意境 视觉冲击力</li><li class="text-sm text-gray-600">6. 传统炼丹炉动画效果</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To create a corporate promotional animation featuring a smoky Chinese-style alchemy furnace without a lid, from which the company's logo "三丰妙方" emerges, consider integrating the following design elements and animation techniques:
+
+**1. Chinese-Style Alchemy Furnace Design (无盖炼丹炉设计)**
+For the furnace, aim for a design that embodies traditional Chinese aesthetics while allowing for a clear view of the interior and the emerging smoke.
+*   **Traditional Form:** Look for inspiration from ancient Chinese alchemy furnaces or incense burners (香炉). Many feature a "三足鼎立" (three-legged tripod) design, which symbolizes stability and cultural significance. The overall shape can be stout and robust, suggesting ancient power and wisdom.
+*   **Materials and Texture:** Consider textures like aged bronze, distressed ceramic, or dark, polished stone, giving it an antique and mysterious feel. "做旧处理" (distressed finish) can enhance its authenticity.
+*   **Absence of a Lid:** The top of the furnace should be open, providing a clear aperture for the smoke and logo to emerge dramatically.
+*   **Engravings/Patterns:** Incorporate subtle traditional Chinese patterns, such as cloud motifs (云纹), which often symbolize good fortune and auspiciousness, or even simplified trigrams from the Bagua (八卦), if appropriate for the brand's aesthetic.
+
+**2. Swirling Smoke Effects (烟雾效果)**
+The smoke effect is crucial for the logo's emergence and overall atmosphere.
+*   **Organic Flow:** The smoke should appear natural and dynamic, swirling upwards from within the furnace. Consider a fluid, almost ethereal quality, suggesting a mystical transformation.
+*   **Visual Properties:** Key characteristics of realistic smoke include a "模糊效果" (blur effect) and "颗粒感" (granularity). This can be achieved through particle systems, volumetric rendering, or even clever use of visual effects software.
+*   **Color and Lighting:** The smoke could start with a darker, denser appearance within the furnace, gradually becoming lighter and more translucent as it rises and disperses. Subtle internal illumination within the smoke can enhance its magical quality.
+
+**3. Combinations of Traditional Chinese Elements with Modern Corporate Visuals (中国风与现代企业视觉结合)**
+The animation should seamlessly blend ancient mystique with a contemporary corporate identity.
+*   **"新中式" (New Chinese Style):** This approach integrates traditional cultural symbols and aesthetics with modern design principles.
+*   **Color Palette:** While the furnace might be earthy or metallic, the overall scene can incorporate a sophisticated color palette. Traditional Chinese colors such as rich reds, imperial golds, deep blues, or subtle ink-wash tones can be balanced with modern, clean corporate colors.
+*   **Logo Integration:** The logo "三丰妙方" should emerge clearly from the smoke. Its typography, while being the company's official logo, could have a subtle touch of elegance that complements the Chinese aesthetic without appearing overly traditional or ornate, aligning with "现代设计理念" (modern design concepts).
+*   **Minimalism & Focus:** Avoid clutter. The focus should be on the furnace, the smoke, and the logo's emergence. "简洁的几何形状和渐变色彩的运用" (simple geometric shapes and gradient colors) can be used in other subtle visual elements to maintain a modern feel.
+
+**4. Text Emerging from Smoke Effects (文字从烟雾中浮现效果)**
+The emergence of "三丰妙方" from the smoke is the climax.
+*   **Gradual Reveal:** The logo should not appear abruptly but rather solidify gradually from the dissipating smoke. This can involve elements like particles coalescing to form the characters or the text slowly gaining opacity and clarity.
+*   **Transformation:** Imagine the smoke itself subtly forming the outlines of the characters before they become solid. Techniques similar to CSS's `text-shadow` or SVG's `feturbulence` filters can inspire the visual breakdown and formation of text from a hazy state.
+*   **Dynamic Flow:** As the logo emerges, the smoke around it can continue to swirl and drift, creating a sense of ongoing motion and energy originating from the furnace.
+
+**5. Chinese-Style Animation Scenes with Cultural Atmosphere and Visual Impact (中式动画场景 意境 视觉冲击力)**
+The overall scene and animation style should resonate with a strong cultural identity.
+*   **Aesthetic Influence:** Draw inspiration from successful Chinese animation films like "《哪吒之魔童闹海》" and "《中国奇谭》," which blend traditional elements (like ink wash painting, meticulous painting, and traditional folklore) with modern animation techniques to create stunning visual and cultural impact.
+*   **Atmosphere and Mood:** The scene should evoke a sense of ancient wisdom, mystery, and perhaps a touch of magic, aligning with the "alchemy furnace" theme. The lighting could be subdued but focused on the furnace, enhancing its mystical presence.
+*   **Dynamic Backgrounds:** While the focus is on the furnace, the background could feature subtle, stylized elements of traditional Chinese landscapes (mountains, clouds) or architectural motifs, rendered with "虚实相生" (interplay of solid and void) concepts to add depth and "意境" (artistic conception).
+*   **Camera Movement:** Use slow, deliberate camera movements that emphasize the grandeur of the furnace and the elegance of the smoke, building anticipation for the logo's reveal. The animation should aim for "震撼的视听效果" (stunning audio-visual effects) and "视觉冲击力" (visual impact).">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To create a corporate promotional animation featuring a smoky Chinese-style alchemy furnace without a lid, from which the company's logo "三丰妙方" emerges, consider integrating the following design elements and animation techniques:
+
+**1. Chinese-Style Alchemy Furnace Design (无盖炼丹炉设计)**
+For the furnace, aim for a design that embodies traditional Chinese aesthetics while allowing for a clear view of the interior and the emerging smoke.
+*   **Traditional Form:** Look for inspiration from ancient Chinese alchemy furnaces or incense burners (香炉). Many feature a "三足鼎立" (three-legged tripod) design, which symbolizes stability and cultural significance. The overall shape can be stout and robust, suggesting ancient power and wisdom.
+*   **Materials and Texture:** Consider textures like aged bronze, distressed ceramic, or dark, polished stone, giving it an antique and mysterious feel. "做旧处理" (distressed finish) can enhance its authenticity.
+*   **Absence of a Lid:** The top of the furnace should be open, providing a clear aperture for the smoke and logo to emerge dramatically.
+*   **Engravings/Patterns:** Incorporate subtle traditional Chinese patterns, such as cloud motifs (云纹), which often symbolize good fortune and auspiciousness, or even simplified trigrams from the Bagua (八卦), if appropriate for the brand's aesthetic.
+
+**2. Swirling Smoke Effects (烟雾效果)**
+The smoke effect is crucial for the logo's emergence and overall atmosphere.
+*   **Organic Flow:** The smoke should appear natural and dynamic, swirling upwards from within the furnace. Consider a fluid, almost ethereal quality, suggesting a mystical transformation.
+*   **Visual Properties:** Key characteristics of realistic smoke include a "模糊效果" (blur effect) and "颗粒感" (granularity). This can be achieved through particle systems, volumetric rendering, or even clever use of visual effects software.
+*   **Color and Lighting:** The smoke could start with a darker, denser appearance within the furnace, gradually becoming lighter and more translucent as it rises and disperses. Subtle internal illumination within the smoke can enhance its magical quality.
+
+**3. Combinations of Traditional Chinese Elements with Modern Corporate Visuals (中国风与现代企业视觉结合)**
+The animation should seamlessly blend ancient mystique with a contemporary corporate identity.
+*   **"新中式" (New Chinese Style):** This approach integrates traditional cultural symbols and aesthetics with modern design principles.
+*   **Color Palette:** While the furnace might be earthy or metallic, the overall scene can incorporate a sophisticated color palette. Traditional Chinese colors such as rich reds, imperial golds, deep blues, or subtle ink-wash tones can be balanced with modern, clean corporate colors.
+*   **Logo Integration:** The logo "三丰妙方" should emerge clearly from the smoke. Its typography, while being the company's official logo, could have a subtle touch of elegance that complements the Chinese aesthetic without appearing overly traditional or ornate, aligning with "现代设计理念" (modern design concepts).
+*   **Minimalism & Focus:** Avoid clutter. The focus should be on the furnace, the smoke, and the logo's emergence. "简洁的几何形状和渐变色彩的运用" (simple geometric shapes and gradient colors) can be used in other subtle visual elements to maintain a modern feel.
+
+**4. Text Emerging from Smoke Effects (文字从烟雾中浮现效果)**
+The emergence of "三丰妙方" from the smoke is the climax.
+*   **Gradual Reveal:** The logo should not appear abruptly but rather solidify gradually from the dissipating smoke. This can involve elements like particles coalescing to form the characters or the text slowly gaining opacity and clarity.
+*   **Transformation:** Imagine the smoke itself subtly forming the outlines of the characters before they become solid. Techniques similar to CSS's `text-shadow` or SVG's `feturbulence` filters can inspire the visual breakdown and formation of text from a hazy state.
+*   **Dynamic Flow:** As the logo emerges, the smoke around it can continue to swirl and drift, creating a sense of ongoing motion and energy originating from the furnace.
+
+**5. Chinese-Style Animation Scenes with Cultural Atmosphere and Visual Impact (中式动画场景 意境 视觉冲击力)**
+The overall scene and animation style should resonate with a strong cultural identity.
+*   **Aesthetic Influence:** Draw inspiration from successful Chinese animation films like "《哪吒之魔童闹海》" and "《中国奇谭》," which blend traditional elements (like ink wash painting, meticulous painting, and traditional folklore) with modern animation techniques to create stunning visual and cultural impact.
+*   **Atmosphere and Mood:** The scene should evoke a sense of ancient wisdom, mystery, and perhaps a touch of magic, aligning with the "alchemy furnace" theme. The lighting could be subdued but focused on the furnace, enhancing its mystical presence.
+*   **Dynamic Backgrounds:** While the focus is on the furnace, the background could feature subtle, stylized elements of traditional Chinese landscapes (mountains, clouds) or architectural motifs, rendered with "虚实相生" (interplay of solid and void) concepts to add depth and "意境" (artistic conception).
+*   **Camera Movement:** Use slow, deliberate camera movements that emphasize the grandeur of the furnace and the elegance of the smoke, building anticipation for the logo's reveal. The animation should aim for "震撼的视听效果" (stunning audio-visual effects) and "视觉冲击力" (visual impact).</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. taobao.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWQu9sGeCOSx-BgMLl5twuCDQnXqIsHXgVoZB3tadvf9TfFLHhd3LiXBJSJI6jefuNeFgWR-_gx2rGVfYKaoyGVB0ImhgsHpQT1Uxr9t5-Mz9lK1JX0Sykr1J3Iz2gklQKHhyYDbuje3BMayizJfZ2sIFjnJQQCTi5oFlsQBn4_tTeiXXR6Q==)
+2. joyhua.cn (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJFt7tXNR3G7F3XBlM2x0mjfAmxEUcAcr3ME8ydJTsrrTOH4hKobGBL9Mgghxp9BvUSRqvkzRLlw0cOphUN54gkJFAirGej1QJQIAFeLQ4k77MSPvnOwjb7SCXPGdFetNdZJUbQrlR4NJukzU2bWbhQpytIHX1nSvr_VUH63e6s1qPlfeIm4eMDbM=)
+3. cnblogs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3MFNjEKZ1fwOCcgZzHpxHfrHRN-R3FKnCs8twlIS5LEHUycpkzw20nqPTB8jD8E8p-X2hH3L4Dw_gROtyz3Fmn0zr1ZFh0mLr_cD16U2nqevrKClyMzQNWuIPXBPcNfflTvDCxFUSRA==)
+4. vjshi.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXTfHLh23v0rzdjyzNHuFS99yjqlqDvg4KcDmpkMODWRVam8_hh8Hjy1YMco7MiyNBVnTYWqoO6qzUKFT0HqOiOPIxFRZzff-pZF1VLmIQvyOTkbOX_jH6eWNupmFg)
+5. nuogoweb.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_Hg8TCQ9rR6p28jU9M06qN9zAbXavQM_kw23OchA6DpF3VDQsgcMWeyFgEDRuzSW7LxTo9HaM4XrqOilp2Huk7o8NO47tmAbMyAuQLYFqxwKVTx0h1DDdlYIiBA20ZDnK2JhmlXDvdrJj7-dFrg==)
+6. news.cn (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6l_ixNCQuA_sjPylF2_Lnl6OCKrDCr7tMoLuO3OIf3lMwoYEOlc62z6hz3pOgsuwTxUDZC18BiaLCKEav2EkqWpTxxoMlsFiemo1As9cjXF2KRXMpr94BjqRM9PQ8Oh52CJon8M2z4JbHyeSVpv6vg4qKRG9Q7NeMQJFfJ3ivfhq5tXsU)
+7. nuogoweb.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFewQkoiDx6flYVIlI7GZFsew87kxh-f2qluG-Kt5WLtLwfZN8tZ93OXz1OdzLNGYrXtA6Eu_cWfNYuf4-kDLmz1K9rwrX0twjMvpGs_mrb-_UR93YQihCiYjrfANDz-KFvCIbBUo-F_Q_RRTiLag==)
+8. nuogo.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQF61CqB31TGiOCw96pjaOM4CKnoQVSEUELPdaYF7e9iJu_jHPEtZbnwAg9bI_vp1KfDN-AYO4HewRJsOa2FNcPT8OP6fMbe9467AF4bq9aRpqpouRM2JPw3_Rf59zZUa8uGQ=)
+9. huacedes.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFosI6F09zmCmD6rh9cY6qEWE2Nd-erU7jvieE2b0oZiEraGKBzproPiiIt-NT6b6iyphPL7eba0Sk3tnqxQCs0TYFWkhR8NrzCkujQ-1BmcR7_-iiha8jQzOck5BJgpihjw65sxUnw3A==)
+10. dzng.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiSpyEbKHv7xAzaseGWsdBX2mRlEuiRmJO-a4rA7BgHLlba6FUapY6MgkArF4URQNBR1wqPe6ls94WeJjEwrkDfKsX38jd5UNI1PrNiSOGcprKqt3P2wVQvbp9rikQh1reAO3LCJoHlrWR6Ycfsa4wFqVnUAret-HKiVYS)
+11. hanspub.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFObmW9kNTKMkATpYxlgVuuEjdbRzXfqxC7B1nWDZFwM-4LZTiwxCuB69N7l8Y3UTOeIGwgT7I6YB7WIvzMZboqwOv8urH9sLcudXCX9EjRfoAm8nEX4h7OAsMTrSxaNsyNNSYV3tBo-do0p1zHRtiG6wBhY83Q27bp)
+12. gdzjdaily.com.cn (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFc9rjaNFjMYGlZeAE8f0bgUwQq92dBKnN-NR4GXfK-AUgT-hyYFlAeHeCEq3zi-30aeo28Sq0DZQKweJHYOASPHAraTjJJ-ZZJT846KQzuABStVRqflKzkYDuf7k8BA89ZHdW0eA==)
+13. wikipedia.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFl50qKh5gf8J04TSTT1bZAErVLugJwnb_c-Mww7INZ6hlj39Ci5cH_xYxCk48E8EDpPSThuTac-ZGMtVnTg-hB6fhuJBFwj3z_Z1cS21W6VuFVBveN-C_B85fmLMM5OIdrefzuuK_F8WyMRSroRAJQrCNnl_uTfRzOD4U7mi3g7lviaIKwfrhEV0AmdY8cbC1FK9CEN96Ag==)
+14. gslib.com.cn (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrVZUVlR32B0zpYUUJyGS_xXm4dlKno3zA39txHY9ZsNrtyt4bAWUlWpavlfoE-L6-xM8XIXNnConeaP6lHcz7xk6OnmZXZ1-CZWEbVT_LcCfZKNs2OE4_qgviWCy0AtDhAEUSi-KTdPLcD4D5gN6c2Yt1bfRcqx3zdkSMEc-Exyc9_1lyJ29az3nCe7rvBKy6yxmeAkSObPFFSDU=)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWQu9sGeCOSx-BgMLl5twuCDQnXqIsHXgVoZB3tadvf9TfFLHhd3LiXBJSJI6jefuNeFgWR-_gx2rGVfYKaoyGVB0ImhgsHpQT1Uxr9t5-Mz9lK1JX0Sykr1J3Iz2gklQKHhyYDbuje3BMayizJfZ2sIFjnJQQCTi5oFlsQBn4_tTeiXXR6Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. taobao.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJFt7tXNR3G7F3XBlM2x0mjfAmxEUcAcr3ME8ydJTsrrTOH4hKobGBL9Mgghxp9BvUSRqvkzRLlw0cOphUN54gkJFAirGej1QJQIAFeLQ4k77MSPvnOwjb7SCXPGdFetNdZJUbQrlR4NJukzU2bWbhQpytIHX1nSvr_VUH63e6s1qPlfeIm4eMDbM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. joyhua.cn</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3MFNjEKZ1fwOCcgZzHpxHfrHRN-R3FKnCs8twlIS5LEHUycpkzw20nqPTB8jD8E8p-X2hH3L4Dw_gROtyz3Fmn0zr1ZFh0mLr_cD16U2nqevrKClyMzQNWuIPXBPcNfflTvDCxFUSRA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. cnblogs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXTfHLh23v0rzdjyzNHuFS99yjqlqDvg4KcDmpkMODWRVam8_hh8Hjy1YMco7MiyNBVnTYWqoO6qzUKFT0HqOiOPIxFRZzff-pZF1VLmIQvyOTkbOX_jH6eWNupmFg" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. vjshi.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_Hg8TCQ9rR6p28jU9M06qN9zAbXavQM_kw23OchA6DpF3VDQsgcMWeyFgEDRuzSW7LxTo9HaM4XrqOilp2Huk7o8NO47tmAbMyAuQLYFqxwKVTx0h1DDdlYIiBA20ZDnK2JhmlXDvdrJj7-dFrg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. nuogoweb.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6l_ixNCQuA_sjPylF2_Lnl6OCKrDCr7tMoLuO3OIf3lMwoYEOlc62z6hz3pOgsuwTxUDZC18BiaLCKEav2EkqWpTxxoMlsFiemo1As9cjXF2KRXMpr94BjqRM9PQ8Oh52CJon8M2z4JbHyeSVpv6vg4qKRG9Q7NeMQJFfJ3ivfhq5tXsU" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. news.cn</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFewQkoiDx6flYVIlI7GZFsew87kxh-f2qluG-Kt5WLtLwfZN8tZ93OXz1OdzLNGYrXtA6Eu_cWfNYuf4-kDLmz1K9rwrX0twjMvpGs_mrb-_UR93YQihCiYjrfANDz-KFvCIbBUo-F_Q_RRTiLag==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. nuogoweb.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQF61CqB31TGiOCw96pjaOM4CKnoQVSEUELPdaYF7e9iJu_jHPEtZbnwAg9bI_vp1KfDN-AYO4HewRJsOa2FNcPT8OP6fMbe9467AF4bq9aRpqpouRM2JPw3_Rf59zZUa8uGQ=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. nuogo.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFosI6F09zmCmD6rh9cY6qEWE2Nd-erU7jvieE2b0oZiEraGKBzproPiiIt-NT6b6iyphPL7eba0Sk3tnqxQCs0TYFWkhR8NrzCkujQ-1BmcR7_-iiha8jQzOck5BJgpihjw65sxUnw3A==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. huacedes.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiSpyEbKHv7xAzaseGWsdBX2mRlEuiRmJO-a4rA7BgHLlba6FUapY6MgkArF4URQNBR1wqPe6ls94WeJjEwrkDfKsX38jd5UNI1PrNiSOGcprKqt3P2wVQvbp9rikQh1reAO3LCJoHlrWR6Ycfsa4wFqVnUAret-HKiVYS" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. dzng.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFObmW9kNTKMkATpYxlgVuuEjdbRzXfqxC7B1nWDZFwM-4LZTiwxCuB69N7l8Y3UTOeIGwgT7I6YB7WIvzMZboqwOv8urH9sLcudXCX9EjRfoAm8nEX4h7OAsMTrSxaNsyNNSYV3tBo-do0p1zHRtiG6wBhY83Q27bp" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. hanspub.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFc9rjaNFjMYGlZeAE8f0bgUwQq92dBKnN-NR4GXfK-AUgT-hyYFlAeHeCEq3zi-30aeo28Sq0DZQKweJHYOASPHAraTjJJ-ZZJT846KQzuABStVRqflKzkYDuf7k8BA89ZHdW0eA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. gdzjdaily.com.cn</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFl50qKh5gf8J04TSTT1bZAErVLugJwnb_c-Mww7INZ6hlj39Ci5cH_xYxCk48E8EDpPSThuTac-ZGMtVnTg-hB6fhuJBFwj3z_Z1cS21W6VuFVBveN-C_B85fmLMM5OIdrefzuuK_F8WyMRSroRAJQrCNnl_uTfRzOD4U7mi3g7lviaIKwfrhEV0AmdY8cbC1FK9CEN96Ag==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. wikipedia.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrVZUVlR32B0zpYUUJyGS_xXm4dlKno3zA39txHY9ZsNrtyt4bAWUlWpavlfoE-L6-xM8XIXNnConeaP6lHcz7xk6OnmZXZ1-CZWEbVT_LcCfZKNs2OE4_qgviWCy0AtDhAEUSi-KTdPLcD4D5gN6c2Yt1bfRcqx3zdkSMEc-Exyc9_1lyJ29az3nCe7rvBKy6yxmeAkSObPFFSDU=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. gslib.com.cn</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="37.57">37.57秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="62,955">62,955</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Chinese alchemy furnace design site:behance.net
+2. smoke effect animation design site:dribbble.com
+3. traditional Chinese alchemy furnace illustration portfolio
+4. logo emerging from smoke animation portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Chinese alchemy furnace design site:behance.net</li><li class="text-sm text-gray-600">2. smoke effect animation design site:dribbble.com</li><li class="text-sm text-gray-600">3. traditional Chinese alchemy furnace illustration portfolio</li><li class="text-sm text-gray-600">4. logo emerging from smoke animation portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll help you find visual inspiration for your corporate promotional animation featuring a Chinese-style alchemy furnace with emerging logo smoke effects. Let me search for relevant visual galleries and design showcases.Based on my search findings, I've discovered several excellent visual inspiration sources for your Chinese-style alchemy furnace promotional animation. Here are the key resources I found:
+
+## Visual Design Galleries & Portfolios
+
+### Smoke Animation & Effects Inspiration
+I found extensive collections of smoke animation designs on Dribbble with 19+ smoke animation designs and 54+ smoke effect designs. These galleries showcase professional smoke transition effects and 2D flame, fire and smoke animation tutorials that demonstrate various approaches to creating swirling smoke visuals.
+
+### Traditional Chinese Alchemy Furnace References
+The Wellcome Collection features an authentic Chinese woodblock illustration from 1856 showing implements for creating and refining elixirs, with special attention given to the internal structure of the alchemical furnace. This provides historically accurate reference material for traditional Chinese alchemy equipment.
+
+Additional authentic Chinese woodblock illustrations of waidan alchemical refining furnaces from the 1856 Illustrated Manual of External Medicine offer detailed visual references for traditional furnace designs with cultural authenticity.
+
+### Logo-from-Smoke Animation Templates
+Professional animation templates showcase logos emerging from smoke effects, including "Smoke Logo Animation" and "Swirling Smoke Logo Reveal" templates where thick streams of smoke reveal logos in extraordinary ways. Motion Array features epic After Effects templates with cinematically animated logo reveals that elegantly emerge and dissolve away into smoke-filled backgrounds.
+
+### Traditional Chinese Visual Elements
+PNGWing and similar resources offer collections of traditional Chinese furnace designs, censers, and ancient Chinese wind stove illustrations in blue and gold color schemes, perfect for reference when designing culturally appropriate alchemy furnaces.
+
+## Key Design Concepts from the Sources
+
+### Alchemy Furnace Structure
+Traditional Chinese alchemists used dāndǐng (丹鼎) - tripod cooking vessels or cauldrons - as furnaces for concocting pills of immortality. The furnace serves as both literal equipment and metaphorical imagery, with terms like "furnace," "crucible," and "elixir" referring to internal energies and spiritual states.
+
+### Cultural Authenticity Elements
+Chinese alchemy incorporates the Five Elements (Water, Fire, Earth, Metal, Wood) and follows Taoist principles focusing on cosmological processes and the cultivation of qi. These philosophical elements can inform the visual design and animation flow.
+
+These resources provide comprehensive visual inspiration covering traditional Chinese furnace designs, professional smoke animation techniques, logo reveal effects, and culturally authentic styling - exactly what you need for creating your "三丰妙方" logo emergence animation from an authentic Chinese alchemy furnace.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll help you find visual inspiration for your corporate promotional animation featuring a Chinese-style alchemy furnace with emerging logo smoke effects. Let me search for relevant visual galleries and design showcases.Based on my search findings, I've discovered several excellent visual inspiration sources for your Chinese-style alchemy furnace promotional animation. Here are the key resources I found:
+
+## Visual Design Galleries & Portfolios
+
+### Smoke Animation & Effects Inspiration
+I found extensive collections of smoke animation designs on Dribbble with 19+ smoke animation designs and 54+ smoke effect designs. These galleries showcase professional smoke transition effects and 2D flame, fire and smoke animation tutorials that demonstrate various approaches to creating swirling smoke visuals.
+
+### Traditional Chinese Alchemy Furnace References
+The Wellcome Collection features an authentic Chinese woodblock illustration from 1856 showing implements for creating and refining elixirs, with special attention given to the internal structure of the alchemical furnace. This provides historically accurate reference material for traditional Chinese alchemy equipment.
+
+Additional authentic Chinese woodblock illustrations of waidan alchemical refining furnaces from the 1856 Illustrated Manual of External Medicine offer detailed visual references for traditional furnace designs with cultural authenticity.
+
+### Logo-from-Smoke Animation Templates
+Professional animation templates showcase logos emerging from smoke effects, including "Smoke Logo Animation" and "Swirling Smoke Logo Reveal" templates where thick streams of smoke reveal logos in extraordinary ways. Motion Array features epic After Effects templates with cinematically animated logo reveals that elegantly emerge and dissolve away into smoke-filled backgrounds.
+
+### Traditional Chinese Visual Elements
+PNGWing and similar resources offer collections of traditional Chinese furnace designs, censers, and ancient Chinese wind stove illustrations in blue and gold color schemes, perfect for reference when designing culturally appropriate alchemy furnaces.
+
+## Key Design Concepts from the Sources
+
+### Alchemy Furnace Structure
+Traditional Chinese alchemists used dāndǐng (丹鼎) - tripod cooking vessels or cauldrons - as furnaces for concocting pills of immortality. The furnace serves as both literal equipment and metaphorical imagery, with terms like "furnace," "crucible," and "elixir" referring to internal energies and spiritual states.
+
+### Cultural Authenticity Elements
+Chinese alchemy incorporates the Five Elements (Water, Fire, Earth, Metal, Wood) and follows Taoist principles focusing on cosmological processes and the cultivation of qi. These philosophical elements can inform the visual design and animation flow.
+
+These resources provide comprehensive visual inspiration covering traditional Chinese furnace designs, professional smoke animation techniques, logo reveal effects, and culturally authentic styling - exactly what you need for creating your "三丰妙方" logo emergence animation from an authentic Chinese alchemy furnace.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Browse thousands of Smoke Animation images for design inspiration | Dribbble (https://dribbble.com/search/smoke-animation)
+2. Smoke Effect designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/smoke-effect)
+3. Smoke transition effect by Ryan Yu on Dribbble (https://dribbble.com/shots/5343701-Smoke-transition-effect)
+4. 2D Flame, Fire and Smoke Animation Tutorial by Mark Rise on Dribbble (https://dribbble.com/shots/15281031-2D-Flame-Fire-and-Smoke-Animation-Tutorial)
+5. Smoke Text Effect designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/smoke_text_effect)
+6. Browse thousands of Smoke Effect images for design inspiration | Dribbble (https://dribbble.com/search/smoke-effect)
+7. Chinese alchemy - Wikipedia (https://en.wikipedia.org/wiki/Chinese_alchemy)
+8. Furnace Chinese alchemy Censer, Ancient Chinese wind stove transparent background PNG clipart | HiClipart (https://www.hiclipart.com/free-transparent-background-png-clipart-donxh)
+9. Smoke Intro Templates Online | Renderforest (https://www.renderforest.com/intro-videos/smoke-logo-reveals)
+10. Create Colored Smoke 3D Logo Animation Video | Intro Maker (https://www.makewebvideo.com/en/make/colored-smoke-3d-logo-animation-video)
+11. Smoke Logo Logo Templates - Envato (https://elements.envato.com/graphic-templates/logos/smoke+logo)
+12. Epic Smoke Logo - After Effects Templates | Motion Array (https://motionarray.com/after-effects-templates/epic-smoke-logo-954966/)
+13. Chinese Alchemy - Science Abbey (https://www.scienceabbey.com/chinese-alchemy/)
+14. Neidan and Waidan: Daoist alchemy and the pursuit of spiritual transformation - Fabrizio Musacchio (https://www.fabriziomusacchio.com/weekend_stories/told/2025/2025-01-02-neidan_and_waidan/)
+15. Swirling Smoke Logo Reveal (7 Second Version) | Renderforest (https://www.renderforest.com/template/swirling-smoke-logo-reveal)
+16. Furnace Chinese alchemy Censer, Ancient Chinese wind stove, blue, chinese Style, gold png | PNGWing (https://www.pngwing.com/en/free-png-zsico)
+17. Alchemy: Chinese Alchemy | Encyclopedia.com (https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/alchemy-chinese-alchemy)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/search/smoke-animation" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Browse thousands of Smoke Animation images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/smoke-effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Smoke Effect designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/5343701-Smoke-transition-effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Smoke transition effect by Ryan Yu on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/15281031-2D-Flame-Fire-and-Smoke-Animation-Tutorial" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. 2D Flame, Fire and Smoke Animation Tutorial by Mark Rise on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/smoke_text_effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Smoke Text Effect designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/search/smoke-effect" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Browse thousands of Smoke Effect images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://en.wikipedia.org/wiki/Chinese_alchemy" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Chinese alchemy - Wikipedia</a></li><li class="text-sm"><a href="https://www.hiclipart.com/free-transparent-background-png-clipart-donxh" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Furnace Chinese alchemy Censer, Ancient Chinese wind stove transparent background PNG clipart | HiClipart</a></li><li class="text-sm"><a href="https://www.renderforest.com/intro-videos/smoke-logo-reveals" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Smoke Intro Templates Online | Renderforest</a></li><li class="text-sm"><a href="https://www.makewebvideo.com/en/make/colored-smoke-3d-logo-animation-video" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Create Colored Smoke 3D Logo Animation Video | Intro Maker</a></li><li class="text-sm"><a href="https://elements.envato.com/graphic-templates/logos/smoke+logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Smoke Logo Logo Templates - Envato</a></li><li class="text-sm"><a href="https://motionarray.com/after-effects-templates/epic-smoke-logo-954966/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Epic Smoke Logo - After Effects Templates | Motion Array</a></li><li class="text-sm"><a href="https://www.scienceabbey.com/chinese-alchemy/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. Chinese Alchemy - Science Abbey</a></li><li class="text-sm"><a href="https://www.fabriziomusacchio.com/weekend_stories/told/2025/2025-01-02-neidan_and_waidan/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. Neidan and Waidan: Daoist alchemy and the pursuit of spiritual transformation - Fabrizio Musacchio</a></li><li class="text-sm"><a href="https://www.renderforest.com/template/swirling-smoke-logo-reveal" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. Swirling Smoke Logo Reveal (7 Second Version) | Renderforest</a></li><li class="text-sm"><a href="https://www.pngwing.com/en/free-png-zsico" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. Furnace Chinese alchemy Censer, Ancient Chinese wind stove, blue, chinese Style, gold png | PNGWing</a></li><li class="text-sm"><a href="https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/alchemy-chinese-alchemy" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. Alchemy: Chinese Alchemy | Encyclopedia.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="61.45">61.45秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="261,682">261,682</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net Chinese alchemy furnace animation design
+2. Chinese alchemy furnace animation site:dribbble.com
+3. site:dribbble.com alchemy furnace smoke animation
+4. site:behance.net Chinese alchemy furnace animation corporate
+5. Chinese alchemy furnace design Pinterest
+6. Chinese alchemy furnace Pinterest board
+7. site:behance.net smoke logo reveal after effects
+8. site:dribbble.com alchemy furnace">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net Chinese alchemy furnace animation design</li><li class="text-sm text-gray-600">2. Chinese alchemy furnace animation site:dribbble.com</li><li class="text-sm text-gray-600">3. site:dribbble.com alchemy furnace smoke animation</li><li class="text-sm text-gray-600">4. site:behance.net Chinese alchemy furnace animation corporate</li><li class="text-sm text-gray-600">5. Chinese alchemy furnace design Pinterest</li><li class="text-sm text-gray-600">6. Chinese alchemy furnace Pinterest board</li><li class="text-sm text-gray-600">7. site:behance.net smoke logo reveal after effects</li><li class="text-sm text-gray-600">8. site:dribbble.com alchemy furnace</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are curated, primary‐source galleries and project pages showcasing Chinese-style alchemy furnaces, dynamic smoke effects, and traditional-meets-modern branding animations. Each link leads directly to visual work—no articles or aggregators—so you can dive straight into imagery and motion designs.
+
+• Behance – “SMOKE and FIRE animation” by Mohammad Kaif  
+  A finished motion-graphics showcase combining 2D smoke and fire simulations ideal for logo reveals or title animations. Published June 4, 2025. ([behance.net](https://www.behance.net/gallery/227473151/SMOKE-and-FIRE-animation?utm_source=chatgpt.com))  
+
+• Behance – “Fire Smoke Logo Reveal, After Effects Templates” by CandyMustache, Inc.  
+  A pair of high-resolution (4K/2K/HD) fire-and-smoke logo-reveal templates, with customizable backgrounds and included video tutorials. ([behance.net](https://www.behance.net/gallery/35380477/Fire-Smoke-Logo-Reveal-After-Effects-Templates?utm_source=chatgpt.com))  
+
+• Dribbble – Animation For Fire (tag gallery)  
+  A tag page featuring dozens of fiery and smoky animation shots—swirling smoke effects, ember glows, branding promos—that you can scroll through for diverse stylistic references. ([dribbble.com](https://dribbble.com/tags/animation-for-fire?utm_source=chatgpt.com))  
+
+• Dribbble – “Alchemy Animation” by Shana Alice  
+  A corporate-style logo animation where elemental parts converge in smoky wisps to form a symbol—great for seeing text emerge from animated smoke. ([dribbble.com](https://dribbble.com/shots/9915969-Alchemy-Animation?utm_source=chatgpt.com))  
+
+• Fab – “A Daoist Alchemy Furnace – PBR Textured”  
+  A Blender-rendered, PBR-textured 3D asset page with multiple view angles of a Chinese-style alchemy furnace, ideal for modeling or reference photography. ([fab.com](https://www.fab.com/listings/92f36a69-8757-491e-8b6a-52e5ca57b490?utm_source=chatgpt.com))  
+
+• ArtStation Marketplace – “Bagua Copper Furnace Alchemy Furnace 3D model” by Philip Storm  
+  A detailed 3D model gallery (33+ object renders) of a traditional Bagua tripod furnace in copper, with texture-baked previews for lighting and smoke integration studies. ([artstation.com](https://www.artstation.com/marketplace/p/36JNk/bagua-copper-furnace-alchemy-furnace-3d-model?utm_source=chatgpt.com))  
+
+• IconScout – “Alchemy Animations” Lottie pack  
+  A gallery of 62 ready-to-use Lottie JSON/GIF/MP4 animations themed around alchemical processes—smoke plumes, elemental transformations, magical reveals. ([dribbble.com](https://dribbble.com/search/fire-and-smoke-animation?utm_source=chatgpt.com))  
+
+Each of these sources provides direct access to visual content—motion reels, animated templates, or high-quality 3D renders—that can inspire your corporate promo animation featuring a lidless alchemy furnace with swirling smoke revealing the “三丰妙方” logo.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are curated, primary‐source galleries and project pages showcasing Chinese-style alchemy furnaces, dynamic smoke effects, and traditional-meets-modern branding animations. Each link leads directly to visual work—no articles or aggregators—so you can dive straight into imagery and motion designs.
+
+• Behance – “SMOKE and FIRE animation” by Mohammad Kaif  
+  A finished motion-graphics showcase combining 2D smoke and fire simulations ideal for logo reveals or title animations. Published June 4, 2025. ([behance.net](https://www.behance.net/gallery/227473151/SMOKE-and-FIRE-animation?utm_source=chatgpt.com))  
+
+• Behance – “Fire Smoke Logo Reveal, After Effects Templates” by CandyMustache, Inc.  
+  A pair of high-resolution (4K/2K/HD) fire-and-smoke logo-reveal templates, with customizable backgrounds and included video tutorials. ([behance.net](https://www.behance.net/gallery/35380477/Fire-Smoke-Logo-Reveal-After-Effects-Templates?utm_source=chatgpt.com))  
+
+• Dribbble – Animation For Fire (tag gallery)  
+  A tag page featuring dozens of fiery and smoky animation shots—swirling smoke effects, ember glows, branding promos—that you can scroll through for diverse stylistic references. ([dribbble.com](https://dribbble.com/tags/animation-for-fire?utm_source=chatgpt.com))  
+
+• Dribbble – “Alchemy Animation” by Shana Alice  
+  A corporate-style logo animation where elemental parts converge in smoky wisps to form a symbol—great for seeing text emerge from animated smoke. ([dribbble.com](https://dribbble.com/shots/9915969-Alchemy-Animation?utm_source=chatgpt.com))  
+
+• Fab – “A Daoist Alchemy Furnace – PBR Textured”  
+  A Blender-rendered, PBR-textured 3D asset page with multiple view angles of a Chinese-style alchemy furnace, ideal for modeling or reference photography. ([fab.com](https://www.fab.com/listings/92f36a69-8757-491e-8b6a-52e5ca57b490?utm_source=chatgpt.com))  
+
+• ArtStation Marketplace – “Bagua Copper Furnace Alchemy Furnace 3D model” by Philip Storm  
+  A detailed 3D model gallery (33+ object renders) of a traditional Bagua tripod furnace in copper, with texture-baked previews for lighting and smoke integration studies. ([artstation.com](https://www.artstation.com/marketplace/p/36JNk/bagua-copper-furnace-alchemy-furnace-3d-model?utm_source=chatgpt.com))  
+
+• IconScout – “Alchemy Animations” Lottie pack  
+  A gallery of 62 ready-to-use Lottie JSON/GIF/MP4 animations themed around alchemical processes—smoke plumes, elemental transformations, magical reveals. ([dribbble.com](https://dribbble.com/search/fire-and-smoke-animation?utm_source=chatgpt.com))  
+
+Each of these sources provides direct access to visual content—motion reels, animated templates, or high-quality 3D renders—that can inspire your corporate promo animation featuring a lidless alchemy furnace with swirling smoke revealing the “三丰妙方” logo.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. SMOKE and FIRE animation :: Behance (https://www.behance.net/gallery/227473151/SMOKE-and-FIRE-animation?utm_source=chatgpt.com)
+2. Fire Smoke Logo Reveal, After Effects Templates :: Behance (https://www.behance.net/gallery/35380477/Fire-Smoke-Logo-Reveal-After-Effects-Templates?utm_source=chatgpt.com)
+3. Animation For Fire designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/animation-for-fire?utm_source=chatgpt.com)
+4. Alchemy Animation by Shana Alice on Dribbble (https://dribbble.com/shots/9915969-Alchemy-Animation?utm_source=chatgpt.com)
+5. A Daoist Alchemy Furnace - PBR Textured | Fab (https://www.fab.com/listings/92f36a69-8757-491e-8b6a-52e5ca57b490?utm_source=chatgpt.com)
+6. ArtStation - Bagua Copper Furnace Alchemy Furnace 3D model | Resources (https://www.artstation.com/marketplace/p/36JNk/bagua-copper-furnace-alchemy-furnace-3d-model?utm_source=chatgpt.com)
+7. Browse thousands of Fire And Smoke Animation images for design inspiration | Dribbble (https://dribbble.com/search/fire-and-smoke-animation?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/227473151/SMOKE-and-FIRE-animation?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. SMOKE and FIRE animation :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/35380477/Fire-Smoke-Logo-Reveal-After-Effects-Templates?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Fire Smoke Logo Reveal, After Effects Templates :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/tags/animation-for-fire?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Animation For Fire designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/9915969-Alchemy-Animation?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Alchemy Animation by Shana Alice on Dribbble</a></li><li class="text-sm"><a href="https://www.fab.com/listings/92f36a69-8757-491e-8b6a-52e5ca57b490?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. A Daoist Alchemy Furnace - PBR Textured | Fab</a></li><li class="text-sm"><a href="https://www.artstation.com/marketplace/p/36JNk/bagua-copper-furnace-alchemy-furnace-3d-model?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. ArtStation - Bagua Copper Furnace Alchemy Furnace 3D model | Resources</a></li><li class="text-sm"><a href="https://dribbble.com/search/fire-and-smoke-animation?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Browse thousands of Fire And Smoke Animation images for design inspiration | Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
