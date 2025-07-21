@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to create a Bauhaus-style poster showcasing midcentury furniture, using Swiss and Scandinavian fonts. You need to search for Bauhaus-style midcentury furniture posters, Swiss and Nordic typography in furniture advertisements, minimalist geometric furniture promotional designs, and color block-composed modern furniture posters.">The user needs to create a Bauhaus-style poster showcasing midcentury furniture, using Swiss and Scandinavian fonts. You need to search for Bauhaus-style midcentury furniture posters, Swiss and Nordic typography in furniture advertisements, minimalist geometric furniture promotional designs, and color block-composed modern furniture posters.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-21 11:08:36</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="20.36">20.36秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="2,367">2,367</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Bauhaus style midcentury furniture posters examples
+2. Swiss typography in midcentury furniture advertisements
+3. Nordic typography in midcentury furniture advertisements
+4. minimalist geometric furniture promotional designs Bauhaus
+5. color block modern furniture posters Bauhaus style">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Bauhaus style midcentury furniture posters examples</li><li class="text-sm text-gray-600">2. Swiss typography in midcentury furniture advertisements</li><li class="text-sm text-gray-600">3. Nordic typography in midcentury furniture advertisements</li><li class="text-sm text-gray-600">4. minimalist geometric furniture promotional designs Bauhaus</li><li class="text-sm text-gray-600">5. color block modern furniture posters Bauhaus style</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To create a Bauhaus-style poster showcasing midcentury furniture, integrating Swiss and Scandinavian typography, focus on principles of minimalism, geometric forms, and a strong visual hierarchy with distinct color blocking.
+
+Here's a breakdown of design elements and inspirations:
+
+**1. Bauhaus-Style Midcentury Furniture Posters:**
+Bauhaus design, established in 1919, aimed to unify art, craft, and industry, emphasizing functionality, simplicity, and innovative use of materials. Posters from this era, and those inspired by it, often feature geometric abstraction and iconic furniture pieces stripped down to their minimal existence. Marcel Breuer's Wassily Chair and Ludwig Mies van der Rohe's Brno Chair are prime examples of the clean lines and geometric forms central to this aesthetic. Promotional materials from the Bauhaus school itself utilized sans-serif typefaces and incorporated photography as a key graphic element.
+
+**2. Swiss Typography in Furniture Advertisements:**
+The Swiss Style, also known as the International Typographic Style, emerged in the mid-20th century and is characterized by its precision, functionality, and clarity. Key principles include the extensive use of grid systems for organized layouts, sans-serif fonts (most notably Helvetica, developed in the 1950s), minimalism, and often asymmetrical compositions. This typographic approach prioritizes readability and functional beauty, making it ideal for clear communication in furniture advertisements. Modern brands like Apple and IKEA show clear influence from Swiss design in their use of clean typography and grid-based layouts.
+
+**3. Nordic/Scandinavian Typography in Furniture Advertisements:**
+Scandinavian design shares a strong affinity with minimalism, functionality, and clean aesthetics, often encompassing mid-century modern styles. While specific typefaces might not be as historically dictated as Helvetica for Swiss design, the overall aesthetic in Scandinavian furniture advertisements leans towards legible, uncluttered sans-serif fonts that complement the furniture's simple, well-crafted forms. The emphasis is on timeless elegance and practicality, which translates to straightforward and clean typographic choices. Fonts described as "MidCentury Typeface" inspired by 1950s graphic designs, offering a modern-retro look, could also fit the Scandinavian mid-century vibe.
+
+**4. Minimalist Geometric Furniture Promotional Designs:**
+This directly aligns with core Bauhaus principles, where furniture and promotional designs are characterized by radically simplified forms, strict geometry, and a focus on practicality without unnecessary embellishments. Designs are often reduced to basic shapes such as squares, circles, and cylinders, highlighting the functional and structural beauty of the furniture itself.
+
+**5. Color Block-Composed Modern Furniture Posters:**
+A hallmark of Bauhaus design is the bold and structured use of primary colors (red, blue, and yellow) alongside neutrals (black, white, and grey). This "color block" composition creates a dynamic and vibrant visual focal point, enhancing modern interiors and complementing minimalist and mid-century decor. These high-contrast palettes and geometric square patterns are highly effective in creating a compelling and modern aesthetic.
+
+**Key Design Elements for Your Poster:**
+
+*   **Typography:** Utilize clean, geometric sans-serif fonts like Helvetica, Univers, or similar typefaces that embody the clarity and functionality of Swiss design.
+*   **Layout:** Employ a strong grid system for an organized, minimalist, and potentially asymmetrical layout, typical of the Swiss Style.
+*   **Imagery:** Feature a midcentury furniture piece with strong geometric lines (e.g., a tubular steel chair or a simple wooden sideboard). You can use a photograph of the furniture or a minimalist, geometric illustration.
+*   **Color Palette:** Incorporate bold color blocks using primary colors (red, blue, yellow) alongside black, white, and grey to define sections, highlight elements, or create abstract backgrounds.
+*   **Composition:** Focus on clean lines, geometric shapes, and a "less is more" approach, ensuring every element serves a purpose and contributes to a cohesive, compelling message.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To create a Bauhaus-style poster showcasing midcentury furniture, integrating Swiss and Scandinavian typography, focus on principles of minimalism, geometric forms, and a strong visual hierarchy with distinct color blocking.
+
+Here's a breakdown of design elements and inspirations:
+
+**1. Bauhaus-Style Midcentury Furniture Posters:**
+Bauhaus design, established in 1919, aimed to unify art, craft, and industry, emphasizing functionality, simplicity, and innovative use of materials. Posters from this era, and those inspired by it, often feature geometric abstraction and iconic furniture pieces stripped down to their minimal existence. Marcel Breuer's Wassily Chair and Ludwig Mies van der Rohe's Brno Chair are prime examples of the clean lines and geometric forms central to this aesthetic. Promotional materials from the Bauhaus school itself utilized sans-serif typefaces and incorporated photography as a key graphic element.
+
+**2. Swiss Typography in Furniture Advertisements:**
+The Swiss Style, also known as the International Typographic Style, emerged in the mid-20th century and is characterized by its precision, functionality, and clarity. Key principles include the extensive use of grid systems for organized layouts, sans-serif fonts (most notably Helvetica, developed in the 1950s), minimalism, and often asymmetrical compositions. This typographic approach prioritizes readability and functional beauty, making it ideal for clear communication in furniture advertisements. Modern brands like Apple and IKEA show clear influence from Swiss design in their use of clean typography and grid-based layouts.
+
+**3. Nordic/Scandinavian Typography in Furniture Advertisements:**
+Scandinavian design shares a strong affinity with minimalism, functionality, and clean aesthetics, often encompassing mid-century modern styles. While specific typefaces might not be as historically dictated as Helvetica for Swiss design, the overall aesthetic in Scandinavian furniture advertisements leans towards legible, uncluttered sans-serif fonts that complement the furniture's simple, well-crafted forms. The emphasis is on timeless elegance and practicality, which translates to straightforward and clean typographic choices. Fonts described as "MidCentury Typeface" inspired by 1950s graphic designs, offering a modern-retro look, could also fit the Scandinavian mid-century vibe.
+
+**4. Minimalist Geometric Furniture Promotional Designs:**
+This directly aligns with core Bauhaus principles, where furniture and promotional designs are characterized by radically simplified forms, strict geometry, and a focus on practicality without unnecessary embellishments. Designs are often reduced to basic shapes such as squares, circles, and cylinders, highlighting the functional and structural beauty of the furniture itself.
+
+**5. Color Block-Composed Modern Furniture Posters:**
+A hallmark of Bauhaus design is the bold and structured use of primary colors (red, blue, and yellow) alongside neutrals (black, white, and grey). This "color block" composition creates a dynamic and vibrant visual focal point, enhancing modern interiors and complementing minimalist and mid-century decor. These high-contrast palettes and geometric square patterns are highly effective in creating a compelling and modern aesthetic.
+
+**Key Design Elements for Your Poster:**
+
+*   **Typography:** Utilize clean, geometric sans-serif fonts like Helvetica, Univers, or similar typefaces that embody the clarity and functionality of Swiss design.
+*   **Layout:** Employ a strong grid system for an organized, minimalist, and potentially asymmetrical layout, typical of the Swiss Style.
+*   **Imagery:** Feature a midcentury furniture piece with strong geometric lines (e.g., a tubular steel chair or a simple wooden sideboard). You can use a photograph of the furniture or a minimalist, geometric illustration.
+*   **Color Palette:** Incorporate bold color blocks using primary colors (red, blue, yellow) alongside black, white, and grey to define sections, highlight elements, or create abstract backgrounds.
+*   **Composition:** Focus on clean lines, geometric shapes, and a "less is more" approach, ensuring every element serves a purpose and contributes to a cohesive, compelling message.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. vaia.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2PuvNcDx6Bn0zY4lury0AANGx3ZlMKCNcFctxCvKN-WfIKXCZvHmvtayCh6pwgQdyWK6612zudLS-PXF6rnIQkU1OcsSdftMBtm8XdqS7ysH1S6qXuBysRSDh6vpLJ4v3uSXgxKWnAvUPDhz6EXQ1MYMCyDAt_lFPJ51C2VLYVA_L066CRpB29_t11MD46S8uC8aWQ_PW)
+2. pib.eu (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmGVaS0NrLsstA-xtghtxqoGvfjdIbs1JW9oe5S51CvdV3J1F9BQMIpOxXX8gBt9i1Y9cgtKpoEvgAPu_ce4sPkJ5oiKn5xDTlrD3daZmwDgkAsQ5P9Z3ju9iJjg355dZN7wVRYbrDvIdP8i2L6ghiMKd6bpzq)
+3. shopee.com.my (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcHwwrq7fbn5sMzryAzUiQuBQH2Mb7ORuW4-ZoxCg1gMUWw488QuiQ7zAM9YiWki0_Fi9mscyLSuqxFmjHPnknWDanUP1rbhMcaIXP7tkKoaCggP7XBazp8Dp_QqsZrp09JzyUR4_RYi-LtIiXwtxdpBPd7XcyCXUnJLA3U8TqTDY2RpoK938zCsw3xIlUjSwB0qoq3JOF5dMyGznjyv2bgOq5D745i2eXUVk60sQFK3dUj2zgwn0mc25_pP3_hPkCDjAHrwX8QbZ474FTLWCpdHc_eNcylkoEaZNVt1z4o5MGhi8mPNrChKh1)
+4. metmuseum.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdIJA1lxbLQCtuXdu6XNXCJASmcGP3wIyuci468-ytqIuMr3rzMDczQzMT3XZp7E_XfwBPxasuJOVa2lUjRwdi7cIRxU5viljNjIs51PXtOW0rXgxeX2D-aR_xLM2SHgYbawK8vkvtRZR9Z8Q6E2oeTA==)
+5. theinteriordesigninstitute.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJOKEWG1cZNSsp6edH2AaXRhUtJ5e1WdiDHQK4P5EJvZpoe84ZiryyMmQQmBvKz7KUOHushK2apqBytqvYY-PgMCOSlUwIYRTY0pngGX8EQwbAFpi3phHSxdvd4eOQpCftMd7zw096gcky4OmXzSWgI0A82h-frZhAiWRuI60B)
+6. encyclopedia.design (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9pTL0lYwNpECaO7XLyVJU26ypg1JWZ-SlFW0pzbTE4fMCtVuSV4MnS10_IOMbJq49zkAOeUBkPftsCmYM2PWxUf9OcXlkcfWbr8ix7OlF1zSuMgeWugn5oVULib9a3aey8L0zGP4wo222D_O7l_gShJr8VKGhfjUkAnwtl3t7GuAev_80CRWzB6j_1KsuBb4NChkalwwkyw76MoAOQg0Yi9MPiQs=)
+7. newlyswissed.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgxZAUQiOwzs_Y_dHjVDqdZsYYF03ZxmAOMS2MfbtjmwKsCvO5RV8BXgO0k3FPYnFOEL_gUoUP_XV8DvzbSq438v8u5FMf6Y2hfQ_SzSoKtHP_O8MHKrnIuOOTj80Ldwb0tB40gQ==)
+8. wikipedia.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFb9yRWahWyrkgthrkHBZ69uPjpbbwJlpdjVp2IwuilQ0jD3qquWYLdFTI6chg34NKj0c-tg4-fgZATIccuDW73HdGhyV8Tme8KcwbHUDw9pIipftP01oVgEVNjo84AIrQ36Vy6GwgZKBMBqHK3)
+9. scandinaviandesigns.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw383cFHPvEClwaKA-NxFuWZ_RRcGTLpbjZLfNEgG26Ai7Wd1NTnfjb1t7wnslrVftOr_h7yoT0NNJa7Bp8KhMIxvio5TRoDHSLCBFPGV6WAAzFNtFreMj6OiI)
+10. boconcept.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9dWW3zdkknvsLea21jVaSRvLplYaP1fvYNsRQcAkBbGCJJmk7T1ssMamegIUEfiTHcVe0MEE3kuoDHJFgobflLU_9ZiHsY7vAvsLMw0QWoN-YEP8G)
+11. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGI2agfrFB5lMuN40f-5LTPey6a_xyf2L0YFZ7oKlXMzoNq4jTQoFZGGuVpuxtf4WLCqfxw04xR7s2Gsq0F_9VhRuD3wCUXlDRLySB8JEp8u6zg53aaqZU4fVYiHqducUTYIE5HJLE8ZQchws=)
+12. creativemarket.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGikt_XcSpPX9ns6M1PsJ3jm360b0B7xJ9QFRxqDfM9Jw--E7qO7d9dfNOt797QFcT5dLWmSA7YpX25lF8YjOxy3BsmeTsH2xpQjMxlCIwojdA_-Ck9WR-lxCeCwH6rnJK7vH311fEoXQ2VuUub8cG868iiu1a3uIvkudbg8h4vuGqhf_Y=)
+13. ebay.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBirYcUhc5IgIOIryBASUxaZHrybm0PTU01JbYMwVNIfOLeIawyL5CSEVoYvBDXsjbwu1HLEhQo5P89OC5x8NeRol-gRx_CX1T6AQH9u8YUpZQHQkE0wkRDWapOMCPbIs=)
+14. aliexpress.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8rHQDdQ0pyTkGTqN3P5pgd4DREPholPxydeUWBSTbAeXlHVYukRISB6EPAUFT9U5xpykIsiGi2FOzCwgBpqOM1UfEN0gbqi6TnpQNfV4Iw3SAHphR98GK9gfQmCY21sUdKilnEisUVAqJRO_uhOdD)
+15. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtYZhoBKcIXaNuL8VgoPs2HCRrx-__9tf0EiQYYUMYWJX_lCW-C_-WEnYMCk59Gv6dXF7sJjzOOcD6_nR_fb5VinLK8alGNnK4LMrMccY9Qh3ZuWhbdxSV3FHKAAbU5XKCO_ungJOPAug5p2-CndExjMEluXmxRO2uqa5WKqiJEhQoe8i80j0=)
+16. trendyol.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzedHURgH2VSos8Ai817puObGYAWqnWXZcf5SywvdLHD6OE_CC-ME8kdt8qfTp1RkbnB97G91KH3p8bP19a6lJaYUuMVtk_gZRS21Hf2rsA0yggeZ2fV9wV0IUzyknjAjbYZWK5znXg-GeyAe2V18-1fRjcrmUpop5ydwzw-M3U8DX589pehIRwRTfIGfgj0rbjZbPZvSVU9c9ob7V6l6cW0vFAB3EFMUu7oapQWmSvVgFPYqi9ZWZDA==)
+17. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWFWVqvzEb1OWrIdJv5h2p0mVYTF3gK1J3ES8_VLwiKceJEpzsrwK7F97vzvmPzXrNHuFbHcRQ8r3ZwinzksTil0JwZEjpEzWc1GZhvg4dSTFwljUMZTAdjgIT5YWYVYmhi-qycCD3Y6N-bRFF)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2PuvNcDx6Bn0zY4lury0AANGx3ZlMKCNcFctxCvKN-WfIKXCZvHmvtayCh6pwgQdyWK6612zudLS-PXF6rnIQkU1OcsSdftMBtm8XdqS7ysH1S6qXuBysRSDh6vpLJ4v3uSXgxKWnAvUPDhz6EXQ1MYMCyDAt_lFPJ51C2VLYVA_L066CRpB29_t11MD46S8uC8aWQ_PW" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. vaia.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmGVaS0NrLsstA-xtghtxqoGvfjdIbs1JW9oe5S51CvdV3J1F9BQMIpOxXX8gBt9i1Y9cgtKpoEvgAPu_ce4sPkJ5oiKn5xDTlrD3daZmwDgkAsQ5P9Z3ju9iJjg355dZN7wVRYbrDvIdP8i2L6ghiMKd6bpzq" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. pib.eu</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcHwwrq7fbn5sMzryAzUiQuBQH2Mb7ORuW4-ZoxCg1gMUWw488QuiQ7zAM9YiWki0_Fi9mscyLSuqxFmjHPnknWDanUP1rbhMcaIXP7tkKoaCggP7XBazp8Dp_QqsZrp09JzyUR4_RYi-LtIiXwtxdpBPd7XcyCXUnJLA3U8TqTDY2RpoK938zCsw3xIlUjSwB0qoq3JOF5dMyGznjyv2bgOq5D745i2eXUVk60sQFK3dUj2zgwn0mc25_pP3_hPkCDjAHrwX8QbZ474FTLWCpdHc_eNcylkoEaZNVt1z4o5MGhi8mPNrChKh1" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. shopee.com.my</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdIJA1lxbLQCtuXdu6XNXCJASmcGP3wIyuci468-ytqIuMr3rzMDczQzMT3XZp7E_XfwBPxasuJOVa2lUjRwdi7cIRxU5viljNjIs51PXtOW0rXgxeX2D-aR_xLM2SHgYbawK8vkvtRZR9Z8Q6E2oeTA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. metmuseum.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJOKEWG1cZNSsp6edH2AaXRhUtJ5e1WdiDHQK4P5EJvZpoe84ZiryyMmQQmBvKz7KUOHushK2apqBytqvYY-PgMCOSlUwIYRTY0pngGX8EQwbAFpi3phHSxdvd4eOQpCftMd7zw096gcky4OmXzSWgI0A82h-frZhAiWRuI60B" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. theinteriordesigninstitute.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9pTL0lYwNpECaO7XLyVJU26ypg1JWZ-SlFW0pzbTE4fMCtVuSV4MnS10_IOMbJq49zkAOeUBkPftsCmYM2PWxUf9OcXlkcfWbr8ix7OlF1zSuMgeWugn5oVULib9a3aey8L0zGP4wo222D_O7l_gShJr8VKGhfjUkAnwtl3t7GuAev_80CRWzB6j_1KsuBb4NChkalwwkyw76MoAOQg0Yi9MPiQs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. encyclopedia.design</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgxZAUQiOwzs_Y_dHjVDqdZsYYF03ZxmAOMS2MfbtjmwKsCvO5RV8BXgO0k3FPYnFOEL_gUoUP_XV8DvzbSq438v8u5FMf6Y2hfQ_SzSoKtHP_O8MHKrnIuOOTj80Ldwb0tB40gQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. newlyswissed.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFb9yRWahWyrkgthrkHBZ69uPjpbbwJlpdjVp2IwuilQ0jD3qquWYLdFTI6chg34NKj0c-tg4-fgZATIccuDW73HdGhyV8Tme8KcwbHUDw9pIipftP01oVgEVNjo84AIrQ36Vy6GwgZKBMBqHK3" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. wikipedia.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw383cFHPvEClwaKA-NxFuWZ_RRcGTLpbjZLfNEgG26Ai7Wd1NTnfjb1t7wnslrVftOr_h7yoT0NNJa7Bp8KhMIxvio5TRoDHSLCBFPGV6WAAzFNtFreMj6OiI" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. scandinaviandesigns.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9dWW3zdkknvsLea21jVaSRvLplYaP1fvYNsRQcAkBbGCJJmk7T1ssMamegIUEfiTHcVe0MEE3kuoDHJFgobflLU_9ZiHsY7vAvsLMw0QWoN-YEP8G" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. boconcept.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGI2agfrFB5lMuN40f-5LTPey6a_xyf2L0YFZ7oKlXMzoNq4jTQoFZGGuVpuxtf4WLCqfxw04xR7s2Gsq0F_9VhRuD3wCUXlDRLySB8JEp8u6zg53aaqZU4fVYiHqducUTYIE5HJLE8ZQchws=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGikt_XcSpPX9ns6M1PsJ3jm360b0B7xJ9QFRxqDfM9Jw--E7qO7d9dfNOt797QFcT5dLWmSA7YpX25lF8YjOxy3BsmeTsH2xpQjMxlCIwojdA_-Ck9WR-lxCeCwH6rnJK7vH311fEoXQ2VuUub8cG868iiu1a3uIvkudbg8h4vuGqhf_Y=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. creativemarket.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBirYcUhc5IgIOIryBASUxaZHrybm0PTU01JbYMwVNIfOLeIawyL5CSEVoYvBDXsjbwu1HLEhQo5P89OC5x8NeRol-gRx_CX1T6AQH9u8YUpZQHQkE0wkRDWapOMCPbIs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. ebay.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8rHQDdQ0pyTkGTqN3P5pgd4DREPholPxydeUWBSTbAeXlHVYukRISB6EPAUFT9U5xpykIsiGi2FOzCwgBpqOM1UfEN0gbqi6TnpQNfV4Iw3SAHphR98GK9gfQmCY21sUdKilnEisUVAqJRO_uhOdD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. aliexpress.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtYZhoBKcIXaNuL8VgoPs2HCRrx-__9tf0EiQYYUMYWJX_lCW-C_-WEnYMCk59Gv6dXF7sJjzOOcD6_nR_fb5VinLK8alGNnK4LMrMccY9Qh3ZuWhbdxSV3FHKAAbU5XKCO_ungJOPAug5p2-CndExjMEluXmxRO2uqa5WKqiJEhQoe8i80j0=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzedHURgH2VSos8Ai817puObGYAWqnWXZcf5SywvdLHD6OE_CC-ME8kdt8qfTp1RkbnB97G91KH3p8bP19a6lJaYUuMVtk_gZRS21Hf2rsA0yggeZ2fV9wV0IUzyknjAjbYZWK5znXg-GeyAe2V18-1fRjcrmUpop5ydwzw-M3U8DX589pehIRwRTfIGfgj0rbjZbPZvSVU9c9ob7V6l6cW0vFAB3EFMUu7oapQWmSvVgFPYqi9ZWZDA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. trendyol.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWFWVqvzEb1OWrIdJv5h2p0mVYTF3gK1J3ES8_VLwiKceJEpzsrwK7F97vzvmPzXrNHuFbHcRQ8r3ZwinzksTil0JwZEjpEzWc1GZhvg4dSTFwljUMZTAdjgIT5YWYVYmhi-qycCD3Y6N-bRFF" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. pinterest.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="31.57">31.57秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="43,626">43,626</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Bauhaus midcentury furniture poster site:behance.net
+2. Swiss typography furniture advertisement site:dribbble.com
+3. minimalist geometric furniture design poster portfolio
+4. color block modernist furniture poster modernist design">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Bauhaus midcentury furniture poster site:behance.net</li><li class="text-sm text-gray-600">2. Swiss typography furniture advertisement site:dribbble.com</li><li class="text-sm text-gray-600">3. minimalist geometric furniture design poster portfolio</li><li class="text-sm text-gray-600">4. color block modernist furniture poster modernist design</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll search for visual galleries and portfolios showcasing Bauhaus-style furniture posters and related design work to provide you with direct visual inspiration.Here are the best visual galleries and portfolios I found for your Bauhaus-style midcentury furniture poster project:
+
+## **Bauhaus & Midcentury Furniture Design Galleries**
+
+### **Primary Visual Sources:**
+
+**Behance Portfolios:**
+- **Wassily Chair, Bauhaus Poster Design** - Direct furniture poster showcase
+- **Bauhaus Chairs — Illustrations** - Specific chair design gallery  
+- **100 Years Bauhaus Poster Collection & Typographic Posters** - Comprehensive Bauhaus poster galleries
+
+**Key Dribbble Collections:**
+- Swiss Style designs (800+ designs) - Extensive Swiss typography collection
+- Swiss Typography designs (84 designs) - Direct typography focus
+- "Soul" Swiss Style Typography Poster - Individual project showcase
+
+### **Design Inspiration Boards:**
+- Pinterest "Minimal Geometric" collection - Daily geometric designs
+- Pinterest "Furniture Design Sheet Presentation" boards with layout examples
+
+### **Commercial Galleries with Visual Examples:**
+- Redbubble's "Mid Century Modern Bauhaus 1923 Exhibition Poster" 
+- Mid Century Modern furniture design posters featuring Bauhaus and Wassily chair designs
+- AllPosters' Mark Rothko color block series and mid-century modern collections
+
+### **Specialized Collections:**
+- 1stDibs Mid-Century Modern poster archive featuring International-style architecture influence from Bauhaus designers Ludwig Mies van der Rohe and Walter Gropius
+
+These galleries provide direct visual access to Bauhaus typography, Swiss design principles, geometric furniture layouts, and color-blocked modernist compositions - exactly what you need for creating your midcentury furniture poster with authentic Swiss and Scandinavian typography influences.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll search for visual galleries and portfolios showcasing Bauhaus-style furniture posters and related design work to provide you with direct visual inspiration.Here are the best visual galleries and portfolios I found for your Bauhaus-style midcentury furniture poster project:
+
+## **Bauhaus & Midcentury Furniture Design Galleries**
+
+### **Primary Visual Sources:**
+
+**Behance Portfolios:**
+- **Wassily Chair, Bauhaus Poster Design** - Direct furniture poster showcase
+- **Bauhaus Chairs — Illustrations** - Specific chair design gallery  
+- **100 Years Bauhaus Poster Collection & Typographic Posters** - Comprehensive Bauhaus poster galleries
+
+**Key Dribbble Collections:**
+- Swiss Style designs (800+ designs) - Extensive Swiss typography collection
+- Swiss Typography designs (84 designs) - Direct typography focus
+- "Soul" Swiss Style Typography Poster - Individual project showcase
+
+### **Design Inspiration Boards:**
+- Pinterest "Minimal Geometric" collection - Daily geometric designs
+- Pinterest "Furniture Design Sheet Presentation" boards with layout examples
+
+### **Commercial Galleries with Visual Examples:**
+- Redbubble's "Mid Century Modern Bauhaus 1923 Exhibition Poster" 
+- Mid Century Modern furniture design posters featuring Bauhaus and Wassily chair designs
+- AllPosters' Mark Rothko color block series and mid-century modern collections
+
+### **Specialized Collections:**
+- 1stDibs Mid-Century Modern poster archive featuring International-style architecture influence from Bauhaus designers Ludwig Mies van der Rohe and Walter Gropius
+
+These galleries provide direct visual access to Bauhaus typography, Swiss design principles, geometric furniture layouts, and color-blocked modernist compositions - exactly what you need for creating your midcentury furniture poster with authentic Swiss and Scandinavian typography influences.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Wassily Chair, Bauhaus Poster Design (https://www.behance.net/gallery/103613283/Wassily-Chair-Bauhaus-Poster-Design?locale=en_US)
+2. Bauhaus Chairs — Illustrations (4) (https://www.behance.net/gallery/95685691/Bauhaus-Chairs-Illustrations/modules/552826829)
+3. Poster Collection | 100 Years Bauhaus (https://www.behance.net/gallery/76818901/Poster-Collection-100-Years-Bauhaus?locale=en_US)
+4. BAUHAUS 100 | Typographic posters (https://www.behance.net/gallery/78418047/BAUHAUS-100-Typographic-posters?locale=en_US)
+5. Swiss Typography designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/swiss-typography)
+6. Swiss Design designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/swiss-design)
+7. Swiss Poster designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/swiss-poster)
+8. Free and customizable minimalist templates (https://www.canva.com/templates/s/minimalist/)
+9. Free printable poster templates you can customize | Canva (https://www.canva.com/posters/templates/)
+10. Modernist Poster Design (https://www.pinterest.com/ideas/modernist-poster-design/904540474454/)
+11. Mid-Century Modern Posters & Wall Art Prints | AllPosters.com (https://www.allposters.com/-st/Mid-Century-Modern-Posters_c257757_.htm)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/103613283/Wassily-Chair-Bauhaus-Poster-Design?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Wassily Chair, Bauhaus Poster Design</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/95685691/Bauhaus-Chairs-Illustrations/modules/552826829" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Bauhaus Chairs — Illustrations (4)</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/76818901/Poster-Collection-100-Years-Bauhaus?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Poster Collection | 100 Years Bauhaus</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/78418047/BAUHAUS-100-Typographic-posters?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. BAUHAUS 100 | Typographic posters</a></li><li class="text-sm"><a href="https://dribbble.com/tags/swiss-typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Swiss Typography designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/swiss-design" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Swiss Design designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/swiss-poster" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Swiss Poster designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.canva.com/templates/s/minimalist/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Free and customizable minimalist templates</a></li><li class="text-sm"><a href="https://www.canva.com/posters/templates/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Free printable poster templates you can customize | Canva</a></li><li class="text-sm"><a href="https://www.pinterest.com/ideas/modernist-poster-design/904540474454/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Modernist Poster Design</a></li><li class="text-sm"><a href="https://www.allposters.com/-st/Mid-Century-Modern-Posters_c257757_.htm" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Mid-Century Modern Posters & Wall Art Prints | AllPosters.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="46.54">46.54秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="75,793">75,793</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Bauhaus midcentury furniture poster site:behance.net gallery
+2. Swiss typography poster furniture site:dribbble.com shots
+3. color block furniture poster site:dribbble.com shots
+4. furniture poster color block site:dribbble.com
+5. color block furniture poster site:dribbble.com furniture">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Bauhaus midcentury furniture poster site:behance.net gallery</li><li class="text-sm text-gray-600">2. Swiss typography poster furniture site:dribbble.com shots</li><li class="text-sm text-gray-600">3. color block furniture poster site:dribbble.com shots</li><li class="text-sm text-gray-600">4. furniture poster color block site:dribbble.com</li><li class="text-sm text-gray-600">5. color block furniture poster site:dribbble.com furniture</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Below are curated galleries and project pages showcasing the four styles you’re exploring. All links point directly to designer portfolios or shot pages—no articles or round-ups.
+
+Bauhaus-Style Midcentury Furniture Posters
+
+• BAUHAUS POSTER—Katherine Blaze (Behance)  
+  A clean, geometric exploration of Bauhaus forms and furniture elements, using primary shapes and muted accents to reference chrome-pipe seating and tubular frames. ([behance.net](https://www.behance.net/gallery/140996243/BAUHAUS-POSTER?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/140996243/BAUHAUS-POSTER
+
+• Bauhaus Themed Poster—2-hachigraphics (Dribbble)  
+  Bold blocks of color and spheres/rectangles arranged in tight, grid-inspired configurations, evoking the functional elegance of 1920s–30s furniture design. ([dribbble.com](https://dribbble.com/shots/11647105-Bauhaus-Themed-Poster?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/11647105-Bauhaus-Themed-Poster
+
+Swiss & Scandinavian Typography in Furniture Advertising
+
+• Swiss Style Furniture—Multiple designers (Behance)  
+  A minimalist site template for an online furniture store: crisp white layouts, Helvetica-like type hierarchy, and generous negative space that mirror Swiss graphic principles. ([behance.net](https://www.behance.net/gallery/174001073/Swiss-Style-Furniture?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/174001073/Swiss-Style-Furniture
+
+• Posters for Unika—Leit Design et al. (Behance)  
+  Scandinavian-style furniture posters where each flat-colored background block matches the featured piece, spotlighting material and form through simple typography. ([behance.net](https://www.behance.net/gallery/88897851/Posters-for-furniture-company?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/88897851/Posters-for-furniture-company
+
+• Nordic Designs—Navneet Kaur (Dribbble)  
+  A web-concept for Scandinavian furniture showcasing clean layouts, Luxora Grotesk headlines, and high-quality imagery—all hallmarks of Nordic minimalism. ([dribbble.com](https://dribbble.com/shots/21910341-Nordic-Designs-Scandinavian-Furniture-Website-Design?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/21910341-Nordic-Designs-Scandinavian-Furniture-Website-Design
+
+Minimalist Geometric Furniture Promotional Designs
+
+• Advertising & Poster Design – Furniture—Sheldon Grant (Behance)  
+  Series of ads using cut-out product shots with abstract geometric shapes behind them, directing the viewer’s eye to the furniture silhouette. ([behance.net](https://www.behance.net/gallery/150255695/Advertising-Poster-Design-Furniture?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/150255695/Advertising-Poster-Design-Furniture
+
+• Trendy Minimalist Furniture Lookbook Design—Graphic & UX/UI Designer (Behance)  
+  Editorial lookbook layout featuring furniture and décor; employs geometric accents, bold typographic hierarchies, and a nature-inspired color palette. ([behance.net](https://www.behance.net/gallery/101203857/Trendy-Minimalist-Furniture-Lookbook-Design?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/101203857/Trendy-Minimalist-Furniture-Lookbook-Design
+
+Color-Block Modern Furniture Posters
+
+• Design furniture poster—Aleksei (Dribbble)  
+  A silhouette of a chair against vibrant color blocks; minimal copy with a strong emphasis on form and hue contrast. ([dribbble.com](https://dribbble.com/shots/25847350-Design-furniture-poster?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/25847350-Design-furniture-poster
+
+• Furniture Shop Poster Design—Mcube DesignBridge (Dribbble)  
+  Warm pastel and earth-tone blocks around a central furniture illustration, combined with clean sans-serif text for a lifestyle-driven ad. ([dribbble.com](https://dribbble.com/shots/26035279-Furniture-Shop-Poster-Design?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/26035279-Furniture-Shop-Poster-Design">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Below are curated galleries and project pages showcasing the four styles you’re exploring. All links point directly to designer portfolios or shot pages—no articles or round-ups.
+
+Bauhaus-Style Midcentury Furniture Posters
+
+• BAUHAUS POSTER—Katherine Blaze (Behance)  
+  A clean, geometric exploration of Bauhaus forms and furniture elements, using primary shapes and muted accents to reference chrome-pipe seating and tubular frames. ([behance.net](https://www.behance.net/gallery/140996243/BAUHAUS-POSTER?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/140996243/BAUHAUS-POSTER
+
+• Bauhaus Themed Poster—2-hachigraphics (Dribbble)  
+  Bold blocks of color and spheres/rectangles arranged in tight, grid-inspired configurations, evoking the functional elegance of 1920s–30s furniture design. ([dribbble.com](https://dribbble.com/shots/11647105-Bauhaus-Themed-Poster?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/11647105-Bauhaus-Themed-Poster
+
+Swiss & Scandinavian Typography in Furniture Advertising
+
+• Swiss Style Furniture—Multiple designers (Behance)  
+  A minimalist site template for an online furniture store: crisp white layouts, Helvetica-like type hierarchy, and generous negative space that mirror Swiss graphic principles. ([behance.net](https://www.behance.net/gallery/174001073/Swiss-Style-Furniture?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/174001073/Swiss-Style-Furniture
+
+• Posters for Unika—Leit Design et al. (Behance)  
+  Scandinavian-style furniture posters where each flat-colored background block matches the featured piece, spotlighting material and form through simple typography. ([behance.net](https://www.behance.net/gallery/88897851/Posters-for-furniture-company?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/88897851/Posters-for-furniture-company
+
+• Nordic Designs—Navneet Kaur (Dribbble)  
+  A web-concept for Scandinavian furniture showcasing clean layouts, Luxora Grotesk headlines, and high-quality imagery—all hallmarks of Nordic minimalism. ([dribbble.com](https://dribbble.com/shots/21910341-Nordic-Designs-Scandinavian-Furniture-Website-Design?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/21910341-Nordic-Designs-Scandinavian-Furniture-Website-Design
+
+Minimalist Geometric Furniture Promotional Designs
+
+• Advertising & Poster Design – Furniture—Sheldon Grant (Behance)  
+  Series of ads using cut-out product shots with abstract geometric shapes behind them, directing the viewer’s eye to the furniture silhouette. ([behance.net](https://www.behance.net/gallery/150255695/Advertising-Poster-Design-Furniture?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/150255695/Advertising-Poster-Design-Furniture
+
+• Trendy Minimalist Furniture Lookbook Design—Graphic & UX/UI Designer (Behance)  
+  Editorial lookbook layout featuring furniture and décor; employs geometric accents, bold typographic hierarchies, and a nature-inspired color palette. ([behance.net](https://www.behance.net/gallery/101203857/Trendy-Minimalist-Furniture-Lookbook-Design?utm_source=chatgpt.com))  
+  https://www.behance.net/gallery/101203857/Trendy-Minimalist-Furniture-Lookbook-Design
+
+Color-Block Modern Furniture Posters
+
+• Design furniture poster—Aleksei (Dribbble)  
+  A silhouette of a chair against vibrant color blocks; minimal copy with a strong emphasis on form and hue contrast. ([dribbble.com](https://dribbble.com/shots/25847350-Design-furniture-poster?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/25847350-Design-furniture-poster
+
+• Furniture Shop Poster Design—Mcube DesignBridge (Dribbble)  
+  Warm pastel and earth-tone blocks around a central furniture illustration, combined with clean sans-serif text for a lifestyle-driven ad. ([dribbble.com](https://dribbble.com/shots/26035279-Furniture-Shop-Poster-Design?utm_source=chatgpt.com))  
+  https://dribbble.com/shots/26035279-Furniture-Shop-Poster-Design</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. BAUHAUS POSTER :: Behance (https://www.behance.net/gallery/140996243/BAUHAUS-POSTER?utm_source=chatgpt.com)
+2. Bauhaus Themed Poster by 2-hachigraphics on Dribbble (https://dribbble.com/shots/11647105-Bauhaus-Themed-Poster?utm_source=chatgpt.com)
+3. Swiss Style Furniture :: Behance (https://www.behance.net/gallery/174001073/Swiss-Style-Furniture?utm_source=chatgpt.com)
+4. Posters for Unika :: Behance (https://www.behance.net/gallery/88897851/Posters-for-furniture-company?utm_source=chatgpt.com)
+5. Nordic Designs - Scandinavian Furniture Website Design by Navneet Kaur on Dribbble (https://dribbble.com/shots/21910341-Nordic-Designs-Scandinavian-Furniture-Website-Design?utm_source=chatgpt.com)
+6. Advertising & Poster Design - Furniture :: Behance (https://www.behance.net/gallery/150255695/Advertising-Poster-Design-Furniture?utm_source=chatgpt.com)
+7. Trendy Minimalist Furniture Lookbook Design :: Behance (https://www.behance.net/gallery/101203857/Trendy-Minimalist-Furniture-Lookbook-Design?utm_source=chatgpt.com)
+8. Design furniture poster by Aleksei on Dribbble (https://dribbble.com/shots/25847350-Design-furniture-poster?utm_source=chatgpt.com)
+9. Furniture Shop Poster Design by Mcube DesignBridge on Dribbble (https://dribbble.com/shots/26035279-Furniture-Shop-Poster-Design?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/140996243/BAUHAUS-POSTER?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. BAUHAUS POSTER :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/11647105-Bauhaus-Themed-Poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Bauhaus Themed Poster by 2-hachigraphics on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/174001073/Swiss-Style-Furniture?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Swiss Style Furniture :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/88897851/Posters-for-furniture-company?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Posters for Unika :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/21910341-Nordic-Designs-Scandinavian-Furniture-Website-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Nordic Designs - Scandinavian Furniture Website Design by Navneet Kaur on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/150255695/Advertising-Poster-Design-Furniture?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Advertising & Poster Design - Furniture :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/101203857/Trendy-Minimalist-Furniture-Lookbook-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Trendy Minimalist Furniture Lookbook Design :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25847350-Design-furniture-poster?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Design furniture poster by Aleksei on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/26035279-Furniture-Shop-Poster-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Furniture Shop Poster Design by Mcube DesignBridge on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
