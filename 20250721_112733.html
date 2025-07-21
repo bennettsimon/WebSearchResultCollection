@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to design a vibrant, playful logo for "Tadika Kautsar," an Islamic Montessori kindergarten. You need to search for Montessori kindergarten logo designs, children's education brand logos, hand-drawn playful logos, colorful kindergarten visuals, and educational brand designs with floral natural elements.">The user needs to design a vibrant, playful logo for "Tadika Kautsar," an Islamic Montessori kindergarten. You need to search for Montessori kindergarten logo designs, children's education brand logos, hand-drawn playful logos, colorful kindergarten visuals, and educational brand designs with floral natural elements.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-21 11:28:24</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="11.96">11.96秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="838">838</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Montessori kindergarten logo designs
+2. children's education brand logos
+3. hand-drawn playful logos for kindergarten
+4. colorful kindergarten visuals logo inspiration
+5. educational brand designs with floral natural elements logo
+6. Islamic kindergarten logo design ideas
+7. playful Islamic education logo">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Montessori kindergarten logo designs</li><li class="text-sm text-gray-600">2. children's education brand logos</li><li class="text-sm text-gray-600">3. hand-drawn playful logos for kindergarten</li><li class="text-sm text-gray-600">4. colorful kindergarten visuals logo inspiration</li><li class="text-sm text-gray-600">5. educational brand designs with floral natural elements logo</li><li class="text-sm text-gray-600">6. Islamic kindergarten logo design ideas</li><li class="text-sm text-gray-600">7. playful Islamic education logo</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To design a vibrant and playful logo for "Tadika Kautsar," an Islamic Montessori kindergarten, consider incorporating the following elements and design styles:
+
+**1. Playful and Hand-Drawn Elements:**
+*   Look for inspiration in logos that use cheerful, hand-drawn text and illustrations to evoke a sense of playfulness and childhood. Many kindergarten logos feature hand-drawn elements, which can include playful animals, characters, or abstract shapes.
+*   Consider using fonts that are colorful and fun, such as "Paprika" or "Jolly Lodger," which can be multi-colored to add vibrancy.
+
+**2. Vibrant and Cheerful Color Palette:**
+*   Color is key to creating a vibrant and energetic feel. Utilize bright and bold colors that are attractive to both children and parents.
+*   Think about color combinations that evoke happiness and energy, and consider how different colors can psychologically impact the perception of the logo.
+
+**3. Montessori and Educational Themes:**
+*   Incorporate visuals that suggest learning, growth, and the Montessori approach. This could include elements like open books, pencils, or subtle representations of growth.
+*   Some Montessori logos feature simple designs, sometimes incorporating geometric shapes or elements related to Montessori materials like the "pink tower."
+
+**4. Islamic Elements:**
+*   Integrate Islamic symbols or motifs in a subtle and child-friendly manner. This could include elements like a crescent moon, stars, mosque domes, or an open book, which are common in Islamic education logos.
+*   Consider using Arabic calligraphy or script, if appropriate, to represent the "Islamic" aspect of the kindergarten.
+
+**5. Floral and Natural Elements:**
+*   To convey growth, nature, and a nurturing environment, consider including floral or botanical elements. These can be integrated as part of the logo's frame, or as subtle accents.
+*   Leaves, flowers, trees, or even abstract representations of nature can symbolize growth, peace, and care.
+
+**6. Overall Composition:**
+*   Explore designs that use overlapping shapes to suggest collaboration and community, and to blend colors for a diverse feel.
+*   The logo should be memorable and capture the essence of youthful imagination and learning. It should be visually appealing to both children and parents.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To design a vibrant and playful logo for "Tadika Kautsar," an Islamic Montessori kindergarten, consider incorporating the following elements and design styles:
+
+**1. Playful and Hand-Drawn Elements:**
+*   Look for inspiration in logos that use cheerful, hand-drawn text and illustrations to evoke a sense of playfulness and childhood. Many kindergarten logos feature hand-drawn elements, which can include playful animals, characters, or abstract shapes.
+*   Consider using fonts that are colorful and fun, such as "Paprika" or "Jolly Lodger," which can be multi-colored to add vibrancy.
+
+**2. Vibrant and Cheerful Color Palette:**
+*   Color is key to creating a vibrant and energetic feel. Utilize bright and bold colors that are attractive to both children and parents.
+*   Think about color combinations that evoke happiness and energy, and consider how different colors can psychologically impact the perception of the logo.
+
+**3. Montessori and Educational Themes:**
+*   Incorporate visuals that suggest learning, growth, and the Montessori approach. This could include elements like open books, pencils, or subtle representations of growth.
+*   Some Montessori logos feature simple designs, sometimes incorporating geometric shapes or elements related to Montessori materials like the "pink tower."
+
+**4. Islamic Elements:**
+*   Integrate Islamic symbols or motifs in a subtle and child-friendly manner. This could include elements like a crescent moon, stars, mosque domes, or an open book, which are common in Islamic education logos.
+*   Consider using Arabic calligraphy or script, if appropriate, to represent the "Islamic" aspect of the kindergarten.
+
+**5. Floral and Natural Elements:**
+*   To convey growth, nature, and a nurturing environment, consider including floral or botanical elements. These can be integrated as part of the logo's frame, or as subtle accents.
+*   Leaves, flowers, trees, or even abstract representations of nature can symbolize growth, peace, and care.
+
+**6. Overall Composition:**
+*   Explore designs that use overlapping shapes to suggest collaboration and community, and to blend colors for a diverse feel.
+*   The logo should be memorable and capture the essence of youthful imagination and learning. It should be visually appealing to both children and parents.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0Yne2DJlJnK5cUYXbMLrP--0YrwKjIZcIs6d7Idfib3bgx_aAaTC2pXridWxHuTK4fgyUa_nji16dn4KutvLcd3t3kuKSwS9Gf-Yns1wsbZ-7ELkifKNi3ofH8RS9V3QFQOaGlcy6H8MfwzcBRQg=)
+2. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIWdR_qSxkdjq_8kljxB28HlH1Q6J-wU1Il-7EdrTXm_G-Eqg1_-6a1FNYPUXkzJzPcaqsozo7PvlCNQqdWryLxcE-HO0-IJwBtHzoJOhZGJ9wJcG6KAoAnMmABRHpF07x-KntToRvofclnGN6CHN4qduzYwR5sL69ptJ4ZUg=)
+3. kreafolk.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLiJYlRyAfyjkuYodwrz_DYh98IJxWZsWM3dCl2wvnj_pCpqnLQYi6P_7SG7UmUYzflqq5KoldIXsN12cqwb37Gd5XluTmmRph7btgOjsb11hqzj5b0DlcPg95o4SIGZd5QVw8vZhux1VgOGvsduirfoxnmLa_3uRV9Hru)
+4. logomyway.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTTneZX1Dv1wGAKzC0TKvBlBZxqfeVVuo1qaVUQqnepKe1AqjKp4BmjcEDI5c0HdyvHrosNyFpVbXkliJp_bNyfiFZF4e2g7f-zdHaPG3eJZJZvg6vFHOx-t-4uzPHo_Zi2lvQXnBJYShqgZyepwt1uWKAIg==)
+5. zigpoll.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgIl0y7Mt6pcrkIvRaaZ030luId1vjcTzuSYr0ko6bFljQjVma7MHQLH5LNoOBIBNLZj4IglMS0jko6bb48ncVGOpzhPVI9u9arcXdRwJ1H9xf07lQNf5fWIY2fgCDmwO3gA93223XNxGl5ZFc46wB8MJf6bW8jw3mfLXmjSxkB_-KAhhP1ihvObIgg32gu2pQPqSBPgpizI6BLD36YvGshQCuBs8tImWSaWbbmLzVadmdxu41WIqBONdY9N2q61aVqH-PnMBCI1xzgemj_OVqJ5nEuO80x5Dl0I8dV59d0gM8zg==)
+6. freepik.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZTohEO6bN8oKXrRyU9Dty2D-JnnN8kG5qPJkUEYH_axw89vDhLOKaGl09OPUzvacfoyC_TWAeazz6p2jUX-oJ6lgqfAc_eA7UA085F4S3x8L5iTIcPlH7egLJGvlJrhpMrx76FGNeACsCS7wJAffZx75BJUHx)
+7. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6It37prXPVCOD9jUu3GGLd1029Yl_y_XwzJ-jLWBG9gVJwipQ-TGsWDmLIky7HHciuinIaOwL6PpJwP0VapdVy4euDomxew-AWajFjyT6NgnL1CE0BW2jvcu6M04Tuez8ueCS3ZZANkg7uVLt2Q==)
+8. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp_pqIyeQ4x166qcUc85mUgXnuWe-YfMOe-cmZ8dOBeOLteHYGOxJmx9B7Ij0z-xJthqu6Jo0ETIa3sEhDd8hxIiMCLoq_rdQ-FG6nKRjbxUj54ntUE4JP_q1eVxwhA8w-LghzJ9Wb-ro9b37EU9m5vRhPQfM=)
+9. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFI6_VwUk7ukB2mOuRgtHZ4ZepaoWSNdSZUnfRbtwm-Bg5R1qZ7layuDbxrpDGDuqs2B2UG9Y2QxJb4T901y3C0Ng4Xl_lOAzcg57z9XgPzM191H8nLJuSJctRx1eUcCw9uZcG4lSEslKfWE_VRlx2uM5tgOaw31qWcgevtMQTL5wRVy7pxXFmiiKB_sw41IMyI_w4hKnnrAdPsXRHRg9ux5skCAllvWOr3rBoJM-DnsE9qqjk=)
+10. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyVaY7ElLcJqW7VbEqHiTSupBR2EM9hG8JrQ8EFR7hkRnLR9XyIunk_v8B08IfabmiVnNf6FXy2CQqKpuumN4yR7Ss9cX3ISwiR5hEEbidxh7vuyabZNdkuzcZ5DPZx88YXC9-loZCpg5g2cFiaKiOUs1w)
+11. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQ8ofZcmTSWhR5oxCWS0740IlnrMC0RGGhcfI_yNytmo1WQB0rJ2_g2qw-uhjwJr1T7149mWePgin608xMbgBdAcHsHo8B05lL_81gKi0LNGnpQWlc5__FrPTkIuSAhqwDwGDNuzozgtNjOfihrbxRsgQ=)
+12. logodesign.net (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAxsi1f2b9b76cuF4OSI56T0kr89Neh_lXQc2Gp4FXOA2DmigOR9OZiXrU9CuNRZZ2YpwE65q2DiYSxZXv0bc9dm3S9pVt1SiLU2MorR_xVFjFkxfcLZ0eYxl8-XbOiVsQ8ZMQ5vc=)
+13. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGi_MbOoOT_hs0H3jN5QyLRs5pIoQvJvEXGcdl806euTcX7VuG4hDIZy93mdujmVW-nQ0ztmiCvThackFi5EK4t-ZDPiGgM27S2dJguWA-DV_1cIoZVI3WktAfu660OTtv6hDYtD4l69-h_v23o-bnVYAg=)
+14. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVHaOVdCSDQzX-SkIEQwxJ-Txj95hK1h8oHnmWiQMpw9Euym7dicoJquibnKYNvmdO0EmezMeU8odDdUO62SF58OG4YTAE6nrYdHGsrqYp_p2HLzncLy3DpmYvT4S0FQ378dlf97-mmj6tSqO_n6U7qKOM)
+15. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6x2S7jN-dV2ilmtkS3J1tSXvrN4XI-xrJ-Ola5JedpGQ02dQn062mXIISUEt5yJLLovREBdj43p37HNonaBn83D8YNnMpIyOpfJhwggiJAfZjXmdecL9ntgFx9luhZ8XiBoql7z_p2l7JQ4-ihC24cPAkRQ==)
+16. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNgt44g8Au0PnG-JKkzfQJiXZGpGS7EYmzI4QKZbUmV56P6ZNmRyGghdLqRp9v3egAJpkuMOYGBLJ9CJnOOV11jMFyTcl-zWmBUPPuAqXZ_adHDB7YI19qSA6redgEdFhthVqx6G3R57m9DEoeWH_v1yhqS14=)
+17. vecteezy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFww466PoqoqpIxHG6gbykEb317VIsM4aa_m-ZhPEy7nYt40d-IeL5DN9hrK-yS20T1CwmhERVY1VXlI-4NiGl5me0ex51GWhPnSixkhDiMYyYtcAWvz1i04yhd1i53OE_g525Wpzb4IEc1gF6r0GVAC9MenOpc)
+18. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELd0E2p50zk3r0veHM24SaTbdUdF5LPTojNTgxIG448iGHHo9FAj9AMXYjolT3TGYty7-6hVuhpvRZL890r3QjO_U_rdsV0db3In0DGthG_oCx7R9kv-pFrWVzrCfhyQL5tDr2huJcCQoXlCOdhAua9H98WRVUiqxlQNfapQ==)
+19. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu0icnhlA80yXxRuLAGipF-ms41ey1Hk3aTrI7dSCCK_7PD895COvr6lkZ7HjEu0OBZw8XY2DcYjolfHcWW_amivl0Cnq1H2BJANYOC8iBMqypvGdsZSwo-MJXJVvtMd8uEop6oxueeQ-mokFaIwvek3V2TQ==)
+20. dribbble.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnn_IKGu2zd0W1z_-hMjvkNxuIfJmcOFBlTpqyzSo0Erv2DH7k0RsGvi1tjDykvL67-90kBGcbO6na4pUOoIUggaE5FwmZMqtG8Kz3l7tSdtWoESj7FUKyS4CxKLwAiq0FoKHez5DaTw==)
+21. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrPYpb74ixHuXGFga0jur6AcvBVYNt0S3GiSfRCCXSEOj-NjzC2Ilyh8bGovKlByKo6Mq0gjNk9xKHjg3v_t46xJsnOxE2l2s2dGRPJTTxb5NvWNRlM5NJA-9pSyPzxa5iV2-_TxfLHeiBWo3a8L7k4MkAu00SYVAao0L6s9Q=)
+22. tailorbrands.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1lxvXlWdl1eZcPWj7bNDbm52oWYpab7MzO6CXX-WoPn2lc2B0irX52jWm-Ymtr4h7VVmD0cxJy7GzILskvKz24CSsBV8qldsmBr2t4IiYRRxLhmfOXMlcW8Vkxa87CRklw13jT6bWFnexMmAD42k=)
+23. 99designs.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq2zqntgGTMV3JOpH1cXgDdwkjJciiMMJa4fr7U7d_qiftABV6MvpIRSV_ecvu0L-CaVsk6WqeMSS4mI9vjSUuPOffmD6s6XQeme9oCphe2o_IjjeU4ZSH8JB2l2weVqw63M6x39eeQ-Bfefw0Vq_NA4mdnXM=)
+24. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFznB9tRJpsw6r9huGwIo1bZxBRxatgwiXA-5tpBTekMUpgfSLjnk7PMBX7RJzOCLTSM3veu4mOKNgLjL-Y2K7RrCOG8_928fLsP_iW8Q5AQbva3PAPaSKNZYZw3T4PiQZ4Qv3LgBk97KnvLSrF29tvIoC1LOw=)
+25. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU2TSzQ1Bk55NdNGyiuik6KM6oLITKEleUO9EOORCQn1ym6Z2BWt7KihNAAzupnj0HekH_Y62xiDE0Ca37IFCrFyi_fx_tl81DbAPpuPa8amXHZ0HY4TrGblSWBPTSW5zA8IFFwIOb2dOpuTaRydNQwuo4x3vD8DdGWOsAhZ8jDBN-btW7HQiy6ty4)
+26. pinterest.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETUxDED33RUJL0Hyeie3w9u3uXNTPRPfEMmIq5rBLoH3OqgAIkb6AlkqhDF3-ahafQ0r0BTXglCr7trRorsahBY3Yw-uUov0LuzfOggkQNJia0_pIYq7OrXP3t1lxiN5qb7O7sKMqttVeuVmnmm9WizwwZbl3KPg==)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0Yne2DJlJnK5cUYXbMLrP--0YrwKjIZcIs6d7Idfib3bgx_aAaTC2pXridWxHuTK4fgyUa_nji16dn4KutvLcd3t3kuKSwS9Gf-Yns1wsbZ-7ELkifKNi3ofH8RS9V3QFQOaGlcy6H8MfwzcBRQg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIWdR_qSxkdjq_8kljxB28HlH1Q6J-wU1Il-7EdrTXm_G-Eqg1_-6a1FNYPUXkzJzPcaqsozo7PvlCNQqdWryLxcE-HO0-IJwBtHzoJOhZGJ9wJcG6KAoAnMmABRHpF07x-KntToRvofclnGN6CHN4qduzYwR5sL69ptJ4ZUg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLiJYlRyAfyjkuYodwrz_DYh98IJxWZsWM3dCl2wvnj_pCpqnLQYi6P_7SG7UmUYzflqq5KoldIXsN12cqwb37Gd5XluTmmRph7btgOjsb11hqzj5b0DlcPg95o4SIGZd5QVw8vZhux1VgOGvsduirfoxnmLa_3uRV9Hru" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. kreafolk.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTTneZX1Dv1wGAKzC0TKvBlBZxqfeVVuo1qaVUQqnepKe1AqjKp4BmjcEDI5c0HdyvHrosNyFpVbXkliJp_bNyfiFZF4e2g7f-zdHaPG3eJZJZvg6vFHOx-t-4uzPHo_Zi2lvQXnBJYShqgZyepwt1uWKAIg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. logomyway.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgIl0y7Mt6pcrkIvRaaZ030luId1vjcTzuSYr0ko6bFljQjVma7MHQLH5LNoOBIBNLZj4IglMS0jko6bb48ncVGOpzhPVI9u9arcXdRwJ1H9xf07lQNf5fWIY2fgCDmwO3gA93223XNxGl5ZFc46wB8MJf6bW8jw3mfLXmjSxkB_-KAhhP1ihvObIgg32gu2pQPqSBPgpizI6BLD36YvGshQCuBs8tImWSaWbbmLzVadmdxu41WIqBONdY9N2q61aVqH-PnMBCI1xzgemj_OVqJ5nEuO80x5Dl0I8dV59d0gM8zg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. zigpoll.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZTohEO6bN8oKXrRyU9Dty2D-JnnN8kG5qPJkUEYH_axw89vDhLOKaGl09OPUzvacfoyC_TWAeazz6p2jUX-oJ6lgqfAc_eA7UA085F4S3x8L5iTIcPlH7egLJGvlJrhpMrx76FGNeACsCS7wJAffZx75BJUHx" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. freepik.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6It37prXPVCOD9jUu3GGLd1029Yl_y_XwzJ-jLWBG9gVJwipQ-TGsWDmLIky7HHciuinIaOwL6PpJwP0VapdVy4euDomxew-AWajFjyT6NgnL1CE0BW2jvcu6M04Tuez8ueCS3ZZANkg7uVLt2Q==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp_pqIyeQ4x166qcUc85mUgXnuWe-YfMOe-cmZ8dOBeOLteHYGOxJmx9B7Ij0z-xJthqu6Jo0ETIa3sEhDd8hxIiMCLoq_rdQ-FG6nKRjbxUj54ntUE4JP_q1eVxwhA8w-LghzJ9Wb-ro9b37EU9m5vRhPQfM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFI6_VwUk7ukB2mOuRgtHZ4ZepaoWSNdSZUnfRbtwm-Bg5R1qZ7layuDbxrpDGDuqs2B2UG9Y2QxJb4T901y3C0Ng4Xl_lOAzcg57z9XgPzM191H8nLJuSJctRx1eUcCw9uZcG4lSEslKfWE_VRlx2uM5tgOaw31qWcgevtMQTL5wRVy7pxXFmiiKB_sw41IMyI_w4hKnnrAdPsXRHRg9ux5skCAllvWOr3rBoJM-DnsE9qqjk=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyVaY7ElLcJqW7VbEqHiTSupBR2EM9hG8JrQ8EFR7hkRnLR9XyIunk_v8B08IfabmiVnNf6FXy2CQqKpuumN4yR7Ss9cX3ISwiR5hEEbidxh7vuyabZNdkuzcZ5DPZx88YXC9-loZCpg5g2cFiaKiOUs1w" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQ8ofZcmTSWhR5oxCWS0740IlnrMC0RGGhcfI_yNytmo1WQB0rJ2_g2qw-uhjwJr1T7149mWePgin608xMbgBdAcHsHo8B05lL_81gKi0LNGnpQWlc5__FrPTkIuSAhqwDwGDNuzozgtNjOfihrbxRsgQ=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAxsi1f2b9b76cuF4OSI56T0kr89Neh_lXQc2Gp4FXOA2DmigOR9OZiXrU9CuNRZZ2YpwE65q2DiYSxZXv0bc9dm3S9pVt1SiLU2MorR_xVFjFkxfcLZ0eYxl8-XbOiVsQ8ZMQ5vc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. logodesign.net</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGi_MbOoOT_hs0H3jN5QyLRs5pIoQvJvEXGcdl806euTcX7VuG4hDIZy93mdujmVW-nQ0ztmiCvThackFi5EK4t-ZDPiGgM27S2dJguWA-DV_1cIoZVI3WktAfu660OTtv6hDYtD4l69-h_v23o-bnVYAg=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVHaOVdCSDQzX-SkIEQwxJ-Txj95hK1h8oHnmWiQMpw9Euym7dicoJquibnKYNvmdO0EmezMeU8odDdUO62SF58OG4YTAE6nrYdHGsrqYp_p2HLzncLy3DpmYvT4S0FQ378dlf97-mmj6tSqO_n6U7qKOM" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6x2S7jN-dV2ilmtkS3J1tSXvrN4XI-xrJ-Ola5JedpGQ02dQn062mXIISUEt5yJLLovREBdj43p37HNonaBn83D8YNnMpIyOpfJhwggiJAfZjXmdecL9ntgFx9luhZ8XiBoql7z_p2l7JQ4-ihC24cPAkRQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNgt44g8Au0PnG-JKkzfQJiXZGpGS7EYmzI4QKZbUmV56P6ZNmRyGghdLqRp9v3egAJpkuMOYGBLJ9CJnOOV11jMFyTcl-zWmBUPPuAqXZ_adHDB7YI19qSA6redgEdFhthVqx6G3R57m9DEoeWH_v1yhqS14=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFww466PoqoqpIxHG6gbykEb317VIsM4aa_m-ZhPEy7nYt40d-IeL5DN9hrK-yS20T1CwmhERVY1VXlI-4NiGl5me0ex51GWhPnSixkhDiMYyYtcAWvz1i04yhd1i53OE_g525Wpzb4IEc1gF6r0GVAC9MenOpc" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. vecteezy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELd0E2p50zk3r0veHM24SaTbdUdF5LPTojNTgxIG448iGHHo9FAj9AMXYjolT3TGYty7-6hVuhpvRZL890r3QjO_U_rdsV0db3In0DGthG_oCx7R9kv-pFrWVzrCfhyQL5tDr2huJcCQoXlCOdhAua9H98WRVUiqxlQNfapQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu0icnhlA80yXxRuLAGipF-ms41ey1Hk3aTrI7dSCCK_7PD895COvr6lkZ7HjEu0OBZw8XY2DcYjolfHcWW_amivl0Cnq1H2BJANYOC8iBMqypvGdsZSwo-MJXJVvtMd8uEop6oxueeQ-mokFaIwvek3V2TQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnn_IKGu2zd0W1z_-hMjvkNxuIfJmcOFBlTpqyzSo0Erv2DH7k0RsGvi1tjDykvL67-90kBGcbO6na4pUOoIUggaE5FwmZMqtG8Kz3l7tSdtWoESj7FUKyS4CxKLwAiq0FoKHez5DaTw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. dribbble.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrPYpb74ixHuXGFga0jur6AcvBVYNt0S3GiSfRCCXSEOj-NjzC2Ilyh8bGovKlByKo6Mq0gjNk9xKHjg3v_t46xJsnOxE2l2s2dGRPJTTxb5NvWNRlM5NJA-9pSyPzxa5iV2-_TxfLHeiBWo3a8L7k4MkAu00SYVAao0L6s9Q=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1lxvXlWdl1eZcPWj7bNDbm52oWYpab7MzO6CXX-WoPn2lc2B0irX52jWm-Ymtr4h7VVmD0cxJy7GzILskvKz24CSsBV8qldsmBr2t4IiYRRxLhmfOXMlcW8Vkxa87CRklw13jT6bWFnexMmAD42k=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. tailorbrands.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq2zqntgGTMV3JOpH1cXgDdwkjJciiMMJa4fr7U7d_qiftABV6MvpIRSV_ecvu0L-CaVsk6WqeMSS4mI9vjSUuPOffmD6s6XQeme9oCphe2o_IjjeU4ZSH8JB2l2weVqw63M6x39eeQ-Bfefw0Vq_NA4mdnXM=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. 99designs.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFznB9tRJpsw6r9huGwIo1bZxBRxatgwiXA-5tpBTekMUpgfSLjnk7PMBX7RJzOCLTSM3veu4mOKNgLjL-Y2K7RrCOG8_928fLsP_iW8Q5AQbva3PAPaSKNZYZw3T4PiQZ4Qv3LgBk97KnvLSrF29tvIoC1LOw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">24. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU2TSzQ1Bk55NdNGyiuik6KM6oLITKEleUO9EOORCQn1ym6Z2BWt7KihNAAzupnj0HekH_Y62xiDE0Ca37IFCrFyi_fx_tl81DbAPpuPa8amXHZ0HY4TrGblSWBPTSW5zA8IFFwIOb2dOpuTaRydNQwuo4x3vD8DdGWOsAhZ8jDBN-btW7HQiy6ty4" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">25. pinterest.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETUxDED33RUJL0Hyeie3w9u3uXNTPRPfEMmIq5rBLoH3OqgAIkb6AlkqhDF3-ahafQ0r0BTXglCr7trRorsahBY3Yw-uUov0LuzfOggkQNJia0_pIYq7OrXP3t1lxiN5qb7O7sKMqttVeuVmnmm9WizwwZbl3KPg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">26. pinterest.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="35.28">35.28秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="49,704">49,704</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. Montessori kindergarten logo design site:behance.net
+2. playful children education logo portfolio dribbble
+3. colorful kindergarten branding hand drawn natural elements portfolio
+4. Islamic kindergarten educational branding floral design behance">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. Montessori kindergarten logo design site:behance.net</li><li class="text-sm text-gray-600">2. playful children education logo portfolio dribbble</li><li class="text-sm text-gray-600">3. colorful kindergarten branding hand drawn natural elements portfolio</li><li class="text-sm text-gray-600">4. Islamic kindergarten educational branding floral design behance</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll help you find visual inspiration for the Tadika Kautsar logo by searching for actual design galleries and portfolios showcasing relevant work. Let me search for specific examples of Montessori kindergarten logos, playful educational branding, and colorful children's design work.Based on my search for visual inspiration galleries, I've found several excellent resources for your Tadika Kautsar logo design project. Here are the key findings with direct links to actual design portfolios and galleries:
+
+## **Montessori & Kindergarten Design Inspiration:**
+
+I found specific Montessori logo development projects on Behance, including a gallery featuring "4me-Montessori kindergarten and nursery logo" that could provide direct visual reference for your Islamic Montessori concept.
+
+## **Playful Children's Education Logos:**
+
+Dribbble showcases over 400 kids logo designs, featuring "playful, cute, kids toy store" concepts and "Kids Education - Modern Typographic Logo Design for Kids". There are also 500+ playful logo designs available for inspiration.
+
+## **Hand-Drawn & Natural Design Elements:**
+
+For the hand-drawn aesthetic you're seeking, hand-drawn designs capture "the fun of making hand-drawn design—such as painting with bright hues, incorporating children's drawings or using organic patterns with colors that pop". This approach is particularly recommended for "education or daycare businesses".
+
+You'll find examples of "colorful hand drawn organic shapes, lines, doodles and elements" with natural forms that would work perfectly for your floral natural elements requirement.
+
+## **Colorful Kindergarten Visuals:**
+
+"Vector summer seamless pattern with cute colorful hand drawn elements in bright rainbow colors for kids textile" provides excellent examples of vibrant, playful color schemes. "Cheerfully coloured daycare centres" that use "colour for dramatic effect throughout the space" can inspire your color palette choices.
+
+## **Islamic Design Elements:**
+
+Behance features "Islamic floral art" with vector illustrations, and there are 8 Islamic School Logo designs on Dribbble that could provide cultural context for your Islamic kindergarten branding.
+
+## **Key Visual Resources to Explore:**
+
+1. **Behance Montessori Projects** - Direct portfolios showing kindergarten logo development
+2. **Dribbble Kids Education Tags** - Hundreds of playful educational logo examples  
+3. **Hand-drawn Logo Portfolios** - Organic, colorful design approaches perfect for children
+4. **Islamic Floral Art Galleries** - Cultural design elements for your Islamic context
+5. **Colorful Kindergarten Interior Designs** - Color inspiration for vibrant, playful aesthetics
+
+These resources provide actual design portfolios and project galleries rather than articles about design, giving you direct visual inspiration for creating a vibrant, playful logo that combines Montessori education principles with Islamic cultural elements and natural floral motifs.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll help you find visual inspiration for the Tadika Kautsar logo by searching for actual design galleries and portfolios showcasing relevant work. Let me search for specific examples of Montessori kindergarten logos, playful educational branding, and colorful children's design work.Based on my search for visual inspiration galleries, I've found several excellent resources for your Tadika Kautsar logo design project. Here are the key findings with direct links to actual design portfolios and galleries:
+
+## **Montessori & Kindergarten Design Inspiration:**
+
+I found specific Montessori logo development projects on Behance, including a gallery featuring "4me-Montessori kindergarten and nursery logo" that could provide direct visual reference for your Islamic Montessori concept.
+
+## **Playful Children's Education Logos:**
+
+Dribbble showcases over 400 kids logo designs, featuring "playful, cute, kids toy store" concepts and "Kids Education - Modern Typographic Logo Design for Kids". There are also 500+ playful logo designs available for inspiration.
+
+## **Hand-Drawn & Natural Design Elements:**
+
+For the hand-drawn aesthetic you're seeking, hand-drawn designs capture "the fun of making hand-drawn design—such as painting with bright hues, incorporating children's drawings or using organic patterns with colors that pop". This approach is particularly recommended for "education or daycare businesses".
+
+You'll find examples of "colorful hand drawn organic shapes, lines, doodles and elements" with natural forms that would work perfectly for your floral natural elements requirement.
+
+## **Colorful Kindergarten Visuals:**
+
+"Vector summer seamless pattern with cute colorful hand drawn elements in bright rainbow colors for kids textile" provides excellent examples of vibrant, playful color schemes. "Cheerfully coloured daycare centres" that use "colour for dramatic effect throughout the space" can inspire your color palette choices.
+
+## **Islamic Design Elements:**
+
+Behance features "Islamic floral art" with vector illustrations, and there are 8 Islamic School Logo designs on Dribbble that could provide cultural context for your Islamic kindergarten branding.
+
+## **Key Visual Resources to Explore:**
+
+1. **Behance Montessori Projects** - Direct portfolios showing kindergarten logo development
+2. **Dribbble Kids Education Tags** - Hundreds of playful educational logo examples  
+3. **Hand-drawn Logo Portfolios** - Organic, colorful design approaches perfect for children
+4. **Islamic Floral Art Galleries** - Cultural design elements for your Islamic context
+5. **Colorful Kindergarten Interior Designs** - Color inspiration for vibrant, playful aesthetics
+
+These resources provide actual design portfolios and project galleries rather than articles about design, giving you direct visual inspiration for creating a vibrant, playful logo that combines Montessori education principles with Islamic cultural elements and natural floral motifs.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Montessori logo development steps (https://www.behance.net/gallery/106277009/Montessori-logo-development-steps)
+2. Behance (https://www.behance.net/gallery/98357369/4me-Montessori-kindergarten-and-nursery-logo)
+3. Browse thousands of Playful Logo images for design inspiration | Dribbble (https://dribbble.com/search/playful-logo)
+4. Kids School Logo designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/kids_school_logo)
+5. 14,800+ Kids Nature Crafts Stock Photos, Pictures & Royalty-Free Images - iStock (https://www.istockphoto.com/photos/kids-nature-crafts)
+6. 36 Kindergarten Portfolio ideas (https://www.pinterest.com/bjsanders1964/kindergarten-portfolio/)
+7. Ten kindergarten interiors that use colour to create a playful environment (https://www.dezeen.com/2021/12/04/ten-colourful-kindergarten-interiors-lookbooks/)
+8. Behance (https://www.behance.net/search/projects/islamic%20school)
+9. Islamic Design Graphic Designer Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/islamic design graphic designer)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/106277009/Montessori-logo-development-steps" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Montessori logo development steps</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/98357369/4me-Montessori-kindergarten-and-nursery-logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Behance</a></li><li class="text-sm"><a href="https://dribbble.com/search/playful-logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Browse thousands of Playful Logo images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/kids_school_logo" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Kids School Logo designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://www.istockphoto.com/photos/kids-nature-crafts" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. 14,800+ Kids Nature Crafts Stock Photos, Pictures & Royalty-Free Images - iStock</a></li><li class="text-sm"><a href="https://www.pinterest.com/bjsanders1964/kindergarten-portfolio/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. 36 Kindergarten Portfolio ideas</a></li><li class="text-sm"><a href="https://www.dezeen.com/2021/12/04/ten-colourful-kindergarten-interiors-lookbooks/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Ten kindergarten interiors that use colour to create a playful environment</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/islamic%20school" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/islamic design graphic designer" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Islamic Design Graphic Designer Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="51.29">51.29秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="184,503">184,503</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net Montessori kindergarten logo
+2. site:dribbble.com hand-drawn playful logo kids
+3. site:behance.net floral brand identity education kindergarten logo
+4. "Kids Central" "91444319" Behance"
+5. site:dribbble.com colorful kindergarten logo
+6. site:behance.net kindergarten floral logo">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net Montessori kindergarten logo</li><li class="text-sm text-gray-600">2. site:dribbble.com hand-drawn playful logo kids</li><li class="text-sm text-gray-600">3. site:behance.net floral brand identity education kindergarten logo</li><li class="text-sm text-gray-600">4. "Kids Central" "91444319" Behance"</li><li class="text-sm text-gray-600">5. site:dribbble.com colorful kindergarten logo</li><li class="text-sm text-gray-600">6. site:behance.net kindergarten floral logo</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="## Montessori Kindergarten Logo Designs
+
+- Absorbent Minds Montessori Child Care / Kindergarten Logo by Red Kite Design on Dribbble: a clean, modern mark featuring a seedling-shaped silhouette to symbolize a child’s growing mind, rendered in gender-neutral green tones to convey eco-friendliness and growth ([dribbble.com](https://dribbble.com/shots/18234406-Absorbent-Minds-Montessori-Child-Care-Kindergarten-Logo?utm_source=chatgpt.com)).
+
+- Montessori Kindergarten Design by Lennie Chong on Behance: a pastel-toned identity exploring self-directed learning, with development sketches showing soft brown, blue, green, and grey palettes suited to Montessori’s natural materials focus ([behance.net](https://www.behance.net/gallery/120169251/Montessori-Kindergarten-Design?utm_source=chatgpt.com)).
+
+- Sun house Montessorii Kindergarten Logo Design by Ilya Mojaver on Dribbble: a bright, friendly icon combining a sun motif with a house silhouette, evoking warmth and safe learning spaces ([dribbble.com](https://dribbble.com/shots/17755376-Sun-house-Montessorii-Kindergarten-Logo-Design?utm_source=chatgpt.com)).
+
+- NIDO DE MONTESSORI branding by Brainchild Creative on Behance: a vibrant case study featuring geometric shapes and bold primary colors reflecting the classic Montessori apparatus and philosophy ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+## Children’s Education Brand Logos
+
+- Kids Central Branding by Rita Bejjany on Behance: a clever geometric emblem that reads both as a smiling kid’s face and the word “kids,” highlighting playfulness and systematic identity elements ([behance.net](https://www.behance.net/gallery/91444319/Kids-Central-Branding?utm_source=chatgpt.com)).
+
+- The Early Intervention Centre identity by Jordana Alves on Behance: a warm visual system for a therapeutic early-learning center, using soft rounded shapes and friendly typography to foster trust and care ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+## Hand-Drawn Playful Logos
+
+- Kids Club Hand-drawn Logo Design by Benjamin Smith on Dribbble: a bubbly, vectorized mark initially sketched in a freeform hand-drawn style, conveying fun and approachability for a children’s club ([dribbble.com](https://dribbble.com/shots/15138604-Kids-Club-Hand-drawn-Logo-Design?utm_source=chatgpt.com)).
+
+- Playful hand drawn logotype for Easy learn by Creative Factory on Dribbble: a whimsical wordmark with lively strokes, capturing the spontaneity of early education through irregular letterforms ([dribbble.com](https://dribbble.com/shots/17324662-Playful-hand-drawn-logotype-for-Easy-learn?utm_source=chatgpt.com)).
+
+- Kids Playful Logo by Chintia on Dribbble: a cheerful, hand-illustrated icon paired with playful typography, ideal for preschools or children’s activity brands ([dribbble.com](https://dribbble.com/shots/7030534-Kids-Playful-Logo?utm_source=chatgpt.com)).
+
+## Colorful Kindergarten Visuals
+
+- Momo Kindergarten by Yassine Basraoui on Dribbble: a vibrant, cartoon-style logo using bold color spreads and friendly shapes to attract young learners and parents alike ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+- Kinderunity by Cristian Tituleasa on Dribbble: an energetic multicolor logotype combining geometric forms and custom lettering to express unity and joyful collaboration among kids ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+## Educational Brand Designs with Floral/Natural Elements
+
+- Honeybird Floral Studio Brand Identity by The Lookout Co. on Dribbble: a delicate script paired with simple floral illustrations, balancing professionalism with an inviting, nature-inspired feel ([dribbble.com](https://dribbble.com/shots/23104106-Honeybird-Floral-Studio-Brand-Identity?utm_source=chatgpt.com)).
+
+- Kipos by Pupila on Behance: a garden-themed kindergarten identity where leaf motifs and earthy tones communicate growth, nurturing, and a close connection to nature ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">## Montessori Kindergarten Logo Designs
+
+- Absorbent Minds Montessori Child Care / Kindergarten Logo by Red Kite Design on Dribbble: a clean, modern mark featuring a seedling-shaped silhouette to symbolize a child’s growing mind, rendered in gender-neutral green tones to convey eco-friendliness and growth ([dribbble.com](https://dribbble.com/shots/18234406-Absorbent-Minds-Montessori-Child-Care-Kindergarten-Logo?utm_source=chatgpt.com)).
+
+- Montessori Kindergarten Design by Lennie Chong on Behance: a pastel-toned identity exploring self-directed learning, with development sketches showing soft brown, blue, green, and grey palettes suited to Montessori’s natural materials focus ([behance.net](https://www.behance.net/gallery/120169251/Montessori-Kindergarten-Design?utm_source=chatgpt.com)).
+
+- Sun house Montessorii Kindergarten Logo Design by Ilya Mojaver on Dribbble: a bright, friendly icon combining a sun motif with a house silhouette, evoking warmth and safe learning spaces ([dribbble.com](https://dribbble.com/shots/17755376-Sun-house-Montessorii-Kindergarten-Logo-Design?utm_source=chatgpt.com)).
+
+- NIDO DE MONTESSORI branding by Brainchild Creative on Behance: a vibrant case study featuring geometric shapes and bold primary colors reflecting the classic Montessori apparatus and philosophy ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+## Children’s Education Brand Logos
+
+- Kids Central Branding by Rita Bejjany on Behance: a clever geometric emblem that reads both as a smiling kid’s face and the word “kids,” highlighting playfulness and systematic identity elements ([behance.net](https://www.behance.net/gallery/91444319/Kids-Central-Branding?utm_source=chatgpt.com)).
+
+- The Early Intervention Centre identity by Jordana Alves on Behance: a warm visual system for a therapeutic early-learning center, using soft rounded shapes and friendly typography to foster trust and care ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+## Hand-Drawn Playful Logos
+
+- Kids Club Hand-drawn Logo Design by Benjamin Smith on Dribbble: a bubbly, vectorized mark initially sketched in a freeform hand-drawn style, conveying fun and approachability for a children’s club ([dribbble.com](https://dribbble.com/shots/15138604-Kids-Club-Hand-drawn-Logo-Design?utm_source=chatgpt.com)).
+
+- Playful hand drawn logotype for Easy learn by Creative Factory on Dribbble: a whimsical wordmark with lively strokes, capturing the spontaneity of early education through irregular letterforms ([dribbble.com](https://dribbble.com/shots/17324662-Playful-hand-drawn-logotype-for-Easy-learn?utm_source=chatgpt.com)).
+
+- Kids Playful Logo by Chintia on Dribbble: a cheerful, hand-illustrated icon paired with playful typography, ideal for preschools or children’s activity brands ([dribbble.com](https://dribbble.com/shots/7030534-Kids-Playful-Logo?utm_source=chatgpt.com)).
+
+## Colorful Kindergarten Visuals
+
+- Momo Kindergarten by Yassine Basraoui on Dribbble: a vibrant, cartoon-style logo using bold color spreads and friendly shapes to attract young learners and parents alike ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+- Kinderunity by Cristian Tituleasa on Dribbble: an energetic multicolor logotype combining geometric forms and custom lettering to express unity and joyful collaboration among kids ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).
+
+## Educational Brand Designs with Floral/Natural Elements
+
+- Honeybird Floral Studio Brand Identity by The Lookout Co. on Dribbble: a delicate script paired with simple floral illustrations, balancing professionalism with an inviting, nature-inspired feel ([dribbble.com](https://dribbble.com/shots/23104106-Honeybird-Floral-Studio-Brand-Identity?utm_source=chatgpt.com)).
+
+- Kipos by Pupila on Behance: a garden-themed kindergarten identity where leaf motifs and earthy tones communicate growth, nurturing, and a close connection to nature ([kreafolk.com](https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)).</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Absorbent Minds Montessori Child Care / Kindergarten Logo by Red Kite Design on Dribbble (https://dribbble.com/shots/18234406-Absorbent-Minds-Montessori-Child-Care-Kindergarten-Logo?utm_source=chatgpt.com)
+2. Montessori Kindergarten Design :: Behance (https://www.behance.net/gallery/120169251/Montessori-Kindergarten-Design?utm_source=chatgpt.com)
+3. Sun house Montessorii Kindergarten Logo Design by Ilya Mojaver on Dribbble (https://dribbble.com/shots/17755376-Sun-house-Montessorii-Kindergarten-Logo-Design?utm_source=chatgpt.com)
+4. 30 Best Kindergarten Logo Design Ideas You Should Check (https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com)
+5. Kids Central Branding :: Behance (https://www.behance.net/gallery/91444319/Kids-Central-Branding?utm_source=chatgpt.com)
+6. Kids Club Hand-drawn Logo Design by Benjamin Smith on Dribbble (https://dribbble.com/shots/15138604-Kids-Club-Hand-drawn-Logo-Design?utm_source=chatgpt.com)
+7. Playful hand drawn logotype for Easy learn by Creative Factory on Dribbble (https://dribbble.com/shots/17324662-Playful-hand-drawn-logotype-for-Easy-learn?utm_source=chatgpt.com)
+8. Kids Playful Logo. by Chintia on Dribbble (https://dribbble.com/shots/7030534-Kids-Playful-Logo?utm_source=chatgpt.com)
+9. Honeybird Floral Studio Brand Identity by The Lookout Co. on Dribbble (https://dribbble.com/shots/23104106-Honeybird-Floral-Studio-Brand-Identity?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/18234406-Absorbent-Minds-Montessori-Child-Care-Kindergarten-Logo?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Absorbent Minds Montessori Child Care / Kindergarten Logo by Red Kite Design on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/120169251/Montessori-Kindergarten-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Montessori Kindergarten Design :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/17755376-Sun-house-Montessorii-Kindergarten-Logo-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Sun house Montessorii Kindergarten Logo Design by Ilya Mojaver on Dribbble</a></li><li class="text-sm"><a href="https://kreafolk.com/blogs/inspirations/kindergarten-logo-designs?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. 30 Best Kindergarten Logo Design Ideas You Should Check</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/91444319/Kids-Central-Branding?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Kids Central Branding :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/15138604-Kids-Club-Hand-drawn-Logo-Design?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Kids Club Hand-drawn Logo Design by Benjamin Smith on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/17324662-Playful-hand-drawn-logotype-for-Easy-learn?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Playful hand drawn logotype for Easy learn by Creative Factory on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/7030534-Kids-Playful-Logo?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Kids Playful Logo. by Chintia on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/23104106-Honeybird-Floral-Studio-Brand-Identity?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Honeybird Floral Studio Brand Identity by The Lookout Co. on Dribbble</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
