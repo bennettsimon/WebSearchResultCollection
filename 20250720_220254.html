@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to replicate and innovate a street collage style font and layout design, in a horizontal format, with a strong street collage vibe. You need to search for street collage style typography designs, horizontal layout compositions, mixed media visual effects, hand-crafted graffiti fonts, and torn paper effect layout designs.">The user needs to replicate and innovate a street collage style font and layout design, in a horizontal format, with a strong street collage vibe. You need to search for street collage style typography designs, horizontal layout compositions, mixed media visual effects, hand-crafted graffiti fonts, and torn paper effect layout designs.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-20 22:04:57</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="16.82">16.82秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,465">1,465</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. street collage style typography designs
+2. horizontal layout compositions street art
+3. mixed media visual effects street collage
+4. hand-crafted graffiti fonts
+5. torn paper effect layout designs street art
+6. street art collage aesthetic
+7. urban typography design
+8. DIY street art font">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. street collage style typography designs</li><li class="text-sm text-gray-600">2. horizontal layout compositions street art</li><li class="text-sm text-gray-600">3. mixed media visual effects street collage</li><li class="text-sm text-gray-600">4. hand-crafted graffiti fonts</li><li class="text-sm text-gray-600">5. torn paper effect layout designs street art</li><li class="text-sm text-gray-600">6. street art collage aesthetic</li><li class="text-sm text-gray-600">7. urban typography design</li><li class="text-sm text-gray-600">8. DIY street art font</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To replicate and innovate a street collage style font and layout design in a horizontal format with a strong street collage vibe, consider the following elements:
+
+**1. Street Collage Style Typography Designs:**
+*   **Graffiti Fonts:** Look for hand-crafted, urban, and sometimes illegible styles like "wildstyle," "throw-up," "bubble letters," and "tagging". These fonts often feature bold, dramatic designs, spray paint effects, drips, and unique stroke characteristics. Many are available for personal and commercial use.
+*   **Hand-drawn and Imperfect Typefaces:** The street collage aesthetic embraces imperfections and a DIY feel. Explore fonts that mimic handwriting, marker strokes, or distressed textures.
+*   **Mixed Media Integration:** Typography can be combined with other elements like textures (e.g., brick walls, grunge overlays), or even made to appear as if spray-painted directly onto surfaces.
+*   **Collage Typography:** This can involve using torn newspaper, magazine clippings, or random letter shapes to form words, creating a fragmented and raw look.
+
+**2. Horizontal Layout Compositions:**
+*   **Emphasizing Equality and Interaction:** A horizontal format naturally suggests interaction and equality among elements along the same visual plane. This can be used to create a sense of expansive narrative or interconnectedness in your collage.
+*   **Reading Direction:** People tend to read from left to right, and a horizontal orientation can leverage this natural flow for visual storytelling.
+*   **Sense of Depth and Width:** Horizontal compositions can effectively convey depth and a wide, open feeling, which can be useful for capturing an urban landscape or a sprawling collage.
+*   **Street Art Murals:** Many street art pieces, particularly large murals, utilize horizontal formats to tell a story or present a scene. Analyze how these murals use composition to guide the viewer's eye across the artwork.
+
+**3. Mixed Media Visual Effects:**
+*   **Layering and Juxtaposition:** The essence of mixed media and collage lies in layering diverse materials such as paper, fabric, photographs, and found objects. This creates depth, texture, and complex visuals.
+*   **Texture Overlays:** Incorporate textures like grunge, halftone patterns, spray paint splatters, ink drips, and paint splashes to add a raw, urban feel.
+*   **Distressed and Aged Effects:** Apply effects that make elements appear worn, aged, or distressed, such as faded colors, smudges, and gritty finishes.
+*   **Digital Integration:** Mixed media can also include digital effects that mimic physical textures or traditional art forms. Software like Adobe After Effects and Photoshop offer tools to create realistic mixed media and collage animations or designs.
+
+**4. Hand-crafted Graffiti Fonts:**
+*   As mentioned in typography, these fonts are crucial. They vary from stylized signatures (tags) to complex wildstyle pieces.
+*   They often feature characteristics like "bubbly" shapes, 3D effects, arrows, spikes, and flares, and can incorporate internal strokes or outlines.
+*   Many online generators and font collections provide options for different graffiti styles, allowing for customization of color and detail.
+
+**5. Torn Paper Effect Layout Designs:**
+*   **Authentic Street Poster Style:** Torn paper elements are fundamental to a street collage aesthetic, mimicking fragmented posters and ephemera found in urban environments.
+*   **Ripped Edges and Folds:** Use high-quality torn paper pieces with realistic ripped edges, folds, and halftone color effects to add authenticity.
+*   **Layering with Torn Elements:** Torn paper can serve as backgrounds, frames, or transitional elements, allowing for easy insertion of other graphics and creating a layered, distressed look.
+*   **Versatility:** Torn paper graphics are available as clip art, textures, and overlays, and can be used for various purposes from social media to posters.
+
+By combining these elements, you can create a dynamic and authentic street collage font and layout design in a horizontal format. Focus on asymmetry, diverse textures, a mix of legible and expressive typography, and layered compositions that evoke the spontaneity and raw energy of street art.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To replicate and innovate a street collage style font and layout design in a horizontal format with a strong street collage vibe, consider the following elements:
+
+**1. Street Collage Style Typography Designs:**
+*   **Graffiti Fonts:** Look for hand-crafted, urban, and sometimes illegible styles like "wildstyle," "throw-up," "bubble letters," and "tagging". These fonts often feature bold, dramatic designs, spray paint effects, drips, and unique stroke characteristics. Many are available for personal and commercial use.
+*   **Hand-drawn and Imperfect Typefaces:** The street collage aesthetic embraces imperfections and a DIY feel. Explore fonts that mimic handwriting, marker strokes, or distressed textures.
+*   **Mixed Media Integration:** Typography can be combined with other elements like textures (e.g., brick walls, grunge overlays), or even made to appear as if spray-painted directly onto surfaces.
+*   **Collage Typography:** This can involve using torn newspaper, magazine clippings, or random letter shapes to form words, creating a fragmented and raw look.
+
+**2. Horizontal Layout Compositions:**
+*   **Emphasizing Equality and Interaction:** A horizontal format naturally suggests interaction and equality among elements along the same visual plane. This can be used to create a sense of expansive narrative or interconnectedness in your collage.
+*   **Reading Direction:** People tend to read from left to right, and a horizontal orientation can leverage this natural flow for visual storytelling.
+*   **Sense of Depth and Width:** Horizontal compositions can effectively convey depth and a wide, open feeling, which can be useful for capturing an urban landscape or a sprawling collage.
+*   **Street Art Murals:** Many street art pieces, particularly large murals, utilize horizontal formats to tell a story or present a scene. Analyze how these murals use composition to guide the viewer's eye across the artwork.
+
+**3. Mixed Media Visual Effects:**
+*   **Layering and Juxtaposition:** The essence of mixed media and collage lies in layering diverse materials such as paper, fabric, photographs, and found objects. This creates depth, texture, and complex visuals.
+*   **Texture Overlays:** Incorporate textures like grunge, halftone patterns, spray paint splatters, ink drips, and paint splashes to add a raw, urban feel.
+*   **Distressed and Aged Effects:** Apply effects that make elements appear worn, aged, or distressed, such as faded colors, smudges, and gritty finishes.
+*   **Digital Integration:** Mixed media can also include digital effects that mimic physical textures or traditional art forms. Software like Adobe After Effects and Photoshop offer tools to create realistic mixed media and collage animations or designs.
+
+**4. Hand-crafted Graffiti Fonts:**
+*   As mentioned in typography, these fonts are crucial. They vary from stylized signatures (tags) to complex wildstyle pieces.
+*   They often feature characteristics like "bubbly" shapes, 3D effects, arrows, spikes, and flares, and can incorporate internal strokes or outlines.
+*   Many online generators and font collections provide options for different graffiti styles, allowing for customization of color and detail.
+
+**5. Torn Paper Effect Layout Designs:**
+*   **Authentic Street Poster Style:** Torn paper elements are fundamental to a street collage aesthetic, mimicking fragmented posters and ephemera found in urban environments.
+*   **Ripped Edges and Folds:** Use high-quality torn paper pieces with realistic ripped edges, folds, and halftone color effects to add authenticity.
+*   **Layering with Torn Elements:** Torn paper can serve as backgrounds, frames, or transitional elements, allowing for easy insertion of other graphics and creating a layered, distressed look.
+*   **Versatility:** Torn paper graphics are available as clip art, textures, and overlays, and can be used for various purposes from social media to posters.
+
+By combining these elements, you can create a dynamic and authentic street collage font and layout design in a horizontal format. Focus on asymmetry, diverse textures, a mix of legible and expressive typography, and layered compositions that evoke the spontaneity and raw energy of street art.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtl5RU7jJuelw-1LluyvjMD6dte8CCBc18DuR6RW7k95kVwclbX2PKc6X9-RV9Y6ki-XBdR-SjF3C-rphSIKujANJRI13HE_rTMn3_MTQOaOwDrxDkfDBHMlgaWGFaNl1PhXUW)
+2. creativemarket.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5pd-OCP49iAF8Mf_3DbwHKea1bbkt66zqnkvRqSLa8BXPFIPPEf3wy5RTxWL19dzg1SzWb_kjEw7mCK97LjTEG1UccGfPVQA0h2Bb1H1nWmBWO2ZVVKkC0H0EYbgfV5tv4wto0GLcRKkh39GXOg==)
+3. webflow.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLYDZJ8AEeNgIkbtRlNcwfdgAd5zk9o2xC6WdvPLO1g-2162Ig2uTd4D2m6nO0AdGwMIH2XlQAiedPwcqwpWKZbxO5EPi4iXxj3abVg0-pLzEPstpUiWraNtTnFCFJwHfE)
+4. bombingscience.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV9b8qgbttnKWSvlvcVi2CUJnzn8kNMJ1NvBgv6O2UAGQ3ZwGnDnLeFPIqxjwYX20D1ZWUC8gty3_z2FNX6MAzhKSttAHVDc7p7dLXpBXXbFbiTZsn7Ej5uowUqpOcclrupElcBqws5WZ4_eZHg0Dqug==)
+5. 1001fonts.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPpjcDCYNPtanB6Xfompf6rQ2tV_X8UKnHzmQzUZm1ZSpoUUQKje3XtHHy7qu4NiZFWHgJWSOWNZNVO5yLgTUfNn3mTpyfTS_J8lWjotFWCMyQdBkjXh_Hl18d5GLrTmEqNnI3CFOSmA==)
+6. fontspace.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHD28DXCtJVBMFpUH4MefnpSLaNt0WijZlQmTDnLPM1KGq4NLjJPFEfP_8B48f65Wya0vejb7VYgHykJ7tWvSl-9GgIxaZ-1USsvG5rPgnao32vr4vZMjyhUgp9nQ_iNTRxDw1E8xU=)
+7. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3z0EfudB26y2qt8UMfDfp1pZkycYd7FLtMRfLTsZ_ggN6ZU4P27-b8NfS2gAMK7uqe2TNrW8wvPc2TUvZrsTIB0OCFYBiDeoBKZi0KDjUPVfI9KLyRDJqgshC5EWpaaIDLKgX8RaBjt0KnbBEuzuw)
+8. worldarchitecture.org (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUhjrQ7E0VyK8tD1QQgZ9vzH4SsPUyEXD2pFSsl_yawYP08w8noM51FNyOkYtt0bvl3wNzjFxxXgzRYJB8QI0kK_COmGyKShUMsRars40nWLv3ypbXD31dmByhx7Wfs9uqsv-qPkOPwhWDYVgTI5ew5P4j07JHQXGgfoAcbvYzOZWhILEsRpfQOjsYaBVeCQPT9z9JpsYZeI4ZfMkTz_b-iBO4IhUpcOq4IZMgzAue3rB8Z69UaC5zW7bmNfcZ97442jWpKjsvJeuyX_U3NFarJmGXQovV2w==)
+9. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqqhH-cWdit4FNtr_f4dHN0sXD_F3NnQAnrCek2NXiFWq7bF_uLAv-RuNcdSmc36BNntgFpvg-gIKj8i7hzvaC0Ty55PdFTNtRzPRjexCCn8cyTWQHA407cQ0CqYnTSqD__z7y52o=)
+10. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuN9wzhqcF7knvKY3Z_eBKa5y44pMRRBv9P90vD6G1mOR7I0r3H2ahHCP0nYEpvklix1-zcbc1qoiiXTH3_w3K7l8kEww-wFT6hReFqtonZ1esRU4NF5uQnEVvSFmzJIvePN-3r2aA0us9Hw0wwmOW4w==)
+11. dreamstime.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvD99vIDO3Dd1Y6etT7ShLCQ-1PnUbNmyvUlLmNoXFWTySXjGZ8pRwpxAcJcwtKLgVVn-m6lnSKooiMmI1bnf84FcvkxapxK-CIP7BC-Q0ro52hU0lYJiX64VDUyLKulznyuLIvOqumop0Ce24lQkahePzoGwB81QwmQ==)
+12. blogspot.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu1H_zG8Y24Booipo6ec-4E9PgCwleU1wB7MbV4Vr2A8vEUoiOsrRxfKkeTKLCbYkyXxevX5qnuYi3FtpV9LBRq1pP7RtVL3df2QTO-o6a0joLeapBhiQJCvskuT4tCYqz9aYU4jHb1J2n9g6sUINjaMnGPxZEDjfrOhkfcm0z7rWi55dvFDZOUcYM_52dpgYIQvs=)
+13. streetartutopia.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8Kv1WZAvk45rQgOnjzo5NAyMKp3_f0w_3tcsw90PHonW9DpG3SokJodFPva0t6eKp65ajjlpOTTnMhkgJ0r5b8xTxLCuGJKwHuDCuNPcJiZGlbkvNuR-MqCXs4qef4bl7p-Mquxbpj9HMBAVXHNfi5rYqtNpVxGze4f5uIj2rWYTwQI1sbiKi58ftjj9zAgoqrqP5_7AfQmME7g22W0EIeE7dng==)
+14. visualartspassage.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeVtzOtg1v63JtKG9XVu0HwFjecnX34TayA3ilbdf2VHT3xF-iClKvnpkXqlkawIeuX6HbMoLuNvslU6ct1J3I-zm9YAkbuwnwLPoa_QeVAXWG_Yi4iv3xkPLydL7l5ICXILa-Ukg5UsPOMw_ETFHAZLrt2HBFy8ixVw-o1GEpk9Abdggp0x8Gcvz3wA7s0xzSX-IAhfqrZWvcVP9b)
+15. iantangallery.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZGoSP5aiYbP19bn5JNBxgKa4H6wCKYQ3wJJTKTyyVNeAO2lKnLxz96M0SJF5T2Wd8fp0_7yEyzuRDdxXMgF3-Y6JsyZR0oC55Zqpky7eiQ9ZQqmv9DkmXcUK9drV4jRl6jhsfr6HtqXXuXYFsP5j4j8hB_1_gb0oWxImuc8D66w==)
+16. rmcad.edu (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ2Yrous8mR5dNeMGCblvx0g57ZsXYsxdKlNJODZJyQS60YOmbuWE2O9eWqpkYOyyPcPZvDNqnKNRYq2hCRRvc8xtLYYDoZDEjr7KLAP723duaZ4QUUsp3xbEQzWHu4Ct_GD07AbjAZIuIz7cJ_Kd2nOt2vO1e-03vGrA95h9miuFnREqaCFNYVLGvS4FT5w==)
+17. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYrxkRgD6nUVUCziBQSo3YAB5pSzeYogZuzh2eIrlj6AdVvjLEcF1GEArOiqlHkDfyAjFUojR2vQn04NIvhMkvufYix7Zg9Pi2kB_u92JcVAIcWYzAeVmRjDPkPB24oa01ROAOrZ7L3dC3_ph_Wkxr6sCE13SmqLxsf2KL7HxASWA=)
+18. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaNVWnFccRmxnzrYCtcAZotRpcQwmT16-a93IAZUlkDNFFEn1DxQWLMgcr2ShD9qnoaRQn6YVzyidumPNH5pOPlOKw08G0X-n-uIdQjUd8CIcpHKiIX8DlBPGYbDY4dF6wRZHxxBjPoSwRcjZOFY5Ksd0Ob16qHkhNv45SQWUJXzyiBynYk-mkXg==)
+19. motionarray.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYAJqZn3HZX1d2tpGXGvmMjL1-dhI7eyyymsX7gPib4Nr_yJWKeWlC40l9o12KSGihd8UDgTCcWbBKRHkHV9vSIqeMFpXXlHvTOdAkluDCMHUg0g5jjWgJl6CJbxmXc0iwX5TfkutFidBXvPdh3UnecZWulaPCwzjnPC5sE7m-T4XRjDyTYYgONbrglbqSWfXKRfSfyTilXPMD)
+20. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgtC5fM-yfiVCNEMjn3jQmefUC4oB83Wh48rAjfyF1xE_wfQEZrt3Im34eBAwAzviU-pAJoyGadXJa8DJZ8mT-QWMuyervMAsnJVv4_zhAFLI7N13JBMIgGfX8SQ4Xk9zfatYFqbw=)
+21. youtube.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8xnfROqN3cexcSbNzDDjFxzGWa4e1WW3XlMQts7HWtKOyt_Tt0q5ms6At6Fr7FaR6rYx6NkfL0C1uZhHjdPHmsZFKpzsqjMuwtrSAw9FjgEi-IOpFCmH0Pk8OMqBNTkn3Z1QUDtr_o96Bp6-2alywGYNw0z1raAROkUC6U2A=)
+22. capcut.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdLhX3dBOvryJ8pkcYyAvI_gOaVydi4qz1DUfN7khSCV3zmnv1_-JJqRBxFTJoxn4tN4TP7ldN1l-3p9r9LRINQ__GLvsSdDDu5p7Hi6RSfv6Le9ibHzDNLaRSQN59U9JxAzDNb_CWhFpdNMPtGcc=)
+23. youworkforthem.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE20oTHM-beZrhOHeJRk5S1FBAHtsUPDCD3Cz-E_r_PZA1PQzeJlmq0MsBM6qp7cQUar4_zlV0Im8ULNEqJD7NApiqAIyEsKCFIe7FInl2n31gZOkzWkPKCZhe8JwAqmfee0ZMVcisUPzRPWWpnO-f4FMG5PB6ZAviDH_mfMgRhDoNZ)
+24. etsy.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZsH9kQ05joyMTTlto3lRORtFbMn8k4nDOUeQNg8M5jluPd4-ywIqHjn93vu4IBPHBY3jKRIxcPREvzDdTLeYB5jNbAv-iGYgu_thHF8HJDXCD5dpKJ3hjBSTy-6XZUhDOuA6-TloyJhE=)
+25. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoLdKu3xX5xlwO_Qq_QvKF2QB1ALEEopUjZ8nlwZSovb76Wm3VYJHRs3EOZT1_dQcb9twyj-Wdz4y_N3sXXalhMMSGqefVzdJsSLXjFXktwTNQzIT7ZwjotD4-aB-V097wk5EoYa1kvDOR10OCEvFOvA==)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtl5RU7jJuelw-1LluyvjMD6dte8CCBc18DuR6RW7k95kVwclbX2PKc6X9-RV9Y6ki-XBdR-SjF3C-rphSIKujANJRI13HE_rTMn3_MTQOaOwDrxDkfDBHMlgaWGFaNl1PhXUW" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5pd-OCP49iAF8Mf_3DbwHKea1bbkt66zqnkvRqSLa8BXPFIPPEf3wy5RTxWL19dzg1SzWb_kjEw7mCK97LjTEG1UccGfPVQA0h2Bb1H1nWmBWO2ZVVKkC0H0EYbgfV5tv4wto0GLcRKkh39GXOg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. creativemarket.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLYDZJ8AEeNgIkbtRlNcwfdgAd5zk9o2xC6WdvPLO1g-2162Ig2uTd4D2m6nO0AdGwMIH2XlQAiedPwcqwpWKZbxO5EPi4iXxj3abVg0-pLzEPstpUiWraNtTnFCFJwHfE" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. webflow.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV9b8qgbttnKWSvlvcVi2CUJnzn8kNMJ1NvBgv6O2UAGQ3ZwGnDnLeFPIqxjwYX20D1ZWUC8gty3_z2FNX6MAzhKSttAHVDc7p7dLXpBXXbFbiTZsn7Ej5uowUqpOcclrupElcBqws5WZ4_eZHg0Dqug==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. bombingscience.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPpjcDCYNPtanB6Xfompf6rQ2tV_X8UKnHzmQzUZm1ZSpoUUQKje3XtHHy7qu4NiZFWHgJWSOWNZNVO5yLgTUfNn3mTpyfTS_J8lWjotFWCMyQdBkjXh_Hl18d5GLrTmEqNnI3CFOSmA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. 1001fonts.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHD28DXCtJVBMFpUH4MefnpSLaNt0WijZlQmTDnLPM1KGq4NLjJPFEfP_8B48f65Wya0vejb7VYgHykJ7tWvSl-9GgIxaZ-1USsvG5rPgnao32vr4vZMjyhUgp9nQ_iNTRxDw1E8xU=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. fontspace.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3z0EfudB26y2qt8UMfDfp1pZkycYd7FLtMRfLTsZ_ggN6ZU4P27-b8NfS2gAMK7uqe2TNrW8wvPc2TUvZrsTIB0OCFYBiDeoBKZi0KDjUPVfI9KLyRDJqgshC5EWpaaIDLKgX8RaBjt0KnbBEuzuw" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUhjrQ7E0VyK8tD1QQgZ9vzH4SsPUyEXD2pFSsl_yawYP08w8noM51FNyOkYtt0bvl3wNzjFxxXgzRYJB8QI0kK_COmGyKShUMsRars40nWLv3ypbXD31dmByhx7Wfs9uqsv-qPkOPwhWDYVgTI5ew5P4j07JHQXGgfoAcbvYzOZWhILEsRpfQOjsYaBVeCQPT9z9JpsYZeI4ZfMkTz_b-iBO4IhUpcOq4IZMgzAue3rB8Z69UaC5zW7bmNfcZ97442jWpKjsvJeuyX_U3NFarJmGXQovV2w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. worldarchitecture.org</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqqhH-cWdit4FNtr_f4dHN0sXD_F3NnQAnrCek2NXiFWq7bF_uLAv-RuNcdSmc36BNntgFpvg-gIKj8i7hzvaC0Ty55PdFTNtRzPRjexCCn8cyTWQHA407cQ0CqYnTSqD__z7y52o=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuN9wzhqcF7knvKY3Z_eBKa5y44pMRRBv9P90vD6G1mOR7I0r3H2ahHCP0nYEpvklix1-zcbc1qoiiXTH3_w3K7l8kEww-wFT6hReFqtonZ1esRU4NF5uQnEVvSFmzJIvePN-3r2aA0us9Hw0wwmOW4w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvD99vIDO3Dd1Y6etT7ShLCQ-1PnUbNmyvUlLmNoXFWTySXjGZ8pRwpxAcJcwtKLgVVn-m6lnSKooiMmI1bnf84FcvkxapxK-CIP7BC-Q0ro52hU0lYJiX64VDUyLKulznyuLIvOqumop0Ce24lQkahePzoGwB81QwmQ==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. dreamstime.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu1H_zG8Y24Booipo6ec-4E9PgCwleU1wB7MbV4Vr2A8vEUoiOsrRxfKkeTKLCbYkyXxevX5qnuYi3FtpV9LBRq1pP7RtVL3df2QTO-o6a0joLeapBhiQJCvskuT4tCYqz9aYU4jHb1J2n9g6sUINjaMnGPxZEDjfrOhkfcm0z7rWi55dvFDZOUcYM_52dpgYIQvs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. blogspot.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8Kv1WZAvk45rQgOnjzo5NAyMKp3_f0w_3tcsw90PHonW9DpG3SokJodFPva0t6eKp65ajjlpOTTnMhkgJ0r5b8xTxLCuGJKwHuDCuNPcJiZGlbkvNuR-MqCXs4qef4bl7p-Mquxbpj9HMBAVXHNfi5rYqtNpVxGze4f5uIj2rWYTwQI1sbiKi58ftjj9zAgoqrqP5_7AfQmME7g22W0EIeE7dng==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. streetartutopia.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeVtzOtg1v63JtKG9XVu0HwFjecnX34TayA3ilbdf2VHT3xF-iClKvnpkXqlkawIeuX6HbMoLuNvslU6ct1J3I-zm9YAkbuwnwLPoa_QeVAXWG_Yi4iv3xkPLydL7l5ICXILa-Ukg5UsPOMw_ETFHAZLrt2HBFy8ixVw-o1GEpk9Abdggp0x8Gcvz3wA7s0xzSX-IAhfqrZWvcVP9b" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. visualartspassage.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZGoSP5aiYbP19bn5JNBxgKa4H6wCKYQ3wJJTKTyyVNeAO2lKnLxz96M0SJF5T2Wd8fp0_7yEyzuRDdxXMgF3-Y6JsyZR0oC55Zqpky7eiQ9ZQqmv9DkmXcUK9drV4jRl6jhsfr6HtqXXuXYFsP5j4j8hB_1_gb0oWxImuc8D66w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. iantangallery.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ2Yrous8mR5dNeMGCblvx0g57ZsXYsxdKlNJODZJyQS60YOmbuWE2O9eWqpkYOyyPcPZvDNqnKNRYq2hCRRvc8xtLYYDoZDEjr7KLAP723duaZ4QUUsp3xbEQzWHu4Ct_GD07AbjAZIuIz7cJ_Kd2nOt2vO1e-03vGrA95h9miuFnREqaCFNYVLGvS4FT5w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. rmcad.edu</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYrxkRgD6nUVUCziBQSo3YAB5pSzeYogZuzh2eIrlj6AdVvjLEcF1GEArOiqlHkDfyAjFUojR2vQn04NIvhMkvufYix7Zg9Pi2kB_u92JcVAIcWYzAeVmRjDPkPB24oa01ROAOrZ7L3dC3_ph_Wkxr6sCE13SmqLxsf2KL7HxASWA=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaNVWnFccRmxnzrYCtcAZotRpcQwmT16-a93IAZUlkDNFFEn1DxQWLMgcr2ShD9qnoaRQn6YVzyidumPNH5pOPlOKw08G0X-n-uIdQjUd8CIcpHKiIX8DlBPGYbDY4dF6wRZHxxBjPoSwRcjZOFY5Ksd0Ob16qHkhNv45SQWUJXzyiBynYk-mkXg==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYAJqZn3HZX1d2tpGXGvmMjL1-dhI7eyyymsX7gPib4Nr_yJWKeWlC40l9o12KSGihd8UDgTCcWbBKRHkHV9vSIqeMFpXXlHvTOdAkluDCMHUg0g5jjWgJl6CJbxmXc0iwX5TfkutFidBXvPdh3UnecZWulaPCwzjnPC5sE7m-T4XRjDyTYYgONbrglbqSWfXKRfSfyTilXPMD" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. motionarray.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgtC5fM-yfiVCNEMjn3jQmefUC4oB83Wh48rAjfyF1xE_wfQEZrt3Im34eBAwAzviU-pAJoyGadXJa8DJZ8mT-QWMuyervMAsnJVv4_zhAFLI7N13JBMIgGfX8SQ4Xk9zfatYFqbw=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8xnfROqN3cexcSbNzDDjFxzGWa4e1WW3XlMQts7HWtKOyt_Tt0q5ms6At6Fr7FaR6rYx6NkfL0C1uZhHjdPHmsZFKpzsqjMuwtrSAw9FjgEi-IOpFCmH0Pk8OMqBNTkn3Z1QUDtr_o96Bp6-2alywGYNw0z1raAROkUC6U2A=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. youtube.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdLhX3dBOvryJ8pkcYyAvI_gOaVydi4qz1DUfN7khSCV3zmnv1_-JJqRBxFTJoxn4tN4TP7ldN1l-3p9r9LRINQ__GLvsSdDDu5p7Hi6RSfv6Le9ibHzDNLaRSQN59U9JxAzDNb_CWhFpdNMPtGcc=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. capcut.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE20oTHM-beZrhOHeJRk5S1FBAHtsUPDCD3Cz-E_r_PZA1PQzeJlmq0MsBM6qp7cQUar4_zlV0Im8ULNEqJD7NApiqAIyEsKCFIe7FInl2n31gZOkzWkPKCZhe8JwAqmfee0ZMVcisUPzRPWWpnO-f4FMG5PB6ZAviDH_mfMgRhDoNZ" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. youworkforthem.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZsH9kQ05joyMTTlto3lRORtFbMn8k4nDOUeQNg8M5jluPd4-ywIqHjn93vu4IBPHBY3jKRIxcPREvzDdTLeYB5jNbAv-iGYgu_thHF8HJDXCD5dpKJ3hjBSTy-6XZUhDOuA6-TloyJhE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">24. etsy.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoLdKu3xX5xlwO_Qq_QvKF2QB1ALEEopUjZ8nlwZSovb76Wm3VYJHRs3EOZT1_dQcb9twyj-Wdz4y_N3sXXalhMMSGqefVzdJsSLXjFXktwTNQzIT7ZwjotD4-aB-V097wk5EoYa1kvDOR10OCEvFOvA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">25. shutterstock.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="36.67">36.67秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="56,735">56,735</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. street collage typography site:behance.net
+2. horizontal graffiti typography layout site:dribbble.com
+3. torn paper collage layout design portfolio
+4. mixed media street art typography horizontal layout portfolio">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. street collage typography site:behance.net</li><li class="text-sm text-gray-600">2. horizontal graffiti typography layout site:dribbble.com</li><li class="text-sm text-gray-600">3. torn paper collage layout design portfolio</li><li class="text-sm text-gray-600">4. mixed media street art typography horizontal layout portfolio</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll help you find visual galleries showcasing street collage style typography and layout designs. Let me search for actual portfolios and project showcases that demonstrate these techniques.Perfect! I've found some excellent visual gallery resources that showcase street collage style typography and horizontal layout designs. Here are the key portfolios and project showcases you should explore:
+
+## **Direct Visual Galleries for Street Collage Typography:**
+
+### **Behance Project Galleries:**
+- Found Typography Collage for Magazine Cover and Digital Typography Collage projects on Behance showcase actual collage typography work
+- Juxtapose: Collage & Typography Conference Branding project demonstrates professional collage typography applications
+- Street Typography project gallery specifically focuses on street-style lettering
+
+### **Dribbble Design Showcases:**
+- Work Place Custom Graffiti Style Typography by Designollo - direct graffiti typography project
+- Graffiti Typography and Graffiti Font design collections with multiple project examples
+- Extensive graffiti font galleries featuring streetart, urban art, and brush fonts
+
+### **Mixed Media Typography Portfolios:**
+- Typography Mixed Media art collections on Saatchi Art featuring original street-influenced work
+- Mixed media artist portfolio showcasing graffiti, hand-lettering, found text, and street typography elements
+
+### **Torn Paper Collage Effect Galleries:**
+- Pinterest's extensive torn paper design collection with 900+ visual examples
+- Torn paper collage Midjourney style galleries featuring textured, layered compositions with bold colors and fragmented elements
+
+### **Horizontal Layout Design Portfolios:**
+- Photography portfolios demonstrating horizontal and vertical image mixing in asymmetrical layouts
+- Street Art Artist Portfolio templates with graffiti touches and modern dark tones
+
+## **Key Visual Elements to Study:**
+
+These galleries will show you:
+- **Street Collage Typography**: Tactile paper qualities with dynamic color and shape interplay, creating depth and movement through layered elements
+- **Horizontal Layouts**: Split screen designs with asymmetrical balance and vertical typography elements
+- **Mixed Media Effects**: Torn paper pieces in irregular shapes with rough edges for instant texture
+- **Hand-crafted Aesthetics**: Words as texture, mood creators, and directional guides in mixed media compositions
+
+These are actual project portfolios and design showcases where you can see the techniques in action, not articles about design resources. Each link leads directly to visual work that demonstrates street collage typography, horizontal layouts, and mixed media effects you can study and draw inspiration from for your project.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll help you find visual galleries showcasing street collage style typography and layout designs. Let me search for actual portfolios and project showcases that demonstrate these techniques.Perfect! I've found some excellent visual gallery resources that showcase street collage style typography and horizontal layout designs. Here are the key portfolios and project showcases you should explore:
+
+## **Direct Visual Galleries for Street Collage Typography:**
+
+### **Behance Project Galleries:**
+- Found Typography Collage for Magazine Cover and Digital Typography Collage projects on Behance showcase actual collage typography work
+- Juxtapose: Collage & Typography Conference Branding project demonstrates professional collage typography applications
+- Street Typography project gallery specifically focuses on street-style lettering
+
+### **Dribbble Design Showcases:**
+- Work Place Custom Graffiti Style Typography by Designollo - direct graffiti typography project
+- Graffiti Typography and Graffiti Font design collections with multiple project examples
+- Extensive graffiti font galleries featuring streetart, urban art, and brush fonts
+
+### **Mixed Media Typography Portfolios:**
+- Typography Mixed Media art collections on Saatchi Art featuring original street-influenced work
+- Mixed media artist portfolio showcasing graffiti, hand-lettering, found text, and street typography elements
+
+### **Torn Paper Collage Effect Galleries:**
+- Pinterest's extensive torn paper design collection with 900+ visual examples
+- Torn paper collage Midjourney style galleries featuring textured, layered compositions with bold colors and fragmented elements
+
+### **Horizontal Layout Design Portfolios:**
+- Photography portfolios demonstrating horizontal and vertical image mixing in asymmetrical layouts
+- Street Art Artist Portfolio templates with graffiti touches and modern dark tones
+
+## **Key Visual Elements to Study:**
+
+These galleries will show you:
+- **Street Collage Typography**: Tactile paper qualities with dynamic color and shape interplay, creating depth and movement through layered elements
+- **Horizontal Layouts**: Split screen designs with asymmetrical balance and vertical typography elements
+- **Mixed Media Effects**: Torn paper pieces in irregular shapes with rough edges for instant texture
+- **Hand-crafted Aesthetics**: Words as texture, mood creators, and directional guides in mixed media compositions
+
+These are actual project portfolios and design showcases where you can see the techniques in action, not articles about design resources. Each link leads directly to visual work that demonstrates street collage typography, horizontal layouts, and mixed media effects you can study and draw inspiration from for your project.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Found Typography Collage for Magazine Cover (https://www.behance.net/gallery/21975501/Found-Typography-Collage-for-Magazine-Cover?locale=en_US)
+2. Behance (https://www.behance.net/gallery/61264715/DIGITAL-TYPOGRAPHY-COLLAGE)
+3. Juxtapose: Collage & Typography Conference ... (https://www.behance.net/gallery/88363435/Juxtapose-Collage-Typography-Conference-Branding/modules/511027373)
+4. Juxtapose: Collage & Typography Conference Branding (https://www.behance.net/gallery/88363435/Juxtapose-Collage-Typography-Conference-Branding)
+5. Street Typography Projects - Behance (https://www.behance.net/search/projects/?search=street+typography)
+6. Browse thousands of Graph Typography images for design inspiration | Dribbble (https://dribbble.com/search/Graph-typography)
+7. Typographic Layout designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/typographic-layout)
+8. Graffiti Art designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/graffiti-art)
+9. Work Place Custom Graffiti Style Typography by Designollo on Dribbble (https://dribbble.com/shots/17243320-Work-Place-Custom-Graffiti-Style-Typography)
+10. Typography, Symbols, Text & Lettering in Mixed Media Art (https://daisyyellowart.com/vividlife/typography-found-text-mixed-media-art)
+11. Horizontal Layout Projects (https://www.behance.net/search/projects/horizontal%20layout)
+12. Torn paper collage Midjourney style | Andrei Kovalev's Midlibrary (https://midlibrary.io/styles/torn-paper-collage)
+13. Cut and Torn Paper Collage | Arts for Learning Northwest (https://artsforlearningnw.org/for-educators/the-right-brain-initiative/endlessjoy/7-8/cut-and-torn-paper-collage/)
+14. Free and customizable portfolio templates | Canva (https://www.canva.com/templates/s/portfolio/)
+15. 30+ Best Torn Paper Mockup Templates for Photoshop (https://brandpacks.com/20-best-torn-paper-mockup-templates-for-photoshop/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/21975501/Found-Typography-Collage-for-Magazine-Cover?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Found Typography Collage for Magazine Cover</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/61264715/DIGITAL-TYPOGRAPHY-COLLAGE" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/88363435/Juxtapose-Collage-Typography-Conference-Branding/modules/511027373" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Juxtapose: Collage & Typography Conference ...</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/88363435/Juxtapose-Collage-Typography-Conference-Branding" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Juxtapose: Collage & Typography Conference Branding</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/?search=street+typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Street Typography Projects - Behance</a></li><li class="text-sm"><a href="https://dribbble.com/search/Graph-typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Browse thousands of Graph Typography images for design inspiration | Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/typographic-layout" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Typographic Layout designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/graffiti-art" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Graffiti Art designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/17243320-Work-Place-Custom-Graffiti-Style-Typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Work Place Custom Graffiti Style Typography by Designollo on Dribbble</a></li><li class="text-sm"><a href="https://daisyyellowart.com/vividlife/typography-found-text-mixed-media-art" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Typography, Symbols, Text & Lettering in Mixed Media Art</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/horizontal%20layout" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Horizontal Layout Projects</a></li><li class="text-sm"><a href="https://midlibrary.io/styles/torn-paper-collage" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Torn paper collage Midjourney style | Andrei Kovalev's Midlibrary</a></li><li class="text-sm"><a href="https://artsforlearningnw.org/for-educators/the-right-brain-initiative/endlessjoy/7-8/cut-and-torn-paper-collage/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. Cut and Torn Paper Collage | Arts for Learning Northwest</a></li><li class="text-sm"><a href="https://www.canva.com/templates/s/portfolio/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. Free and customizable portfolio templates | Canva</a></li><li class="text-sm"><a href="https://brandpacks.com/20-best-torn-paper-mockup-templates-for-photoshop/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. 30+ Best Torn Paper Mockup Templates for Photoshop</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="122.95">122.95秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="522,663">522,663</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net street collage typography
+2. site:dribbble.com horizontal collage layout street
+3. street collage typography site:dribbble.com
+4. Mono Street Monoline Handwritten Dribbble
+5. street collage typography pinterest
+6. site:behance.net street collage horizontal typography layout
+7. site:behance.net mixed media collage typography
+8. horizontal collage Dribbble shot
+9. "horizontal collage" site:behance.net/gallery">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net street collage typography</li><li class="text-sm text-gray-600">2. site:dribbble.com horizontal collage layout street</li><li class="text-sm text-gray-600">3. street collage typography site:dribbble.com</li><li class="text-sm text-gray-600">4. Mono Street Monoline Handwritten Dribbble</li><li class="text-sm text-gray-600">5. street collage typography pinterest</li><li class="text-sm text-gray-600">6. site:behance.net street collage horizontal typography layout</li><li class="text-sm text-gray-600">7. site:behance.net mixed media collage typography</li><li class="text-sm text-gray-600">8. horizontal collage Dribbble shot</li><li class="text-sm text-gray-600">9. "horizontal collage" site:behance.net/gallery</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="## Street Collage–Style Typography
+
+- **Digital Collage with Typography** by Brett Clouser on Dribbble  
+  A layered digital collage combining torn-paper textures, spray-ink splatters, and bold, cut-and-paste letterforms—ideal for a raw street-vibe headline treatment.  
+  https://dribbble.com/shots/5816273-digital-collage-with-typography ([dribbble.com](https://dribbble.com/shots/5816273-digital-collage-with-typography?utm_source=chatgpt.com))
+
+- **No Message Throughout Noise** by Marko Marinković on Behance  
+  Photographed fragments of pasted street posters and graffiti tags arranged in a horizontal, grid-like collage across urban walls, showcasing found typography and mixed media textures.  
+  https://www.behance.net/gallery/70929149/No-Message-Throughout-Noise ([behance.net](https://www.behance.net/gallery/70929149/No-Message-Throughout-Noise?tracking_source=search_projects%7Ccollage+style+typography))
+
+## Horizontal Layout Compositions
+
+- **travel zine • calgary, canadá** by Laís Zanocco on Behance  
+  A pocket-sized zine with wide horizontal spreads combining map elements, hand-cut paper collage, and minimalist sans-serif headlines—perfect for planning layouts with a street-found aesthetic.  
+  https://www.behance.net/gallery/213958103/travel-zine-calgary-canada ([behance.net](https://www.behance.net/gallery/213958103/travel-zine-calgary-canada-?tracking_source=search_projects%7Ccollage+style+typography))
+
+- **Digital Collage-Style Intro** by Pabolos Souza on Behance  
+  Animated identity piece built as a horizontal sequence of textured collage frames, bold color overlays, and mixed media illustrations—great reference for dynamic panel layouts.  
+  https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro ([behance.net](https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro?tracking_source=search_projects%7Ccollage+style+typography))
+
+## Mixed Media Visual Effects
+
+- **Digital Collage-Style Intro** (see above) demonstrates blending photographic textures, vector cutouts, and hand-drawn elements with motion—adapt its layered approach for static layouts. ([behance.net](https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro?tracking_source=search_projects%7Ccollage+style+typography))
+
+## Hand-Crafted Graffiti Fonts
+
+- **Mono Street – Monoline Handwritten** by Creatifont Studios on Dribbble  
+  A fluid, brush-outline display font with graffiti influences—perfect for injecting an urban, hand-lettered feel into collage headlines or typographic blocks.  
+  https://dribbble.com/shots/25794886-Mono-Street-Monoline-Handwritten ([dribbble.com](https://dribbble.com/shots/25794886-Mono-Street-Monoline-Handwritten?utm_source=chatgpt.com))
+
+## Torn-Paper Effect Layouts
+
+- **TORN PNG LETTERS** by Graphic Resources on Behance  
+  A pack of full-alphabet, high-resolution PNG letterforms ripped from cardboard, ready to layer over backgrounds for authentic torn-paper typography effects.  
+  https://www.behance.net/gallery/220841533/TORN-PNG-LETTERS ([behance.net](https://www.behance.net/gallery/220841533/TORN-PNG-LETTERS?tracking_source=search_projects%7Ccollage+style+typography))">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">## Street Collage–Style Typography
+
+- **Digital Collage with Typography** by Brett Clouser on Dribbble  
+  A layered digital collage combining torn-paper textures, spray-ink splatters, and bold, cut-and-paste letterforms—ideal for a raw street-vibe headline treatment.  
+  https://dribbble.com/shots/5816273-digital-collage-with-typography ([dribbble.com](https://dribbble.com/shots/5816273-digital-collage-with-typography?utm_source=chatgpt.com))
+
+- **No Message Throughout Noise** by Marko Marinković on Behance  
+  Photographed fragments of pasted street posters and graffiti tags arranged in a horizontal, grid-like collage across urban walls, showcasing found typography and mixed media textures.  
+  https://www.behance.net/gallery/70929149/No-Message-Throughout-Noise ([behance.net](https://www.behance.net/gallery/70929149/No-Message-Throughout-Noise?tracking_source=search_projects%7Ccollage+style+typography))
+
+## Horizontal Layout Compositions
+
+- **travel zine • calgary, canadá** by Laís Zanocco on Behance  
+  A pocket-sized zine with wide horizontal spreads combining map elements, hand-cut paper collage, and minimalist sans-serif headlines—perfect for planning layouts with a street-found aesthetic.  
+  https://www.behance.net/gallery/213958103/travel-zine-calgary-canada ([behance.net](https://www.behance.net/gallery/213958103/travel-zine-calgary-canada-?tracking_source=search_projects%7Ccollage+style+typography))
+
+- **Digital Collage-Style Intro** by Pabolos Souza on Behance  
+  Animated identity piece built as a horizontal sequence of textured collage frames, bold color overlays, and mixed media illustrations—great reference for dynamic panel layouts.  
+  https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro ([behance.net](https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro?tracking_source=search_projects%7Ccollage+style+typography))
+
+## Mixed Media Visual Effects
+
+- **Digital Collage-Style Intro** (see above) demonstrates blending photographic textures, vector cutouts, and hand-drawn elements with motion—adapt its layered approach for static layouts. ([behance.net](https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro?tracking_source=search_projects%7Ccollage+style+typography))
+
+## Hand-Crafted Graffiti Fonts
+
+- **Mono Street – Monoline Handwritten** by Creatifont Studios on Dribbble  
+  A fluid, brush-outline display font with graffiti influences—perfect for injecting an urban, hand-lettered feel into collage headlines or typographic blocks.  
+  https://dribbble.com/shots/25794886-Mono-Street-Monoline-Handwritten ([dribbble.com](https://dribbble.com/shots/25794886-Mono-Street-Monoline-Handwritten?utm_source=chatgpt.com))
+
+## Torn-Paper Effect Layouts
+
+- **TORN PNG LETTERS** by Graphic Resources on Behance  
+  A pack of full-alphabet, high-resolution PNG letterforms ripped from cardboard, ready to layer over backgrounds for authentic torn-paper typography effects.  
+  https://www.behance.net/gallery/220841533/TORN-PNG-LETTERS ([behance.net](https://www.behance.net/gallery/220841533/TORN-PNG-LETTERS?tracking_source=search_projects%7Ccollage+style+typography))</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. digital collage with typography by Brett Clouser on Dribbble (https://dribbble.com/shots/5816273-digital-collage-with-typography?utm_source=chatgpt.com)
+2. No Message Throughout Noise :: Behance (https://www.behance.net/gallery/70929149/No-Message-Throughout-Noise?tracking_source=search_projects%7Ccollage+style+typography)
+3. travel zine • calgary, canadá  :: Behance (https://www.behance.net/gallery/213958103/travel-zine-calgary-canada-?tracking_source=search_projects%7Ccollage+style+typography)
+4. Digital Collage-Style Intro :: Behance (https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro?tracking_source=search_projects%7Ccollage+style+typography)
+5. Mono Street - Monoline Handwritten by Creatifont Studios on Dribbble (https://dribbble.com/shots/25794886-Mono-Street-Monoline-Handwritten?utm_source=chatgpt.com)
+6. TORN PNG LETTERS :: Behance (https://www.behance.net/gallery/220841533/TORN-PNG-LETTERS?tracking_source=search_projects%7Ccollage+style+typography)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://dribbble.com/shots/5816273-digital-collage-with-typography?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. digital collage with typography by Brett Clouser on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/70929149/No-Message-Throughout-Noise?tracking_source=search_projects%7Ccollage+style+typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. No Message Throughout Noise :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/213958103/travel-zine-calgary-canada-?tracking_source=search_projects%7Ccollage+style+typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. travel zine • calgary, canadá  :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/213671393/Digital-Collage-Style-Intro?tracking_source=search_projects%7Ccollage+style+typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Digital Collage-Style Intro :: Behance</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25794886-Mono-Street-Monoline-Handwritten?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Mono Street - Monoline Handwritten by Creatifont Studios on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/220841533/TORN-PNG-LETTERS?tracking_source=search_projects%7Ccollage+style+typography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. TORN PNG LETTERS :: Behance</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
