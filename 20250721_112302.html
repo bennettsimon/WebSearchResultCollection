@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Search 结果对比</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-content {
+            line-height: 1.6;
+        }
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .markdown-content p {
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content ul, .markdown-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-content li {
+            margin-bottom: 0.25rem;
+        }
+        .markdown-content code {
+            background-color: #f3f4f6;
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+        }
+        .markdown-content pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .markdown-content blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: #6b7280;
+        }
+        .copyable {
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+        .copyable:hover {
+            background-color: #f3f4f6;
+            border-radius: 0.25rem;
+            padding: 0.125rem 0.25rem;
+        }
+        .copyable:active {
+            background-color: #e5e7eb;
+        }
+        .copy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #2563eb;
+        }
+        .copy-btn:active {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 标题 -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Web Search 结果对比</h1>
+            <p class="text-gray-600">用户输入: <span class="font-medium copyable" data-copy="The user needs to create an integrated marketing campaign for a series of golden brown bronze car dashboard sculptures, including logo, packaging, ads, and scene displays. You need to search for high-end car accessory brand visuals, art sculpture product packaging designs, bronze material advertising photography, culturally meaningful scene displays, and ritualistic product presentations.">The user needs to create an integrated marketing campaign for a series of golden brown bronze car dashboard sculptures, including logo, packaging, ads, and scene displays. You need to search for high-end car accessory brand visuals, art sculpture product packaging designs, bronze material advertising photography, culturally meaningful scene displays, and ritualistic product presentations.</span></p>
+            <p class="text-sm text-gray-500">生成时间: 2025-07-21 11:24:15</p>
+        </div>
+
+        <!-- 结果对比 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Gemini</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="gemini-2.5-flash">gemini-2.5-flash</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="15.27">15.27秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="1,455">1,455</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. high-end car accessory brand visual identity
+2. luxury automotive interior accessory branding
+3. premium car accessory design aesthetics
+4. art sculpture packaging design inspiration
+5. luxury sculpture product packaging
+6. fine art packaging concepts
+7. bronze sculpture advertising photography
+8. bronze material product photoshoot ideas
+9. golden bronze texture photography
+10. culturally significant art display scenes
+11. meaningful object presentation contexts
+12. cultural heritage inspired product displays
+13. ritualistic product unveiling ideas
+14. ceremonial product presentation design
+15. exclusive product launch rituals">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. high-end car accessory brand visual identity</li><li class="text-sm text-gray-600">2. luxury automotive interior accessory branding</li><li class="text-sm text-gray-600">3. premium car accessory design aesthetics</li><li class="text-sm text-gray-600">4. art sculpture packaging design inspiration</li><li class="text-sm text-gray-600">5. luxury sculpture product packaging</li><li class="text-sm text-gray-600">6. fine art packaging concepts</li><li class="text-sm text-gray-600">7. bronze sculpture advertising photography</li><li class="text-sm text-gray-600">8. bronze material product photoshoot ideas</li><li class="text-sm text-gray-600">9. golden bronze texture photography</li><li class="text-sm text-gray-600">10. culturally significant art display scenes</li><li class="text-sm text-gray-600">11. meaningful object presentation contexts</li><li class="text-sm text-gray-600">12. cultural heritage inspired product displays</li><li class="text-sm text-gray-600">13. ritualistic product unveiling ideas</li><li class="text-sm text-gray-600">14. ceremonial product presentation design</li><li class="text-sm text-gray-600">15. exclusive product launch rituals</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="To create an integrated marketing campaign for a series of golden brown bronze car dashboard sculptures, here's an overview of visual inspirations and strategic directions:
+
+**1. High-End Car Accessory Brand Visuals:**
+*   **Aesthetics:** Luxury car accessories often feature sleek, minimalist designs with high-quality materials like leather, carbon fiber, and polished metals. Brands like Mercedes-Benz and BMW offer a range of interior enhancements, from premium upholstery to ambient lighting, that contribute to a luxurious driving experience.
+*   **Branding:** Focus on sophisticated typography, clean layouts, and a refined color palette that may include muted tones, metallics, and deep, rich colors. Brands like STRUT Auto have built a legacy on "auto jewelry" and bespoke grilles, wheels, and custom design elements that blend performance with prestige, appealing to high-net-worth individuals and collectors. Companies offering customization services, such as bespoke interiors or unique finishes, can differentiate themselves.
+
+**2. Art Sculpture Product Packaging Designs:**
+*   **Premium Materials:** Packaging for fine art and luxury items often utilizes high-quality materials like acid-free paper, sturdy corrugated or grey cardboard, and custom-built crates for delicate pieces. Materials such as specialty paper, paperboard, and kraft paper, potentially with coatings and laminates, can enhance appearance and longevity.
+*   **Design Concepts:** Packaging can be a work of art itself, transforming the product into a collector's piece. Inspiration can be drawn from other visual mediums like architecture, sculpture, and painting. Consider customized inserts to hold the product with finesse and display it beautifully upon opening. Examples include packaging that becomes an art sculpture around the product or features upcycled materials. The "unboxing experience" is crucial, with layered reveals and thoughtful arrangement of items to create anticipation and a ceremonial feel.
+
+**3. Bronze Material Advertising Photography:**
+*   **Highlighting Texture and Color:** Photography should emphasize the golden-brown hue and unique texture of the bronze. Shots can showcase visible brush strokes, cloudy, wavy textures, or a smooth, polished surface.
+*   **Lighting and Effects:** Utilize natural daylight for a full-frame, close-up effect that highlights the material's appeal. Consider lighting that creates warmth, reflection, and a dynamic sense of movement and depth. Abstract metallic swirls with curved stripes and light reflections, or golden glittering brush strokes, can be effective. Images can range from dark, antique bronze textures to bright, polished golden bronze.
+
+**4. Culturally Meaningful Scene Displays:**
+*   **Contextual Relevance:** Displays should present the sculptures within visually rich, naturalistic scenes that enhance recognition and evoke meaning. Objects within a scene are more easily recognized if they are consistent with the context.
+*   **Elevating the Object:** The display should go beyond mere presentation, making the sculpture feel like a "meaningful object" that evolves its significance through interaction and context. The aim is to integrate the sculptures into an environment where they feel significant and integral, similar to how cultural objects hold meaning within their specific contexts.
+
+**5. Ritualistic Product Presentations:**
+*   **Ceremonial Unveiling:** The presentation should instill a sense of ceremony and exclusivity. This can involve a "layered reveal" during unboxing, guiding the user through anticipation and revelation.
+*   **Luxury and Exclusivity:** Brands like Rituals have launched limited-edition collections with "elevated brand direction" and exclusive product ranges, emphasizing a "luxury lifestyle brand" approach. The presentation should align with high-end product launches and award ceremonies, using elements like golden stages, spotlights, and elegant backdrops to signify prestige. This creates an aura of exclusivity and desirability, attracting collectors and enthusiasts who see the product as a valuable investment.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">To create an integrated marketing campaign for a series of golden brown bronze car dashboard sculptures, here's an overview of visual inspirations and strategic directions:
+
+**1. High-End Car Accessory Brand Visuals:**
+*   **Aesthetics:** Luxury car accessories often feature sleek, minimalist designs with high-quality materials like leather, carbon fiber, and polished metals. Brands like Mercedes-Benz and BMW offer a range of interior enhancements, from premium upholstery to ambient lighting, that contribute to a luxurious driving experience.
+*   **Branding:** Focus on sophisticated typography, clean layouts, and a refined color palette that may include muted tones, metallics, and deep, rich colors. Brands like STRUT Auto have built a legacy on "auto jewelry" and bespoke grilles, wheels, and custom design elements that blend performance with prestige, appealing to high-net-worth individuals and collectors. Companies offering customization services, such as bespoke interiors or unique finishes, can differentiate themselves.
+
+**2. Art Sculpture Product Packaging Designs:**
+*   **Premium Materials:** Packaging for fine art and luxury items often utilizes high-quality materials like acid-free paper, sturdy corrugated or grey cardboard, and custom-built crates for delicate pieces. Materials such as specialty paper, paperboard, and kraft paper, potentially with coatings and laminates, can enhance appearance and longevity.
+*   **Design Concepts:** Packaging can be a work of art itself, transforming the product into a collector's piece. Inspiration can be drawn from other visual mediums like architecture, sculpture, and painting. Consider customized inserts to hold the product with finesse and display it beautifully upon opening. Examples include packaging that becomes an art sculpture around the product or features upcycled materials. The "unboxing experience" is crucial, with layered reveals and thoughtful arrangement of items to create anticipation and a ceremonial feel.
+
+**3. Bronze Material Advertising Photography:**
+*   **Highlighting Texture and Color:** Photography should emphasize the golden-brown hue and unique texture of the bronze. Shots can showcase visible brush strokes, cloudy, wavy textures, or a smooth, polished surface.
+*   **Lighting and Effects:** Utilize natural daylight for a full-frame, close-up effect that highlights the material's appeal. Consider lighting that creates warmth, reflection, and a dynamic sense of movement and depth. Abstract metallic swirls with curved stripes and light reflections, or golden glittering brush strokes, can be effective. Images can range from dark, antique bronze textures to bright, polished golden bronze.
+
+**4. Culturally Meaningful Scene Displays:**
+*   **Contextual Relevance:** Displays should present the sculptures within visually rich, naturalistic scenes that enhance recognition and evoke meaning. Objects within a scene are more easily recognized if they are consistent with the context.
+*   **Elevating the Object:** The display should go beyond mere presentation, making the sculpture feel like a "meaningful object" that evolves its significance through interaction and context. The aim is to integrate the sculptures into an environment where they feel significant and integral, similar to how cultural objects hold meaning within their specific contexts.
+
+**5. Ritualistic Product Presentations:**
+*   **Ceremonial Unveiling:** The presentation should instill a sense of ceremony and exclusivity. This can involve a "layered reveal" during unboxing, guiding the user through anticipation and revelation.
+*   **Luxury and Exclusivity:** Brands like Rituals have launched limited-edition collections with "elevated brand direction" and exclusive product ranges, emphasizing a "luxury lifestyle brand" approach. The presentation should align with high-end product launches and award ceremonies, using elements like golden stages, spotlights, and elegant backdrops to signify prestige. This creates an aura of exclusivity and desirability, attracting collectors and enthusiasts who see the product as a valuable investment.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. fastercapital.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEL3dIYdjBL8UQ3ltUwGipfch7oHxS4624H9sjkFwQF9oOBKh3ro4n7YG8TO-hjzxfO8LUqjnRI8dxALlhUff8mj0CPlg5I5kH0QGzkj6GGSV5rVs6ubnv9xWiAtwWtZUXLJ-gaWs1ndsttsxkfjWE5nEw6VGEp7Q38JCjRVx1Vimcizn_633msvDBZrXHRHUiearNtK7g=)
+2. strutlife.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQhwbbV4ifLoimli0t6-dPhke43oKLxzX2UE8uMdGTJFQucqPPa-hN7QTHACyuz7Sh_jDRPpDIn7Qm293MNkVxpPPtRvOFUBYOZOuDPE9dxvXDdVt-wA4UTCQUcbDyXhYtnIV_c2tm7iMna6RFXTNz9GBAeZGDo4mzqPzEzgAIeD5cpA==)
+3. cadogantate.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRDGwCkohWfFKt0CRKEq3DOv5ibfIPE-EUU3C5NNGxf5tj-nR50pEnNwqz6mDvqmHQw9V0uYsg_uN_wwKtPkOJgDMCqP618H9DOsxy5I8WDnycQgc09WBiooGq08RnuN0sK_iFmye9C1qVjHTMM9HDkhvVk9QK6EA5kupESep2fqk_J3oWfXIUqTOAx5W9)
+4. hasenkamp.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5VTSyqjx1kVXaFZtLTQsQXWjKwepsKl_5pbvVlgRxCEoD7QmZMxiZHObCYst2rGxJ9_g17u97wdZZmqAGZ9jG13uNCIbDrNQupdSmtffsFKxZJvLn7Yv6A1IIpNk5lyUPDr-27qBexG6WvwHrdy96wK4=)
+5. made-in-china.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMt4AiRE9oy13Uo8qQ4wugIMIJ_9KyPEa2zj3BLyYZWhHsF9t-klXOQ_kZmEU4CaJ7CHjDrsXGXPDtTA4E-GVXmegI_UZY8N6Ts5_r8o9kZNBNwq4cuUJvjqPEdRaFFwdzCE7wfx7nY8DcVKeQfPKqNoLhskawdlnR6fwLPXhcsvHQs_HcJ1Jm_nRVEPlnzzh-dUpFEt93n1t7ShIGAp-gWeHeyZChhQLKoGoTvmIOtHZRNcwEnn_3z1zbvWF6m7amnfxJjNSUCQG6WPpB0Si7T89MJItU)
+6. alibaba.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXpHXq9SavXTCluk-WmOZquEVoGP7tWQLjzx5EHtMWLZQA51HVEV-89s1BmSy13JkuFQXGuE3o2kGmPothV-dni8a6HMPWG0_53hIU-0CqWASrhmA_i9vi76Dpp_n6a7G2_YpxfjVK4egqdhC5_gbdHGPM0g==)
+7. moreschini.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZHW7PpOgEZmfA748OvEFO9SwUrN7ZbDVbnEN97-kjSCMm8NUZDZeGP4YOrISSVzxUQ7l37-osPbp31euZhCtpi4C1jNAIhFBQQJeKLMOB0FxOJEfrW2frAVzys4-owaLQ-I1i_bIMWix0BxX7vxTBESy0-mOMenY6JUzszWgo5iUEP7HpLZUzOBHvVuA3NU1K5Zajb-kf)
+8. worksdesigngroup.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTVDCDz8OEPuYk2QtEArrO1uxYm5-YOx2rZNG5Ga6FU9LCrT0nQX2zz23e5xjBiNtbA63USbTfiSElJLCZ2AYCrdF5_absLvFQPSUoUvPdXfDwM65_sZpryA1EOepzmHW50NJEJ4WK3rFX97AcmapQu7U9DAlUJ-J6w44FU3t4BfKC)
+9. inknart.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESwiGjWLkG3kSVh1YXzRRfkv7p6jvja5cf4eNPwRa-9z6gd5275XPvtE62XhzsexfNLGpjqmvZhyD_d8od0Tg9LifQ2vvu6prSbECv0ZSRmpZAFGE3C_i-_RDOSxaNSpjZ)
+10. creativeboom.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU8H-2hSqPmLY8dNaP8tA3eBGfFWs5sHx6l6CiTyMhvJP4pmZ5p4MjCo8HocY22X88_1IYE5n27-b5hWHqTN1-yIQ1nCQpDBV09m65ALQTPCbM7NOR2gAfaX6e6QICz9lin939kLuHYy7JVe8qZnEoeK0X87RE7_K1H4L4eMQ=)
+11. theinspirationgrid.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNnAF909-P5-pAGEGLIJkg6PV_ALXvQ0Vom2dAKQhv7xXTFG8DtCiV31V_WWdDByzCOVsFqVy2C64XVqGUY4Kf6ZtG0WC3-xJUBk68rvhKsQYvdDPl3dWfOJ8d1ZpSHK29ta4Vmlxscf3Hvt_vAIcr97p1mqmza0kxblUfhKVnH74=)
+12. accessnewswire.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyrFbztQBXjuP_XGLjIvPIhMtJ2hjENGM6NUunt9_8GJyRwuZmqHg-3fwS9gfLSJDZfPHXh7SNEZi-FsgGjMhjl46QTgkoCeaWH8SRJkI-1ntBNEKoabG2Md_kGSAqaIva1VQbMOrUO-jcTwhRHyhdDYPMWwP5knrBexFZZgqGQZK4_1hrscl4fUdzmFdnW6ynfqE7Ikivf8MLJ0PJ_tyeua-ErZQkd80IGlRs97FgSJ8YLq17cpc_MJXAjLpF7iI=)
+13. istockphoto.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzPKC73NErATvDX07Mexa6BnD7Ic-X7Fgfjt38kQ7udiqp8nzFFldI_r8FSnP37f_s_MakmD_Itkahg4FmoM7HmBbSYbM_vPAtrD_q0Ipmi2yZoQhsbU5LdH3NizK68K1Zzm1dA8I_1A59hA==)
+14. gettyimages.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4n1aFSBJUaWpI58-bszAmKDmiHZ4ZoSndnHkaD4301vxCaLxB4adGSo7x1tv3l9rYfBHs2GhEd5TeHrtuSBoIlK69tkBvrqpcCagEEFaAoR4yMDqNgTFixgl9Aez6E0P7rN7o3gipa-n-BSI=)
+15. gettyimages.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDbwYQc4zUAlryOif7IgIu4PAA4bmgCmmNim8hM0CA-ZldkDReMAlQxyub7VTMgEiElGs4Z5BhLLODZex3Npkg0RTL7tDChL4p1T16XxictWrJGmea6Xrx4QFA1Mi2xvBuuEhRmu2qyyWYkqZpkCHJbe4=)
+16. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4p6bsdo5jX0TOqXg3pl9mfY0AtUjkaew4XlBu1-2Q64Gw4RRmUhQVKC01cO17DGkkuWA4x135DuGQBv2oUwM0atmknCPT60ZYptaC9GzSK7PRatdsQ1iz78byHJytXiWCoVv5zG8xRM0NPA9ivD2mGOjV)
+17. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDC-0YvbvvCziu-awmvn5Bf6rbboCgiuiCc7yq6s2syhFoW2hITiOISZ5HLmq6BhrC2kjA83xwbwg1p_F0R75-t7uw3-8CLH4N4zLj1sgkQU7oxI5RrxP4Yyd03b7qHjOjAGS0havLtC2GyZE=)
+18. istockphoto.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVUK-Z7RDa6cgzfUyZMjSrHXb4QCS4KQYAfP583Np8VKeN-WKa6SZA1xL17roflTVuCjZkinb82yG1KS0eTaymRSgxGsbApyj1rrZ9_0wHfHezZCht3Q5uCcarT_ErL3tjvf7KGcusyWlG)
+19. nih.gov (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzmYg-EZ2BqI0hs-6QHtIi6kcGgMtiebZyyYHHpNNNPkxMeR_QOiL3mBThS-tJtBJ20UWojwVswA1ZXrNZztoKuFq6lUJmaMDFSUOB6shhUQXusr8UJvEPpjg3vDqxPYIY1SFjuVwVG2ZLRNs=)
+20. princeton.edu (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoWOPiqSB_8AHePAK5an1SMLEUcTQv1nSYcvHTXcnDW13iyDxjk0LWli2o2jVvljcfXmFVUPBjOQRKCPE7S3y7zNpfRa_TbCmGhM-RTFHYsJ5VlWUlTE3_Er6oR0-LUQASJk3oypWOTIfrUZ1vQRvLZ50YOX-GOSMdjuvkdzE2tG7K9d5EITpgcWBgZp3bww==)
+21. manchester.ac.uk (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHji3WiMuDBiq6GUZAe7uaSRzfXcz0vWwcrCKmkGm8VKk3jsJMg8RKQYaZK8wPiQytFGei6VF9mdUZPne-8oVpGQMQfFamPp0FR3SuhkTYab1NeWDcNnqa1fk8Cq0ORpSoPnSk0rmWRbNVYgOVjoo-ihwMqLWyN_evb4fFJkooMBW2SSwp5jE-ZTuNIEOG8LoxlpqpiBptXk4y9rzly8y3VEEWo2w==)
+22. osf.io (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKlpj7sblhVwT0SURna3h4SbrU0jSDSMDg1IASqGefEbxc4MkS8ZODx93c56H0S1v80lxP3jrwfynK5Ux_QHV6NUKxUmueYeASNiHd0R9hp72KNqs93n0ppjPXJw==)
+23. cosmeticsbusiness.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuUxqXr-2knTEDocfDwtXXh9eLEuVgNkD33jgX2-RvuNw-91KJp0XoVne2e0PvhbBldb49AIMvaDZPTWGo2qFBHqJ3p8QGguPCzLdlXU0E3V6bz5e9FQ8AP0dDTXG8XgGaR0AH8zNrkH8tqpW09ggnxKx-NPW51n0kRZx9-1Ex2zkT-dNDOlHE_LPbW2DDYQr-x9vewUaKQkdu)
+24. cosmeticsbusiness.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-bPkTa_Aq2x6CQGAa3RI8RBZllbrbc4WtQLqDAGUUgEV3Shx_H_uOCDwpT5Dvh5CFvsmTK91maCSxnHWEBStnlybZg_WjYQsUHyltYlXYi5JYzDLReetpnOwp7ifwpFoZUha7fbYBbpaKCgOglrXn0zWg1LBr72kYM6ULLNY3DEQdpFQFlKMlpTdlnWYQrDF_)
+25. moodiedavittreport.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCTetPBNV2J8s85RO6y8P2XRuW_IKx-n5RUqAT7XX9bxT4sNy3tbap_EOTWxcUdIrB9JhAuEiqG3LOnRmXZFj5-H91jatK7u04_yr_lVuIPz58AwLalfmC9iRSH3MmquQ2UvvTzoE2HTMBU8Dy4tQ-58gCnqbLm_BRs5GxvyEa6daR-pRdd1yJZySpNIiLEt1BSIG3DUC6o3GW83zOAVQK_LMRf57LMLmb8ZR4-ISOthH9ncWlxnUKsEPDn-j9CI7JsdE=)
+26. apparelgroup.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgxlPaquE5kimHg2QADA-tbDsIDF31XA9mHpAfRllseqk106nturrE2dBoM-SFP4q28SqEJQOOzMwzC2S6pUe3ypa53fLvAjgFEC062ZEOy2kkqDCorDS5OO7mw5HS2E03pJfdhy5GhwmbCFbyh2beZpHCSO8FQOFMOkE7eF_Ekqm7gvpUojH9_v7pDfpDO3M2Lj_HX6JKLRhc69pnKfMpTKpLDM514vyRsmPbbnkPvj40zgchUL_40-ai-TpDjA==)
+27. retailgazette.co.uk (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHf0Knwc5DG9wAoL4DsHACobm5Kxs8Ron8pxfxUHEs5u4FEDPwmr8P5A1wDkLYR6HxMNsSLwXvX8ACAl0focNQcY_BKPk58t6d9MmQytRjR3btrD1aqOvzhrX6DfUqfuO5de--GWj8W08WimkgK8SIZPhqp65IyhpJT)
+28. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAyyZ_VAkMIPAC0x_BqhBRDXr4l48RHIs3buHZje_kxTSMvCg4BrWdLw5RBrHtTQaWczmm5pKBF9D8nUGUYnBmUYQZJk7WAsDXQlPXmjhr44byDMLOfBoi0y0jm0spIANaUYC4fbgS0aHGgw9WYjbc0UwFbSQ0VOEpsgsL1g-pWZSMeKv1BLvV2P-BNVxP)
+29. shutterstock.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkQaMC0NcNVgBPthOaqWWyhuMFAqVPzOn8ppy_1HXkhQzOquFilPjb9e5F2xKsLPsaClz3Jv_wuTNRK3p6EMrdxZe4izw3Vdtp-lxC7rImvsJWsq7dGDkTGfacgIvaBToPolzfGIi1ytzU2Rh531GiSTqKFEL7OitUgQC-_g==)
+30. pitch.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELY1eKp8DQ3CyKo9qNED69ikth7g1cxWydpsbS1VcOk6DMEBSZv2oDTiyo-awmdc9cXFZiTtl6C446n6MhrcNs1-0M-7C0RhnOcJ1pfCV4uOYWrVFpkqvSfRFNiLB7qXu_3SSzMKqp-jpz)
+31. tiktok.com (https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYVEJ4_DCGBM9CMI0wsw7mCVwNdtIcVb1nlYUf2p6lvPz_jf6_Y9bA9uLIivG5o6sA-3FWwTLHNuq0D-qTDv1Kov5BNN3ThkJ14Jdp0bpHkT9bDHXs7YJGlr7dCvDdsQ1KvXOY4TPNWlmCoa5e7ETSHBLRw4q24RbC8b5IMMFW)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEL3dIYdjBL8UQ3ltUwGipfch7oHxS4624H9sjkFwQF9oOBKh3ro4n7YG8TO-hjzxfO8LUqjnRI8dxALlhUff8mj0CPlg5I5kH0QGzkj6GGSV5rVs6ubnv9xWiAtwWtZUXLJ-gaWs1ndsttsxkfjWE5nEw6VGEp7Q38JCjRVx1Vimcizn_633msvDBZrXHRHUiearNtK7g=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. fastercapital.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQhwbbV4ifLoimli0t6-dPhke43oKLxzX2UE8uMdGTJFQucqPPa-hN7QTHACyuz7Sh_jDRPpDIn7Qm293MNkVxpPPtRvOFUBYOZOuDPE9dxvXDdVt-wA4UTCQUcbDyXhYtnIV_c2tm7iMna6RFXTNz9GBAeZGDo4mzqPzEzgAIeD5cpA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. strutlife.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRDGwCkohWfFKt0CRKEq3DOv5ibfIPE-EUU3C5NNGxf5tj-nR50pEnNwqz6mDvqmHQw9V0uYsg_uN_wwKtPkOJgDMCqP618H9DOsxy5I8WDnycQgc09WBiooGq08RnuN0sK_iFmye9C1qVjHTMM9HDkhvVk9QK6EA5kupESep2fqk_J3oWfXIUqTOAx5W9" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. cadogantate.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5VTSyqjx1kVXaFZtLTQsQXWjKwepsKl_5pbvVlgRxCEoD7QmZMxiZHObCYst2rGxJ9_g17u97wdZZmqAGZ9jG13uNCIbDrNQupdSmtffsFKxZJvLn7Yv6A1IIpNk5lyUPDr-27qBexG6WvwHrdy96wK4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. hasenkamp.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMt4AiRE9oy13Uo8qQ4wugIMIJ_9KyPEa2zj3BLyYZWhHsF9t-klXOQ_kZmEU4CaJ7CHjDrsXGXPDtTA4E-GVXmegI_UZY8N6Ts5_r8o9kZNBNwq4cuUJvjqPEdRaFFwdzCE7wfx7nY8DcVKeQfPKqNoLhskawdlnR6fwLPXhcsvHQs_HcJ1Jm_nRVEPlnzzh-dUpFEt93n1t7ShIGAp-gWeHeyZChhQLKoGoTvmIOtHZRNcwEnn_3z1zbvWF6m7amnfxJjNSUCQG6WPpB0Si7T89MJItU" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. made-in-china.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXpHXq9SavXTCluk-WmOZquEVoGP7tWQLjzx5EHtMWLZQA51HVEV-89s1BmSy13JkuFQXGuE3o2kGmPothV-dni8a6HMPWG0_53hIU-0CqWASrhmA_i9vi76Dpp_n6a7G2_YpxfjVK4egqdhC5_gbdHGPM0g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. alibaba.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZHW7PpOgEZmfA748OvEFO9SwUrN7ZbDVbnEN97-kjSCMm8NUZDZeGP4YOrISSVzxUQ7l37-osPbp31euZhCtpi4C1jNAIhFBQQJeKLMOB0FxOJEfrW2frAVzys4-owaLQ-I1i_bIMWix0BxX7vxTBESy0-mOMenY6JUzszWgo5iUEP7HpLZUzOBHvVuA3NU1K5Zajb-kf" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. moreschini.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTVDCDz8OEPuYk2QtEArrO1uxYm5-YOx2rZNG5Ga6FU9LCrT0nQX2zz23e5xjBiNtbA63USbTfiSElJLCZ2AYCrdF5_absLvFQPSUoUvPdXfDwM65_sZpryA1EOepzmHW50NJEJ4WK3rFX97AcmapQu7U9DAlUJ-J6w44FU3t4BfKC" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. worksdesigngroup.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESwiGjWLkG3kSVh1YXzRRfkv7p6jvja5cf4eNPwRa-9z6gd5275XPvtE62XhzsexfNLGpjqmvZhyD_d8od0Tg9LifQ2vvu6prSbECv0ZSRmpZAFGE3C_i-_RDOSxaNSpjZ" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. inknart.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU8H-2hSqPmLY8dNaP8tA3eBGfFWs5sHx6l6CiTyMhvJP4pmZ5p4MjCo8HocY22X88_1IYE5n27-b5hWHqTN1-yIQ1nCQpDBV09m65ALQTPCbM7NOR2gAfaX6e6QICz9lin939kLuHYy7JVe8qZnEoeK0X87RE7_K1H4L4eMQ=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. creativeboom.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNnAF909-P5-pAGEGLIJkg6PV_ALXvQ0Vom2dAKQhv7xXTFG8DtCiV31V_WWdDByzCOVsFqVy2C64XVqGUY4Kf6ZtG0WC3-xJUBk68rvhKsQYvdDPl3dWfOJ8d1ZpSHK29ta4Vmlxscf3Hvt_vAIcr97p1mqmza0kxblUfhKVnH74=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. theinspirationgrid.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyrFbztQBXjuP_XGLjIvPIhMtJ2hjENGM6NUunt9_8GJyRwuZmqHg-3fwS9gfLSJDZfPHXh7SNEZi-FsgGjMhjl46QTgkoCeaWH8SRJkI-1ntBNEKoabG2Md_kGSAqaIva1VQbMOrUO-jcTwhRHyhdDYPMWwP5knrBexFZZgqGQZK4_1hrscl4fUdzmFdnW6ynfqE7Ikivf8MLJ0PJ_tyeua-ErZQkd80IGlRs97FgSJ8YLq17cpc_MJXAjLpF7iI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. accessnewswire.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzPKC73NErATvDX07Mexa6BnD7Ic-X7Fgfjt38kQ7udiqp8nzFFldI_r8FSnP37f_s_MakmD_Itkahg4FmoM7HmBbSYbM_vPAtrD_q0Ipmi2yZoQhsbU5LdH3NizK68K1Zzm1dA8I_1A59hA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. istockphoto.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4n1aFSBJUaWpI58-bszAmKDmiHZ4ZoSndnHkaD4301vxCaLxB4adGSo7x1tv3l9rYfBHs2GhEd5TeHrtuSBoIlK69tkBvrqpcCagEEFaAoR4yMDqNgTFixgl9Aez6E0P7rN7o3gipa-n-BSI=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. gettyimages.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDbwYQc4zUAlryOif7IgIu4PAA4bmgCmmNim8hM0CA-ZldkDReMAlQxyub7VTMgEiElGs4Z5BhLLODZex3Npkg0RTL7tDChL4p1T16XxictWrJGmea6Xrx4QFA1Mi2xvBuuEhRmu2qyyWYkqZpkCHJbe4=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. gettyimages.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4p6bsdo5jX0TOqXg3pl9mfY0AtUjkaew4XlBu1-2Q64Gw4RRmUhQVKC01cO17DGkkuWA4x135DuGQBv2oUwM0atmknCPT60ZYptaC9GzSK7PRatdsQ1iz78byHJytXiWCoVv5zG8xRM0NPA9ivD2mGOjV" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDC-0YvbvvCziu-awmvn5Bf6rbboCgiuiCc7yq6s2syhFoW2hITiOISZ5HLmq6BhrC2kjA83xwbwg1p_F0R75-t7uw3-8CLH4N4zLj1sgkQU7oxI5RrxP4Yyd03b7qHjOjAGS0havLtC2GyZE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">17. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVUK-Z7RDa6cgzfUyZMjSrHXb4QCS4KQYAfP583Np8VKeN-WKa6SZA1xL17roflTVuCjZkinb82yG1KS0eTaymRSgxGsbApyj1rrZ9_0wHfHezZCht3Q5uCcarT_ErL3tjvf7KGcusyWlG" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">18. istockphoto.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFzmYg-EZ2BqI0hs-6QHtIi6kcGgMtiebZyyYHHpNNNPkxMeR_QOiL3mBThS-tJtBJ20UWojwVswA1ZXrNZztoKuFq6lUJmaMDFSUOB6shhUQXusr8UJvEPpjg3vDqxPYIY1SFjuVwVG2ZLRNs=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">19. nih.gov</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoWOPiqSB_8AHePAK5an1SMLEUcTQv1nSYcvHTXcnDW13iyDxjk0LWli2o2jVvljcfXmFVUPBjOQRKCPE7S3y7zNpfRa_TbCmGhM-RTFHYsJ5VlWUlTE3_Er6oR0-LUQASJk3oypWOTIfrUZ1vQRvLZ50YOX-GOSMdjuvkdzE2tG7K9d5EITpgcWBgZp3bww==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">20. princeton.edu</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHji3WiMuDBiq6GUZAe7uaSRzfXcz0vWwcrCKmkGm8VKk3jsJMg8RKQYaZK8wPiQytFGei6VF9mdUZPne-8oVpGQMQfFamPp0FR3SuhkTYab1NeWDcNnqa1fk8Cq0ORpSoPnSk0rmWRbNVYgOVjoo-ihwMqLWyN_evb4fFJkooMBW2SSwp5jE-ZTuNIEOG8LoxlpqpiBptXk4y9rzly8y3VEEWo2w==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">21. manchester.ac.uk</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKlpj7sblhVwT0SURna3h4SbrU0jSDSMDg1IASqGefEbxc4MkS8ZODx93c56H0S1v80lxP3jrwfynK5Ux_QHV6NUKxUmueYeASNiHd0R9hp72KNqs93n0ppjPXJw==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">22. osf.io</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuUxqXr-2knTEDocfDwtXXh9eLEuVgNkD33jgX2-RvuNw-91KJp0XoVne2e0PvhbBldb49AIMvaDZPTWGo2qFBHqJ3p8QGguPCzLdlXU0E3V6bz5e9FQ8AP0dDTXG8XgGaR0AH8zNrkH8tqpW09ggnxKx-NPW51n0kRZx9-1Ex2zkT-dNDOlHE_LPbW2DDYQr-x9vewUaKQkdu" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">23. cosmeticsbusiness.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-bPkTa_Aq2x6CQGAa3RI8RBZllbrbc4WtQLqDAGUUgEV3Shx_H_uOCDwpT5Dvh5CFvsmTK91maCSxnHWEBStnlybZg_WjYQsUHyltYlXYi5JYzDLReetpnOwp7ifwpFoZUha7fbYBbpaKCgOglrXn0zWg1LBr72kYM6ULLNY3DEQdpFQFlKMlpTdlnWYQrDF_" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">24. cosmeticsbusiness.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCTetPBNV2J8s85RO6y8P2XRuW_IKx-n5RUqAT7XX9bxT4sNy3tbap_EOTWxcUdIrB9JhAuEiqG3LOnRmXZFj5-H91jatK7u04_yr_lVuIPz58AwLalfmC9iRSH3MmquQ2UvvTzoE2HTMBU8Dy4tQ-58gCnqbLm_BRs5GxvyEa6daR-pRdd1yJZySpNIiLEt1BSIG3DUC6o3GW83zOAVQK_LMRf57LMLmb8ZR4-ISOthH9ncWlxnUKsEPDn-j9CI7JsdE=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">25. moodiedavittreport.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgxlPaquE5kimHg2QADA-tbDsIDF31XA9mHpAfRllseqk106nturrE2dBoM-SFP4q28SqEJQOOzMwzC2S6pUe3ypa53fLvAjgFEC062ZEOy2kkqDCorDS5OO7mw5HS2E03pJfdhy5GhwmbCFbyh2beZpHCSO8FQOFMOkE7eF_Ekqm7gvpUojH9_v7pDfpDO3M2Lj_HX6JKLRhc69pnKfMpTKpLDM514vyRsmPbbnkPvj40zgchUL_40-ai-TpDjA==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">26. apparelgroup.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHf0Knwc5DG9wAoL4DsHACobm5Kxs8Ron8pxfxUHEs5u4FEDPwmr8P5A1wDkLYR6HxMNsSLwXvX8ACAl0focNQcY_BKPk58t6d9MmQytRjR3btrD1aqOvzhrX6DfUqfuO5de--GWj8W08WimkgK8SIZPhqp65IyhpJT" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">27. retailgazette.co.uk</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAyyZ_VAkMIPAC0x_BqhBRDXr4l48RHIs3buHZje_kxTSMvCg4BrWdLw5RBrHtTQaWczmm5pKBF9D8nUGUYnBmUYQZJk7WAsDXQlPXmjhr44byDMLOfBoi0y0jm0spIANaUYC4fbgS0aHGgw9WYjbc0UwFbSQ0VOEpsgsL1g-pWZSMeKv1BLvV2P-BNVxP" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">28. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkQaMC0NcNVgBPthOaqWWyhuMFAqVPzOn8ppy_1HXkhQzOquFilPjb9e5F2xKsLPsaClz3Jv_wuTNRK3p6EMrdxZe4izw3Vdtp-lxC7rImvsJWsq7dGDkTGfacgIvaBToPolzfGIi1ytzU2Rh531GiSTqKFEL7OitUgQC-_g==" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">29. shutterstock.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELY1eKp8DQ3CyKo9qNED69ikth7g1cxWydpsbS1VcOk6DMEBSZv2oDTiyo-awmdc9cXFZiTtl6C446n6MhrcNs1-0M-7C0RhnOcJ1pfCV4uOYWrVFpkqvSfRFNiLB7qXu_3SSzMKqp-jpz" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">30. pitch.com</a></li><li class="text-sm"><a href="https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYVEJ4_DCGBM9CMI0wsw7mCVwNdtIcVb1nlYUf2p6lvPz_jf6_Y9bA9uLIivG5o6sA-3FWwTLHNuq0D-qTDv1Kov5BNN3ThkJ14Jdp0bpHkT9bDHXs7YJGlr7dCvDdsQ1KvXOY4TPNWlmCoa5e7ETSHBLRw4q24RbC8b5IMMFW" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">31. tiktok.com</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">Claude</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="claude-sonnet-4-20250514">claude-sonnet-4-20250514</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="44.54">44.54秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="76,119">76,119</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. luxury car accessories branding portfolio site:behance.net
+2. sculpture product packaging design portfolio bronze materials
+3. bronze material product photography advertising dribbble
+4. ritualistic product presentation ceremonial display portfolios">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. luxury car accessories branding portfolio site:behance.net</li><li class="text-sm text-gray-600">2. sculpture product packaging design portfolio bronze materials</li><li class="text-sm text-gray-600">3. bronze material product photography advertising dribbble</li><li class="text-sm text-gray-600">4. ritualistic product presentation ceremonial display portfolios</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="I'll help you find visual inspiration for your integrated marketing campaign for golden brown bronze car dashboard sculptures. Let me search for direct visual galleries and portfolios that showcase the specific design elements you need.Perfect! I've found excellent visual inspiration sources for your integrated marketing campaign for golden brown bronze car dashboard sculptures. Here are the key visual galleries and portfolios I've discovered:
+
+## High-End Car Accessory Brand Visuals
+
+I found the AUTOZS Branding for a Car Accessories Company project on Behance, which showcases professional automotive accessory branding. Additionally, Behance hosts extensive galleries for car accessories, luxury car projects, luxury packaging, and luxury banner ads that you can explore directly.
+
+## Art Sculpture Product Packaging Design
+
+Veronese Design showcases products crafted from high-quality materials such as resin, bronze, and durable finishes, with thorough quality checks and secure packaging. Their approach demonstrates how secure packaging protects purchases and maintains quality.
+
+For packaging inspiration, art portfolio examples show refined product photography approaches with large, high-resolution shots styled on neutral backgrounds to highlight form, texture and material.
+
+## Bronze Material Advertising Photography
+
+Dribbble features over 700 Bronze designs as a resource to discover and connect with designers worldwide. The platform also showcases 1,900+ Product Photography designs and 200+ Product Photo designs with professional examples.
+
+Bronze is the most popular metal for cast metal sculptures, often called simply "a bronze", and bronze alloys have the unusual property of expanding slightly before setting, filling finest details, then shrinking as they cool.
+
+## Culturally Meaningful Scene Displays
+
+Cultures across the world have marked life's important moments by rites of passage, special celebrations, and ceremonies, with pre-Columbian artifacts providing glimpses into diverse cultural observances.
+
+## Ritualistic Product Presentations
+
+Rituals have special power to bring people together and give them a sense of purpose, values, and meaning, often thought and created in art. Products have the power to become manifestations of rituals, and the first impression can make products look better and brands more desirable.
+
+Rituals help carve special moments from routine, sparking meaning in everyday lives, like family breakfast rituals or obsessive coffee rituals that carry more meaning and symbolism.
+
+## Direct Links to Visual Galleries:
+
+1. **Behance Luxury Packaging**: Direct gallery showcasing high-end packaging designs
+2. **Dribbble Bronze Tag**: 700+ bronze-themed designs and materials
+3. **Dribbble Product Photography**: 1,900+ professional product photography examples
+4. **Veronese Design**: Real sculpture company showing bronze material handling and packaging
+5. **Behance Car Accessories**: Professional automotive accessory branding projects
+
+These sources provide actual visual content rather than articles about design, giving you direct access to portfolios, case studies, and professional examples for each element of your integrated marketing campaign.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">I'll help you find visual inspiration for your integrated marketing campaign for golden brown bronze car dashboard sculptures. Let me search for direct visual galleries and portfolios that showcase the specific design elements you need.Perfect! I've found excellent visual inspiration sources for your integrated marketing campaign for golden brown bronze car dashboard sculptures. Here are the key visual galleries and portfolios I've discovered:
+
+## High-End Car Accessory Brand Visuals
+
+I found the AUTOZS Branding for a Car Accessories Company project on Behance, which showcases professional automotive accessory branding. Additionally, Behance hosts extensive galleries for car accessories, luxury car projects, luxury packaging, and luxury banner ads that you can explore directly.
+
+## Art Sculpture Product Packaging Design
+
+Veronese Design showcases products crafted from high-quality materials such as resin, bronze, and durable finishes, with thorough quality checks and secure packaging. Their approach demonstrates how secure packaging protects purchases and maintains quality.
+
+For packaging inspiration, art portfolio examples show refined product photography approaches with large, high-resolution shots styled on neutral backgrounds to highlight form, texture and material.
+
+## Bronze Material Advertising Photography
+
+Dribbble features over 700 Bronze designs as a resource to discover and connect with designers worldwide. The platform also showcases 1,900+ Product Photography designs and 200+ Product Photo designs with professional examples.
+
+Bronze is the most popular metal for cast metal sculptures, often called simply "a bronze", and bronze alloys have the unusual property of expanding slightly before setting, filling finest details, then shrinking as they cool.
+
+## Culturally Meaningful Scene Displays
+
+Cultures across the world have marked life's important moments by rites of passage, special celebrations, and ceremonies, with pre-Columbian artifacts providing glimpses into diverse cultural observances.
+
+## Ritualistic Product Presentations
+
+Rituals have special power to bring people together and give them a sense of purpose, values, and meaning, often thought and created in art. Products have the power to become manifestations of rituals, and the first impression can make products look better and brands more desirable.
+
+Rituals help carve special moments from routine, sparking meaning in everyday lives, like family breakfast rituals or obsessive coffee rituals that carry more meaning and symbolism.
+
+## Direct Links to Visual Galleries:
+
+1. **Behance Luxury Packaging**: Direct gallery showcasing high-end packaging designs
+2. **Dribbble Bronze Tag**: 700+ bronze-themed designs and materials
+3. **Dribbble Product Photography**: 1,900+ professional product photography examples
+4. **Veronese Design**: Real sculpture company showing bronze material handling and packaging
+5. **Behance Car Accessories**: Professional automotive accessory branding projects
+
+These sources provide actual visual content rather than articles about design, giving you direct access to portfolios, case studies, and professional examples for each element of your integrated marketing campaign.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. AUTOZS - Branding for a Car Accessories Company (https://www.behance.net/gallery/208257053/AUTOZS-Branding-for-a-Car-Accessories-Company)
+2. Car Accessories Projects (https://www.behance.net/search/projects/car%20accessories?locale=en_US)
+3. Accessories Branding Projects (https://www.behance.net/search/projects/accessories%20branding)
+4. Auto Accessories Projects (https://www.behance.net/search/projects/auto%20accessories?locale=en_US)
+5. Luxury Car Projects :: Photos, videos, logos, illustrations ... (https://www.behance.net/search/projects/luxury%20car?locale=en_US)
+6. Luxury Packaging Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/luxury%20packaging)
+7. Luxury Banner Ads Projects :: Photos, videos, logos, illustrations and branding :: Behance (https://www.behance.net/search/projects/luxury%20banner%20ads)
+8. Luxury Brand Projects :: Photos, videos, logos, illustrations ... (https://www.behance.net/search/projects/luxury%20brand?locale=en_US)
+9. Bronze Casting 101: Process of Casting Bronze [+How To Learn] (https://www.thecrucible.org/guides/metalworking/bronze-casting/)
+10. Bronze sculpture - Wikipedia (https://en.wikipedia.org/wiki/Bronze_sculpture)
+11. Commercial Product Photography designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/commercial_product_photography)
+12. Advertising Photography designs, themes, templates and downloadable graphic elements on Dribbble (https://dribbble.com/tags/advertising-photography)
+13. Ritual Design or how to create meaningful experiences | by Alexandre Paranaguá | Medium (https://medium.com/@aparanagua/ritual-design-80323c23fb68)
+14. New Product Packaging Design Services & Portfolio | The Netmen Corp (https://thenetmencorp.com/portfolio-packaging/)
+15. Design Portfolio Presentation Template | Miro (https://miro.com/templates/portfolio-presentation/)
+16. Rituals - The Presentation Factory (https://presentationfactory.nl/en/portfolio/rituals/)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://www.behance.net/gallery/208257053/AUTOZS-Branding-for-a-Car-Accessories-Company" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. AUTOZS - Branding for a Car Accessories Company</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/car%20accessories?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Car Accessories Projects</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/accessories%20branding" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. Accessories Branding Projects</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/auto%20accessories?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Auto Accessories Projects</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/luxury%20car?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. Luxury Car Projects :: Photos, videos, logos, illustrations ...</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/luxury%20packaging" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Luxury Packaging Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/luxury%20banner%20ads" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Luxury Banner Ads Projects :: Photos, videos, logos, illustrations and branding :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/search/projects/luxury%20brand?locale=en_US" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Luxury Brand Projects :: Photos, videos, logos, illustrations ...</a></li><li class="text-sm"><a href="https://www.thecrucible.org/guides/metalworking/bronze-casting/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Bronze Casting 101: Process of Casting Bronze [+How To Learn]</a></li><li class="text-sm"><a href="https://en.wikipedia.org/wiki/Bronze_sculpture" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. Bronze sculpture - Wikipedia</a></li><li class="text-sm"><a href="https://dribbble.com/tags/commercial_product_photography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">11. Commercial Product Photography designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/tags/advertising-photography" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">12. Advertising Photography designs, themes, templates and downloadable graphic elements on Dribbble</a></li><li class="text-sm"><a href="https://medium.com/@aparanagua/ritual-design-80323c23fb68" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">13. Ritual Design or how to create meaningful experiences | by Alexandre Paranaguá | Medium</a></li><li class="text-sm"><a href="https://thenetmencorp.com/portfolio-packaging/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">14. New Product Packaging Design Services & Portfolio | The Netmen Corp</a></li><li class="text-sm"><a href="https://miro.com/templates/portfolio-presentation/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">15. Design Portfolio Presentation Template | Miro</a></li><li class="text-sm"><a href="https://presentationfactory.nl/en/portfolio/rituals/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">16. Rituals - The Presentation Factory</a></li></ol>
+                </div>
+        </div>
+        
+
+        <div class="bg-white rounded-lg border border-gray-200 p-6 h-fit">
+            <!-- Provider -->
+            <div class="mb-4">
+                <h2 class="text-xl font-bold text-gray-900">OpenAI</h2>
+            </div>
+            
+            <!-- Model -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">模型: <span class="font-medium copyable" data-copy="o4-mini-2025-04-16">o4-mini-2025-04-16</span></p>
+            </div>
+            
+            <!-- Response Time and Total Tokens -->
+            <div class="mb-4">
+                <p class="text-sm text-gray-600">
+                    响应时间: <span class="font-medium copyable" data-copy="72.81">72.81秒</span> | 
+                    Token数: <span class="font-medium copyable" data-copy="229,396">229,396</span>
+                </p>
+            </div>
+            
+            <!-- Web Search Queries -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">搜索查询:</h3>
+                    <button class="copy-btn" data-copy="1. site:behance.net car accessory branding
+2. site:behance.net automotive accessory branding packaging
+3. site:behance.net luxury car accessories branding
+4. site:behance.net "Rodin Museum Paris" sculpture packaging
+5. site:behance.net bronze material advertising photography
+6. site:behance.net "Sculpture Packaging"
+7. site:behance.net cultural scene display installation
+8. site:behance.net ritualistic product presentation
+9. site:dribbble.com Firestone Auto Accessories">复制全部</button>
+                </div>
+                <ol class="list-decimal list-inside space-y-1"><li class="text-sm text-gray-600">1. site:behance.net car accessory branding</li><li class="text-sm text-gray-600">2. site:behance.net automotive accessory branding packaging</li><li class="text-sm text-gray-600">3. site:behance.net luxury car accessories branding</li><li class="text-sm text-gray-600">4. site:behance.net "Rodin Museum Paris" sculpture packaging</li><li class="text-sm text-gray-600">5. site:behance.net bronze material advertising photography</li><li class="text-sm text-gray-600">6. site:behance.net "Sculpture Packaging"</li><li class="text-sm text-gray-600">7. site:behance.net cultural scene display installation</li><li class="text-sm text-gray-600">8. site:behance.net ritualistic product presentation</li><li class="text-sm text-gray-600">9. site:dribbble.com Firestone Auto Accessories</li></ol>
+            </div>
+            
+            <!-- Response Text -->
+            <div class="mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-sm font-semibold text-gray-700">响应内容:</h3>
+                    <button class="copy-btn" data-copy="Here are a set of curated, primary‐source visual galleries—each presenting real, image-heavy work you can explore for inspiration in your integrated campaign:
+
+• High-End Car-Accessory Brand Visuals  
+  – Driving Warm – Car Accessory Branding & Packaging  
+    https://meloyandesign.com/Driving-Warm-Car-Accessory-Branding-Packaging ([meloyandesign.com](https://meloyandesign.com/Driving-Warm-Car-Accessory-Branding-Packaging?utm_source=chatgpt.com))  
+  – Car branding (shots/14085416) on Dribbble  
+    https://dribbble.com/shots/14085416-Car-branding ([dribbble.com](https://dribbble.com/shots/14085416-Car-branding?utm_source=chatgpt.com))  
+  – luxury car branding banner (shots/25567570) on Dribbble  
+    https://dribbble.com/shots/25567570-luxury-car-branding-banner ([dribbble.com](https://dribbble.com/shots/25567570-luxury-car-branding-banner?utm_source=chatgpt.com))  
+
+• Art-Sculpture Product Packaging Designs  
+  – Charley Harper Sculpture Packaging (3-D sculpture packaging system) on Behance  
+    https://www.behance.net/gallery/18739911/Charley-Harper-Sculpture-Packaging ([behance.net](https://www.behance.net/gallery/18739911/Charley-Harper-Sculpture-Packaging?utm_source=chatgpt.com))  
+
+• Bronze-Material Advertising / Display Photography  
+  – 3D Print, Steel, Bronze, and Object Sculptures (bronze cast sculpture showcase) on Behance  
+    https://www.behance.net/gallery/215281801/3D-Print-Steel-Bronze-and-Object-Sculptures ([behance.net](https://www.behance.net/gallery/215281801/3D-Print-Steel-Bronze-and-Object-Sculptures?utm_source=chatgpt.com))  
+  – Metallic Bronze Pedestal with Dramatic Spotlighting (podium mockup) on Pincel  
+    https://stock.pincel.app/metallic-bronze-pedestal-with-dramatic-spotlighting/ ([stock.pincel.app](https://stock.pincel.app/metallic-bronze-pedestal-with-dramatic-spotlighting/?utm_source=chatgpt.com))  
+
+• Culturally Meaningful Scene-Display / Installation Projects  
+  – Cultural Exhibition – Museum (site-specific historical narrative installation) on Behance  
+    https://www.behance.net/gallery/164384927/Cultural-Exhibition-Museum ([behance.net](https://www.behance.net/gallery/164384927/Cultural-Exhibition-Museum?utm_source=chatgpt.com))  
+  – Installation Art and Exhibition (large-scale thematic spatial installation) on Behance  
+    https://www.behance.net/gallery/105028515/Installation-Art-and-Exhibition ([behance.net](https://www.behance.net/gallery/105028515/Installation-Art-and-Exhibition?utm_source=chatgpt.com))  
+
+• Ritualistic Product-Presentation Concepts  
+  – Rituals Part I: Branding – Behance (exploring ritual as a branding framework)  
+    https://www.behance.net/gallery/48752519/Rituals-Part-I-Branding ([behance.net](https://www.behance.net/gallery/48752519/Rituals-Part-I-Branding?utm_source=chatgpt.com))  
+  – “Design Ritual into Modern Product: A Case Study of Chinese Bronze Ware” (ritual-driven design model) – ResearchGate PDF  
+    https://www.researchgate.net/publication/373354490_Design_Ritual_into_Modern_Product_A_Case_Study_of_Chinese_Bronze_Ware ([researchgate.net](https://www.researchgate.net/publication/373354490_Design_Ritual_into_Modern_Product_A_Case_Study_of_Chinese_Bronze_Ware?utm_source=chatgpt.com))  
+
+These are direct, image-rich galleries and portfolios—perfect springboards for logo treatments, packaging explorations, high-end photography setups, culturally anchored display scenes, and ritual-infused presentation ideas.">复制全部</button>
+                </div>
+                <div class="markdown-content text-sm text-gray-800 bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">Here are a set of curated, primary‐source visual galleries—each presenting real, image-heavy work you can explore for inspiration in your integrated campaign:
+
+• High-End Car-Accessory Brand Visuals  
+  – Driving Warm – Car Accessory Branding & Packaging  
+    https://meloyandesign.com/Driving-Warm-Car-Accessory-Branding-Packaging ([meloyandesign.com](https://meloyandesign.com/Driving-Warm-Car-Accessory-Branding-Packaging?utm_source=chatgpt.com))  
+  – Car branding (shots/14085416) on Dribbble  
+    https://dribbble.com/shots/14085416-Car-branding ([dribbble.com](https://dribbble.com/shots/14085416-Car-branding?utm_source=chatgpt.com))  
+  – luxury car branding banner (shots/25567570) on Dribbble  
+    https://dribbble.com/shots/25567570-luxury-car-branding-banner ([dribbble.com](https://dribbble.com/shots/25567570-luxury-car-branding-banner?utm_source=chatgpt.com))  
+
+• Art-Sculpture Product Packaging Designs  
+  – Charley Harper Sculpture Packaging (3-D sculpture packaging system) on Behance  
+    https://www.behance.net/gallery/18739911/Charley-Harper-Sculpture-Packaging ([behance.net](https://www.behance.net/gallery/18739911/Charley-Harper-Sculpture-Packaging?utm_source=chatgpt.com))  
+
+• Bronze-Material Advertising / Display Photography  
+  – 3D Print, Steel, Bronze, and Object Sculptures (bronze cast sculpture showcase) on Behance  
+    https://www.behance.net/gallery/215281801/3D-Print-Steel-Bronze-and-Object-Sculptures ([behance.net](https://www.behance.net/gallery/215281801/3D-Print-Steel-Bronze-and-Object-Sculptures?utm_source=chatgpt.com))  
+  – Metallic Bronze Pedestal with Dramatic Spotlighting (podium mockup) on Pincel  
+    https://stock.pincel.app/metallic-bronze-pedestal-with-dramatic-spotlighting/ ([stock.pincel.app](https://stock.pincel.app/metallic-bronze-pedestal-with-dramatic-spotlighting/?utm_source=chatgpt.com))  
+
+• Culturally Meaningful Scene-Display / Installation Projects  
+  – Cultural Exhibition – Museum (site-specific historical narrative installation) on Behance  
+    https://www.behance.net/gallery/164384927/Cultural-Exhibition-Museum ([behance.net](https://www.behance.net/gallery/164384927/Cultural-Exhibition-Museum?utm_source=chatgpt.com))  
+  – Installation Art and Exhibition (large-scale thematic spatial installation) on Behance  
+    https://www.behance.net/gallery/105028515/Installation-Art-and-Exhibition ([behance.net](https://www.behance.net/gallery/105028515/Installation-Art-and-Exhibition?utm_source=chatgpt.com))  
+
+• Ritualistic Product-Presentation Concepts  
+  – Rituals Part I: Branding – Behance (exploring ritual as a branding framework)  
+    https://www.behance.net/gallery/48752519/Rituals-Part-I-Branding ([behance.net](https://www.behance.net/gallery/48752519/Rituals-Part-I-Branding?utm_source=chatgpt.com))  
+  – “Design Ritual into Modern Product: A Case Study of Chinese Bronze Ware” (ritual-driven design model) – ResearchGate PDF  
+    https://www.researchgate.net/publication/373354490_Design_Ritual_into_Modern_Product_A_Case_Study_of_Chinese_Bronze_Ware ([researchgate.net](https://www.researchgate.net/publication/373354490_Design_Ritual_into_Modern_Product_A_Case_Study_of_Chinese_Bronze_Ware?utm_source=chatgpt.com))  
+
+These are direct, image-rich galleries and portfolios—perfect springboards for logo treatments, packaging explorations, high-end photography setups, culturally anchored display scenes, and ritual-infused presentation ideas.</div>
+            </div>
+            
+            <!-- Links -->
+            <div class="mt-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-sm font-semibold text-gray-700">引用链接:</h3>
+                        <button class="copy-btn" data-copy="1. Driving Warm 驾物社 | Car Accessory Branding & Packaging - Melo & Yan | Design Studio (https://meloyandesign.com/Driving-Warm-Car-Accessory-Branding-Packaging?utm_source=chatgpt.com)
+2. Car branding by mVect on Dribbble (https://dribbble.com/shots/14085416-Car-branding?utm_source=chatgpt.com)
+3. luxury car branding banner by S.K. Sangeetha on Dribbble (https://dribbble.com/shots/25567570-luxury-car-branding-banner?utm_source=chatgpt.com)
+4. Charley Harper Sculpture Packaging :: Behance (https://www.behance.net/gallery/18739911/Charley-Harper-Sculpture-Packaging?utm_source=chatgpt.com)
+5. 3D Print, Steel, Bronze, and Object Sculptures :: Behance (https://www.behance.net/gallery/215281801/3D-Print-Steel-Bronze-and-Object-Sculptures?utm_source=chatgpt.com)
+6. Metallic Bronze Pedestal with Dramatic Spotlighting | Pincel (https://stock.pincel.app/metallic-bronze-pedestal-with-dramatic-spotlighting/?utm_source=chatgpt.com)
+7. Cultural Exhibition - Museum :: Behance (https://www.behance.net/gallery/164384927/Cultural-Exhibition-Museum?utm_source=chatgpt.com)
+8. Installation Art and Exhibition :: Behance (https://www.behance.net/gallery/105028515/Installation-Art-and-Exhibition?utm_source=chatgpt.com)
+9. Rituals Part I: Branding :: Behance (https://www.behance.net/gallery/48752519/Rituals-Part-I-Branding?utm_source=chatgpt.com)
+10. (PDF) Design Ritual into Modern Product: A Case Study of Chinese Bronze Ware (https://www.researchgate.net/publication/373354490_Design_Ritual_into_Modern_Product_A_Case_Study_of_Chinese_Bronze_Ware?utm_source=chatgpt.com)">复制全部</button>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2"><li class="text-sm"><a href="https://meloyandesign.com/Driving-Warm-Car-Accessory-Branding-Packaging?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">1. Driving Warm 驾物社 | Car Accessory Branding & Packaging - Melo & Yan | Design Studio</a></li><li class="text-sm"><a href="https://dribbble.com/shots/14085416-Car-branding?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">2. Car branding by mVect on Dribbble</a></li><li class="text-sm"><a href="https://dribbble.com/shots/25567570-luxury-car-branding-banner?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">3. luxury car branding banner by S.K. Sangeetha on Dribbble</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/18739911/Charley-Harper-Sculpture-Packaging?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">4. Charley Harper Sculpture Packaging :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/215281801/3D-Print-Steel-Bronze-and-Object-Sculptures?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">5. 3D Print, Steel, Bronze, and Object Sculptures :: Behance</a></li><li class="text-sm"><a href="https://stock.pincel.app/metallic-bronze-pedestal-with-dramatic-spotlighting/?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">6. Metallic Bronze Pedestal with Dramatic Spotlighting | Pincel</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/164384927/Cultural-Exhibition-Museum?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">7. Cultural Exhibition - Museum :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/105028515/Installation-Art-and-Exhibition?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">8. Installation Art and Exhibition :: Behance</a></li><li class="text-sm"><a href="https://www.behance.net/gallery/48752519/Rituals-Part-I-Branding?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">9. Rituals Part I: Branding :: Behance</a></li><li class="text-sm"><a href="https://www.researchgate.net/publication/373354490_Design_Ritual_into_Modern_Product_A_Case_Study_of_Chinese_Bronze_Ware?utm_source=chatgpt.com" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline break-all">10. (PDF) Design Ritual into Modern Product: A Case Study of Chinese Bronze Ware</a></li></ol>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        // 复制到剪贴板函数
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (err) {
+                console.error('复制失败:', err);
+                return false;
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess(element) {
+            const originalText = element.textContent;
+            element.textContent = '✓ 已复制';
+            element.style.color = '#059669';
+            setTimeout(() => {
+                element.textContent = originalText;
+                element.style.color = '';
+            }, 1000);
+        }
+
+        // 渲染Markdown内容
+        function renderMarkdown(element) {
+            const text = element.textContent;
+            element.innerHTML = marked.parse(text);
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 渲染Markdown内容
+            const markdownElements = document.querySelectorAll('.markdown-content');
+            markdownElements.forEach(renderMarkdown);
+            
+            // 绑定复制功能
+            document.querySelectorAll('.copyable').forEach(element => {
+                element.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy') || this.textContent;
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+            
+            // 绑定复制按钮功能
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    const success = await copyToClipboard(textToCopy);
+                    if (success) {
+                        showCopySuccess(this);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
